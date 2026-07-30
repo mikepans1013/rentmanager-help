@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a Management Fee Automated Posting</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Automation-Management-Fee-Add.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Automation-Management-Fee-Add.htm</a></p>
+
+                                                        <h1 id="AddaManagementFeeAutomatedPosting" data-magellan-target="AddaManagementFeeAutomatedPosting"><a name="kanchor1765"></a><a name="H1"></a>Add a Management Fee Automated Posting</h1>
+                                                        <p>If you are a fee-based management company, you collect management fees for the properties you manage. After you collect receivables—such as rent and late fees—and pay any bills, you can calculate and post your management fees. This process transfers funds from the trust accounts of your managed properties to the operating bank account of your management company.</p>
+                                                        <p>You can use this <span class="mc-variable Products.TA variable">Task Automation</span> to save time posting management fees and to reduce errors from manual entry. Set up automation schedules to ensure that your postings are timely and consistent. For more information about manual postings, refer to <a href="Post-Management-Fees.html" class="MCXref xref">Post Management Fees</a>.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Task Automation</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Automate post management fees</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>To set up automation schedules, you must have the appropriate automation enabled in system preferences. For more information, refer to <a href="System-Preferences/Task-Automation.html" class="MCXref xref">Task Automation (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1CreateandNametheSchedule" data-magellan-target="Step1CreateandNametheSchedule"><a name="H2_1"></a>Step 1:&#160;Create and Name the Schedule</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you need to edit an existing automation schedule, you do not need to complete the full process detailed here. For details about input fields you may want to edit, refer to the tables throughout this topic.</p>
+                                                        </div>
+                                                        <p>To automate management fee posting, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Automation <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Task Automation <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Management Fees</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Schedule</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/RMX-Add-Management-Fee-Automation-LC-012825.png" alt="The Add Management Fee Automation Schedule pop-up displays a fee automation for one property." class="lightbox" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enter a <span class="Field">Name</span> for the schedule.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2SetUpPostingSchedule" data-magellan-target="Step2SetUpPostingSchedule"><a name="H2_2"></a>Step 2:&#160;Set Up Posting Schedule</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Management-Fee-Automation-Options-LC-012825.png" alt="This section of the Schedule Options displays the frequency and timeline for the fee automation." class="lightbox" />
+                                                        </p>
+                                                        <p>In the <span class="Section">Schedule Options</span> section, set up the posting scheduling, including when the automation starts and ends and how frequently fees post. To set up the posting schedule, enter the following information:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The first day on which the automation schedule begins calculating fees.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>End By</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date by which the posting schedule ends. If this field is blank, the schedule continues to post indefinitely until a date is entered in this field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Posting Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The frequency with which the automation runs (daily, weekly, or monthly). For weekly and monthly schedules, the automation runs in the early morning (ET) on the day of the <span class="Field">Run Day</span> and dates charges based on your <span class="Field">Post Day/To Day</span>. For daily postings, the automation runs on the <span class="Field">Run Day</span>, and fees for the previous day's transactions post early the next morning.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Run Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">The day on which the automated schedule calculates fees and adds them to recipients' accounts. For example, for monthly schedules, a <span class="Field">Run Day</span> of <span class="Input">1</span> adds the charges to accounts on the first day of the month. <span class="mc-variable Products.RM variable">Rent Manager</span> automatically posts these fees early in the morning of the chosen <span class="Field">Run Day</span>.</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post Day/To Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The day on which fees created by this schedule are due.</p>
+                                                                        <p>The order in which the <span class="Field">Run Day</span> and the <span class="Field">Post Day/To Day</span> occur impacts the calculation method. If the <span class="Field">Run Day</span> is before the <span class="Field">Post Day/To Day</span>, management&#160;fees are calculated from the previous period's fees. Alternatively, if the <span class="Field">Run Day</span> is on or after the <span class="Field">Post Day/To Day</span>, management&#160;fees are calculated from the current period's fees.</p>
+                                                                        <p>For example, if the <span class="Field">Run Day</span> is <span class="Input">5</span> and the <span class="Field">Post Day/To Day</span> is <span class="Input">31</span>, management&#160;fees are posted for the entirety of the <span class="Stress">previous</span> month.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you enter a <span class="Field">Post Day</span> of <span class="Input">31</span>, <span class="mc-variable Products.RM variable">Rent Manager</span> dates the fees with the last day of each month, regardless of the number of days in the month. For example, with a <span class="Field">Post Day</span> of <span class="Input">31</span> and posting for April, fees are dated for the 30<sup>th</sup>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Notification Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The email address of a user that receives a notification for each successful or failed automatic posting. Separate multiple email addresses with a semicolon (;).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Include Details</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Includes additional information in the notification email sent after an automatic posting.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step3SelectPropertiesorOwners" data-magellan-target="Step3SelectPropertiesorOwners"><a name="H2_3"></a>Step 3:&#160;Select Properties or&#160;Owners</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Management-Fee-Automation-Properties-LC-012825.png" alt="The Property tab with three properties selected." class="lightbox" />
+                                                        </p>
+                                                        <p>Choose which properties and owners are included in this automation schedule. You can select multiple properties and owners, or you can select account groups in the <span class="Field">Group</span> drop-down.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>
+                                                                This field populates only with the properties to which you have access. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step4SelectRunOptions" data-magellan-target="Step4SelectRunOptions"><a name="H2_4"></a>Step 4:&#160;Select Run Options</h2>
+                                                        <p>To finish setting up the automation schedule, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Run Options</span> section, select from the following options:</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Payment Method</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>How you want the property or owner to pay the fees.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>ACH</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>An automated transfer handled by your bank that uses the automated clearing house network for added security.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Check</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>A physically routed payment drawn against deposited funds from the payer to the payee.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Debit</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>A preauthorized payment that allows a bank to pay a certain amount directly to a bank or company at regular intervals.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>EFT</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>An electronic funds transfer for any type of digital payment including, but not limited to, a credit or debit card.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Override Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If you want to override the default comment for management fee posting, enter a comment here to be used on any checks, bills, or transactions created as a result of this management fee posting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Group checks/bills by bank account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Creates a single check or bill to the management company for each bank account affected by the management fee posting, with the properties itemized on the check/bill.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The management fee automation is added and begins running on the schedule's next <span class="Field">Run Day</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This automatic process does <span class="Stress">not</span> occur immediately once the schedule has been configured and becomes active. <span class="mc-variable Products.RM variable">Rent Manager</span> performs all automated postings overnight so as not to interfere with your work.</p>
+                                                        </div>
+                                                    
+</main>
+</body>
+</html>

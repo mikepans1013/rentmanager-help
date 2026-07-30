@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Writer (Page)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/CSH/Report-Writer.htm">https://rmxhelp.rentmanager.com/Topics/Express/CSH/Report-Writer.htm</a></p>
+
+                                                        <h1 id="ReportWriterPage" data-magellan-target="ReportWriterPage"><a name="kanchor511"></a><a name="H1"></a>Report Writer (Page)</h1>
+                                                        <p><span class="mc-variable Products.RW variable">Report Writer</span> allows you to create your own custom reports to meet your business needs. <span class="mc-variable Products.RW variable">Report Writer</span> uses both insertable fields specific to the type of report, as well as scripting for more customizable options. For example, you could create a report to list detailed pet information for tenants or contact information for owners.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Report writer templates</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>Specific <span class="mc-variable Products.RW variable">Report Writer</span> template privileges must be enabled for each entity-type for which you wish to delete <span class="mc-variable Products.RW variable">Report Writer</span> reports (e.g., <span class="Field">Owner report writer templates</span>).</p>
+                                                            <p>For more information, refer to <a href="../KB/User-Privileges-Report-Writer.html" class="MCXref xref">Control Custom Report Access</a>.</p>
+                                                        </div>
+                                                        <p>To access <span class="mc-variable Products.RW variable">Report Writer</span>, go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/RM/reports_19x19.png" class="inline-image" alt="Reports" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/RM/reports_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> Report Writer</span>. Then, in the <span class="Section">Report Type</span> section, select an option to view existing custom reports associated with that entity, and select a report.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Report-Writer-2024.png" alt="The Edit Report page displays the custom columns, report options, and a sample preview of the report." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="InsertableFields" data-magellan-target="InsertableFields"><a name="H2_1"></a>Insertable Fields</h2>
+                                                        <p>The <span class="Section">Insertable Fields</span> section is a list of all available scripting functions that can be used to create dynamic content. For example, you can add the Account Name function to automatically populate a tenant's system-generated ID as a column on the report. Only functions related to the current report type display.</p>
+                                                        <p>To add a column to the report using an insertable field, double-click the function name. The function is then added to the <span class="Section">Report Columns</span> section and displayed in the <span class="Section">Sample Report</span> section.</p>
+                                                        <p>In <span class="mc-variable Products.RW variable">Report Writer</span>, there is an insertable field for <span class="Field">Blank Column</span>, which inserts an empty column with no <span class="Field">Formula</span>. This column can then be edited to include whatever header or formula you need for the report. Alternatively, it can be left blank and the <span class="Field">Header</span> name removed to act as additional spacing between columns.</p>
+                                                        <h2 id="ReportColumns" data-magellan-target="ReportColumns"><a name="H2_2"></a>Report Columns</h2>
+                                                        <p>The <span class="Section">Report Columns</span> section contains the insertable fields added to the report. The columns can be removed, adjusted, or edited as desired. This determines the columns which display on the custom report, the name of the columns, the order in which they display, and the width of each column. The custom report uses scripting to determine the information each column retrieves.</p>
+                                                        <p>To add columns to the report, use the <span class="Section">Insertable Fields</span> section on the left. To make more advanced changes, such as the column's spacing, alignment, and any filters that may apply to the column, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline-image" alt="Options" style="width: 19;height: 19;" /> and select <span class="Field">Settings</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Report-Writer-Report-Columns-2024.png" alt="The Report Columns section displays five report columns that were created." class="lightbox" />
+                                                        </p>
+                                                        <h3><a name="H3_1"></a>Column Descriptions</h3>
+                                                        <p>After an insertable field is added, the following  columns are available in the <span class="Section">Report Columns</span> section:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                        <p>Column</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Header</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the column that displays on the actual report.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Formula</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The scripting used to generate the column's data.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Width</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The width of the column on the actual report.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If checked, a total value displays on the report at the bottom of the column.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Hide</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>If checked, the column data is processed when the report is generated but does <span class="Stress">not</span> display the column on the report.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ReportOptions" data-magellan-target="ReportOptions"><a name="H2_3"></a>Report Options</h2>
+                                                        <p>The options available in <span class="Section">Report Options</span> section of the designer apply to the entire report including customizing the name and subtitle of the report with scripting or font styles. To manage additional options, such as the visual separation method or page formatting click <span class="BigButtons">Advanced</span>.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Click <span class="BigButtons">Execution Order</span> to set the order in which the column scripts are executed for each row. In the <span class="Window">Execution Order</span> pop-up, the columns display as rows from top to bottom representing the order in which columns would display from left to right on the report. The top row equates to the left-most column.</p>
+                                                            <p>The execution order determines only the order in which the columns are calculated in <span class="mc-variable Products.RM variable">Rent Manager</span>, <span class="Stress">not</span> the order in which the columns display on the actual report.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Report Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The internal name of the report which displays on the <span class="Window">Report Writer Manager</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Report Title</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" colspan="2">
+                                                                                        <p>The name that displays at the top of the actual report.</p>
+                                                                                        <p>To insert variables into the report title, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline-image" alt="Add system variable" style="width: 19;height: 19;" />. Each variable is described below.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Create Date</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Inserts the date the report was created.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>As of Date</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Inserts the date the report is run for.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Selected Properties</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>Inserts the name of the  properties the report is run for.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Report Subtitle</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" colspan="2">
+                                                                                        <p>The text which displays underneath the <span class="Field">Report Title</span> on the actual report.</p>
+                                                                                        <p>To insert variables into the report subtitle, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline-image" alt="Add system variable" style="width: 19;height: 19;" />. Each variable is described below.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Create Date</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Inserts the date the report was created.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>As of Date</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Inserts the date the report is run for.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Selected Properties</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>Inserts the name of the properties the report is run for.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Report Location</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" colspan="2">
+                                                                                        <p style="padding: 0px;">The areas of <span class="mc-variable Products.RM variable">Rent Manager</span> where this report is accessible. Each option is described below.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>None</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The report is available only on the <span class="Window">Report Writer Manager</span> page.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Report Menu</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The report is available from the <span class="Menu">Report Writer</span> menu of the report type (e.g., <span class="Menu">Tenant</span>, <span class="Field">Prospect</span>, <span class="Field">Owner</span>, and so on).</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Right-Click</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The report is available from the right-click menu of the selected entity (e.g., <span class="Menu">Tenant</span>, <span class="Field">Prospect</span>, <span class="Field">Owner</span>, and so on).</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Both</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>The report is available from the <span class="Menu">Report Writer</span> menu item drop-down list and the <span class="Menu">Right-Click Menu</span>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="SampleReport" data-magellan-target="SampleReport"><a name="H2_4"></a>Sample Report</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Report-Writer-Sample-2024.png" class="lightbox" alt="The Sample Report section displays a preview of a customer Advanced Contact Listing report." />
+                                                        </p>
+                                                        <p>The <span class="Window">Sample Report</span> section displays a preview of the custom report based on the options and columns established in the <span class="Section">Report Columns</span> and <span class="Section">Report Options</span> sections. The sample report updates in real time as you make changes to the report settings.</p>
+                                                        <p>To generate a test version of the report using actual <span class="mc-variable Products.RM variable">Rent Manager</span> data, click <span class="BigButtons">Test</span>, adjust the report options as desired, then click <span class="BigButtons">Generate Report</span>.</p>
+                                                    
+</main>
+</body>
+</html>

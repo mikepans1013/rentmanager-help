@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Address Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Address.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Address.htm</a></p>
+
+                                                        <h1 id="AddressIndexing" data-magellan-target="AddressIndexing"><a name="aanchor961"></a>
+                                                            <a name="kanchor1579"></a><a name="H1"></a>Address Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>When the Address class is used as a child class in a script (e.g., <span class="Formula">Tenant.Address.<span class="Required">Function</span></span>), an index can be specified to uniquely identify addresses that are associated with the preceding class. For example, tenants may have multiple addresses associated with their account, and indexing can be used to identify each of those addresses.</p>
+                                                        <p>Addresses associated with the account are listed in the <span class="Section">Addresses</span> section. The address checked as <span class="Field">Default</span> has an index of <span class="Input">0</span>. Following that default address, <span class="mc-variable Products.RM variable">Rent Manager</span> examines addresses with entries from left to right:</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Tenant-Addresses-Tile-2024.png" alt="The Addresses tile displays with the primay address." />
+                                                        </p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Marking a different address as <span class="Field">Default</span> reorders the index, which would alter the output of an existing script. New address types are added as the rightmost address in the section.</p>
+                                                        </div>
+                                                        <h2 id="AddressIndexRelationships" data-magellan-target="AddressIndexRelationships"><a name="H2_1"></a>Address Index Relationships</h2>
+                                                        <p>The Address class may use an index parameter when it is preceded by certain classes. Each class is described below.</p>
+                                                        <h3><a name="H3_1"></a>Contact.Address Indexing</h3>
+                                                        <p>Addresses are associated with each contact on an account. Tenant and prospect contacts have addresses listed on their details page in the <span class="Tab">Addresses</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Tenant-Addresses-Tile-Alternate-2024.png" alt="The Tenant Addresses tile displays with the alternate address." />
+                                                        </p>
+                                                        <p class="Example">[Tenant.Contact.Address(0).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Alternate</span> address, the address with <span class="Field">Default</span> selected.</p>
+                                                        <h3><a name="H3_2"></a>Owner.Address Indexing</h3>
+                                                        <p>Owner addresses are listed on their details page in the <span class="Tab">Addresses</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Owner-Addresses-2024.png" alt="The Owner Addresses tile displays with the primary address." />
+                                                        </p>
+                                                        <p class="Example">[Owner.Address(0).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Primary</span> address, the address with <span class="Field">Default</span> selected.</p>
+                                                        <h3><a name="H3_3"></a>PrimaryOwner.Address Indexing</h3>
+                                                        <p>A property's <span class="Field">Primary Owner</span> is specified on the <span class="Tab">Owners</span> tab of the property, and owner addresses are listed on their details page in the <span class="Tab">Addresses</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Owner-Addresses-Forward-2024.png" alt="The Owner Addresses tile displays with the forwarding address." />
+                                                        </p>
+                                                        <p class="Example">[Property.PrimaryOwner.Address(1).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Forwarding</span> address, the first non-default address from the left. This pulls from the owner designated as the property's <span class="Field">Primary&#160;Owner</span>.</p>
+                                                        <h3><a name="H3_4"></a>Property.Address Indexing</h3>
+                                                        <p>Property addresses are listed on the details page in the <span class="Tab">Primary Address</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Property-Primary-Addresses-Billing-2024.png" alt="The Property Primary Address tile displays with the billing address." />
+                                                        </p>
+                                                        <p class="Example">[Property.Address(1).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Billing</span> address, the first non-default address from the left.</p>
+                                                        <h3><a name="H3_5"></a>Prospect.Address Indexing</h3>
+                                                        <p>Prospect addresses are listed on their details page in the <span class="Tab">Addresses</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Prospect-Addresses-Secondary-2024.png" alt="The Prospect Addresses tile displays with the secondary address." />
+                                                        </p>
+                                                        <p class="Example">[Prospect.Address(1).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Secondary</span> address, the first non-default address from the left.</p>
+                                                        <h3><a name="H3_6"></a>Tenant.Address Indexing</h3>
+                                                        <p>Tenant addresses are listed on their details page in the <span class="Tab">Addresses</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Tenant-Addresses-2024.png" alt="The Tenant Addresses tile displays with the primary address." />
+                                                        </p>
+                                                        <p class="Example">[Tenant.Address(0).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Primary</span> address, the address with <span class="Field">Default</span> selected.</p>
+                                                        <h3><a name="H3_7"></a>Unit.Address Indexing</h3>
+                                                        <p>Unit addresses are listed on the details page in the <span class="Tab">Addresses</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Unit-Addresses-Secondary-2024.png" alt="The Unit Addresses tile displays with the secondary address." />
+                                                        </p>
+                                                        <p class="Example">[Unit.Address(1).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Secondary</span> address, the first non-default address from the left.</p>
+                                                        <h3><a name="H3_8"></a>Vendor.Address Indexing</h3>
+                                                        <p>Vendor addresses are listed on their details page in the <span class="Tab">Addresses</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Address-Vendor-Addresses-Billing-2024.png" alt="The Vendor Addresses tile displays with the billing address." />
+                                                        </p>
+                                                        <p class="Example">[Vendor.Address(1).FullAddress]</p>
+                                                        <p>Referencing the image above, this returns the full address of the <span class="Tab">Billing</span> address, the first non-default address from the left.</p>
+                                                    
+</main>
+</body>
+</html>

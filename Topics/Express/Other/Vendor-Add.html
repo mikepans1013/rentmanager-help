@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a Vendor</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Vendor-Add.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Vendor-Add.htm</a></p>
+
+                                                        <h1 id="AddaVendor" data-magellan-target="AddaVendor"><a name="kanchor1646"></a><a name="H1"></a>Add a Vendor</h1>
+                                                        <p>Vendors are the people and businesses that provide you with products and services. Tracking the payments you make to vendors in exchange is a necessary part of managing payables such as paying off bills or credit cards, writing checks, creating POs, and adding vendor credits. Adding vendors in <span class="mc-variable Products.RM variable">Rent Manager</span> allows you to record the transactions, track your payables, and keep a historical record of product details or services rendered.</p>
+                                                        <p>When you create or edit a vendor in <span class="mc-variable Products.RM variable">Rent Manager</span>, you can enter values into vendor-type user-defined fields (UDFs), select the properties where the vendor is available, and also establish default bill terms and expense accounts for the vendor. Although you can complete the vendor add wizard without this information, creating any UDFs, bill terms, and expense accounts the vendor may need before adding your vendor helps streamline the vendor creation process.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To streamline the creation process, consider setting up vendor UDFs, bill terms, and other information related to your vendors before adding vendor accounts. For more information, refer to <a href="../KB/Vendor-Customize-Options.html" class="MCXref xref">Customize Vendor Options</a>.</p>
+                                                        </div>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Before adding a vendor, you must first create at least one property where the vendor is available.</p>
+                                                        </div>
+                                                        <h2 id="Step1AddVendorandCompanyInformation" data-magellan-target="Step1AddVendorandCompanyInformation"><a name="H2_1"></a>Step 1: Add Vendor and Company Information</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Payables</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Vendors</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To create a vendor account, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Payables <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Vendors</span>.<br />The <span class="Window">Vendors</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Vendor</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Vendor-Add-Wizard-NC-2025.png" alt="The Vendor Add Wizard displays information about a carpentry company." class="lightbox" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>On the <span class="Section">General Information</span> tile, enter the vendor's information into the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Associated property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The properties at which the vendor is available to render services. When writing checks or bills for the vendor, only the selected properties are available to expense.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Check Payee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name to use when writing checks to this vendor.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The primary email address for sending correspondence to this vendor, such as emailing 1099 tax forms.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Vendor Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The official name of the vendor, contractor, or business.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>On the <span class="Section">Miscellaneous</span> tile, enter additional information to further categorize the vendor.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Active</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>When checked, this vendor is able to be selected on payables in <span class="mc-variable Products.RM variable">Rent Manager</span>. If unchecked, the vendor is added as inactive and cannot be selected on payables.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Category</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A category for this vendor's products and/or services, such as <span class="Input">Carpentry</span> or <span class="Input">HVAC and Electric</span>. This is used to aid in narrowing down searches in the vendors list.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Contact Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the preferred point-of-contact for this vendor. This could be the payee, a sales representative, or another person at the company.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Display</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A color to help easily identify vendors of certain types, groups, or any other specifications you prefer, such as 1099 vendors. The color displays as a bar to the left of the vendor in some areas of <span class="mc-variable Products.RM variable">Rent Manager</span>, such as the <span class="Input">Vendors</span> page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Private</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>When checked, access to this vendor is restricted to <span class="mc-variable Products.RM variable">Rent Manager</span> users with the privilege listed below.</p>
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Payables</td>
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">View private vendors</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>This vendor is a user</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The <span class="mc-variable Products.RM variable">Rent Manager</span> user linked to the vendor who is reimbursed for any personal charges using Smart Receipts in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>. For example, if an employee spends their own money on parts for a maintenance issue, you can create a bill in from <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> to reimburse the employee for their purchase. For more information, refer to <a href="../KB/Smart-Receipts.html" class="MCXref xref">Smart Receipts</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>On the <span class="Section">Bill Settings</span> tile, enter the default bill information for this vendor. This information automatically populates when creating a bill or writing a check for this vendor.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Account Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Your vendor-provided account number that identifies your specific account with that company.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Auto-Fill Check/Bill Information</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Check to automatically populate  information from the vendor's most recently-entered check or bill into a new check or bill.</p>
+                                                                                <p>For bills, the total bill amount, default bank, payment method, memo, and all expense line items automatically populate. This information overrides the <span class="Field">Default Account</span> setting.</p>
+                                                                                <p>For checks, the total check amount, memo, and all expense line items automatically populate. You can still edit this information or select a different prior bill/check to pull information from as needed.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Default Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default GL expense account to use for this vendor when adding line items to checks, bills, and so on.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Echeck Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;padding-left: 6px;padding-right: 6px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #cedbe7;">
+                                                                                <p style="padding: 0px;">The email address that receives notifications about <span class="mc-variable Integrations.Product-eChecks variable">eChecks</span> payments. This option is available only if, in the <span class="Field">Payment Method</span> field, <span class="Field"><span class="mc-variable Integrations.Product-eChecks variable">eChecks</span></span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Payment Method</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default payment method to use when paying a bill for this vendor. A check is created and labeled with the corresponding payment method or next available check number. Each payment method is described below.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>ACH</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Create a check in <span class="mc-variable Products.RM variable">Rent Manager</span> to pay the bill. The check number is set to <span class="Input">ACH</span> to show that the bill was paid by an automatic clearing house transaction.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p><span class="mc-variable Integrations.Product-Avid2 variable">AvidPay</span>
+                                                                                                </p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Creates a check in <span class="mc-variable Products.RM variable">Rent Manager</span> to pay the bill via the payment integration provided by <span class="mc-variable Integrations.Partner-Avid variable">AvidXchange</span> using the <span class="Window">Post <span class="mc-variable Integrations.Product-Avid2 variable">AvidPay</span></span>. For more information, refer to <a href="../CSH/AvidPay-Post.html" class="MCXref xref">Post AvidPay (Page)</a>.</p>
+                                                                                                <div class="prefs">
+                                                                                                    <p class="label1">Related Preferences</p>
+                                                                                                    <p>This option displays only if you have <span class="mc-variable Integrations.Product-Avid2 variable">AvidPay</span> set up in system preferences. For more information, refer to <a href="System-Preferences/AvidXchange.html" class="MCXref xref">AvidXchange (System Preferences)</a>.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Check</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Create a check in <span class="mc-variable Products.RM variable">Rent Manager</span> to pay the bill. This check can also be printed onto check stock and sent to the vendor. For more information, refer to <a href="Checks-Print.html" class="MCXref xref">Print Checks</a>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Debit</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Create a check in <span class="mc-variable Products.RM variable">Rent Manager</span> to pay the bill. The check number is set to <span class="Input">Debit</span> to show that the bill was paid by a debit card.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p><span class="mc-variable Integrations.Product-eChecks variable">eChecks</span>
+                                                                                                </p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Create a digital check that is delivered to the payee via email by <span class="mc-variable Integrations.Partner-Safeguard variable">Safeguard</span>.</p>
+                                                                                                <div class="prefs">
+                                                                                                    <p class="label1">Related Preferences</p>
+                                                                                                    <p>This option is available only if <span class="mc-variable Integrations.Product-eChecks variable">eChecks</span> are enabled in system preferences. For more information, refer to <a href="System-Preferences/eChecks.html" class="MCXref xref">eChecks (System Preferences)</a>.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>EFT</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Create a check in <span class="mc-variable Products.RM variable">Rent Manager</span> to pay the bill. The check number is set to <span class="Input">EFT</span> to show that the bill was paid through an electronic funds transfer.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p><span class="mc-variable Integrations.Product-ePay variable">ePay</span>
+                                                                                                </p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Create a check in <span class="mc-variable Products.RM variable">Rent Manager</span> to pay the bill. The check number is set to <span class="Input mc-variable Integrations.Product-ePay variable">ePay</span> to show that the bill was paid electronically through <span class="mc-variable Integrations.Product-ePay variable">ePay</span>.</p>
+                                                                                                <div class="prefs">
+                                                                                                    <p class="label1">Related Preferences</p>
+                                                                                                    <p>This option is available only if <span class="mc-variable Integrations.Product-ePay variable">ePay</span> is enabled in system preferences. For more information, refer to <a href="System-Preferences/ePay-General.html" class="MCXref xref">General ePay (System Preferences)</a>.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Terms</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The default bill term used when creating bills for this vendor. This automatically populates when the payment is due based on the term selected.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>If you select <span class="Field">&lt;Default&gt;</span>, this field populates with the bill term set in the <span class="Field">Default Terms</span> field of system preferences. For more information, refer to <a href="System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>On the <span class="Section">Addresses</span> tile, enter the address(es) for the vendor. Select <span class="Field">Default</span> for the address you wish to use in areas such as reports and check details.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>On the <span class="Section">Comment</span> tile, enter any additional notes or information about the vendor. To select a memorized comment, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Comments" style="width: 19;height: 19;" />.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>On the <span class="Section">Expiration Dates</span> tile, enter the dates on which the vendor's <span class="Field">Insurance</span> policy and workers' compensation (<span class="Field">Worker's Comp</span>) policies expire. These dates prevent users from creating or completing tasks in <span class="mc-variable Products.RM variable">Rent Manager</span> (such as service issues, checks, and bills) for vendors with expired policies.</p>
+                                                                <div class="prefs">
+                                                                    <p class="label1">Related Preferences</p>
+                                                                    <p>If the options in system preferences to ignore expiration dates when creating bills are enabled, <span class="mc-variable Products.RM variable">Rent Manager</span> does <span class="Stress">not</span> prevent users from creating bills for vendors with expired policies. For more information, refer to <a href="System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>On the <span class="Section">Phone Numbers</span> tile, enter any relevant phone numbers for the vendor. The available columns are described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Default</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Check to select the primary phone number to use in areas such as reports.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Extension</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If applicable, the extension used after dialing the phone number to reach the desired point-of-contact for this vendor.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of each phone number type that currently exists in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The full ten-digit phone number of the associated phone number type.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>T (Is Text Ready)</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Check to mark the phone number as text-enabled, meaning the number can receive text messages.</p>
+                                                                                <p>This also determines which phone numbers can be sent texts from <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, refer to <a href="Broadcast-Text-Create.html" class="MCXref xref">Create a Text Broadcast</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2EnterVendorTaxInformation" data-magellan-target="Step2EnterVendorTaxInformation"><a name="H2_2"></a>Step 2: Enter Vendor Tax Information</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Vendor-Add-Tax-Information-NC-2025.png" alt="The Tax Information tab displays balances for various properties for a 1099 Vendor." class="lightbox" />
+                                                        </p>
+                                                        <p>The <span class="Tab">Tax Information</span> tab allows you to specify any tax information for 1099 vendors. If this is not a 1099 vendor, proceed to <a href="#H2_3" class="MCXref xref">Step 3: Enter Vendor UDF Values</a>. If this is a 1099 vendor, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the <span class="Section">Tax Information</span> tile, select <span class="Field">1099 Vendor</span>.<br />The tax-related fields become available.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">1099 SocSec#/TaxID#</span> field, enter the vendor's social security number or tax ID number.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Users with the <span class="Field">View complete vendor SSNs</span> privilege enabled in the <span class="Section">Tenants/Prospects</span> privilege group can view the social security number without an encryption. For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">1099 Category</span> field, select the type of service provided by the vendor. This determines which section of the 1099-MISC form populates information when generating the <span class="Report">Vendor 1099</span> report. For more information, refer to <a href="Reports/Vendor-1099.html" class="MCXref xref">Vendor 1099 (Report)</a>.</p>
+                                                                <div class="prefs">
+                                                                    <p class="label1">Related Preferences</p>
+                                                                    <p>If you select <span class="Field">&lt;System Default&gt;</span>, this field populates with the category set in the <span class="Field">Default 1099 Category</span> field of system preferences. For more information, refer to <a href="System-Preferences/General-Options-Vendors.html" class="MCXref xref">Vendors (System Preferences)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Column">YTD 1099 Balance</span> column, enter the current balance of expenses from this year for each applicable <span class="Column">Property</span> to include this information in their <span class="Report">Vendor 1099</span> for this year. If no expenses are accrued by this vendor yet, leave this blank.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3EnterVendorUDFValues" data-magellan-target="Step3EnterVendorUDFValues"><a name="H2_3"></a>Step 3: Enter Vendor UDF Values</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Vendor-Add-UDFs-NC-2025.png" alt="The User Defined Fields tab displays four required vendor UDFs." class="lightbox" />
+                                                        </p>
+                                                        <p>After entering the vendor's general information, select the <span class="Tab">User Defined Fields</span> tab on the left. On the <span class="Section">User Defined Fields</span> tile, only required UDFs display in the <span class="Column">Name</span> column. Required UDFs are marked with an asterisk (*) and <span class="Stress">must</span> have a <span class="Column">Value</span> entered to create the vendor.</p>
+                                                        <p>To view all the vendor-type UDFs in the database, click <span class="ActionItems">View All UDFs</span>. For each UDF applicable to the vendor you are adding, enter or select the information in the <span class="Field">Value</span> column for the associated UDF.</p>
+                                                        <h2 id="Step4SavetheNewVendor" data-magellan-target="Step4SavetheNewVendor"><a name="H2_4"></a>Step 4: Save the New Vendor</h2>
+                                                        <p>Click <span class="BigButtons">Save and Finish</span> to complete the creation process and close the pop-up. Alternatively, click <span class="BigButtons">Save and New</span> to complete the creation process and refresh the pop-up to add another vendor.</p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Value Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Budget-Value.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Budget-Value.htm</a></p>
+
+                                                        <h1 id="BudgetValueFunctionScript" data-magellan-target="BudgetValueFunctionScript"><a name="aanchor687"></a>
+                                                            <a name="kanchor1161"></a><a name="H1"></a>Budget Value Function (Script)</h1>
+                                                        <p>This function displays property-level general ledger (GL) account data related to the budget of the selected property or the property of an ownership of the selected owner based on the specified GL account number and field.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This function must be used in conjunction with the <a href="Function-Fill-Budget.html">Fill Budget Function</a>. The FillBudget function must be run first in your scripting to generate the collection of budgeted financial data as defined by your parameters (e.g., month and year start and end dates). Then, the BudgetValue function is used to retrieve a selected value from that data.</p>
+                                                            <p>To display values for multiple Chart Accounts from the same date range, you need to run the FillBudget function only once to generate data. You can then run the BudgetValue function multiple times with different chart account numbers.</p>
+                                                        </div>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Job.html">Job</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Job().BudgetValue()]</p>
+                                                                        <p>Displays information found on the job's <span class="Section">Budget</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Property().BudgetValue()]</p>
+                                                                        <p>Displays information found on the <span class="Window">Budget</span>&#160;pop-up for the selected property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[BudgetValue(<span class="Required">"AccountNumber","FieldName"</span>)]</p>
+                                                        <h3 class="Required">AccountNumber</h3>
+                                                        <p colspan="2">Examine the chart account with this general ledger (GL) account number. </p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.2">[BudgetValue("1001","Description")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.2">Selects the chart account with the GL account number 1001 and displays budget data from the field specified in the second parameter.</p>
+                                                        <h3 class="Required"><a name="H3_1"></a>FieldName</h3>
+                                                        <p>Fields are listed in the <span class="Section">Insertable Fields</span> list and automatically populate in the letter template along with the associated function. This function has the following available fields:</p>
+                                                        <p><span class="Required">"AccountNumber",</span> represents the GL account number that must be specified before a field.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account Number Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns the <span class="Field">GL Account No</span> followed by the <span class="Field">Name</span> as displayed in the chart of accounts.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[BudgetValue(<span class="Required">"AccountNumber",</span>"Amount")]</p>
+                                                                        <p>Returns the balance of the account at the end of the date range selected in the FillBudget function.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount In</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns the total credits or total debits that move <span class="Stress">into</span> the account for the given date range based on the GL account type.
+</p>
+                                                                        <p>Total credits are returned for the following GL account types: Accounts Payable, Credit Card, Other Current Liability, Long Term Liability, Equity, Income, Other Income, Non Operating Income, Non Controllable Income.
+</p>
+                                                                        <p>Total debits are returned for the following GL account types: Bank, Accounts Receivable, Other Current Asset, Fixed Asset, Other Asset, Expense, Other Expense, Non Operating Expense, Non Controllable Expense, Cost Of Goods Sold.
+</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount Out</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns the total credits or total debits that move <span class="Stress">out</span> of the account for the given date range based on the GL account type.
+</p>
+                                                                        <p>Total credits are returned for the following GL account types: Bank, Accounts Receivable, Other Current Asset, Fixed Asset, Other Asset, Expense, Other Expense, Non Operating Expense, Non Controllable Expense, Cost Of Goods Sold. </p>
+                                                                        <p>
+Total debits are returned for the following GL account types: Accounts Payable, Credit Card, Other Current Liability, Long Term Liability, Equity, Income, Other Income, Non Operating Income, Non Controllable Income.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Credit Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns a number for CreditAmount if there are more credits than debits in that account for the given date range. Otherwise, this returns a blank.</p>
+                                                                        <p class="Formula">CreditAmount = Total Credits - Total Debits</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Debit Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns a number for DebitAmount if there are more debits than credits in that account for the given date range. Otherwise, this returns a blank.</p>
+                                                                        <p class="Formula">DebitAmount = Total Debits - Total Credits</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns a description of the GL&#160;account as shown in the <span class="Field">Description</span> field in the chart of accounts. </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Invoice Multiplier</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This is an invoice multiplier used in a calculation to achieve the desired positive or negative result for the selected account. The strategy for using this option is similar to that of <span class="Field">Multiplier</span>.</p>
+                                                                        <p>This multiplies by <span class="Input">1</span> or <span class="Input">-1</span> based on the following account types:
+</p>
+                                                                        <p>Account types of  Bank, Accounts Receivable, Other Current Asset, Fixed Asset, Other Asset, Accounts Payable, Credit Card, Other Current Liability, Long Term Liability, Equity, Income, Other Income, Non Operating Income, Non Controllable Income are multiplied by <span class="Input">1</span>.
+</p>
+                                                                        <p>Account types of Cost Of Goods Sold, Expense, Other Expense, Non Operating Expense, Non Controllable Expense are multiplied by <span class="Input">-1</span>.
+</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Multiplier</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This is a multiplier used in a calculation to achieve the desired positive or negative result for the selected account.</p>
+                                                                        <p>This multiplies by a <span class="Input">1</span> or <span class="Input">-1</span> based on the following account types:</p>
+                                                                        <p>
+Account types of  Bank, Accounts Receivable, Other Current Asset, Fixed Asset, Other Asset are multiplied by <span class="Input">1</span>.
+ </p>
+                                                                        <p>Account types of Accounts Payable, Credit Card, Other Current Liability, Long Term Liability, Equity, Income, Other Income, Non Operating Income, Non Controllable Income, Cost Of Goods Sold, Expense, Other Expense, Non Operating Expense, Non Controllable Expense are multiplied by <span class="Input">-1</span>.
+</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>As an example, suppose your company rents a space for $750. To record this, you increase the company's asset (Cash) with a $750 debit to the <span class="Field">Cash</span> account, which, because it is an asset type account, typically has a debit (positive) balance.</p>
+                                                                            <p>To balance your entry, a $750 credit is recorded to the <span class="Field">Rental Income</span> account, which, because it is an income type account, typically has a credit (negative) balance.</p>
+                                                                            <p>Your entries can be used to display as:</p>
+                                                                            <p>
+                                                                                <img src="../../../../assets/Resources/Images/PNGs/ValueOptionMultiplier-example.png" alt="" />
+                                                                            </p>
+                                                                            <p>For reporting purposes, you would not want to see <span class="Field">Rental Income</span> earned as a credit (negative) balance. </p>
+                                                                            <p>In this case, if you select <span class="Field">Multiplier</span> for the <span class="Field">Value</span> field, the multiplier can be applied to allow <span class="Field">Rental Income</span> to show with a positive balance (a negative entry multiplied by <span class="Stress">-1</span> results in a positive).</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Returns the name of the GL account as shown in the <span class="Field">Name</span> field in the chart of accounts.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used. These examples assume FillBudget is run prior to these BudgetValue scripts to generate a collection of financial data.</p>
+                                                        <p class="Example">[Property().BudgetValue("1001","Name")]</p>
+                                                        <p>Displays the name of the general ledger (GL) account with the account number 1001 for the current property.</p>
+                                                        <p class="Example">[Job().BudgetValue("6401","AccountNumberName")]</p>
+                                                        <p>Displays the general ledger (GL) account number and name of account number 6401 for the selected job.</p>
+                                                        <p class="Example">[Owner().Ownership().Property().BudgetValue("1001","AmountIn")]</p>
+                                                        <p>Displays the total credits or total debits (based on GL account type) that moved into the GL account with the account number 1001 for the property of the first ownership listed alphabetically for the current owner account. Since GL accounts numbered in the low 1000s are typically banks, the AmountIn here would represent the total debits, as defined in the table of descriptions above.</p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utility Readings History Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Utility-Readings-History.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Utility-Readings-History.htm</a></p>
+
+                                                        <h1 id="UtilityReadingsHistoryFunctionScript" data-magellan-target="UtilityReadingsHistoryFunctionScript"><a name="aanchor33"></a>
+                                                            <a name="kanchor54"></a><a name="H1"></a>Utility Readings History Function (Script)</h1>
+                                                        <p>This function retrieves metered utilities information for the tenant based on the utility charge type and date.</p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().UtilityReadingsHistory()]</p>
+                                                                        <p>Displays information found on the <span class="Window">Tenant Consumption History</span> window.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[UtilityReadingsHistory(<span class="Required">"ChargeType","AsOfDate"</span>)]</p>
+                                                        <h3 class="Required"><a name="H3_1"></a>ChargeType</h3>
+                                                        <p>Specify the short name of the metered utility charge type whose information to retrieve.</p>
+                                                        <p class="Example">[UtilityReadingsHistory("Sewer","")]</p>
+                                                        <p>This retrieves the values of the Sewer charge type.</p>
+                                                        <h3 class="Required"><a name="H3_2"></a>AsOfDate</h3>
+                                                        <p colspan="2">Retrieve metered utility values posted on or before this date. By default, today's date is used.</p>
+                                                        <p colspan="2" class="Example">[UtilityReadingsHistory("Sewer","1/20/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">This retrieves the value of the Sewer charge type as of January 20, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h2 id="Variables" data-magellan-target="Variables"><a name="H2_2"></a>Variables</h2>
+                                                        <p>Some function parameters store information in system variables. These variables allow <span class="mc-variable Products.RM variable">Rent Manager</span> to display information that would typically be pulled through the use of more  complex scripts. You can easily recognize system variables because they always have an underscore following a dollar sign "$_ " preceding the variable name.</p>
+                                                        <p>The following variables are available for the AsOfDate parameter:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>[$_chargeamt]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Column">Amount</span> that was charged, based on the reading.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>[$_consumption]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the calculated value of usage during the period between $_prevdate and $_currdate.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>[$_currdate]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Current Reading Date</span> of the most recent reading.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>[$_currread]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the value of the <span class="Column">Current Reading</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>[$_custaccno]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the account number associated with a meter.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>[$_metername]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the name of the meter type associated with the reading.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>[$_prevdate]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Column">Previous Reading Date</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>[$_prevread]</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the value of the <span class="Column">Previous Reading</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_3"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().UtilityReadingsHistory("ELECT","01/01/<span class="mc-variable Dates.Year4 variable">2026</span>");$_currread]</p>
+                                                        <p>This retrieves and stores the electrical charge type variable values as of January 1, <span class="mc-variable Dates.Year4 variable">2026</span> for the selected tenant. It then displays the value of the current electrical reading.</p>
+                                                        <p class="Example">[Tenant().UtilityReadingsHistory("ELECT","01/01/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p class="Example">[$_consumption]</p>
+                                                        <p>This retrieves and stores the electrical charge type variable values as of January 1, <span class="mc-variable Dates.Year4 variable">2026</span> for the selected tenant. It then displays the electrical usage value for the period between the most recent reading and the previous reading.</p>
+                                                    
+</main>
+</body>
+</html>

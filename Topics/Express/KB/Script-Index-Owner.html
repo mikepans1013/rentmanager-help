@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Owner Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Owner.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Owner.htm</a></p>
+
+                                                        <h1 id="OwnerIndexing" data-magellan-target="OwnerIndexing"><a name="aanchor633"></a>
+                                                            <a name="kanchor1062"></a><a name="H1"></a>Owner Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>When the Owner class is used as a child class in a script (e.g., <span class="Formula">Property.Owner.<span class="Required">Function</span></span>), an index can be specified to uniquely identify owners that are associated with the preceding class. For example, a property can be associated with multiple owners, and indexing can be used to identify each of those owners.</p>
+                                                        <h2 id="OwnerIndexRelationships" data-magellan-target="OwnerIndexRelationships"><a name="H2_1"></a>Owner Index Relationships</h2>
+                                                        <p>Owners associated with the property are indexed based upon when the owner was added as an owner on the property. The first owner added to the property has an index of <span class="Input">0</span>, and the second owner added has an index of <span class="Input">1</span>, and so on.</p>
+                                                        <h3><a name="H3_1"></a>Property.Owner Indexing</h3>
+                                                        <p>To determine an owner's index in relation to a property, go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span> and select the property. Then on the action bar to the right, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Owners</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Owner-24.png" alt="The Owners pop-up displays with a list of owners in the order they were added." />
+                                                        </p>
+                                                        <p class="Example">[Property.Owner("2").Address.FullAddress]</p>
+                                                        <p>Using the information in the above image, this returns the full address of <span class="Stress">Eric Farfal</span>, the third owner associated with the property.</p>
+                                                    
+</main>
+</body>
+</html>

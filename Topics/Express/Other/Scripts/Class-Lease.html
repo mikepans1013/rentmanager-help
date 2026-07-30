@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lease Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Lease.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Lease.htm</a></p>
+
+                                                        <h1 id="LeaseClassScript" data-magellan-target="LeaseClassScript"><a name="aanchor1142"></a>
+                                                            <a name="kanchor1900"></a><a name="H1"></a>Lease Class (Script)</h1>
+                                                        <p>This class examines lease information on a tenant account and is preceded by the Tenant class. The class can be followed by either a lease-level scripting function or another class associated with the lease.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().LastPaymentDate]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the date of the last payment linked to the first lease listed on the tenant's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment(1).GLAccount()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the general ledger account selected on the second-listed CAM expense adjustment for the tenant's first-listed lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameter" data-magellan-target="ClassParameter"><a name="H2_1"></a>Class Parameter</h2>
+                                                        <p>This class can specify a single, optional parameter: an index.</p>
+                                                        <h3><a name="H3_1"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific lease on an account by using a number to identify each lease listed. For example, if there are three leases listed on a tenant’s account, they are referenced by indexes 0, 1, and 2. You can specify which lease you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first lease in the list.</p>
+                                                        <p class="Example">[Tenant().Lease(1).Balance]</p>
+                                                        <p>Displays the balance as of today of the first additional lease listed for the current tenant.</p>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_2"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.html">Script Functions</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.html">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().Asset().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">This class retrieves data about an asset specified in the tenant's lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-CAM-Expense-Adjustment.html">CAM Expense Adjustment</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().CAMExpenseAdjustment().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">This class retrieves data on CAM expense adjustments made on a tenant's lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Insurance.html">Insurance</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Insurance().<span class="Required">Function</span>]</p>
+                                                                        <p>This class retrieves data on insurance information for tenant leases as well as manufactured home owners.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.9,Snippet Conditions.14,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().Property().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">This class retrieves data from the <span class="Window">Property</span> details page for the property specified in the tenant's lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Renewal.html">Renewal</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Renewal(Lease.LeaseRenewalCount() - 1).<span class="Required">Function</span>]</p>
+                                                                        <p>This class retrieves data about a renewal of the tenant's lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Renewal-Offer.html">Renewal Offer</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().RenewalOffer(Lease.LeaseRenewalOfferCount() - 1).<span class="Required">Function</span>]</p>
+                                                                        <p>This class retrieves data about an offered renewal of the tenant's lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.25,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().Unit().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">This class retrieves data from the <span class="Window">Unit</span> details page for the unit specified in the tenant's lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_3"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Balance.html">Balance</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().Balance()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the tenant's balance for the selected lease as of a specified date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.35,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Charges-List.html">Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().ChargesList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays each charge linked to the tenant's specified lease within a specified date range.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Require Insurance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().DoNotRequireInsurance()]</p>
+                                                                        <p>Displays whether or not the selected lease of the selected tenant account has the option <span class="Field">Don't require insurance</span> checked. This function outputs <span class="Input">True</span> if the option is checked and <span class="Input">False</span> if it is not.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Expected Move Out Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent66">
+                                                                            <p class="Formula">[Tenant().Lease().ExpectedMoveOutDate]</p>
+                                                                            <p>Displays the <span class="Field">Expected Move Out</span> date on the selected lease of the tenant account.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Current</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent89">
+                                                                            <p class="Formula">[Tenant().Lease().IsCurrent]</p>
+                                                                            <p>Displays whether the selected lease of the selected tenant account is current based on the <span class="Field">Move In</span> and <span class="Field">Move Out</span> dates. This function outputs <span class="Input">True</span> if there is a move in date but no move out date (or a move out date is in the future) and <span class="Input">False</span> in all other cases.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Future</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent92">
+                                                                            <p class="Formula">[Tenant().Lease().IsFuture]</p>
+                                                                            <p>Displays whether the selected lease of the tenant account is in the future based on the <span class="Field">Move In</span> date entered on the <span class="Window">Tenant</span> details page. This function outputs <span class="Input">True</span> if there is a move in date in the future and <span class="Input">False</span> in all other cases.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Past</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent95">
+                                                                            <p class="Formula">[Tenant().Lease().IsPast]</p>
+                                                                            <p>Displays whether the selected lease of the tenant account is in the past based on the <span class="Field">Move Out</span> date entered on the <span class="Window">Tenant</span> details page. This function outputs <span class="Input">True</span> if there is a move out date that has passed and <span class="Input">False</span> in all other cases.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Payment Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().LastPaymentAmount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the amount of the last payment linked to the selected lease of the selected tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Payment Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().LastPaymentDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the date of the last payment linked to the selected lease of the selected tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease End Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().LeaseEndDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the <span class="Field">Lease End</span> date of the selected lease on the tenant's <span class="Window">View Leases</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent110">
+                                                                            <p class="Formula">[Tenant().Lease().LeaseID]</p>
+                                                                            <p>Displays the internally generated lease ID for the selected lease of tenant.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Renewal Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent112">
+                                                                            <p class="Formula">[Tenant().Lease().LeaseRenewalCount]</p>
+                                                                            <p>Displays the number of renewals on a selected lease, including the very first lease, for the tenant.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Lease Renewal Offer Count</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent113">
+                                                                            <p class="Formula">[Tenant().Lease().LeaseRenewalOfferCount]</p>
+                                                                            <p>Displays the number of renewal offers on a selected lease for the tenant.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Sign Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent114">
+                                                                            <p class="Formula">[Tenant().Lease().LeaseSignDate]</p>
+                                                                            <p>Displays the <span class="Field">Lease Sign</span> date on the selected lease for the tenant.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().LeaseStartDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the <span class="Field">Lease Start</span> date on the selected lease for the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20,Snippet Conditions.9,Snippet Conditions.22,Snippet Conditions.23,Snippet Conditions.39">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().LeaseTerm]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the <span class="Field">Lease Term</span> entry for the selected lease on the tenant's <span class="Window">View Leases</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20,Snippet Conditions.39">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move In Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().MoveInDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the <span class="Field">Move In</span> date of the selected lease on the tenant's <span class="Window">View Leases</span> pop-up. If the tenant is a guest with a short term rental reservation, the most recent <span class="Column">Arrival</span> date entered on the tenant's <span class="Section">Reservations</span> tile displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move Out Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().MoveOutDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the <span class="Field">Move Out</span> date of the selected lease on the tenant's <span class="Window">View Leases</span> pop-up. If the tenant is a guest with a short term rental reservation, the most recent <span class="Field">Departure</span> date entered on the tenant's <span class="Section">Reservations</span> tile displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Next-Recurring-Charge-Change-Date.html">Next Recurring Charge Change Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().NextRecurringChargeChangeDate()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the date of the next scheduled change to the recurring charge on the tenant's  <span class="Window">View Recurring Charges</span> pop-up for the selected lease. Based on the value of the parameters, <span class="mc-variable Products.RM variable">Rent Manager</span> determines which iteration of the recurring charge to examine. The next recurring charge change date is one day after that recurring charge's <span class="Column">To Date</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Oldest Active Charge Age</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().OldestActiveChargeAge]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the age, in days, of the oldest unpaid charge for the selected lease on the tenant's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges-Amount.html">Open Charges Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().OpenChargesAmount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total amount of open charges as listed on the tenant's <span class="Window">View Transactions</span> pop-up for the selected lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges-List.html">Open Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().OpenChargesList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays a list of each of open charge on the tenant's <span class="Window">View Transactions</span> pop-up for the selected lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Payments.html">Payments</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().Payments()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays a list of payments made by the tenant for the selected lease. The function creates a separate line for each payment that includes the date and amount of each transaction.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Previous-Recurring-Charge-Change-Date.html">Previous Recurring Charge Change Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().PreviousRecurringChargeChangeDate()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the date of the previous scheduled change to the recurring charge on the tenant's  <span class="Window"> View Recurring Charges</span> pop-up for the selected lease. Based on the value of the parameters, <span class="mc-variable Products.RM variable">Rent Manager</span> determines which iteration of the recurring charge to examine. The next recurring charge change date is one day after that recurring charge's <span class="Column">From Date</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Recurring-Charge-List.html">Recurring Charge List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Tenant().Lease().RecurringChargeList()]</p>
+                                                                                        <p>Displays a list of all active recurring charges as listed on the tenant's <span class="Window">View Recurring Charges</span> pop-up for the specified lease.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Recurring-Charges.html">Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().RecurringCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total sum of active recurring charges as listed on the tenant's <span class="Window">View Recurring Charges</span> pop-up for the specified lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Rent-Recurring-Charges.html">Rent Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().RentRecurringCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total amount of active rent recurring charges as listed on the tenant's <span class="Window">View Recurring Charges</span> pop-up for the specified lease. Charge types that are designated as rent charges are specified for each property in the <span class="Field">Rent Charge Type</span> field on the property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Sales.html">Sales</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Sales()]</p>
+                                                                        <p>Displays the total sales <span class="Field">Amount</span> as entered on the <span class="Window">Retail Sales</span> pop-up of the commercial lease for the month immediately preceding the specified or calculated date. If no retail sales exist for that month, <span class="mc-variable Products.RM variable">Rent Manager</span> continues looking at prior month(s) until it finds a month with sales data. If none is found, it displays nothing.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to track tenant retail sales, the <span class="Field">Track tenant retail sales</span> option must be enabled in <a href="../System-Preferences/Commercial.html" class="MCXref xref">Commercial (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Sales-Month.html">Sales Month</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().SalesMonth()]</p>
+                                                                        <p>Displays the most recent month with data entered on the <span class="Window">Retail Sales</span> pop-up of the commercial lease immediately preceding the specified or calculated date.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to track tenant retail sales, the <span class="Field">Track tenant retail sales</span> option must be enabled in <a href="../System-Preferences/Commercial.html" class="MCXref xref">Commercial (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Sales-Year.html">Sales Year</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().SalesYear()]</p>
+                                                                        <p>Displays the year with data entered on the <span class="Window">Retail Sales</span> pop-up of the commercial lease immediately preceding the specified or calculated date.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to track tenant retail sales, the <span class="Field">Track tenant retail sales</span> option must be enabled in <a href="../System-Preferences/Commercial.html" class="MCXref xref">Commercial (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.9,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Held.html">Security Deposit Held</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().SecurityDepositHeld()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total amount of all security deposits <span class="Stress">currently</span> held for the tenant's selected lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Allocations.html">Total Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().TotalAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total value of paid allocations associated with a tenant's specified lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Charged.html">Total Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().TotalCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total amount of charges posted to the lease for the selected tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.31,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Credits.html">Total Credits</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().TotalCredits()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total amount of credits posted to the lease for the selected tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Payments.html">Total Payments</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().TotalPayments()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total amount of payments received on selected charge types within a specified date range for the selected tenant lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Prepay-Allocations.html">Total Prepay Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().TotalPrepayAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the total value of prepayments and/or credits that are unapplied to charges at the specified tenant lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Transactions.html">Transactions</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().Transactions()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays each transaction linked to the selected lease of the selected tenant within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results display by default the transaction date, description, and amount separated by tabs.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the first lease listed for the current tenant displays, as shown below.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">
+                                                                            <img src="../../../../assets/Resources/Images/PNGs/Lease%20Transactions%20Function%20CS%209-16-20.png" alt="" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.html">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the value of the lease-type user defined field (UDF) defined. The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.9">[Tenant().Lease().UserDefinedField("Lease Document")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.9">Displays the value for the <span class="Field">Lease Document</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

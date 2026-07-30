@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-output-analytics-server="https://lcs202202281700482.api.madcapcentral.com/" data-mc-output-analytics-topic-id="1xBCeJNnhjAPyXZp0OqabpHvWdZB8I86vlAtwWUMkh0C31xc1Ixy+Uv90OuQetJV0vTDrc4d3gZiR668T5rz0vOVFQJGLtIZdFzmhuvO4Lc3PTUOEkl404L3/7T3hKwBFWZKTWCdj73f+8tNe/fKf+WygAdospoBAkI9HKK8iDdixN+pUyHGUw==" data-mc-has-content-body="True" data-mc-conditions="Status.Published,Content.Important" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="Dependencies" content="Reference Topics - mark which ones in file tags" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Loan Class (Script)</title>
+        <label class="mode-switcher" id="theme-toggle">
+            <input type="checkbox" name="checkbox" /><span class="slider round"></span>
+        </label>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/RMX-Branding.css" rel="stylesheet" type="text/css" />
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="../../../../Resources/Stylesheets/lity.css" rel="stylesheet" />
+        <link href="../../../../Resources/Stylesheets/MainStylesDark.css" rel="stylesheet" type="text/css" data-theme="dark-main" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Tablestyles/Script.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Tablestyles/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script>/* <![CDATA[ */
+			(function () {
+			var theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.dataset.theme = theme;
+
+			// Prevent white flash on first paint when in dark mode
+			if (theme === 'dark') {
+			var s = document.createElement('style');
+			s.id = 'early-dark-paint';
+			s.textContent =
+			"html,body{background:#0e1319;color:#e8e8e8}" +           // minimal dark bg + readable text
+			"html[data-theme='dark']{color-scheme:dark}";              // hints UA (form controls, scrollbars)
+			document.head.appendChild(s);
+			}
+			})();
+		/* ]]> */</script>
+        <script src="../../../../Resources/Scripts/custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/bootstrap.js">
+        </script>
+        <script src="../../../../Resources/Scripts/lightbox.js">
+        </script>
+        <script src="../../../../Resources/Scripts/lity.js">
+        </script>
+        <script src="../../../../Resources/Scripts/addLityAttribute.js">
+        </script>
+        <script src="../../../../Resources/Scripts/Dark-Mode.js">
+        </script>
+        <script src="../../../../Resources/Scripts/glanceCobrowse.js">
+        </script>
+        <script src="../../../../Resources/Scripts/microContentTopics.js">
+        </script>
+        <script src="../../../../Resources/Scripts/mobileResponseTableDisplay.js">
+        </script>
+        <script type="text/javascript" src="../../../../Skins/Default/Scripts/Topic-ToolBar.js">
+        </script>
+    </head><a name="top"></a>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="2" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="topic-background">
+                                        <div class="search">
+                                            <form class="search" action="#">
+                                                <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                    <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search..." />
+                                                    <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                        </div>
+                                                        <div class="search-filter-content" id="sf-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-submit-wrapper" dir="ltr">
+                                                        <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="row collapse">
+                                            <div class="topic-layout">
+                                                <div>
+                                                    <div data-sticky-container="" id="-sG0APVS40mC3VK5TjN_mw">
+                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="-sG0APVS40mC3VK5TjN_mw:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
+                                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container-on="small" class="nocontent menu _Skins_Topic_Headers_Menu mc-component">
+                                                                <li class="tree-node"><a href="#LoanClassScript">Loan Class (Script)</a>
+                                                                    <ul>
+                                                                        <li class="tree-node"><a href="#ClassParameter">Class Parameter</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#AvailableFunctions">Available Functions</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_ToolBar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                        <div class="button-group-container-left">
+                                                            <button class="button needs-pie remove-highlight-button" title="Remove Search Highlights">
+                                                                <div>
+                                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                                        <div class="button-icon"> </div>
+                                                                    </div><span class="button-text">Remove Highlights</span>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div role="main" id="mc-main-content">
+                                                        <h1 id="LoanClassScript" data-magellan-target="LoanClassScript"><a name="aanchor90"></a>
+                                                            <MadCap:concept term="Ref-Script Classes" /><a name="kanchor157"></a><a name="H1"></a>Loan Class (Script)</h1>
+                                                        <p>This class provides functions for retrieving data about a tenant's owner-financed loans. The class is preceded by the Tenant class and can be followed by a loan-level scripting function.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Loan().Principal]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the original principal of the tenant's oldest owner-financed loan.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameter" data-magellan-target="ClassParameter"><a name="H2_1"></a>Class Parameter</h2>
+                                                        <p>This class can specify a single, optional parameter: an index.</p>
+                                                        <h3><a name="H3_1"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific loan on an account by using a number system to identify each loan listed. For example, if there are three loans listed on a tenant’s account, they are referenced by indexes 0, 1, and 2. You can specify which loan you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first loan in the list.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you insert a function from the <span class="Section">Insertable Fields</span> list in a letter template, the index automatically populates with a scripted formula: <span class="Formula" data-mc-conditions="Snippet Conditions.1">(Tenant.TenantLoanCount() - 1)</span>. This allows you to return data for the most recent <MadCap:conditionalText data-mc-conditions="Snippet Conditions.1">loan</MadCap:conditionalText> created for the tenant.</p>
+                                                        </div>
+                                                        <p colspan="2" class="Example">[Tenant().Loan().CurrentBalance]</p>
+                                                        <p>Displays the current balance of the tenant's oldest loan.</p>
+                                                        <p class="Example">[Tenant().Loan(Tenant.TenantLoanCount-1).CurrentBalance]</p>
+                                                        <p>Displays the current balance of the tenant's most recent loan.</p>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.22,Snippet Conditions.23,Snippet Conditions.10,Snippet Conditions.37,Snippet Conditions.38">The following examples reflect the syntax that displays when you double-click the functions in the <span class="Section">Insertable Fields</span> section.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Adjusted Principal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent6">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).AdjustedPrincipal]</p>
+                                                                            <p>Displays—for the most recent preexisting loan that was established prior to being tracked and managed in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>—the outstanding remaining principal as it displays in the <span class="Field">Adjusted Principal</span> field in the loan’s scoreboard and when the loan is printed.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Adjusted Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent7">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).AdjustedStartDate]</p>
+                                                                            <p>Displays—for the most recent preexisting loan that was established prior to being tracked and managed in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>—the projected date of the first payment to be collected as it displays in the <span class="Field">Adjusted Start Date</span> field in the loan’s scoreboard and when the loan is printed.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Current-Balance.htm">Current Balance</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).CurrentBalance()]</p>
+                                                                        <p>Displays the principal balance of the tenant's loan.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Days In Year Divisor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent46">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).DaysInYearDivisor]</p>
+                                                                            <p>Displays the number of days in a year used to calculate the daily interest of the tenant's loan. This value (<span class="Field">360</span> or <span class="Field">365</span>) is defined when the daily interest loan is created. If the loan is not a daily interest loan, the function outputs <span class="Input">0</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.31,Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Insurance Expiration Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.10">[Tenant().Loan(Tenant.TenantLoanCount()-1).InsuranceExpirationDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.10">Displays the <span class="Field">Insurance Expiration</span> date for the loan as entered on the <span class="Section">General</span> tile of the loan receivable's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent85">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).InterestMethod]</p>
+                                                                            <p>Displays the method used to calculate interest for the loan as shown on the <span class="Window">Loans Receivable</span> page. By default, some columns display only by using <img src="../../../../Resources/Images/ICONS/Express-App/Material/view_column_19x19.png" class="inline-image" alt="Setup Columns" style="width: 19;height: 19;" />.</p>
+                                                                            <p>Possible values include: <span class="Field">Principal Balance</span>, <span class="Field">Straight</span> (straight amortization), and <span class="Field">Daily</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Interest-Paid.htm">Interest Paid</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).InterestPaid()]</p>
+                                                                        <p>Displays the interest paid during a specified date range for the tenant's loan. Any interest paid prior to the loan being tracked in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span> is not included in this total.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Interest-Rate.htm">Interest Rate</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).InterestRate()]</p>
+                                                                        <p>Displays the <span class="Field">Current Interest Rate (%)</span> on the loan's scoreboard in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Defaulted</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent90">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).IsDefaulted]</p>
+                                                                            <p>Displays <span class="Input">True</span> if the remainder of the loan was defaulted; otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Open</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent93">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).IsOpen]</p>
+                                                                            <p>Displays <span class="Input">True</span> if the loan is open and <span class="Input">False</span> if it is closed.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Preexisting</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent96">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).IsPreexisting]</p>
+                                                                            <p>Displays <span class="Input">True</span> if the loan was established prior to setup in <span class="mc-variable Products.RM variable">Rent Manager</span> and <span class="Input">False</span> if it was not.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Last-Charge-Date.htm">Last Charge Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).LastChargeDate()]</p>
+                                                                        <p>Displays the date of the last posted recurring loan charges on the tenant's <span class="Window">View Transactions</span> pop-up. If there are no charges posted as of the specified date, the function returns nothing.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Preexisting Payment Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent103">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).LastPreexistingPaymentDate]</p>
+                                                                            <p>Displays the date of the last preexisting loan payment of the loan prior to setup in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            <p>This function returns a value only if the preexisting loan uses the <span class="Field">Daily Interest</span> interest method. If the selected loan is not preexisting or uses another interest method, this function returns nothing. You can test for these values using the IsPreexisting and InterestMethod functions.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Loan ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent122">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).LoanID]</p>
+                                                                            <p>Displays the internally generated loan ID for the tenant's loan.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Maturity Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent125">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).MaturityDate]</p>
+                                                                            <p>Displays the <span class="Field">Maturity Date</span> as listed on the loan receivable's details page on the scoreboard.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.40,Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Notice Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent128">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.10">[Tenant().Lease().NoticeDate]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.10">Displays the move out <span class="Field">Notice</span> date of the selected lease on the tenant's <span class="Window">View Leases</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Origination Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent130">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).OriginationDate]</p>
+                                                                            <p>Displays the<span class="Field">Origination Date</span> as listed on the <span class="Window">Loans Receivable</span> page.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Other Charges Charge Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent131">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).OtherChargesChargeAmount]</p>
+                                                                            <p>Displays the<span class="Field">Amount</span> of a charge listed on the <span class="Section">Other Charges</span> pop-up. You can view this information on the loan receivable's details page by going to <img src="../../../../Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">Other Charges</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Other Charges Charge Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent132">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).OtherChargesChargeType]</p>
+                                                                            <p>Displays the<span class="Column">Charge Type</span> name for a charge listed on the <span class="Section">Other Charges</span> pop-up. You can view this information on the loan receivable's details page by going to <img src="../../../../Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">Other Charges</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Other Charges Charge Type Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent133">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).OtherChargesChargeTypeDescription]</p>
+                                                                            <p>Displays the description of the charge type for a charge listed on the <span class="Section">Other Charges</span> pop-up. You can view this information on the loan receivable's details page by going to <img src="../../../../Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">Other Charges</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Other Charges Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent134">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).OtherChargesComment]</p>
+                                                                            <p>Displays the<span class="Column">Comment</span> for a charge listed on the <span class="Section">Other Charges</span> pop-up. You can view this information on the loan receivable's details page by going to <img src="../../../../Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">Other Charges</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Other Charges Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent135">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).OtherChargesCount]</p>
+                                                                            <p>Displays the number of charges listed on the <span class="Section">Other Charges</span> pop-up. You can view this information on the loan receivable's details page by going to <img src="../../../../Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">Other Charges</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Other-Charges-List.htm">Other Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).OtherChargesList()]</p>
+                                                                        <p>Displays the list of charges on the <span class="Section">Other Charges</span> pop-up. You can view this information on the loan receivable's details page by going to <img src="../../../../Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">Other Charges</span>.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you insert a function from the <span class="Section">Insertable Fields</span> list in a letter template, the index automatically populates with a scripted formula: <span class="Formula" data-mc-conditions="Snippet Conditions.1">(Tenant.TenantLoanCount() - 1)</span>. This allows you to return data for the most recent <MadCap:conditionalText data-mc-conditions="Snippet Conditions.1">loan</MadCap:conditionalText> created for the tenant.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Pay-Off-Amount.htm">Pay Off Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).PayOffAmount()]</p>
+                                                                        <p>Displays the total payoff amount based on payments received as of a specified date for the loan.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>This function considers only payments received, and not the payments projected on the amortization schedule.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Payment-Amount.htm">Payment Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).PaymentAmount()]</p>
+                                                                        <p>Displays the total payment amount for the specified payment number of the loan. This value displays in the <span class="Column">Payment Due</span> column as listed on the loan receivable's details page on the <span class="Section">Amortization Schedule</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Payment Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent140">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).PaymentDay]</p>
+                                                                            <p>Displays the<span class="Field">Payment Day</span> as listed on the loan receivable's details page on the <span class="Section">General</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Payments-Received.htm">Payments Received</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).PaymentsReceived()]</p>
+                                                                        <p>Displays the total loan payments received as of a specified date range for the loan. Payments received during the preexisting period of the loan prior to setup in <span class="mc-variable Products.RM variable">Rent Manager</span> are not included in this total.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Principal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent151">
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).Principal]</p>
+                                                                            <p>Displays the <span class="Field">Original Principal</span> of the loan receivable.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Principal-Paid.htm">Principal Paid</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).PrincipalPaid()]</p>
+                                                                        <p>Displays the total of principal paid as of a specified date range for the loan based on actual payments received. Principal paid during the preexisting period of the loan prior to setup in <span class="mc-variable Products.RM variable">Rent Manager</span> is not included in this total.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10,Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p data-mc-conditions="Snippet Conditions.10">Reference</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.10">[Tenant().Loan(Tenant.TenantLoanCount()-1).Reference]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.10">Displays the unique <span class="Field">Reference</span> value as entered on the loan receivable's details page on the <span class="Section">General</span> tile. This value defaults to the <span class="Field">Loan ID</span> but may be edited.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Sale Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).SaleAmount]</p>
+                                                                            <p>Displays the <span class="Field">Sale Amount</span> as listed on the <span class="Window">Loans Receivable</span> page.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Starting Payment Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).StartingPaymentNumber]</p>
+                                                                            <p>Displays the <span class="Field">Starting Payment #</span> for the loan receivable.</p>
+                                                                            <p>If the loan is preexisting, this function returns the number of the first payment collected using <span class="mc-variable Products.RM variable">Rent Manager</span>. If the loan is not preexisting, this function displays <span class="Input">0</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).Term]</p>
+                                                                            <p>Displays the number of months in the <span class="Field">Term</span> as listed on the loan receivable's scoreboard.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Other-Charges.htm">Total Other Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).TotalOtherCharges()]</p>
+                                                                        <p>Displays the total amount of all charges listed in the loan's <span class="Section">Loan Other Charges</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.htm">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.10">[Tenant().Loan(Tenant.TenantLoanCount()-1).UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.10">Displays the value of the loan-type user defined field (UDF). The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.10">[Tenant().Loan(Tenant.TenantLoanCount()-1).UserDefinedField("Originator")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.10">Displays the value for the <span class="Field">Originator</span> user defined field of the most recent loan.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="links">
+                                                        <div class="MCRelationshipsProxy_0">
+                                                            <p class="pageHeading_page_0">Related Information</p>
+                                                            <p class="pageItem_page_0"><a href="../../KB/Script-Scripting.htm">Scripting</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../KB/Script-Classes.htm">Script Classes</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../CSH/Loans-Receivable.htm">Loans Receivable (Page)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../CSH/Loans-Receivable-Details.htm">Loans Receivable Details (Page)</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="topic-background">
+                                        <script type="text/javascript" src="../../../../Resources/Scripts/Back-to-Top-Button.js">
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <div class="footer center">
+        <div class="master-page-footer">
+            <div>
+                <p class="footer-header">Product Support</p>
+                <p>Monday-Friday</p>
+                <p>8:00 a.m.-7:00 p.m. (EST)</p>
+                <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
+                </p>
+                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                </p>
+            </div>
+            <div>
+                <p class="footer-header">Resources</p>
+                <p><a href="https://www.rentmanager.com/training/#Training_Calendar" target="_blank">Training Calendar</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/virtual-classroom-enrollment-form/">Virtual Classroom Enrollment</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/podcast/">Beyond Rent Podcast</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/submit-a-feature-request/">Submit a Feature Request</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+    </div>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Individual Hours Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Individual-Hours.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Individual-Hours.htm</a></p>
+
+                                                        <h1 id="IndividualHoursFunctionScript" data-magellan-target="IndividualHoursFunctionScript"><a name="aanchor1172"></a>
+                                                            <a name="kanchor1957"></a><a name="H1"></a>Individual Hours Function (Script)</h1>
+                                                        <p>This function displays the user who performed the work, the date and time of the check in and check out, and the number of hours for a service tech hour entry on a service issue. The time a technician spends on a service issue can be recorded in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> or added manually in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <p>The default output of the function displays below. The Format parameter can be used to customize this output, as shown in the last example in this topic.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Service%20Manager%20Class%20Individual%20Hours%20Example%20SS%209-22-20.png" alt="" />
+                                                        </p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().IndividualHours()]</p>
+                                                                        <p>Displays information found on the issue's <span class="Section">History/Notes</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[IndividualHours(<span class="Optional">"ServiceIssueID"</span>, <span class="Optional">"IndividualHourIndex"</span>, <span class="Optional">"CheckInFromDate"</span>, <span class="Optional">"CheckInToDate"</span>, <span class="Optional">"CheckOutFromDate"</span>, <span class="Optional">"CheckOutToDate"</span>, <span class="Optional">"UserNames"</span>, <span class="Optional">"Format"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ServiceIssueID</h3>
+                                                        <p>Select the service issue with this <span class="Column">Issue ID</span>. If this parameter is not specified, it defaults to the oldest/first issue on the linked account.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If ServiceManager is the only class, its parameter is ServiceIssueID. If another class precedes the ServiceManager class, the ServiceManager class instead uses the Index parameter, and the entity of the preceding class must be associated with a service issue in order for the script to return results.</p>
+                                                        </div>
+                                                        <p colspan="2" class="Example">[IndividualHours("53")]</p>
+                                                        <p colspan="2">Displays information from the oldest check-in on service issue number 53.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_2"></a>IndividualHourIndex</h3>
+                                                        <p colspan="2">Display information from a specific check-in on the service issue. The oldest check-in has an index of <span class="Input">0</span>, the second oldest has an index of <span class="Input">1</span>, etc.</p>
+                                                        <p colspan="2" class="Example">[IndividualHours("53","1")]</p>
+                                                        <p colspan="2">Displays the second-oldest check-in for service issue number 53.</p>
+                                                        <h3 class="Optional">CheckInFromDate</h3>
+                                                        <p colspan="2">Display information from the hours entry with the earliest check-in starting on or after the specified date. If no date is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> examines entries from the beginning of time by default.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[IndividualHours("53","","11/18/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the first entry with a check-in on November 18, <span class="mc-variable Dates.Year4 variable">2026</span> for service issue number 53.</p>
+                                                        <h3 class="Optional">CheckInToDate</h3>
+                                                        <p colspan="2">Display information from the hours entry with the earliest check-in before or on the specified date. If no date is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> examines entries to the end of time by default.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[IndividualHours("53","","","11/18/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the first entry with a check-in before or on November 18, <span class="mc-variable Dates.Year4 variable">2026</span> for service issue number 53.</p>
+                                                        <h3 class="Optional">CheckOutFromDate</h3>
+                                                        <p colspan="2">Display information from the hours entry with the earliest check-out on or before the specified date. If no date is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> examines entries from the beginning of time by default.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[IndividualHours("53","","","","11/18/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays information from the earliest entry with a check-out on or before November 18, <span class="mc-variable Dates.Year4 variable">2026</span> for service issue number 53.</p>
+                                                        <h3 class="Optional">CheckOutToDate</h3>
+                                                        <p colspan="2">Display information from the hours entry with the earliest check-out on or after the specified date. If no date is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> examines entries to the end of time by default.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[IndividualHours("53","","","","","11/18/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays information from the earliest entry with a check-out on or after November 18, <span class="mc-variable Dates.Year4 variable">2026</span> for service issue number 53.</p>
+                                                        <h3 class="Optional">UserNames</h3>
+                                                        <p colspan="2">Display the oldest check-in from the specified username.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[IndividualHours("53","","","","","","SarahS")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the oldest check-in entry for the user <span class="Input">SarahS</span> for issue number 53.</p>
+                                                        <h3 class="Optional"><a name="H3_3"></a>Format</h3>
+                                                        <p>List details of each entry using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <p class="Subheading">Default Format</p>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays the user who checked into the issue,  the date and time that user checked in, the date and time the user checked out,  and the number of hours spent on the issue, separated by tabs:</p>
+                                                        <p class="Formula">"\n$_User\t$_CheckInTime\t$_CheckOutTime\t$_Hours"</p>
+                                                        <p class="Subheading">Variables</p>
+                                                        <p>The following variables may be used in the Format parameter: </p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_CheckInTime</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date and time of the <span class="Field">Check In</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_CheckOutTime</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date and time of the <span class="Field">Check Out</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays text entered in the <span class="Column">Note</span> column of the entry.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Hours</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the number of hours spent on the issue between the check-in time and check-out time.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_User</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the username of the <span class="mc-variable Products.RM variable">Rent Manager</span> user who checked into the issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Example">IndividualHours("","","","","","","","\t$_User\t$_Hours\n")</p>
+                                                        <p>Displays a new line with a customized list of the <span class="Field">User</span> and <span class="Field">Hours</span> for each entry.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[ServiceManager().IndividualHours("53","","","","","","SarahS")]</p>
+                                                        <p>Displays the oldest check-in entry for the user SarahS on service issue number 53.</p>
+                                                        <p colspan="2" class="Example">[ServiceManager().IndividualHours("","","11/18/<span class="mc-variable Dates.Year4 variable">2026</span>","11/19/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the oldest check-in entry that occurred from 11/18/<span class="mc-variable Dates.Year4 variable">2026</span> to 11/19/<span class="mc-variable Dates.Year4 variable">2026</span> for the selected service issue.</p>
+                                                        <p colspan="2" class="Example">[ServiceManager().IndividualHours("","","11/18/<span class="mc-variable Dates.Year4 variable">2026</span>","","","11/18/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the oldest check-in entry that has a <span class="Field">Check In</span> date from the beginning of time to 11/18/<span class="mc-variable Dates.Year4 variable">2026</span> and a <span class="Field">Check Out</span> date from 11/18/<span class="mc-variable Dates.Year4 variable">2026</span> to the end of time for the selected service issue.</p>
+                                                        <p class="Example">[ServiceManager().IndividualHours("53","","","","","","","\t$_User\t$_Hours")]</p>
+                                                        <p>Displays the username and number of hours of the oldest check-in entry for issue number 53, with tabs separating the values.</p>
+                                                    
+</main>
+</body>
+</html>

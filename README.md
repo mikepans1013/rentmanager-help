@@ -4,7 +4,7 @@ This repo inventories the public Rent Manager Help site at:
 
 https://rmxhelp.rentmanager.com/
 
-The first milestone is a durable sitemap. Later milestones can mirror topic HTML and local article assets, including JPEG/PNG/GIF/SVG images referenced inside articles. Online training videos should remain as links in the reproduced HTML, not downloaded.
+The archive mirrors topic HTML and local article assets, including JPEG/PNG/GIF/SVG images referenced inside articles. Online training videos remain as links in the reproduced HTML and are not downloaded.
 
 ## Current Snapshot
 
@@ -19,6 +19,11 @@ Snapshot counts from the initial run:
 - Total sitemap URLs: 8,632
 - Normal topic articles: 2,274
 - MicroContent pages: 308
+- Mirrored portable HTML pages: 2,582
+- Extracted Markdown pages: 2,582
+- Raw source HTML pages: 2,582
+- Local copied assets: 3,510
+- Verified local image references in portable HTML: 11,390
 
 ## Important Access Note
 
@@ -42,21 +47,24 @@ node scripts/rmx_help_archive.js --permission-confirmed --sitemap-only --out .
 Test article extraction with a small batch:
 
 ```bash
-node scripts/rmx_help_archive.js --permission-confirmed --limit 25 --delay-ms 1000 --raw-html --out .
+node scripts/rmx_help_archive.js --permission-confirmed --include-microcontent --limit 25 --delay-ms 1000 --mirror-html --raw-html --out .
 ```
 
 Full article extraction, after permission/rate-limit approach is approved:
 
 ```bash
-node scripts/rmx_help_archive.js --permission-confirmed --delay-ms 1000 --raw-html --out .
+node scripts/rmx_help_archive.js --permission-confirmed --include-microcontent --delay-ms 1000 --mirror-html --raw-html --out .
 ```
 
 ## Planned Archive Layout
 
 When mirroring is enabled, the intended layout is:
 
-- `Topics/**/*.html` - reproduced source/topic HTML
+- `Topics/**/*.html` - readable portable topic HTML
+- `MicroContent/**/*.html` - readable portable MicroContent HTML
 - `Topics/**/*.md` - extracted Markdown text for bot search and retrieval
+- `MicroContent/**/*.md` - extracted MicroContent Markdown
+- `raw/**` - original source `*.htm` captures
 - `assets/**` - local copies of article images and other static assets
 - `sitemap/**` - current URL inventory
 - `state/**` - raw source sitemap, manifests, and future crawl state

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Type Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Unit-Type.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Unit-Type.htm</a></p>
+
+                                                        <h1 id="UnitTypeClassScript" data-magellan-target="UnitTypeClassScript"><a name="aanchor547"></a>
+                                                            <a name="kanchor925"></a><a name="H1"></a>Unit Type Class (Script)</h1>
+                                                        <p>This class examines unit type data as entered on the unit's details page. It is preceded by the Unit class and can be followed by a unit type-level scripting function.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Unit().UnitType.Bedrooms]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the number of bedrooms for the unit type of the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Unit().UnitType.Bathrooms]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the number of bathrooms for the unit type of the tenant's leased unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_1"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bathrooms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.30">[Unit().UnitType.Bathrooms]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.30">Displays the number of bathrooms as entered on the unit type's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bedrooms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.30">[Unit().UnitType.Bedrooms]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.30">Displays the number of bedrooms as entered on the unit type's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.30,Snippet Conditions.25,Snippet Conditions.32,Snippet Conditions.17,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Description.html">Description</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.30">[Unit().UnitType.Description]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.30">Displays the text entered in the <span class="Field">Description</span> field on the unit type's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.30">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Other Rentable Item</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent94">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.30">[Unit().UnitType.IsOtherRentableItem]</p>
+                                                                            <p>Displays <span class="Input">True</span> if unit type has <span class="Field">Other Rentable Item</span> checked on the <span class="Window">General</span> tile. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.17,Snippet Conditions.26,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.30">[Unit().UnitType.Name]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.30">Displays the <span class="Field">Unit Type</span> name as entered on the unit type <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.30">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Type ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Unit().UnitType.UnitTypeID]</p>
+                                                                            <p>Displays the system generated unit type ID for the unit type.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.30">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Type-Image.html">Unit Type Image</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().UnitType.UnitTypeImage()]</p>
+                                                                        <p>Displays a selected image uploaded to the unit type details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

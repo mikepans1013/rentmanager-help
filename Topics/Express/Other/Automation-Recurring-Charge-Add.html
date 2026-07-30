@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a Recurring Charge Posting Automation</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Automation-Recurring-Charge-Add.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Automation-Recurring-Charge-Add.htm</a></p>
+
+                                                        <h1 id="AddaRecurringChargePostingAutomation" data-magellan-target="AddaRecurringChargePostingAutomation"><a name="H1"></a>Add a Recurring Charge Posting Automation</h1>
+                                                        <p>Recurring charges are charge templates assigned to property, unit type, unit, or tenant records that are posted regularly to associated tenant accounts. <span class="mc-variable Products.TA variable">Task Automation</span> can reduce the time spent adding or editing recurring charges and curtail errors that occur from manually entering information like dates and amounts. The ability to schedule when the automation runs ensures that your postings are timely and consistent. For more information about manual postings, refer to <a href="Post-Recurring-Charges.html" class="MCXref xref">Post Recurring Charges</a>.</p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>To set up automation schedules, you must have the appropriate automation enabled in system preferences. For more information, refer to <a href="System-Preferences/Task-Automation.html" class="MCXref xref">Task Automation (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Task Automation</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Post recurring charges</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1CreateandNametheSchedule" data-magellan-target="Step1CreateandNametheSchedule"><a name="H2_1"></a>Step 1: Create and Name the Schedule</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you need to edit an existing automation schedule, you do not need to complete the full process detailed here. For details about input fields you may want to edit, refer to the tables throughout this topic.</p>
+                                                        </div>
+                                                        <p>To create a new task automation for posting recurring charges, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Automation <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.TA variable">Task Automation</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Recurring Charges</span>.<br />The <span class="Window">Recurring Charges Automation Schedules</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Schedule</span>.<br /></p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Task-Automation-Recurring-Charges-Add.png" alt="The Add Recurring Charge Automation Schedule pop-up displays fields for creating a new automation schedule for recurring charge postings." class="lightbox" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enter a unique <span class="Field">Name</span> for the automation to display in the list on the <span class="Window">Recurring Charges Automation Schedules</span> page.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2SetUpPostingSchedule" data-magellan-target="Step2SetUpPostingSchedule"><a name="H2_2"></a>Step 2: Set Up Posting Schedule</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Task-Automation-Recurring-Charges-Add-Schedule-Options.png" alt="This section of the Schedule Options displays the frequency and timeline for the charge automation." class="lightbox" />
+                                                        </p>
+                                                        <p>In the <span class="Section">Schedule Options</span> section, set up the posting scheduling, including when the automation starts and ends and how frequently recurring charges post. To set up the posting schedule, enter the following information:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The current or future date to determine when this posting schedule begins.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>End By</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The current or future date to determine when this posting schedule should end. If this field is left blank, the schedule continues to post indefinitely or until an end date is entered.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Posting Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The frequency at which the charges are posted.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you have properties where some tenants pay monthly and others pay weekly or daily, you need to set up separate posting schedules to handle each posting type.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Monthly</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Automate this schedule to post recurring charges monthly.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Weekly</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Automate this schedule to post recurring charges weekly. The options for <span class="Field">Run Day</span> and <span class="Field">Post Day</span> changes from days of the month to days of the week.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Daily</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>Automate this schedule to post recurring charges daily.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Run Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The calendar date (for monthly schedules) or the day of the week (for weekly schedules) on which the automated posting occurs. <span class="mc-variable Products.RM variable">Rent Manager</span> automatically posts these recurring charges early in the morning of the chosen <span class="Field">Run Day</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The calendar date (for monthly schedules) or the day of the week (for weekly schedules) on which recurring charges transactions are added to the tenant account.</p>
+                                                                        <p>If the <span class="Field">Post Day</span> is the same or higher than the <span class="Field">Run Day</span>, transactions are dated on the same month it is run on. For example, using a <span class="Field">Run Day</span> of <span class="Input">1</span> and a <span class="Field">Post Day</span> of <span class="Input">6</span> will be run and dated within the same month.</p>
+                                                                        <p>If the <span class="Field">Post Day</span> is less than the <span class="Field">Run Day</span>, transactions are dated on the month following when it is run on. For example, using a <span class="Field">Run Day</span> of <span class="Input">15</span> and a <span class="Field">Post Day</span> of <span class="Input">1</span> will be run on the 15<sup>th</sup> of the same month and dated for the 1<sup>st</sup> of the following month.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you enter a <span class="Field">Post Day</span> of <span class="Input">31</span>, <span class="mc-variable Products.RM variable">Rent Manager</span> dates the transactions with the last day of each month, regardless of the number of days in the month. For example, with a <span class="Field">Post Day</span> of <span class="Input">31</span> and posting for April, transactions are dated for the 30<sup>th</sup>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Notification Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The email address of a user that receives a notification for each successful or failed automatic posting. Separate multiple email addresses with a semicolon (;).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Include Details</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Includes additional information in the notification email sent after an automatic posting.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step3SelectProperties" data-magellan-target="Step3SelectProperties"><a name="H2_3"></a>Step 3: Select Properties</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Task-Automation-Recurring-Charges-Add-Properties.png" alt="The Properties section displays with one property selected for the automation schedule." class="lightbox" />
+                                                        </p>
+                                                        <p>Choose which properties and owners are included in this automation schedule. You can select multiple properties and owners, or you can select account groups in the <span class="Field">Group</span> drop-down.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>
+                                                                This field populates only with the properties to which you have access. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step4SelectPostingOptions" data-magellan-target="Step4SelectPostingOptions"><a name="H2_4"></a>Step 4: Select Posting Options</h2>
+                                                        <p>To finish setting up the automation schedule, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Posting Options</span> section, enter information and make selections in the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                                <p>Field</p>
+                                                                            </th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use rent due day for posting</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Posted charges use the <span class="Field">Due Day</span> set on the tenant's account instead of the <span class="Field">Post Date</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Post zero charges</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, and the recurring charge amount is zero, a one-time $0.00 charge is added to the tenant's account. This is helpful for confirming charges were posted even if there is not an amount to be charged.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Post utilities</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Metered utility usage charges for tenants of the selected properties are posted in addition to the automated recurring charges.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Post loans</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Loan principal charges for borrowers of the selected properties are posted in addition to the automated recurring charges.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Post RUBS</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Ratio utility billing system (RUBS) utility charges for tenants of the selected properties are posted in addition to the recurring charges.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>CRE setup cap overages</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Determines how the posting should handle a charge amount greater than the commercial recoverable expenses (CRE) cap.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Adjust</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The charge amount is adjusted to not exceed the CRE cap.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Allow</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The charge is allowed to exceed the CRE cap.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Skip</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The charge is skipped if the amount exceeds the CRE cap.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent Charge Transaction Memo</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An optional message to add to the tenant transaction if the recurring charge to post is a rent charge.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Invoice Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A default comment to be added to each created invoice.</p>
+                                                                                <p>To select a memorized comment to use as the memo, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Comments" style="width: 19;height: 19;"></img>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Generate invoices based on account group</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Creates a single invoice for recurring charges for each account group.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The new posting schedule is added and begins running on the schedule's next <span class="Field">Run Day</span>.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>This automatic process does <span class="Stress">not</span> occur immediately once the schedule has been configured and becomes active. <span class="mc-variable Products.RM variable">Rent Manager</span> performs all automated postings overnight so as not to interfere with your work.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

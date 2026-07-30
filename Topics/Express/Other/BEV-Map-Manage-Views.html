@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage BEV Map Views</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/BEV-Map-Manage-Views.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/BEV-Map-Manage-Views.htm</a></p>
+
+                                                        <h1 id="ManageBEVMapViews" data-magellan-target="ManageBEVMapViews"><a name="kanchor1806"></a><a name="H1"></a>Manage BEV Map Views</h1>
+                                                        <p>Bird's eye view (BEV) is a tool that allows you to use images of your properties to locate and view various details about units at your properties, similar to viewing a map. This includes an overhead view of the property, shapes or pins to represent units that are linked to their respective accounts, and various overlays to display other specified data for the units.</p>
+                                                        <p>You can create map views that act as an overlay to display specific information regarding the units on the map. Each map view has its own legend to identify the information displayed on the overlay. Additionally, <span class="mc-variable Products.RM variable">Rent Manager</span> provides&#160;system map views accounting for information such as the balance due of the tenants of the property or the market rent of the units represented in the map.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p><span class="mc-variable Products.RMX variable">Rent Manager Express</span> has improved map-making capabilities, allowing you to create very large map images in bird's eye view that may not be accessible in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>. If a map image exceeds 2500 x 2500 px, the map will not load in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                        </div>
+                                                        <h2 id="AddaMapView" data-magellan-target="AddaMapView"><a name="H2_1"></a>Add a Map&#160;View</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Bird's Eye View (BEV)</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">BEV&#160;Map Views</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>You can create your own custom map views for your BEV&#160;maps. To create a new map view, do the following:</p>
+                                                        <h3><a name="H3_1"></a>Step 1: Create the Map View</h3>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Bird's Eye View (BEV) <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Manage BEV Map Views</span>.<br />The <span class="Window">Manage BEV&#160;Map Views</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Map&#160;View</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/BEV-Map-Views-Add-SG-2025.png" alt="The Manage BEV Map Views page displays a new map view designed to indicate units that have had security deposits refunded." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">General</span> tile, enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Description</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A note that provides more context about the map view's uses and purpose.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Maps</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The BEV&#160;maps where this map view is available to select.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A brief, unique name to indicate this map view's purpose.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Users</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The <span class="mc-variable Products.RM variable">Rent Manager</span> users who can access this map view when viewing BEV&#160;maps.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If this map view should be the default overlay for all maps, in the tile header, check <span class="Field">System Default View</span>. If this option is checked, this map view is automatically assigned to all maps that do not have their own default view selected.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Data Filters</span> field, check or uncheck any of the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Show Date Filter</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, allow the user to select an <span class="Field">As of Date</span> or <span class="Field">Date Range</span> when viewing the map view on a BEV&#160;map. This allows the user to filter information to fit specific dates, such as if a tenant has an outstanding balance as of a specified date. This option displays only if, in the <span class="Section">Conditional Formatting tile</span>, a script that accepts date values or <span class="Field">&lt;Custom Script&gt;</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Show Floors Filter</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, allow the user to select which floors are included in the map view, allowing only units on those floors to display. This is useful for aerial map views where pins or shapes may be stacked due to units being in the same location on different floors.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Show Property Filter</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If checked, allow the user to select which properties are included in the map view, allowing only units at that property to display. This is useful for maps that cover multiple properties.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Conditional Formatting</span> tile, enter information into the available fields for your first rule.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Information to Evaluate</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Script functions that examine specific information in the map view for the units and their associated properties, tenants, assets, or violations. The function you select here determines the fields and options available for the rules added below.</p>
+                                                                                <p>Alternatively, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/create_19x19.png" class="inline" alt="" style="width: 19;height: 19;"></img> <span class="ActionItems">Custom&#160;Script</span> to write your own script to examine information. If writing a custom script, the following options become available.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                                    </col>
+                                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                                    </col>
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Script</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The script to use for this map view. To view the available insertable fields and test your script's output, click <span class="ActionItems">Open Script Builder</span> .</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Data Type of Script Result</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Determines the type of data your script outputs on the map view: <span class="Field">Text</span>, <span class="Field">Numeric</span>,&#160;<span class="Field">Date</span>, or <span class="Field">True/False</span>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Legend Label</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A name for this label as it displays on the map legend when this map view is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Step 2:&#160;Add Rules</h3>
+                                                        <p>Rules allow you to determine what information is evaluated and establish the conditions for when a unit is either hidden from the map view or displays in a specified color.</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>For your first rule, below the <span class="Field">Legend Label</span>, select the method by which you are filtering the selected information. The operators available vary depending on the type of script set in <span class="Field">Information to Evaluate</span> field.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/BEV-Map-View-Operator-SG-2025.png" alt="The selected rule sets units to a green color if their open charges amount is less than $50. The Operator field is highlighted." />
+                                                                </p>
+                                                                <p>For example, if you are examining units with the script function <span class="Field">Open&#160;Charges Amount</span> and want to filter for all units that have a total open charge amount below $50, select the operator <span class="Field">is less than</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>To the right of your selected operator, enter the value examined in the script. For example, if you are creating a rule for tenants with an <span class="Field">Open Charges Amount</span> that <span class="Field">is less than</span> $50 to show as green, enter <span class="Input">50</span> in the field to the right.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/BEV-Map-View-Value-SG-2025.png" alt="The selected rule sets units to a green color if their open charges amount is less than $50. The Value field is highlighted." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If your rule needs further specification to pull the right data such as creating a number range, you can add additional conditions by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Condition</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/BEV-Map-View-condition-SG-2025.png" alt="The selected rule sets units to a yellow color if their open charges amount between $50-$100. The additional condition row is highlighted." />
+                                                                </p>
+                                                                <p>For example, if your first condition filters for open charges greater than or equal to $50, you can add a condition to also filter those charges to be less than $100. This means the rule applies only to units with open charges that are at least $50 and up to, but not including, $100.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>On the line below your conditions, you can determine what the map displays when the conditions of this rule are met.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/BEV-Map-View-Result-SG-2025.png" alt="The selected rule sets units to a yellow color if their open charges amount between $50-$100. The bottom line that assigns the color is highlighted." />
+                                                                </p>
+                                                                <p>The following options are available:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Do not show on map</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Units that meet the rule's conditions are hidden from the map.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Set color to</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Units that meet the rule's conditions display in the selected color.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>To add any additional rules to the map view, in the <span class="Section">Condition Formatting</span> tile's header, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Rule</span>. Then repeat these steps.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Rules are evaluated in the order they are listed on the page. To change the order of the rules, click and hold <img src="../../../assets/Resources/Images/ICONS/Non-Icons/Drag%20Reorder_25x19.png" class="inline" alt="Reorder" style="width: 25;height: 19;" /> to drag the rule to a different spot in the list.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_3"></a>Step 3: Customize Unit Information</h3>
+                                                        <p>If you need the unit information that displays to be different than the default, you can edit that information for this map view specifically. If you wish to use the default settings, skip these steps and click <span class="BigButtons">Save</span>.</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Unit Information</span> tile, check <span class="Field">Customize Unit information when this view is applied</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the tile header, click <span class="ActionItems">Edit Unit Information</span>.<br />The <span class="Window">Edit Unit Information</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Add or remove the fields you wish to display on the unit information's pop-up. For more information, refer to <a href="../CSH/BEV-Map-Edit-Unit-Default-Information.html" class="MCXref xref">Edit Bird's Eye View (BEV) Default Unit Information (Pop-Up)</a>.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">OK</span>.<br />The pop-up closes.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The map view is updated and saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="EditaMapView" data-magellan-target="EditaMapView"><a name="H2_2"></a>Edit a Map&#160;View</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="Snippet Conditions.3">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Bird's Eye View (BEV)</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">BEV&#160;Map Views</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>All map views display in a list on the left. By default, there are multiple system map views that are available and can be customized to suit your needs. Additionally, user-created map views also display in the list. To change the order of the map views in the list, click <img src="../../../assets/Resources/Images/ICONS/Non-Icons/Drag%20Reorder_25x19.png" class="inline" alt="" style="width: 25;height: 19;" /> <span class="ActionItems">Reorder Map&#160;Views</span>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To delete a user-created map view, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" alt="Options" class="inline" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<span class="ActionItems">Delete</span>. While you cannot delete a system map view, you can make a system map view unavailable for all BEV maps by unchecking the <span class="Field">Active</span> checkbox for that map view.</p>
+                                                        </div>
+                                                        <p>The following map views are available by default:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Map View</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>All Units</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays basic information about the unit, such as the colors and unit names on the BEV&#160;map itself.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Balance Due</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Indicates which units have tenants with an outstanding balance. The color of the unit pin or shape indicates how much the tenant owes.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Delinquency Status</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Indicates which units have tenants with unpaid charges. The color of the unit pin or shape indicates how long they have been delinquent.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Market Rent Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Indicates the market rent amount established on each unit. The color of the unit pin or shape indicates how much the market rent is worth.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move Ins</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays which units have a prospect scheduled to move in and when, preventing overlapping leases on a unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move Outs</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays which units have a tenant that has an official move out date established, as specified on their lease details in the <span class="Field">Move Out</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>On Notice</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays which units have tenants that have given notice they are moving out, as specified on their lease details in the <span class="Field">Notice</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Indicates the amount of rent the tenant at each unit is charged. The color of the unit pin or shape indicates how much they pay in rent.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Service Issues</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays which units have open or resolved service issues associated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenant Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Unit pins and shapes are colored to match the color of the associated tenant as specified on their details page in the <span class="Field">Display Color</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Availability</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays which units are vacant and available on a prospect's move-in date, allowing you to determine which units a prospect can rent.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Status</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Unit pins and shapes are color coded to indicate their assigned unit status.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Unit Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Unit pins and shapes are color coded to differentiate the unit types of each assigned unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>To edit a map view, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Bird's Eye View (BEV) <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Manage BEV Map Views</span> and select a view from the list.<br />The selected map view's details display.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">General</span> tile, edit the information in the available fields.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Users</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="mc-variable Products.RM variable">Rent Manager</span> users who have access to this map view when viewing BEV&#160;maps.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Maps</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The BEV maps for which this map view is available to use.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If applicable, in the <span class="Section">Conditional Formatting</span> tile, make any changes to the current rules established for the map view. These rules vary depending on the map view selected.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>If the map view is a user-created map view, make any other edits to the other tiles available on the map view. The tiles and fields available depend on the map view.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The map view is updated.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

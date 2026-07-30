@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amenity Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Amenity.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Amenity.htm</a></p>
+
+                                                        <h1 id="AmenityFunctionScript" data-magellan-target="AmenityFunctionScript"><a name="aanchor734"></a>
+                                                            <a name="kanchor1223"></a><a name="H1"></a>Amenity Function (Script)</h1>
+                                                        <p>This function displays information about an amenity preferred by a tenant. Amenities are unit features or conveniences such as fireplaces, patios, pools, and so on.</p>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Prospect.html">Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect().Amenity()]</p>
+                                                                        <p>Displays information found on the prospect <span class="Section">Preferences</span> tile of a prospect whose <span class="Field">Status</span> has changed to <span class="Field">Tenant</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Unit().Amenity()]</p>
+                                                                        <p>Displays information about the amenities on the unit's <span class="Section">Amenities</span> tile, as listed from top to bottom.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p style="font-weight: bold;font-style: normal;">[Property().Amenity()]</p>
+                                                                        <p>Displays information found in the <span class="Window">Property Amenities</span> pop-up on the property's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[Amenity(<span class="Optional">"Index"</span>,<span class="Optional">"Field"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Index</h3>
+                                                        <p colspan="2">Select the sequential checked amenity to examine. The first amenity has an index value of <span class="Input">0</span>, the second amenity has an index value of <span class="Input">1</span>, and so on. If no parameter is specified, the index defaults to <span class="Input">0</span>.</p>
+                                                        <p colspan="2" class="Example">[Amenity("1")]</p>
+                                                        <p colspan="2">Displays the first additional checked amenity listed.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_2"></a>Field</h3>
+                                                        <p colspan="2">Specify which of the amenity fields to examine:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Amenity("","Comment")]</p>
+                                                                        <p>Displays the information in the <span class="Field">Comment</span> field of the amenity.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Amenity("","Name")]</p>
+                                                                        <p>Displays the information in the <span class="Field">Name</span> field of the amenity.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Price</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Amenity("","Price")]</p>
+                                                                        <p>Displays the information in the <span class="Field">Price</span> field of the amenity.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>Property-level amenities do <span class="Stress">not</span> have a <span class="Field">Price</span> field. Adding the Price function does not return any results for property-level amenities.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p colspan="2" class="Example">[Amenity("1","Comment")]</p>
+                                                        <p colspan="2">Displays the text from the <span class="Field">Comment</span> field of the first additional checked amenity.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Prospect().Amenity()]</p>
+                                                        <p>Displays the name of the preferred amenity specified for the prospect who is now the selected tenant.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().Amenity()]</p>
+                                                        <p>Displays the first checked amenity for the unit of the first-lease listed for the selected tenant.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().Amenity("2","Name")]</p>
+                                                        <p>Displays the <span class="Field">Name</span> of the third checked amenity for the unit of the first-lease listed for the selected tenant.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().Amenity("","Price")]</p>
+                                                        <p>Displays the price of the first checked amenity for the unit of the first lease listed for the selected tenant.</p>
+                                                        <p class="Example">[Property().Amenity()]</p>
+                                                        <p>Displays the name of the first checked amenity available at the property.</p>
+                                                        <p class="Example">[Property().Amenity("1","Name")]</p>
+                                                        <p>Displays the name of the first additional checked amenity for the property listed in the amenities field.</p>
+                                                    
+</main>
+</body>
+</html>

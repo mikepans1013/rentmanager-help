@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up rmVoIP for Rent Manager</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/rmVoIP-Set-Up.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/rmVoIP-Set-Up.htm</a></p>
+
+                                                        <h1 id="SetUprmVoIPforRentManager" data-magellan-target="SetUprmVoIPforRentManager"><a name="kanchor1108"></a><a name="H1"></a>Set Up rmVoIP for Rent Manager</h1>
+                                                        <p><span class="mc-variable Products.NDT variable">rmVoIP</span> is a business class phone system that fully integrates with <span class="mc-variable Products.RM variable">Rent Manager</span>, allowing you to make and receive Net Dial Tone (NDT) calls directly through the <span class="mc-variable Products.RM variable">Rent Manager</span>. Once the integration is set up, it provides you with relevant caller information to support your calls in real time, and <span class="mc-variable Products.RM variable">Rent Manager</span> maintains those details in call records.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This feature is licensed and must be purchased separately. For more information, contact your sales representative at <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                        </div>
+                                                        <p>To make use of the <span class="mc-variable Products.NDT variable">rmVoIP</span> integration, it first needs to be enabled in <span class="mc-variable Products.RM variable">Rent Manager</span> and then users need to be provided access and set up with their <span class="mc-variable Products.NDT variable">rmVoIP</span> extension.</p>
+                                                        <h2 id="Step1SetUprmVoIPUsers" data-magellan-target="Step1SetUprmVoIPUsers"><a name="H2_1"></a>Step 1: Set Up <span class="mc-variable Products.NDT variable">rmVoIP</span> Users</h2>
+                                                        <p>Each company representative that needs <span class="mc-variable Products.NDT variable">rmVoIP</span> access must have a <span class="mc-variable Products.RM variable">Rent Manager</span> user account, extension, and applicable privileges enabled.</p>
+                                                        <h3><a name="H3_1"></a>Add an <span class="mc-variable Products.NDT variable">rmVoIP</span> Extension</h3>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="Snippet Conditions.3">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage all users and privileges</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To set up <span class="mc-variable Products.NDT variable">rmVoIP</span> for individual users, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Users <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Users</span> and select a user account.<br />The user's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Section">Contact Information</span> tile in the <span class="Field"><span class="mc-variable Products.NDT variable">rmVoIP</span> Extension</span> field, add the user's extension number.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>The <span class="Field">Phone</span> field is for personal numbers and is <span class="Stress">not</span> tied to the <span class="mc-variable Products.NDT variable">rmVoIP</span> system.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The user's <span class="mc-variable Products.NDT variable">rmVoIP</span> extension is saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Set User Privileges</h3>
+                                                        <p>After establishing the user's extension, you can give the user the ability to place phone calls, view other user's missed calls, and access other tools related to <span class="mc-variable Products.NDT variable">rmVoIP</span>. To set up user privileges, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>From the user's details page, select the <span class="Tab">Privileges</span> tab.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Expand the <span class="Section">Phone System</span> privilege group.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Select any privileges you need for the user.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Allow user to edit their own <span class="mc-variable Products.NDT variable">rmVoIP</span> settings</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to control their <span class="mc-variable Products.NDT variable">rmVoIP</span> personal preferences. The user may choose whether to show incoming calls, hunt group calls, and users' extensions in the <span class="Section">Presence</span> list in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Listen to recorded calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to access phone conversations and voicemail messages through the <span class="Tab">History/Notes</span> tab of the associated accounts.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>All saved audio recordings are stored as WAV files on the <span class="mc-variable LCS.LCS variable">LCS</span> servers. At any time, you may retrieve recorded calls and voicemails through <span class="mc-variable Products.RM variable">Rent Manager</span> by having <span class="mc-variable Products.RM variable">Rent Manager</span> send you an email that includes an attached copy of the recorded call.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Place Calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to place calls to other <span class="mc-variable Products.NDT variable">rmVoIP</span> phone extensions or to phone numbers entered into <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>View <span class="mc-variable Products.NDT variable">rmVoIP</span>&#160;Dashboard Tiles</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to view the <span class="Section"><span class="mc-variable Products.NDT variable">rmVoIP</span> Current Caller List</span> and <span class="Section"><span class="mc-variable Products.NDT variable">rmVoIP</span> Extension Statistics</span> tiles on their dashboard.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>View/Link other users' missed calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Allows a user to view, link, or delete calls in the <span class="Window"><span class="mc-variable Products.NDT variable">rmVoIP</span> Missed/Unlinked Calls</span> page associated with other user accounts/extensions. Without this permission, users may only view, link, or delete calls associated with their personal <span class="mc-variable Products.NDT variable">rmVoIP</span> extension.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The user's privileges are saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_3"></a>Provide Access to <span class="mc-variable Products.NDT variable">rmVoIP</span> Reports</h3>
+                                                        <p>After you set up user privileges, you can give the user access to <span class="mc-variable Products.NDT variable">rmVoIP</span> reports.</p>
+                                                        <p>To provide access to <span class="mc-variable Products.NDT variable">rmVoIP</span> reports, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Select the <span class="Tab">Reports</span> tab.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Expand the <span class="Section"><span class="mc-variable Products.NDT variable">rmVoIP</span> Reports</span> group.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Select the reports you want the user to have access to.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The user's report access is saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <p>In addition to the specific report access, users still require the privilege to run reports.</p>
+                                                            <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Run reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step2EnablermVoIP" data-magellan-target="Step2EnablermVoIP"><a name="H2_2"></a>Step 2: Enable <span class="mc-variable Products.NDT variable">rmVoIP</span></h2>
+                                                        <p>Before users can use <span class="mc-variable Products.NDT variable">rmVoIP</span> in <span class="mc-variable Products.RM variable">Rent Manager</span>, it first needs to be enabled in system preferences.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To enable the <span class="mc-variable Products.NDT variable">rmVoIP</span> integration, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.NDT variable">rmVoIP</span></span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">rmVoIP Connection Setup</span> section, enter the <span class="Field">Username</span> and <span class="Field">Password</span> for your <span class="mc-variable Products.NDT variable">rmVoIP</span> account.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Test Settings</span> to test the connection to your <span class="mc-variable Products.NDT variable">rmVoIP</span> account.<br />The <span class="Window"><span class="mc-variable Products.NDT variable">rmVoIP</span> Connection Test</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">OK</span> to close the pop-up.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Check <span class="Field">Enabled</span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>If you have purchased additional locations that use their own set of credentials to access <span class="mc-variable Products.NDT variable">rmVoIP</span>, check <span class="Field">Use different credentials in other locations</span>.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>In the <span class="Section">Default User Settings</span> section, select the options you want to enable for your users.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Show incoming Calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An <span class="mc-variable Products.NDT variable">rmVoIP</span> incoming call notification displays when receiving calls in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Show extensions in presence listing</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Includes each user's extension number when viewing phone presence in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The <span class="Field">Connection Status</span> is updated to <span class="Input">Connected</span> and <span class="mc-variable Products.NDT variable">rmVoIP</span> is enabled.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_3"></a>Next Steps</h2>
+                                                        <p>At this point you can start calls from <span class="mc-variable Products.RM variable">Rent Manager</span> and can run reports to help track calls. Users can also change their <span class="mc-variable Products.NDT variable">rmVoIP</span> default settings through personal preferences. For more information, refer to the steps in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Step</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Set Up Personal <span class="mc-variable Products.NDT variable">rmVoIP</span> Settings</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Your personal <span class="mc-variable Products.NDT variable">rmVoIP</span> settings allow you to customize how calls are handled while you're logged in to <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, refer to <a href="../Other/Personal-Preferences/rmVoIP-Preferences.html" class="MCXref xref">rmVoIP Preferences (Personal Preferences)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Set Up <span class="mc-variable Products.NDT variable">rmVoIP</span> for rmAppSuite Pro</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p><span class="mc-variable Products.NDT variable">rmVoIP</span> integrates seamlessly into <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>, the mobile app that allows you to take <span class="mc-variable Products.RM variable">Rent Manager</span> in the field. For more information, refer to <a href="rmVoIP-rmAppSuite-Pro-Set-Up.html" class="MCXref xref">Set Up rmVoIP for rmAppSuite Pro</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Start a Call from <span class="mc-variable Products.RM variable">Rent Manager</span></p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Users can quickly make calls in <span class="mc-variable Products.RM variable">Rent Manager</span> from many places, including directly from an entity's details page. You can start a call by navigating to the entity you wish to contact, then click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/call_19x19.png" alt="Place Call" class="inline" style="width: 19;height: 19;" />. Depending on your phone configuration, the hard or soft phone prompts you to pick up, at which point the call dials out.</p>
+                                                                        <p>
+                                                                            <img src="../../../assets/Resources/Images/PNGs/rmvoIP-call-from-scoreboard-JL-25.png" alt="The call button and phone number display at the top of a the tenant's details page." />
+                                                                        </p>
+                                                                        <p>When the call ends, <span class="mc-variable Products.RM variable">Rent Manager</span> automatically creates a history/note item on that entity with the type <span class="Field"><span class="mc-variable Products.NDT variable">rmVoIP</span></span>. If you have purchased the call recording feature, a recorded audio file is attached to the history/note item. If you send the item as an email, the audio file is included as an attachment on the email.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

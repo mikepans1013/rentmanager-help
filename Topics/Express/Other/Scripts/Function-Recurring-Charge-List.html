@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recurring Charge List Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Recurring-Charge-List.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Recurring-Charge-List.htm</a></p>
+
+                                                        <h1 id="RecurringChargeListFunctionScript" data-magellan-target="RecurringChargeListFunctionScript"><a name="aanchor418"></a>
+                                                            <a name="kanchor695"></a><a name="H1"></a>Recurring Charge List Function (Script)</h1>
+                                                        <p>This function displays a list of a tenant's active recurring charges.</p>
+                                                        <p>The default output of the function displays below. The Format parameter can be used to customize this output, as shown in the last example in this topic.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20Recurring%20Charge%20List%20default%20format%20-%20BG%20-%2003102021.png" alt="" />
+                                                        </p>
+                                                        <p>This function can be utilized by the following classes:</p>
+                                                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" style="width: ;" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().RecurringChargeList()]</p>
+                                                                        <p>Displays information found on a tenant's <span class="Section">Recurring Charges</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Lease.html">Lease</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().RecurringChargeList()]</p>
+                                                                        <p>Displays information found on a tenant's <span class="Section">Recurring Charges</span> page for the specified lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Example">[RecurringChargeList(<span class="Optional">"AsOfDate"</span>,<span class="Optional">"IncludeChargeTypes"</span>,<span class="Optional">"ExcludeChargeTypes"</span>,<span class="Optional">"Format"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>AsOfDate</h3>
+                                                        <p>Specify the date for which to retrieve active recurring charges. If no date is specified, today's date is used by default.</p>
+                                                        <p class="Example">[RecurringChargeList("2/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays active charges as of February 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_2"></a>IncludeChargeTypes</h3>
+                                                        <p>Specify the short name code of the charge type(s)  to examine; each charge type should be separated by a comma. If no parameter is specified, the function examines all charge types.</p>
+                                                        <p class="Example">[RecurringChargeList("","PETFEE")]</p>
+                                                        <p>Displays active charges exclusively for the Pet Fee (PETFEE)&#160;charge type.</p>
+                                                        <h3 class="Optional"><a name="H3_3"></a>ExcludeChargeTypes</h3>
+                                                        <p>Specify the short name code of the charge type(s)  to exclude; each charge type should be separated by a comma. If no parameter is specified, the function examines all charge types.</p>
+                                                        <p class="Example">[RecurringChargeList("","","CAM")]</p>
+                                                        <p>Displays active charges excluding the Common Area Maintenance (CAM)&#160;charge type.</p>
+                                                        <h3 class="Optional"><a name="H3_4"></a>Format</h3>
+                                                        <p>List details of each recurring charge using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <p class="Subheading">Default Format</p>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays a list of the  charge type names, dates, and amounts of the recurring charges, separated by tabs:</p>
+                                                        <p class="Formula">"\n$_ChargeTypeName\t$_FromDate\t$_ToDate\t$_Amount\n"</p>
+                                                        <p class="Subheading">Variables</p>
+                                                        <p>The following variables may be used in the Format parameter:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the amount of the recurring charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ChargeTypeName</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the name of the recurring charge's charge type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ChargeTypeDescription</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the description of the recurring charge's charge type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Comment</span> entered on the recurring charge.
+</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Frequency</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the frequency of the recurring charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_FromDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the start date on which the recurring charge becomes active.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Level</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the level of the recurring charge (e.g., Property)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the property associated with the recurring charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ToDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the end date on which the recurring charge ends.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the unit associated with the recurring charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().RecurringChargeList()]</p>
+                                                        <p>Displays all of the tenant's active recurring charges in the default format.</p>
+                                                        <p class="Example">[Tenant().RecurringChargeList("2/10/<span class="mc-variable Dates.Year4 variable">2026</span>","","LC,APP")]</p>
+                                                        <p>Displays all of the tenant's active recurring charges excluding Late Charge (LC)&#160;and Application Fee (APP)&#160;charge types as of February 10, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[Tenant().Lease().RecurringChargeList("8/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "", "", "$_Level\t$_ChargeTypeDescription\t$_Amount\n")]</p>
+                                                        <p>Displays only the level, charge type description, and amount—separated by tabs—of the recurring charges established in the tenant's first lease. A line break is also added after each recurring charge and amount combination.</p>
+                                                        <p>The output displays as shown below:</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20Recurring%20Charge%20List%20custom%20format%20-%20BG%20-%2003102021.png" alt="" />
+                                                        </p>
+                                                    
+</main>
+</body>
+</html>

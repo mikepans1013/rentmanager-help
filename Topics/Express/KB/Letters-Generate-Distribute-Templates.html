@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generate and Distribute Letters from Templates</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Letters-Generate-Distribute-Templates.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Letters-Generate-Distribute-Templates.htm</a></p>
+
+                                                        <h1 id="GenerateandDistributeLettersfromTemplates" data-magellan-target="GenerateandDistributeLettersfromTemplates"><a name="kanchor1408"></a><a name="H1"></a>Generate and Distribute Letters from Templates</h1>
+                                                        <p>Letter templates can be used to generate account-specific letters for any entity (e.g., tenants, issues, vendors). After those letters are generated, you can distribute them to their recipients using a variety of methods, such as email and physically printing the letters. These letters can also be retained in the history/notes of each entity's account and saved to your computer. For more information, refer to <a href="../CSH/Letter-Email-Templates.html" class="MCXref xref">Letter/Email Templates (Page)</a>.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Letter/Email templates/packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1"><span class="Required">Entity</span> templates/packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p><span class="Required">Entity</span>-specific templates/packets privileges must be enabled for each letter template type you wish to generate (e.g., <span class="Field">Owner templates/packets</span>).</p>
+                                                            <p>For more information, refer to <a href="Users-Privileges-Letter-Templates.html" class="MCXref xref">Control Letter / Email Template Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1GenerateLetters" data-magellan-target="Step1GenerateLetters"><a name="H2_1"></a>Step 1: Generate Letters</h2>
+                                                        <p>You can generate letters from letter templates by going to a specific entity-type page (e.g., <span class="Window">Tenants</span>, <span class="Window">Properties</span>, <span class="Window">Vendors</span>, etc.) that lists all entities of that type. This allows you to generate and send letters to multiple recipients at the same time. If you are generating a letter for a single entity, you can create a letter for just that entity from the entity-type page or by opening its details page.</p>
+                                                        <p>Each option is described below.</p>
+                                                        <h3><a name="H3_1"></a>Option 1: Entity-Type Page</h3>
+                                                        <p>To generate letters from an entity-type page, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to the desired entity-type page. Letter templates can be generated from the following pages:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Page</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Navigation Path</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Assets</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Assets</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Issues</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Service Manager <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Issues</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Jobs</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Accounting <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Jobs</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>In order to generate letters for jobs in <span class="mc-variable Products.RM variable">Rent Manager</span>, <span class="Field">Enable job costing</span> must be checked in system preferences. For more information, refer to <a href="../Other/System-Preferences/General-Options-General.html" class="MCXref xref">General Options (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Owners</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Owner Prospects</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owner Prospects</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Properties</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Prospects</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Prospects</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Tenants</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Units</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Vendors</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Units</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Violations</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Violations</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the entity for which you are generating the letter, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Write Letters</span>.<br />The <span class="Window">Write Letters</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>From the drop-down list, select a letter template.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Continue</span>.<br />The letter is generated and displays on a new page.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>To select multiple entities, click <span class="BigButtons">Bulk Actions</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Write Letters</span>, select a template, and check the box next to each entity. When finished, select a format from the drop-down list and click <span class="BigButtons">Write Letter</span>.<br />The letter is generated and displays on a new page.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>It is not possible to generate letters in bulk from the <span class="Window">Jobs</span> page.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Option 2: Entity Details Page</h3>
+                                                        <p>To generate a letter from a single entity's details page, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to the desired entity-type page. Letter templates can be generated from the following entity details pages:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Page</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Navigation Path</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Assets</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Assets</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Issues</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Service Manager <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Issues</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Jobs</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Accounting <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Jobs</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>In order to generate letters for jobs in <span class="mc-variable Products.RM variable">Rent Manager</span>, <span class="Field">Enable job costing</span> must be checked in system preferences. For more information, refer to <a href="../Other/System-Preferences/General-Options-General.html" class="MCXref xref">General Options (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Owners</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Owner Prospects</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owner Prospects</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Properties</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Prospects</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Prospects</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Tenants</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Units</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Vendors</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Units</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Violations</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p class="Navigation">
+                                                                                    <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Violations</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click the entity for which you are generating the letter.<br />The entity's details page displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/email_19x19.png" class="inline" alt="Correspondence" style="width: 19;height: 19;" /> and select the desired letter template from the list.<br />The letter is generated and displays in the <span class="Window">Compose Letter</span> pop-up.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2DistributeLetters" data-magellan-target="Step2DistributeLetters"><a name="H2_2"></a>Step 2: Distribute Letters</h2>
+                                                        <p>After generating the letter(s), you need to choose the method of distribution. This process differs based on whether you generated a letter from an entity-type page or an entity's details page. When a single letter is generated, it displays in an editor instead of a PDF.</p>
+                                                        <h3><a name="H3_3"></a>Option 1: Entity-Type Page</h3>
+                                                        <p>At the bottom left of the page, select one of the available options.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Letters-Distribution-Options-Multiple-Recipients-2023.png" alt="The available options when generating a letter for multiple recipients are displayed." />
+                                                        </p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Print</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>To print a physical copy of the letters, click <img src="../../../assets/Resources/Images/ICONS/Express-App/RM/print_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Print</span> then select one of the available options for adding a history/note item and click <span class="BigButtons">Save</span>. Each option is described below.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Don't add to history</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>A history/note item is <span class="Stress">not</span> created for the document.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Add note to history</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>A history/note item is created to indicate that the document was sent.</p>
+                                                                                        <p>When this option is selected, the pop-up expands. In the <span class="Field">History Category</span> drop-down list, choose a history category to associate with this note. In the <span class="Field">Note</span> field, enter an optional description of this note.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Add note and attach document to history</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>A history/note item is created with the document attached in the selected <span class="Field">Format</span>.</p>
+                                                                                        <p>When this option is selected, the pop-up expands. In the <span class="Field">History Category</span> drop-down list, choose a history category to associate with this note. In the <span class="Field">Note</span> field, enter an optional description of this note.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div class="privs">
+                                                                            <p class="label1">Related Privileges</p>
+                                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <thead>
+                                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Compose Email</td>
+                                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                        </div>
+                                                                        <p>To email the letter to the recipients, do the following:</p>
+                                                                        <ol>
+                                                                            <li value="1">
+                                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/mail_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Email</span>.</p>
+                                                                            </li>
+                                                                            <li value="2">
+                                                                                <p>From the menu, select the desired entity to receive the email (e.g., <span class="ActionItems">Tenants</span> or <span class="ActionItems">Owners</span>). Alternatively, click <span class="ActionItems">Single Recipient</span> to send the letter to an external email address.<br />The <span class="Window">Bulk Email Letters</span> pop-up displays.</p>
+                                                                            </li>
+                                                                            <li value="3">
+                                                                                <p>At the top of the pop-up, enter the following information:</p>
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <thead>
+                                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>From Name</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The sender's name that displays for the recipient. A default value can be set for all users in system preferences or on an individual basis in personal preferences. For more information, refer to <a href="../Other/System-Preferences/Email-Settings.html" class="MCXref xref">Email Settings (System Preferences)</a> and <a href="../Other/Personal-Preferences/Email-Settings.html" class="MCXref xref">Email Settings (Personal Preferences)</a>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>From Address</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The email address from which the message is sent that displays for the recipient. A default value can be set for all users in system preferences or on an individual basis in personal preferences.</p>
+                                                                                                <div class="info">
+                                                                                                    <p class="label1">More Information</p>
+                                                                                                    <p> In system preferences, if the <span class="Field">Default (mail.rentmanager.com)</span> mail server is selected, all emails send from <span class="Input">email@rentmanager.com</span>. When the email is sent, it displays the entered <span class="Field">From Address</span> to recipient(s) and reroutes replies to that email address.</p>
+                                                                                                    <p>If you have established settings for an <span class="Field">External Server</span> in system preferences, emails send from the address entered in this field. For more information, refer to <a href="../Other/System-Preferences/Email-Settings.html" class="MCXref xref">Email Settings (System Preferences)</a>.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </li>
+                                                                            <li value="4">
+                                                                                <p>In the <span class="Section">Settings/Options</span> section, to create a history/note item for each recipient that you send the email to, select <span class="Field">Add to History</span>.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>In order to add a history/note item to an entity, your user account must have the <span class="Field">Add</span> privilege enabled for the relevant entity type (e.g., <span class="Field">Owner History/Notes</span>) in the <span class="Section">History</span> privilege group. For more information, refer to <a href="../Other/Privileges/History.html" class="MCXref xref">History Privilege Group</a>.</p>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li value="5">
+                                                                                <p>In the <span class="Section">Addressee List</span> section, select the <span class="Field">Contacts to Include</span>. Select <span class="Field">Primary</span> to only include primary accounts, or select <span class="Field">Contact Types</span> to choose relevant contact types to include.</p>
+                                                                            </li>
+                                                                            <li value="6">
+                                                                                <p>In the <span class="Section">Message</span> section, enter the following information:</p>
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <thead>
+                                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Subject</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The subject line that displays for the recipient.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Attached File Name</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The name of the file containing your generated letter that is attached to the email.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Attachments</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>To attach any additional files or documents in this email, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/file_upload_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Upload Files</span></p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Body</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The text to display in the body of the email.  Alternatively, click <span class="ActionItems">Insert Email Template</span> and select a template to use as the body.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </li>
+                                                                            <li value="7">
+                                                                                <p>Click <span class="BigButtons">Next</span>.<br />The <span class="Window">Bulk Email Letters - Preview</span> page displays the emails for each recipient, including any scripting.</p>
+                                                                            </li>
+                                                                            <li value="8">
+                                                                                <p>Make any necessary edits to the individual letters.</p>
+                                                                            </li>
+                                                                            <li value="9">
+                                                                                <p>Click <span class="BigButtons">Send All</span>.<br />The letter is sent to the selected recipient(s).</p>
+                                                                            </li>
+                                                                        </ol>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Download</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>To download the letter as a document, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_horiz_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Download</span>. The file saves to your device's default downloads folder.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Attach to History</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>To create a history/note item with the document attached, do the following:</p>
+                                                                        <ol>
+                                                                            <li value="1">
+                                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_horiz_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Attach to History</span>.<br />The <span class="Window">Add to History</span> pop-up displays.</p>
+                                                                            </li>
+                                                                            <li value="2">
+                                                                                <p>Select a <span class="Field">History Category</span> from the drop-down list.</p>
+                                                                            </li>
+                                                                            <li value="3">
+                                                                                <p>Enter an optional <span class="Field">Note</span> to provide additional information about this history/note item.</p>
+                                                                            </li>
+                                                                            <li value="4">
+                                                                                <p>Click <span class="BigButtons">Save</span>.<br />A history/note item with the document attached is created for the selected entities.</p>
+                                                                            </li>
+                                                                        </ol>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>VPO</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>To distribute the letter via <span class="mc-variable Products.VPO2 variable">Virtual Post Office (VPO)</span>, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_horiz_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">VPO</span>. Letters distributed with <span class="mc-variable Products.VPO variable">Virtual Post Office</span> do not need an address.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_4"></a>Option 2: Entity Details Page</h3>
+                                                        <p>At the top left of the <span class="Window">Compose Letter</span> pop-up, click <span class="Menu">File</span> to open a drop-down list of options.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Compose-Letter.png" alt="The Compose Letter pop-up displays with the File button in an orange square." />
+                                                        </p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Save As...</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>You can use the <span class="BigButtons">Save As...</span> option to download the letter as a document. This allows you to access and send the letter outside of <span class="mc-variable Products.RM variable">Rent Manager</span>. To download the letter as a document, do the following:</p>
+                                                                        <ol>
+                                                                            <li value="1">
+                                                                                <p>Click <span class="BigButtons">Save As...</span><br />The <span class="Window">Download Document</span> pop-up displays.</p>
+                                                                            </li>
+                                                                            <li value="2">
+                                                                                <p>Enter the <span class="Field">File Name</span>.</p>
+                                                                            </li>
+                                                                            <li value="3">
+                                                                                <p>Select a <span class="Field">File Format</span> from the drop-down list.</p>
+                                                                            </li>
+                                                                            <li value="4">
+                                                                                <p>Click <span class="BigButtons">Save</span>.<br />The file saves to your device's default downloads folder.</p>
+                                                                            </li>
+                                                                        </ol>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Print</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If you need to send the letter via post office or you need to provide the entity with a physical copy, click <span class="BigButtons">Print</span> to send the generated letter to your local printer. This option opens the print controls set in your web browser that you are using to access <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div class="privs">
+                                                                            <p class="label1">Related Privileges</p>
+                                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <thead>
+                                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Compose Email</td>
+                                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                        </div>
+                                                                        <p>To email the letter to a recipient, do the following:</p>
+                                                                        <ol>
+                                                                            <li value="1">
+                                                                                <p>Click <span class="Field">Email</span>.<br />The <span class="Window">Attach to Email</span> pop-up displays.</p>
+                                                                            </li>
+                                                                            <li value="2">
+                                                                                <p>Enter the <span class="Field">File Name</span> for the letter being attached to the email.</p>
+                                                                            </li>
+                                                                            <li value="3">
+                                                                                <p>Select the <span class="Field">File Format</span> for how the attachment displays to the recipient when downloaded.</p>
+                                                                            </li>
+                                                                            <li value="4">
+                                                                                <p>Click <span class="BigButtons">Save</span>.<br />The <span class="Window">Send Email</span> page displays.</p>
+                                                                            </li>
+                                                                            <li value="5">
+                                                                                <p>At the top of the page, enter the following information:</p>
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <thead>
+                                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>From Name</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The sender's name that displays for the recipient. A default value can be set for all users in system preferences or on an individual basis in personal preferences. For more information, refer to <a href="../Other/System-Preferences/Email-Settings.html" class="MCXref xref">Email Settings (System Preferences)</a> and <a href="../Other/Personal-Preferences/Email-Settings.html" class="MCXref xref">Email Settings (Personal Preferences)</a>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>From Address</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The email address that displays for the recipient. A default value can be set for all users in system preferences or on an individual basis in personal preferences.</p>
+                                                                                                <div class="info">
+                                                                                                    <p class="label1">More Information</p>
+                                                                                                    <p>In system preferences, if the <span class="Field">Default (mail.rentmanager.com)</span> mail server is selected, all emails send from <span class="Input">email@rentmanager.com</span>. When the email is sent, it displays the entered <span class="Field">From Address</span> to the recipient(s) and reroutes replies to that email address.</p>
+                                                                                                    <p>If you have established settings for an <span class="Field">External Server</span> in system preferences, emails send from the address entered in this field. For more information, refer to <a href="../Other/System-Preferences/Email-Settings.html" class="MCXref xref">Email Settings (System Preferences)</a>.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>To...</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The email address of the recipient.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Subject</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The subject line that displays on the email.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Attachments</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>To attach any additional files or documents in this email, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/file_upload_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Upload Files</span></p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </li>
+                                                                            <li value="6">
+                                                                                <p>Enter the contents of the message in to the body of the email. Alternatively, click <span class="ActionItems">Insert Email Template</span> and select a template to use as the body.</p>
+                                                                            </li>
+                                                                            <li value="7">
+                                                                                <p>Click <span class="BigButtons">Send</span>.<br />The letter is sent to the selected recipient(s).</p>
+                                                                            </li>
+                                                                        </ol>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Attach</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>In order to add a history/note item to an entity, your user account must have the <span class="Field">Add</span> privilege enabled for the relevant entity type (e.g., <span class="Field">Owner History/Notes</span>) in the <span class="Section">History</span> privilege group. For more information, refer to <a href="../Other/Privileges/History.html" class="MCXref xref">History Privilege Group</a>.</p>
+                                                                        </div>
+                                                                        <p>To create a history/note item with the document attached, do the following:</p>
+                                                                        <ol>
+                                                                            <li value="1">
+                                                                                <p>Click <span class="BigButtons">Attach</span>.<br />The <span class="Window">Add to History</span> pop-up displays.</p>
+                                                                            </li>
+                                                                            <li value="2">
+                                                                                <p>Select a <span class="Field">History Category</span> from the drop-down list.</p>
+                                                                            </li>
+                                                                            <li value="3">
+                                                                                <p>Enter an optional <span class="Field">Note</span> to provide additional information about this history/note item.</p>
+                                                                            </li>
+                                                                            <li value="4">
+                                                                                <p>Click <span class="BigButtons">Save</span>.<br />A history/note item with the document attached is created for the selected entities.</p>
+                                                                            </li>
+                                                                        </ol>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

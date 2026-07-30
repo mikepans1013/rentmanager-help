@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Contact.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Contact.htm</a></p>
+
+                                                        <h1 id="ContactClassScript" data-magellan-target="ContactClassScript"><a name="aanchor232"></a>
+                                                            <a name="kanchor381"></a><a name="H1"></a>Contact Class (Script)</h1>
+                                                        <p>This class examines contacts on tenant, prospect, or vendor accounts. When this class is preceded by the Tenant, Prospect, or Vendor class, it can be followed either by a contact-level scripting function or another class associated with the contact. This class can also be preceded by the Owner class. However, these classes can only use a subset of the available functions.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');margin-left: auto;margin-right: auto;" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Contact().Email]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Email</span> address of the first contact listed on the tenant's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');margin-left: auto;margin-right: auto;" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Prospect().Contact().FirstName]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">First Name</span> of the first contact listed on the prospect's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');margin-left: auto;margin-right: auto;" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Prospect().Contact().IncomeVerification().Status]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the income verification <span class="Field">Status</span> for the first contact listed on the prospect's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameter" data-magellan-target="ClassParameter"><a name="H2_1"></a>Class Parameter</h2>
+                                                        <p>This class can be passed a single, optional parameter: an index.</p>
+                                                        <h3><a name="H3_1"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific contact on an account by using a number to identify each contact listed. For example, if there are three contacts listed on a tenant's account, they are referenced by indexes 0, 1, and 2. You can specify which contact you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first contact in the list.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>An index can be specified only for the Contact class if it is preceded by the Tenant, Vendor, or Prospect class. If it is preceded by the Owner class, no index can be specified.</p>
+                                                        </div>
+                                                        <p class="Example">[Tenant().Contact(1).FirstName]</p>
+                                                        <p>Displays the <span class="Field">First Name</span> of the second contact listed on the tenant's account.</p>
+                                                        <p class="Example">[Tenant().Contact(2).LastName]</p>
+                                                        <p>Display the <span class="Field">Last Name</span> of the third contact listed on the tenant's account.</p>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_2"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.8,Snippet Conditions.14"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.html">Script Functions</a>.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.3">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If the class is preceded by the Owner class, you can only follow with the PhoneNumber class.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.html">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">This class retrieves address data from the <span class="Section">Addresses</span> section on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Income-Verification.html">Income Verification</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().IncomeVerification().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">This class retrieves income verification data from a contact listed on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Phone-Number.html">Phone Number</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">This class retrieves phone number data for vendor or owner account, or from a contact listed on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Screening.html">Screening</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Screening.<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">This class retrieves screening data for a contact listed on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_3"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1,Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.11,Snippet Conditions.12,Snippet Conditions.17,Snippet Conditions.18,Snippet Conditions.24,Snippet Conditions.25,Snippet Conditions.14,Snippet Conditions.21,Snippet Conditions.34,Snippet Conditions.35"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.3">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you are using an owner-type letter template, the Contact class can either be followed by the PhoneNumber class or the Email function.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Active</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().Active]</p>
+                                                                        <p>Displays whether the contact has <span class="Field">Active</span> checked on the <span class="Window">View Contacts</span> pop-up. The function displays <span class="Input">True</span> if the contact is active. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                        <div class="warning">
+                                                                            <p class="label1">Warning</p>
+                                                                            <p>The Active function applies only when it is used with the Tenant or Prospect classes.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.21,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Address Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().AddressCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the total number of addresses entered on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.17">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Age</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent9">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Age]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.3">Displays the age of the contact based on the <span class="Field">Birthday</span> field.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.24">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Annual Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().AnnualIncome]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Annual Income</span> of the contact as entered on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Birth Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().BirthDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the contact's <span class="Field">Birthday</span> as entered on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Board-Member-Status.html">Board Member Status</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().BoardMemberStatus()]</p>
+                                                                        <p>Displays whether or not the association board member is currently active, was active, or will be active.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Board-Role.html">Board Role</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().BoardRole()]</p>
+                                                                        <p>Displays the role of the association board member.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Board-Term-End.html">Board Term End</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().BoardTermEnd()]</p>
+                                                                        <p>Displays the term end date of the association board member.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Board-Term-Start.html">Board Term Start</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().BoardTermStart()]</p>
+                                                                        <p>Displays the term start date of the association board member.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Car</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Car]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Vehicle</span> as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.23,Snippet Conditions.21,Snippet Conditions.35,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Comment()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the text entered in the <span class="Section">Comment</span> section of the vendor's contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Committee-Name.html">Committee Name</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().CommitteeName()]</p>
+                                                                        <p>Displays the name of the committee to which the contact was added.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Contact ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().ContactID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the system-generated identification number of the contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Email]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Email</span> as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Employer</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Employer]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Employer</span> as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Federal Tax ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().FederalTaxID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Soc Sec#</span> on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.28,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent70">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().FirstName]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">First Name</span> as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Full-Name.html">Full Name</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().FullName()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays information from the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Greeting Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().GreetingName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">First Name</span> and <span class="Field">Last Name</span> as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.27,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.17,Snippet Conditions.32">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image.html">Image</a> </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact.Image(Contact.ImagePath())]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the image uploaded to the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Image Path</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().ImagePath]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the file path of the image uploaded to the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Is-Board-Member.html">Is Board Member</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().IsBoardMember()]</p>
+                                                                        <p>Displays whether or not the contact is an active association board member in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Committee Member</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent87">
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Contact().IsCommitteeMember]</p>
+                                                                            <p>Displays whether or not the contact is an association committee member in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Primary</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().IsPrimary]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays <span class="Input">1</span> if the contact is checked as <span class="Field">Primary</span> on the <span class="Window">View Contacts</span> pop-up. Otherwise, displays <span class="Input">0</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().LastName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Last Name</span> as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>License</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().License]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">License</span> number as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.24,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Middle Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().MiddleName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Middle Name</span> as entered on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.17,Snippet Conditions.26,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().Name]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Name</span> as entered on the contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.15,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Phone Number Count</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class()</span>.Contact().PhoneNumberCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the total count of phone numbers as entered on contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Screening Count</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().ScreeningCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the number of screening reports on the contact’s <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Show On Bill</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().ShowOnBill]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays <span class="Input">1</span> if <span class="Field">Show On Statement/Labels</span> is checked on the contact's <span class="Window">View Contacts</span> pop-up. Otherwise, <span class="Input">0</span>displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.2,Snippet Conditions.4,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Type Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().TypeDescription]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Description</span> as entered on the <span class="Window">Contact Types Details</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Type Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().TypeName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the <span class="Field">Type</span> name selected on the contact's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.html">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[<span class="Required">Class().</span>Contact().UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the value of a contact-type user defined field (UDF). The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.3">[Tenant().Contact().UserDefinedField("Is Minor")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.3">Displays the value for the <span class="Field">Is Minor</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

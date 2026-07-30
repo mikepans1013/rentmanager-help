@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Job.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Job.htm</a></p>
+
+                                                        <h1 id="JobClassScript" data-magellan-target="JobClassScript"><a name="aanchor863"></a>
+                                                            <a name="kanchor1419"></a><a name="H1"></a>Job Class (Script)</h1>
+                                                        <p>This class examines job information and can be followed by a job-level scripting function.</p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>In order to use the job costing tool in <span class="mc-variable Products.RM variable">Rent Manager</span>, <span class="Field">Enable job costing</span> must be checked in system preferences. For more information, refer to <a href="../System-Preferences/General-Options-General.html" class="MCXref xref">General Options (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Job().EndDate]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">End Date</span> entered on the job's details page in the <span class="Section">General</span> section. If no end date was specified, the function displays a blank.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Job().ShortName]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Short Name</span> entered on the job's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameters" data-magellan-target="ClassParameters"><a name="H2_1"></a>Class Parameters</h2>
+                                                        <p>A single, optional parameter can be specified for this class: an ID.</p>
+                                                        <h3><a name="H3_1"></a>ID</h3>
+                                                        <p>The ID is a system-generated, unique number assigned by <span class="mc-variable Products.RM variable">Rent Manager</span>. The ID is assigned in the order of the job's <span class="Field">Create Date</span>. This number does not display on any window but may be used in scripting. If no ID is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to using the ID of the job selected before running the script.</p>
+                                                        <p>Entering a distinct ID in this class parameter allows you to specify the job that the following function examines.</p>
+                                                        <p colspan="2" class="Example">[Job(102).HistoryCount()]</p>
+                                                        <p colspan="2">Displays the number of history notes on the <span class="Window">History/Notes</span> pop-up of the job with the system-generated ID number of <span class="Input">102</span>.</p>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Aggregate-Budget-Value.html">Aggregate Budget Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().AggregateBudgetValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays job-level financial data related to the budget of the selected job.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">This scripting function must be used in conjunction with the Job FillBudget function. For more information, refer to <a href="Function-Fill-Budget.html" class="MCXref xref">Fill Budget Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Aggregate-Chart-Value.html">Aggregate Chart Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().AggregateChartValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays job-level financial data related to the selected job based on the specified general ledger (GL) account number and field.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">This scripting function must be used in conjunction with the Job FillChart function. For more information, refer to <a href="Function-Fill-Chart.html" class="MCXref xref">Fill Chart Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Budget-Comment.html">Budget Comment</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().BudgetComment]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the <span class="Column">Comment</span> entered on the job's <span class="Window">Budget</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Budget-Value.html">Budget Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().BudgetValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the value entered on the job's <span class="Window">Budget</span> pop-up, based on the specified GL account number and field.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">This scripting function must be used in conjunction with the Job FillBudget function. For more information, refer to <a href="Function-Fill-Budget.html" class="MCXref xref">Fill Budget Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Chart-Value.html">Chart Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().ChartValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the account data of the specified GL account number and its field.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">This scripting function must be used in conjunction with the Job FillChart function. For more information, refer to <a href="Function-Fill-Chart.html" class="MCXref xref">Fill Chart Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.30,Snippet Conditions.25,Snippet Conditions.32,Snippet Conditions.17,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Description.html">Description</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().Description]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the text entered in the <span class="Field">Description</span> field of the job's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.22,Snippet Conditions.23,Snippet Conditions.33,Snippet Conditions.36">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>End Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().EndDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the <span class="Field">End Date</span> entered on the job's <span class="Section">General</span> tile. If no end date was specified, the function displays nothing.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Expected End Date</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent65">
+                                                                            <p class="Formula">[Job().ExpectedEndDate]</p>
+                                                                            <p>Displays the <span class="Field">Expected End Date</span> entered on the job's <span class="Section">General</span> tile. If no date was specified, the function displays nothing.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Fill-Budget.html">Fill Budget</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().FillBudget()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays a collection of job-specific GL account data related to the job's budget.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">This scripting function must be used in conjunction with the other Job BudgetValue functions. For more information, refer to <a href="Function-Budget-Value.html" class="MCXref xref">Budget Value Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Fill-Chart.html">Fill Chart</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().FillChart()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays a collection of job-specific GL account data related to the job.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">This scripting function must be used in conjunction with the other Job ChartValue functions. For more information, refer to <a href="Function-Chart-Value.html" class="MCXref xref">Chart Value Function (Script)</a> and <a href="Function-Aggregate-Chart-Value.html" class="MCXref xref">Aggregate Chart Value Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-History-Count.html">History Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().HistoryCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the total number of history/notes on the job's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.31,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Active</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().IsActive]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays <span class="Input">True</span> if <span class="Field">Active</span> is checked on the job's <span class="Section">General</span> tile; otherwise, displays <span class="Input">False</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Job Type</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent100">
+                                                                            <p class="Formula">[Job().JobType]</p>
+                                                                            <p>Displays the name of the <span class="Field">Job Type</span> as selected on the job's <span class="Section">General</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Link</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent118">
+                                                                            <p class="Formula">[Job().Link]</p>
+                                                                            <p>Displays the name of the <span class="Field">Property</span>, <span class="Field">Unit</span>, or <span class="Field">Asset</span> selected in the job's <span class="Section">Link</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Link Type</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent119">
+                                                                            <p class="Formula">[Job().LinkType]</p>
+                                                                            <p>Displays the link type (<span class="Field">Property</span>, <span class="Field">Unit</span>, or <span class="Field">Asset</span>) selected in the job's <span class="Section">Link</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.17,Snippet Conditions.26,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().Name]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the <span class="Field">Name</span> as entered on the job <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.32,Snippet Conditions.15,Snippet Conditions.13,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.34,Snippet Conditions.8,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Note.html">Note</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().Note()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays information about the most recent note on the job's <span class="Section">History/Notes</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.15,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Set-History-Filter.html">Set History Filter</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().SetHistoryFilter()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">This function is designed to filter the total collection of job history/note items based on the assigned parameter values. This filtered collection becomes the data set used by the Note and HistoryCount functions that are run after it is applied. It remains in effect until it is run again with different parameters.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Short Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().ShortName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays <span class="Field">Short Name</span> as entered on the job's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.23,Snippet Conditions.22,Snippet Conditions.33,Snippet Conditions.36,Snippet Conditions.37,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p data-mc-conditions="Snippet Conditions.22,Snippet Conditions.23,Snippet Conditions.33,Snippet Conditions.36,Snippet Conditions.40">Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().StartDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the <span class="Field">Start Date</span> as entered on the job's <span class="Section">General</span> tile. If no start date was specified, the function displays nothing.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.html">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the value of the user defined field (UDF). The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.33">[Job().UserDefinedField("Status")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.33">Displays the value for <span class="Field">Status</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

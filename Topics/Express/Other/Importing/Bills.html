@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Import Bills</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Importing/Bills.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Importing/Bills.htm</a></p>
+
+                                                        <h1 id="ImportBills" data-magellan-target="ImportBills"><a name="aanchor17"></a>
+                                                            <a name="kanchor29"></a><a name="H1"></a>Import Bills</h1>
+                                                        <p>The importing tool allows you to pull large amounts of data into <span class="mc-variable Products.RM variable">Rent Manager</span> at one time via a comma-separated values (CSV) file or other file type that uses supported delimiters. The file is first prepared outside <span class="mc-variable Products.RM variable">Rent Manager</span>, using a program such as Microsoft Excel or Notepad, which contains rows of data representing the information that matches to designated <span class="mc-variable Products.RM variable">Rent Manager</span> fields. This greatly reduces the amount of time spent on data entry, especially when first setting up your <span class="mc-variable Products.RM variable">Rent Manager</span> database, or during routine additions that require a lot of new data, such as acquiring a new property.</p>
+                                                        <p>When importing bills, you can track bill amounts, when they are due, and which properties are responsible for paying them.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Bills are imported as unpaid. For bills already paid before importing, you must go to <span class="Section">Pay Bills</span> and pay the bill based on the bill's post date. For more information, refer to <a href="../Bills-Pay.html" class="MCXref xref">Pay Bills</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Importing</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Import Bills</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Payables</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Bills</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1" title="Menu">Add</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1PrepareImportFile" data-magellan-target="Step1PrepareImportFile"><a name="H2_1"></a>Step 1: Prepare Import File</h2>
+                                                        <p>Before beginning the import process, prepare an import file (sometimes called a flat file or data file) outside of <span class="mc-variable Products.RM variable">Rent Manager</span>. The most common file type used for importing is a comma-separated values (CSV)&#160;file, and examples in this section are based on that file type. The following file types are accepted for importing:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Comma-separated values (CSV)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Text (TXT)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Tab-separated (TAB)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Intuit Interchange Format (IIF)</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Data in your import file should be organized such that each row denotes information about the bill. When importing bills, rows must be marked as either headers <span class="Field">H</span> or detail rows <span class="Field">D</span>. Header rows contain general information about the bill itself, whereas detail rows contain information about the bill's allocations and line items.</p>
+                                                        <p>In the following example, an import of bill data is displayed with each row notated with <span class="Field">H</span> representing general information about a bill and each row notated with <span class="Field">D</span> representing allocation information for those bills:</p>
+                                                        <p class="Required">
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Import-Bills-File.png" alt="An example import file displays columns of bill information." class="lightbox" />
+                                                        </p>
+                                                        <h3><a name="H3_1"></a>Required Header Rows</h3>
+                                                        <p>In order to import bills, the following header rows are required to have a value entered in the data file.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Account Name (The name of the account, <span class="Field">Vendor</span>, <span class="Field">Owner</span>, etc., that the bill is payable to.)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Amount</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Bill Date</p>
+                                                            </li>
+                                                        </ul>
+                                                        <h3><a name="H3_2"></a>Bill Header Row Descriptions</h3>
+                                                        <p>The table below displays each <span class="mc-variable Products.RM variable">Rent Manager</span> field that can be matched when importing header rows. All marked fields are required in order to create the bill.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the account (<span class="Field">Vendor</span>, <span class="Field">Owner</span>, etc.) the bill is payable to.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The type of account (<span class="Field">Vendor</span>, <span class="Field">Owner</span>, etc.) the bill is associated with.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total amount of the bill to be imported.</p>
+                                                                        <div class="warning">
+                                                                            <p class="label1">Warning</p>
+                                                                            <p>The total <span class="Field">Detail Amount</span> of each detail row associated with the header row must equal the <span class="Field">Amount</span>, or the import will fail.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><span class="mc-variable Integrations.Product-Avid1 variable">AvidInvoice</span> URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The URL of the scanned invoice, if the bill is linked to <span class="mc-variable Integrations.Partner-Avid variable">AvidXchange</span>, to link the image of the invoice.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bank ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The general ledger <span class="Field">GL Account No</span> of the bank account used to pay the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bill Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date the bill was created.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A description of the bill, or the account number given to you by the vendor.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Due Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the bill is due to be paid.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Approved</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If bill approval is enabled, enter <span class="Input">Yes</span> or <span class="Input">True</span> if this bill is already approved. Otherwise, enter <span class="Input">No</span> or <span class="Input">False</span>.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to enable owner bill approval, the option to <span class="Field">Require bills to be approved before they can be paid</span> must be enabled in system preferences. For more information, refer to <a href="../System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Master Meter Bill</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>To enable the <span class="Field">Master Meter Bill</span> field on the bill's details page, enter <span class="Input">Yes</span> or <span class="Input">True</span>. Otherwise, enter <span class="Input">No</span> or <span class="Input">False</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Pay Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The method of payment (ACH, <span class="mc-variable Integrations.Product-Avid2 variable">AvidPay</span>, Check, Debit, <span class="mc-variable Integrations.Product-eChecks variable">eChecks</span>, EFT, <span class="mc-variable Integrations.Product-ePay variable">ePay</span>) that pays the bill.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>Bills imported without a <span class="Field">Pay Method</span> are automatically assigned to the vendor's default <span class="Field">Payment Method</span>, as displayed on the vendor details page's <span class="Section">Bill Settings</span> tile. For more information, refer to <a href="../../CSH/Vendor-Details.html" class="MCXref xref">Vendor Details (Page)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date the bill was issued. This should match the post date of the physical bill.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>Bills are imported as unpaid, and you must pay them in <span class="Section">Pay Bills</span> based on the post date. Ensure you include this column when importing bills as it makes the process of paying imported bills easier.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Reference</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The invoice number on the bill to be imported to the <span class="Window">Bill</span> details page's <span class="Field">Invoice #</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Term Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The bill term to determine the amount of time between the <span class="Field">Bill Date</span> and the <span class="Field">Due Date</span>. The name must match one of the bill terms entered in <span class="mc-variable Products.RM variable">Rent Manager</span> exactly. For more information, refer to <a href="../../CSH/Bills-Terms.html" class="MCXref xref">Bill Terms (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_3"></a>Required Detail Row Fields</h3>
+                                                        <p>In order to import bills, the following fields are required to have a value entered in the data file.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Detail Amount</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>GL Account ID</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Property Short Name</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>The following fields are required when the <span class="Field">Master Meter Bill</span> header <span class="Field">H</span> row has an entered value of <span class="Input">Yes</span> or <span class="Input">True</span>.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Billing Period</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Consumption</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Read Date</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Utility</p>
+                                                            </li>
+                                                        </ul>
+                                                        <h3><a name="H3_4"></a>Bill Detail Row Field Descriptions</h3>
+                                                        <p>When performing the import, certain fields are required to import the bills. The table below displays each <span class="mc-variable Products.RM variable">Rent Manager</span> field that can be matched when importing detail rows.</p>
+                                                        <p>Every detail row below a header row is associated with that header row until separated by another header row. For example, if a bill has four line item rows, you would need one row marked as a header <span class="Field">H</span> and then four consecutive rows marked as detail <span class="Field">D</span> containing that bill's allocations. Then another header row can be entered to identify the next bill in the import file.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The system-generated <span class="Field">Account Number</span> for the owner or tenant incurring the expense to be billed back through billable expenses.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to enable billable expenses, the option to <span class="Field">Enable billable expenses</span> must be selected in system preferences. For more information, refer to <a href="../System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                        <p>To learn the system-generated ID number for an owner account, the script <span class="Formula">[Owner().OwnerID]</span> can be used. For more information, refer to <a href="../Scripts/Class-Owner.html" class="MCXref xref">Owner Class (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Period</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The month and year (e.g., Dec <span class="mc-variable Dates.Year4 variable">2026</span>) that the meter reading is billed for. This value populates on the master meter bill, in the <span class="Column">Billing Period</span> column.</p>
+                                                                        <p>This field can be imported only when the <span class="Field">Master Meter Bill</span> header <span class="Field">H</span> row has an entered value of <span class="Input">Yes</span> or <span class="Input">True</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Consumption</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The utility usage for the unit of measurement of the meter. This value populates on the master meter bill, in the <span class="Column">Consumption</span> column.</p>
+                                                                        <p>This field can be imported only when the <span class="Field">Master Meter Bill</span> header <span class="Field">H</span> row has an entered value of <span class="Input">Yes</span> or <span class="Input">True</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Detail Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total amount of each allocation line to be imported.</p>
+                                                                        <div class="warning">
+                                                                            <p class="label1">Warning</p>
+                                                                            <p>The total <span class="Field">Detail Amount</span> of each detail row associated with the header row must equal the <span class="Field">Amount</span>, or the import will fail.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Detail Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A description of the allocation row.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>GL Account ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The general ledger <span class="Field">GL Account No</span> of the expense account used to expense the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is 1099</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If this line item qualifies as 1099 for the vendor, enter <span class="Input">Yes</span> or <span class="Input">True</span>. Otherwise, enter <span class="Input">No</span> or <span class="Input">False</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Billable</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If this line item can be billed back through billable expenses, enter <span class="Input">Yes</span> or <span class="Input">True</span>. Otherwise, enter <span class="Input">No</span> or <span class="Input">False</span>.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to enable billable expenses, the option to <span class="Field">Enable billable expenses</span> must be selected in system preferences. For more information, refer to <a href="../System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Job Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If applicable, the full name of the job associated with the bill, as specified on the job's details page in the in the <span class="Field">Name</span> field.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to use the job costing tool in <span class="mc-variable Products.RM variable">Rent Manager</span>, <span class="Field">Enable job costing</span> must be checked in system preferences. For more information, refer to <a href="../System-Preferences/General-Options-General.html" class="MCXref xref">General Options (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Job Short Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If applicable, the abbreviated name of the job associated with the bill, as specified on the job's details page in the in the <span class="Field">Short Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Markup</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The markup percentage of the line item to be billed back through billable expenses.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>In order to enable billable expenses, the option to <span class="Field">Enable billable expenses</span> must be selected in system preferences. For more information, refer to <a href="../System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Short Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The abbreviated name of the property to be expensed for each line item, as displayed on the property's details page in the <span class="Field">Short Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Read Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the meter reading was taken. This value populates on the master meter bill, in the <span class="Column">Read Date</span> column.</p>
+                                                                        <p>This field can be imported only when the <span class="Field">Master Meter Bill</span> header <span class="Field">H</span> row has an entered value of <span class="Input">Yes</span> or <span class="Input">True</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the unit expensed for each line item, as displayed on the unit's details page in the <span class="Field">Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Utility</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The utility being billed (e.g., <span class="Input">Water</span> or <span class="Input">Electricity</span>). This value populates on the master meter bill, in the <span class="Column">Utility</span> column.</p>
+                                                                        <p>This field can be imported only when the <span class="Field">Master Meter Bill</span> header <span class="Field">H</span> row has an entered value of <span class="Input">Yes</span> or <span class="Input">True</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step2BegintheImport" data-magellan-target="Step2BegintheImport"><a name="H2_2"></a>Step 2: Begin the Import</h2>
+                                                        <p>To import bills, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Import <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import Records <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import Bills</span>.<br />The <span class="Window">Import Bills Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select one of the available options and click <span class="BigButtons">Next</span>.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Import without using template</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Proceed to importing the file without using preestablished settings.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Import using template</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Use a previously created template, which allows you to use the options established during a prior import. In the available drop-down list, select which template to use.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">File Name</span> field, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/attach_file_19x19.png" class="inline-image" alt="Choose a file" style="width: 19;height: 19;" /> to select the data file to import. Then, click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Default Values</span> section, enter default information into the available fields. These values are automatically applied to any blank rows for the column in the import file, or to all rows if no column is specified for the field(s).</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default property association for each detail row.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Bank Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default bank account association for each header row.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Account Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The account type (<span class="Field">Vendor</span> or <span class="Field">Owner</span>) to be the default account association for the bill.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Next</span>.<br />The pop-up closes and the <span class="Window">Import Bills</span> page displays.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3ConfigureImportFileforRentManager" data-magellan-target="Step3ConfigureImportFileforRentManager"><a name="H2_3"></a>Step 3: Configure Import File for <span class="mc-variable Products.RM variable">Rent Manager</span></h2>
+                                                        <p>In the <span class="Section">Import Settings</span> section, you may view or edit the previously entered default values to apply to the imported accounts or records. In the <span class="Section">Details</span> section's <span class="Field">File Name</span> field, you can view the currently selected import file, or click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/file_upload_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /><span class="ActionItems">Upload Files</span> to select a different import file. If you have selected a valid, readable file, its data is displayed in a preview on the lower half of the page.</p>
+                                                        <p>To continue importing, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Field Settings</span> section, select an option for the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Delimited Fields</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The character used to mark the beginning and ending of the columns of data.</p>
+                                                                                <p>Generally, CSV files use commas, TXT files use spaces, and TAB files use tabs. If the data displays incorrectly in the preview, you can select each character option until the data displays correctly.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Text Qualifier</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If your import file uses a delimiter that can be found within the actual text data, you may need to surround that data in quotation marks or apostrophes to indicate that it is all part of one data column. This is not commonly needed for CSV files, but may be necessary for simpler formats such as TXT files.</p>
+                                                                                <p>For example, while importing properties, if you use spaces as the delimiter in a TXT file and a property name is two words, you would need to use a text qualifier to indicate that both words apply to the property <span class="Field">Name</span> column.</p>
+                                                                                <p>
+                                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-TXTFile-SG-2024.png" alt="The .txt file displays property information delimited by spaces, with one property missing quotation marks around the name." />
+                                                                                </p>
+                                                                                <p>In the image above, the property name <span class="Input">Willow Bridge</span> was not entered in quotation marks. Because the delimiter used for the TXT file is spaces, the property name was split into two separate columns. As a result, all data after is shifted one column over and the imported data cannot be matched accurately.</p>
+                                                                                <p>
+                                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-NoQuotes-SG-2024.png" alt="The Import Properties page displays Willow and Bridge in two separate columns because it was not entered in quotes." />
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>None</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Column data is separated <span class="Stress">only</span> by the selection in the <span class="Field">Delimited Fields</span> field.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Quote</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Column data is first separated by quotation marks ("), then by the selection in the <span class="Field">Delimited Fields</span> field.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Apostrophe</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Column data is first separated by apostrophes ('), then by the selection in the <span class="Field">Delimited Fields</span> field.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Begin import from line</span> field, enter the starting line number from which information should be imported. For example, if the first row in your import file has old or irrelevant data you do not want to import, enter <span class="Input">2</span> to start the import from the second line of data. Empty rows are ignored.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If the line on which the import begins (as specified above) contains field names or column headers, check <span class="Field">Line # is a header</span>. This helps <span class="mc-variable Products.RM variable">Rent Manager</span> automatically match columns and fields and can save time by requiring less manual input for matching fields.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4MatchDataFields" data-magellan-target="Step4MatchDataFields"><a name="H2_4"></a>Step 4: Match Data Fields</h2>
+                                                        <p>In the <span class="Section">Details</span> section, header rows display at the top, while detail rows about the bill's allocations display at the bottom.</p>
+                                                        <p>Now that <span class="mc-variable Products.RM variable">Rent Manager</span> is configured to read your import file, you can begin matching columns from your import file to specific fields in <span class="mc-variable Products.RM variable">Rent Manager</span>. Columns that you need to manually match display in orange and are labeled <span class="Input">Not Matched</span>. If you checked <span class="Field">Line # is a header</span>, columns that matched to your header titles display in green and are labeled <span class="Input">Import Ready</span>.</p>
+                                                        <p>To match columns to their associated <span class="mc-variable Products.RM variable">Rent Manager</span> fields, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Details</span> section, click an orange column labeled <span class="Input">Not Matched</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-NotMatched-Flyout-SG-2024.png" alt="A fly-out window displays options to match the column to a Rent Manager field." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select information for the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Match To</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="mc-variable Products.RM variable">Rent Manager</span> field where the data in this column should be imported.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Handling</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Some <span class="mc-variable Products.RM variable">Rent Manager</span> fields require further specification, such as address information or user defined fields (UDFs). If no handling is needed, this field is disabled.</p>
+                                                                                <p>For example, if the <span class="Field">Match To</span> field has <span class="Field">Postal Code</span> selected, you must select the address type to which that postal code information applies. For most UDFs, set the <span class="Field">Match To</span> field to <span class="Field">User Defined Field</span>, then in the <span class="Field">Handling</span> field, select the specific UDF where the column data belongs.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>The column name populates with the selected field and the label changes to <span class="Input">Import Ready</span> in green.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Repeat for every orange column labeled <span class="Input">Not Matched</span> until all columns you wish to import are correctly matched to the appropriate fields. Only green columns labeled <span class="Input">Import Ready</span> will be imported.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>On the left, all rows of data are selected by default. If there are any rows you do not wish to import, uncheck the row(s).</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you are matching to fields with system-defined options or user defined fields with set values, the data in your import file must match <span class="mc-variable Products.RM variable">Rent Manager</span>'s field options <span class="Input">exactly</span> (including spaces).</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Details</span> section's <span class="Field">Required Columns</span> field, verify that all <span class="mc-variable Products.RM variable">Rent Manager</span> fields in the list have been matched to their associated column. Required fields that have been matched display a display a <img src="../../../../assets/Resources/Images/ICONS/Non-Icons/Check_Green_20x19.png" class="inline-image" alt="Green Checkmark" style="width: 20;height: 19;" />, while unmatched fields are followed by an asterisk (*). All <span class="Field">Required Columns</span> must be matched in order to proceed.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">Next</span>.<br />The <span class="Section">Import Review</span> page displays.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step5ReviewandCompleteImport" data-magellan-target="Step5ReviewandCompleteImport"><a name="H2_5"></a>Step 5: Review and Complete Import</h2>
+                                                        <p>On this page, you can review the information before you import it into <span class="mc-variable Products.RM variable">Rent Manager</span> and, if needed, make any edits or corrections. Once you have verified the information is correct, click <span class="BigButtons">Import</span>.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.23">
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Import-Bills-Review.png" alt="The Import Review page displays information about an imported bill." class="lightbox" />
+                                                        </p>
+                                                        <p>Your data is imported, and a summary of the import displays in the <span class="Column">Import Result</span> column. Rows listed as <span class="Input">Success</span> in green were successfully imported. Any rows that failed to import are listed in red with an error that displays why that row could not be imported.</p>
+                                                        <p>For any rows that failed to import, correct the data in your import file, restart the import process, and select only the rows that failed to import in the previous attempt.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>You can use importing templates to save time and use the same importing settings during future imports of the same type. To create an importing template based on the import you just performed, on the action bar, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/RM/save_19x19.png" class="inline" alt="Save Template" style="width: 19;height: 19;" />.</p>
+                                                        </div>
+                                                    
+</main>
+</body>
+</html>

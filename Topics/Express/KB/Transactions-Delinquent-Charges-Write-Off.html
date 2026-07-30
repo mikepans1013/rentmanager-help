@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Write Off Delinquent Charges</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Transactions-Delinquent-Charges-Write-Off.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Transactions-Delinquent-Charges-Write-Off.htm</a></p>
+
+                                                        <h1 id="WriteOffDelinquentCharges" data-magellan-target="WriteOffDelinquentCharges"><a name="kanchor550"></a><a name="H1"></a>Write Off Delinquent Charges</h1>
+                                                        <p>Charges that are delinquent can be written off as an expense—such as bad debt—or with an offsetting credit when it becomes clear that the charges will never be paid. The write-off zeros out the tenant's ledger, removing the tenant from showing on <span class="mc-variable Products.RM variable">Rent Manager</span> reminders and the <span class="Report">Delinquency</span> report.</p>
+                                                        <p>There are two ways to write off a delinquent balance:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Expense</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Writing off an open balance as an expense allows you to track those expenses on reports such as <span class="Report">Profit &amp; Loss</span> and the <span class="Report">Owner Statement</span>.</p>
+                                                                        <p>This option is best suited for <span class="Stress">accrual</span> basis accounting to reflect the adjustment to net income with the expense.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Offsetting Credit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Writing off an open balance with an offsetting credit displays the write-off on the tenant's account and prevents it from being included on reports as an expense.</p>
+                                                                        <p>This option is best suited for <span class="Stress">cash</span> basis accounting because it is reflected <span class="Stress">only</span> on the tenant's transactions.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Please speak with your accountant about the financial implications of each option to ensure the best course of action for your business.</p>
+                                                        </div>
+                                                        <h2 id="Option1WriteOffDelinquentChargesasanExpense" data-magellan-target="Option1WriteOffDelinquentChargesasanExpense"><a name="H2_1"></a>Option 1: Write Off Delinquent Charges as an Expense</h2>
+                                                        <p>Delinquent charges can be written off by adding a credit equal to the outstanding charge and associated with a charge type and GL account used specifically to track delinquent charges. After you write off all of the delinquent charges from the tenant's account as an expense, the tenant no longer displays on the <span class="Report">Delinquency</span> report or <span class="mc-variable Products.RM variable">Rent Manager</span> reminders but the expense is still tracked in the <span class="Report">Profit &amp; Loss</span> and the <span class="Report">Owner Statement</span>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Your accounting basis determines how the expense affects your reports. For example, on the <span class="Report">Profit &amp; Loss</span> report, writing off delinquent charges as an expense on an <span class="Stress">accrual</span> basis results in no change to rental income, but the net income is reduced by the bad debt expense. However, writing off these charges as an expense on a <span class="Stress">cash</span> basis causes an increase to rental income which is offset by the bad debt expense with no change to the net income.</p>
+                                                        </div>
+                                                        <p>This option requires that a charge type be created that is linked to an expense account. If you already have an expense account and charge type for writing off delinquent charges, proceed to <a href="#H3_2" class="MCXref xref">Step 2: Write Off the Delinquent Balance</a>.</p>
+                                                        <h3><a name="H3_1"></a>Step 1: Set Up Expense Account and Charge Type</h3>
+                                                        <p>Writing off delinquent charges as an expense  requires you to create a charge type that is linked to an expense account. The expense account reflects the write-off of the charge on financial reports while the charge type is used to show the write-off on the tenant's transactions.</p>
+                                                        <p class="Subheading">Create Expense Account</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>By default, <span class="mc-variable Products.RM variable">Rent Manager</span> offers a default bad debt expense chart account, <span class="Field">6000 Bad Debt</span>. If you plan to use this chart account, you do not need to create a new expense account.</p>
+                                                        </div>
+                                                        <p>The expense account created here reflects how the write-off displays in the general ledger and on financial reports. To create the expense account, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Accounting <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Chart of Accounts</span>.<br />The <span class="Window">Chart of Accounts</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add&#160;GL&#160;Account</span>.<br />The <span class="Window">Add GL&#160;Account</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enter the following information into the available fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Select the option <span class="Field">Expense</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>GL&#160;Account No</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The account number to use for this expense account. Expense accounts are generally set between 6000–7999.</p>
+                                                                                <p>If you wish to make this a sub-account for an existing expense account, select the parent account in the <span class="Field">Subaccount of</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A name for the account that makes its purpose clear, such as <span class="Input">Bad Debt</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Add</span>.<br />The expense account is created.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <p class="Subheading">Create Charge Type</p>
+                                                        <p>This charge type is used on the tenant's transactions to create a credit that reflects the write-off of the charge and reduces the outstanding balance. To create the charge type, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Accounting <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Charge Types</span>.<br />The <span class="Window">Charge Types</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Charge Type</span>.<br />The <span class="Window">Add Charge Type</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enter the following information into the available fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The shortened name of the charge type (up to six characters), such as <span class="Input">BD</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Description</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A longer name that gives context to the charge type's purpose, such as <span class="Input">Bad Debt</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Chart&#160;Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The expense account you use for writing off delinquent charges, such as the one you created in the steps above or the default account <span class="Field">6000 Bad Debt</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">Click <span class="BigButtons">Save</span>.<br />The charge type is created and linked to the appropriate expense account.</li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Step 2: Write Off the Delinquent Balance</h3>
+                                                        <p>To write off the delinquent charges for a tenant as an expense, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span> and select the tenant with the outstanding charges to write off.<br />The tenant's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Section">Transactions</span> tile, click <span class="ActionItems">Add Charge</span>.<br />The <span class="Stress">Transaction Detail</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enter the following information into the available fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Descriptions</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type you use to track delinquent charge write-offs.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which to post the transaction.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>For cash basis accounting, if you collect management fees on the income account associated with the delinquent charge, it is included in the management fee calculations when paid by a credit.</p>
+                                                                                    <p>To collect fees on the outstanding charges, set this date for <span class="Stress">after</span> the last management fee posting. If you do <span class="Stress">not</span> want to collect fees on these outstanding charges, set this date for <span class="Stress">on or before</span> the last management fee posting.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount of the tenant's open balance to write-off entered as a <span class="Stress">negative</span> amount. For example, if the tenant's balance is $120, enter <span class="Input">-120</span>.</p>
+                                                                                <p>The tenant's open balance can be found in the <span class="Field">Balance Due</span> field of the tenant's scoreboard at the top of their account's details page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A brief note explaining the reason for the write-off.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The credit offsets the outstanding charges and the tenant's account displays a $0 balance, while still displaying the expense on financial reports.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Option2WriteOffDelinquentChargeswithanOffsettingCredit" data-magellan-target="Option2WriteOffDelinquentChargeswithanOffsettingCredit"><a name="H2_2"></a>Option 2: Write Off Delinquent Charges with an Offsetting Credit</h2>
+                                                        <p>Delinquent charges can be written off by creating an offsetting credit which uses the same charge type, amount due, and date of the outstanding charge. The offsetting credit negates the charge without removing it from the tenant's transactions.</p>
+                                                        <p>Each credit offsets the outstanding charge and the tenant’s outstanding balance is reduced by the amount credited. If all open charges are offset with a matching credit, the tenant's account shows a $0 balance and will no longer display in any <span class="mc-variable Products.RM variable">Rent Manager</span> reminders or the <span class="Stress">Delinquency</span> report.</p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>If you operate in cash basis, in system preferences, you can enable <span class="Field">Record cash credit reallocations when only income accounts and/or expense accounts are used (applies to new credits)</span> to use a charge type dedicated to write-offs to remove financial impact on your <span class="Report">Profit &amp; Loss</span> report or the <span class="Report">Owner Statement</span>. For more information, refer to <a href="../Other/System-Preferences/General-Ledger-Settings.html" class="MCXref xref">General Ledger Settings (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>If there are multiple open charges that make up the tenant's open balance, a separate offsetting credit must be created for <span class="Stress">each</span> charge.</p>
+                                                        </div>
+                                                        <p>To write off delinquent charges with an offsetting credit, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span> and select the tenant with the outstanding charges to write off.<br />The tenant's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the tenant's <span class="Window">Transactions</span> tile, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" />.<br />The View Transactions pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>At the top, check <span class="Field">View Open Receivables Only</span> and take note of the <span class="Column">Date</span>, <span class="Column">Description</span>, and <span class="Column">Amount</span> columns of each open charge.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Transactions-Open-Receivables-Write-Off-SG-2024.png" class="lightbox" alt="The tenant's View Transactions pop-up displays two open charges." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Add&#160;Charge</span>.<br />The <span class="Window">Transaction Detail</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Enter the following information into the available fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The same charge type as the outstanding charge, as shown in the <span class="Field">Description</span> column noted above.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date to apply the credit. As a best practice, this date should be the same as the date of the charge so it does not display as an open charge during any period in reports.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The dollar amount due for the outstanding charge entered as a negative amount. For example, if the first outstanding charge is for $500, enter <span class="Input">-500</span>.</p>
+                                                                                <p>The <span class="Section">Preallocations</span> section displays when a negative amount is entered.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section">Preallocations</span> section, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/plus_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Item</span>.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>In the <span class="Column">Charge Type</span> and <span class="Column">Amount</span> columns, select the same charge type and amount as the outstanding charge.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The first outstanding charge is paid by the credit.</p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Repeat steps 4–8 for each outstanding charge until all open charges are credited and the tenant's outstanding balance is $0.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

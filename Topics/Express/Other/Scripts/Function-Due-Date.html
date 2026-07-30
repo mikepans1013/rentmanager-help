@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Due Date Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Due-Date.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Due-Date.htm</a></p>
+
+                                                        <h1 id="DueDateFunctionScript" data-magellan-target="DueDateFunctionScript"><a name="aanchor1106"></a>
+                                                            <a name="kanchor1849"></a><a name="H1"></a>Due Date Function (Script)</h1>
+                                                        <p>This function displays the <span class="Field">Due Date</span> of the selected service issue when used with the ServiceManager class. Alternatively, when used with the Stage class, it displays the date by which a violation stage must be resolved to prevent further escalation.</p>
+                                                        <p>Classes that utilize this function and the location from where the scripting information is pulled in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().DueDate()]</p>
+                                                                        <p>Displays information found in the selected service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Stage.html">Stage</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Violation().Stage().DueDate]</p>
+                                                                        <p>Displays information found on the <span class="Section">Stage Information</span> tile of the violation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[DueDate(<span class="Optional">"ServiceIssueID"</span>)]</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The ServiceIssueID parameter listed below applies only to the function when it is used with the ServiceManager class. If using this function with the Violation class, there are no available parameters.</p>
+                                                        </div>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ServiceIssueID</h3>
+                                                        <p>Select the service issue with this Issue ID. If this parameter is not specified, it defaults to the oldest/first issue on the linked account.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If ServiceManager is the only class, its parameter is ServiceIssueID. If another class precedes the ServiceManager class, the ServiceManager class instead uses the Index parameter, and the entity of the preceding class must be associated with a service issue in order for the script to return results.</p>
+                                                        </div>
+                                                        <p class="Example">[DueDate("23")]</p>
+                                                        <p>Displays the <span class="Formula">Due Date</span> of service issue number 23.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().ServiceManager().DueDate()]</p>
+                                                        <p>Displays the <span class="Field">Due Date</span> defined for the first service issue associated with the selected tenant.</p>
+                                                        <p class="Example">[ServiceManager().DueDate("53")]</p>
+                                                        <p>Displays the  <span class="Field">Due Date</span> defined on service issue 53.</p>
+                                                        <p class="Example">[Tenant().Violation().Stage().DueDate]</p>
+                                                        <p>Displays the <span class="Field">Due Date</span> defined for the current violation stage of the tenant's most recent violation.</p>
+                                                        <p class="Example">[Violation().Stage("0").DueDate]</p>
+                                                        <p>Displays the <span class="Field">Due Date</span> defined for the first violation stage listed for the violation.</p>
+                                                    
+</main>
+</body>
+</html>

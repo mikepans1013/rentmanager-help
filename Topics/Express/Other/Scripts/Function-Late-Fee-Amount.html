@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Late Fee Amount Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Late-Fee-Amount.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Late-Fee-Amount.htm</a></p>
+
+                                                        <h1 id="LateFeeAmountFunctionScript" data-magellan-target="LateFeeAmountFunctionScript"><a name="aanchor25"></a>
+                                                            <a name="kanchor44"></a><a name="H1"></a>Late Fee Amount Function (Script)</h1>
+                                                        <p>This function displays the potential total of per-day late fees incurred by the tenant if they pay their rent on the parameter date. This function calculates <span class="Stress">only</span> per-day late fees; it does not include fixed or percentage late fees.</p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().LateFeeAmount()]</p>
+                                                                        <p>Displays per-day late fee information found on the tenant's <span class="Section">Add Payment</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[LateFeeAmount(<span class="Optional">"AsOfDate"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>AsOfDate</h3>
+                                                        <p>Specify the as of date to use when examining late fees. If no date is specified, the function uses the current date.</p>
+                                                        <p class="Example">[LateFeeAmount("6/20/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the total of the per-day late fees calculated as of the tenant paying their rent on June 20, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().LateFeeAmount()]</p>
+                                                        <p>Displays the total of all per-day late fees calculated as of today for the current tenant.</p>
+                                                        <p class="Example">[Tenant().LateFeeAmount("03/01/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the total of all per-day late fees calculated as of March 1, <span class="mc-variable Dates.Year4 variable">2026</span> for the current tenant, assuming they paid their accumulated charges on March 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                    
+</main>
+</body>
+</html>

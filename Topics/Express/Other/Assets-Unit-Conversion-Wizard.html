@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit to Asset Conversion Wizard</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Assets-Unit-Conversion-Wizard.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Assets-Unit-Conversion-Wizard.htm</a></p>
+
+                                                        <h1 id="UnittoAssetConversionWizard" data-magellan-target="UnittoAssetConversionWizard"><a name="kanchor1629"></a><a name="H1"></a>Unit to Asset Conversion Wizard</h1>
+                                                        <p>Assets are higher-value items that can be moved between properties and can be rented, such as appliances, furniture, and manufactured homes. By converting units to assets, you can track the assets' maintenance details, depreciation schedules, and secondary leases, and you can generate asset-specific reports that are separate from your units, inventory items, and other rentable items. You can also link assets to units, such as setting a manufactured home asset's location to a lot unit.</p>
+                                                        <p>If you have previously created units in <span class="mc-variable Products.RM variable">Rent Manager</span> that are better suited as assets (such as manufactured homes), you can use the <span class="Window">Unit to Asset Conversion Wizard</span> to convert these units into assets and transfer their information into the appropriate asset fields.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The conversion process deletes the original units and cannot be undone. Ensure that all information is correct before completing the conversion. Additionally, the following unit-specific information is not transferred to the converted asset records because it is not applicable to assets in <span class="mc-variable Products.RM variable">Rent Manager</span>:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Unit Statuses</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Linked Assets</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Security&#160;Deposit Information</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Past Tenants</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Amenities</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Asset Management</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Unit to Asset Conversion Wizard</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>Before converting your units to assets, you must first ensure the following asset components are set up in <span class="mc-variable Products.RM variable">Rent Manager</span>:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Component</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset Types</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Create different categories to identify the types of assets you have, such as <span class="Input">Dishwasher</span>, <span class="Input">Couch</span>, <span class="Input">Manufactured Home</span>, and so on. For more information, refer to <a href="../CSH/Asset-Types.html" class="MCXref xref">Asset Types (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Asset User Defined Fields</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Asset-type user defined fields (UDFs) allow you to track information about assets that <span class="mc-variable Products.RM variable">Rent Manager</span> does not track by default.&#160;If there is unit-specific information that you wish to retain on the asset after conversion but there is not a suitable field to transfer the information to, you can create a UDF for it. For more information, refer to <a href="../Action/UDFs-Add.html" class="MCXref xref">Add a User Defined Field</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step1SelectUnitstoConvert" data-magellan-target="Step1SelectUnitstoConvert"><a name="H2_1"></a>Step 1: Select Units to Convert</h2>
+                                                        <p>You can convert assets from one property at a time into one asset type at a time. For example, if you are converting multiple manufactured home units at the same property into assets, but you have multiple asset types for the different types of manufactured homes, you must run the conversion wizard separately for each asset type.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>When converting units to assets, the unit <span class="Field">Name</span> becomes the asset <span class="Field">Name</span>. Because assets can be moved between different properties, all assets must have unique names. If you convert a unit with same name as an existing asset, you receive an error that the unit could not be converted. To resolve this error, update the name of the unit and then try the conversion again.</p>
+                                                        </div>
+                                                        <p>To convert units to assets, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Rental Info Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Assets <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Unit to Asset Conversion Wizard</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Unit-To-Asset-Convo-Wiz.png" alt="The conversion wizard displays units from a property selected for conversion into manufactured home assets." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Step 1:&#160;Source Property</span> field, select the property of the units you are converting to assets.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">Step 2: Select Units to Migrate</span> field, select each unit that you are converting into the <span class="Stress">same</span> type of asset.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Field">Step 3: Destination Financial Property</span> field, select the property to use for tracking the assets' financial information.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>All financial records attached to the selected units are migrated to this property. In most cases, the source property and destination property are the same. If the asset moves between different physical properties, this information can be tracked using the asset locations, but the financial property should not change. For more information, refer to <a href="../CSH/Asset-Locations.html" class="MCXref xref">Asset Locations (Pop-Up)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Field">Step 4: Asset Type</span> field, select the type of asset all selected units will be converted to.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2AssignFieldstoTransferInformation" data-magellan-target="Step2AssignFieldstoTransferInformation"><a name="H2_2"></a>Step 2: Assign Fields to Transfer Information</h2>
+                                                        <p>After selecting which units to convert to assets, you must designate the asset field(s) where unit field information is transferred. If there is unit information you wish to track that does not have an asset field by default, you can map that field to an asset-type user defined field (UDF).</p>
+                                                        <p>To assign which asset fields to transfer unit information to, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Column">Asset Field (Destination)</span> column, click the drop-down for each unit field listed in the <span class="Column">Unit Field (Source)</span> column and select the asset field where the unit field's value is transferred. The unit fields and the most commonly selected asset fields for each are described in the table below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Unit Field (Source)</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Bathrooms</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The number of bathrooms the home-type asset has.</p>
+                                                                                <p>This information is transferred only if the asset type selected in <span class="Field">Step 4:&#160;Asset Type</span> has the option <span class="Field">Assets of this time are homes</span> checked.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Bedrooms</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The number of bathrooms the home-type asset has.</p>
+                                                                                <p>This information is transferred only if the asset type selected in <span class="Field">Step 4:&#160;Asset Type</span> has the option <span class="Field">Assets of this time are homes</span> checked.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An additional note or information regarding the asset.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Floor</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Most assets do not have multiple floors, so in most cases, this selection would remain blank. If the asset does have multiple floors, you can create an asset-type user defined field to track this information and select that UDF.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Max Occupancy</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If you would like to track the maximum occupancy allowed for a home-type asset, you can create an asset-type user defined field to track this information.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Square Footage</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The size of the home-type asset in square feet.</p>
+                                                                                <p>This information is transferred only if the asset type selected in <span class="Field">Step 4:&#160;Asset Type</span> has the option <span class="Field">Assets of this time are homes</span> checked.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>In most cases, this information is not relevant to assets since the assets have their own type classifications. </p>
+                                                                                <p>If you would like to retain this information for historical purposes, you can create an asset-type user defined field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Address: Primary</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>In most cases, you would track an asset's address based on the unit selected for the asset's location. Asset location information is established from the asset's details page after conversion. For more information, refer to <a href="../CSH/Asset-Locations.html" class="MCXref xref">Asset Locations (Pop-Up)</a>.</p>
+                                                                                <p>If you would like to retain this information for historical purposes, you can create an asset-type user defined field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Unit UDFs</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>You can create asset-type user defined fields for each unit UDF you wish to continue tracking on your converted assets and assign them accordingly.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <span class="BigButtons">Convert</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>On the <span class="Window">Warning</span> pop-up, read the disclaimer and click <span class="BigButtons">Yes</span> if all information entered is correct.<br />The conversion wizard processes. When complete, the <span class="Window">Complete</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">OK</span> on the pop-up.<br />All selected units are converted to the selected asset type.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

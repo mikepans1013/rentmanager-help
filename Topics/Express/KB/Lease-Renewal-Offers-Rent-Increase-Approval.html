@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Renewal Offers with Rent Increase Approval</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Lease-Renewal-Offers-Rent-Increase-Approval.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Lease-Renewal-Offers-Rent-Increase-Approval.htm</a></p>
+
+                                                        <h1 id="CreateRenewalOfferswithRentIncreaseApproval" data-magellan-target="CreateRenewalOfferswithRentIncreaseApproval"><a name="kanchor1019"></a><a name="H1"></a>Create Renewal Offers with Rent Increase Approval</h1>
+                                                        <p>The <span class="Window">Create Renewal Offers</span> page allows you to view and filter tenants with upcoming expiring leases, renew recurring rent charges, create renewal offers, and notify the tenant of the renewal offer. You can also choose the lease term(s) options you want to provide and set an expiration date so renewals are completed promptly.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Lease renewals are generated only for residential leases, so any leases marked as a <span class="Field">Commercial Lease</span> do not generate lease renewals.</p>
+                                                        </div>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>The workflow for creating renewal offers differs depending on whether or not the <span class="Field">Require approval of renewal rent increases before sending offer option</span> option is enabled in system preferences. The workflow in this topic is applicable if the option <span class="Stress">is</span> enabled.</p>
+                                                            <p>To create renewal offers when rent increase approval is <span class="Stress">not</span> enabled, refer to <a href="../Other/Lease-Renewal-Offers-Create.html" class="MCXref xref">Create Renewal Offers</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1">
+                                                                </col>
+                                                                <col class="TableStyle-Privileges-Column-Column1">
+                                                                </col>
+                                                                <col class="TableStyle-Privileges-Column-Column1">
+                                                                </col>
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Lease Renewal Offers</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1SelectTenants" data-magellan-target="Step1SelectTenants"><a name="H2_1"></a>Step 1: Select Tenants</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Before generating renewal offers for your tenants, ensure that all renewal rent increases are set and approved for those tenants first. For more information, refer to <a href="../Other/Lease-Renewal-Offers-Rent-Increases-Set.html" class="MCXref xref">Set Renewal Rent Increase</a>.</p>
+                                                        </div>
+                                                        <p>To create new renewal offers and select the recipient(s) to receive those offers, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Leasing <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Create Renewal Offers</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Create-Renewal-Offer-Tenants-CR-26.png" class="lightbox" alt="The Create Renewal Offer page displays tenants that can be sent lease renewals.">
+                                                                    </img>
+                                                                </p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>You can also create individual renewal offers from the each tenant's details page. On the <span class="Section">Leases</span> tile, select <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Create Renewal Offer</span>. When creating renewals in this way, the <span class="Tab">Select Tenants</span> tab is replaced by the <span class="Tab">Select Rent Charge Types</span> tab.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Select Properties</span> drop-down list, check each property whose tenants you wish to create renewal offers for.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Find Tenants</span> section, filter the listed tenants using the available options.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Leases Expiring Within</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The earliest (<span class="Field">From</span>) and latest (<span class="Field">To</span>) lease expiration date to include tenants with expiring leases in that date range.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Current Lease Term</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The duration(s) of the current lease(s) with set renewal increases. To include tenants without a defined lease term, select <span class="Field">&lt;No Lease Term&gt;</span>. For more information, refer to <a href="../CSH/Lease-Terms.html" class="MCXref xref">Lease Terms (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The assigned category for the tenant's currently leased unit or rentable asset.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>User Defined Field</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A tenant-type user-defined field (UDF) and corresponding <span class="Field">User Defined Value</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Include tenants without approved rent increases</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If checked, tenants with set renewal increases that are not yet approved display. These tenants <span class="Stress">cannot</span> be selected for renewal offers until their increases are approved.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Selected (X)</span> section, select the tenant(s) that you are offering a lease renewal.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Next</span>.<br></br>The <span class="Tab">Choose Term Offers</span> tab displays.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2ChooseTermOffers" data-magellan-target="Step2ChooseTermOffers"><a name="H2_2"></a>Step 2: Choose Term Offers</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Create-Renewal-Offer-Term-Offers-CR-26.png" alt="The Choose Term Offers tab displays the current lease term that can be offered to a tenant.">
+                                                            </img>
+                                                        </p>
+                                                        <p>On the <span class="Tab">Choose Term Offers</span> tab, select the lease term(s) you wish to allow tenants to choose. Rent charges cannot be modified during this process and always use the set renewal increase rates. If you have tenants with multiple lease terms, a drop-down displays for each term with associated tenants listed (e.g., <span class="Field">Current Term: 12 Months</span>).</p>
+                                                        <p>At the top, select one of the available options for the term(s) you are offering.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Offer Current Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Generated lease renewal offer(s) allow the tenant(s) to choose only the lease term associated with their existing lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Offer New Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows users to select a different lease term for the generated lease renewal offer(s). The recipient(s) can choose only the selected lease term.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Offer Multiple Terms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Allows users to select one or more lease terms for the generated lease renewal offer(s). The recipient(s) can choose from one of the selected lease terms.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>Once you select the offered lease term(s), click <span class="BigButtons">Next</span> to proceed to the <span class="Tab">Modify Additional Charges</span> tab.</p>
+                                                        <h2 id="Step3ModifyAdditionalCharges" data-magellan-target="Step3ModifyAdditionalCharges"><a name="H2_3"></a>Step 3: Modify Additional Charges</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Create-Renewal-Offer-Mod-Add-Charges-CR-26.png" class="lightbox" alt="The Modify Additional Charges tab displays active non-rent recurring charges and one-time charges for a tenant.">
+                                                            </img>
+                                                        </p>
+                                                        <p>On the <span class="Tab">Modify Additional Charges</span> tab, if the recipient has active non-rent recurring charges, you can also make adjustments to those charges in the <span class="Section">Additional Recurring Charges</span> section. In the <span class="Section">One-time Charges</span> section, you can add one-time charges associated with the recipient's lease renewal offer by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add One-Time Charge</span>.</p>
+                                                        <h3><a name="H3_1"></a>Additional Recurring Charges</h3>
+                                                        <p>The following columns are available on the Additional Recurring Charges section.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Charge Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The charge type associated with the additional recurring charge. This field is read-only for existing recurring charges.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Charge Adjustment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The method used to modify the additional recurring charge. This column is available only when modifying active non-recurring rent charges.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                                            </col>
+                                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                                            </col>
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>No Increase</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Do not increase the additional recurring charge(s) for this renewal.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Increase by Amount</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Increase the additional recurring charge(s) by a specific dollar amount for this renewal.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Increase by Set Percent</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Increase the additional recurring charge(s) by a set percentage for this renewal.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Specific Amount</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>A full dollar amount is used for the additional recurring charge(s) for this renewal.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The dollar amount to use for the additional recurring charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>New Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>An optional note explaining the additional recurring charge. To select a memorized comment, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Comments" style="width: 19;height: 19;" />.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_2"></a>One-Time Charges</h3>
+                                                        <p>The following columns are available on the <span class="Section">One-Time Charges</span> section.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Charge Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The charge type associated with the one-time charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The unit types available for the selected renewal offers.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The dollar amount to use for the one-time charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>New Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>An optional note explaining the one-time charge. To select a memorized comment, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Comments" style="width: 19;height: 19;" />.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>Once you have established the charges and/or adjustments, click <span class="BigButtons">Next</span> to proceed to the <span class="Tab">Review Offers</span> tab.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Recurring charges that are inherited from the property, unit, or unit type <span class="Stress">cannot</span> be modified during the renewal offer creation process. If property-, unit-, or unit type–level recurring charges need to be changed for a lease, this should be done before generating lease renewal offers. For more information, refer to <a href="../CSH/Property-Recurring-Charges.html" class="MCXref xref">Property Recurring Charges (Pop-Up)</a>, <a href="../CSH/Units-Recurring-Charges.html" class="MCXref xref">Unit-Level Recurring Charges (Pop-Up)</a>, and <a href="../CSH/Unit-Type-Recurring-Charges.html" class="MCXref xref">Unit Type-Level Recurring Charges (Pop-Up)</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step4ReviewOffers" data-magellan-target="Step4ReviewOffers"><a name="H2_4"></a>Step 4: Review Offers</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Create-Renewal-Offer-Review-Offers-CR-26.png" class="lightbox" alt="The Review Offers tab displays information for seven tenant renewal offers.">
+                                                            </img>
+                                                        </p>
+                                                        <p>On the <span class="Tab">Review Offers</span> tab, verify the lease renewal offer information and address any alerts that display. To view and/or modify renewal offer information and charges, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" class="inline" alt="" style="width: 19;height: 19;"></img> <span class="ActionItems">Open Detailed View</span> to display the <span class="Window">Renewal Offer Details</span> pop-up. For more information, refer to <a href="../CSH/Lease-Renewal-Offers-Details.html" class="MCXref xref">Lease Renewal Offer Details (Pop-Up)</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>
+                                                                            <img src="../../../assets/Resources/Images/ICONS/Non-Icons/Alert-Orange_22x19.png" class="inline" alt="" style="width: 22;height: 19;">
+                                                                            </img> (Alert)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If there are any alerts for the tenant's lease renewal offer, click <img src="../../../assets/Resources/Images/ICONS/Non-Icons/Alert-Orange_22x19.png" class="inline" alt="Alert" style="width: 22;height: 19;"></img> to open the <span class="Window">Alerts</span> pop-up and review the message(s). If you need to make corrections to address any of the alert messages, click <span class="BigButtons">Cancel</span> and make the necessary changes and return to the lease renewal process afterward. If no corrections are needed, click <span class="BigButtons">Dismiss</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The tenant's name, along with the property and unit associated with their current lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease End</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The end date for the tenant's current lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Current Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The tenant's current lease term.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Current Rent</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total amount of active recurring rent charges on the tenant's current lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Term(s)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A column displays for each lease term included on the generated renewal offer(s).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Current Additional</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total amount of active non-rent recurring charges on the tenant's current lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>New Additional</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The total amount of non-rent recurring charges included on the lease renewal offer.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>Once you confirm that the lease renewal offers are correct, click <span class="BigButtons">Next</span> to proceed to the <span class="Tab">Send Offers</span> tab.</p>
+                                                        <h2 id="Step5SendOffers" data-magellan-target="Step5SendOffers"><a name="H2_5"></a>Step 5: Send Offers</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Create-Renewal-Offer-Send-Off-CR-26.png" class="lightbox" alt="The Send Offers tab displays the available delivery methods for lease renewal offers.">
+                                                            </img>
+                                                        </p>
+                                                        <p>On the <span class="Tab">Send Offers</span> tab, select the delivery method to use when distributing renewal offers to the recipient(s). Depending on the delivery method, different fields are available.</p>
+                                                        <p>To send the renewal offer(s) to each selected recipient, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Send Offers</span> section, select the desired <span class="Field">Delivery Method</span> from the drop-down list.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>This section is titled <span class="Section">Publish Document to TWA</span> if, on the <span class="Tab">Choose Term Offers</span> tab, you selected the <span class="Field">Offer Multiple Terms</span>. Multiple term offers can be processed <span class="Stress">only</span> via <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>. You can choose to send any signable documents at a later time (<span class="Field">Publish Later</span>), send them immediately (<span class="Field">Publish Now</span>), or, if you use <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> for lease documents, <span class="Field">Send Blue Moon document later</span>. For more information, refer to <a href="LP-Blue-Moon.html" class="MCXref xref">Blue Moon</a>.</p>
+                                                                </div>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Publish Signable Documents</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="4">Letter/Email Templates/Reports/Packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1">Letter/Email templates/packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                                            </tr>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenant templates/packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                                            </tr>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1">Publish document packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                                            </tr>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Signable templates</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">View</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>Additionally, on the <span class="Tab">Communication</span> tab, you must have access to the desired signable template(s).</p>
+                                                                                    <p>For more information, refer to <a href="Users-Privileges-Letter-Templates.html" class="MCXref xref">Control Letter / Email Template Access</a>.</p>
+                                                                                </div>
+                                                                                <p>Select a lease renewal signable template or document packet in the <span class="Field">Document</span> drop-down list to send each offer recipient via <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Write Letters</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Letter/Email Templates/Reports/Packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1">Letter/Email templates/packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                                            </tr>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenant templates/packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>Additionally, on the <span class="Tab">Communication</span> tab, you must have access to the desired letter template(s).</p>
+                                                                                    <p>For more information, refer to <a href="Users-Privileges-Letter-Templates.html" class="MCXref xref">Control Letter / Email Template Access</a>.</p>
+                                                                                </div>
+                                                                                <p>Select a lease renewal letter template in the <span class="Field">Document</span> drop-down list to send each offer recipient.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Create Document Packet</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <col class="TableStyle-Privileges-Column-Column1">
+                                                                                        </col>
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="3">Letter/Email Templates/Reports/Packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1">Letter/Email templates/packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                                            </tr>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenant templates/packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                                            </tr>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Publish document packets</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>Additionally, on the <span class="Tab">Communication</span> tab, you must have access to the desired document packet(s).</p>
+                                                                                    <p>For more information, refer to <a href="Users-Privileges-Letter-Templates.html" class="MCXref xref">Control Letter / Email Template Access</a>.</p>
+                                                                                </div>
+                                                                                <p>Select a document packet from the <span class="Field">Document Packet Name</span> drop-down list to send each offer recipient.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Compose Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Compose Email</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                                </div>
+                                                                                <p>Send an email to each offer recipient.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Offer Expiration</span> section, select the duration of time before the renewal offer recipient(s) can no longer sign the generated offer.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>No Expiration Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The lease renewal offer does not expire.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Current Lease Expiration</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The lease renewal offer expires the same day as the <span class="Field">Lease End</span> date for each recipient's current lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>In X Days</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The lease renewal offer expires in the number of days entered in the <span class="Field">Days</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>X Days before Lease Expiration</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The lease renewal offer expires in the number of days entered in the <span class="Field">Days</span> field, relative to the<span class="Field">Lease End</span> date for each recipient's current lease. For example, if a tenant's current lease expires on 5/29/<span class="mc-variable Dates.Year4 variable">2026</span> and you enter <span class="Input">7</span> in the <span class="Field">Days</span> field, the tenant can sign the renewal until 5/22/<span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If, in the <span class="Field">Delivery Method</span> field, you selected <span class="Field">Publish Signable Documents</span> or <span class="Field">Create Document Packet</span>, an additional section displays at the bottom of the page. Each section is described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Publish Signable Documents</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="Section">Offer Recipients</span> section displays filtering options and a list of tenant contacts. Select each contact that needs to complete the selected signable document(s).</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>If a signer does not have an email address entered on the tenant account's <span class="Window">View Contacts</span> pop-up, they cannot view or sign the document in TWA. The offer is still added to the <span class="Window">Lease Renewal Board</span> and can be manually published from that page. For more information, refer to <a href="../CSH/Lease-Renewal-Offers-Board.html" class="MCXref xref">Lease Renewal Board (Page)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                                    </col>
+                                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                                    </col>
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Contact Types Filter</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The tenant contact type(s) to include in the list of signers.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Applicant Types Filter</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The application type(s) to include in the list of signers.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Recipient Message</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>A comment that the recipient can view in TWA when accessing the document.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Landlord Signature (sign by manager before publishing)</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <div class="privs">
+                                                                                                    <p class="label1">Related Privileges</p>
+                                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                                        <thead>
+                                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                                            </tr>
+                                                                                                        </thead>
+                                                                                                        <tbody>
+                                                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Letter/Email Templates/Reports/Packets</td>
+                                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Sign document packets</td>
+                                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                    <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                                                </div>
+                                                                                                <p>Sign the document before sending it to each recipient. The signature populates with the <span class="Field">First Name</span> and <span class="Field">Last Name</span> entered on your Rent Manager user account.</p>
+                                                                                                <div class="warning">
+                                                                                                    <p class="label1">Warning</p>
+                                                                                                    <p>It is recommended to leave this option unchecked until the document has been signed by the recipient(s), as it becomes legally binding with both the landlord and recipient(s) signatures.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Create Document Packets</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The <span class="Section">Lease Renewal Packet Documents</span> section displays each letter and/or signable template included in the document packet. All documents are included by default, but you can deselect the document(s) you do not wish to send.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Create</span> or <span class="BigButtons">Next</span>.<br />The lease renewal offer is created and can be viewed on the <span class="Window">Lease Renewal Board</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

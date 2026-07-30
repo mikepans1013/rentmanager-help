@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prospect Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Prospect.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Prospect.htm</a></p>
+
+                                                        <h1 id="ProspectClassScript" data-magellan-target="ProspectClassScript"><a name="aanchor8"></a>
+                                                            <a name="kanchor16"></a><a name="H1"></a>Prospect Class (Script)</h1>
+                                                        <p>This class examines prospect account information and can either be followed by a prospect-level scripting function or another class associated with a prospect.</p>
+                                                        <p>Prospect accounts represent the people or businesses that are interested in units that you manage. Prospects can be converted into tenant accounts in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>In prospect-type letters and reports, the Tenant class is considered the default (assumed) class. This is because prospects are considered a type of tenant account.</p>
+                                                            <p>A prospect account has  unique fields that cannot be found on a tenant account, such as <span class="Field">Interest Level</span> and <span class="Field">First Contact</span>. The values for these fields can be retrieved using the <span class="Formula">[Prospect.Function]</span> syntax.</p>
+                                                            <p>Some fields appear on both prospect and tenant accounts, such as <span class="Field">First Name</span>. The values for these fields can be retrieved using the <span class="Formula">[Tenant().Function]</span> syntax.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Prospect.ApplicationDate]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the date the rental application was submitted by the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Prospect().Contact().PhoneNumber().FullNumber]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the full number and extension of the prospect's default phone number.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Prospect().Reservation().ArrivalDate]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Arrival</span> date listed on the prospect's reservation located on the prospect's <span class="Window">Reservation Details</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_1"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.html">Script Functions</a>.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.20">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If preceded by the Tenant class in a prospect-type letter template or report the <a href="Class-Contact-by-Type.html">Contact By Type Class</a>, <a href="Class-Pet.html">Pet Class</a>, or <a href="Class-Service-Manager.html">Service Manager Class</a> may also be used to retrieve prospect data.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.html">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Prospect</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Contact.html">Contact</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Contact().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">This class retrieves data from the <span class="Window">View Contacts</span> pop-up for the prospect account.</p>
+                                                                        <div class="info" data-mc-conditions="Snippet Conditions.20">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you want to provide screening information for the prospect, it is recommended that you follow this class with the Screening class.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Phone-Number.html">Phone Number</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect().Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">This class retrieves phone number data for the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Rent-Quotes.html">Rent Quotes</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect().RentQuotes().<span class="Required">Function</span>]</p>
+                                                                        <p>This class retrieves data about rental quotes on a prospect account</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.34,Snippet Conditions.20,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Reservation.html">Reservation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect().Reservation().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">This class retrieves short term rental (STR) reservation data for the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.25,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Unit().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">This class retrieves data from the <span class="Section">Reserved Unit</span> summary card for the prospect account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.20">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you are using a <a href="Class-Tenant.html">Tenant Class</a> function to return information about a prospect, you need to use the following syntax in prospect-type letters and reports: <span class="Formula">Tenant.Function</span></p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.21,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Address Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.AddressCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the total number of addresses listed for the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenities Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.AmenitiesCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the number of amenities entered on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenities List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.AmenitiesList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays a list of preferred amenities (separated by commas) as entered on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Amenity.html">Amenity</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Amenity()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays name, comment, or price information associated with a preferred amenity specified on the prospect's <span class="Section"> Preferences</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Amps</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Amps]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the number of amperes (amps) the outlet is rated for, which is entered in the STR prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.15,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Application Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.ApplicationDate()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays <span class="Field">Application Date</span> entered into the <span class="Section">Lead Information</span> tile for the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>CashPay Account Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.CashPayAccountNumber]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the CashPay account number assigned by <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> to the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.DisplayColor]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the name of the color selected in the <span class="Field">Prospect Color</span> field of the prospect's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.DisplayColorCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the hexadecimal code of the color selected in the <span class="Field">Prospect Color</span> field of the prospect's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Failed Calls</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent68">
+                                                                            <p class="Formula">[Prospect.FailedCalls]</p>
+                                                                            <p>Displays the number of failed calls as shown on the prospect's <span class="Window">History/Notes</span>pop-up. Failed calls are defined as entries on the <span class="Window">History/Notes</span> pop-up of the <span class="Column">Call</span> type, where the box <span class="Field">Spoke with Prospect</span> is unchecked.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Contact</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent69">
+                                                                            <p class="Formula">[Prospect.FirstContact]</p>
+                                                                            <p>Displays the date and time of the first contact with a prospect as shown on the prospect <span class="Window">History/Notes</span> pop-up. First contact is defined as the earliest email, visit, or call on the prospect's <span class="Window">History/Notes</span> pop-up where the checkbox for <span class="Field">Spoke with prospect</span> is checked.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Floor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Floor]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the names of the <span class="Field">Preferred Floors</span> as entered on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Floor Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent72">
+                                                                            <p class="Formula">[Prospect.FloorCount]</p>
+                                                                            <p>Displays the number of <span class="Field">Preferred Floors</span> as entered on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Floor List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent73">
+                                                                            <p class="Formula">[Prospect.FloorList]</p>
+                                                                            <p>Displays a list of <span class="Field">Preferred Floors</span>, separated by commas, as entered on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.15,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Level</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.InterestLevel]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the ranking from <span class="Input">1</span> – <span class="Input">10</span> (with <span class="Input">10</span> being the highest) to measure the level of interest that the prospect has in renting from you as entered on the prospect's <span class="Section">Lead Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interested Units</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent84">
+                                                                            <p class="Formula">[Prospect.InterestedUnits]</p>
+                                                                            <p>Displays a list of property names and, if specified, the associated unit names, on the prospect's <span class="Section">Interested Properties/Units</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Contact</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent101">
+                                                                            <p class="Formula">[Prospect.LastContact]</p>
+                                                                            <p>Displays the date and time of the last contact with a prospect as shown on the prospect's <span class="Section">Last Contact</span> summary card. Last contact is established by the latest email, visit, or call on the prospect's <span class="Window">History/Notes</span> pop-up where the checkbox for <span class="Field">Spoke with prospect</span> is checked.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last History Item</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent102">
+                                                                            <p class="Formula">[Prospect.LastHistoryItem]</p>
+                                                                            <p>Displays the date and time of the last history item, which is the latest entry, as shown on the prospect's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lead Source</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.LeadSource]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the name of the marketing lead source as entered on the prospect's <span class="Section">Lead Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Agent</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent105">
+                                                                            <p class="Formula">[Prospect.LeaseAgent]</p>
+                                                                            <p>Displays the name of the leasing agent as entered on the prospect's <span class="Section">Lead Information</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Agent Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent106">
+                                                                            <p class="Formula">[Prospect.LeaseAgentEmail]</p>
+                                                                            <p>Displays the email address of the leasing agent selected on the prospect's <span class="Section">Lead Information</span> tile. The leasing agent's email address is entered on the user's <span class="Section">Contact Information</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Agent Fax Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent107">
+                                                                            <p class="Formula">[Prospect.LeaseAgentFaxNumber]</p>
+                                                                            <p>Displays the fax number of the leasing agent selected on the prospect's <span class="Section">Lead Information</span> tile. The leasing agent's fax number is entered on the user's <span class="Section">Contact Information</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Agent Phone Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent108">
+                                                                            <p class="Formula">[Prospect.LeaseAgentPhoneNumber]</p>
+                                                                            <p>Displays the phone number of the leasing agent selected on the prospect's <span class="Section">Lead Information</span> tile. The leasing agent's phone number is entered on the user's <span class="Section">Contact Information</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease End Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.LeaseEndDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the <span class="Field">Expected Lease End</span> date  as entered in the prospect's <span class="Section">Reservation/Expected Lease Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Signed Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent115">
+                                                                            <p class="Formula">[Prospect.LeaseSignedDate]</p>
+                                                                            <p>Displays the lease signed date for a prospect whose <span class="Field">Status</span> has changed to <span class="Field">Tenant</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.LeaseStartDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the <span class="Field">Expected Lease Start</span> date as entered on the prospect's <span class="Section">Reservation/Expected Lease Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20,Snippet Conditions.9,Snippet Conditions.22,Snippet Conditions.23,Snippet Conditions.39">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.LeaseTerm]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the <span class="Field">Lease Term</span> selection on the prospect's <span class="Section">Reservation/Expected Lease Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Length</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Length]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the length entered in the STR prospect's <span class="Section">Preferences</span> tile. The output is formatted as displayed below:</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20"><span class="Input">28</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lost Reason</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent124">
+                                                                            <p class="Formula">[Prospect.LostReason]</p>
+                                                                            <p>Displays the reason the selected prospect was lost as entered in the prospect's <span class="Section">Status</span> summary card.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20,Snippet Conditions.39">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move In Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.MoveInDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the <span class="Field">Move In</span> date as entered in the prospect's <span class="Section">Preferences</span> tile. If the prospect is a guest with a short term rental reservation, the date entered in the <span class="Field">Arrival</span> field as entered in the STR prospect's <span class="Section">Preferences</span> tile displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move Out Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.MoveOutDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the <span class="Field">Move Out</span> date as entered in the prospect's <span class="Section">Preferences</span> tile. If the prospect is a guest with a short term rental reservation, the date entered in the <span class="Field">Departure</span> field as entered in the STR prospect's <span class="Section">Preferences</span> tile displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges-List.html">Open Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect().OpenChargesList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays information found on the prospect's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Prospect-Stage.html">Prospect Stage</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.ProspectStage()]</p>
+                                                                        <p>Displays the current <span class="Field">Stage</span> as entered on the prospect's <span class="Section">Lead Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Pull Through</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.PullThrough]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays <span class="Input">Yes</span> if <span class="Field">Pull-Through</span> is checked in the STR prospect's <span class="Section">Preferences</span> tile; otherwise, displays <span class="Input">No</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Quote-Count.html">Quote Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.QuoteCount()]</p>
+                                                                        <p>Displays the number of rent quotes associated with the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Quote-Count.html">Quote List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.QuoteList()]</p>
+                                                                        <p>Displays a list of rent quotes associated with the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Due Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.RentDueDate]</p>
+                                                                            <p>Displays the expected rent due date for the prospect as entered in the <span class="Section">Reservation/Expected Lease Information</span> tile.</p>
+                                                                            <p>In that section, when the <span class="Field">Rent Period</span> is <span class="Field">Monthly</span>, this function returns the <span class="Field">Due Day</span> value of <span class="Input">1</span> - <span class="Input">31</span>. When the <span class="Field">Rent Period</span> is <span class="Field">Weekly</span>, this function returns <span class="Input">0</span> - <span class="Input">6</span> for the selected <span class="Field">Due Day</span>, with <span class="Input">0</span> for Sunday, <span class="Input">1</span> for Monday, <span class="Input">2</span> for Tuesday, etc. When the <span class="Field">Rent Period</span> is <span class="Field">Daily</span>, a value of <span class="Input">0</span> is returned.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Maximum</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.RentMaximum]</p>
+                                                                            <p>Displays the <span class="Field">Rent Max</span> as entered on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Minimum</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.RentMinimum]</p>
+                                                                            <p>Displays the <span class="Field">Rent Min</span> as entered on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Period</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Prospect.RentPeriod]</p>
+                                                                                        <p>Displays whether <span class="Field">Daily</span>, <span class="Field">Weekly</span>, or <span class="Field">Monthly</span> is selected for the <span class="Field">Rent Period</span> field on the prospect's <span class="Section">Reservation/Expected Lease Information</span> tile.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Reserved Move In Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.ReservedMoveInDate]</p>
+                                                                            <p>Displays the <span class="Field">Reserved Move In</span> date as entered in the prospect's <span class="Section">Reservation/Expected Lease Information</span> tile. If the prospect is a guest with a  short term rental reservation, the <span class="Field">Arrival</span> date as entered in the prospect's <span class="Section">Preferences</span> tile displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Reserved Move Out Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.ReservedMoveOutDate]</p>
+                                                                            <p>Displays the <span class="Field">Reserved Move Out</span> date as entered in the prospect's <span class="Section">Reservation/Expected Lease Information</span> tile. If the prospect is a guest with a  short term rental reservation, the <span class="Field">Departure</span> date as entered in the prospect's <span class="Section">Preferences</span> tile displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Reserved-Quote-Additional-Recurring.html" target="_blank">Reserved Quote Additional Recurring</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.ReservedQuoteAdditionalRecurring]</p>
+                                                                        <p>Displays the total of all selected recurring charges in the rent quote with the <span class="Field">Reserved</span> status, excluding the <span class="Field">Rent</span> amount.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Reserved-Quote-One-Time-Charge.html" target="_blank">Reserved Quote One-Time Charge</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.ReservedQuoteOneTimeCharge]</p>
+                                                                        <p>Displays the total amount of all one-time charges in the rent quote with the <span class="Field">Reserved</span> status.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Reserved-Quote-Rent.html" target="_blank">Reserved Quote Rent</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.ReservedQuoteRent]</p>
+                                                                        <p>Displays the <span class="Field">Rent</span> amount entered in the rent quote with the <span class="Field">Reserved</span> status.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20,Snippet Conditions.32">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Stage-Count.html">Stage Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.StageCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the current stage number of the prospect as they progress through the leasing process.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Stage-List.html">Stage List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.StageList()]</p>
+                                                                        <p>Displays the description, date, and time of the current stage as entered on the prospect's <span class="Section">Lead Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.12,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Status</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Status]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the current status as listed on the prospect <span class="Section">Status</span> summary card. This function outputs <span class="Input">Tenant</span>, <span class="Input">Prospect</span>, <span class="Input">Lost</span>, or <span class="Input">Lost-Rejected</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Calls</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.TotalCalls]</p>
+                                                                            <p>Displays the total number of calls as listed on the prospect's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Emails</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.TotalEmails]</p>
+                                                                            <p>Displays the total number of emails as listed on the prospect's <span class="Window">History/Notes</span> pop-up</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total History Items</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.TotalHistoryItems]</p>
+                                                                            <p>Displays the total number of notes as listed on the prospect's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Visit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.TotalVisit]</p>
+                                                                            <p>Displays the total number of visits as listed on the prospect's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Type Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.UnitTypeCount]</p>
+                                                                            <p>Displays the number of preferred unit types as specified on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Type List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.UnitTypeList]</p>
+                                                                            <p>Displays a list of preferred unit types as specified on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Type Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.UnitTypeName]</p>
+                                                                            <p>Displays the name of a preferred unit type as specified on the prospect's <span class="Section">Preferences</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-User-Defined-Field.html">Unit User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect.UnitUserDefinedField()]</p>
+                                                                        <p>Displays the value or name associated with a unit-type user defined field as specified on the prospect's <span class="Section">Unit User Defined Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit User Defined Field Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.UnitUserDefinedFieldCount]</p>
+                                                                            <p>Displays the number of unit-type user defined fields specified on the prospect's <span class="Section">Unit User Defined Information</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit User Defined Field List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Prospect.UnitUserDefinedFieldList]</p>
+                                                                            <p>Displays a list of unit-type user defined fields (separated by commas) specified on the prospect's <span class="Section">Unit User Defined Information</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.html">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the value defined for the specified user defined field as shown on the prospect's <span class="Window">User Defined Fields</span> pop-up. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.UserDefinedField("Preferred Contact Method")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the value for the <span class="Field">Preferred Contact Method</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20,Snippet Conditions.7">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">Width</td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.20">[Prospect.Width]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20">Displays the width listed in the STR prospect's <span class="Section">Preferences</span> section. The output is formatted as displayed below:</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.20"><span class="Input">9</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

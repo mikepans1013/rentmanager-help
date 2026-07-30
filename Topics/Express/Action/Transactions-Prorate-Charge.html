@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a Prorated Charge</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Action/Transactions-Prorate-Charge.htm">https://rmxhelp.rentmanager.com/Topics/Express/Action/Transactions-Prorate-Charge.htm</a></p>
+
+                                                    <h1><a name="aanchor24"></a>
+                                                        <a name="kanchor43"></a><a name="H1"></a>Add a Prorated Charge</h1>
+                                                    <p>When you need to calculate a prorated charge for tenants or prospects, such as when a tenant begins a lease mid-month, <span class="mc-variable Products.RM variable">Rent Manager</span> automatically calculates the prorated charge amount based on the number of days you want to prorate.</p>
+                                                    <div class="privs">
+                                                        <p class="label1">Related Privileges</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                            <col class="TableStyle-Privileges-Column-Column1" />
+                                                            <col class="TableStyle-Privileges-Column-Column1" />
+                                                            <col class="TableStyle-Privileges-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Privileges-Head-Header1">
+                                                                    <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                    <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                    <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Privileges-Body-Body1">
+                                                                    <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Tenants/Prospects</td>
+                                                                    <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenants</td>
+                                                                    <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Privileges-Body-Body1">
+                                                                    <td class="TableStyle-Privileges-BodyE-Column1-Body1">Prospects</td>
+                                                                    <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Privileges-Body-Body1">
+                                                                    <td class="TableStyle-Privileges-BodyB-Column1-Body1">Receivables</td>
+                                                                    <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenant transactions</td>
+                                                                    <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                    </div>
+                                                    <div class="prefs">
+                                                        <p class="label1">Related Preferences</p>
+                                                        <p>By default, <span class="mc-variable Products.RM variable">Rent Manager</span> prorates based on the actual days in a month. To always prorate based on a 30-day month, enable the <span class="Field">Always prorate based on 30 days in a month</span> option in system preferences. For more information, refer to <a href="../Other/System-Preferences/General-Options-General.html" class="MCXref xref">General Options (System Preferences)</a>.</p>
+                                                    </div>
+                                                    <p>To add a prorated charge to a tenant or prospect account, do the following:</p>
+                                                    <ol>
+                                                        <li value="1">
+                                                            <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants|Prospects</span> and select a tenant or prospect.<br />The <span class="Window">Tenant</span> or <span class="Window">Prospect</span> details page displays.</p>
+                                                        </li>
+                                                        <li value="2">
+                                                            <p> On the <span class="Section">Transaction</span> tile, click <span class="ActionItems">Add Charge</span>.<br />The <span class="Window">Transaction&#160;Detail</span> pop-up displays.<br /></p>
+                                                        </li>
+                                                        <li value="3">
+                                                            <p>To create the charge, enter the following information:<br /></p>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Standard-Head-Header1">
+                                                                        <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                        <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Charge Type</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>The charge type that is associated with this charge. Each charge type is linked to one of the general ledger (GL) accounts from your chart of accounts.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Unit</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>The unit with which the charge is associated. By default, the unit associated with the first lease listed on the tenant's <span class="Section">Leases</span> tile or the unit listed in the prospect's <span class="Section">Reservation/Expected Lease Information</span> tile displays.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Date</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>The date on which this charge is posted to the account and available to be paid.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Amount</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>The full amount of the charge that is owed by the tenant or prospect.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Comment</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>Descriptive information about the charge.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                            <p>Reference #</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                            <p>An optional name or number to track and organize the charge in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                        <li value="4">
+                                                            <p>To prorate the charge, click <span class="ActionItems">Prorate</span>.</p>
+                                                            <p>
+                                                                <img src="../../../assets/Resources/Images/PNGs/RMX-Prorate-Transaction-LC-082924.png" alt="The Prorate Transaction pop-up displays a charge prorated for 17 days." />
+                                                            </p>
+                                                        </li>
+                                                        <li value="5">
+                                                            <p>To calculate the <span class="Field">Prorated Amount</span>, enter the following information:<br /></p>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Standard-Head-Header1">
+                                                                        <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                        <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Days Prorated</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>The number of days in the month that are being prorated. For example, if a tenant moves in on the 15th of the month, enter <span class="Input">15</span> in this field. This field is automatically calculated based on the number of days left in the month.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                            <p>Full Charge Amount</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                            <p>The total charge before the prorated amount is calculated. If a charge amount is entered on the <span class="Window">Transaction Details</span> pop-up, it populates here by default.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                        <li value="6">
+                                                            <p>Click <span class="BigButtons">Save</span>.<br />The <span class="Field">Prorated Amount</span> populates in the <span class="Field">Amount</span> field on the <span class="Window">Transaction Detail</span> pop-up.</p>
+                                                        </li>
+                                                        <li value="7">
+                                                            <p>Click <span class="BigButtons">Save</span> on the <span class="Window">Transaction Detail</span> pop-up.<br />The prorated charge is added to the tenant or prospect account.</p>
+                                                        </li>
+                                                    </ol>
+                                                
+</main>
+</body>
+</html>

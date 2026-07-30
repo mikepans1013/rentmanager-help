@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publish a Blue Moon Lease</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Blue-Moon-Publish-Lease.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Blue-Moon-Publish-Lease.htm</a></p>
+
+                                                        <h1 id="PublishaBlueMoonLease" data-magellan-target="PublishaBlueMoonLease"><a name="kanchor952"></a><a name="H1"></a>Publish a Blue Moon Lease</h1>
+                                                        <p><span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> is a software from the National Apartment Association (NAA) that provides industry-standard leasing documents that are compliant with your state and/or industry association (e.g., NAA, TAA, GAA, AANC). <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> can be integrated with <span class="mc-variable Products.RM variable">Rent Manager</span> to export your tenant and prospect information directly into <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> leasing documents. Your contract with <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> determines which leasing documents are available for you to generate. You can create these <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> leases in <span class="mc-variable Products.RM variable">Rent Manager</span> and then send them electronically for tenants or prospects to sign.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>In order to use <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> to generate leasing documents and create leases, you must first purchase a license(s) from the NAA , then enable and configure your <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> integration. For more information, refer to <a href="../KB/Blue-Moon-Set-Up.html" class="MCXref xref">Set Up Blue Moon</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="3"><span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Create lease</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Edit fields during lease creation</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Override <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> default values in Other Fields</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1CreateaLease" data-magellan-target="Step1CreateaLease"><a name="H2_1"></a>Step 1: Create a Lease</h2>
+                                                        <p>You can generate a <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease for prospects or tenants in your database. To generate a <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Navigate to the desired entity and start the lease creation using the table below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Entity</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Navigation</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Prospect</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Prospects</span>. For the prospect receiving the lease document, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" alt="Options" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems"><span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span>: Create Lease</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Tenant</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span> and select a tenant. Then on the <span class="Section">Leases</span> tile, click <img src="../../../assets/Resources/Images/ICONS/Express-App/RM/Blue-Moon_19x19.png" alt="Create Blue Moon Lease" class="inline" style="width: 19;height: 19;" />.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Blue-Moon-Lease-CR-26.png" alt="Page 1 of the Blue Moon Lease pop-up displays general lease information and the residents and occupants." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Calculated Fields</span> tile, review the fields below. These fields pull information directly from <span class="mc-variable Products.RM variable">Rent Manager</span>, but you can edit the fields as needed.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Address</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The street address marked as <span class="Field">Default</span> for the unit, as specified on the unit's details page in the <span class="Section">Addresses</span> tile. The city, state, and zip code populate from <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> based on the serial number and property ID entered on the associated property's user-defined fields.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Late Charge Daily</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The daily late fees charged to the tenant for overdue charges, as specified on the property's <span class="Window">Late Fees</span> pop-up in the <span class="Section">Per Day Options</span> section in the <span class="Field">Amount</span> field. If this amount is overridden on the tenant level, the per-day <span class="Field">Amount</span> pulls from the tenant's <span class="Section">Late Fees</span> pop-up.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Late Charge Initial</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The fixed late fee charged to the tenant for overdue charges, as specified on the property's <span class="Window">Late Fees</span> pop-up in the <span class="Field">Fixed Amount</span> field. If this amount is overridden on the tenant level, the <span class="Field">Fixed Amount</span> pulls from the tenant's <span class="Section">Late Fees</span> pop-up.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Late Charge Percent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The percentage to charge the tenant in late fees for overdue charges, as specified on the property's <span class="Window">Late Fees</span> pop-up in the <span class="Field">Percent</span> field. If this amount is overridden on the tenant level, the <span class="Field">Percent</span> pulls from the tenant's <span class="Section">Late Fees</span> pop-up.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Lease End</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The final date of the lease before it expires. For tenants, this date is specified on their lease's details pop-up in the <span class="Field">Lease End</span> field. For prospects, this date is specified on their prospect details page in the <span class="Field">Expected Lease End</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Lease Start</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the lease begins. For tenants, this date is specified on their lease's details pop-up in the <span class="Field">Lease Start</span> field. For prospects, this date is specified on their prospect details page in the <span class="Field">Expected Lease Start</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount charged in rent based on the unit's current market rent value, as specified on the unit's <span class="Section">View Market Rent</span> pop-up in the <span class="Field">Amount</span> column for the most recent date.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Security Deposit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount held for the security deposit, as specified on the tenant's details page in the <span class="Field">Security Deposit</span> field, or on the prospect's details page in the <span class="Field">Security Deposit Held</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Unit Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The name of the unit, as specified on the unit's details page in the <span class="Field">Name</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Residents/Occupants</span> tile in the according <span class="Field">Resident #</span> and <span class="Field">Occupant #</span> fields, select the contact(s) on the account who are signing the lease and/or living in the unit.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>The contacts available to select in each of these fields are determined by your contact type settings for <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> in system preferences. For more information, refer to <a href="System-Preferences/Blue-Moon-General.html" class="MCXref xref">Blue Moon General (System Preferences)</a>.</p>
+                                                                </div>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Resident #</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Designates the tenant/prospect contact(s) that are signing the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Occupant #</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Designates the tenant/prospect contact(s) that are living in the rental unit but are not signing the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">If the contacts selected as a <span class="Field">Resident #</span> need to electronically sign the lease, check <span class="Field">Request eSignature</span>.</li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2SelectForms" data-magellan-target="Step2SelectForms"><a name="H2_2"></a>Step 2: Select Forms</h2>
+                                                        <p>The form selection pages vary depending on whether or not you checked <span class="Field">Request eSignature</span> on the previous page.</p>
+                                                        <h3><a name="H3_1"></a>eSignature Requested</h3>
+                                                        <p>If you checked <span class="Field">Request eSignature</span>, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">eSign Forms</span> tile, check each <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> form you wish to send for the tenant or prospect to sign electronically.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Printed Forms</span> tile, check each <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> form you wish to print out for the tenant or prospect that does not need an electronic signature.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>No eSignature</h3>
+                                                        <p>If you did <span class="Stress">not</span> check <span class="Field">Request eSignature</span>, in the <span class="Section">Forms</span> tile, check each <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> form you wish to print out for the tenant or prospect that does not need an electronic signature. Then click <span class="BigButtons">Next</span>.</p>
+                                                        <h2 id="Step3SetOtherFields" data-magellan-target="Step3SetOtherFields"><a name="H2_3"></a>Step 3: Set Other Fields</h2>
+                                                        <p>In the <span class="Section">Other Fields</span> tile, a list of all the required <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> fields for the selected forms displays. Any fields that are mapped in system preferences and pull a value from that mapped field also display. In the <span class="Column">Value</span> column, the value of the mapped <span class="mc-variable Products.RM variable">Rent Manager</span> field or user-defined field displays.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Blue-Moon-Lease-Other-Fields-SG-2025.png" alt="The Other Fields tile displays Blue Moon fields and the Rent Manager data they pulled based on system preferences." />
+                                                        </p>
+                                                        <p>To verify your <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> data fields, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Other Fields</span> tile, review the fields to ensure fields are pulling the correct information. If any fields are incorrect, enter the correct data.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>The information that populates in the <span class="Column">Value</span> column is based on your <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> field mapping settings in system preferences. For more information, refer to <a href="System-Preferences/Blue-Moon-Form-Fields-Setup.html" class="MCXref xref">Blue Moon Form &amp; Fields Setup (System Preferences)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>To add a non-required <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> field that does not currently have any mapped data, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Field</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Blue-Moon-Lease-Add-Field-SG-2025.png" alt="The Add Blue Moon Field pop-up displays all fields on the selected Blue Moon forms and has two additional fields checked." />
+                                                                    <br />
+                                                                </p>
+                                                                <p>Fields already included in the <span class="Section">Other Fields</span> tile display a read-only checkmark.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Check the field(s) you wish to enter information for on the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease and click <span class="BigButtons">Add</span>.<br />The pop-up closes and the fields are added to the <span class="Section">Other Fields</span> tile.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Enter data in any remaining blank fields.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Next</span>.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If the option <span class="Field">Request eSignature</span> is unchecked, this is the final page of the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease creation pop-up. Click <span class="BigButtons">Create</span> to complete generating the lease. Otherwise, proceed to the next step for configuring the eSignature.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4FillOuteSignatureInformation" data-magellan-target="Step4FillOuteSignatureInformation"><a name="H2_4"></a>Step 4: Fill Out eSignature Information</h2>
+                                                        <p>If the option <span class="Field">Request eSignature</span> was checked, this is the final step of the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease creation process.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Blue-Moon-eSignature-SG-2025.png" alt="The Blue Moon wizard's final page displays contact information for both the residents and the property owner or representative." />
+                                                        </p>
+                                                        <p>To configure your eSignature information, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Resident eSignature Info</span> tile, enter the following information for each resident on the lease:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Delivery Method</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Whether the resident wishes to receive the lease information and submit their signature via <span class="Field">Email</span> or <span class="Field">Text Message</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If <span class="Field">Email</span> is the selected delivery method, enter the resident's email address to receive the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease. The email that populates by default is pulled from the contact's <span class="Field">Email</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Phone</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If <span class="Field">Text Message</span> is the selected delivery method, enter the resident's text-enabled phone number to receive the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease. The phone number that populates by default is pulled from the contact's <span class="Section">Phone Numbers</span> tile. The phone number marked as <span class="Field">Default</span> displays if it also has <span class="Field">T</span> checked to indicate it is text enabled. Otherwise, the first text-enabled number listed on the tile displays.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Owner/Representative eSignature Info</span> tile, the contact information for the property owner or representative populates from the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> portal's general settings. If needed, edit the information as needed.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The primary email address of the property owner or representative.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The full name of the property owner or representative overseeing the lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Phone</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The primary phone number of the property owner or representative.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Create</span>.<br />A pop-up preview of the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> forms displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Review the documents to ensure everything is accurate, then click <span class="BigButtons">Send Lease</span>.<br />The <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease is created and sent to the designated resident(s) for electronic signature.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_5"></a>Next Steps</h2>
+                                                        <p>Once your <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease is created, you can view the lease and track its eSignature progress.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Action</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>View lease PDF</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>You can view a PDF copy of the <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease, whether or not it was sent for electronic signature. For tenants and prospects, these documents can be viewed on the <span class="Window">History/Notes</span> pop-up by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/attach_file_19x19.png" alt="View File" class="inline" style="width: 19;height: 19;" /> for that history/note item. For more information, refer to <a href="../CSH/Prospect-History-Notes.html" class="MCXref xref">Prospect History/Notes (Pop-Up)</a> and <a href="../CSH/Tenant-History-Notes.html" class="MCXref xref">Tenant History/Notes (Pop-Up)</a>.</p>
+                                                                        <p>For tenants, you can also view these document's from the lease's details pop-up by clicking <span class="ActionItems">View Documents</span>. For more information, refer to <a href="../CSH/Lease-Details.html" class="MCXref xref">Lease Details (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Track eSignature</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>You can track the progress of your <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease forms that have requested an eSignature. From the <span class="Window"><span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> eSignatures</span> page you can also view, resend, or delete existing <span class="mc-variable Integrations.Partner-BlueMoon variable">Blue Moon</span> lease documents with pending eSignature requests. For more information, refer to <a href="../CSH/Blue-Moon-eSignatures.html" class="MCXref xref">Blue Moon eSignatures (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

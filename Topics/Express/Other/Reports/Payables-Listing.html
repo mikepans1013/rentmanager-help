@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payables Listing (Report)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Reports/Payables-Listing.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Reports/Payables-Listing.htm</a></p>
+
+                                                        <h1 id="PayablesListingReport" data-magellan-target="PayablesListingReport"><a name="aanchor712"></a>
+                                                            <a name="kanchor1194"></a><a name="H1"></a>Payables Listing (Report)</h1>
+                                                        <p>The <span class="Report">Payables Listing</span> report displays paid or unpaid bills associated with vendors across a date range. The report can be configured to display bills that are open, paid, or both. The <span class="Field">Paid as of</span> date option can help with audits.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The results  can include any transaction information even if it started prior to the general ledger (GL) start date since this report does not consider the GL start date. </p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Run reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>Additionally, on the <span class="Tab">Reports</span> tab, you must have access to <span class="Field">Payables Listing</span>.</p>
+                                                            <p>For more information, refer to <a href="../Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To view the <span class="Report">Payables Listing</span> report, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../../assets/Resources/Images/ICONS/Express-App/RM/reports_19x19.png" class="inline" alt="Reports" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Payables <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Payables Listing</span>.<br />The <span class="Window">Reports: Payables Listing</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Adjust the report options as desired. Each option is described below.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Generate the report in your desired file format(s).</p>
+                                                            </li>
+                                                        </ol>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>Reports may look different depending on whether or not the <span class="Field">Use modernized report style</span> system preference is enabled. For more information, refer to <a href="../System-Preferences/Report-Options-General.html" class="MCXref xref">General Report Options (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Payables-Listing-Report-LC-102424.png" alt="The Payables Listing report displays a list of bills for one vendor." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="ReportOptions" data-magellan-target="ReportOptions"><a name="H2_1"></a>Report Options</h2>
+                                                        <p>The report options described below determine what data displays in the report.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Payables-Listing-Report-Options-LC-102424.png" alt="The Reports: Payables Listing page displays options for setting up the report." class="lightbox" />
+                                                        </p>
+                                                        <h3>Properties/Owners to Include</h3>
+                                                        <p>Check each property or owner to be included in the report. Alternatively, select a property or owner <span class="Field">Group</span>. When the <span class="Tab">Owners</span> tab is selected, results generate <span class="Stress">only</span> for owners with active ownerships. If all selected owners currently do not have active ownerships, and <span class="Field">Restrict by owner contract dates</span> is selected, an error message displays stating that no reports were generated. For more information on establishing active ownerships, refer to <a href="../../CSH/Property-Owners.html" class="MCXref xref">Property Owners (Pop-Up)</a>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>
+                                                                Only information related to the properties to which you have access displays. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../../KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                        </div>
+                                                        <p colspan="2">Optionally, check <span class="Field">Show Inactive Properties</span> to include properties that are no longer active.</p>
+                                                        <h3>Bills to Include</h3>
+                                                        <p>Select an option from the drop-down list to determine whether the report displays <span class="Field">Open</span> bills (unpaid or partially paid bills), <span class="Field">Paid</span> bills, or <span class="Field">All</span> bills.</p>
+                                                        <h3>Date Restriction On</h3>
+                                                        <p>Select one of the following options to determine how bills are displayed in the report results:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bill Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Bills with a <span class="Field">Bill Date</span> that falls within the selected <span class="Section">Date Range</span> display.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Bills with a <span class="Field">Post Date</span> that falls within the selected <span class="Section">Date Range</span> display.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Due Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Bills with a <span class="Field">Due Date</span> that falls within the selected <span class="Section">Date Range</span> display.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The option selected in the <span class="Field">Date Restriction On</span> report option determines which dates <span class="mc-variable Products.RM variable">Rent Manager</span> examines within the <span class="Section">Date Range</span> report option.</p>
+                                                        </div>
+                                                        <h3><a name="H3_1"></a>Detail or Summary</h3>
+                                                        <p>This option determines how much information is displayed in the report.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Detail</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A line item for each property transaction associated with the bill displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Summary</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>A condensed line item for the total of each vendor bill displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3>Select Vendor</h3>
+                                                        <p>Select a vendor to examine in the report. Alternatively, select <span class="Field">All</span> to generate the report for all active vendors.</p>
+                                                        <h3>Run Properties Separately</h3>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.3">Check to generate a separate report for each selected property. Otherwise, all selected properties are combined into a single report.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.3">This option is only selectable only when the <span class="Section">Properties to Include</span> section displays the <span class="Field">Property</span> tab.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.3">
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX%20-%20Report%20Options%20-%20Batch%20Properties%20-%20Properties%20to%20Include%20-%20SG%20-%201-24-21.png" alt="" />
+                                                        </p>
+                                                        <h3><a name="H3_2"></a>Paid as Of</h3>
+                                                        <p>Enter a date which determines how the report calculates the amount paid of each bill. The <span class="Column">Amount Paid</span> column displays the amount of the bill paid as of the entered date.</p>
+                                                        <h3><a name="H3_3"></a>Sort Options</h3>
+                                                        <p>Select one of the following options to determine how the report results are sorted:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>	
+Bills are sorted numerically by the <span class="Field">Amount Paid</span> on the bill in ascending order (least to greatest).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bill Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Bills are sorted chronologically by the <span class="Field">Bill Date</span> in ascending order (oldest to newest).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Due Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Bills are sorted chronologically by the <span class="Field">Due Date</span> in ascending order (oldest to farthest in the future).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Reference</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Bills are sorted alphanumerically by the <span class="Field">Invoice #</span>. Bills with no invoice number display first in the results.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Vendor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>	
+Bills are sorted alphabetically by vendor name. If there are multiple bills for a vendor, they are further sorted chronologically by the order they were created in Rent Manager in ascending order (oldest to newest).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ReportResults" data-magellan-target="ReportResults"><a name="H2_2"></a>Report Results</h2>
+                                                        <p>The report results are described below including, if applicable, section, column, and subreport descriptions.</p>
+                                                        <h3><a name="H3_4"></a>Report Header</h3>
+                                                        <p>The report header displays the report name and key information selected in the report options, such as date information and which properties were examined in the report.
+
+</p>
+                                                        <h3><a name="H3_5"></a>Column Descriptions</h3>
+                                                        <p>The columns that display in the report are described below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Vendor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the vendor who issued the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Reference</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Field">Invoice #</span> of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Field">Memo</span> entered for the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bill Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the bill was issued.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Due Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the bill is due.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Paid</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>One of the following indicates the bill's status:</p>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <p><span class="Field">Yes</span> indicates the bill was paid.</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p><span class="Field">No</span> indicates the bill is not paid.</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p><span class="Field">P</span> indicates the bill was partially paid.</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Terms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The bill terms selected for the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount Paid</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The dollar amount of the bill that was paid as of the selected date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Bill Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The total dollar amount of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Subheading">Detail Fields</p>
+                                                        <p>When generating the report with the report option for <span class="Field">Detail</span> checked, the following unlabeled allocation fields display below the general information for each bill.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Payables-Listing-Detail-Fields-LC-102424.png" alt="The details section displays three transactions." />
+                                                        </p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The short name of each property expensed in the allocations grid of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of each unit expensed in the allocations grid of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Expense Account</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The general ledger expense account used by each line item in the allocations grid of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Memo</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The memo entered for each line item in the allocations grid of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount Paid</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The dollar amount that was paid towards each line item in the allocations grid of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Total Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The dollar amount of each line item in the allocations grid of the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_6"></a>Chart Account Summary Subreport</h3>
+                                                        <p>The <span class="Report">Chart Account Summary</span> subreport displays at the end of the <span class="Report">Payables Listing</span> report regardless of the report options selected. This subreport provides the name of the general ledger accounts and the total dollar amount that was expensed by the bills displayed in the report.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Payables-Listing-Chart-Account-Summary-LC-102424.png" alt="The Chart Account Summary subreport displays a list of chart accounts and expensed amounts." class="lightbox" />
+                                                        </p>
+                                                    
+</main>
+</body>
+</html>

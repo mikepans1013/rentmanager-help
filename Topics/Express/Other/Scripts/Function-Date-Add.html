@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Date Add Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Date-Add.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Date-Add.htm</a></p>
+
+                                                        <h1 id="DateAddFunctionScript" data-magellan-target="DateAddFunctionScript"><a name="aanchor438"></a>
+                                                            <a name="kanchor726"></a><a name="H1"></a>Date Add Function (Script)</h1>
+                                                        <p>This function adjusts a date by adding or subtracting a specified interval of time.</p>
+                                                        <p>This function can be utilized by the following class:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-System.html">System</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[System.DateAdd()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[DateAdd(<span class="Required">"Period"</span>,<span class="Required">"Count"</span>,<span class="Optional">"Date"</span>)]</p>
+                                                        <h3 class="Required"><a name="H3_1"></a>Period</h3>
+                                                        <p>This is the interval of time to add or subtract from a date value.</p>
+                                                        <table class="TableStyle-Standard" cellspacing="0" style="mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Parameter Value</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>y <span class="Stress">or</span> yyyy</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("y","2")]</p>
+                                                                        <p>Displays the date two years after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>q</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("q","3")]</p>
+                                                                        <p>Displays the date three quarters after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>m</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("m","7")]</p>
+                                                                        <p>Displays the date seven months after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>d</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("d","3")]</p>
+                                                                        <p>Displays the date three days after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>w</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("w","10")]</p>
+                                                                        <p>Displays the date ten weekdays after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>ww</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("ww","12")]</p>
+                                                                        <p>Displays the date twelve weeks after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>h</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("h","72")]</p>
+                                                                        <p>Displays the date seventy-two hours after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>n</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("n","525600")]</p>
+                                                                        <p>Displays the date 525,600 minutes after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>s</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[DateAdd("s","500")]</p>
+                                                                        <p>Displays the date 500 seconds after today's date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3 class="Required">Count</h3>
+                                                        <p>This is the numeric value to add or subtract from the date value using the selected period.</p>
+                                                        <p class="Example">[DateAdd("ww","3")]</p>
+                                                        <p>This displays the date three weeks after today's date.</p>
+                                                        <h3 class="Optional"><a name="H3_2"></a>Date</h3>
+                                                        <p>Specify the date to adjust. By default, the function uses today's date if no date is added.</p>
+                                                        <p class="Example">[DateAdd("d","5","6/20/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the date five days after June 20, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[System.DateAdd("m","7")]</p>
+                                                        <p>Displays the date seven months after today’s date.</p>
+                                                        <p class="Example">[System.DateAdd("d","-30")]</p>
+                                                        <p>Displays the date thirty days before today’s date.</p>
+                                                        <p class="Example">[System.DateAdd("m","1",Lease.MoveInDate)]</p>
+                                                        <p>Displays the date one month after the tenant's <span class="Field">Move In Date</span>.</p>
+                                                        <p class="Example">[System.DateAdd("d","5","01/09/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the date five days after January 9, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[$Date=DateAdd("d","3",System.Date);<br />If(Format($Date, "ddd")=="Sun",$Date=DateAdd("d","1",$Date),<br />If(Format($Date, "ddd")=="Sat", $Date=DateAdd("d","2",$Date),""));<br />$Date]</p>
+                                                        <p>Displays the date three work days from today's date. For example, running this script on a Friday displays the date for the following Wednesday. For more information on If statements, refer to <a href="Function-If.html" class="MCXref xref">If Function (Script)</a>.</p>
+                                                    
+</main>
+</body>
+</html>

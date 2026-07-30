@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Charges List Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Open-Charges-List.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Open-Charges-List.htm</a></p>
+
+                                                        <h1 id="OpenChargesListFunctionScript" data-magellan-target="OpenChargesListFunctionScript"><a name="aanchor747"></a>
+                                                            <a name="kanchor1237"></a><a name="H1"></a>Open Charges List Function (Script)</h1>
+                                                        <p>This function displays open (unpaid) charges of selected charge type(s) as of a specified date for the selected class.</p>
+                                                        <p>Each charge can be displayed on a separate line and shown as a string of one or more specified charge data fields. If no fields are specified in the Format parameter, the results display by default the charge date, description, and amount separated by spaces. Additional variables are available to display on each line.</p>
+                                                        <p>The default output of the function displays below. The Format parameter can be used to customize this output, as shown in the last example in this topic.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20Openchargeslist%20-%20SG%20-%2011-18-20.png" alt="" />
+                                                        </p>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Lease.html">Lease</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().OpenChargesList()]</p>
+                                                                        <p>Displays information found on the tenant's <span class="Window">View Transactions</span> pop-up associated with a specific lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().OpenChargesList()]</p>
+                                                                        <p>Displays information found on the owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">PrimaryOwner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>PrimaryOwner.OpenChargesList()]</p>
+                                                                        <p>Displays information found on the primary owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Prospect.html" target="_blank">Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect().OpenChargesList()]</p>
+                                                                        <p>Displays information found on the prospect's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().OpenChargesList()]</p>
+                                                                        <p>Displays information found on the tenant's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[OpenChargesList(<span class="Optional">"ChargesAsOfDate"</span>, <span class="Optional">"ChargeType"</span>, <span class="Optional">"Format"</span>, <span class="Optional">"DaysToCheckPrior"</span>, <span class="Optional">"AsOfDate"</span>)]</p>
+                                                        <h3 class="Optional">ChargesAsOfDate</h3>
+                                                        <p>Specify the date on or before which to examine posted open charges. If no date is specified, today's date is used by default.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[OpenChargesList("5/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Retrieves the list of open charges as of May 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.1">
+                                                            <p class="label1">More Information</p>
+                                                            <p>A date must be specified for this parameter in order for the DaysToCheckPrior parameter value to be applied.</p>
+                                                        </div>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ChargeType</h3>
+                                                        <p>Specify the short name code of the charge type(s) to examine; each charge type should be separated by a comma. If no parameter is specified, the function examines all charge types.</p>
+                                                        <p class="Example">[OpenChargesList("","LC,APP")]</p>
+                                                        <p>Displays the open charges for the Late Charge (LC)&#160;and Application FEE (APP) charge types.</p>
+                                                        <h3 class="Optional"><a name="H3_2"></a>Format</h3>
+                                                        <p>List details of each open charge using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <p class="Subheading">Default Format</p>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays the date, description, and amount variables separated by tabs:</p>
+                                                        <p class="Formula">"\t$_Date\t$_Description\t$_Amount\n"</p>
+                                                        <p class="Subheading">Variables</p>
+                                                        <p>The following variables may be used in the Format parameter.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the amount of the open charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_AmountLeft</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the amount of the open charge left after payment allocation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_AmountPaid</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the amount of the open charge that has been paid/allocated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ChargeType</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the shortened charge type name.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ChargeTypeDescription</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the charge type <span class="Field">Description</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Comment</span> entered on the open charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Comment25</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the first 25 characters of the <span class="Field">Comment</span> entered on the open charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date the open charge was posted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the text in the open charge’s <span class="Field">Description</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Reference</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Reference</span> entered on the open charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_ShortDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the open charge date in a shortened format (mm/dd/yy).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3 class="Optional">DaysToCheckPrior</h3>
+                                                        <p>Specify the number of days before ChargesAsOfDate to begin looking for open charges. This is used to calculate the equivalent of a ChargesFrom date. If no parameter is specified, the function defaults to <span class="Input">0</span>.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[OpenChargesList("2/6/<span class="mc-variable Dates.Year4 variable">2026</span>","","","5")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Retrieves the list of open charges that were posted from February 1, <span class="mc-variable Dates.Year4 variable">2026</span> (which is 2/6/<span class="mc-variable Dates.Year4 variable">2026</span> – 5 days), to February 6, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.1">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This parameter is applied <span class="Stress">only</span> if a date value is provided for the ChargesAsOfDate parameter.</p>
+                                                            <p>If no value is specified for this parameter, the function returns open charges that were created on or before the ChargesAsOfDate.</p>
+                                                            <p>If a number greater than zero is specified, this function returns open charges that were created between the ChargesAsOfDate and the date resulting from <span class="Formula">ChargesAsOfDate – DaysToCheckPrior</span>.</p>
+                                                        </div>
+                                                        <h3 class="Optional"><a name="H3_3"></a>AsOfDate</h3>
+                                                        <p>Specify the date for which to retrieve the unpaid amount remaining on the charges posted on or before the specified date. If no date is specified, the current date is used. When the default is used, if a charge has been paid (even in the future), only the remaining balance displays as open.</p>
+                                                        <div class="info" style="margin-left: 0px;">
+                                                            <p class="label1">More Information</p>
+                                                            <p>For example, if you create a charge on 1/1/<span class="mc-variable Dates.Year4 variable">2026</span> and pay it off on 1/31/<span class="mc-variable Dates.Year4 variable">2026</span>, this charge shows as open if the AsOfDate is less than 1/31/<span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                            <p>If no AsOfDate is specified, the system considers there to be no evaluation date, meaning that payments with a date in the future are still considered.</p>
+                                                        </div>
+                                                        <p class="Example">[OpenChargesList("","","","0","2/12/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Evaluates the unpaid amount remaining on all charge types as of February 12, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().OpenChargesList()]</p>
+                                                        <p>Displays a list in default format for each open charge created as of today linked to the tenant.</p>
+                                                        <p>The output displays as shown below:</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20Openchargeslist%20-%20SG%20-%2011-18-20.png" alt="" />
+                                                        </p>
+                                                        <p class="Example">[Tenant().Lease(1).OpenChargesList("","RC,LC")]</p>
+                                                        <p>Displays a list in default format for each open Rent Charge (RC) and Late Charge (LC)&#160;as of today linked to the tenant's first additional lease.</p>
+                                                        <p class="Example">[Owner().OpenChargesList("2/1/<span class="mc-variable Dates.Year4 variable">2026</span>","","","31")]</p>
+                                                        <p>Displays a list in default format for each open charge created from January 1, <span class="mc-variable Dates.Year4 variable">2026</span>, (which is 2/1/<span class="mc-variable Dates.Year4 variable">2026</span> − 31 days) to February 1, <span class="mc-variable Dates.Year4 variable">2026</span>, linked to the owner's account.</p>
+                                                        <p class="Example">[Tenant().OpenChargesList("", "", "\t$_Date\t$_ChargeType\t$_Amount\t$_AmountPaid\t$_AmountLeft\t$_Comment\n")]</p>
+                                                        <p>Displays a new line with a customized list of the date, charge type, amount, amount paid, amount left, and comment for each open charge as of today linked to the tenant.</p>
+                                                        <p>The output displays as shown below:</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20Open%20Charges%20List%202%20-%20SG%20-%2011-18-20.png" alt="" />
+                                                        </p>
+                                                        <p class="Example">[Prospect.OpenChargesList("1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","RC")]</p>
+                                                        <p>Displays a list in default format for each open charge created on or before January 1, <span class="mc-variable Dates.Year4 variable">2026</span> with the charge type <span class="Input">RC</span> for the associated prospect account.</p>
+                                                    
+</main>
+</body>
+</html>

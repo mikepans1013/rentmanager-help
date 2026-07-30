@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Status Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Unit-Status.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Unit-Status.htm</a></p>
+
+                                                        <h1 id="UnitStatusFunctionScript" data-magellan-target="UnitStatusFunctionScript"><a name="aanchor610"></a>
+                                                            <a name="kanchor1021"></a><a name="H1"></a>Unit Status Function (Script)</h1>
+                                                        <p>This function displays the unit status for the specified unit as of a specified date.</p>
+                                                        <p>Possible returns of this script are the same as the <span class="Report">Unit Availability Listing</span> report and are as follows:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Result</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Occupied No Pre-Lease</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Occupied units with no  <span class="Field">Move Out</span> date entered on the selected lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Occupied Pre-Lease</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Occupied units that have both a current tenant with a <span class="Field">Move Out</span> date entered on Leases and a new tenant with a future <span class="Field">Move In</span> date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Occupied With Notice</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Occupied units that either have a current tenant with a future <span class="Field">Notice</span> date or a future <span class="Field">Move Out</span> date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Available</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Units that are vacant, not leased with a future date, and either do not have a unit status or have a unit status with <span class="Field">Show As Available</span> checked.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Will Be Available</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Vacant units with a unit status that has <span class="Field">Show as Available</span>&#160;<span class="Stress">unchecked</span> and a future unit status <span class="Field">End Date</span> entered on <span class="Window">View Unit Status</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Pre-Lease Vacant</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Currently vacant units with a tenant that has a future <span class="Field">Move In</span> date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Pre-Lease Not Ready</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Vacant units with a unit status that has <span class="Field">Show As Vacant</span> checked and that have a tenant with a future <span class="Field">Move In</span> date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>The class that utilizes this function and the location from where the scripting information is pulled in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().UnitStatus()]</p>
+                                                                        <p>Displays information found on the unit's <span class="Section">Occupancy</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[UnitStatus(<span class="Optional">"AsOfDate"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>AsOfDate</h3>
+                                                        <p colspan="2">Specify the date for which to retrieve the unit status.</p>
+                                                        <p colspan="2">If no date is specified, today's date is used by default.</p>
+                                                        <p colspan="2" class="Example">[UnitStatus("12/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the unit status as of December 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().UnitStatus()]</p>
+                                                        <p>Displays the status of the unit of the first lease listed for the current tenant. </p>
+                                                        <p class="Example">[Tenant().Lease(1).Unit().UnitStatus()]</p>
+                                                        <p>Displays the status of the unit of the first additional lease listed for the current tenant. </p>
+                                                        <p class="Example">[Unit().UnitStatus("1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the status of the unit as of January 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                    
+</main>
+</body>
+</html>

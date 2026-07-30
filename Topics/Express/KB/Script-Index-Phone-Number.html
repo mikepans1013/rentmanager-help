@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phone Number Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Phone-Number.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Phone-Number.htm</a></p>
+
+                                                        <h1 id="PhoneNumberIndexing" data-magellan-target="PhoneNumberIndexing"><a name="aanchor272"></a>
+                                                            <a name="kanchor452"></a><a name="H1"></a>Phone Number Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>The PhoneNumber class is used as a child class in a script (e.g., <span class="Formula">[Tenant().Contact().PhoneNumber()<span class="Required">.Function</span>]</span>), and an index can be specified to uniquely identify the phone numbers that are associated with the preceding class. For example, tenant contacts may have multiple phone numbers associated with their account, and indexing can be used to identify each of those phone numbers.</p>
+                                                        <p>The phone number checked as <span class="Field">Default</span> has an index of 0. Following that default phone number, <span class="mc-variable Products.RM variable">Rent Manager</span> examines phone numbers with entries from top to bottom. Entering an additional phone number or marking another number as <span class="Field">Default</span> reorders the index.</p>
+                                                        <h2 id="PhoneNumberIndexRelationships" data-magellan-target="PhoneNumberIndexRelationships"><a name="H2_1"></a>Phone Number Index Relationships</h2>
+                                                        <p>The PhoneNumber class may use an index parameter when it is preceded by certain classes. Each class is described below.</p>
+                                                        <h3><a name="H3_1"></a>Contact.PhoneNumber Indexing</h3>
+                                                        <p>Phone numbers are associated with each contact on an account. Tenant, prospect, and vendor phone numbers are listed on the <span class="Window">View Contacts</span> pop-up of the account. Owner phone numbers are listed on the <span class="Window">Phone Numbers</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Phone%20Number%20Indexing%20-%20Contact%20-%20RMX%20-%20NC%205-2-23.png" alt="" />
+                                                        </p>
+                                                        <p class="Example">[Tenant().Contact().PhoneNumber(2).FullNumber]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">(513)555-6125</span>, the second phone number not marked as <span class="Field">Default</span> from the top.</p>
+                                                        <h3><a name="H3_2"></a>Property.PhoneNumber Indexing</h3>
+                                                        <p>Property phone numbers are listed on the details page in the <span class="Window">Phone Numbers</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Phone%20Number%20Indexing%20-%20Property%20-%20RMX%20-%20NC%205-4-23.png" alt="" />
+                                                        </p>
+                                                        <p class="Example">[Property().PhoneNumber(0).FullNumber]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">(513)555-6524</span>, the default phone number of the property.</p>
+                                                    
+</main>
+</body>
+</html>

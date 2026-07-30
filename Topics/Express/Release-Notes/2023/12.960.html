@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12.960 Release Notes</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Release-Notes/2023/12.960.htm">https://rmxhelp.rentmanager.com/Topics/Express/Release-Notes/2023/12.960.htm</a></p>
+
+                                                <h1 class="RNs">12.960 Release Notes</h1>
+                                                <p class="RN-date">The release begins rolling out on May 17, 2023.</p>
+                                                <h2 class="New">New Features</h2>
+                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Release-Notes/New.css');" class="TableStyle-New" cellspacing="0">
+                                                    <col class="TableStyle-New-Column-Column2" data-mc-pattern="4" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-New-Body-Body1">
+                                                            <td class="TableStyle-New-BodyD-Column2-Body1">
+                                                                <p>The <span class="mc-variable Products.TA variable">Task Automation</span> tool now offers a way to automate the delivery of statements to tenants. With this automation, you can easily send tenant statements via email or <span class="mc-variable Products.VPO2 variable">Virtual Post Office (VPO)</span>. In addition, you can make statements available via <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span> by adding the statement to <span class="Section">History/Notes</span> and selecting a history category that is available to tenants in TWA (set in <a href="../../Other/System-Web-Preferences/TWA-History-Notes.html">System Web Preferences</a>).</p>
+                                                                <p>As part of these improvements, the following updates were made:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>To enable this tool, the <a href="../../Other/System-Preferences/Task-Automation.html" class="MCXref xref">Task Automation (System Preferences)</a> include a new <span class="Field">Tenant Statements</span> field.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Task Automation</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>To set the default statement method, the <a href="../../Other/System-Preferences/Report-Options-General.html" class="MCXref xref">General Report Options (System Preferences)</a> includes a <span class="Section">Tenant Statement</span> section.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Report Options <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>You can override the default statement method for a property on the <span class="Window">Property Details</span> page <span class="Section">Other Information</span> tile <span class="Field">Statement Method</span> field.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> select a property <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Other Information tile</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>You can set the tenant’s preferred delivery method on the <span class="Window">Tenant Details</span> page <span class="Section">Miscellaneous</span> tile <span class="Field">Statement Method</span> field.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> select a tenant <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Miscellaneous tile</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>The <span class="Field">Statement Method</span> report option was added to the <a href="../../Other/Reports/Tenant-Statement-8.5x11.html" class="MCXref xref">Tenant Statement 8.5x11 (Report)</a> and all custom form tenant statements now include a <span class="Field">Statement Method</span> report option so you can easily generate the tenant statement and filter by the delivery method.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>The <span class="Window">Tenant Statement Automation</span> page was added, where you can add automation schedules.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Task Automation <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenant Statements</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-New-Body-Body2">
+                                                            <td class="TableStyle-New-BodyD-Column2-Body2">
+                                                                <p>If you use the <span class="mc-variable Products.MU variable">Metered Utilities</span> tool, you can now import and export meter readings into or from <span class="mc-variable Products.RMX variable">Rent Manager Express</span>, as well as manage the file formats used for those import/export files using the following new pages:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>The <span class="Window">File Format</span> page, which allows you to set the formatting for import or export meter reading files.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> File Formats</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>The <span class="Window">MU Import From File</span> page, which allows you to import multiple meter readings.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import From File</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>The <span class="Window">MU Export To File</span> page, which allows you to export your selected meter reading data.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_14x14.png" class="inline-image" style="width: 14;height: 14;" alt="Menu" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Export To File</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-New-Body-Body1">
+                                                            <td class="TableStyle-New-BodyD-Column2-Body1">
+                                                                <p>To make it easier to manage Associations in <span class="mc-variable Products.RMX variable">Rent Manager Express</span>, you can now configure and share specific financial reports with your board members, committee members, or all homeowners within the association through <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>. These reports can be generated on a recurring or one-time basis. Once a report is published, it displays live data based on the parameters you’ve specified in Rent Manager.</p>
+                                                                <p>As part of these improvements, the following updates were made:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>The <span class="Window">Tenant Web Access Page Setup (System Web Preferences)</span> <span class="Section">Reports</span> section was updated with a <span class="Field">Show Reports</span> field.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Web Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Page Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Reports</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>An <span class="Window">Association - Published TWA Reports</span> page was added, which allows you to add, delete, or view a list of pre-selected system reports from <span class="mc-variable Products.RM variable">Rent Manager</span> and publish them for specific audiences to view in TWA.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> select an association property <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> click View More <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_8x8.png" class="inline-image" style="width: 8;height: 8;" alt="" /> on the action bar <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Published TWA Reports</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>An <span class="Window">Association - Scheduled TWA Reports</span> page was added, which allows you to add, edit, preview, or delete TWA report schedules for your users in TWA.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> select an association property <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> click View More <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_8x8.png" class="inline-image" style="width: 8;height: 8;" alt="" /> on the action bar <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> TWA Report Schedules</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>An <span class="Window">Add Report Schedule</span> page was added, which allows you to set up recurring TWA report schedules.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> select an association property <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> click View More <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_8x8.png" class="inline-image" style="width: 8;height: 8;" alt="" /> on the action bar <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Published TWA Reports <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Add Report</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-New-Body-Body2">
+                                                            <td class="TableStyle-New-BodyD-Column2-Body2">
+                                                                <p>The Import Owner Contracts tool was added, which allows you to import new owner contracts into your <span class="mc-variable Products.RM variable">Rent Manager</span> database.</p>
+                                                                <p>Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import Owner Contracts</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-New-Body-Body1">
+                                                            <td class="TableStyle-New-BodyA-Column2-Body1">
+                                                                <p>The Import Depreciation Setup tool was added, which allows you to import asset depreciation schedules to asset records in your <span class="mc-variable Products.RM variable">Rent Manager</span> database.</p>
+                                                                <p>Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import Depreciation Setup</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 class="Enhancements">Enhancements</h2>
+                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Release-Notes/Express-Enhancements.css');" class="TableStyle-Express-Enhancements" cellspacing="0">
+                                                    <col class="TableStyle-Express-Enhancements-Column-Column2" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-Express-Enhancements-Body-Body1">
+                                                            <td class="TableStyle-Express-Enhancements-BodyD-Column2-Body1">
+                                                                <p>To make <span class="mc-variable Products.RMX variable">Rent Manager Express</span> more intuitive and user-friendly, changes were made to several registers. These changes include making information easier to read on the screen and vastly improving navigation. Buttons were added or repositioned to simplify performing popular actions, and icons were added next to phone numbers and emails so you can perform these actions directly from the register. Additionally, changes were made to how data displays in these registers, improving organization, spacing, and legibility.</p>
+                                                                <p>In addition, the following detail pages were updated with a simplified scoreboard which includes buttons for popular actions:</p>
+                                                                <table style="width: 100%;">
+                                                                    <col style="width: 50%;" />
+                                                                    <col style="width: 50%;" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <p>Tenants</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <p>Prospects</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <p>Units</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <p>Properties</p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </td>
+                                                                            <td>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <p>Owners</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <p>Assets</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <p>Loans</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <p>Vendors</p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>With the changes to scoreboards, summary cards were removed which reduces scrolling on these pages.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Express-Enhancements-Body-Body2">
+                                                            <td class="TableStyle-Express-Enhancements-BodyD-Column2-Body2">
+                                                                <p>The <a href="../../KB/LeaseTrack-Insurance.html" class="MCXref xref">LeaseTrack Insurance</a> integration was updated, allowing you to enable a master policy and corresponding charge amount on a property-by-property basis, as well as the ability to exclude specific unit types from tracking renter’s insurance.</p>
+                                                                <p>Additionally, to support commercial properties that also have residential units, commercial properties are now allowed to be included in the renter's insurance tracking and enforcement. Previously they were excluded by default. Be sure to use the <span class="Field">Unit Type</span> exclusion option so only residential units are included.</p>
+                                                                <p>As part of these improvements, the following updates were made:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>The Renters Insurance (System Preferences) were updated to improve consistency and usability.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>The <span class="Section">Renters Insurance Breakdown</span> dashboard tile and the <a href="../../Other/Reports/Insurance-Breakdown.html" class="MCXref xref">Insurance Breakdown (Report)</a> were updated to improve organization, spacing, and legibility.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Express-Enhancements-Body-Body1">
+                                                            <td class="TableStyle-Express-Enhancements-BodyD-Column2-Body1">
+                                                                <p>To help you manage the contacts on your tenant and prospect accounts, you can now make contacts inactive. By default, all contacts are active.</p>
+                                                                <p>To support this functionality, the following changes were made:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>The tenant and prospect <span class="Window">View Contacts</span> pages were updated with <span class="Field">Active</span> and <span class="Field">Show Inactive</span> checkboxes in Form view and Grid view.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Tenants can now be filtered by their inactive contacts using the basic filter.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>An Active function was added to the <a href="../../Other/Scripts/Class-Contact.html" class="MCXref xref">Contact Class (Script)</a>, which allows you to determine whether the contact has <span class="Field">Active</span> checked on the <span class="Window">View Contact</span> page. The function displays <span class="Input">True</span> if the contact is active. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>An IncludeInactive parameter was added to the tenant <a href="../../Other/Scripts/Function-Contact-Count.html" class="MCXref xref">Contact Count Function (Script)</a> and <a href="../../Other/Scripts/Function-Contact-List.html" class="MCXref xref">Contact List Function (Script)</a>, which allows you to specify whether to include a tenant’s inactive contacts. By default, the function displays only the active contacts.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>The <a href="../../Other/Scripts/Function-Current-Occupancy-Count.html" class="MCXref xref">Current Occupancy Count Function (Script)</a> and <a href="../../Other/Scripts/Function-Current-Occupancy-List.html" class="MCXref xref">Current Occupancy List Function (Script)</a> were updated and now default to include only active contacts in the list.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>The <span class="Report">Tenant Profile</span>, <span class="Report">Prospect Profile</span>, <span class="Report">Birthday / Age Listing</span>, <span class="Report">Occupancy Listing</span>, <span class="Report">Tenant Contact Labels</span>, and <span class="Report">Prospect Contact Labels</span> reports were updated and now default to include only active contacts in the results.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Express-Enhancements-Body-Body2">
+                                                            <td class="TableStyle-Express-Enhancements-BodyD-Column2-Body2">
+                                                                <p>The <a href="../../Other/System-Preferences/ePay-CashPay.html" class="MCXref xref">CashPay (System Preferences)</a> were updated with an <span class="Section">Amount Due</span> section, which allows you to select <span class="Field">Total Balance</span> due or <span class="Field">Current Balance</span> due for your tenant's CashPay payments. Additionally, several of the options on this page were renamed to improve clarity.</p>
+                                                                <p>Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_13x13.png" class="inline-image" style="width: 13;height: 13;" alt="Menu" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Integrations.Product-ePay variable">ePay</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> CashPay</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Express-Enhancements-Body-Body1">
+                                                            <td class="TableStyle-Express-Enhancements-BodyD-Column2-Body1">
+                                                                <p>To have greater control over which of your properties have access to <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>, a <span class="Field">Disable TWA for Selected Properties</span> field was added to <a href="../../Other/System-Web-Preferences/TWA-General.html" class="MCXref xref">Tenant Web Access General (System Web Preferences)</a>.</p>
+                                                                <p>Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_12x12.png" class="inline-image" style="width: 12;height: 12;" alt="Menu" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Web Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.TWA variable">Tenant Web Access</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Express-Enhancements-Body-Body2">
+                                                            <td class="TableStyle-Express-Enhancements-BodyD-Column2-Body2">
+                                                                <p>To add a violation when in rmAppSuite map view, the following updates were made:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><span class="Window">Violation (System Preferences)</span> were added, which allows you to <span class="Field">Show all units in map view</span> and <span class="Field">Customize pin colors by violation stage</span>.<br />Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_12x12.png" class="inline-image" style="width: 12;height: 12;" alt="Menu" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> rmAppSuite <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Violations</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>When <span class="Field">Show all units in map view</span> is enabled in system preferences, a new option is available in the <span class="Section">Address</span> section of a unit’s details page and displays the GPS coordinates of the unit, provided a geocode has been captured and stored for the unit in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <p>The add violation from map view tool will be available in rmAppSuite next month (App Version 1.35).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Express-Enhancements-Body-Body1">
+                                                            <td class="TableStyle-Express-Enhancements-BodyA-Column2-Body1">
+                                                                <p>To restrict a user in rmAppSuite from viewing a contact’s history/notes even if they can <span class="Column">View</span> the contact, a <span class="Field">View History/Notes in Contacts</span> privilege was added to the rmAppSuite privilege group.</p>
+                                                                <p>Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_12x12.png" class="inline-image" style="width: 12;height: 12;" alt="Menu" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Users <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Privileges tab</p>
+                                                                <p>Path: <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu1_12x12.png" class="inline-image" style="width: 12;height: 12;" alt="Menu" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Admin <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> User Roles <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Privileges tab</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>
+                                                    <img src="../../../../assets/Resources/Images/Assets/Footer.png" alt="" />
+                                                </p>
+                                            
+</main>
+</body>
+</html>

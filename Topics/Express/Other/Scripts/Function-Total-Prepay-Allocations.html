@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Total Prepay Allocations Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Total-Prepay-Allocations.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Total-Prepay-Allocations.htm</a></p>
+
+                                                        <h1 id="TotalPrepayAllocationsFunctionScript" data-magellan-target="TotalPrepayAllocationsFunctionScript"><a name="aanchor63"></a>
+                                                            <a name="kanchor106"></a><a name="H1"></a>Total Prepay Allocations Function (Script)</h1>
+                                                        <p>This function displays the total value of prepayments and/or credits that are unapplied to charge(s) as of a specified date.</p>
+                                                        <p>You can examine credits and prepayments toward specific charge types, limit the types of credits (including prepayments) that are examined; specify the date that examines whether the credit or prepayment is still unapplied to a charge; the date range of the prepayments and/or credits to examine; which types of credits, if any, should be excluded; and whether or not unallocated prepays and credits should be included in the total.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The <a href="Function-Total-Allocations.html">Total Allocations Function</a> can be used to evaluate credits and payments that have been applied to a charge. Only prepayments are evaluated in this script. </p>
+                                                        </div>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Financial-Property.html">Financial Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.TotalPrepayAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">Transactions</span> page for the financial property listed for the selected asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Lease.html">Lease</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().TotalPrepayAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">Transactions</span> page for the specified lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().TotalPrepayAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">Transactions</span> page for the specified property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().TotalPrepayAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">Transactions</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().TotalPrepayAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">Transactions</span> tile for the specified unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[TotalPrepayAllocations(<span class="Optional">"ChargeTypes"</span>, <span class="Optional">"CreditTypes"</span>, <span class="Optional">"AsOfDate"</span>, <span class="Optional">"CreditFromDate"</span>, <span class="Optional">"CreditToDate"</span>, <span class="Optional">"ExcludeCreditTypes"</span>, <span class="Optional">"ExcludeUnallocatedPrepays"</span>)]</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>By default, unallocated prepayments and credits of the types specified by the CreditTypes parameter are added to your results.</p>
+                                                            <p>If you do not want unallocated prepayments and credits returned, set the ExcludeUnallocatedPrepays parameter to <span class="Input">True</span>.</p>
+                                                        </div>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ChargeTypes</h3>
+                                                        <p colspan="2">Specify the preallocations to these charge type(s) you wish to examine. If no charge types are specified, all charge types display. Each charge type should be separated by a comma.</p>
+                                                        <p colspan="2" class="Example">[TotalPrepayAllocations("RC")]</p>
+                                                        <p colspan="2">Displays the total value of all prepayments that have been allocated to the rent charge (RC) charge type as of today's date.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_2"></a>CreditTypes</h3>
+                                                        <p colspan="2">Specify the preallocations to these credit type(s) you wish to examine. If no credit types are specified, all credit types display. Each credit type should be separated by a comma.</p>
+                                                        <p colspan="2" class="Example">[TotalPrepayAllocations("RC","PR")]</p>
+                                                        <p colspan="2">Displays the total value of all prepayments that have been preallocated to the rent charge (RC) charge type as of today's date and unallocated prepayments of the payment received (PR) credit type.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_3"></a>AsOfDate</h3>
+                                                        <p colspan="2">Specify the date for which to determine if the credit or payment is considered unapplied. If no date is specified, today's date is used by default.</p>
+                                                        <p colspan="2" class="Example">[TotalPrepayAllocations("","MCRD","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the value of move in special credits (MCRD) preallocated to any charge type as well as unallocated MCRD credits as of January 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional">CreditFromDate</h3>
+                                                        <p>
+                                                            Specify the start date for returning preallocated credit amounts. If no date is specified, the function uses the <span class="Field">G/L Start Date</span> as entered in the <span class="Section">General Ledger Settings</span> section of system preferences.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.2">[TotalPrepayAllocations("RC","PR","10/31/<span class="mc-variable Dates.Year4 variable">2026</span>","10/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.2">Displays the value of prepayments made on or after October 1 that are unapplied as of October 31 and are preallocated to the rent charge (RC) charge type.</p>
+                                                        <h3 class="Optional">CreditToDate</h3>
+                                                        <p>
+                                                            Specify the end date for returning preallocated credit amounts. If no date is specified, the function defaults to the end of time.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.2">[TotalPrepayAllocations("RC","PR","10/31/<span class="mc-variable Dates.Year4 variable">2026</span>","10/1/<span class="mc-variable Dates.Year4 variable">2026</span>","10/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.2">Displays the value of preallocated payments of the payment received (PR) charge type made between October 1 and October 31 that are unapplied as of October 31 and are preallocated to the rent charge (RC) charge type.</p>
+                                                        <h3 class="Optional">ExcludeCreditTypes</h3>
+                                                        <p>Specify whether to ignore certain credit types. If no parameter is specified, the function defaults to False.</p>
+                                                        <p><span class="Input">True</span> means to return all credit types except the type defined in the Credit Types parameter. <span class="Input">False</span> means examine only the credit type specified in the Credit Types parameter.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.3">[TotalPrepayAllocations("RC","PR","10/31/<span class="mc-variable Dates.Year4 variable">2026</span>","10/1/<span class="mc-variable Dates.Year4 variable">2026</span>","10/31/<span class="mc-variable Dates.Year4 variable">2026</span>","True")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.3">Displays the value of all preallocated credits, except for the payment received (PR) charge type, that were made between October 1 and October 31, that are unapplied as of October 31, and that are preallocated to the rent charge (RC) charge type.</p>
+                                                        <h3 colspan="2" class="Optional">ExcludeUnallocatedPrepays</h3>
+                                                        <p colspan="2">Specify whether to exclude prepayments or credits that are not allocated to any charge. By default, payments or charges that are not allocated to anything are included in the results. </p>
+                                                        <p colspan="2" class="Example">[TotalPrepayAllocations("","PR","10/31/<span class="mc-variable Dates.Year4 variable">2026</span>","10/1/<span class="mc-variable Dates.Year4 variable">2026</span>","10/31/<span class="mc-variable Dates.Year4 variable">2026</span>","","True")]</p>
+                                                        <p colspan="2">Displays the value of all prepayments made between October 1 and October 31 that are unapplied as of October 31.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().TotalPrepayAllocations()]</p>
+                                                        <p>Displays the value of all unapplied prepayments (of the payment-received type) for the current tenant, plus unallocated prepayments of all credit types.</p>
+                                                        <p class="Example">[Property().TotalPrepayAllocations()]</p>
+                                                        <p>Displays the value of all unapplied prepayments (of the payment-received type) for all tenants at the current property, plus unallocated prepayments of all credit types.</p>
+                                                        <p class="Example">[Tenant().Lease().TotalPrepayAllocations()]</p>
+                                                        <p>Displays the value of all unapplied prepayments (of the payment-received type) for the first lease listed for the current tenant, plus unallocated prepayments of all credit types.</p>
+                                                        <p class="Example">[Tenant().Lease().TotalPrepayAllocations("RC", "PR", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the value of preallocated payments (of the payment-received type) that were received beginning January 1, <span class="mc-variable Dates.Year4 variable">2026</span> through January 31, <span class="mc-variable Dates.Year4 variable">2026</span> that are preallocated to the rent charge (RC) charge type, as well as unallocated prepayments of the payment received type, but that have not been allocated as of January 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[Tenant().Lease().TotalPrepayAllocations("", "PR", "", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "", "True")]</p>
+                                                        <p>Displays the value of all preallocated payments (of the payment-received type) that were received beginning January 1, <span class="mc-variable Dates.Year4 variable">2026</span> through January 31, <span class="mc-variable Dates.Year4 variable">2026</span> that are preallocated to any charge and unapplied as of today's date for the first lease listed for the current tenant. No unallocated prepayments are included.</p>
+                                                    
+</main>
+</body>
+</html>

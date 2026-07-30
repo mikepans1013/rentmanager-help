@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aged Payables (Report)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Reports/Aged-Payables.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Reports/Aged-Payables.htm</a></p>
+
+                                                        <h1 id="AgedPayablesReport" data-magellan-target="AgedPayablesReport"><a name="aanchor5"></a>
+                                                            <a name="kanchor12"></a><a name="H1"></a>Aged Payables (Report)</h1>
+                                                        <p>The <span class="Report">Aged Payables</span> report can be used to review your property's monthly expenses that are upcoming and outstanding as well as displaying credits. This report is also helpful because it generates vendor and bill information for unpaid bills that are categorized as overdue or due within 1-30 days, 31-60 days, and 61 or more days.</p>
+                                                        <p>This report shows activity performed only through the <span class="Window">Bills</span> page; activity performed outside of the <span class="Window">Bills</span> page (e.g., writing a check to a vendor) does not impact this report's unpaid bill amounts.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The results  can include any transaction information even if it started prior to the general ledger (GL) start date since this report does not consider the GL start date. </p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Run reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>Additionally, on the <span class="Tab">Reports</span> tab, you must have access to <span class="Field">Aged Payables</span>.</p>
+                                                            <p>For more information, refer to <a href="../Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To view the <span class="Report">Aged Payables</span> report, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../../assets/Resources/Images/ICONS/Express-App/RM/reports_19x19.png" class="inline" alt="Reports" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Payables <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Aged Payables</span>.<br />The <span class="Window">Reports: Aged Payables</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Adjust the report options as desired. Each option is described below.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Generate the report in your desired file format(s).</p>
+                                                            </li>
+                                                        </ol>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>Reports may look different depending on whether or not the <span class="Field">Use modernized report style</span> system preference is enabled. For more information, refer to <a href="../System-Preferences/Report-Options-General.html" class="MCXref xref">General Report Options (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Aged-Payables-Report-Generated-2024.png" class="lightbox" alt="The Aged Payables report displays an example report for all properties." />
+                                                        </p>
+                                                        <h2 id="ReportOptions" data-magellan-target="ReportOptions"><a name="H2_1"></a>Report Options</h2>
+                                                        <p>The report options described below determine what data displays in the report.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Aged-Payables-Report-Options-GH-6-21-23.png" class="lightbox" alt="Aged Payables report options in Rent Manager Express." />
+                                                        </p>
+                                                        <h3>Properties to Include</h3>
+                                                        <p>Select each property or a property <span class="Field">Group</span> to be included in the report. </p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>
+                                                                This field populates only with the properties to which you have access. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../../KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                        </div>
+                                                        <p colspan="2">Optionally, check <span class="Field">Show Inactive Properties</span> to include properties that are no longer active.</p>
+                                                        <h3 colspan="2"><a name="H3_1"></a>Bank Balance Summary</h3>
+                                                        <p colspan="2">Optionally, display additional bank information in the  report.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Show bank balance summary</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Report">Bank Balance Summary</span> subreport, which shows balances for all bank accounts in <span class="mc-variable Products.RM variable">Rent Manager</span>, displays at the end of the report.</p>
+                                                                        <p colspan="2">If checked, the <span class="Field">Selected property balances only</span> option becomes available.
+</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Selected property balances only</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Includes only the properties in the <span class="Section">Properties to Include</span> section in the <span class="Column">Balance</span> column totals.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3>As of Date</h3>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> examines relevant report information as of (up through) the date entered to determine the data that displays in the report.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.3">The option selected in <span class="Section">Date Restriction On</span> determines which date field on the bill(s) <span class="mc-variable Products.RM variable">Rent Manager</span> examines.</p>
+                                                        <h3>Date Restriction On</h3>
+                                                        <p>Select one of the following options to determine how bills are displayed in the report results:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bill Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Bills with a <span class="Field">Bill Date</span> that falls on or before the selected <span class="Section">As of Date</span> display.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Bills with a <span class="Field">Post Date</span> that falls on or before the selected <span class="Section">As of Date</span> display.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Due Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Bills with a <span class="Field">Due Date</span> that falls on or before the selected <span class="Section">As of Date</span> display.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_2"></a>Detail or Summary</h3>
+                                                        <p>This option determines how much information is displayed in the report.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Detail</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A line item for each open payable organized by vendor account displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Summary</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Only the open amount total for each vendor account displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3 colspan="2">Batch</h3>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Check <span class="Field">Run properties separately</span> to generate a separate report for each property. Otherwise, all selected properties are combined into a single report.</p>
+                                                        <p colspan="2">Optionally, also check <span class="Field">Exclude empty reports</span> to remove reports with no data from the report results.</p>
+                                                        <h2 id="ReportResults" data-magellan-target="ReportResults"><a name="H2_2"></a>Report Results</h2>
+                                                        <p>The report results are described below including, if applicable, section, column, and subreport descriptions.</p>
+                                                        <h3><a name="H3_4"></a>Report Header</h3>
+                                                        <p>The report header displays the report name and key information selected in the report options, such as date information and which properties were examined in the report.</p>
+                                                        <h3><a name="H3_5"></a>Column Descriptions</h3>
+                                                        <p>The columns that display in the report are described below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Chart Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p colspan="2">The vendors and GL accounts associated with unpaid bills as of the report date.</p>
+                                                                        <p colspan="2">If you selected the <span class="Field">Show Credits</span> or <span class="Field">Summary</span> report options, see the information below for how it affects this column.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Show Credits</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The GL account for each unallocated vendor credit displays in addition to the GL account associated with each unpaid bill.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Summary</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>Only the vendors associated with the unpaid bills display.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p colspan="2">The account number for each vendor with at least one unpaid bill as it is entered on the vendor's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Past Due</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Unpaid bills with a bill, post, or due date on or before the <span class="Field">As of Date</span> and are past due <span class="Column">(P)</span> by <span class="Column">1-30</span> days, <span class="Column">31-60</span> days, or <span class="Column">61+</span> days. If any portion of the bill was previously paid, the unpaid amount includes those allocations. Each age group displays sums by vendor.</p>
+                                                                        <p colspan="2">If you selected the <span class="Field">Show Credits</span> or <span class="Field">Summary</span> report options, see the information below for how it affects this column.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Show Credits</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The amounts of vendor credits display in the age group column for which the credit date falls compared to the report as of date. For example, if the vendor credit has a credit date of yesterday and the report is generated as of today, the vendor credit displays in the <span class="Column">30-1 (P)</span> column.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Summary</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>The total amounts of unpaid bills for the associated vendor by age group.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">Current</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p colspan="2">Unpaid bills that have a bill, post, or due date on or before the <span class="Field">As of Date</span> and are due in <span class="Column">0-30</span> days, <span class="Column">31-60</span> days, or <span class="Column">61+</span> days. If any portion of the bill was previously paid, the unpaid amount includes those allocations. Each age group displays sums by vendor. If no bills are due in an age group, a <span class="Input">0.00</span> subtotal displays.</p>
+                                                                        <p colspan="2">If you selected the <span class="Field">Show Credits</span> or <span class="Field">Summary</span> report options, see the information below for how it affects this column.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Show Credits</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The amounts of vendor credits display in the age group column for which the credit date falls compared to the report as of date. For example, if the vendor credit has a credit date of yesterday and the report is generated as of today, the vendor credit displays in the <span class="Column">30-1 (P)</span> column.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Summary</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>The total amounts of unpaid bills for the associated vendor by age group.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">Total</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p colspan="2">The total amount of all unpaid bills by vendor minus any unallocated vendor credits. Sub-totals are given at the bottom of each <span class="Column">Past Due</span> and <span class="Column">Due In</span> age group and the sum of all subtotals is given in the <span class="Column">Total</span> column.</p>
+                                                                        <p colspan="2">If you selected the <span class="Field">Show Credits</span> or <span class="Field">Summary</span> report options, see the information below for how it affects this column.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Show Credits</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Unallocated credits for the associated vendor display as negative amounts and are subtracted from the grand total of bills for the vendor.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Summary</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>The total of each vendor's unpaid bills and unallocated vendor credits from all age groups.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_6"></a>Open Vendor Credits Subreport</h3>
+                                                        <p>This subreport displays unallocated vendor credits as of the report date for the vendor(s) of the selected properties.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Aged-Payables-Report-Open-Vendor-Credits-2024.png" alt="The Open Vendor Credits subreport displays vendors with credits on their account for the specifed date." class="lightbox" />
+                                                        </p>
+                                                        <p>The following columns display:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Vendor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The vendor associated with each vendor credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Reference</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If applicable , the message entered on the vendor credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The credit date for each vendor credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The property associated with each vendor credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If applicable, the unit associated with each vendor credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Chart Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The GL account associated with each vendor credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amount (first)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The value of the full vendor credit amount before any allocations.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Open Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The current unallocated amount of each vendor credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To display this subreport, vendor credits must be added using the vendor credits tool. For more information, refer to <a href="../../Action/Vendor-Credit-Add.html" class="MCXref xref">Add a Vendor Credit</a>.</p>
+                                                        </div>
+                                                        <h3><a name="H3_7"></a>Bill Prepayments Subreport</h3>
+                                                        <p>This subreport displays the transaction details of checks and credits that pay a bill with a future <span class="Field">Post Date</span> or <span class="Field">Due Date</span>. The subreport displays if each of the following occurs in a generated report:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>In the <span class="Section">Date Restriction On</span> section of the report options, either <span class="Field">Post Date</span> or <span class="Field">Due Date</span> is selected.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>At least one bill in the report has a <span class="Field">Post Date</span> or <span class="Field">Due Date</span>, depending on which is selected in the <span class="Section">Date Restriction On</span> section, set in the future.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>A check or credit is applied to a bill before the <span class="Field">Post Date</span> or <span class="Field">Due Date</span> that is set in the future, depending on which is selected in the <span class="Section">Date Restriction On</span> section.</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>The following columns display:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Vendor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of each vendor that has a check or credit applied before an unpaid bill's <span class="Field">Bill Date</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Check #</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The check number for each check or the message entered in the <span class="Field">Reference</span> field for credits.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Invoice #</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If applicable the invoice number entered on the bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Payment Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the check was written or the credit was created.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bill&#160;Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date listed on each bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date each bill was posted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Due Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date payment is due for each bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Payment Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The amount for each prepayment applied to a bill.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_8"></a>Chart of Account Summary Subreport</h3>
+                                                        <p>This subreport displays the total amount of all unpaid bills by GL account.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Aged-Payables-Report-Chart-Account-Summary-Subreport-2024.png" alt="The Aged Payables report Chart of Account Summary report displays the total amount of unpaid bills for each chart of account." class="lightbox" />
+                                                        </p>
+                                                        <p>The following columns display:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Chart Account</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The GL account that has one or more associated unpaid bills.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p colspan="2">The total of all unpaid bills for each GL Account minus any allocated vendor credits.  The total of this subreport should match the <span class="Column">Total</span> column of the <span class="Report">Aged Payables</span> report.
+</p>
+                                                                        <p>If you selected the <span class="Field">Show Credits</span> report option, the <span class="Column">Amount</span> column includes any unallocated vendor credits lowering the total amount for unpaid bills.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_9"></a>Payable Summary by Property Subreport</h3>
+                                                        <p>This subreport displays the amount of all unpaid bills by the property each bill is allocated.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Aged-Payables-Report-Payable-Summary-by-Property-Subreport-2024.png" class="lightbox" alt="The Aged Payables report Payable Summary by Property subreport displays the total amount of bills owed per property." />
+                                                        </p>
+                                                        <p>The following columns display:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of each property with unpaid bill allocations.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The total of all unpaid bills for each property minus any allocated vendor credits. The total of this subreport should match the <span class="Column">Total</span> column of the report.</p>
+                                                                        <p>If you selected the <span class="Field">Show Credits</span> report option, the <span class="Column">Amount</span> column includes any unallocated vendor credits lowering the total amount for unpaid bills.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_10"></a>Bank Balance Summary Subreport</h3>
+                                                        <p>The default bank accounts balances for properties with an unpaid bill allocated to them as of the report date. The subreport displays only if the report option to <span class="Field">Show bank balance summary</span> is checked.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Aged-Payables-Report-Bank-Balance-Summary-Subreport-2024.png" class="lightbox" alt="The Aged Payables report Bank Balance Summary subreport displays the bank balance for each bank for the specified date." />
+                                                        </p>
+                                                        <p>The following columns display:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bank Account</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name and number of each default bank account for properties with an unpaid bill allocated to them.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Balance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The bank balance for each bank account as of the report date.</p>
+                                                                        <p>If <span class="Field">Selected property balances only</span> is checked in the report options, only properties selected in the <span class="Section">Properties to Include</span> section of the report options are included in the <span class="Column">Balance</span> column totals.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

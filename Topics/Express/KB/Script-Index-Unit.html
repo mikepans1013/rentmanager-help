@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Unit.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Unit.htm</a></p>
+
+                                                        <h1 id="UnitIndexing" data-magellan-target="UnitIndexing"><a name="aanchor151"></a>
+                                                            <a name="kanchor255"></a><a name="H1"></a>Unit Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>When the Unit class is used as a child class in a script (e.g., <span class="Formula">Tenant.Unit.<span class="Required">Function</span></span>), an index can be specified to uniquely identify units that are associated with the preceding class. For example, tenants can be associated with multiple units, and indexing can be used to identify each of those units.</p>
+                                                        <h2 id="UnitIndexRelationships" data-magellan-target="UnitIndexRelationships"><a name="H2_1"></a>Unit Index Relationships</h2>
+                                                        <p>The Unit class may use an index parameter when it is preceded by certain classes. Each class is described below.</p>
+                                                        <h3><a name="H3_1"></a>Property.Unit Indexing</h3>
+                                                        <p>Units associated with a property are indexed based upon when the unit was created. The first unit created for the property has an index of <span class="Input">0</span>, and the second unit has an index of <span class="Input">1</span>, and so on.</p>
+                                                        <p>You can view a unit's index for a property by viewing the order in which the units display on the <span class="Report">Unit ID Listing</span> report based on the numbers in the <span class="Column">Unit ID</span> column. This report can be obtained by downloading it from the <span class="Stress">Online Template Library</span>. For more information, refer to <a href="../CSH/Online-Template-Library.html" class="MCXref xref">Online Template Library (Page)</a>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Unit-Unit-ID-Listing-Report-2024.png" alt="The Unit ID Listing report displays with a list of units, their corresponding ID, and additional details." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Property.Unit(3).UnitID]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">245</span>, the <span class="Column">Unit ID</span> of the unit <span class="Stress">H-04</span>, the fourth oldest unit at the property.</p>
+                                                        <h3><a name="H3_2"></a>ServiceManager.Unit Indexing</h3>
+                                                        <p>Units associated with a service issue are indexed based on the order they are linked to the issue. The first unit linked on the issue has an index of <span class="Input">0</span>, and the second unit has an index of <span class="Input">1</span>, and so on.</p>
+                                                        <p>You can view a unit's index on an issue by viewing the order in which the units display on the <span class="Section">Issue Links</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Unit-Issue-Details-2024.png" alt="The Issue Links tile displays with links to multiple tenants, properties, and units." />
+                                                        </p>
+                                                        <p class="Example">[ServiceManager.Unit(1).Address.FullAddress]</p>
+                                                        <p> Using the information in the above image, this returns the full address of unit <span class="Stress">CC1127</span> at Clearcreek Condominiums, the second unit linked to the service issue.</p>
+                                                        <h3><a name="H3_3"></a>Tenant.Unit Indexing</h3>
+                                                        <p>Units associated with the tenant are indexed based upon the order in which the units appear on the <span class="Section">Leases</span> tile of the tenant details page. The topmost unit has an index of <span class="Input">0</span>, and the second unit has an index of <span class="Input">1</span>, and so on.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Units can be reordered on the <span class="Section">Leases</span> tile by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /> and using <img src="../../../assets/Resources/Images/ICONS/Non-Icons/Drag%20Reorder_25x19.png" alt="Drag to Reorder" class="inline" style="width: 25;height: 19;" /> to move units up and down the list. Reordering the list alters the output of existing scripts. New units are added to the bottom of the section.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Unit-Tenant-Leases-Tile-2024.png" alt="The Leases tile for the tenant displays with two unit leases." />
+                                                        </p>
+                                                        <p class="Example">[Tenant.Unit(1).Address.Street1]</p>
+                                                        <p> Using the information in the above image, this returns the first line of the street address of unit <span class="Stress">SW003</span>, the second-listed unit linked to the tenant.</p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up RUBS</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/MU-RUBS-Set-Up.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/MU-RUBS-Set-Up.htm</a></p>
+
+                                                        <h1 id="SetUpRUBS" data-magellan-target="SetUpRUBS"><a name="H1"></a>Set Up RUBS</h1>
+                                                        <p>Ratio utility billing systems (RUBS) is the method of splitting utility bills among the property's tenants. RUBS allows property managers to divide charges among tenants in <span class="mc-variable Products.RM variable">Rent Manager</span> based on factors such as occupancy, unit size, the number of bedrooms and bathrooms, and more, without the need for submeters.</p>
+                                                        <p>When enabled in <span class="mc-variable Products.RM variable">Rent Manager</span>, RUBS takes a property-wide utility or master meter reading and calculates and distributes the costs to the its tenants based on your customized configuration using templates. Once a RUBS template is assigned to a utility or master meter, RUBS charges can be easily posted in addition to existing monthly recurring charges.</p>
+                                                        <h2 id="Step1AddaRUBSTemplate" data-magellan-target="Step1AddaRUBSTemplate"><a name="H2_1"></a>Step 1: Add a RUBS Template</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">
+                                                                            <p>Utilities</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">
+                                                                            <p>Manage RUBS Templates</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">
+                                                                            <p>View, Add</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>In this step, design your RUBS template to customize how the master meter utility bill and additional fees should be allocated amongst the tenants at your property.</p>
+                                                        <p>To add a RUBS template, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> Service Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Utilities <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> RUBS Templates</span>.<br />The <span class="Window">RUBS Templates</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top left of the page, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Add Template</span>.<br />The <span class="Window">New RUBS Template</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Tab">Template Basics</span> tab, enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Template Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unique name of the RUBS template. The name usually provides context on how the template is set up (e.g., <span class="Input">Occupancy Square Footage</span>).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Tenant Contribution</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The percentage of the utility bill tenants are required to pay. The entered value must be greater than zero and less than or equal to 100. The default value is <span class="Input">100.00</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Tab">Fees &amp; Charges</span> tab, enter the following information:</p>
+                                                            </li>
+                                                            <table style="mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Standard-Head-Header1">
+                                                                        <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                        <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2" style="padding-left: 6px;padding-right: 6px;border-right-style: solid;border-right-width: 1px;border-right-color: #cedbe7;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #cedbe7;">
+                                                                            <p>Admin Fee</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>The administration fee charged to tenants in addition to their portion of the utility bill.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                                <tbody>
+                                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                            <p>Amount</p>
+                                                                                        </td>
+                                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                            <p>The amount charged to tenants in addition to their portion of the bill.</p>
+                                                                                            <p>If <span class="Field">Percent of tenant's total charge</span> is selected, the value must be a percentage greater than zero and less than or equal to 100.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                                        <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                            <p>Add a Separate Charge</p>
+                                                                                        </td>
+                                                                                        <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                            <p>If checked, the administration fee is added as a separate charge to the tenant, as opposed to being included in the RUBS calculation. Then, select the charge type to assign the administration fee from the drop-down list.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Exclude bill line items with these GL accounts from RUBS calculations</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding-left: 6px;padding-right: 6px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #cedbe7;">
+                                                                            <p>If checked, bill line items associated with the general ledger (GL) accounts selected from the drop-down list are excluded from the RUBS calculation of splitting utility bills among tenants.</p>
+                                                                            <div class="info">
+                                                                                <p class="label1">More Information</p>
+                                                                                <p>GL accounts selected to be excluded from RUBS calculations on a RUBS template <span class="Stress">cannot</span> be made inactive or deleted.</p>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                            <p>Prorate Charges for Move Ins that occur during the billing period</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                            <p>If checked, tenants with a <span class="Field">Move In</span> date during the billing period have their charge amount prorated based on the number of days the tenant lived in the unit during that period.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>In the <span class="Tab">Allocation</span> tab, determine how utility costs are distributed amongst the tenants in the property. As of the RUBS posting date, As of the RUBS posting date, units with an <span class="Field">Other Rentable Item</span> unit type or have the <span class="Field">INACT</span> unit status applied are excluded in the RUBS calculation.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>RUBS calculations for properties that have a <span class="Field">Manufactured Housing</span> property type are based on home-type assets as opposed to units. A home-type asset has <span class="Field">Asset of this type are homes</span> checked on its <span class="Window">Asset Type Details</span> pop-up.</p>
+                                                                </div>
+                                                                <p>Enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Divide utility costs evenly across all units</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If selected, the RUBS calculation divides utility costs evenly amongst all active units at the property as of the posting date.</p>
+                                                                                <p>For example, if the total utility bill amount is $200 and the property has 4 active units, then each tenant is charged $50.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Divide utility costs evenly across occupied units only</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If selected, the RUBS calculation divides utility costs evenly amongst all units that have an active lease at the property as of the posting date.</p>
+                                                                                <p>For example, if the total utility bill amount is $500 and the property has six total units, with four of them occupied, then each tenant is charged $125.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Choose allocation factors</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If selected, the following factors listed below can be activated and assigned an allocation weight, a percentage value greater than zero and less than or equal to 100, in the RUBS calculation. All allocation weights for the selected allocation factors must sum to 100.</p>
+                                                                                <p>The charge amount for each allocation factor in the RUBS calculation is the property's total master meter bill amount multiplied by the product of each selected allocation factor's percentage and weight.</p>
+                                                                                <p class="Formula">Allocation factor charge amount = Master meter bill * (Allocation weight * Allocation percentage)</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Bathrooms</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The allocation percentage for the RUBS calculation is the number of bathrooms in the unit divided by the total number of bathrooms at the property.</p>
+                                                                                                <p class="Formula">Allocation percentage = # of bathrooms in unit / total # of bathrooms in property</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Bedrooms</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The allocation percentage for the RUBS calculation is number of bedrooms in the unit divided by the total number of bedrooms at the property.</p>
+                                                                                                <p class="Formula">Allocation percentage = # of bedrooms in unit / total # of bedrooms in property</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Occupancy</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The allocation percentage for the RUBS calculation is the number of occupants in the unit divided the total number of occupants at the property. Then, select the contact types to be considered an occupant.</p>
+                                                                                                <p class="Formula">Allocation percentage = # of Occupants in unit / total # of Occupants in property</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Square Feet</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>If <span class="Field">All units</span> is selected, the allocation percentage for the RUBS calculation is the square footage of the unit divided by the total square footage of all active units of the property.</p>
+                                                                                                <p class="Formula">Allocation percentage = unit square footage / total square footage of active units at property</p>
+                                                                                                <p>If <span class="Field">Occupied units only</span> is selected, the allocation percentage for the RUBS calculation is the total square footage of the unit divided by the total square footage of occupied units at the property.</p>
+                                                                                                <p class="Formula">Allocation percentage = unit square footage / total square footage of occupied units at property</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>In the <span class="Tab">Review</span> tab, review all of the entered information and make any adjustments as necessary.</p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Click <span class="BigButtons">Add Template</span>.<br />The RUBS template is created.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2AddaRUBSUtility" data-magellan-target="Step2AddaRUBSUtility"><a name="H2_2"></a>Step 2: Add a RUBS Utility</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">
+                                                                            <p>Utilities</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">
+                                                                            <p>Metered utilities</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">
+                                                                            <p>Enabled</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">
+                                                                            <p>Utility information</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">
+                                                                            <p>View, Add</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>Once your RUBS templates are created, you can add a RUBS-enabled utility with a master meter in <span class="mc-variable Products.RM variable">Rent Manager</span>, and add a template to that master meter in this step.</p>
+                                                        <p>To add a RUBS utility, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Metered Utilities <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Utilities</span>.<br />The <span class="Window">Utilities</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>To add a new source utility with a master meter, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="BigButtons">Add Utility</span>.<br />The <span class="Window">Add Utility</span> wizard displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Utility Information</span> tile, enter information for the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type to charge tenants for the selected utility.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Properties</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The properties the utility is assigned to.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>
+                                                                                        This field populates only with the properties to which you have access. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Source Utility for Readings</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If a single meter is being used for two or more utilities, select the other utility. Otherwise, leave this field blank.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Utility Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The unique name of the utility as it displays in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Master Meters</span> tile, click <span class="BigButtons">Add Master Meters</span> and enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Default Expense Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default vendor expense account to use on the master meter bills created for properties assigned to this utility.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Default RUBS Template</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default RUBS template to use on the master meter bills to automatically calculate each tenant's portion of the property's utility bill.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Default Vendor</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The default vendor account to assign to the master meter bills created for properties assigned to this utility.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Toggle the <span class="Column">RUBS Enabled</span> column to activate RUBS at the selected <span class="Column">Property</span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p style="font-weight: normal;">In the <span class="Field">RUBS Template</span> column, select the RUBS template to be assigned to the master meter from the drop-down list. Select <span class="Field">&lt;Use Default&gt;</span> to assign the template selected in the <span class="Field">Default RUBS Template</span>.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Enter the remaining information for the master meter as necessary. To add a new master meter, select <span class="ActionItems"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> Add Master Meter</span>. For more information, refer to <a href="../Action/MU-Master-Meter-Add.html" class="MCXref xref">Add Master Meters</a>.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Enter the remaining information for the utility as necessary. For more information, refer to <a href="../Action/MU-Utility-Add.html" class="MCXref xref">Add a Utility</a></p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>To create the utility and exit the pop-up, click <span class="BigButtons">Save &amp; Close</span>. To create the utility and leave the pop-up open to create more utilities, click <span class="BigButtons">Save &amp; New</span>.<br />The RUBS-enabled utility and master meter is added to <span class="mc-variable Products.RM variable">Rent Manager</span>.<br /></p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_4"></a>Next Steps</h2>
+                                                        <p>Now that you have set up RUBS templates and utilities, you are ready to add and post RUBS charges to the tenants at a property that is assigned to a RUBS-enabled master meter.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Action</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Add a RUBS bill</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>After you have completed the setup of RUBS for your master meter, you can start adding master meter bills in <span class="mc-variable Products.RM variable">Rent Manager</span> from the <span class="Window">Add Bill</span> page. For more information, refer to <a href="../Other/Bills-Add-Master-Meter.html" class="MCXref xref">Add a Master Meter Bill</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Post RUBS</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>After the RUBS master meter bills are created, they can be posted from the following pages in <span class="mc-variable Products.RM variable">Rent Manager</span>:</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Bill details</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>To post RUBS utility charges to each tenant at a property from its master meter bill, on the <span class="Window">Bill</span> details page, click <span class="BigButtons">Post RUBS</span>&#160;on the top right. This option displays only if the <span class="Field">Master Meter Bill</span> option is toggled. For more information, refer to <a href="../Other/MU-RUBS-Post-From-Bill.html" class="MCXref xref">Post a RUBS Master Meter Bill</a>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Post Recurring Charges</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>To post RUBS utility charges to each tenant in addition to existing recurring charges, such as rent, on the <span class="Window">Post Recurring Charges</span> page, check <span class="Field">Post RUBS</span>. For more information, refer to <a href="../Other/Post-Recurring-Charges.html" class="MCXref xref">Post Recurring Charges</a>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Post RUBS</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>To post RUBS utility charges for one or more properties at once, on the <span class="Window">Post RUBS</span> page, select the RUBS-enabled master meter bills assigned to the properties to which charges are posted. Then, click <span class="BigButtons">Post Charges</span>.&#160;For more information, refer to <a href="../Other/MU-RUBS-Post.html" class="MCXref xref">Post RUBS</a>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

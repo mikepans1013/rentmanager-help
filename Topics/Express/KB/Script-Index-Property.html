@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Property.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Property.htm</a></p>
+
+                                                        <h1 id="PropertyIndexing" data-magellan-target="PropertyIndexing"><a name="aanchor334"></a>
+                                                            <a name="kanchor556"></a><a name="H1"></a>Property Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>When the Property class is used as a child class in a script (e.g., <span class="Formula">[OwnerProspect().Property().<span class="Required">Function</span>]</span>), an index can be specified to uniquely identify properties that are associated with the preceding class. For example, owner prospects can be associated with multiple properties, and indexing can be used to identify each of those properties.</p>
+                                                        <h2 id="PropertyIndexRelationships" data-magellan-target="PropertyIndexRelationships"><a name="H2_1"></a>Property Index Relationships</h2>
+                                                        <p>The Property class may use an index parameter when it is preceded by certain classes. A few example classes are described below.</p>
+                                                        <h3><a name="H3_1"></a>OwnerProspect.Property Indexing</h3>
+                                                        <p>Properties associated with an owner prospect are indexed based on alphabetical order. The property linked to the owner prospect that is alphabetically first has an index of 0, the next property alphabetically has an index of 1, and so on.</p>
+                                                        <p>You can view a property's index on an owner prospect by viewing the <span class="Section">Properties</span> section.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Property-Owner-Prospect-2024.png" class="lightbox" alt="The Properties tile for the owner prospect displays with three properties." />
+                                                        </p>
+                                                        <p class="Example">[OwnerProspect().Property(2).UnitCount()]</p>
+                                                        <p> Using the information in the above image, this script returns the <span class="Field">Unit Count</span> for the property <span class="Stress">Shoreside Apartments</span>, the third property alphabetically.</p>
+                                                        <h3><a name="H3_2"></a>ServiceManager.Property Indexing</h3>
+                                                        <p>Properties associated with a service issue are indexed based on the order they are linked to the issue. The first property linked on the issue has an index of 0, the second property has an index of 1, and so on.</p>
+                                                        <p>You can view a property's index on an issue by viewing the order in which the properties display on the <span class="Section">Issue Links</span> tile.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Property-Issue-Links-2024.png" alt="The Issue Links tile displays with links to multiple properties and units." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[ServiceManager().Property(1).Comment()]</p>
+                                                        <p>Using the information in the above image, this script returns the <span class="Field">Comment</span> on the <span class="Section">Other Information</span> tile of the <span class="Stress">Ocean Breeze ABNB</span> property, the second property linked to the service issue.</p>
+                                                    
+</main>
+</body>
+</html>

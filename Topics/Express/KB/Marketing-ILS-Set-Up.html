@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up Marketing for ILS Sites</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Marketing-ILS-Set-Up.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Marketing-ILS-Set-Up.htm</a></p>
+
+                                                        <h1 id="SetUpMarketingforILSSites" data-magellan-target="SetUpMarketingforILSSites"><a name="kanchor2002"></a><a name="H1"></a>Set Up Marketing for ILS Sites</h1>
+                                                        <p>The internet listing service (ILS) marketing integration allows you to create online listings for the available properties and units in <span class="mc-variable Products.RM variable">Rent Manager</span> and push those listings to ILS providers such as the Zillow Group (Zillow, Trulia, and HotPads) and the Apartments.com Network. You can enter all marketing information for your properties and units, determine which to include in the ILS website feeds, as well as override system preferences on a property-by-property basis.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p><span class="mc-variable Products.RM variable">Rent Manager</span>'s ILS postings are generated using the MITS file format, which is the industry standard for syndicating available units and properties. As many ILS sites no longer accept marketing data for individual units, it is strongly recommended that you utilize property-level marketing and convert any existing unit-level marketing data.</p>
+                                                            <p>If you have not converted your unit configuration to a property configuration, the <span class="Window">Marketing Setup</span> pop-up displays a message prompting you to use the <span class="Window">Property Marketing Configuration Wizard</span>. Once you convert to a property configuration, it cannot be reversed. For more information, refer to <a href="../CSH/Marketing-Configuration-Wizard.html" class="MCXref xref">Marketing Configuration Wizard (Pop-Up)</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1EstablishPropertyMarketingAdvancedSettings" data-magellan-target="Step1EstablishPropertyMarketingAdvancedSettings"><a name="H2_1"></a>Step 1: Establish Property Marketing Advanced Settings</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="Snippet Conditions.3">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Properties</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>These settings allow you to more specifically describe your property, as well as override system preferences on a property-by-property basis. Advanced settings determine the type of property you are marketing, which determines the other fields available on the property's marketing setup.</p>
+                                                        <p>To edit the property's advanced marketing settings, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Formula"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span> and select a property.<br />The property's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the action bar to the right, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Marketing Setup</span>.<br />The <span class="Window">Marketing Setup</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>At the bottom of the pop-up, click <span class="BigButtons">Advanced</span>.<br />The <span class="Window">Advanced Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Feed Information</span> section, enter or select the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Feed Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Indicate if the property contains <span class="Field">Multi Family</span> or <span class="Field">Single Family</span> listings to categorize the ILS sites to which this property is marketed. This field automatically populates based on the property type set on the property's details page. For more information, refer to <a href="Marketing-ILS-Feed-Types.html" class="MCXref xref">ILS Marketing Feed Types</a>.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>This field is <span class="Stress">required</span> by ILS sites. If left blank, your listing is rejected.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property category that best describes the type of property you are marketing. If you do not specify a category, this field automatically populates with the property type set on the property's details page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rental Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The category of tenants that would rent at this property. For example, if you select <span class="Field">Student</span>, providers know to post to the listing as a student housing option on student housing sites. The rental category determines if ILS providers post the property on multiple sites.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Marketing Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name used on ILS sites to promote your property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Listing URL</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The URL of the website on which the property is listed (for example, your property management company's website). This URL displays on ILS sites to provide more exposure to your website.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Virtual Tour URL</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The URL on which a virtual tour is available so that prospects can see the property from an ILS site.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Latitude</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The latitude coordinates of your property to specify the exact location of your listing and make GPS directions easier to obtain.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Longitude</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The longitude coordinates of your property to specify the exact location of your listing and make GPS directions easier to obtain.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Rental Classification</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A more specific category for the type of rental that describes the type of housing. For example, you can distinguish different kinds of student housing by selecting <span class="Field">Apartment</span>, <span class="Field">Campus</span>, <span class="Field">House for Rent</span>, and so on. This information is used by some ILS providers to match properties with specific rental categories as closely as possible. If you do not specify a classification, one is automatically assigned based on the property type set on the property's details page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Agent Information</span> section, enter the name and contact information for your primary leasing agent for the property so prospective tenants can contact them with inquiries. You can manually enter a value or select existing <span class="mc-variable Products.RM variable">Rent Manager</span> fields to import that information from a user account.</p>
+                                                                <div class="warning">
+                                                                    <p class="label1">Warning</p>
+                                                                    <p>To include agent information, the <span class="Field">First Name</span>, <span class="Field">Last Name</span>, and <span class="Field">Email Address</span> fields are <span class="Stress">required</span> by ILS sites. If left blank, agent information does not display on the ILS site.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>On the <span class="Section">Provider Settings</span> tile, check or uncheck the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Override System Preferences</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If unchecked, this property follows the online listing settings established in system preferences. For more information, refer to <a href="../Other/System-Preferences/Online-Listings-General.html" class="MCXref xref">Online Listings General (System Preferences)</a>.</p>
+                                                                                <p>If checked, this property ignores the system preference setting and you are prompted to submit your <span class="Field">Name</span>, <span class="Field">Email</span>, and <span class="Field">Phone Number</span>. This information is supplied to different ILS providers in case they need to contact you about your paid listings.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>Setting up these provider settings will be covered later in this topic and will establish the system-wide ILS provider settings. The system preference settings apply to <span class="Stress">all</span> properties and also enable online listings for all properties in your database. If this property has its own unique ILS provider settings, check this option. Otherwise, leave this option unchecked.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Enable Online Listings</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>This option is available only if <span class="Field">Override System Preferences</span> is checked.</p>
+                                                                                <p>Check any ILS providers that you use to market this property specifically. Only providers that are checked can access and post your listings at this property to their sites. Future listings posted from this property follow these settings instead of system preferences.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The pop-up closes and the advanced marketing settings are updated for this property.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2EstablishPropertyMarketingSetups" data-magellan-target="Step2EstablishPropertyMarketingSetups"><a name="H2_2"></a>Step 2: Establish Property Marketing Setups</h2>
+                                                        <p>After the <span class="Window">Advanced Settings</span> pop-up closes, you can enter the property's detailed marketing information. Each of your properties likely has different marketing information, so next, you can customize the marketing settings and data for each property you wish to advertise online.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>If you do not see fields for marketing information on the <span class="Window">Marketing Setup</span> pop-up, this means the property is still set up for unit-level marketing. To convert to property-level marketing, click <span class="BigButtons">Property Marketing Configuration Wizard</span> on the pop-up. For more information, refer to <a href="../CSH/Marketing-Configuration-Wizard.html" class="MCXref xref">Marketing Configuration Wizard (Pop-Up)</a>.</p>
+                                                            <p>If you continue to use unit-level marketing, refer to <a href="../CSH/Marketing-Setup-Unit.html" class="MCXref xref">Unit Marketing Setup (Pop-Up)</a>.</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If the property has a <span class="Field">Property Type</span> of <span class="Field">RV/Campground</span>, the <span class="Window">Marketing Setup</span> pop-up includes fields specific to short-term rentals. For more information, refer to <a href="../CSH/Marketing-Setup-STR-Property.html" class="MCXref xref">STR Property Marketing Setup (Pop-Up)</a>.</p>
+                                                        </div>
+                                                        <p>To enter ILS marketing information for each property, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the <span class="Window">Marketing Setup</span> pop-up in the <span class="Field">Include/Exclude</span> field, determine whether or not to include this property in your ILS feeds. Each option is described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use System Preference</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Your selected system preferences determines whether or not this property is included in your ILS website marketing feeds. </p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>All properties default to the <span class="Field">Use System Preference</span> option, which follows your settings in your system preferences for online listings. These system preferences will be enabled at the end of this topic after establishing all property marketing setups. For more information, refer to <a href="../Other/System-Preferences/Online-Listings-Availability-Filters.html" class="MCXref xref">Online Listings Availability Filters (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Always Include</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Include this property in your ILS website marketing feeds, regardless of system preference settings.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Always Exclude</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Do <span class="Stress">not</span> include this property in your ILS website marketing feeds. If selected, you do not need to enter marketing information at this time. If you choose to add marketing information for this property later or do not plan to market this property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Section">Contact Information</span> tile, enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Company Info</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The information that displays as the company name in your ILS feeds. To change what displays in this field, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/create_19x19.png" alt="Edit" class="inline" style="width: 19;height: 19;" />. Each option is described below.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Custom Entry</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>In the <span class="Field">Company Name</span> field, enter the name to display on the online listing. In the <span class="Stress">Company Address</span> section, enter the <span class="Field">Street</span>, <span class="Field">City</span>, <span class="Field">State</span>, and <span class="Field">Postal Code</span> to use for the company on your ILS feed.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Property Management Company Info</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Use the name and default address of the property designated as the management company in system preferences. For more information, refer to <a href="../Other/System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Property Info</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Use the name and default address of the property as entered on the property's details page.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Contact Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The email address through which prospects can contact you for more information.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Contact Phone</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The phone number prospects can use to contact the company that is managing the property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Company Website</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The website address (URL) of the company managing the property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>On the <span class="Section">Marketing Description</span> tile, write a custom description to be included in your online listing. Alternatively, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/cog_19x19.png" class="inline" alt="Edit" style="width: 19;height: 19;" /> to choose a user defined field that contains the description you want to use for the listing. Descriptions have a 1,000-character limit.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>On the <span class="Section">Listing Details</span> tile, enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Exclude Unit-specific information</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, excludes unit details from the listing feed and use only information provided from the property and floor plans.</p>
+                                                                                <p>If unchecked, information about the individual units at the property (such as number of bedrooms) is also included in the listing feed and fields for unit-type user defined fields and unit image types in applicable fields are made available</p>
+                                                                                <p>Unchecking this box does <span class="Stress">not</span> enable unit-level marketing.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Price</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The rent amount for the property. Manually enter a value or select a field to pull the information from.</p>
+                                                                                <p>If the <span class="Field">Feed Type</span> is set to <span class="Field">Multi Family</span>, the price field cannot be changed and is automatically pulled from the unit floor plans (covered later in these steps).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Deposit Fee(s)</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total dollar amount for deposits for the property. Manually enter a value or select a field to pull the information from.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Lease Terms</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The lease terms that are available at this property.  Alternatively, choose <span class="Field">Contact For Details</span> if lease terms at the selected property are not determined or must be discussed.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Images</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property-type images from the property's details page to display in your ILS feed. Click <span class="Field">Preview</span> to view the images that will display on the listing based on your selections.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>For images to be included in the ILS feed, images <span class="Stress">must</span> have a valid <span class="Field">Image Type</span> and <span class="Field">Caption</span>. You can enter this information when you add new images or by adding them to existing images on the property's details page. For more information, refer to <a href="Image-Types-Add-Assign.html" class="MCXref xref">Add and Assign an Image Type</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Images</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit-type images from the associated units' details pages to display in your ILS feed.</p>
+                                                                                <p>This field displays only if the <span class="Field">Exclude Unit-specific information</span> option is unchecked or the <span class="Field">Feed Type</span> is set to <span class="Field">Single Family</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Availability Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The date on which the property is listed as available. If this field is blank, the property lists as available now by default.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>On the <span class="Section">Features</span> tile, enter or select the amenities and features the property offers. Each field is described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Amenities</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The amenities currently assigned to the property in <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, refer to <a href="../Other/Amenities-Assign.html" class="MCXref xref">Assign Amenities</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Laundry</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The laundry options available at the property. This list is predefined based on ILS provider options.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Pets</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The types of pets allowed at the property. This list is predefined based on ILS provider options.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Included Utilities</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The utilities that are included in the rent payments for the property. This list is predefined based on ILS provider options.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>If the <span class="Field">Feed Type</span> is set to <span class="Field">Multi Family</span>, on the <span class="Section">Floor Plans</span> tile, review the prepopulated floor plans. If any changes are needed, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" alt="More Options" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Details</span> for that floor plan.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>By default, a floor plan for each unit type at the property displays. To create additional floor plans for the property, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" />&#160;<span class="ActionItems">Add Item</span>.&#160;For more information, refer to <a href="Marketing-Floorplans.html" class="MCXref xref">Create a Floor Plan</a>.</p>
+                                                                </div>
+                                                                <p>The following columns display:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the floor plan as it displays on the ILS feeds.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit type(s) at the property assigned to the floor plan. Only unit types that are enabled for this property can be selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Count</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The number of units at the property of the selected unit type(s) in the floor plan.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Beds</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The number of bedrooms in the units assigned to the floor plan.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Baths</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The number of bathrooms in the units assigned to the floor plan.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Price</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The price or price range of the units assigned to the floor plan.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Images</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The number of images added on the floor plan's details on the <span class="Section">Images</span> tile.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The property's marketing information is updated.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Repeat for every property in <span class="mc-variable Products.RM variable">Rent Manager</span>. Properties that you do <span class="Stress">not</span> plan to market do not need to have all fields filled out and only need the <span class="Field">Include/Exclude</span> field set to <span class="Field">Always Exclude</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3CreateAvailabilityFilters" data-magellan-target="Step3CreateAvailabilityFilters"><a name="H2_3"></a>Step 3: Create Availability Filters</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>Availability filters establish the criteria that <span class="mc-variable Products.RM variable">Rent Manager</span> uses to determine if a unit should be considered available to rent on your ILS feed(s). These system preferences allow you to configure these filters.</p>
+                                                        <p>To set these system preferences, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" />&#160;Administration</span>, then go to <span class="Navigation">Preferences  <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences  <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Online Listings  <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Availability Filters</span>.<br />The <span class="Window">System Preferences: Online Listings - Availability Filters</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Unit Filter Criteria</span> section, enter or select the settings that determine when individual units are considered available and therefore included in ILS feeds.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Vacancy and Unit Status</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Set which date a unit becomes vacant, how many days after that date it is considered available for rent, when they display in the search for ILS feeds, and whether or not units with future leases are excluded. For more information, refer to <a href="../Other/System-Preferences/Online-Listings-Availability-Filters.html" class="MCXref xref">Online Listings Availability Filters (System Preferences)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>User Defined Field</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Unit availability is based on a unit-type user defined field (UDF) that is set to a type of <span class="Field">Yes/No</span> for the value. Any units with a value of <span class="Field">Yes</span> for the selected UDF are included in the ILS feed.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Follow unit availability profile</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If you use availability profiles for a custom website or <span class="mc-variable Products.WTS variable">Web Template Suite</span>, you can opt to use the filter criteria established in one of those profiles. Units that meet the availability criteria established in the selected unit availability profile in system web preferences are included in the ILS feed. For more information, refer to <a href="../Other/System-Web-Preferences/Availability-Profile.html" class="MCXref xref">Availability Profile (System Web Preferences)</a>.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>Unit availability profile templates can be used only if they meet the following conditions:</p>
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                            <p>The <span class="Field">Show any available within date range</span> option is <span class="Stress">not</span> checked.</p>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <p>The <span class="Field">Follow online listings feed</span> option is <span class="Stress">not</span> selected.</p>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Property Filter Criteria</span> section, enter or select the settings that determine which properties to include in the ILS feed.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Show all properties</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>All properties are included in the ILS feed.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>User Defined Field</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Unit availability is based on a property-type user defined field (UDF) that is set to a type of <span class="Field">Yes/No</span> for the value. All units at a property with a value of <span class="Field">Yes</span> for the selected UDF are included in the ILS feed.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Follow unit filter criteria</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Properties that have at least one unit that satisfies the <span class="Section">Unit Filter Criteria</span> chosen in the previous section are included in the ILS feed.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The availability filter settings are updated.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If property-level marketing is enabled, <span class="mc-variable Products.RM variable">Rent Manager</span> first looks at the <span class="Section">Property Filter Criteria</span> to determine what properties are available. On the property <span class="Window">Marketing Setup</span> pop-up, if the option <span class="Field">Exclude Unit-specific information</span> is unchecked, <span class="mc-variable Products.RM variable">Rent Manager</span> looks at the <span class="Section">Unit Filter Criteria</span> to determine available units. If unit-level marketing is enabled, <span class="mc-variable Products.RM variable">Rent Manager</span> considers only the <span class="Section">Unit Filter Criteria</span>.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4EnableILSMarketing" data-magellan-target="Step4EnableILSMarketing"><a name="H2_4"></a>Step 4: Enable ILS Marketing</h2>
+                                                        <p>After all of your properties have their marketing setups established, you can enable <span class="mc-variable Products.RM variable">Rent Manager</span> for ILS marketing in your system preferences to publish your ILS feeds. To enable ILS Marketing, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences  <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Online Listings <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General</span>.<br />The <span class="Window">System Preferences: Online Listings - General</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Provider Settings</span> section, check the <span class="Field">Enable Online Listings</span> field.<br /></p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">Provider Settings</span> field, select each provider to publish your ILS feeds to.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The <span class="Window">Online Listing Disclaimer</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Read through the disclaimer and enter the name, email address, and phone number of your company's primary contact for property marketing. Then, check <span class="Field">I agree to move forward with enabling Online Listings</span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">OK</span>.<br />ILS marketing is now enabled in&#160;<span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_5"></a>Next Steps</h2>
+                                                        <p>You can use the <span class="Window">Listings</span> page to review the posting status for any marketing data that was pushed to your ILS providers. The data sync between <span class="mc-variable Products.RM variable">Rent Manager</span> and ILS sites occurs on a set schedule and therefore, the <span class="Window">Listings</span> page may not reflect your most recent changes. To view the status of your online listings, go to <span class="Formula"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Online Listings&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Listings</span>. You can click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/update_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Update Listings Feed</span> at any time to refresh the data. For more information, refer to <a href="../CSH/Marketing-Online-Listings.html" class="MCXref xref">Marketing Online Listings (Page)</a>.</p>
+                                                    
+</main>
+</body>
+</html>

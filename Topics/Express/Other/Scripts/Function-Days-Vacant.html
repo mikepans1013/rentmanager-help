@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Days Vacant Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Days-Vacant.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Days-Vacant.htm</a></p>
+
+                                                        <h1 id="DaysVacantFunctionScript" data-magellan-target="DaysVacantFunctionScript"><a name="aanchor123"></a>
+                                                            <a name="kanchor209"></a><a name="H1"></a>Days Vacant Function (Script)</h1>
+                                                        <p>This function displays the number of days the unit has been vacant as of a given date or for a given date range. Vacancy is calculated by move in and move out dates, as well as if unit statuses have been defined for the unit.</p>
+                                                        <p>A unit status type is an exception to the standard status of <span class="Field">Occupied</span> or <span class="Field">Vacant</span> that is assigned to a unit for a specified date range. Definitions for unit status types include an underlying value of <span class="Field">Yes</span> or <span class="Field">No</span> for <span class="Field">Show As Vacant</span> that may be referenced for the days vacant calculation.</p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().DaysVacant()]</p>
+                                                                        <p>Displays the calculated total number of days the unit was vacant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[DaysVacant(<span class="Optional">"AsOfDate"</span>,<span class="Optional">"VacancyStatus"</span>,<span class="Optional">"FromDate"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>AsOfDate</h3>
+                                                        <p colspan="2">Specify the date for which to retrieve the days vacant.</p>
+                                                        <p colspan="2">If no date is specified, today's date is used by default.</p>
+                                                        <p colspan="2" class="Example">[DaysVacant("3/19/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the calculated days vacant as of March 19, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 colspan="2" class="Optional">VacancyStatus</h3>
+                                                        <p colspan="2">Enter <span class="Input">True</span> or <span class="Input">False</span> to determine if an assigned unit status that does not have <span class="Field">Show As Vacant</span> checked is used in the calculation of days vacant. </p>
+                                                        <p colspan="2">If <span class="Input">True</span>, the system calculates the number of days the unit was vacant between the AsOfDate parameter and the tenant's last move out date or specified FromDate parameter. The number of days in that date range the unit was assigned a unit status without the <span class="Field">Show As Vacant</span> option are subtracted. </p>
+                                                        <p colspan="2">If <span class="Input">False</span>, <span class="mc-variable Products.RM variable">Rent Manager</span> calculates the number of days the unit was vacant between the AsOfDate and the tenant's last move out date or specified FromDate parameter. </p>
+                                                        <p colspan="2" class="Example">[DaysVacant("","True")]</p>
+                                                        <p colspan="2">For a unit assigned a unit status type with <span class="Field">Show As Vacant</span> unchecked, this would subtract from the calculated days vacant the number of days the unit was assigned that status during this function's specified date range.</p>
+                                                        <h3 class="Optional"><a name="H3_2"></a>FromDate</h3>
+                                                        <p colspan="2">Enter a date as the starting date for the days vacant calculation.</p>
+                                                        <p colspan="2" class="Example">[DaysVacant("","","12/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the calculated days vacant starting from December 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().DaysVacant()]</p>
+                                                        <p>Displays the number of days the unit of the first lease listed for the current tenant was vacant between today's date and the tenant's last move out date.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().DaysVacant("12/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the number of days the unit of the first lease listed for the current tenant was vacant between December 31, <span class="mc-variable Dates.Year4 variable">2026</span> and the tenant's last move out date.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().DaysVacant("","True")]</p>
+                                                        <p>Displays the number of days the unit of the first lease listed for the current tenant was vacant between today's date and the tenant's last move out date. The displayed result includes the subtraction of the number of days the unit was assigned a unit status with a unit status type having <span class="Field">Show As Vacant</span> unchecked during that date range.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().DaysVacant("12/31/<span class="mc-variable Dates.Year4 variable">2026</span>","","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the number of days the unit of the first lease listed for the current tenant was vacant between January 1, <span class="mc-variable Dates.Year4 variable">2026</span> and December 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                    
+</main>
+</body>
+</html>

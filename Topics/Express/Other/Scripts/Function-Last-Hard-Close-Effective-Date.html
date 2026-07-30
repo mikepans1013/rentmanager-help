@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Last Hard Close Effective Date Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Last-Hard-Close-Effective-Date.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Last-Hard-Close-Effective-Date.htm</a></p>
+
+                                                        <h1 id="LastHardCloseEffectiveDateFunctionScript" data-magellan-target="LastHardCloseEffectiveDateFunctionScript"><a name="aanchor1011"></a>
+                                                            <a name="kanchor1674"></a><a name="H1"></a>Last Hard Close Effective Date Function (Script)</h1>
+                                                        <p>This function displays the accounting close effective date for the previous period.</p>
+                                                        <p>The class that utilizes this function and the location from where the scripting information is pulled in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Property().LastHardCloseEffectiveDate()]</p>
+                                                                        <p>Displays information found on a property's details page at <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" class="inline" alt="View More" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Accounting Close</span>. If <span class="Field">Use System</span> is selected on the pop-up, the information is found in system preferences.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Example">[LastHardCloseEffectiveDate(<span class="Optional">"Type"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Type</h3>
+                                                        <p>For a property with the <span class="Field">Split Accounting close for AR, AP, Journals/Adjustments</span> option selected, this parameter allows you to select which accounting close date to display.</p>
+                                                        <p>Available values for this parameter include:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Value</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>AP</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[NextHardCloseEffectiveDate("AP")]</p>
+                                                                        <p>Displays the accounting close date set for your accounts payable ledger, including checks, bills, and credit card transactions.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>AR</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[NextHardCloseEffectiveDate("AR")]</p>
+                                                                        <p>Displays the accounting close date set for your accounts receivable ledger, including tenant charges and payments.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Journals</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[NextHardCloseEffectiveDate("Journals")]</p>
+                                                                        <p>Displays the accounting close date set for journal entries.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>If the property has separately configured accounting close dates and no Type parameter value is defined, the latest of the three dates display.</p>
+                                                        <p class="Example">[LastHardCloseEffectiveDate("AR")]</p>
+                                                        <p>Displays the accounting effective close date for the previous period that is associated with accounts receivable transactions.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Property().LastHardCloseEffectiveDate()]</p>
+                                                        <p>Displays the accounting effective close date for the previous period for the current property.</p>
+                                                        <p class="Example">[Property().LastHardCloseEffectiveDate("AP")]</p>
+                                                        <p>Displays the accounting effective close date set for accounts payable transactions for the previous period for the current property. The property must have <span class="Field">Split Accounting Close for AR, AP, Journals/Adjustments</span> selected.</p>
+                                                    
+</main>
+</body>
+</html>

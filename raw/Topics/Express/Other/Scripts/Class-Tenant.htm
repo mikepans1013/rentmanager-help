@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-output-analytics-server="https://lcs202202281700482.api.madcapcentral.com/" data-mc-output-analytics-topic-id="1xBCeJNnhjAPyXZp0OqabpHvWdZB8I86vlAtwWUMkh0C31xc1Ixy+Uv90OuQetJV0vTDrc4d3gZiR668T5rz0vOVFQJGLtIZdFzmhuvO4Lc3PTUOEkl404LIMwfwGIKWxJoj7O9zoGF5fl5GcvT/WocgzY1qnQFB502A5Qo24DHm9QzBGWCjpA==" data-mc-has-content-body="True" data-mc-conditions="Status.Published,Content.Important" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="Dependencies" content="Reference Topics - mark which ones in file tags" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Tenant Class (Script)</title>
+        <label class="mode-switcher" id="theme-toggle">
+            <input type="checkbox" name="checkbox" /><span class="slider round"></span>
+        </label>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/RMX-Branding.css" rel="stylesheet" type="text/css" />
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="../../../../Resources/Stylesheets/lity.css" rel="stylesheet" />
+        <link href="../../../../Resources/Stylesheets/MainStylesDark.css" rel="stylesheet" type="text/css" data-theme="dark-main" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Tablestyles/Script.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Tablestyles/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script>/* <![CDATA[ */
+			(function () {
+			var theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.dataset.theme = theme;
+
+			// Prevent white flash on first paint when in dark mode
+			if (theme === 'dark') {
+			var s = document.createElement('style');
+			s.id = 'early-dark-paint';
+			s.textContent =
+			"html,body{background:#0e1319;color:#e8e8e8}" +           // minimal dark bg + readable text
+			"html[data-theme='dark']{color-scheme:dark}";              // hints UA (form controls, scrollbars)
+			document.head.appendChild(s);
+			}
+			})();
+		/* ]]> */</script>
+        <script src="../../../../Resources/Scripts/custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/bootstrap.js">
+        </script>
+        <script src="../../../../Resources/Scripts/lightbox.js">
+        </script>
+        <script src="../../../../Resources/Scripts/lity.js">
+        </script>
+        <script src="../../../../Resources/Scripts/addLityAttribute.js">
+        </script>
+        <script src="../../../../Resources/Scripts/Dark-Mode.js">
+        </script>
+        <script src="../../../../Resources/Scripts/glanceCobrowse.js">
+        </script>
+        <script src="../../../../Resources/Scripts/microContentTopics.js">
+        </script>
+        <script src="../../../../Resources/Scripts/mobileResponseTableDisplay.js">
+        </script>
+        <script type="text/javascript" src="../../../../Skins/Default/Scripts/Topic-ToolBar.js">
+        </script>
+    </head><a name="top"></a>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="2" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="topic-background">
+                                        <div class="search">
+                                            <form class="search" action="#">
+                                                <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                    <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search..." />
+                                                    <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                        </div>
+                                                        <div class="search-filter-content" id="sf-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-submit-wrapper" dir="ltr">
+                                                        <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="row collapse">
+                                            <div class="topic-layout">
+                                                <div>
+                                                    <div data-sticky-container="" id="G5wPJ0hwI0SEaMSOsdgwNw">
+                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="G5wPJ0hwI0SEaMSOsdgwNw:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
+                                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container-on="small" class="nocontent menu _Skins_Topic_Headers_Menu mc-component">
+                                                                <li class="tree-node"><a href="#TenantClassScript">Tenant Class (Script)</a>
+                                                                    <ul>
+                                                                        <li class="tree-node"><a href="#ClassParameters">Class Parameters</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#RecommendedClasses">Recommended Classes</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#AvailableFunctions">Available Functions</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_ToolBar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                        <div class="button-group-container-left">
+                                                            <button class="button needs-pie remove-highlight-button" title="Remove Search Highlights">
+                                                                <div>
+                                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                                        <div class="button-icon"> </div>
+                                                                    </div><span class="button-text">Remove Highlights</span>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div role="main" id="mc-main-content">
+                                                        <h1 id="TenantClassScript" data-magellan-target="TenantClassScript"><a name="aanchor925"></a>
+                                                            <MadCap:concept term="Ref-Script Classes" /><a name="kanchor1522"></a><a name="H1"></a>Tenant Class (Script)</h1>
+                                                        <p>This class examines tenant account information and can either be followed by a tenant-level scripting function or another class associated with the tenant. This class pulls information from tenant accounts.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Balance()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the balance of the tenant as listed on the tenant's <span class="Section">Financials</span> card.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Status()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the lease status of the associated tenant as listed on the tenant's scoreboard.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Contact().PhoneNumber().FullNumber]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the full number and extension of the tenant's default phone number.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Reservation().ArrivalDate]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Arrival</span> date listed on the tenant's reservation located on the tenant's <span class="Window">Reservation Details</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameters" data-magellan-target="ClassParameters"><a name="H2_1"></a>Class Parameters</h2>
+                                                        <p>This class can be passed a single, optional parameter: an ID or an index.</p>
+                                                        <h3><a name="H3_1"></a>ID</h3>
+                                                        <p>The ID is a system-generated, unique number assigned by <span class="mc-variable Products.RM variable">Rent Manager</span>. The ID is assigned in the order of the account <span class="Field">Create Date</span>. You can find this ID by looking at the <span class="Field">Account Number</span> in the tenant's scoreboard. If no ID is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to using the ID of the account selected before running the script.</p>
+                                                        <p>To learn the ID number of a selected account, the script <span class="Formula">[Tenant().AccountNumber]</span> can be used. Entering a distinct ID in this class parameter allows you to specify the account that the following function examines.</p>
+                                                        <div class="info" style="margin-left: 0px;">
+                                                            <p class="label1">More Information</p>
+                                                            <p>A tenant ID may be specified only when Tenant is the parent class in a script as shown in the example below.</p>
+                                                        </div>
+                                                        <p class="Example">[Tenant(101).FirstName]</p>
+                                                        <p>Displays the first name of the tenant with an account number of 101.</p>
+                                                        <h3><a name="H3_2"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific tenant by using a number to identify each tenant listed. For example, if there are three tenants listed on a unit, they are referenced by indexes 0, 1, and 2. You can specify which tenant you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first tenant in the list.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>An index may only be passed to this class when Tenant is considered a child class in the script, as shown in the below examples.</p>
+                                                        </div>
+                                                        <p class="Example">[Unit.Tenant(1).Balance()]</p>
+                                                        <p>Display the balance of the first additional tenant associated with this unit. Since the Unit class indexes tenants based on occupancy, this would display the previous occupant of this unit (unless there are multiple tenants occupying the unit).</p>
+                                                        <p class="Example">[ServiceIssue.Tenant(1).LastName]</p>
+                                                        <p>Display the last name of the first additional tenant linked to the issue. Service issues index linked tenant accounts based on the order they display in the <span class="Section">Links</span> section.</p>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_2"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.htm">Script Functions</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.htm">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28"> This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Tenant</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.htm">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Asset().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data about the tenant's assets.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Contact.htm">Contact</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Contact().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data from the <span class="Window">View Contacts</span> pop-up for the tenant account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Contact-by-Type.htm">Contact By Type</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().ContactByType().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data for a contact <span class="Field">Type</span> listed on the <span class="Window">View Contacts</span> pop-up for the tenant account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Evictions.htm">Eviction</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Eviction().<span class="Required">Function</span>]</p>
+                                                                        <p>This class retrieves data about eviction processes linked to a tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Home.htm">Home</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Home().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data about assets designated as homes from the tenant's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Lease.htm">Lease</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().<span class="Required">Function</span>]</p>
+                                                                        <p>This class retrieves data about leases from the <span class="Window">Lease Details</span> pop-up for tenant account.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you want to provide unit information for this tenant, it is recommended that you follow this class with the Unit class. </p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Loan.htm">Loan</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan().<span class="Required">Function</span>]</p>
+                                                                        <p>This class retrieves data about a tenant's owner-financed loans.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Pet.htm">Pet</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Pet().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This retrieves data about a tenant's pets.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Phone-Number.htm">Phone Number</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves phone number data for the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.9,Snippet Conditions.14,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.htm">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Property().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data about the property marked as <span class="Field">Default</span> on the tenant account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.25">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Prospect.htm">Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Prospect().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data from a tenant's prospect account if the tenant was created from a prospect record.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.34,Snippet Conditions.20,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Reservation.htm">Reservation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Reservation().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves short term rental (STR) reservation data for the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.htm">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().ServiceManager().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data from issues linked to a tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.25,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Unit.htm">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Unit().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves data about the unit linked to a tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Violation.htm">Violation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Violation().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This class retrieves violation data for the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_3"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent1">
+                                                                            <p class="Formula">[Tenant().AccountName]</p>
+                                                                            <p>Displays the full name on the tenant's account.</p>
+                                                                            <div class="prefs">
+                                                                                <p class="label1">Related Preferences</p>
+                                                                                <p>By default, the name displays with the <span class="Field">First Name</span> first. If <span class="Field">Format Names by Last Name, First Name</span> is checked in <a href="../System-Preferences/Report-Options-General.htm" class="MCXref xref">General Report Options (System Preferences)</a>, the name displays with the <span class="Field">Last Name</span> first.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent2">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().AccountNumber]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.28">Displays the system-generated <span class="Field">Account Number</span> in the tenant's scoreboard.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Active End Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent4">
+                                                                            <p class="Formula">[Tenant().ActiveEndDate]</p>
+                                                                            <p>Displays the <span class="Field">Move Out</span> date on the tenant's details page on the <span class="Section">Leases</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Active Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent5">
+                                                                            <p class="Formula">[Tenant().ActiveStartDate]</p>
+                                                                            <p>Displays the <span class="Field">Move In</span> date on the tenant's details page on the <span class="Section">Leases</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.21,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Address Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().AddressCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total number of addresses entered in the <span class="Section">Addresses</span> section of the tenant's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Balance.htm">Balance</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Balance()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the tenant's account balance as of a specific date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>CashPay Account Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().CashPayAccountNumber]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the CashPay account number assigned by <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> to the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.35,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Charges-List.htm">Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().ChargesList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays each charge linked to the selected tenant within a specified date range.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.23,Snippet Conditions.21,Snippet Conditions.35,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Comment]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the text entered in the <span class="Section">Comment</span> tile of the <span class="Window">Tenant</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Company Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent34">
+                                                                            <p class="Formula">[Tenant().CompanyName]</p>
+                                                                            <p>Displays the <span class="Field">Company Name</span> for tenant accounts that have <span class="Field">Is Company</span> checked on the details page.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Contact-Count.htm">Contact Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().ContactCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total number of contacts associated with the tenant's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Contact-List.htm">Contact List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().ContactList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the names of all contacts listed on the tenant's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.25,Snippet Conditions.31,Snippet Conditions.32">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Create-Date.htm">Create Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().CreateDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the date and time the tenant's account was created and first saved.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Current-Occupancy-Count.htm">Current Occupancy Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().CurrentOccupancyCount()]</p>
+                                                                        <p>Displays the total number of contacts listed on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Current-Occupancy-List.htm">Current Occupancy List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().CurrentOccupancyList()]</p>
+                                                                        <p>Displays the names of all contacts listed on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Phone Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent50">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().DefaultPhoneNumber]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.28">Displays the tenant's phone number marked as <span class="Field">Default</span> on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().DisplayColor]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the name of the color selected in the <span class="Field">Display Color</span> field of the tenant's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().DisplayColorCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the hexadecimal code of the color selected in the <span class="Field">Display Color</span> field of the tenant's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().DisplayColorID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the internal <span class="mc-variable Products.RM variable">Rent Manager</span> color ID of the color selected in the <span class="Field">Display Color</span> field of the tenant's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Accept Checks</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent53">
+                                                                            <p class="Formula">[Tenant().DoNotAcceptChecks]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Don't Accept Checks</span> is checked on the tenant's <span class="Section">Miscellaneous</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Accept Payments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent54">
+                                                                            <p class="Formula">[Tenant().DoNotAcceptPayments]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Don't Accept Payments</span> is checked on the tenant's <span class="Section">Miscellaneous</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Accept Partial Payments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().DoNotAcceptPartialPayments]</p>
+                                                                        <p>Displays <span class="Input">True</span> if <span class="Field">Don't Accept Partial Payments</span> is checked on the tenant's <span class="Section">Miscellaneous</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Allow TWA Payments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent55">
+                                                                            <p class="Formula">[Tenant().DoNotAllowTWAPayments]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Don't Allow TWA Payments</span> is checked on the tenant's <span class="Section">Miscellaneous</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Charge Late Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent56">
+                                                                            <p class="Formula">[Tenant().DoNotChargeLateFees]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Don't Charge Late Fee</span> is checked on the tenant's <span class="Section">Miscellaneous</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Print Statements</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent57">
+                                                                            <p class="Formula">[Tenant().DoNotPrintStatements]</p>
+                                                                            <p>Displays <span class="Input">True</span> if the tenant's <span class="Field">Statement Method</span> field is set to <span class="Field">No Statement</span> or <span class="Field">&lt;Use Property Default&gt;</span> while the property's <span class="Field">Statement Method</span> field is set to <span class="Field">No Statement</span>. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Do Not Send AR Automation Notifications</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent58">
+                                                                            <p class="Formula">[Tenant().DoNotSendARAutomationNotifications]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Don't Send AR Automation Notifications</span> is checked on the tenant's <span class="Section">Miscellaneous</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Eviction-Count.htm">Eviction Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().EvictionCount()]</p>
+                                                                        <p>Displays the number of open and closed eviction processes associated with a tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Eviction-List.htm">Eviction List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().EvictionList()]</p>
+                                                                        <p>Displays a tab-separated list of a tenant's eviction process(es) and associated information.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.28,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent70">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().FirstName]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.28">Displays the <span class="Field">First Name</span> as entered on the tenant's <span class="Window">General</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fixed Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().FixedAmount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the value entered in the <span class="Field">Fixed Amount</span> field of the <span class="Window">Late Fees</span> window.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Full Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().FullName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays information from the tenant's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                        <div class="prefs" data-mc-conditions="Snippet Conditions.28">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>By default, the name displays with the <span class="Field">First Name</span> first. If <span class="Field">Format Names by Last Name, First Name</span> is checked in <a href="../System-Preferences/Report-Options-General.htm" class="MCXref xref">General Report Options (System Preferences)</a>, the name displays with the <span class="Field">Last Name</span> first.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Has Loan</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent82">
+                                                                            <p class="Formula">[Tenant().HasLoan]</p>
+                                                                            <p>Displays <span class="Input">True</span> if the tenant has any owner-financed loans; otherwise displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-History-Count.htm">History Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().HistoryCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total number of history/notes on the tenant's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Company</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent88">
+                                                                            <p class="Formula">[Tenant().IsCompany]</p>
+                                                                            <p>Displays <span class="Input">1</span> if <span class="Field">Company</span> is checked on the tenant's <span class="Section">General</span> tile; otherwise, <span class="Input">0</span> displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Prospect</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent97">
+                                                                            <p class="Formula">[Tenant().IsProspect]</p>
+                                                                            <p>Displays <span class="Input">False</span> if used in a tenant letter template.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Weekly</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent99">
+                                                                            <p class="Formula">[Tenant().IsWeekly]</p>
+                                                                            <p>Displays <span class="Input">1</span> if the <span class="Field">Rent Period</span> is <span class="Field">Weekly</span> on the tenant's <span class="Section">General</span> tile. Otherwise, displays <span class="Input">0</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().LastName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the <span class="Field">Last Name</span> as entered on the tenant's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Payment Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().LastPaymentAmount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the amount of the last payment made by the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Payment Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().LastPaymentDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the date of the last payment made by the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Late-Fee-Amount.htm">Late Fee Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().LateFeeAmount()]</p>
+                                                                        <p>Displays the total late fees associated with the tenant's account as of the specified date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent109">
+                                                                            <p class="Formula">[Tenant().LeaseCount]</p>
+                                                                            <p>Displays total number of leases listed on the tenant's <span class="Window">View Leases</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent111">
+                                                                            <p class="Formula">[Tenant().LeaseList]</p>
+                                                                            <p>Displays the unit names associated with the leases on the tenant's <span class="Window">View Leases</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Loan Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent121">
+                                                                            <p class="Formula">[Tenant().LoanCount]</p>
+                                                                            <p>Displays the number of owner-financed loans associated with the tenant's account. Both open and closed loans are included in the count.</p>
+                                                                            <p>If the tenant has never had a loan, this function returns a <span class="Input">0</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Loan List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent123">
+                                                                            <p class="Formula">[Tenant().LoanList]</p>
+                                                                            <p>Displays the <span class="Column">Reference</span> number of all owner-financed loans associated with the  tenant's account. Both open and closed loans are included. The reference numbers are listed in order by origination date, with the oldest first.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Lockbox ID</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().LockboxID]</p>
+                                                                        <p>Displays the <span class="Field">Company Code</span>, the number of the tenant's associated Lockbox barcode, and the tenant's account number appended as a string.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Next-Recurring-Charge-Change-Date.htm">Next Recurring Charge Change Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().NextRecurringChargeChangeDate()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the date of the next scheduled change to the recurring charge on the tenant's  <span class="Window"> View Recurring Charges</span>. Based on the value of the parameters, <span class="mc-variable Products.RM variable">Rent Manager</span> determines which iteration of the recurring charge to examine. The next recurring charge change date is one day after that recurring charge's <span class="Column">To Date</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.32,Snippet Conditions.15,Snippet Conditions.13,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.34,Snippet Conditions.8,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Note.htm">Note</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Note()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays information about the most recent note on the tenant's <span class="Section">History/Notes</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Oldest Active Charge Age</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().OldestActiveChargeAge]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the age, in days, of the oldest unpaid charge on the tenant's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges-Amount.htm">Open Charges Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().OpenChargesAmount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total amount of open charges as listed on the tenant's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges-List.htm">Open Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().OpenChargesList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays a list of each of open charge on the tenant's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Payments.htm">Payments</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Payments()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays a list of payments made by the tenant. The function creates a separate line for each payment that includes the date and amount of each transaction.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.35">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Payments]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28,Snippet Conditions.35">Displays a list of payments made for the most recent reservation. The function creates a separate line for each payment that includes the date and amount of each transaction.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Date Late Fee Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().PerDateLateFeeAmount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the <span class="Field">Amount</span> as entered in the <span class="Section">Per Day Options</span> section on the tenant <span class="Window">Late Fees</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Pet Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent147">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().PetCount]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.28">Displays the total number of pets on the tenant account in the <span class="Section">Pets</span> tile.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Portal User Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().PortalUserName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the <span class="Column">Username</span> for the tenant's <span class="mc-variable Products.TWA variable">Tenant Web Access</span> account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Previous-Recurring-Charge-Change-Date.htm">Previous Recurring Charge Change Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().PreviousRecurringChargeChangeDate()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the date of the previous scheduled change to the recurring charge on the tenant's  <span class="Window"> View Recurring Charges</span> pop-up for the selected lease. Based on the value of the parameters, <span class="mc-variable Products.RM variable">Rent Manager</span> determines which iteration of the recurring charge to examine. The previous recurring charge change date is the date in that recurring charge's <span class="Column">From Date</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Recurring-Charge-List.htm">Recurring Charge List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Tenant().RecurringChargeList()]</p>
+                                                                                        <p>Displays a list of all active recurring charges as listed on the tenant's <span class="Window">View Recurring Charges</span> pop-up.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Recurring-Charges.htm">Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().RecurringCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total sum of active recurring charges as listed on the tenant's <span class="Window">View Recurring Charges</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Renewal Pricing</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent156">
+                                                                            <p class="Formula">[Tenant().RenewalPricing()]</p>
+                                                                            <p>Displays the price of the renewal associated with <span class="mc-variable Integrations.Product-LRO variable">Rainmaker LRO</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Renewal Pricing List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent157">
+                                                                            <p class="Formula">[Tenant().RenewalPricingList()]</p>
+                                                                            <p>Displays a list of prices for renewals associated with <span class="mc-variable Integrations.Product-LRO variable">Rainmaker LRO</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Due Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Tenant().RentDueDay]</p>
+                                                                            <p>Displays the <span class="Field">Due Day</span> value entered on the tenant's <span class="Section">General</span> tile.</p>
+                                                                            <p>If the <span class="Field">Rent Period</span> is <span class="Field">Weekly</span> or <span class="Field">Daily</span>, a value of <span class="Input">0</span> displays.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Period</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Tenant().RentPeriod]</p>
+                                                                                        <p>Displays whether <span class="Field">Daily</span>, <span class="Field">Weekly</span>, or <span class="Field">Monthly</span> is selected for the <span class="Field">Rent Period</span> field on the tenant's <span class="Section">General</span> tile.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Rent-Recurring-Charges.htm">Rent Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().RentRecurringCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total amount of active rent recurring charges as listed on the tenant's <span class="Window">View Recurring Charges</span> pop-up. Charge types that are designated as rent charges are specified for each property in the <span class="Field">Rent Charge Type</span> field on the property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Screening Count</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().ScreeningCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the number of screening reports on the tenant’s <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.9,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Held.htm">Security Deposit Held</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().SecurityDepositHeld()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total amount of all security deposits <span class="Stress">currently</span> held for the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.31,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Set Contact Type Filter</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().SetContactTypeFilter()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This function is designed to filter the total collection of contacts associated with the tenant based on the assigned parameter values.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.15,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Set-History-Filter.htm">Set History Filter</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().SetHistoryFilter()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">This function is designed to filter the total collection of tenant history/note items based on the assigned parameter values. This filtered collection becomes the data set used by the Note and HistoryCount functions that are run after it is applied. It remains in effect until it is run again with different parameters.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.12,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Status</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Status]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the current <span class="Field">Status</span> as listed on the tenant's scoreboard.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenant Loan Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Tenant().TenantLoanCount]</p>
+                                                                            <p>Displays the total number of owner-financed loans associated with the tenant's account.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Allocations.htm">Total Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">Tenant().TotalAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total value of paid allocations associated with the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Charged.htm">Total Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().TotalCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total amount of charges posted to the tenant's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.31,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Credits.htm">Total Credits</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().TotalCredits()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total amount of credits posted to the tenant's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Payments.htm">Total Payments</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().TotalPayments()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total amount of the tenant's payments received on selected charge types within a specified date range.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Prepay-Allocations.htm">Total Prepay Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().TotalPrepayAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total value of prepayments and/or credits that are unapplied to charges at the specified tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Transactions.htm">Transactions</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().Transactions()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays each transaction associated with the tenant within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current tenant displays, as shown below.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">
+                                                                            <img src="../../../../Resources/Images/PNGs/Tenant Transaction Function - CW - 9-28-2020.png" alt="" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Count.htm">Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().UnitCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the total number of units leased by the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-List.htm">Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().UnitList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the <span class="Field">Name</span> of the each unit leased by the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.25,Snippet Conditions.32,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Update-Date.htm">Update Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().UpdateDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the most recent date and time that the tenant account was updated and saved.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Update User</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[Tenant().UpdateUser]</p>
+                                                                            <p>Displays the name of the user who last updated and saved the tenant's account.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.htm">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant().UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the value of the tenant-type user defined field (UDF). The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28">[Tenant.UserDefinedField("Renter's Insurance Expiration Date")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28">Displays the value for the <span class="Field">Renter's Insurance Expiration Date</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-Utility-Readings-History.htm">Utility Readings History</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().UtilityReadingsHistory()]</p>
+                                                                        <p>Displays the tenant's metered utilities information based on the metered utility charge type as of a specified date.</p>
+                                                                        <p>This function retrieves the utility information and stores it in internal variables. Used by itself, this function does not display the value that was stored for each variable.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="links">
+                                                        <div class="MCRelationshipsProxy_0">
+                                                            <p class="pageHeading_page_0">Related Information</p>
+                                                            <p class="pageItem_page_0"><a href="../../KB/Script-Scripting.htm">Scripting</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../KB/Script-Classes.htm">Script Classes</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../CSH/Tenants.htm">Tenants (Page)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../CSH/Tenant-Details.htm">Tenant Details (Page)</a>
+                                                            </p>
+                                                            <p class="taskHeading_task_0">Related Tasks</p>
+                                                            <p class="taskItem_task_0"><a href="../../KB/Script-Index-Tenant.htm">Tenant Indexing</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="topic-background">
+                                        <script type="text/javascript" src="../../../../Resources/Scripts/Back-to-Top-Button.js">
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <div class="footer center">
+        <div class="master-page-footer">
+            <div>
+                <p class="footer-header">Product Support</p>
+                <p>Monday-Friday</p>
+                <p>8:00 a.m.-7:00 p.m. (EST)</p>
+                <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
+                </p>
+                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                </p>
+            </div>
+            <div>
+                <p class="footer-header">Resources</p>
+                <p><a href="https://www.rentmanager.com/training/#Training_Calendar" target="_blank">Training Calendar</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/virtual-classroom-enrollment-form/">Virtual Classroom Enrollment</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/podcast/">Beyond Rent Podcast</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/submit-a-feature-request/">Submit a Feature Request</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+    </div>
+</html>

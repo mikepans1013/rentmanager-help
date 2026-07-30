@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Import Owner Prospects</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Importing/Owner-Prospects.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Importing/Owner-Prospects.htm</a></p>
+
+                                                        <h1 id="ImportOwnerProspects" data-magellan-target="ImportOwnerProspects"><a name="aanchor454"></a>
+                                                            <a name="kanchor762"></a><a name="H1"></a>Import Owner Prospects</h1>
+                                                        <p>The importing tool allows you to pull large amounts of data into <span class="mc-variable Products.RM variable">Rent Manager</span> at one time via a comma-separated values (CSV) file or other file type that uses supported delimiters. The file is first prepared outside <span class="mc-variable Products.RM variable">Rent Manager</span>, using a program such as Microsoft Excel or Notepad, which contains rows of data representing the information that matches to designated <span class="mc-variable Products.RM variable">Rent Manager</span> fields. This greatly reduces the amount of time spent on data entry, especially when first setting up your <span class="mc-variable Products.RM variable">Rent Manager</span> database, or during routine additions that require a lot of new data, such as acquiring a new property.</p>
+                                                        <p>When importing owner prospects, you can choose whether you are adding new owner prospect data, or updating owner prospect data that already exists in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Importing</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Import Owner Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owner Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1PrepareImportFile" data-magellan-target="Step1PrepareImportFile"><a name="H2_1"></a>Step 1: Prepare Import File</h2>
+                                                        <p>Before beginning the import process, prepare an import file (sometimes called a flat file or data file) outside of <span class="mc-variable Products.RM variable">Rent Manager</span>. The most common file type used for importing is a comma-separated values (CSV) file, and examples in this section are based on that file type. The following file types are accepted for importing:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Comma-separated values (CSV)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Text (TXT)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Tab-separated (TAB)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Intuit Interchange Format (IIF)</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Data in your import file should be organized with each row as a separate entity and each column containing information relevant to that entity. For example, an import of owner prospect data is displayed with each row representing a different owner prospect and each column representing information about that owner prospect.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Import-Owner-Prospects-Excel.png" class="lightbox" alt="An example import file displays columns of owner prospect information." />
+                                                        </p>
+                                                        <h3><a name="H3_1"></a>Required Fields</h3>
+                                                        <p>In order to import owner prospects, some fields are required to have a value entered in the data file. The fields that are required depend on whether you are adding new owner prospects, or updating the information for owners already in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Import Type</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Add New Owner Prospects</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>For adding new owners to <span class="mc-variable Products.RM variable">Rent Manager</span>, the <span class="Field">Name</span> field <span class="Stress">must</span> have values entered.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Update Existing Owner Prospects</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>For updating owner prospects already in <span class="mc-variable Products.RM variable">Rent Manager</span>, at least <span class="Stress">one</span> of the following fields must have a value entered:</p>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <p class="Field">Name</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p>A user-defined field</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_2"></a>Field Descriptions</h3>
+                                                        <p>You can import values into any <span class="mc-variable Products.RM variable">Rent Manager</span> owner prospect field, including user-defined fields (UDFs). As long as your import file meets the field requirements above, you can include as many or as few additional fields of your choice.</p>
+                                                        <p>The following fields can be added as columns to import owner prospect information:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Application Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date when the owner prospect applied.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The city as listed on the owner prospect details page's <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A note providing additional information about the owner prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Address Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>One of the existing address types to be the default address type for the owner prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Field">Display Color</span> for the owner prospect, to display on the owner prospect's details page <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name that displays on the <span class="Window">Owner Prospects</span> page. This is helpful if, for example, the owner prospect is a limited liability company (LLC) but you want to see a contact's name instead.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The primary <span class="Field">Email</span> address for contacting the owner prospect to display on the owner prospect's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Level</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A general ranking from <span class="Input">0–10</span> (with <span class="Input">10</span> being the highest) to measure the level of interest that the owner prospect seems to have.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lead Source</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The main source of information that describes how this owner prospect learned about your company.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name that displays on reports and other places throughout <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Phone Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>One of the phone numbers for the owner prospect. If an owner prospect has multiple phone numbers, create a separate column for each type of phone number.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Postal Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The postal or zip code as listed on the owner prospect details page's <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Sales Rep</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The sales representative associated with this owner prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The state as listed on the owner prospect details page's <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The street as listed on the owner prospect details page's <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If applicable, enter a second address line for the owner prospect's address.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>User Defined Field</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Any owner prospect-type user-defined fields (UDFs) can be added as their own column. Then enter the values for that UDF for each owner prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step2BegintheImport" data-magellan-target="Step2BegintheImport"><a name="H2_2"></a>Step 2: Begin the Import</h2>
+                                                        <p>To import owner prospects, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Import <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import Records <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Import Owner Prospects</span>.<br />The <span class="Window">Import Owner Prospects Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select one of the available options and click <span class="BigButtons">Next</span>.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Import without using template</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Proceed to importing the file without using preestablished settings.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Import using template</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Use a previously created template, which allows you to use the options established during a prior import. In the available drop-down list, select which template to use.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">File Name</span> field, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/file_upload_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Upload Files</span> to select the data file to import. Then, click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select one of the available options and click <span class="BigButtons">Next</span>.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Add New Owner Prospect</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Create new owner prospect accounts in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Update Existing Owner Prospect</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Replace or add information for owner prospects that are already in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                                <p>To remove information from any fields on existing owner prospects where there is an empty cell in the import file, check <span class="Field">Replace data with blanks</span>. Otherwise, the information for that field on the owner prospect is unchanged.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>If you selected <span class="Field">Add New Owner</span>, the pop-up closes and the <span class="Window">Import Owners</span> page displays. Proceed to <span class="Section">Step 3: Configure Import File for <span class="mc-variable Products.RM variable">Rent Manager</span></span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>If you selected <span class="Field">Update Existing Owner</span>, select an option to specify how <span class="mc-variable Products.RM variable">Rent Manager</span> matches the owners in your import file to the existing owner records. The available options are described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use Owner Prospect ID supplied in the import file</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Match the data to the system-generated account number for the owner prospect. This number can be obtained using the OwnerProspectID script function. Each owner record in the import file is required to have the <span class="Field">Owner Prospect ID</span> field specified.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Use the following value from a User Defined Field</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Match the data to a user-defined field (UDF), then select the UDF to match to for each owner prospect. The import file must have a column for the UDF's values.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Click <span class="Field">Next</span>.<br />The pop-up closes and the <span class="Window">Import Owner Prospects</span> page displays.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3ConfigureImportFileforRentManager" data-magellan-target="Step3ConfigureImportFileforRentManager"><a name="H2_3"></a>Step 3: Configure Import File for <span class="mc-variable Products.RM variable">Rent Manager</span></h2>
+                                                        <p>In the <span class="Section">Import Settings</span> section, you may view or edit the previously entered default values to apply to the imported accounts or records. In the <span class="Section">Details</span> section's <span class="Field">File Name</span> field, you can view the currently selected import file, or click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/file_upload_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /><span class="ActionItems">Upload Files</span> to select a different import file. If you have selected a valid, readable file, its data is displayed in a preview on the lower half of the page.</p>
+                                                        <p>To continue importing, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Field Settings</span> section, select an option for the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Delimited Fields</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The character used to mark the beginning and ending of the columns of data.</p>
+                                                                                <p>Generally, CSV files use commas, TXT files use spaces, and TAB files use tabs. If the data displays incorrectly in the preview, you can select each character option until the data displays correctly.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Text Qualifier</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If your import file uses a delimiter that can be found within the actual text data, you may need to surround that data in quotation marks or apostrophes to indicate that it is all part of one data column. This is not commonly needed for CSV files, but may be necessary for simpler formats such as TXT files.</p>
+                                                                                <p>For example, while importing properties, if you use spaces as the delimiter in a TXT file and a property name is two words, you would need to use a text qualifier to indicate that both words apply to the property <span class="Field">Name</span> column.</p>
+                                                                                <p>
+                                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-TXTFile-SG-2024.png" alt="The .txt file displays property information delimited by spaces, with one property missing quotation marks around the name." />
+                                                                                </p>
+                                                                                <p>In the image above, the property name <span class="Input">Willow Bridge</span> was not entered in quotation marks. Because the delimiter used for the TXT file is spaces, the property name was split into two separate columns. As a result, all data after is shifted one column over and the imported data cannot be matched accurately.</p>
+                                                                                <p>
+                                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-NoQuotes-SG-2024.png" alt="The Import Properties page displays Willow and Bridge in two separate columns because it was not entered in quotes." />
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>None</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Column data is separated <span class="Stress">only</span> by the selection in the <span class="Field">Delimited Fields</span> field.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Quote</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Column data is first separated by quotation marks ("), then by the selection in the <span class="Field">Delimited Fields</span> field.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Apostrophe</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Column data is first separated by apostrophes ('), then by the selection in the <span class="Field">Delimited Fields</span> field.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Begin import from line</span> field, enter the starting line number from which information should be imported. For example, if the first row in your import file has old or irrelevant data you do not want to import, enter <span class="Input">2</span> to start the import from the second line of data. Empty rows are ignored.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If the line on which the import begins (as specified above) contains field names or column headers, check <span class="Field">Line # is a header</span>. This helps <span class="mc-variable Products.RM variable">Rent Manager</span> automatically match columns and fields and can save time by requiring less manual input for matching fields.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4MatchDataFields" data-magellan-target="Step4MatchDataFields"><a name="H2_4"></a>Step 4: Match Data Fields</h2>
+                                                        <p>Now that <span class="mc-variable Products.RM variable">Rent Manager</span> is configured to read your import file, you can begin matching columns from your import file to specific fields in <span class="mc-variable Products.RM variable">Rent Manager</span>. Columns that you need to manually match display in orange and are labeled <span class="Input">Not Matched</span>. If you checked <span class="Field">Line # is a header</span>, columns that matched to your header titles display in green and are labeled <span class="Input">Import Ready</span>.</p>
+                                                        <p>To match columns to their associated <span class="mc-variable Products.RM variable">Rent Manager</span> fields, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Details</span> section, click an orange column labeled <span class="Input">Not Matched</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-NotMatched-Flyout-SG-2024.png" alt="A fly-out window displays options to match the column to a Rent Manager field." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select information for the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Match To</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="mc-variable Products.RM variable">Rent Manager</span> field where the data in this column should be imported.</p>
+                                                                                <p data-mc-conditions="Snippet Conditions.9,Snippet Conditions.11,Snippet Conditions.15,Snippet Conditions.17,Snippet Conditions.18">For example, if the column has data for email addresses, select <span class="Field">Email</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Handling</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Some <span class="mc-variable Products.RM variable">Rent Manager</span> fields require further specification, such as address information or user defined fields (UDFs). If no handling is needed, this field is disabled.</p>
+                                                                                <p>For example, if the <span class="Field">Match To</span> field has <span class="Field">Postal Code</span> selected, you must select the address type to which that postal code information applies. For most UDFs, set the <span class="Field">Match To</span> field to <span class="Field">User Defined Field</span>, then in the <span class="Field">Handling</span> field, select the specific UDF where the column data belongs.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>The column name populates with the selected field and the label changes to <span class="Input">Import Ready</span> in green.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Repeat for every orange column labeled <span class="Input">Not Matched</span> until all columns you wish to import are correctly matched to the appropriate fields. Only green columns labeled <span class="Input">Import Ready</span> will be imported.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>On the left, all rows of data are selected by default. If there are any rows you do not wish to import, uncheck the row(s).</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you are matching to fields with system-defined options or user defined fields with set values, the data in your import file must match <span class="mc-variable Products.RM variable">Rent Manager</span>'s field options <span class="Input">exactly</span> (including spaces).</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Details</span> section's <span class="Field">Required Columns</span> field, verify that all <span class="mc-variable Products.RM variable">Rent Manager</span> fields in the list have been matched to their associated column. Required fields that have been matched display a display a <img src="../../../../assets/Resources/Images/ICONS/Non-Icons/Check_Green_20x19.png" class="inline-image" alt="Green Checkmark" style="width: 20;height: 19;" />, while unmatched fields are followed by an asterisk (*). All <span class="Field">Required Columns</span> must be matched in order to proceed.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">Next</span>.<br />The <span class="Section">Import Review</span> page displays.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step5ReviewandCompleteImport" data-magellan-target="Step5ReviewandCompleteImport"><a name="H2_5"></a>Step 5: Review and Complete Import</h2>
+                                                        <p>On this page, you can review the information before you import it into <span class="mc-variable Products.RM variable">Rent Manager</span> and, if needed, make any edits or corrections. Once you have verified the information is correct, click <span class="BigButtons">Import</span>.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.11">
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Import-Owner-Prospects-Review.png" alt="The Import Review page displays information about three imported owner prospects." class="lightbox" />
+                                                        </p>
+                                                        <p>Your data is imported, and a summary of the import displays in the <span class="Column">Import Result</span> column. Rows listed as <span class="Input">Success</span> in green were successfully imported. Any rows that failed to import are listed in red with an error that displays why that row could not be imported.</p>
+                                                        <p>For any rows that failed to import, correct the data in your import file, restart the import process, and select only the rows that failed to import in the previous attempt.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>You can use importing templates to save time and use the same importing settings during future imports of the same type. To create an importing template based on the import you just performed, on the action bar, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/RM/save_19x19.png" class="inline" alt="Save Template" style="width: 19;height: 19;" />.</p>
+                                                        </div>
+                                                    
+</main>
+</body>
+</html>

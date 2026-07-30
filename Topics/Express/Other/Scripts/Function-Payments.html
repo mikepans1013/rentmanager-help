@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payments Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Payments.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Payments.htm</a></p>
+
+                                                        <h1 id="PaymentsFunctionScript" data-magellan-target="PaymentsFunctionScript"><a name="aanchor126"></a>
+                                                            <a name="kanchor213"></a><a name="H1"></a>Payments Function (Script)</h1>
+                                                        <p>This function displays a list of payments from the selected tenant. The function creates a separate line for each payment that includes the date and amount of each transaction.</p>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Lease.html">Lease</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Payments()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Window">View Transactions</span> pop-up for the specified lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().Payments()]</p>
+                                                                        <p>Displays information from the owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">PrimaryOwner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>PrimaryOwner.Payments()]</p>
+                                                                        <p>Displays information from the primary owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Payments()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Window">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Reservation.html">Reservation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Payments]</p>
+                                                                        <p>Displays a list of payments found on the most recent reservation's <span class="Tab">Transaction</span> tab.The function creates a separate line for each payment that includes the date and amount of each transaction.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[Payments(<span class="Optional">"FromDate"</span>,<span class="Optional">"ToDate"</span>,<span class="Optional">"Format"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>FromDate</h3>
+                                                        <p colspan="2">Specify the date on or after which to examine payments made. If no date is specified, the function uses the beginning of time.</p>
+                                                        <p class="Example">[Payments("1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the number of payments made on or after January 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_2"></a>ToDate</h3>
+                                                        <p colspan="2">Specify the date on or before which to examine payments made. If no date is specified, the function uses the end of time.</p>
+                                                        <p class="Example">[Payments("","6/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the number of payments made on or before June 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_3"></a>Format</h3>
+                                                        <p>List details of each posted payment using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <p class="Subheading">Default Format</p>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays a list of the dates, descriptions, and amounts of the payments, separated by tabs:</p>
+                                                        <p class="Formula">"\t$_Date\t$_ChargeTypeDescription\t$_Amount\n"</p>
+                                                        <p class="Subheading">Variables</p>
+                                                        <p>The following variables may be used in the Format parameter:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the amount of the payment.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ChargeType</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the shortened charge type name if the payment is a credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ChargeTypeDescription</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the text in the charge type's <span class="Field">Description</span> field if the payment is a credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Comment</span> entered on the payment.
+</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date the payment was posted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the text in the transaction’s <span class="Field">Description</span> field if the payment is a credit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_DepositNumber</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the deposit number associated with the transaction.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_Reference</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Reference</span> entered on the transaction.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Example">Payments("1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","","$_Comment\t$_Amount\n")</p>
+                                                        <p>Displays a new line with a customized list of the comment and amount, separated by a tab, for each payment from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> to the end of time.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().Lease().Payments()]</p>
+                                                        <p>Displays the dates and amounts of every payment ever received from the selected tenant lease.</p>
+                                                        <p class="Example">[Owner().Payments("1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","12/31/<span class="mc-variable Dates.Year4 variable">2026</span>)"]</p>
+                                                        <p>Displays the dates and amounts of every payment received in <span class="mc-variable Dates.Year4 variable">2026</span> from the owner.</p>
+                                                        <p class="Example">[Tenant().Payments("","8/1/<span class="mc-variable Dates.Year4 variable">2026</span>","\t$_Date\t$_Comment\t$_Amount\t$_Reference\n")]</p>
+                                                        <p>Displays the dates, comments, amounts, and references of every payment received from the beginning of time up to August 1, <span class="mc-variable Dates.Year4 variable">2026</span> from the tenant.</p>
+                                                        <p>The output displays as shown below:</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20Payments%20-%202%20-%20SG%20-%2011-2-20.png" alt="" />
+                                                        </p>
+                                                        <p class="Formula">[Tenant().Reservation(ReservationCount - 1).Payments]</p>
+                                                        <p>Displays a list of payments made by the guest for the most recent reservation.</p>
+                                                    
+</main>
+</body>
+</html>

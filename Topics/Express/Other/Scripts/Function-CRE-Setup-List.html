@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRE Setup List Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-CRE-Setup-List.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-CRE-Setup-List.htm</a></p>
+
+                                                        <h1 id="CRESetupListFunctionScript" data-magellan-target="CRESetupListFunctionScript"><a name="aanchor494"></a>
+                                                            <a name="kanchor831"></a><a name="H1"></a>CRE Setup List Function (Script)</h1>
+                                                        <p>This function displays information found on the <span class="Tab">Charge Type Setup</span> tab of a tenant's commercial lease as a list.</p>
+                                                        <p>The default output of the function displays below. The Format parameter can be used to customize this output, as shown in the last example in this topic.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20CRE%20Setup%20List%20-%20SG%20-%201-21-21.png" alt="" />
+                                                        </p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Renewal.html">Renewal</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Renewal(Lease.LeaseRenewalCount() - 1).CRESetupList()]</p>
+                                                                        <p>Displays information found on the <span class="Tab">Charge Type Setup</span> tab of the commercial tenant's most recent lease.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you insert a function from the <span class="Section">Insertable Fields</span> list in a letter template, the index automatically populates with a scripted formula: <span class="Formula" data-mc-conditions="Snippet Conditions.2">(Lease.LeaseRenewalCount() - 1)</span>. This allows you to return data for the most recent lease renewal created for the tenant.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[CRESetupList(<span class="Optional">"CREAccount"</span>,<span class="Optional">"Format"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>CREAccount</h3>
+                                                        <p colspan="2">Enter the name of the CRE account to examine as it displays in the <span class="Column">CRE&#160;Account</span> column on the <span class="Tab">CRE&#160;Setup</span> tab of the current tenant's most recent commercial lease.</p>
+                                                        <p colspan="2" class="Example">[CRESetupList("5503")]</p>
+                                                        <p colspan="2">Displays the CRE setup information for the <span class="Field">5503 CAM - Insurance</span> CRE&#160;account.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_2"></a>Format</h3>
+                                                        <p>List details of the CRE setup using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <h3><a name="H3_3"></a>Default Format</h3>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays a list of the CRE accounts, pro rata shares, and administrative fees, separated by tabs:</p>
+                                                        <p class="Formula">"$_CREAccount\t$_ProRataShare\t$_AdministrativeFee\n"</p>
+                                                        <h3><a name="H3_4"></a>Variables</h3>
+                                                        <p>The following variables may be used in the <span class="Field">Format</span> parameter:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_AdministrativeFee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p colspan="2">Displays the <span class="Field">Administrative Fee %</span> entered on the commercial lease's <span class="Tab">Charge Type Setup</span> tab.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_CREAccount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">CRE Account</span> on the commercial lease's <span class="Tab">Charge Type Setup</span> tab.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_ProRataShare</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Pro Rata Share %</span> entered on the commercial lease's <span class="Tab">Charge Type Setup</span> tab.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Example">CRESetupList("","\t$_AdministrativeFee\t$_ProRataShare\n")</p>
+                                                        <p>Displays a new line with a customized list of the <span class="Field">Administrative Fee %</span> and <span class="Field">Pro Rata Share %</span> for the CRE setup on the commercial lease.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().Lease().Renewal(Lease.LeaseRenewalCount() - 1).CRESetupList()]</p>
+                                                        <p colspan="2">Displays the information on the <span class="Tab">Charge Type Setup</span> tab of the tenant's most recent commercial lease.</p>
+                                                        <p class="Example">[Tenant().Lease().Renewal().CRESetupList()]</p>
+                                                        <p colspan="2">Displays the information on the <span class="Tab">Charge Type Setup</span> tab of the tenant's oldest commercial lease.</p>
+                                                        <p class="Example">[Tenant().Lease().Renewal(Lease.LeaseRenewalCount() - 1).CRESetupList("5502")]</p>
+                                                        <p colspan="2">Displays the information for the <span class="Field">5502 Cam - Property Tax</span> CRE account on the <span class="Tab">Charge Type Setup</span> tab of the tenant's most recent commercial lease.</p>
+                                                        <p class="Example">[Tenant().Lease().Renewal(Lease.LeaseRenewalCount() - 1).CRESetupList("","\n$_ProRataShare\t$_CREAccount")]</p>
+                                                        <p>Displays a new line with a customized list of the <span class="Field">Pro Rata Share %</span> and <span class="Field">CRE Account</span> on the <span class="Tab">Charge Type Setup</span> tab of the tenant's most recent commercial lease.</p>
+                                                        <p>The output displays as shown below:</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20Function%20-%20CRE%20Setup%20List%202%20-%20SG%20-%201-21-21.png" alt="" />
+                                                        </p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up ePay for Tenants and Prospects</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/ePay-Set-Up-Tenants-Prospects.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/ePay-Set-Up-Tenants-Prospects.htm</a></p>
+
+                                                        <h1 id="SetUpePayforTenantsandProspects" data-magellan-target="SetUpePayforTenantsandProspects"><a name="kanchor229"></a><a name="H1"></a>Set Up ePay for Tenants and Prospects</h1>
+                                                        <p><span class="mc-variable Integrations.PP-Zego variable">Zego ePay</span> automatically transfers money either from <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments you make to others or that you receive from others in the real world and deposit them into the actual bank(s). Before you can set up <span class="mc-variable Integrations.Product-ePay variable">ePay</span> for tenant and prospect payments, you need to enable <span class="mc-variable Integrations.Product-ePay variable">ePay</span> in <span class="mc-variable Products.RM variable">Rent Manager</span> and establish various preferences. For more information, refer to <a href="ePay-Set-Up.html" class="MCXref xref">Set Up Zego ePay</a>.</p>
+                                                        <p><span class="mc-variable Integrations.PP-Zego variable">Zego ePay</span> can be used for tenants and prospects who want to electronically do the following:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Receive any payments related to a tenant lease, such as rent charges, garage fees, or damages.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Receive application or reservation fees for prospects using <span class="mc-variable Products.ApplyNow variable">Apply Now</span>.</p>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p><span class="mc-variable Integrations.Product-ePay variable">ePay</span> is a licensed feature by <span class="mc-variable Integrations.Partner-Zego variable">Zego</span>. To use <span class="mc-variable Integrations.PP-Zego variable">Zego ePay</span>, you must set up an account with <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> and enter that information into <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, contact <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                        </div>
+                                                        <h2 id="SetUpePayPaymentsinRentManager" data-magellan-target="SetUpePayPaymentsinRentManager"><a name="H2_1"></a>Set Up <span class="mc-variable Integrations.Product-ePay variable">ePay</span> Payments in <span class="mc-variable Products.RM variable">Rent Manager</span></h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2"><span class="mc-variable Integrations.Product-ePay variable">ePay</span>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Access <span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Setup and perform <span class="mc-variable Integrations.Product-ePay variable">ePay</span> operations</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>In order to begin using <span class="mc-variable Integrations.Product-ePay variable">ePay</span> to collect recurring payments (also called batch payments) from tenants and prospects, you must establish system preferences for how those batches are processed and enter <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payment information for those accounts. Entering <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payment information on accounts can expedite the process of accepting one-time payments via <span class="mc-variable Integrations.Product-ePay variable">ePay</span>, but one-time payment information can also be entered at the time of accepting the payment.</p>
+                                                        <h3><a name="H3_1"></a>Step 1: Establish System Preferences</h3>
+                                                        <p>To set up batch <span class="mc-variable Integrations.Product-ePay variable">ePay</span> preferences, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Integrations.Product-ePay variable">ePay</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Batch</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">General</span> section, select a <span class="Field">Batch Calculation</span> method to determine how much money is charged when <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payment batches are processed:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Full Balance</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Tenants and prospects are charged for their entire account balance.</p>
+                                                                                <p>To limit the amount charged with this option selected, select <span class="Field">Never Charge More Than</span> and enter the maximum dollar amount that tenants and prospects can be charged when recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments are posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Selected Charges</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Tenants and prospects are charged the total amount for unpaid charges associated with the <span class="Field">Charge Types</span> selected from the drop-down list.</p>
+                                                                                <p>To limit the amount charged with this option selected, select <span class="Field">Never Charge More Than</span> and enter the maximum dollar amount that tenants and prospects can be charged when recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments are posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Set Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Tenants and prospects are always charged the value entered in the <span class="Field">Amount</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Send Receipts After Batch</span> section, select the receipt(s) that should be sent to the tenant or prospect:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Email Decline</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, a letter is automatically emailed to tenants or prospects for failed transactions in a batch. Select the letter template to use for the declined letter.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Email Success Receipt</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If checked, a confirmation letter is automatically emailed to tenants or prospects for successful transactions in a batch. Select the letter template to use for the confirmation letter.</p>
+                                                                                <p>Optionally, check <span class="Field">Attach invoices</span> so that when invoices are paid by an <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payment, that invoice is be attached to the confirmation email.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />Future <span class="mc-variable Integrations.Product-ePay variable">ePay</span> batch payments are processed using the selected options.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If desired, set up an automation schedule for recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> to post payments on a regular basis. For more information, refer to <a href="../Other/Automation-Recurring-ePay-Add.html" class="MCXref xref">Add a Recurring ePay Automation Schedule</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Step 2: Enter Account <span class="mc-variable Integrations.Product-ePay variable">ePay</span> Information</h3>
+                                                        <p>To use <span class="mc-variable Integrations.Product-ePay variable">ePay</span> batches or recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> in <span class="mc-variable Products.RM variable">Rent Manager</span>, you need to acquire bank account or card information from tenants and prospects to use with <span class="mc-variable Integrations.Product-ePay variable">ePay</span>. Once you have that information, establish <span class="mc-variable Integrations.Product-ePay variable">ePay</span> settings for their accounts by doing the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Navigate to the desired entity whose <span class="mc-variable Integrations.Product-ePay variable">ePay</span> information you need to enter.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Entity</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Navigation</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Prospect</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Prospects</span> and select a prospect.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Tenant</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span> and select a tenant.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the action bar to the right, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="Settings" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems"><span class="mc-variable Integrations.Product-ePay variable">ePay</span>&#160;Settings</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If prompted, enter your <span class="mc-variable Integrations.Product-ePay variable">ePay</span> password and click <span class="BigButtons">Authenticate</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Tenant-ePay-Settings-NC-2025.png" class="lightbox" alt="The ePay Settings pop-up displays bank account information and ePay settings for a tenant." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select <span class="Field">Turn on tenant account</span> on file or <span class="Field">Turn on prospect account on file</span>.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Default Account Information</span> tile, enter information in the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Account Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The full bank account number. This field displays only if, in the <span class="Field">Account Type</span> field, <span class="Field">ACH - Checking</span> or <span class="Field">ACH - Savings</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Account Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The bank account or card used to collect <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments. Each option is described below.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>The payment options in this field are dependent on your contract with <span class="mc-variable Integrations.Partner-Zego variable">Zego</span>. For example, your company may have the ability to process payments for credit cards but not debit cards. If you are unsure which account types are available to you, contact your <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> representative.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>ACH - Checking/Saving</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Payments are processed using a checking or saving bank account via the automated clearing house (ACH) network.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Credit Card</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Payments are processed using a credit card.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Debit Card</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Payments are processed using a debit card.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>CVV2</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The credit or debit card's three-digit card security code. This field displays only if, in the <span class="Field">Account Type</span> field, <span class="Field">Credit Card</span> or <span class="Field">Debit Card</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Card Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The full credit or debit card number. This field displays only if, in the <span class="Field">Account Type</span> field, <span class="Field">Credit Card</span> or <span class="Field">Debit Card</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Exp Month</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The expiration month of the credit or debit card. This field displays only if, in the <span class="Field">Account Type</span> field, <span class="Field">Credit Card</span> or <span class="Field">Debit Card</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Exp Year</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The expiration year of the credit or debit card. This field displays only if, in the <span class="Field">Account Type</span> field, <span class="Field">Credit Card</span> or <span class="Field">Debit Card</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>First Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The first name associated with the bank account or card.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Last Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The last name associated with the bank account or card.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Routing Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The full routing number for the bank account. This field displays only if, in the <span class="Field">Account Type</span> field, <span class="Field">ACH - Checking</span> or <span class="Field">ACH - Savings</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>To add an additional <span class="mc-variable Integrations.Product-ePay variable">ePay</span> account to be used as an alternative to the default method, click <span class="ActionItems">Add Secondary Account Information</span>. For more information, refer to <a href="../Action/Tenant-ePay-Secondary-Account-Add.html" class="MCXref xref">Add a Secondary Tenant ePay Account</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section">Billing Address</span> tile, click <span class="ActionItems">Fill from Tenant</span> or <span class="ActionItems">Fill from Prospect</span> to populate the address marked <span class="Field">Billing</span> on the tenant or prospect account. Alternatively, manually enter an address.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>In the <span class="Section">Reminders</span> tile's <span class="Field">Posting Day</span> field, enter the day of the month that the tenant or prospect's <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments should be posted. <span class="mc-variable Products.RM variable">Rent Manager</span> displays a reminder on the day you enter.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>To use the account's <span class="mc-variable Integrations.Product-ePay variable">ePay</span> information when processing batch <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments, in the <span class="Section"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Batch Settings</span> tile, select <span class="Field">Include Tenant in <span class="mc-variable Integrations.Product-ePay variable">ePay</span> Batch Postings using default account information</span> or <span class="Field">Include Prospect in <span class="mc-variable Integrations.Product-ePay variable">ePay</span> Batch Postings using default account information</span>.</p>
+                                                                <div class="warning">
+                                                                    <p class="label1">Warning</p>
+                                                                    <p>If a tenant is enrolled in Flexible Rent through Flex, you cannot process payments for their account using recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span>. For more information, refer to <a href="Flexible-Rent.html" class="MCXref xref">Flexible Rent</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Establish how the account is charged in <span class="mc-variable Integrations.Product-ePay variable">ePay</span> batches by entering information in the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Batch Calculation</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The amount charged to the tenant or prospect when an <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payment batch is posted. Each option is described below.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Full Balance</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The tenant or prospect is charged the entirety of their account balance, including future-dated charges.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Selected Charges</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The tenant or prospect is charged only for transactions of the charge type(s) selected in the <span class="Field"><span class="mc-variable Integrations.Product-ePay variable">ePay</span>&#160;Charge Types</span> drop-down list.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Set Amount</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The tenant or prospect is charged a specified dollar amount.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Use Property Settings</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The tenant or prospect is charged the amount established in their associated property's <span class="mc-variable Integrations.Product-ePay variable">ePay</span> settings. For more information, refer to <a href="../CSH/Property-ePay-Settings.html" class="MCXref xref">Property ePay Settings (Pop-Up)</a>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Current Balance</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The tenant or prospect is charged the total dollar amount of any transactions dated on or before the current date.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Never charge more than</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p style="padding: 0px;">The maximum dollar amount to collect from this tenant or prospect when <span class="mc-variable Integrations.Product-ePay variable">ePay</span> batch payments are posted. This option displays only if, in the <span class="Field">Batch Calculation</span> drop-down list, <span class="Field">Full Balance</span> or <span class="Field">Selected Charges</span> is selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Send Confirmation</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The tenant or prospect receives an email confirmation when an <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payment batch is posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="10">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The tenant or prospect's payment information and <span class="mc-variable Integrations.Product-ePay variable">ePay</span> batch settings are saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="SetUpePayforOnlinePayments" data-magellan-target="SetUpePayforOnlinePayments"><a name="H2_2"></a>Set Up <span class="mc-variable Integrations.Product-ePay variable">ePay</span> for Online Payments</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System Web Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2"><span class="mc-variable Integrations.Product-ePay variable">ePay</span>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Access <span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Setup and perform <span class="mc-variable Integrations.Product-ePay variable">ePay</span> operations&#160;</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p><span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span> is a web portal that allows tenants and prospects to make payments for any charges on their account, such as rent, violation fees, and pet deposits. Before tenants and prospects can make online <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments, you need to enable TWA. For more information, refer to <a href="Web-Portal-Suite-Set-Up.html" class="MCXref xref">Set Up Web Portal Suite</a>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This feature is licensed as part of <span class="mc-variable Products.WPS variable">Web Portal Suite</span> and must be purchased separately.  For more information, contact your sales representative at <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                        </div>
+                                                        <p>To set up <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span> preferences and accept payments, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Web Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.TWA variable">Tenant Web Access</span><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Page Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Make a Payment</span>.<br /></p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select <span class="Field">Allow Making Payments</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If prospects should not be able to make payments in TWA, select <span class="Field">Exclude from prospects</span>. With this option enabled, prospects are still able to make a payment during the application process.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Customize how the payment page displays in TWA using the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Custom Message</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Text that displays at the top of the payment page for all TWA users.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Menu Title</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the payment tab that displays in TWA.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Title</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The name of the payment page that displays in TWA.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />Tenants (and prospects if <span class="Field">Exclude from prospects</span> is not selected) can make <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments in TWA.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="SetUpePayforApplicationFees" data-magellan-target="SetUpePayforApplicationFees"><a name="H2_3"></a>Set Up <span class="mc-variable Integrations.Product-ePay variable">ePay</span> for Application Fees</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System Web Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2"><span class="mc-variable Integrations.Product-ePay variable">ePay</span>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Access <span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Setup and perform <span class="mc-variable Integrations.Product-ePay variable">ePay</span> operations&#160;</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p><span class="mc-variable Products.ApplyNow variable">Apply Now</span> allows prospective tenants to submit an online application and automates the process of receiving rental applications, collecting application fees, and screening prospects. Before prospects can submit applications and pay fees online, you need to enable <span class="mc-variable Products.ApplyNow variable">Apply Now</span> and create application templates. For more information, refer to <a href="Apply-Now-Applications.html" class="MCXref xref">Apply Now Applications</a>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This feature is licensed as part of <span class="mc-variable Products.WPS variable">Web Portal Suite</span> and must be purchased separately. For more information, contact your sales representative at <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                        </div>
+                                                        <p>To set up <span class="mc-variable Products.ApplyNow variable">Apply Now</span> preferences and accept application fees, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Web Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.TWA variable">Tenant Web Access</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.ApplyNow variable">Apply Now</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Integrations.Product-ePay variable">ePay</span></span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select <span class="Field">Enable <span class="mc-variable Integrations.Product-ePay variable">ePay</span></span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If prompted, enter your <span class="mc-variable Integrations.Product-ePay variable">ePay</span> password.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Customize how payments are processed using the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Additional Application Fees</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If applicable, you can create more platform fees using this table by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Item</span>.</p>
+                                                                                <p>For each additional application fee, enter a <span class="Column">Description</span>, the <span class="Column">Charge Type</span> for the fee, and the <span class="Column">Fee Amount</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Application Fee Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The amount for application fees completed online. This amount can be overridden in the settings of each application template.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Application Fee Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type associated with application fees. This charge type can be overridden in the settings of each application template.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Do not require payment for application to be submitted</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, allow applicants to submit an <span class="mc-variable Products.ApplyNow variable">Apply Now</span> application without paying the above application fees.</p>
+                                                                                <p>In the <span class="Field">Pay Later Message</span> field, optionally edit the default message to display to applicants who do not pay upon application submission, such as an explanation about  your organization's policies for handling an application that is not accompanied by payment.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Financial Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property that receives <span class="mc-variable Products.ApplyNow variable">Apply Now</span> application fees by default, such as the management company. If <span class="mc-variable Products.ApplyNow variable">Apply Now</span> fees should be received by the property that the prospect applied to, leave this field blank. This property can also be overridden on individual application templates.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Have <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> manage platform fees</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, allow <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> to automatically collect its platform fees for online processing directly from applications. Instead of manually setting up platform fee charges, set the platform fees in the available fields described below.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>This option is available only if the system preference option to <span class="Field">Have <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> manage platform fees</span> is enabled. For more information, refer to <a href="../Other/System-Preferences/ePay-General.html" class="MCXref xref">General ePay (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>ACH&#160;platform fee amount</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The platform fee amount for processing an ACH (automated clearing house) payment to pay the application fee online. Optionally, check <span class="Field">Percentage</span> and enter a value to charge a percentage of the amount collected instead of a flat fee.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>CC platform fee amount</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The platform fee amount for using a credit card to pay the application fee online. Optionally, check <span class="Field">Percentage</span> and enter a value to charge a percentage of the amount collected instead of a flat fee.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Override System Preferences Default Payment Types</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, allow different forms of payment for <span class="mc-variable Products.ApplyNow variable">Apply Now</span> applications than the defaults specified in system preferences. After checking the box, check which payment types to allow.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>Payment methods that are not selected in system preferences are not selectable; however, additional payment methods can be removed as desired. For more information, refer to <a href="../Other/System-Preferences/ePay-Advanced.html" class="MCXref xref">Advanced ePay (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Platform fee charge type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type associated with platform fees.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Require a disclaimer for <span class="mc-variable Integrations.Product-ePay variable">ePay</span> transactions</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If checked, include a disclaimer for <span class="mc-variable Integrations.Product-ePay variable">ePay</span> transactions associated with the application process. Applicants will be required to check the box next to the disclaimer to verify they read the message before submitting the application fee payment.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br /><span class="mc-variable Integrations.Product-ePay variable">ePay</span> is enabled for <span class="mc-variable Products.ApplyNow variable">Apply Now</span> and can be used to collect application fees.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If application fees are different for individual properties or application template types, such as commercial properties or guarantor applications, you can establish <span class="mc-variable Integrations.Product-ePay variable">ePay</span> settings on the property and/or application level. For more information, refer to <a href="../CSH/Property-Application-Settings.html" class="MCXref xref">Property Application Settings (Pop-Up)</a> and <a href="Apply-Now-Application-Settings-Set-Up.html" class="MCXref xref">Set Up Apply Now Application Settings</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_4"></a>Next Steps</h2>
+                                                        <p> Now that you have set up <span class="mc-variable Integrations.Product-ePay variable">ePay</span> for tenants and prospects, you are ready to start collecting payments. The recommended next steps are described in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Action</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>AutoPay</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>TWA offers an automatic payment feature called AutoPay which allows users with TWA accounts to set up recurring payments for their rent or other charges. These preferences allow you to enable AutoPay and designate on which day(s) of the month automatic payments can be submitted.</p>
+                                                                        <p>For more information, refer to <a href="../Other/System-Web-Preferences/TWA-Autopay.html" class="MCXref xref">Tenant Web Access AutoPay (System Web Preferences)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Process manual <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If a tenant or prospect has <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payment information entered on their account, you can process <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments manually from their account's details page.</p>
+                                                                        <p>For more information, refer to <a href="../Action/Transactions-ePay-Payment-Add.html" class="MCXref xref">Process a Manual ePay Payment</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span></p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> allows you to pull payments from tenants and prospects based on the account information set up on their account's <span class="Window"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</span> pop-up. This is useful for tenants who may not want to submit payments through TWA but still want to pay electronically.</p>
+                                                                        <p>For more information, refer to <a href="../Other/ePay-Recurring-Post.html" class="MCXref xref">Post Recurring ePay</a> and <a href="../CSH/Automation-Recurring-ePay-Schedules.html" class="MCXref xref">Recurring ePay Automation Schedules (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Set up <span class="mc-variable Integrations.Product-ePay variable">ePay</span> deposits</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>When payments are made via <span class="mc-variable Integrations.Product-ePay variable">ePay</span>, the funds are automatically processed and deposited into your actual bank account(s) by <span class="mc-variable Integrations.Partner-Zego variable">Zego</span>. To ensure that your financial data in <span class="mc-variable Products.RM variable">Rent Manager</span>&#160;matches your real world finances, you can either manually deposit <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments or set up <span class="mc-variable Products.TA variable">Task Automation</span> settings for <span class="mc-variable Integrations.Product-ePay variable">ePay</span> deposit reconciliation.</p>
+                                                                        <p>For more information, refer to <a href="../Other/ePay-Deposit-Make.html" class="MCXref xref">Make ePay Deposits</a> and <a href="../Other/Reconcile-ePay-Deposits.html" class="MCXref xref">Reconcile ePay Deposits</a>..</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Service Scripts</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Web-Service.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Web-Service.htm</a></p>
+
+                                                        <h1 id="WebServiceScripts" data-magellan-target="WebServiceScripts"><a name="kanchor2054"></a><a name="H1"></a>Web Service Scripts</h1>
+                                                        <p>Web service scripting functions pull data directly from the values entered and submitted through an online application. This is particularly useful when creating automated notifications for submitted online applications because you can provide a personalized email and/or text notification using specific information from the prospect or tenant application.</p>
+                                                        <p>From the email or text message section of an automated notification for <span class="Stress">Application Submitted</span>, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Script Builder</span> for web service scripting. For more information, refer to <a href="Script-Scripting.html" class="MCXref xref">Scripting</a>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Builder-2024.png" alt="The Script Builder pop-up displays with a script that outputs the prospects name and applications date." class="lightbox" />
+                                                        </p>
+                                                        <p>Scripting functions for online applications are available in the <span class="Section">Insertable Fields</span> panel for the following:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Contact</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Prospect</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Tenant</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>User Defined Field</p>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>In order for the following web service scripting functions to contain data, the online application field from which the script is pulling must be matched to the corresponding <span class="mc-variable Products.RM variable">Rent Manager</span> field.</p>
+                                                        </div>
+                                                        <h2 id="ContactScripts" data-magellan-target="ContactScripts"><a name="H2_1"></a>Contact Scripts</h2>
+                                                        <p colspan="2">Web service scripting functions for contacts are used to pull data for a selected contact directly from a submitted online application.</p>
+                                                        <p>Web service scripts for contacts are inserted as <span class="Formula">*{rmwebsvc_people_fieldname_<span class="Required">#</span>}*</span> where people indicates contacts and <span class="Required">#</span> refers to the index for additional contacts listed after the primary tenant/prospect. When using these scripts, you must replace <span class="Required">#</span> with a numeric index. For example, entering <span class="Input">1</span> selects the first additional contact listed after the primary tenant or prospect.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Birthday</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_bdate_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">Birthday</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_email_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">Email</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Employer</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_employer_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">Employer</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_fname_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">First Name</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_lname_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">Last Name</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>License</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_license_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">License</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Soc Sec #</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_ssn_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">Soc Sec #</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Vehicle</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_people_car_#}*</p>
+                                                                        <p>The data the applicant entered for the contact's <span class="Field">Vehicle</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>User Defined Field</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_eudf_fieldname_#}*</p>
+                                                                        <p>The data the applicant entered for the contact-type user defined field (UDF) on the online application.</p>
+                                                                        <p>Web service scripts for contact UDFs are inserted as <span class="Formula">*{rmwebsvc_eudf_fieldname_<span class="Required">#</span><span class="Formula">}</span>*</span> where <span class="Required">#</span> refers to the index for additional contacts listed after the primary tenant/prospect. When using these scripts, you must replace <span class="Required">#</span> with a numeric index. For example, entering <span class="Input">1</span> selects the first additional contact listed after the primary tenant or prospect.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>In order for the UDF web service scripting fields to contain data, the online application fields from which the script is pulling must be matched to the corresponding <span class="mc-variable Products.RM variable">Rent Manager</span> UDF.</p>
+                                                                        </div>
+                                                                        <p class="Formula">*{rmwebsvc_eudf_minor_1}*</p>
+                                                                        <p>The data for the <span class="Field">Minor</span> user defined field of the first additional contact listed after the primary tenant or prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ProspectScripts" data-magellan-target="ProspectScripts"><a name="H2_2"></a>Prospect Scripts</h2>
+                                                        <p>Web service scripting functions for prospects are used to pull data for a primary prospect directly from a submitted online application.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Note that similar to other areas of <span class="mc-variable Products.RM variable">Rent Manager</span> where tenants and prospects have certain fields in common, a tenant web service script may provide data for the same field if the applicant is a prospect.</p>
+                                                        </div>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p># People</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_num_of_people}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field"># People</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Application Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_applicationdate}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Application Date</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Birthday</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_bdate}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Birthday</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_comment}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Comment</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_display}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Display</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_email}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Email</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Employer</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_employer}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Employer</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_fname}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">First Name</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Level</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_interest_level}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Interest Level</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_lname}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Last Name</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>License</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_license}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">License</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Soc Sec #</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_ssn}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Soc Sec #</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Vehicle</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_car}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Vehicle</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>User Defined Field</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_pudf_fieldname}*</p>
+                                                                        <p>The data the applicant entered for prospect-type user defined field (UDF) on the online application.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>
+									In order for the UDF web service scripting fields to contain data, the online application fields from which the script is pulling must be matched to the corresponding <span class="mc-variable Products.RM variable">Rent Manager</span> UDF.</p>
+                                                                        </div>
+                                                                        <p class="Formula">*{rmwebsvc_pudf_driver's_license_photo}*</p>
+                                                                        <p>The data the applicant entered for the <span class="Field">Driver's License Photo</span> user defined field on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="TenantScripts" data-magellan-target="TenantScripts"><a name="H2_3"></a>Tenant Scripts</h2>
+                                                        <p>Web service scripting functions for tenants are used to pull data for a primary tenant directly from a submitted online application. </p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Note that similar to other areas of <span class="mc-variable Products.RM variable">Rent Manager</span> where tenants and prospects have certain fields in common, a tenant web service field may provide data for the same field if the applicant is a prospect. </p>
+                                                        </div>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Birthday</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_bdate}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Birthday</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_pcity}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">City</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Phone</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_phone_primary}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Phone</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_pstate}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">State</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Street 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_pstreet1}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Street1</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Street 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_pstreet2}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Street2</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default ZIP</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_pzip}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Postal Code</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_display}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Display</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_email}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Email</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Employer</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_employer}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Employer</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_fname}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">First Name</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_lname}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Last Name</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>License</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_license}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">License</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move In Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_movein}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Move In</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move Out Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_moveout}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Move Out</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Soc Sec #</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_ssn}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Soc Sec #</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Vehicle</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_car}*</p>
+                                                                        <p>The data the applicant entered for their <span class="Field">Vehicle</span> on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">User Defined Field</td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">*{rmwebsvc_cudf_fieldname}*</p>
+                                                                        <p>The data the applicant entered for the tenant-type user defined field (UDF) on the online application.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>
+									In order for the UDF web service scripting fields to contain data, the online application fields from which the script is pulling must be matched to the corresponding <span class="mc-variable Products.RM variable">Rent Manager</span> UDF.</p>
+                                                                        </div>
+                                                                        <p class="Formula">*{rmwebsvc_cudf_permission_to_send_texts}*</p>
+                                                                        <p>The data the applicant entered for the <span class="Field">Permission to Send Texts</span> user defined field on the online application.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

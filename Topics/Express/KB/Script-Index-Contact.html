@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Contact.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Contact.htm</a></p>
+
+                                                        <h1 id="ContactIndexing" data-magellan-target="ContactIndexing"><a name="aanchor1185"></a>
+                                                            <a name="kanchor1975"></a><a name="H1"></a>Contact Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>When the Contact class is used as a child class in a script (e.g., <span class="Formula">Tenant.Contact.<span class="Required">Function</span></span>), an index can be specified to uniquely identify contacts that are associated with the preceding class. For example, tenants can be associated with multiple contacts, and indexing can be used to identify each of those contacts.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Owner accounts within <span class="mc-variable Products.RM variable">Rent Manager</span> do not have multiple contacts, so functions with the Contact child class refer to the owner's contact information on the owner's details page.</p>
+                                                            <p>The index parameter for the Contact child class when used with the Owner parent class returns <span class="Input">Invalid contact index</span> on any value other than the default value of <span class="Input">0</span>.</p>
+                                                        </div>
+                                                        <h2 id="ContactIndexRelationships" data-magellan-target="ContactIndexRelationships"><a name="H2_1"></a>Contact Index Relationships</h2>
+                                                        <p>The Contact class may use an index parameter when it is preceded by certain classes. Each class is described below.</p>
+                                                        <p>Contacts associated with a prospect, tenant, or vendor are organized by the primary contact first, while the remaining contacts are indexed alphabetically by last name. The contact with <span class="Field">Primary</span> checked in the contact's details has an index of <span class="Input">0</span>, and the first additional contact has an index of <span class="Input">1</span>, and so on.</p>
+                                                        <h3><a name="H3_1"></a>Prospect.Contact Indexing</h3>
+                                                        <p>You can view a contact's index for a prospect by viewing the order in which the contacts display on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Contact-Prospect-2024.png" alt="The View Contacts pop-up displays with the details for the prospect's primary contact." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Prospect.Contact(0).PhoneNumber.FullNumber]</p>
+                                                        <p>Using the information in the above image, this returns the full phone number (including extension, if applicable) of <span class="Stress">Allison Beech</span>, the <span class="Field">Primary</span> contact of the prospect.</p>
+                                                        <h3><a name="H3_2"></a>Tenant.Contact Indexing</h3>
+                                                        <p>You can view a contact's index for a tenant by viewing the order in which the contacts display on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Contact-Tenant-2024.png" alt="The View Contacts pop-up displays with the details for the tenant's primary contact." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Tenant.Contact(1).Email]</p>
+                                                        <p>Using the information in the above image, this returns the email address of <span class="Stress">Alfred Pennyworth</span>, the first additional contact of the tenant.</p>
+                                                        <h3><a name="H3_3"></a>Vendor.Contact Indexing</h3>
+                                                        <p>You can view a contact's index for a vendor by viewing the order in which the contacts display on the <span class="Window">View Contacts</span> pop-up.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Contact-Vendor-2024.png" alt="The View Contacts pop-up displays with the details for the vendor's primary contact." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Vendor.Contact(0).Email()]</p>
+                                                        <p>Using the information in the above image, this returns the email address of <span class="Stress">Nancy Adams</span>, the primary contact of the vendor.</p>
+                                                    
+</main>
+</body>
+</html>

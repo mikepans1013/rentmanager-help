@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up Billable Expenses</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Billable-Expenses-Set-Up.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Billable-Expenses-Set-Up.htm</a></p>
+
+                                                        <h1 id="SetUpBillableExpenses" data-magellan-target="SetUpBillableExpenses"><a name="kanchor281"></a><a name="H1"></a>Set Up Billable Expenses</h1>
+                                                        <p>Billable expenses is a billing and invoicing tool that allows you to charge back expenses to tenants or owners in the form of invoices, and optionally add a markup amount to each billable expense as part of the reimbursement. When this tool is enabled, columns are added to <span class="mc-variable Products.RM variable">Rent Manager</span> bills, checks, and credit card transactions to identify billable expenses, assign them to an owner or tenant, add a markup for the expenses, and then create invoices to bill back those expenses.</p>
+                                                        <p>To set up billable expenses, you must enable it in system preferences and, if you invoice owners, establish settings for how those receivables are handled when billable expenses are paid. After completing these setup steps, you can begin to utilize the tool in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">System Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1EnableBillableExpenses" data-magellan-target="Step1EnableBillableExpenses"><a name="H2_1"></a>Step 1: Enable Billable Expenses</h2>
+                                                        <p>To enable billable expenses, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Checks/Bills <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Billable Expenses</span> section, check <span class="Field">Enable billable expenses</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Configure the following default options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Default Billback Entity</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default entity, either <span class="Field">Owner</span> or <span class="Field">Tenant</span>, that displays in the <span class="Column">Billable To</span> column on checks, bills, and credit card transactions.</p>
+                                                                                <p>If <span class="Field">Auto</span> is selected, <span class="mc-variable Products.RM variable">Rent Manager</span> automatically determines the  entity in the <span class="Column">Billable To</span> column based on who is being invoiced. If your management company property is being billed back, owners display. If any other property is being billed back, tenants display.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Default Markup</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The dollar amount or percentage that displays by default in the <span class="Column">Markup</span> column of each billable expense.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />Billable expenses are now enabled in your database.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2SetUpReceivableOptionsforInvoicingOwners" data-magellan-target="Step2SetUpReceivableOptionsforInvoicingOwners"><a name="H2_2"></a>Step 2: Set Up Receivable Options for Invoicing Owners</h2>
+                                                        <p>To establish your management company's preferences for receivables from owner invoices, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Management Company</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Receivables</span> section, check <span class="Field">Add a payment from the owner when a bill is paid to the management company</span>. With this option enabled, paying a bill that has the vendor set to your management company results in <span class="mc-variable Products.RM variable">Rent Manager</span> automatically adding a payment on the owner account to reimburse your management company. That payment pays the invoice linked to the bill by the billable expenses tool.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enable any of the following options to best reflect your management company's practices:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Allow manual allocation of payment at the time bills are paid</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows you to choose which open owner invoices to apply the check payment toward when paying bills with billable expenses. If unchecked, <span class="mc-variable Products.RM variable">Rent Manager</span>&#160;automatically applies an owner payment to the oldest open owner invoice.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Deposit the payments for commingled funds</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If the expensed property in a bill has commingled funds (meaning the expensed property and your management company use the same default bank), check this option to automatically deposit the owner payment that is created to pay the invoice linked to the bill. If this option is unchecked, owner payments must be manually deposited.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Deposit the payments for non-commingled funds</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If the expensed property in a bill has non-commingled funds (meaning the expensed property and your management company do <span class="Stress">not</span> use the same default bank), check this option to automatically deposit the owner payment that is created to pay the invoice linked to the bill in your management company's bank. If this option is unchecked, owner payments must be manually deposited.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>This option updates the allocation of your funds in <span class="mc-variable Products.RM variable">Rent Manager</span>, but you must still make the money transfer to the correct bank account in the real world.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">Click <span class="BigButtons">Save</span>.<br />Your preferences for owner invoices created with billable expenses are established.</li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

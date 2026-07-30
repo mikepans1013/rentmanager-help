@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up Web Chat Plugin</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Web-Chat-Plug-In.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Web-Chat-Plug-In.htm</a></p>
+
+                                                        <h1 id="SetUpWebChatPlugin" data-magellan-target="SetUpWebChatPlugin"><a name="kanchor1150"></a><a name="H1"></a>Set Up Web Chat Plugin</h1>
+                                                        <p>The Web Chat feature allows you to place a chat interface on your website for visitors to initiate a conversation with a live agent.
+
+This topic covers adding a web chat plugin to your WordPress website and other non-WordPress websites.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Before setting up the plugin, you must create a Web Chat Queue, which defines which questions a visitor should be asked, which <span class="mc-variable Products.RM variable">Rent Manager</span> users may chat with visitors, and general settings. For more information, refer to <a href="Web-Chat-Add-Queue.html" class="MCXref xref">Add a Web Chat Queue</a>. Additionally,  if you wish to use the web chat plugin with a page created with the <span class="mc-variable Products.API variable">API</span>, you must be licensed to use web chat. For more information, reach out to your sales representative.</p>
+                                                        </div>
+                                                        <h2 id="AddPlugintoWordPressWebsite" data-magellan-target="AddPlugintoWordPressWebsite"><a name="H2_1"></a>Add Plugin to WordPress Website</h2>
+                                                        <p>After creating a queue, you (or your website developer) must configure the plugin in your WordPress settings. To add a plugin to your WordPress website, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Download the plugin at cdn.rentmanager.com/WebChat/plugin/wordpress/v1/rmwebchat.zip.<br />The file is automatically saved to your downloads folder.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In a web browser, login to your WordPress site and navigate to <span class="Section">Plugins</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Add New</span>.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Upload Plugin</span>.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Select the downloaded web chat plugin zip file, and click <span class="BigButtons">Install Now</span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section"><span class="mc-variable Products.RM variable">Rent Manager</span> Web Chat</span> section, click <span class="BigButtons">Activate</span>.<br />The <span class="Field">RM Web Chat Settings</span> display in the <span class="Section">Settings</span> section of the left panel.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Click <span class="Field">RM Web Chat Settings</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Web-Chat-WordPress-Web-Chat-Options-From-12-Topic.png" alt="The Rent Manager Web Chat Options pop-up displays options for setting up web chat on a website." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Enter information into the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use web chat default style sheet?</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>When selected, the web chat form appearance is supplied by <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>Unless you are working with a developer who can add custom styling to the form, leave this option checked. If unchecked, the form pulls from existing styles from your WordPress theme, and most themes do not have styling in place for the web chat.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Your Company ID</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="Field">Company Code</span> for the database which should receive the chat requests from visitors to your site. Your <span class="Field">Company Code</span>, located at the top of your <span class="mc-variable Products.RMX variable">Rent Manager Express</span> page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>External services URL</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An optional URL that is used to connect to external services. By default, this is a production URL, but in a development or quality assurance environment this can be changed to map to external services or locally.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Access token</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If using the optional <span class="Field">External services URL</span>, enter a valid token with web chat privileges.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>For most users, the <span class="Field">External service URL</span> and <span class="Field">Access token</span> fields are not used during the setup.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Click <span class="BigButtons">Save Changes</span>.</p>
+                                                            </li>
+                                                            <li value="10">
+                                                                <p>Copy the following shortcode. Required values are red.</p>
+                                                                <p class="Input">[rm-web-chat queue='<span class="Required">yourqueuename</span>' location='<span class="Required">YourFriendlyLocationName</span>'].</p>
+                                                            </li>
+                                                            <li value="11">
+                                                                <p>Navigate to the page in the WordPress Admin panel where the web chat is located and paste the shortcode into the appropriate location. Replace the default values with the following information.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Default Value</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p><span class="Required">'yourqueuename'</span>
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the Web Chat queue you wish to use.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p><span class="Required">'yourfriendlylocationname'</span>
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The specific <span class="mc-variable Products.RM variable">Rent Manager</span> location from which you would like to conduct web chats.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="12">
+                                                                <p>Click <span class="BigButtons">Update</span> to save your changes.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="AddPlugintoOtherTypesofWebsites" data-magellan-target="AddPlugintoOtherTypesofWebsites"><a name="H2_2"></a>Add Plugin to Other Types of Websites</h2>
+                                                        <p>Before you can add a web chat plugin to a non-WordPress website, you first need set up the plugin and configure the options for how it works on your website.</p>
+                                                        <h3><a name="H3_1"></a>Plugin Setup</h3>
+                                                        <p>To set up the web chat plugin on your website, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Reference the following required CDN in your file.</p>
+                                                                <p><span class="Formula">&lt;script type="text/javascript" src="https://cdn.rentmanager.com/WebChat/plugin/js/v1/WebBasedChatWizard.js"&gt;&lt;/script&gt;</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Include the following CSS to add default styling to the form. The form will also pull from your site's built-in styles.</p>
+                                                                <p><span class="Formula">&lt;link rel="stylesheet" type="text/css" href="https://cdn.rentmanager.com/WebChat/plugin/css/v1/WebBasedChatWizard.css"/&gt;</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Include the following link to Microsoft's ASP.NET SignalR. Microsoft hosts this link. Therefore, it may change without notice.</p>
+                                                                <p><span class="Formula">&lt;script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.2.min.js"&gt;&lt;/script&gt;</span>.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Include the following link to Font Awesome (v5 or higher) CSS files. Font Awesome hosts this link. Therefore, it may change without notice.</p>
+                                                                <p><span class="Formula">&lt;link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/&gt;</span>.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Create a &lt;div&gt; or other HTML element for your form with any class or ID, such as in the following example. The web chat form will be generated inside of this element.</p>
+                                                                <p><span class="Formula">&lt;div class="rmWebChatContainer"&gt;&lt;/div&gt;</span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Add one of the following options variable to your JavaScript with any name. The following options are passed in a single object, upon initialization of the web chat plugin. Required options are noted in red. Additionally, each option has a default value of <span class="Field">N/A</span>.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option Name</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description and Default Function</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p><span class="Required">COMPANYCODE</span>
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of your database, which will be used when connecting to the <span class="mc-variable Products.RM variable">Rent Manager</span> API. Your <span class="Field">Company Code</span>, located at the top of your <span class="mc-variable Products.RMX variable">Rent Manager Express</span> page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p><span class="Required">Location</span>
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The specific location from which you would like to pull and submit queue information.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p><span class="Required">QueueName</span>
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the queue where you wish to direct visitors to your site. This corresponds to the established web chat queue in <span class="mc-variable Products.RM variable">Rent Manager</span>. You can have multiple web chat instances on your website, each using a different queue.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>InitialName</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the visitor who initialized the chat. If <span class="Field">Name</span> is also a question in the queue, the name the visitor submitted populates  in the <span class="Field">Name</span> field, and the visitor may change it before submitting the web chat request.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>InitialEmailAddress</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The email address of the visitor who initialized the chat. If <span class="Field">Email Address</span> is also a question in the queue, the email address the visitor submitted populates in the <span class="Field">Email Address</span> field, and the visitor may change it before submitting the web chat request.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>InitialPhoneNumber</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The phone number of the visitor who initialized the chat. If <span class="Field">Phone Number</span> is also a question in the queue, the phone number the visitor submitted populates in the <span class="Field">Phone Number </span>field, and the visitor may change it before submitting the web chat request.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>InitialPropertyName</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property of the visitor who initialized the chat. If <span class="Field">Property</span> is also a question in the queue, the property the visitor submitted populates in the <span class="Field">Property</span> field, and the visitor may change it before submitting the web chat request.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>InitialUnitName</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The unit of the visitor who initialized the chat. If <span class="Field">Unit</span> is also a question in the queue, the unit the visitor submitted populates in the <span class="Field">Unit</span> field, and the visitor may change it before submitting the web chat request.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Use the following example to guide your script. Text in <span class="Required">red</span> denotes where you information should be inserted.</p>
+                                                                    <p class="Formula">var rmWebChatOptions = {</p>
+                                                                    <p class="Formula">ENTID: "<span class="Required">YOURCOMPANYCODE</span>",</p>
+                                                                    <p class="Formula">Location: "<span class="Required">Default</span>",</p>
+                                                                    <p class="Formula">QueueName: "<span class="Required">YOURQUEUE</span>",</p>
+                                                                    <p class="Formula">}</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <ol data-mc-continue="true">
+                                                            <li value="7">
+                                                                <p>In your script, initialize the form using the code below. Use the class, ID and options that you specified above.</p>
+                                                                <p><span class="Formula">$('.rmWebChatContainer').WebBasedChatWizard("initialize", rmWebChatOptions);</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

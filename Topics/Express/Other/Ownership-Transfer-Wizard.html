@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ownership Transfer Wizard</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Ownership-Transfer-Wizard.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Ownership-Transfer-Wizard.htm</a></p>
+
+                                                        <h1 id="OwnershipTransferWizard" data-magellan-target="OwnershipTransferWizard"><a name="kanchor1611"></a><a name="H1"></a>Ownership Transfer Wizard</h1>
+                                                        <p>When you need to transfer a property between owners, such as when an owner sells their ownership stake in a property, you can use the <span class="Window">Ownership Transfer Wizard</span> to easily transfer the ownership while maintaining data and history from the original ownership. When you transfer ownerships, the original (source) property is archived in <span class="mc-variable Products.RM variable">Rent Manager</span>, and a new property is created for the new owner, which maintains separate financial records of each.</p>
+                                                        <p>Transferring ownership results in the following:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>A new property is created with the data  from the source property.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>New units are created with the data from the source units.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Tenants and prospects associated with the source property are transferred to the new property and units.</p>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <p>When you process an ownership transfer, many different aspects of your database are updated to account for the information.</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Add, View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Owners</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Ownership Transfer Wizard</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Letter/Email&#160;Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1"><span class="Required">Entity</span> templates/packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>Privileges in the following sections take into consideration features and data that might be impacted during the transfer process. Not transfers require all the privileges listed below.</p>
+                                                            <p>In addition, you need the <span class="Column"><span class="Required">Entity</span> templates/packets</span> privilege for the entity types affected by the ownership transfer (e.g. <span class="Column">Owner templates/packets</span>).</p>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The transfer of an ownership cannot be rolled back, due to the separation of financial records from the source property to the new property. If you have any questions during this process, please stop and call <span class="mc-variable Products.RM variable">Rent Manager</span> support.</p>
+                                                            <p data-mc-conditions="Snippet Conditions.4">If you use per unit <span class="mc-variable Products.RM variable">Rent Manager</span> licensing, you must have enough available licenses for both the units at the new property and the units at the historical copy of the property in order to perform the transfer. Once complete, you can then inactivate the licenses for the units at the historical property.</p>
+                                                        </div>
+                                                        <h2 id="Step1SelectaPropertyOwnershiptoTransfer" data-magellan-target="Step1SelectaPropertyOwnershiptoTransfer"><a name="H2_1"></a>Step 1:&#160;Select a Property Ownership to Transfer</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>In this section, select the existing owner and property to transfer.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Owner-Transfer-Wizard-Transfers-LC-032824.png" alt="This section displays fields and options for ending the old ownership." class="lightbox" />
+                                                        </p>
+                                                        <p>To select the owner and property to transfer, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Enter the <span class="Field">Property Transfer Date</span>. This is the date on which the old ownership ends and the new one begins in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the <span class="Field">Owner</span> whose ownership is ending.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Select the <span class="Field">Ownership</span> property to transfer.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>To control how <span class="mc-variable Products.RM variable">Rent Manager</span> ends the ownership, choose from the following options:<br /><table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0"><col class="TableStyle-Standard-Column-Column1" /><col class="TableStyle-Standard-Column-Column1" /><thead><tr class="TableStyle-Standard-Head-Header1"><th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th><th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th></tr></thead><tbody><tr class="TableStyle-Standard-Body-Body1"><td class="TableStyle-Standard-BodyE-Column1-Body1"><p>Set the property inactive</p></td><td class="TableStyle-Standard-BodyD-Column1-Body1"><p>Makes the source property inactive after the transfer is completed. Use this option if you do not expect to do anything further (such as entering data or transactions) with the original property after the transfer.</p></td></tr><tr class="TableStyle-Standard-Body-Body1"><td class="TableStyle-Standard-BodyB-Column1-Body1"><p>Set the ownership contract end date</p></td><td class="TableStyle-Standard-BodyA-Column1-Body1"><p>Sets the <span class="Field">Property Transfer Date</span> as the end date of the previous owner's contract. Use this option if you paid all management fees and performed a final owner distribution for the previous property owner.</p></td></tr></tbody></table></p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2EnteraNewPropertyandOwner" data-magellan-target="Step2EnteraNewPropertyandOwner"><a name="H2_2"></a>Step 2:&#160;Enter a New Property and Owner</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Add</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Property Bank Settings</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>In this section, enter the name, default bank account, and owner(s) of the new property.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Owner-Transfer-Wizard-Destination-LC-032824.png" class="lightbox" alt="This section displays fields and options for creating the new ownership." />
+                                                        </p>
+                                                        <p>To create the new ownership, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Enter the <span class="Field">Name</span> and <span class="Field">Short Name</span> to use for the new property.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the new property's <span class="Field">Default Bank</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Select the <span class="Field">Primary Owner</span> of the new ownership and enter the <span class="Field">Percentage</span> stake they hold in this ownership.<br />If the new property has more than one owner, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" />&#160;<span class="ActionItems">Add Ownership</span> to add additional owners and set their ownership <span class="Field">Percentage</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3SetUpManagementFees" data-magellan-target="Step3SetUpManagementFees"><a name="H2_3"></a>Step 3:&#160;Set Up Management Fees</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">
+                                                                            <p>Management fee setup</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Add</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Recurring Charges/Market Rent</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Recurring charges</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>In this section, set up the new ownership's management fees.</p>
+                                                        <p>There are two options:&#160;standard and advanced. A standard setup offers greater flexibility for posting fees to owners and provides greater transparency into fee calculations. In a standard setup, fee percentages are calculated based on payments allocated to charge types, which means you can see the detail of every transaction that was included in your fee posting. An advanced setup provides more extensive customization options and calculates fees against the activity of specific general ledger (GL) accounts over a fixed date range.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Owner-Transfer-Wizard-Management-Fees-LC-032824.png" class="lightbox" alt="This section displays options for setting up the management fee structure." />
+                                                        </p>
+                                                        <h3><a name="H3_1"></a>Option 1: Standard</h3>
+                                                        <p>To create a standard management fee setup for the new ownership, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Field">Method</span> drop-down, select <span class="Field">Standard</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the remaining fields at the top of the section, enter the following information:</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Templates</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Select an existing management fee template, or select <span class="Field">&lt;&#160;Custom Setup&#160;&gt;</span> to create a new management fee setup.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Start</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the management fee setup takes effect for the new ownership.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>End</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The date on which the management fee setup ends for the new ownership.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In <span class="Section">Management Fees and Percentages</span>, enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Monthly Min Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The minimum dollar amount of management fees to collect from this property each month. If your calculated fees are below this amount, the amount in this field is charged instead.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Monthly Max Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The maximum dollar amount of management fees to collect from this property each month. If your calculated fees are above this amount, the amount in this field is charged instead.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Monthly Flat Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount collected on a per month basis when you post management fees. This fee applies only when your management fee postings include the first day of a month. For example, if you post from 1/1/<span class="mc-variable Dates.Year4 variable">2026</span> to 3/31/<span class="mc-variable Dates.Year4 variable">2026</span>, this fee posts three times. If you post from 1/14/<span class="mc-variable Dates.Year4 variable">2026</span> to 3/31/<span class="mc-variable Dates.Year4 variable">2026</span>, this fee posts twice because the first day of January does not fall within this date range.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Monthly Per Unit Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount collected on a per month basis for each unit when you post management fees. This fee applies only when your management fee postings include the first day of a month.
+
+For example, if you enter <span class="Input">5</span> in this field and post management fees for a property with 100 properties, a $500 charge is added to the management fee.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Per Occupied Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount collected for each currently occupied unit when you post management fees. This fee applies every time management fees are posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Prorate Per Occupied Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Prorates the <span class="Field">Per Occupied Fee</span> dollar amount based on the number of days each unit was occupied since the last management fee posting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Post Per Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Collects management fees separately from each unit, meaning the management fee transactions are unit specific.</p>
+                                                                                <p>This option does <span class="Stress">not</span> allow you to post management fees for a single rental unit, but changes your reports to reflect how much you collected in management fees from each unit separately.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p><span class="mc-variable Products.RM variable">Rent Manager</span> includes <span class="Stress">both</span> active and inactive units when posting.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Charge Type</span> and enter the following information. Repeat for as many charge types as needed for the setup.</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The GL account from which fees are collected on a percentage basis.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Percentage</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The percentage of the GL account's income that is collected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Expense Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The GL account that tracks the management fee expense applied to the property for the percentage of the selected GL account.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Mgmt Income Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The charge type associated with the owner's management fee charge.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In <span class="Section">Pass Through Charges</span>, select the transaction charge type(s) for which 100 percent of income is collected as a pass through and transferred directly to the management company. Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Charge Type</span> and select a charge type from the drop-down. Repeat for as many charge types as needed for the setup.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Option 2: Advanced</h3>
+                                                        <p>To create an advanced management fee setup for the new ownership, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Field">Method</span> drop-down, select <span class="Field">Advanced</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the remaining fields at the top of the section, enter the following information:</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Templates</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Select an existing management fee template, or select <span class="Field">&lt;&#160;Custom Setup&#160;&gt;</span> to create a new management fee setup.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Start</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the management fee setup takes effect for the new ownership.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>End</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The date on which the management fee setup ends for the new ownership.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In <span class="Section">Management Fees and Percentages</span>, enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Per Post Min Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The minimum dollar amount of management fees to collect from this property each time fees are posted. If your calculated fees are below this amount, the amount in this field is charged instead.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Per Post Max Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The maximum dollar amount of management fees to collect from this property each time fees are posted. If your calculated fees are above this amount, the amount in this field is charged instead.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Monthly Flat Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount collected on a per month basis when you post management fees. This fee applies only when your management fee postings include the first day of a month. For example, if you post from 1/1/<span class="mc-variable Dates.Year4 variable">2026</span> to 3/31/<span class="mc-variable Dates.Year4 variable">2026</span>, this fee posts three times. If you post from 1/14/<span class="mc-variable Dates.Year4 variable">2026</span> to 3/31/<span class="mc-variable Dates.Year4 variable">2026</span>, this fee posts twice because the first day of January does not fall within this date range.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Monthly Per Unit Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount collected on a per month basis for each unit when you post management fees. This fee applies only when your management fee postings include the first day of a month.
+
+For example, if you enter <span class="Input">5</span> in this field and post management fees for a property with 100 properties, a $500 charge is added to the management fee.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>%&#160;of Net Income</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The percentage of the property's net income since the last time you posted management fees as calculated on a cash basis.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>% of Total Income</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The percentage of the property's total (gross) income since the last time you posted management fees as calculated on a cash basis.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Per Occupied Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount collected for each currently occupied unit when you post management fees. This fee applies every time management fees are posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Prorate Per Occupied Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Prorates the <span class="Field">Per Occupied Fee</span> dollar amount based on the number of days each unit was occupied since the last management fee posting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Post Per Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Collects management fees separately from each unit, meaning the management fee transactions are unit specific.</p>
+                                                                                <p>This option does <span class="Stress">not</span> allow you to post management fees for a single rental unit, but changes your reports to reflect how much you collected in management fees from each unit separately.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p><span class="mc-variable Products.RM variable">Rent Manager</span> includes <span class="Stress">both</span> active and inactive units when posting.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In <span class="Section">Chart Account Percentages</span>, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Chart Account</span> and enter the following information. Repeat for as many GL accounts as needed for the setup.</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The GL account from which fees are collected on a percentage basis.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Method</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The accounting basis used to calculate how much money is collected from the GL account.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Percentage</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The percentage of the GL account's income that is collected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>PT</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Collects the GL account's income as a pass through directly to the management company. The GL account balance is reduced by the percentage you specified, and those funds are transferred to your management company.
+
+The <span class="Field">Property Expense Account</span> defined in the next column is not used when this option is enabled.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Expense Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The GL account that tracks the management fee expense applied to the property for the percentage of the selected GL account.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Mgmt Income Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The charge type associated with the owner's management fee charge.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In <span class="Section">Chart Account Transfers</span>, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Chart Account</span> and enter the following information. Repeat for as many GL accounts as needed for the setup.</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p colspan="2">The GL account from which a dollar amount is transferred. The activity of this account for the period this management fee posting is used in conjunction with the <span class="Field">Percent</span> and <span class="Field">Amount</span> fields to determine how much money should be transferred between the specified <span class="Field">Debit</span> and <span class="Field">Credit</span> accounts.
+</p>
+                                                                                <p colspan="2">
+Alternatively, you can create a chart account transfer based on the aggregate (accumulated) activities described below.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>&lt;Net Income&gt;</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The total of the income minus the expenses from this ownership since the last posting.</p>
+                                                                                                <p class="Formula">Net Income = Total Income - Expenses</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>&lt;Total Income&gt;</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The total income from this ownership since the last posting.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>&lt;Management Fees&gt;</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The total of all your management fees for that posting.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Method</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The accounting basis used to calculate how much money to transfer between the specified <span class="Field">Debit</span> and <span class="Field">Credit</span> accounts.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Debit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The GL account to debit for the calculated transfer total. Debits increase expense and asset accounts and decrease income, equity, and liability accounts.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Credit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The GL account to credit for the calculated transfer total. Credits increase income, equity, and liability accounts and decrease expense and asset accounts.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Percent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The percentage of the <span class="Field">Account</span> activity to transfer between the specified <span class="Field">Debit</span> and <span class="Field">Credit</span> GL accounts.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>An additional flat amount to reallocate when transferring money between the specified <span class="Field">Debit</span> and <span class="Field">Credit</span> GL accounts.</p>
+                                                                                <p>Both the <span class="Field">Percent</span> and <span class="Field">Amount</span> fields are applied along with the <span class="Field">Account</span> activity to determine how much money to transfer.</p>
+                                                                                <p>For example, the GL account has an activity of $1,000, the <span class="Field">Percent</span> field is set to <span class="Input">10</span>, and the <span class="Field">Amount</span> field is set to <span class="Input">50</span>. In this case, $150 in total funds are reallocated—$100, which is 10 percent of $1,000, and another $50 entered in the <span class="Field">Amount</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4TransferOpenCharges" data-magellan-target="Step4TransferOpenCharges"><a name="H2_4"></a>Step 4:&#160;Transfer Open Charges</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Setup</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Override accounting close date</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Modify lease start/end dates before accounting close</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Create multiple leases on a tenant</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="4">Receivables</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenant transactions</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Add</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Allow to backdate charges</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Allow to credit tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Change late fees</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>In this section, open (unpaid or partially paid) charges that have been assessed to tenants and prospects associated with the source property can be moved to the new property. A credit is applied to the tenant or prospect accounts at the source property, which clears their balances. Then, a replacement charge is created for the new property.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Owner-Transfer-Wizard-Open-Charges-LC-032824.png" class="lightbox" alt="This section displays options for handling open charges on the old ownership." />
+                                                        </p>
+                                                        <p>To determine how open charges at the old property are transferred to the new property, choose from the following options:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Use an offsetting credit (negative charge)&#160;to transfer the charge's remaining open balance as of</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Transfers open charges to the new property by adding a credit to the tenant or prospect account on the source property and a replacement charge on the account at the new property that uses the same date as the original charge.</p>
+                                                                        <p>Select <span class="Field">Set Date</span> to enter the date on which the transfer takes place, or select <span class="Field">Charge Date</span> to give the credit the same date as the charge it replaces.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Replace the open charge's associated lease with the new lease</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Updates the property (and unit, if specified) associated with the charge on the tenant or prospect account to the new property. Charges that have payments or credits already allocated do not have their property updated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step5TransferSecurityDeposits" data-magellan-target="Step5TransferSecurityDeposits"><a name="H2_5"></a>Step 5:&#160;Transfer Security Deposits</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Receivables</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Transfer security deposits</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>In this section, determine how security deposits transfer from the source property to the new property. You can set up the transfer so that the original owner keeps the security deposit funds, or you can transfer funds between owners.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Owner-Transfer-Wizard-Security-Deposits-LC-032824.png" class="lightbox" alt="This section displays options for transferring security deposit funds between ownerships." />
+                                                        </p>
+                                                        <p>To transfer security deposits, choose from the following options:</p>
+                                                        <h3><a name="H3_3"></a>Option 1:&#160;Owner Transfers Security Deposit Funds</h3>
+                                                        <p>If the previous owner is transferring the security deposit funds to the new owner, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Select <span class="Field">Transfer security deposit liability and move funds through a bank transfer</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Choose one of the following options to determine how the transfer is recorded:<br></br></p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Journal</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Use a journal entry to document the transfer of funds.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Check and Deposit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Write a check for the amount of the security deposits from the previous owner's bank and deposit it in the new owner's bank.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Check</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Write a check for the amount of the security deposits.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If you selected <span class="Field">Journal</span> or <span class="Field">Check and Deposit</span>, select the&#160;<span class="Field">Source Bank</span>, where the previous owner's security deposits are kept, and the <span class="Field">Destination Bank</span>, where the security deposits are deposited for the new owner.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_4"></a>Option 2:&#160;Owner Keeps Security Deposit Funds</h3>
+                                                        <p>If the previous owner is keeping the security deposit funds, and the new owner is assuming responsibility for the repayment of those funds, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Select <span class="Field">Transfer security deposit liability and use other equity accounts for the offsetting journal entry</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the <span class="Field">Source Account</span>. This is the equity-type general ledger account that is credited to offset the security deposit liability that was debited on the source property.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Select the <span class="Field">Destination Account</span>. This is the equity-type general ledger account that is debited to offset the security deposit liability that was credited on the new property.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step6FinishtheTransfer" data-magellan-target="Step6FinishtheTransfer"><a name="H2_6"></a>Step 6:&#160;Finish the Transfer</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <p>If property groups, issues, or recurring issues are linked to the source owner's properties, the associated privileges below are required.</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Property groups</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Add</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Service Manager</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Issues</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Recurring issues</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>After all information is entered, you can review and finalize the transfer.</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Summary</span> section, review the information you entered in the <span class="Window">Ownership Transfer Wizard</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/RMX-Owner-Transfer-Wizard-Summary-LC-032824.png" class="lightbox" alt="This section displays a summary of all information from the Ownership Transfer Wizard." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>When you are done, click <span class="BigButtons">Finish</span> and confirm on the pop-up.<br />The ownership transfer is complete, and an <span class="Report">Ownership Transfer Log</span> report generates to keep for your records.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>After the transfer is complete, there are some tools and features (such as task automations, bills, automated notifications, jobs, violation code groups, and application templates) that must have the new property added or assigned. To view details on all information that does or does not transfer with the newly created property, refer to <a href="../KB/Ownership-Transfer-Results.html" class="MCXref xref">Ownership Transfer Wizard Results</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

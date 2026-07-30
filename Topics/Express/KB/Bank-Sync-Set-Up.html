@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up Bank Sync</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Bank-Sync-Set-Up.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Bank-Sync-Set-Up.htm</a></p>
+
+                                                        <h1 id="SetUpBankSync" data-magellan-target="SetUpBankSync"><a name="kanchor449"></a><a name="H1"></a>Set Up Bank Sync</h1>
+                                                        <div id="microcontent1">
+                                                            <p>The Bank Sync feature allows you to import a statement directly from your real world bank or credit card account into <span class="mc-variable Products.RM variable">Rent Manager</span> during your reconciliation process. This allows you to easily match real-world transactions to your <span class="mc-variable Products.RM variable">Rent Manager</span> data and eliminates the need to obtain a monthly statement from the bank to import or enter manually.</p>
+                                                            <div class="info">
+                                                                <p class="label1">More Information</p>
+                                                                <p>This feature is licensed and must be purchased separately. For more information, contact your sales representative at <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                            </div>
+                                                            <p>The Bank Sync feature uses a built-in integration with Plaid to safely and securely connect with your bank or credit card institution. You can add any accounts you have open with that institution so that no matter what bank or credit card general ledger (GL) account you perform a reconciliation on, you can sync your transactions in real time.</p>
+                                                        </div>
+                                                        <p>This topic will walk you through the initial setup of your banking institutions with Bank Sync in <span class="mc-variable Products.RMX variable">Rent Manager Express</span>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you have already set up your institution(s) for Bank Sync and need to add an additional account to an existing institution, refer to <a href="../Action/Bank-Sync-Additional-Account-Add.html" class="MCXref xref">Connect an Additional Account to an Institution</a> for more information.</p>
+                                                        </div>
+                                                        <h2 id="Step1ConnectanInstitutionviaPlaid" data-magellan-target="Step1ConnectanInstitutionviaPlaid"><a name="H2_1"></a>Step 1: Connect an Institution via Plaid</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Accounting</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage Bank Sync Setup</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>An institution is the bank where your account is located. For each institution, you should have only one set of login credentials associated with that bank. For example, if you have a checking and credit card account at Bank of America and you use one set of login credentials to access both accounts, you only need to connect to Bank of America once.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Your online banking credentials are securely directed to Plaid and your institution. <span class="mc-variable Products.RM variable">Rent Manager</span> does not view or store your username and password.</p>
+                                                        </div>
+                                                        <p>To connect to a banking institution, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Accounting <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Accounting Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Bank Sync Setup</span>.<br />The <span class="Window">Bank Sync Setup</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Manage Institution</span>.<br />The <span class="Window">Connect Accounts</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>You must scroll through the <span class="Section">Bank and Credit Card Connection Privacy Policy</span> document and agree to both statements listed at the bottom of the pop-up in order to proceed. When complete, click <span class="BigButtons">Agree &amp; Continue</span>.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Add New</span> to add a new institution.<br />The <span class="Window">Plaid Link</span> integration displays.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Since Plaid also has a privacy policy, you must agree by clicking <span class="BigButtons">Continue</span> to proceed.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>If you are not logged into Plaid, enter your phone number to sign in or register an account. Alternatively, select <span class="BigButtons">Continue as guest</span> to continue the set up process without logging in.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Select a saved institution from the list or select <span class="Field">Connect a new institution</span> where you are directed to a page with a list of available institutions to choose from.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Whether you use a national institution or a local institution, make sure you select the correct institution name. For example, if you search for Chase Bank, you could get results for both <span class="Stress">Chase Personal Banking</span> and <span class="Stress">Chase Business Banking</span>. If you try to connect to an institution that doesn't match your institution credentials, the sync fails.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Once selected, you must authorize the connection. Depending on the requirements of the institution, you are either asked to enter your <span class="Field">Username</span> and <span class="Field">Password</span> for the institution's online banking, or Plaid redirects you to the institution's website to authorize the connection directly.<br />When  the connection is authorized, your accounts associated with the institution display.</p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Check each account you wish to sync to <span class="mc-variable Products.RM variable">Rent Manager</span>, then click <span class="BigButtons">Continue</span>.<br />The Plaid add wizard closes, and the <span class="Window">Connect Accounts</span> pop-up displays with your institution's accounts.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2UpdateInstitutionInformationforRentManager" data-magellan-target="Step2UpdateInstitutionInformationforRentManager"><a name="H2_2"></a>Step 2: Update Institution Information for <span class="mc-variable Products.RM variable">Rent Manager</span></h2>
+                                                        <p>Once your account information from the banking institution is pulled into <span class="mc-variable Products.RM variable">Rent Manager</span> from Plaid, you must finish setting up the data for the institution and its linked accounts. This enables you to pull your transaction data from those accounts directly into <span class="mc-variable Products.RM variable">Rent Manager</span> while performing electronic reconciliations.</p>
+                                                        <p>On the <span class="Window">Connect Accounts</span> pop-up, do the following:</p>
+                                                        <ol data-mc-continue="true">
+                                                            <li value="10">
+                                                                <p>In the <span class="Field">Description</span> field, enter a unique comment for the institution for the selected accounts. This is for your reference within <span class="mc-variable Products.RM variable">Rent Manager</span> to identify the login associated with the accounts.</p>
+                                                            </li>
+                                                            <li value="11">
+                                                                <p>In the <span class="Column">Linked GL&#160;Account</span> column, select the corresponding GL account to which each account should be mapped. When this GL&#160;account is selected on an electronic bank or credit card reconciliation, transactions from the account are imported into <span class="mc-variable Products.RM variable">Rent Manager</span> so you can reconcile your <span class="mc-variable Products.RM variable">Rent Manager</span> transactions.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you leave this field blank, <span class="mc-variable Products.RM variable">Rent Manager</span> ignores the institution account and does <span class="Stress">not</span> pull transactions from it, even if you selected it to be synced with your database.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="12">
+                                                                <p>When finished, click <span class="BigButtons">Save &amp; Add Another</span> to create another institution connection, or click <span class="BigButtons">Save</span> to return to the <span class="Window">Bank Sync Setup</span> page.<br />The new institution and its connected accounts display in the list.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_3"></a>Next Steps</h2>
+                                                        <p>Once your institution and accounts are synced to <span class="mc-variable Products.RM variable">Rent Manager</span>, you are able to pull in your real-world transactions directly to your electronic bank and credit card reconciliations. For more information, refer to <a href="Reconcile-Electronic-Bank-Sync.html" class="MCXref xref">Electronic Bank Reconciliation using Bank Sync</a> and <a href="Reconcile-Electronic-Credit-Card-Bank-Sync.html" class="MCXref xref">Electronic Credit Card Reconciliation with Bank Sync</a>.</p>
+                                                    
+</main>
+</body>
+</html>

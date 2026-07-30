@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Script Classes</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Classes.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Classes.htm</a></p>
+
+                                                    <h1><a name="kanchor462"></a><a name="H1"></a>Script Classes</h1>
+                                                    <p>Classes determine which account type in the database to examine with the function.</p>
+                                                    <p>The table below lists all of the scripting classes available in <span class="mc-variable Products.RM variable">Rent Manager</span> in alphabetical order. Each class is linked to a topic that describes how the class is used as well as a list of functions available to that class.</p>
+                                                    <p><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                    <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="Script-Functions.html" class="MCXref xref">Script Functions</a>.</p>
+                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Standard-Head-Header1">
+                                                                <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Address.html">Address</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>Contact().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> section on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                    <p class="Formula">[Tenant().ContactByType().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data for a contact <span class="Field">Type</span> from the <span class="Section">Addresses</span> section on the <span class="Window">View Contacts</span> pop-up for the tenant account.</p>
+                                                                    <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Primary Address</span> tile on the <span class="Window">Property</span> details page for the financial property of the asset or home.</p>
+                                                                    <p class="Formula">[Owner().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Owner</span> details page.</p>
+                                                                    <p class="Formula">[OwnerProspect().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Owner Prospect</span> details page.</p>
+                                                                    <p class="Formula">[Owner().Partner().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Owner</span> details page for the owner's partner.</p>
+                                                                    <p class="Formula">[<span class="Required">Class().</span>PrimaryOwner.Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Owner</span> details page for the primary owner.</p>
+                                                                    <p class="Formula">[Property().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Primary Address</span> tile on the <span class="Window">Property</span> details page.</p>
+                                                                    <p class="Formula">[Prospect.Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Prospect</span> details page.</p>
+                                                                    <p class="Formula">[Tenant().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Tenant</span> details page.</p>
+                                                                    <p class="Formula">[Unit().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Unit</span> details page.</p>
+                                                                    <p class="Formula">[Vendor().Address().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Vendor</span> details page.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Asset.html">Asset</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Lease().Asset().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an asset specified in the tenant's lease.</p>
+                                                                    <p class="Formula">[Property().Asset().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about assets assigned to the property.</p>
+                                                                    <p class="Formula">[Tenant().Asset().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the tenant's assets.</p>
+                                                                    <p class="Formula">[Unit().Asset().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves asset data from the <span class="Section">Assets</span> tile on the <span class="Window">Unit</span> details page.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-CAM-Expense-Adjustment.html">CAM Expense Adjustment</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data on CAM expense adjustments made on a tenant's lease.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Contact.html">Contact</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Owner().Contact().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves contact information for the owner.</p>
+                                                                    <p class="Formula">[Owner().Partner().Contact().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves contact information for the partner.</p>
+                                                                    <p class="Formula">[OwnerProspect().Contact().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves contact information for the owner prospect.</p>
+                                                                    <p class="Formula">[<span class="Required">Class().</span>PrimaryOwner.Contact().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves contact information for the primary owner.</p>
+                                                                    <p class="Formula">[Prospect.Contact().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">View Contacts</span> pop-up for the prospect account.</p>
+                                                                    <div class="info">
+                                                                        <p class="label1">More Information</p>
+                                                                        <p>If you want to provide screening information for the prospect, it is recommended that you follow this class with the Screening class.</p>
+                                                                    </div>
+                                                                    <p class="Formula">[Tenant().Contact().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">View Contacts</span> pop-up for the tenant account.</p>
+                                                                    <p class="Formula">[Vendor().Contact().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves contact information for the vendor.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Contact-by-Type.html">Contact By Type</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().ContactByType().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data for a contact <span class="Field">Type</span> listed on the <span class="Window">View Contacts</span> pop-up for the tenant account.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Current-User.html">Current User</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[System.CurrentUser.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the user currently logged in to <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Evictions.html">Eviction</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Eviction().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about eviction processes linked to a tenant.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Financial-Property.html">Financial Property</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Asset().FinancialProperty.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an asset's property selected to track financials.</p>
+                                                                    <p class="Formula">[<span class="Required">Class().</span>Home().FinancialProperty.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the property selected to track the home's financials.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Home.html">Home</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Property().Home().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about assets designated as homes for the property.</p>
+                                                                    <p class="Formula">[Tenant().Home().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about assets designated as homes from the tenant's details page.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Insurance.html">Insurance</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Lease().Insurance().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data on insurance information for tenant leases as well as manufactured home owners.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Income-Verification.html">Income Verification</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>Contact().IncomeVerification().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves income verification data from a contact listed on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Job.html">Job</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Job().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about jobs.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Lease.html">Lease</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Lease().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about leases from the <span class="Window">Lease Details</span> pop-up for tenant account.</p>
+                                                                    <div class="info">
+                                                                        <p class="label1">More Information</p>
+                                                                        <p>If you want to provide unit information for this tenant, it is recommended that you follow this class with the Unit class. </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Loan.html">Loan</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Loan().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about a tenant's owner-financed loans.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Marketing.html">Marketing</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Property().Marketing.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the property's <span class="Window">Marketing Setup</span> pop-up.</p>
+                                                                    <p class="Formula">[Unit().Marketing.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the unit's <span class="Window">Marketing Setup</span> pop-up.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Owner.html">Owner</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.Owner().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an owner for the financial property of the asset or home.</p>
+                                                                    <p class="Formula">[OwnerProspect().Owner().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an owner that was converted from an owner prospect.</p>
+                                                                    <p class="Formula">[Property().Owner().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an owner of the property.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Owner-Prospect.html">Owner Prospect</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Owner().OwnerProspect().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an owner who was converted from an owner prospect.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Ownership.html">Ownership</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.Ownership().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">Owners</span> pop-up of the financial property.</p>
+                                                                    <p class="Formula">[Owner().Ownership().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">Ownership</span> pop-up of the owner account.</p>
+                                                                    <p class="Formula">[Property().Ownership().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">Owners</span> pop-up for the property.</p>
+                                                                    <p class="Formula">[<span class="Required">Class().</span>PrimaryOwner.Ownership().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the <span class="Field">Primary Owner</span> listed on the <span class="Section">Primary Owner</span> summary card of the property.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Partner.html">Partner</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Owner().Partner().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an owner who is a partner of the specified owner.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Pet.html">Pet</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Pet().<span class="Required">Function</span>]</p>
+                                                                    <p>This retrieves data about a tenant's pets.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Phone-Number.html">Phone Number</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for vendor or owner account, or from a contact listed on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                    <p class="Formula">[Tenant().ContactByType.PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for a contact <span class="Field">Type</span> listed on the <span class="Window">View Contacts</span> pop-up for the tenant account.</p>
+                                                                    <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for the financial property of the asset or home.</p>
+                                                                    <p class="Formula">[OwnerProspect().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for the owner prospect.</p>
+                                                                    <p class="Formula">[Property().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for the property.</p>
+                                                                    <p class="Formula">[Prospect().Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for the prospect.</p>
+                                                                    <p class="Formula">[Vendor().Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for the vendor.</p>
+                                                                    <p class="Formula">[Owner().Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for the owner.</p>
+                                                                    <p class="Formula">[Tenant().Contact().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves phone number data for the tenant.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Primary-Owner.html">Primary Owner</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.PrimaryOwner.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the owner on the <span class="Section">Primary Owner</span> summary card for the financial property.</p>
+                                                                    <p class="Formula">[Property().PrimaryOwner.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the owner listed on the <span class="Section">Primary Owner</span> summary card for the property.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Property.html">Property</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Asset().Property().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the property or the unit to which the asset is linked.</p>
+                                                                    <p class="Formula">[Tenant().Lease().Property().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">Property</span> details page for the property specified in the tenant's lease.</p>
+                                                                    <p class="Formula">[<span class="Required">Class().</span>Ownership().Property().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the <span class="Column">Property</span> listed on the <span class="Window">Ownership</span> pop-up for the owner account.</p>
+                                                                    <p class="Formula">[OwnerProspect().Property().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">Properties</span> pop-up for the owner prospect account.</p>
+                                                                    <p class="Formula">[ServiceManager().Property().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the property linked to the service issue.</p>
+                                                                    <p class="Formula">[Tenant().Property().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the property marked as <span class="Field">Default</span> on the tenant account.</p>
+                                                                    <p class="Formula">[Unit().Property().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves property data for the associated unit.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Prospect.html">Prospect</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[ServiceManager().Prospect().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the prospect linked to the service issue.</p>
+                                                                    <p class="Formula">[Tenant().Prospect().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from a tenant's prospect account if the tenant was created from a prospect record.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Renewal.html">Renewal</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Lease().Renewal(Lease.LeaseRenewalCount() - 1).<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about a renewal of the tenant's lease.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Renewal-Offer.html">Renewal Offer</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Lease().RenewalOffer(Lease.LeaseRenewalOfferCount() - 1).<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about an offered renewal of the tenant's lease.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Rent-Quotes.html">Rent Quotes</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Prospect().RentQuotes().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about rental quotes on a prospect account</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Reservation.html">Reservation</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>Reservation().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves date about related to Short Term Rental (STR) reservations.</p>
+                                                                    <p class="Formula">[Prospect().Reservation().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves short term rental (STR) reservation data for the prospect.</p>
+                                                                    <p class="Formula">[Tenant().Reservation().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves short term rental (STR) reservation data for the tenant.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Screening.html">Screening</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[<span class="Required">Class().</span>Contact().Screening.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves screening data for a contact listed on the <span class="Window">View Contacts</span> pop-up for the tenant or prospect account.</p>
+                                                                    <p class="Formula">[Tenant().ContactByType().Screening.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves screening data for a contact <span class="Field">Type</span> listed on the <span class="Window">View Contacts</span> pop-up for the tenant account.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Service-Manager.html">Service Manager</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Property().ServiceManager().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from issues linked to a property.</p>
+                                                                    <p class="Formula">[Tenant().ServiceManager().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from issues linked to a tenant.</p>
+                                                                    <p class="Formula">[Unit().ServiceManager().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from service issues linked to a unit.</p>
+                                                                    <p class="Formula">[Vendor().ServiceManager().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from service issues linked to a vendor.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Stage.html">Stage</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Violation().Stage().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about violation stages.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-System.html">System</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[System.<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves system-level data.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Tenant.html">Tenant</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Property().Tenant().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about past, current, and future tenants of the property.</p>
+                                                                    <p class="Formula">[ServiceManager().Tenant().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the tenant linked to the service issue.</p>
+                                                                    <p class="Formula">[Unit().Tenant().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the tenant occupying the unit.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Unit.html">Unit</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Asset().Unit().Function]</p>
+                                                                    <p>This class retrieves data about the unit to which the asset is linked.</p>
+                                                                    <p class="Formula">[Tenant().Lease().Unit().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Window">Unit</span> details page for the unit specified in the tenant's lease.</p>
+                                                                    <p class="Formula">[Property().Unit().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about a unit at the property.</p>
+                                                                    <p class="Formula">[Prospect.Unit().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Section">Reserved Unit</span> summary card for the prospect account.</p>
+                                                                    <p class="Formula">[ServiceManager().Unit().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the unit linked to the service issue.</p>
+                                                                    <p class="Formula">[Tenant().Unit().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the unit linked to a tenant.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Unit-Type.html">Unit Type</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Unit().UnitType().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data from the <span class="Field">Unit Type</span> field on the <span class="Section">General</span> tile of the unit.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Vendor.html">Vendor</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p class="Formula">[Asset().Vendor().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves data about the vendor to which the asset is linked.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                    <p><a href="../Other/Scripts/Class-Violation.html">Violation</a>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                    <p class="Formula">[Tenant().Violation().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves violation data for the tenant.</p>
+                                                                    <p class="Formula">[Unit().Violation().<span class="Required">Function</span>]</p>
+                                                                    <p>This class retrieves violation data for a tenant associated with the unit.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                
+</main>
+</body>
+</html>

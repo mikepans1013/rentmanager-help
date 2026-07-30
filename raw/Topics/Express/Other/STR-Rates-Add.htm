@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-output-analytics-server="https://lcs202202281700482.api.madcapcentral.com/" data-mc-output-analytics-topic-id="1xBCeJNnhjAPyXZp0OqabpHvWdZB8I86vlAtwWUMkh0C31xc1Ixy+Uv90OuQetJV0vTDrc4d3gZiR668T5rz0vOVFQJGLtIZ6Pp0ZN0yoKY1ftMS9jn08tEbkuFuBUDAYmu3WDfS3iVLZ0nmVon5hsYr01Ys9JXpd1jc74t3qFGWxRPrc+OP8w==" data-mc-has-content-body="True" data-mc-searchable="True" data-mc-conditions="Status.Published,Content.Important" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="Dependencies" content="RMUC Handouts" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Add an STR Rate Schedule</title>
+        <label class="mode-switcher" id="theme-toggle">
+            <input type="checkbox" name="checkbox" /><span class="slider round"></span>
+        </label>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/RMX-Branding.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/lity.css" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/MainStylesDark.css" rel="stylesheet" type="text/css" data-theme="dark-main" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Tablestyles/Privileges.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Tablestyles/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script>/* <![CDATA[ */
+			(function () {
+			var theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.dataset.theme = theme;
+
+			// Prevent white flash on first paint when in dark mode
+			if (theme === 'dark') {
+			var s = document.createElement('style');
+			s.id = 'early-dark-paint';
+			s.textContent =
+			"html,body{background:#0e1319;color:#e8e8e8}" +           // minimal dark bg + readable text
+			"html[data-theme='dark']{color-scheme:dark}";              // hints UA (form controls, scrollbars)
+			document.head.appendChild(s);
+			}
+			})();
+		/* ]]> */</script>
+        <script src="../../../Resources/Scripts/custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/bootstrap.js">
+        </script>
+        <script src="../../../Resources/Scripts/lightbox.js">
+        </script>
+        <script src="../../../Resources/Scripts/lity.js">
+        </script>
+        <script src="../../../Resources/Scripts/addLityAttribute.js">
+        </script>
+        <script src="../../../Resources/Scripts/Dark-Mode.js">
+        </script>
+        <script src="../../../Resources/Scripts/glanceCobrowse.js">
+        </script>
+        <script src="../../../Resources/Scripts/microContentTopics.js">
+        </script>
+        <script src="../../../Resources/Scripts/mobileResponseTableDisplay.js">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic-ToolBar.js">
+        </script>
+    </head><a name="top"></a>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="2" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="topic-background">
+                                        <div class="search">
+                                            <form class="search" action="#">
+                                                <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                    <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search..." />
+                                                    <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                        </div>
+                                                        <div class="search-filter-content" id="sf-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-submit-wrapper" dir="ltr">
+                                                        <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="row collapse">
+                                            <div class="topic-layout">
+                                                <div>
+                                                    <div data-sticky-container="" id="hsL957umx0eHyODl5VFXDw">
+                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="hsL957umx0eHyODl5VFXDw:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
+                                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container-on="small" class="nocontent menu _Skins_Topic_Headers_Menu mc-component">
+                                                                <li class="tree-node"><a href="#AddanSTRRateSchedule">Add an STR Rate Schedule</a>
+                                                                    <ul>
+                                                                        <li class="tree-node"><a href="#Step1CreateorEditaRateSchedule">Step 1: Create or Edit a Rate Schedule</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#Step2AddaRate">Step 2: Add a Rate</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#Step3EstablishDynamicRateInformation">Step 3: Establish Dynamic Rate Information</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#Step4AddSpecialandExtendedRates">Step 4: Add Special and Extended Rates</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#Step5AddAdditionalFees">Step 5: Add Additional Fees</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#Step6SavetheRateSchedule">Step 6: Save the Rate Schedule</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_ToolBar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                        <div class="button-group-container-left">
+                                                            <button class="button needs-pie remove-highlight-button" title="Remove Search Highlights">
+                                                                <div>
+                                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                                        <div class="button-icon"> </div>
+                                                                    </div><span class="button-text">Remove Highlights</span>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div role="main" id="mc-main-content">
+                                                        <h1 id="AddanSTRRateSchedule" data-magellan-target="AddanSTRRateSchedule"><a name="kanchor32"></a><a name="H1"></a>Add an STR Rate Schedule</h1>
+                                                        <p>Short term rental (STR) rate schedules allow you to establish rates used to charge for reservations with differentiations for weekdays, weekends, holidays, and seasons, providing you with an easy way to calculate STR rates. Within a rate schedule, you can set up rates that apply for a specified period of time. For example, if you use one rate schedule for your peak season, you can create individual rates for each month of the season so you can charge different rates and fees throughout the season, depending on your property's needs.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage STR&#160;Rate Schedules</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.htm" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>To access the STR <MadCap:conditionalText data-mc-conditions="Snippet Conditions.1">Online Booking </MadCap:conditionalText>tool, at least one of your properties in <span class="mc-variable Products.RM variable">Rent Manager</span> must have the <span class="Field">RV/Campground</span> property type assigned.</p>
+                                                        </div>
+                                                        <h2 id="Step1CreateorEditaRateSchedule" data-magellan-target="Step1CreateorEditaRateSchedule"><a name="H2_1"></a>Step 1: Create or Edit a Rate Schedule</h2>
+                                                        <p>To create or edit a rate schedule, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span> and select an <span class="Field">RV/Campground</span>-type property from the list.<br />The <span class="Window">Properties</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Section">STR&#160;Rate Schedules</span> tile header, click <img src="../../../Resources/Images/ICONS/Express-App/Material/launch_19x19.png" class="inline" alt="View More" style="width: 19;height: 19;" />.<br />The <span class="Window">Rate Schedule</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>To edit an existing rate schedule, select that schedule from the list. To create a new schedule, click <img src="../../../Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Rate Schedule</span>.<br />The <span class="Window">STR Rates</span> details pop-up or the <span class="Window">Add Rate Schedule</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>If you are adding a new rate schedule, enter information into the available fields and click <span class="BigButtons">Save</span>. If you are editing an existing rate schedule, select the rate on the left and you can edit these fields in the <span class="Section">Schedule Information</span> tile.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>End/End Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The last date on which the rates in this schedule apply.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name/Rate Schedule Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the overall rate schedule that contains the individual rate and fee calculations. For example, if the rate schedule is only being run during the summer of <span class="mc-variable Dates.Year4 variable">2026</span>, the rate schedule name could be <span class="Input">Summer <span class="mc-variable Dates.Year4 variable">2026</span> Special</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Start/Start Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The first date on which the rates in this schedule apply.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2AddaRate" data-magellan-target="Step2AddaRate"><a name="H2_2"></a>Step 2: Add a Rate</h2>
+                                                        <p>You can assign rates by unit type using the properties established site groups. Site groups organize STR units or unit types into categories, allowing you to establish separate rates for each site group as needed.</p>
+                                                        <p>To add a rate to your rate schedule, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the left, click <img src="../../../Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Rate</span>.<br />The <span class="Window">Add New Rate</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Enter information into the available fields.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type used for the base rent charge for the reservations that meet this rate's conditions.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rate Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unique name of the rate. For example, if the rate is only applicable to campsites and not RV spots, you could name the rate <span class="Input">Campsites</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Units Included</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The types of units that this rate applies to, as defined by the property's site groups. Only one rate can be created per site group. For more information, refer to <a href="../Action/STR-Site-Group-Add.htm" class="MCXref xref">Add a Site Group</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The pop-up closes and the rate's details can now be set for the schedule.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Rate Information</span> section, select one of the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Different rates per night</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If you want to use a different rate for each night, such as higher rates on the weekend or lower rates on Mondays and Tuesdays, select this option and enter a price for each night of the week.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Nightly Rate</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The base nightly price to reserve the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3EstablishDynamicRateInformation" data-magellan-target="Step3EstablishDynamicRateInformation"><a name="H2_3"></a>Step 3: Establish Dynamic Rate Information</h2>
+                                                        <p>When adding rates to your rate schedules, you have the option to set dynamic pricing that adjusts rates in real-time based on market conditions. This allows you to more precisely manage your reservation revenue, such as decreasing prices if you have a large percentage of unreserved sites or offering lower prices for guests who book well in advance. If you do not wish to use dynamic rates, skip to <span class="Section">Step 4:&#160;Add Special and Extended Rates</span>.</p>
+                                                        <p>To add a dynamic rate, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Rate Information</span> section, check <span class="Field">Enable Dynamic Rates</span>.<br />The <span class="Window">Add Dynamic Rate</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top of the pop-up, add information into the available fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Active</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Check to enable this dynamic rate so it is applied to reservations when the established conditions are met.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Apply rate for guests staying on the following days</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dynamic rate is applied only to the selected days of the week during the guest's stay. For example, if only <span class="Field">Saturday</span> and <span class="Field">Sunday</span> are applied and the guest is staying for a full week, this rate is applied only to two of the days that are examined to calculate the total price of their reservation.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Apply rate to reservations made x to y days prior to booking</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dynamic rate is applied only to reservations that are made during a specified period of time prior to the first day of the reservation. This can be useful for granting discounted rates to guests who book their stay well in advance.</p>
+                                                                                <p>In the available fields, enter the range of time when this rate applies. For example, if you enter <span class="Input">30</span> in the first field and <span class="Input">365</span> in the second, then the dynamic rate applies only to reservations made at least 30 days, but no more than a year, in advance.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A unique name to identify this dynamic rate for the selected rate schedule.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Rate Change</span> section, you can determine how the price changes for this rate schedule depending on how many sites are reserved during the reservation dates.<br />You can set the rate to either <span class="Field">Increase</span> or <span class="Field">Decrease</span> by a specified dollar amount. Alternatively, check <span class="Field">Percent</span> to change the price by a percentage instead of a specified dollar amount, then enter the percent value.</p>
+                                                                <p>For example, to charge ten percent less for weekday stays, you can select <span class="Field">Decrease</span>, then check <span class="Field">Percent</span> and enter <span class="Input">10</span> in the adjacent field.</p>
+                                                                <p>
+                                                                    <img src="../../../Resources/Images/PNGs/STR-Dynamic-Rate-1-SG-2025.png" alt="The Rate Change section is set to decrease the rate price by ten percent, regardless of occupancy. The first half of the section is highlighted." />
+                                                                </p>
+                                                                <p>Then determine if this rate applies only when the property has a specified percentage of its units reserved during the guest's scheduled stay. If this rate change should apply regardless of how many reservations the property has, set the fields to <span class="Input">0</span> and <span class="Input">100</span>%. If this rate change applies only if at least half of the property's units are reserved during the guest's scheduled stay, enter <span class="Input">0</span> and <span class="Input">50</span>%.</p>
+                                                                <p>
+                                                                    <img src="../../../Resources/Images/PNGs/STR-Dynamic-Rate-2-SG-2025.png" alt="" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>To add any additional conditions to the dynamic rate, click <img src="../../../Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Rate Change</span>. For example, you could set a rate change that decreases the price of reservations when less than 50% of sites are reserved and then set a second rage change that increases the price if less than 20% of sites are available. Any reservations that are made between that set occupancy follow the standard rate pricing established in the <span class="Section">Rate Information</span> section.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>After all rate changes are added, click <span class="BigButtons">OK</span>.<br />The pop-up closes and the dynamic rate is added in the <span class="Section">Dynamic Rates</span> section.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>To add any additional dynamic rates, click <img src="../../../Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Another Dynamic Rate</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4AddSpecialandExtendedRates" data-magellan-target="Step4AddSpecialandExtendedRates"><a name="H2_4"></a>Step 4: Add Special and Extended Rates</h2>
+                                                        <p>For each rate, you can add conditions for extended stays and other special pricing exceptions, such as holiday rates. To add these rate conditions, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Extended Stay Rates</span> section's <span class="Column">Rate</span> column, enter the price to charge for longer reservations that meet the listed durations. The options that display in the <span class="Column">Length of Stay</span> column are determined by the property's STR settings. For more information, refer to <a href="../CSH/STR-Property-Settings.htm" class="MCXref xref">Property STR Settings (Pop-Up)</a>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Special Rates</span> section, click <img src="../../../Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Item</span> to add any special pricing conditions.<br />The <span class="Window">Add Special Rate</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enter information into the available fields.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Description</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A name for the special rate that provides context for its purpose.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>End Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The last date on which the special rate applies.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Minimum nights required to receive rate</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>This rate is applied only to reservations if they meet or exceed the entered value. For example, if you enter <span class="Input">3</span>, this rate does is not applied to reservations that are only 2 nights long, and instead the reservation uses the base rate.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Nightly Rate</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The special price charged to the guest per each night of their reservation.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Start Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The first date on which the special rate applies.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>To save this special rate and refresh the pop-up to add another, click <span class="BigButtons">Add &amp;&#160;New</span>. Otherwise, click <span class="BigButtons">Add &amp;&#160;Close</span> to save the special rate and close the pop-up.<br />The special rate is added to the section.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>To make changes to a special rate, click <img src="../../../Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Delete</span> to delete the rate, then add the rate again with your changes.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step5AddAdditionalFees" data-magellan-target="Step5AddAdditionalFees"><a name="H2_5"></a>Step 5: Add Additional Fees</h2>
+                                                        <p>The <span class="Section">Fees</span> section displays the additional fees that are added to the total cost the guest pays. These fees can be set to charge nightly for vehicles, guests, pets, to guarantee a selected site, or any other additional fees you need to charge.</p>
+                                                        <h3><a name="H3_1"></a>Nightly Guest Fees</h3>
+                                                        <p>To add a fee for additional guests on a nightly basis, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Nightly Guest Fees</span> section, select one of the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Individual</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Charges a fee for each adult or child over a set number of guests. For example, if your rate is priced for 2 adults and you want to charge an additional $20 for each additional adult guest on the reservation, check the first box and enter <span class="Input">20</span> and <span class="Input">2</span> in the respective boxes (<span class="Input">20</span> <span class="Field">dollars for each adult over</span> <span class="Input">2</span> <span class="Field">adults</span>).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>None</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Don't charge a fee for additional guests.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Total Guests</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Charges a fee for any additional guests over a set number of guests total, regardless of age. For example, if your rate is priced for 3 guests regardless of age and you want to charge an additional $15 for every additional guest on the reservation, enter <span class="Input">15</span> and <span class="Input">3</span> in the respective boxes (<span class="Input">15</span> <span class="Field">dollars for each guest over</span> <span class="Input">3</span> <span class="Field">guests</span>).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Applies To</span> field, select each length of stay that is applicable to receive these nightly guest fees.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>To separate this fee from the base price of the reservation on the guest's receipt, check <span class="Field">Show as separate charge</span>. Then in the <span class="Field">Charge Type</span> field, select the charge type to assign to the fee transaction. The charges display as separate line items on statements and financial reports.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Nightly Pet Fees</h3>
+                                                        <p>To add a fee for pets on a nightly basis, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Check the box to enable the pet fees, then enter the amount to charge for each pet or additional pet. For example, if your rate does not cover pets and you want to charge an additional $10 for every pet on the reservation, enter <span class="Input">10</span> and <span class="Input">0</span> in the respective boxes (<span class="Input">10</span> <span class="Field">dollars for each pet over</span> <span class="Input">0</span> <span class="Field">pets</span>).</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Applies To</span> field, select each length of stay that is applicable to receive these nightly pet fees.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>To separate this fee from the base price of the reservation on the guest's receipt, check <span class="Field">Show as separate charge</span>. Then in the <span class="Field">Charge Type</span> field, select the charge type to assign to the fee transaction. The charges display as separate line items on statements and financial reports.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_3"></a>Nightly Vehicle Fees</h3>
+                                                        <p>To add a fee for vehicles on a nightly basis, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Check the box to enable the vehicle fees, then enter the amount to charge for each vehicle or additional vehicle. For example, if your rate covers only one vehicle and you want to charge an additional $25 for every additional vehicle on the reservation, enter <span class="Input">25</span> and <span class="Input">1</span> in the respective boxes (<span class="Input">25</span> <span class="Field">dollars for each vehicle over</span> <span class="Input">1</span> <span class="Field">vehicles</span>).</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Applies To</span> field, select each length of stay that is applicable to receive these nightly vehicle fees.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>To separate this fee from the base price of the reservation on the guest's receipt, check <span class="Field">Show as separate charge</span>. Then in the <span class="Field">Charge Type</span> field, select the charge type to assign to the fee transaction. The charges display as separate line items on statements and financial reports.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_4"></a>Lock Fee</h3>
+                                                        <p>Lock fees offer guests a chance to pay an additional fee to guarantee that they receive the site they selected for their reservation. To enable a lock fee, check <span class="Field">Charge guest a lock fee to guarantee the selected site</span>, then enter information into the available fields:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Charge Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The charge type used for the lock fee charge.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lock Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total dollar amount charged to the guest to lock the reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Taxable</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>If checked, the guest also pays tax in addition to the flat dollar amount in the <span class="Field">Lock Fee</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_5"></a>Additional Fees</h3>
+                                                        <p>This section allows you to add fees that are not accounted for in the previous sections, such as cleaning fees or amenity fees. These fees are automatically itemized separately from the base rate on the guest's receipt and on statements and reports.</p>
+                                                        <p>To add additional fees, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Click <img src="../../../Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Item</span>.<br />The <span class="Window">Add Additional Fee</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Window">Fee Info</span> tile, enter information in the available fields.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type to assign to the fee transaction.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Additional information about the purpose of the fee, such as <span class="Input">Cleaning Fees</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Fee Amount</span> tile, select one of the available options. If the guest should also pay tax on this fee, check <span class="Field">Taxable</span>.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Flat Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Charge a single flat amount for each reservation. Enter that amount in the available field, then select if this fee is applied <span class="Field">Per Stay</span> (once for the whole reservation) or <span class="Field">Per Night</span> (the charge is calculated for each night reserved).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Percentage</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Charge a percentage of the base price of the guest's stay for every reservation. Enter the percent value in the available field, then select if this fee is applied <span class="Field">Per Stay</span> (a percentage of the total price) or <span class="Field">Per Night</span> (a percentage of each individual night's price).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The fee is added to the rate.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Add any additional fees as needed.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step6SavetheRateSchedule" data-magellan-target="Step6SavetheRateSchedule"><a name="H2_6"></a>Step 6: Save the Rate Schedule</h2>
+                                                        <p>After you have set up all the prices and fees for your rate, click <span class="ActionItems">Save</span>. You can now add additional rates as needed for any other site groups by clicking <img src="../../../Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Rate</span> on the left until all rates have been added to your rate schedule.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To test how reservations are priced using your rate schedule, click <span class="BigButtons">Test Rate</span>. For more information, refer to <a href="../Action/STR-Rate-Schedule-Test.htm" class="MCXref xref">Test a Short Term Rental (STR) Rate</a>.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="links">
+                                                        <div class="MCRelationshipsProxy_0">
+                                                            <p class="pageHeading_page_0">Related Information</p>
+                                                            <p class="pageItem_page_0"><a href="../CSH/STR-Rate-Schedule.htm">STR Rate Schedules (Pop-Up)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../CSH/STR-Online-Booking.htm">STR&#160;Online Booking (Pop-Up)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../CSH/STR-Property-Settings.htm">Property STR Settings (Pop-Up)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../CSH/Property-Details.htm">Property Details (Page)</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="topic-background">
+                                        <script type="text/javascript" src="../../../Resources/Scripts/Back-to-Top-Button.js">
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <div class="footer center">
+        <div class="master-page-footer">
+            <div>
+                <p class="footer-header">Product Support</p>
+                <p>Monday-Friday</p>
+                <p>8:00 a.m.-7:00 p.m. (EST)</p>
+                <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
+                </p>
+                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                </p>
+            </div>
+            <div>
+                <p class="footer-header">Resources</p>
+                <p><a href="https://www.rentmanager.com/training/#Training_Calendar" target="_blank">Training Calendar</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/virtual-classroom-enrollment-form/">Virtual Classroom Enrollment</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/podcast/">Beyond Rent Podcast</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/submit-a-feature-request/">Submit a Feature Request</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+    </div>
+</html>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Income Verification Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Income-Verification.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Income-Verification.htm</a></p>
+
+                                                        <h1 id="IncomeVerificationClassScript" data-magellan-target="IncomeVerificationClassScript"><a name="aanchor89"></a>
+                                                            <a name="kanchor156"></a><a name="H1"></a>Income Verification Class (Script)</h1>
+                                                        <p>The Income Verification class examines details on a contact's income verification request. It is preceded by the tenant- or prospect-level Contact class and can be followed by a scripting function associated with the verification request.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To use this feature, you must have a contract with <span class="mc-variable Integrations.Partner-Screening variable">AmRent</span> and enter income verification credentials in system preferences. For more information, refer to <a href="../../KB/Income-ID-Verification-Set-Up.html" class="MCXref xref">Set Up Income and ID Verification</a>.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Contact().IncomeVerification.ApplicantType]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Applicant Type</span> of the first contact on the tenant's income verification request.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Prospect().Contact(1).IncomeVerification.FullName]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the first and last name of the second contact on the prospect's income verification request.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_1"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.22,Snippet Conditions.23,Snippet Conditions.10,Snippet Conditions.37,Snippet Conditions.38">The following examples reflect the syntax that displays when you double-click the functions in the <span class="Section">Insertable Fields</span> section.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Applicant Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent14">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.ApplicantType]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.38">Displays the applicant type for the contact as listed in the income verification request. Possible values include: <span class="Input">Applicant</span>, <span class="Input">Co-Applicant</span>, <span class="Input">Guarantor</span>, <span class="Input">Occupant</span>, <span class="Input">Partner</span>, <span class="Input">Primary</span>, or <span class="Input">Spouse</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Birth Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.BirthDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the birth date in the associated income verification request for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.City]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the city in the associated income verification request for the specified contact's current address.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>City State Postal Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.CityStatePostalCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the city, state, and postal code in the associated income verification request for the specified contact's current address. The output is formatted as displayed below:</p>
+                                                                        <p class="Input" data-mc-conditions="Snippet Conditions.38">Norwood, OH 45212</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.Email]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the <span class="Field">Email</span> as entered on the <span class="Window">Run Income Verification</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.28,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent70">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.FirstName]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.38">Displays the first name in the associated income verification request for the specified contact.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Full Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.FullName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the first and last name in the associated income verification request for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.4,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.LastName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the last name in the associated income verification request for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.38,Snippet Conditions.24">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Phone Number</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent150">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.PhoneNumber]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.38">Displays the <span class="Field">Phone Number</span> as entered on the <span class="Window">Run Income Verification</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.24,Snippet Conditions.1,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Postal Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.PostalCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the postal code in the associated income verification for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.24,Snippet Conditions.1,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.State]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the two-letter state abbreviation in the associated income verification request for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.12,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Status</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.Status]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the current <span class="Field">Status</span> of the income verification request for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.Street]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the street in the associated income verification for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Submitted Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.38">[<span class="Required">Class().</span>Contact().IncomeVerification.SubmittedDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.38">Displays the submitted date in the associated income verification for the specified contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

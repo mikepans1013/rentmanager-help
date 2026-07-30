@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Format Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Format.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Format.htm</a></p>
+
+                                                        <h1 id="FormatFunctionScript" data-magellan-target="FormatFunctionScript"><a name="aanchor776"></a>
+                                                            <a name="kanchor1279"></a><a name="H1"></a>Format Function (Script)</h1>
+                                                        <p>This function adjusts the formatting of a date, time, or numeric value and displays it in a way that better fits its content. You can make changes such as converting the day or month in a date to be spelled out rather than numerical or including symbols to represent a number as a currency or percent.</p>
+                                                        <p>This function can be utilized by the following class:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-System.html">System</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[System.Format()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Example">[Format(<span class="Required">"Value"</span>,<span class="Required">"Format"</span>)]</p>
+                                                        <h3 class="Required"><a name="H3_1"></a>Value</h3>
+                                                        <p>Enter the data that should be formatted by this function.
+
+This can be a literal value, a script variable with a stored value, or another function.</p>
+                                                        <p class="Example">[Format("Ohio","&gt;")]</p>
+                                                        <p>The value is <span class="Input">Ohio</span>, and the format <span class="Input">&gt;</span> tells the output to display in all caps:&#160;OHIO.</p>
+                                                        <h3 class="Required"><a name="H3_2"></a>Format</h3>
+                                                        <p>Enter one of these options to adjust the format of the parameter value accordingly:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Parameter Value</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Result</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>General Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the date and time as defined by the system, which includes a numeric date and time stamp (e.g., <span class="Input">6/23/<span class="mc-variable Dates.Year4 variable">2026</span> 12:00:00 AM</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Long Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the date according to system's long format, which includes the full day of the week, full month, and numeric day and year (e.g., <span class="Input">Wednesday, June 23, <span class="mc-variable Dates.Year4 variable">2026</span></span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Medium Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the date according to system's medium format, which includes an abbreviated month and numeric day and year (e.g., <span class="Input">23-Jun-<span class="mc-variable Dates.Year2 variable">26</span></span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Short Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the date according to system's short format, which includes a numeric date (e.g., <span class="Input">6/23/<span class="mc-variable Dates.Year4 variable">2026</span></span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Long Time</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the time according to system's long format, which includes numeric hours, minutes, and seconds (e.g., <span class="Input">12:00:00 AM</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Medium Time</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the time according to system's medium format, which includes numeric hours and minutes with leading zeros (e.g., <span class="Input">01:00 AM</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Short Time</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the time according to system's short format, which includes numeric hours and minutes without leading zeros (e.g., <span class="Input">1:00 AM</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>General Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the number with no thousands separator (e.g., <span class="Input">2000.00</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Currency</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the number with currency sign and thousands separator (comma) and two digits to the right of the decimal (e.g., <span class="Input">$2000.00</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fixed</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the number with at least one digit to the left of the decimal and two to the right. This format has no comma separators, and it rounds decimals with more than two digits (e.g., <span class="Input">0.20</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Standard</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the number with thousands separator (comma) and at least one digit to the left of the decimal and two to the right (e.g., <span class="Input">2,000.00</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the number multiplied by 100 with a % sign appended two digits to the right of the decimal (e.g., <span class="Input">20.00%</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&gt;</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Display the value in all caps (e.g., <span class="Input">OHIO</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>&lt;</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Display the value in all lowercase (e.g., <span class="Input">ohio</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>Optionally, these parameter values can be combined or used with the following literal (static) characters:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>forward slash	/</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>hyphen –</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>comma ,</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>period .</p>
+                                                            </li>
+                                                        </ul>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Parameter Value</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>d</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Day, numeric, no leading zero (e.g., <span class="Input">9</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>dd</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Day, numeric, with leading zero (e.g., <span class="Input">09</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>ddd</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Day of the week, three-character abbreviation (e.g., <span class="Input">Wed</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>dddd</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Day of the week, full name (e.g., <span class="Input">Wednesday</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>m</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Month, numeric, no leading zero (e.g., <span class="Input">3</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>mm</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Month, numeric, with leading zero (e.g., <span class="Input">03</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>mmm</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Month, three-character abbreviation (e.g., <span class="Input">Feb</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>mmmm</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Month, full name (e.g., <span class="Input">February</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>yy</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Year, two-digit number (e.g., <span class="Input mc-variable Dates.Year2 variable">26</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>yyyy</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Year, four-digit number (e.g., <span class="Input mc-variable Dates.Year4 variable">2026</span>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Example">[Format("Ohio","&lt;")]</p>
+                                                        <p>The value is <span class="Input">Ohio</span>, and the format <span class="Input">&lt;</span> tells the output to display in lowercase: ohio.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[System.Format("<span class="mc-variable Dates.m/d/yyyy variable">7/21/2026</span>","General Date")]</p>
+                                                        <p>Displays the specified date along with the current time stamp (which may r may not include seconds):  <span class="mc-variable Dates.m/d/yyyy variable">7/21/2026</span> 12:00:00 AM.</p>
+                                                        <p class="Example">[System.Format("<span class="mc-variable Dates.m/d/yyyy variable">7/21/2026</span>","Long Date")]</p>
+                                                        <p>Displays <span class="mc-variable Dates.dddd,_MMMM_d,_yyyy variable">Tuesday, July 21, 2026</span>.</p>
+                                                        <p class="Example">[System.Format("<span class="mc-variable Dates.m/d/yyyy variable">7/21/2026</span>","Short Date")]</p>
+                                                        <p>Displays <span class="mc-variable Dates.m/d/yyyy variable">7/21/2026</span>.</p>
+                                                        <p class="Example">[System.Format(Date,"Long Time")]</p>
+                                                        <p>Displays the current time stamp (including seconds): 11:03:45 PM.</p>
+                                                        <p class="Example">[System.Format("4500","Currency")]</p>
+                                                        <p>Displays $4,500.00.</p>
+                                                        <p class="Example">[System.Format(".45","Percent")]</p>
+                                                        <p>Displays 45.00%.</p>
+                                                    
+</main>
+</body>
+</html>

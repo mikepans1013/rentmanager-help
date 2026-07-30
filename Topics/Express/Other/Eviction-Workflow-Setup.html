@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eviction Workflow Setup</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Eviction-Workflow-Setup.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Eviction-Workflow-Setup.htm</a></p>
+
+                                                        <h1 id="EvictionWorkflowSetup" data-magellan-target="EvictionWorkflowSetup"><a name="kanchor263"></a><a name="H1"></a>Eviction Workflow Setup</h1>
+                                                        <p>Eviction workflows in <span class="mc-variable Products.RM variable">Rent Manager</span> allow you to track and manage the multistep eviction process from start to finish. Each workflow can contain multiple stages, customized payment settings, and automated letter actions in order to tailor each workflow to fit the various eviction legal processes you may have. To accommodate circumstances where the eviction process is different depending on the property, you can create as many workflows as you need and assign them to the applicable properties.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Setup</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage Eviction Workflows</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1EnterWorkflowSetupInformation" data-magellan-target="Step1EnterWorkflowSetupInformation"><a name="H2_1"></a>Step 1: Enter Workflow Setup Information</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>A property can only have one eviction workflow assigned at a time. Before you can assign a new workflow to a property, you must first deselect the property from the <span class="Field">Default</span> workflow.</p>
+                                                        </div>
+                                                        <p>To create a new eviction workflow set up, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_18x18.png" class="inline" alt="Menu" style="width: 18;height: 18;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Rental Info Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Evictions <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Eviction Workflows</span>.<br />The <span class="Window">Eviction Workflows</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top of the page, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /><span class="BigButtons">Add Workflow</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Eviction-Workflows-Stages-Section.png" class="lightbox" alt="The Eviction Workflow Setup page displays options to create new workflow with custom tiles for each stage." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">Workflow Name</span> field, enter the name you wish to assign to the eviction workflow.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Select Properties</span> to choose which properties the workflow is assigned to.<br />The <span class="Window">Properties</span> pop-up opens.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Check all applicable properties from the list, or click <span class="BigButtons">Add by Group</span> to add properties that are part of a property group. Properties can only be added to one eviction workflow.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">OK</span>.<br />The <span class="Window">Properties</span> pop-up closes, and when an eviction is started at the chosen properties, this is the eviction workflow used.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2SetUpWorkflowStages" data-magellan-target="Step2SetUpWorkflowStages"><a name="H2_2"></a>Step 2: Set Up Workflow Stages</h2>
+                                                        <p>After naming your new workflow and selecting the properties that can use it, you now can start creating your stages. Workflow stages are the specific steps taken during the eviction process. You should add as many stages as needed to complete the workflow. Each workflow stage also involves customizing what displays on the <span class="Window">Eviction</span> tile.</p>
+                                                        <p>To create a new workflow stage, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Enter a <span class="Field">Stage Name</span>. For example, if one stage of your eviction process involves notifying the tenant, you can name this stage <span class="Field">Notice</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Write Letter</span> field, select the letter that automatically generates when this stage is started.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Customize the Eviction Tile by Stage</span> section, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" />&#160;<span class="ActionItems">Add Instructions</span> to add any additional internal information that you need to convey to users conducting the eviction regarding this stage.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>To add relevant <span class="Section">System</span>, <span class="Section">Payment Settings</span>, and <span class="Section">Eviction User Defined Fields</span> fields to the stage in the eviction workflow, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /><span class="ActionItems">Add Fields</span> or <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_18x18.png" class="inline" style="width: 18;height: 18;" alt="Add" />.<br />The following fields are available to select.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Script</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Add custom scripting to include relevant information from other places in <span class="mc-variable Products.RM variable">Rent Manager</span>. For example, you can create a field called <span class="Field">Last Payment Date</span> with a script that pulls in the last date the tenant made a payment on their account.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Notice Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date the final warning for the tenant to take action before the eviction process begins.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Date Sent to Attorney</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date notice was sent to your attorney that an eviction process was beginning.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Eviction Filed Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date the eviction was filed with the courts.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Case #</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The case number assigned to the eviction when it was filed with the courts.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Judgment Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total dollar amount that the tenant owes that the eviction is filed for.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Vacate Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the tenant must vacate the property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Writ Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date of writ of execution. Once the judgment is passed in favor of the landlord, the tenant must move out within the specified number of days.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Lockout Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the tenant is locked out from the property by local enforcements.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Eviction Outcome</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The ruling or decision made in regards to closing the eviction.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Evicted</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A system-created user defined field that indicates if the tenant has been evicted or not.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Eviction User Defined Fields</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Each eviction-type user defined field (UDF) created displays to select from. To create a new UDF, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /><span class="ActionItems">Add Eviction User Defined Field</span>.</p>
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">User Defined Fields</td>
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">User defined fields</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Charge Late Fees</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, late fees are not charged on the tenant's account.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Accept Partial&#160;Payments</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, the property management company does not take partial payments from the tenant. A partial payment is considered anything below the tenant's current balance due as of the payment date.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Accept Payments</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, the property management company does not take payments from the tenant including payments made on <span class="mc-variable Products.TWA variable">Tenant Web Access</span> or <span class="mc-variable Products.App-Tenant variable">rmResident</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Accept Checks</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, the property management company does not take checks as a acceptable payment method from the tenant.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Send AR Automation Notifications</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, accounts receivable automated notifications are not sent to the tenant.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Don't Allow TWA Payments</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If checked, the tenant is not allowed to make payments from <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" />&#160;<span class="ActionItems">Add Stage</span> and repeat steps 1-4 for each new eviction stage you wish to create.</li>
+                                                        </ol>
+                                                        <h2 id="Step3ConfigureWorkflowStageandPaymentSettings" data-magellan-target="Step3ConfigureWorkflowStageandPaymentSettings"><a name="H2_3"></a>Step 3: Configure Workflow Stage and Payment Settings</h2>
+                                                        <p>To address the stages of the eviction workflow where a tenant is evicted at the end of the process, you need to configure what happens at each stage before the eviction is closed. In addition to deciding at which stages a tenant is considered evicted, you also need to decide at which stages payments are no longer accepted.</p>
+                                                        <p>To configure you workflow stage settings, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>At the top of the page, click <span class="BigButtons">Settings</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Eviction-Workflow-Settings-25.png" alt="The Eviction Workflow Settings pop-up displays 3 fields that control the stages of the eviction workflow." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Stage Settings</span> section, select the stage(s) at which a tenant is considered to be legally in eviction.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the<span class="Section">Payment Settings</span> section, select the stage when partial payments are no longer accepted and the stage when payments are no longer accepted.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Optionally, to open the related automated notification settings and review or update the available setups, click <span class="ActionItems">Automated Notification: Eviction Stage Aging</span>. For more information, refer to <a href="Automated-Notifications/Eviction-Stage-Aging.html" class="MCXref xref">Eviction Stage Aging (Automated Notification)</a>.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>When done, click <span class="BigButtons">OK</span> to close the pop-up.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Once you are satisfied with your eviction workflow setup, click <span class="BigButtons">Save</span>.<br />The eviction workflow is added to <span class="mc-variable Products.RM variable">Rent Manager</span> and can be used at the selected property(s).</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

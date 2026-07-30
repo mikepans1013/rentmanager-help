@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a GPR Posting Automation</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Automation-GPR-Add.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Automation-GPR-Add.htm</a></p>
+
+                                                        <h1 id="AddaGPRPostingAutomation" data-magellan-target="AddaGPRPostingAutomation"><a name="kanchor256"></a><a name="H1"></a>Add a GPR Posting Automation</h1>
+                                                        <p>Gross potential rent (GPR) is the maximum revenue that a property could generate if it was rented at full capacity and at full market value. <span class="mc-variable Products.TA variable">Task Automation</span> can reduce the time spent adding or editing GPR and curtail errors that occur from manually entering information like dates and amounts. The ability to schedule when the automation runs ensures that your postings are timely and consistent. For more information about manual postings, refer to <a href="Post-GPR.html" class="MCXref xref">Post Gross Potential Rent (GPR)</a>.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Task Automation</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Automate post GPR</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Accounting</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Post gross potential rent</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>To set up automation schedules, you must have the appropriate automation enabled in system preferences. For more information, refer to <a href="System-Preferences/Task-Automation.html" class="MCXref xref">Task Automation (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1CreateandNametheSchedule" data-magellan-target="Step1CreateandNametheSchedule"><a name="H2_1"></a>Step 1: Create and Name the Schedule</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you need to edit an existing automation schedule, you do not need to complete the full process detailed here. For details about input fields you may want to edit, refer to the tables throughout this topic.</p>
+                                                        </div>
+                                                        <p>To create a new task automation for posting GPR, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Automation <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Task Automation <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> GPR</span>.<br />The <span class="Window">GPR Automation Schedules</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Schedule</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Post-GPR-CR-26.png" alt="The Posting Gross Potential Rent page displays tiles for Journal Chart Accounts, Properties, and Posting information." class="lightbox" />
+                                                                </p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2SelectProperties" data-magellan-target="Step2SelectProperties"><a name="H2_2"></a>Step 2: Select Properties</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Automate-GPR-Props-CR-26.png" alt="The Properties tile displays the properties for which the GPR is posted." />
+                                                        </p>
+                                                        <p>In the <span class="Section">Properties</span> section, select each property to be included in the scheduled GPR&#160;posting. Alternatively, select a property <span class="Field">Group</span> from the drop-down list.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>
+                                                                Only properties to which you have access display. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step2SelecttheChartAccountsForEachAccountType" data-magellan-target="Step2SelecttheChartAccountsForEachAccountType"><a name="H2_3"></a>Step 2: Select the Chart Accounts For Each Account Type</h2>
+                                                        <p>In the <span class="Section">Journal Chart Accounts</span> tile, you can create and manage multiple chart account configurations by unit type to accurately compare market rents to the appropriate rental income accounts. Multiple configurations are useful when users need to separate results, such as vacancy loss or loss to lease by income type, to capture a complete and accurate view of rental performance. The first configuration is considered the default configuration for the posting.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Post-GPR-Account-Config-CR-26.png" alt="The Journal Chart Accounts tile displays the chart accounts each portion of the GPR posting is reported." />
+                                                        </p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>GPR is calculated using GL account activity, <span class="Stress">not</span> the rental charge type(s) used at a property. Transactions for multiple rental charge types may be recorded under one GL account.</p>
+                                                        </div>
+                                                        <p>To select the journal chart accounts for the GPR posting, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Journal Chart Accounts</span> tile, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Account Configuration</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Post-GPR-Account-Config-Add-CR-26.png" alt="The GPR Account Configuration pop-up displays example journal chart accounts for the default configuration." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Edit a configuration by selecting each chart account type.</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Account</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rental Income Account</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">The primary source of funds for paying expenses as collected via the property's rent charges.</td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Types</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The relevant unit type(s) for which the rental income account(s) is compared to market rent.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>This option is only available for a non-default configuration. The default configuration examines all unit types.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Market Rent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The average price of rent for similar units or rentable assets in the area. Market rent is displayed as found on each unit's details page in the <span class="Section">Current Market Rent</span> tile and on each asset's details page in the <span class="Field">Market Rent</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Vacancy Loss</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The market rent of all vacant units.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Loss To Lease</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The below-market value rent charges for occupied units.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Rental Income Adjustment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Receivables not linked to tenants, income entered using journal entries, and items not accounted for using other accounts.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If applicable, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/remove_red_eye_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Show Additional Accounts</span> and configure the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Account</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Beginning Prepay</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The prepaid charges at the beginning of the posting period. If left blank, prepaid amounts are rolled into the <span class="Field">Rental Income Adjustment</span> account.
+</p>
+                                                                                <p>This account type displays only when running financial reports on a cash basis and applies only to rent charge types selected on the associated property.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>This account type requires that the system accounts for prepays to be income-type accounts. Additionally, <span class="Field">Record cash preallocations as a liability (applies to new payments and credits)</span> and <span class="Field">Record accrual prepayments as a liability (applies to new payments)</span> cannot be selected in system preferences. For more information, refer to <a href="System-Preferences/General-Ledger-System-Accounts.html" class="MCXref xref">General Ledger System Accounts (System Preferences)</a> and <a href="System-Preferences/General-Ledger-Settings.html" class="MCXref xref">General Ledger Settings (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Ending Prepay</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The prepaid charges at the end of the posting period. If left blank, prepaid amounts are rolled into the <span class="Field">Rental Income Adjustment</span> account.</p>
+                                                                                <p>This account type displays only when running financial reports on a cash basis and applies only to rent charge types selected on the associated property.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>This account type requires the system accounts for prepays to be income-type accounts. Additionally, <span class="Field">Record cash preallocations as a liability (applies to new payments and credits)</span> and <span class="Field">Record accrual prepayments as a liability (applies to new payments)</span> cannot be selected in system preferences. For more information, refer to <a href="System-Preferences/General-Ledger-System-Accounts.html" class="MCXref xref">General Ledger System Accounts (System Preferences)</a> and <a href="System-Preferences/General-Ledger-Settings.html" class="MCXref xref">General Ledger Settings (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Beginning Arrears</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The open charges at the beginning of the posting period. If left blank, open charges are rolled into the <span class="Field">Rental Income Adjustment</span> account.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Ending Arrears</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The open charges at the end of the posting period. If left blank, open charges are rolled into the <span class="Field">Rental Income Adjustment</span> account.</p>
+                                                                                <p>This account type displays <span class="Stress">only</span> when running financial reports on a cash basis.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>To add an additional account configuration, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Add Configuration</span> in the top left.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4SelectPostingInformation" data-magellan-target="Step4SelectPostingInformation"><a name="H2_4"></a>Step 4: Select Posting Information</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Automate-GPR-Post-Info-CR-26.png" alt="The Posting Information tile displays the date range that will apply to the GPR posting." />
+                                                        </p>
+                                                        <p>To finish setting up the automation schedule, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Posting Information</span> tile, make the following selections:</p>
+                                                                <table class="TableStyle-Standard" style="mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Active</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, this automated posting schedule is enabled.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of this automated GPR posting as it displays on the <span class="Window">Automated GPR Postings</span> page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Start Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The current or a future date to determine when this posting schedule goes into effect.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>End Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A future date to determine when this posting schedule ends. If this field is left blank, the schedule continues to post indefinitely or until an end date is entered.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Run&#160;Day</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the automated posting occurs. <span class="mc-variable Products.RM variable">Rent Manager</span> automatically posts GPR early in the morning of the chosen <span class="Field">Run Day</span>. The created journal entries are dated with the selected <span class="Field">Post/To Day</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Post/To Day</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date that <span class="mc-variable Products.RM variable">Rent Manager</span> uses to determine the date of the posted journal entry and the period of time for which GPR is calculated.
+
+</p>
+                                                                                <p>Since GPR is always calculated for a period in the past, the <span class="Field">Run Day</span> and the <span class="Field">Post/To Day </span>have the following impacts on the calculation method:</p>
+                                                                                <ul>
+                                                                                    <li>If the <span class="Field">Run Day </span>is before than the <span class="Field">Post/To Day</span>, GPR is calculated from the most recent GPR posting to the <span class="Field">Post/To Day</span> in the previous period. For example, if the <span class="Field">Run Day</span> is 30 and the <span class="Field">Post/To Day</span> is 31, GPR is posted for the entirety of the <span class="Stress">previous</span> month.</li>
+                                                                                    <li>If the <span class="Field">Run Day</span> is later than or equal to the <span class="Field">Post/To Day</span>, GPR is calculated from the most recent GPR posting to the <span class="Field">Post/To Day</span> in the current period. For example, if the <span class="Field">Run Day</span> is 31 and the <span class="Field">Post/To</span> Day is 30, GPR is posted for the entirety of the <span class="Stress">current</span> month.</li>
+                                                                                </ul>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>If you enter a <span class="Field">Post Day</span> of <span class="Input">31</span>, <span class="mc-variable Products.RM variable">Rent Manager</span> dates the transactions with the last day of each month, regardless of the number of days in the month. For example, with a <span class="Field">Post Day</span> of <span class="Input">31</span> and posting for April, transactions are dated for the 30<sup>th</sup>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Market Rent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Determines when to view the unit or asset market rent amount used for the GPR posting:</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Beginning of Posting Period</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>GPR is posted based on the market rent value that was in effect as of the beginning of the posting period—the <span class="Field">Last Post Date</span> for the selected GPR posting schedule.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>End of Posting Period</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>GPR is posted based on the market rent value that was in effect as of the end of the posting period—the <span class="Field">Post/To Day</span> for the selected GPR posting schedule.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Beginning of Year</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>GPR is posted based on the market rent value that was in effect at the beginning of the calendar year.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>End of Year</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>GPR is posted based on the market rent value that was in effect at the end of the calendar year.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Fixed Date</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>GPR is posted based on the market rent value that was in effect on the date entered in the field.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Market Rent Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <p style="padding: 0px;">The date in which the market rent value the GPR posting is based on went into effect. This option is available only if <span class="Column">Fixed Date</span> is selected in the <span class="Field">Market Rent</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Notification Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The email address of a <span class="mc-variable Products.RM variable">Rent Manager</span> user to receive a notification for each successful or failed automatic posting. If entering more than one email address, separate each with a semicolon (;).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Include Details on Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Include additional report information in the notification email sent to the <span class="mc-variable Products.RM variable">Rent Manager</span> user after an automatic posting has posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Journal Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>An optional comment to be displayed in the journals created as a result of the GPR posting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The new posting schedule is added and begins running on the schedule's next <span class="Field">Run Day</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This automatic process does <span class="Stress">not</span> occur immediately once the schedule has been configured and becomes active. <span class="mc-variable Products.RM variable">Rent Manager</span> performs all automated postings overnight so as not to interfere with your work.</p>
+                                                        </div>
+                                                    
+</main>
+</body>
+</html>

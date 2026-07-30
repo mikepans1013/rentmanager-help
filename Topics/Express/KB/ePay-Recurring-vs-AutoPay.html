@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recurring ePay vs AutoPay</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/ePay-Recurring-vs-AutoPay.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/ePay-Recurring-vs-AutoPay.htm</a></p>
+
+                                                        <h1 id="RecurringePayvsAutoPay" data-magellan-target="RecurringePayvsAutoPay"><a name="kanchor1472"></a><a name="H1"></a>Recurring ePay vs AutoPay</h1>
+                                                        <p>Once you have set up <span class="mc-variable Integrations.PP-Zego variable">Zego ePay</span> in <span class="mc-variable Products.RM variable">Rent Manager</span>, you can determine how your company processes <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments. If you are using <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>, your tenants can always submit one-time payments through their portal. However, <span class="mc-variable Products.RM variable">Rent Manager</span> also offers two methods to facilitate automatic payment collection: recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> and AutoPay.</p>
+                                                        <p>Recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> allows <span class="mc-variable Products.RM variable">Rent Manager</span> users to debit tenants' bank accounts, debit cards, or credit cards directly from your database. You can utilize <span class="mc-variable Products.TA variable">Task Automation</span> to create schedules that perform this action automatically. AutoPay enables tenants to configure their own automatic payment schedules from TWA.</p>
+                                                        <p>This topic outlines the unique features of recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> and AutoPay to help you understand how each option impacts your business.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p><span class="mc-variable Integrations.Product-ePay variable">ePay</span> is a licensed feature by <span class="mc-variable Integrations.Partner-Zego variable">Zego</span>. To use <span class="mc-variable Integrations.PP-Zego variable">Zego ePay</span>, you must set up an account with <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> and enter that information into <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, contact <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                        </div>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>While recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> and AutoPay can be used simultaneously, you should <span class="Stress">not</span> use both methods for the same tenant account. Doing so can result in the tenant receiving duplicate charges.</p>
+                                                        </div>
+                                                        <h2 id="RecurringePay" data-magellan-target="RecurringePay"><a name="H2_1"></a>Recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span></h2>
+                                                        <p>The recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> tool allows you to process <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments for your tenants directly from <span class="mc-variable Products.RM variable">Rent Manager</span>. This action can be performed for one or more tenants at a time, allowing you initiate real-world transactions for tenants across multiple properties with just a few clicks. The bundle of payments processed using recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> is called a batch. You can streamline this task by automating it with <span class="mc-variable Products.TA variable">Task Automation</span>.</p>
+                                                        <p>Recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> allows you to control every step of the <span class="mc-variable Integrations.Product-ePay variable">ePay</span> process, from initial setup to payment processing. However, the added control also means that <span class="Stress">you</span> are responsible for collecting your tenants' payment information, entering it into <span class="mc-variable Products.RM variable">Rent Manager</span>, and making the payments on their behalf. This arrangement can greatly benefit tenants who are not tech-savvy or do not have reliable internet access. You may also choose recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> if you are not using <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>.</p>
+                                                        <p>If you decide to implement recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span>, follow the table below as a guide to your next steps.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Task</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Add tenant payment information to <span class="mc-variable Products.RM variable">Rent Manager</span></p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>In order to process recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments for your tenants, you must enable <span class="mc-variable Integrations.Product-ePay variable">ePay</span> on their accounts, enter payment details in their <span class="Window"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</span> page, and include their accounts in <span class="mc-variable Integrations.Product-ePay variable">ePay</span> batch postings. For more information, refer to <a href="../CSH/Tenant-ePay-Settings.html" class="MCXref xref">Tenant ePay Settings (Pop-Up)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> payments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Once you have set up your tenants for recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span>, you initiate their payments in <span class="mc-variable Products.RM variable">Rent Manager</span> from the <span class="Window">Post Recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span></span> page. For more information, refer to <a href="../Other/ePay-Recurring-Post.html" class="MCXref xref">Post Recurring ePay</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Automate recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span></p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>You can use <span class="mc-variable Products.TA variable">Task Automation</span> to automate the recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> posting process. For example, you can create a an automation schedule that withdraws funds for rent payments from tenant accounts on the third day of every month. By establishing recurring <span class="mc-variable Integrations.Product-ePay variable">ePay</span> automation schedules, you can save time and reduce the incidence of errors that occur from manual posting. For more information, refer to <a href="../CSH/Automation-Recurring-ePay-Schedules.html" class="MCXref xref">Recurring ePay Automation Schedules (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AutoPay" data-magellan-target="AutoPay"><a name="H2_2"></a>AutoPay</h2>
+                                                        <p>The AutoPay tool in <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span> allows tenants with web user accounts to set up automatic, recurring payments. After you complete the setup steps in system web preferences, you can notify tenants that it is available for use. On the day(s) AutoPay runs, funds are drafted from your tenants' accounts and recorded in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <p>AutoPay can save your business considerable time by eliminating the need to manually collect and enter payment information for every tenant. With AutoPay, tenants add those details themselves in their TWA account. Tenants can also easily update their payment information in TWA in the event that they change banks or get new debit or credit cards.</p>
+                                                        <p>If you decide to implement AutoPay, follow the table below as a guide to your next steps.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Task</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Enable AutoPay and configure preferences</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>In order for tenants to set up AutoPay in TWA, you must first enable it in system web preferences and determine additional settings, such as what days AutoPay runs.  For more information, refer to <a href="../Other/System-Web-Preferences/TWA-Autopay.html" class="MCXref xref">Tenant Web Access AutoPay (System Web Preferences)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Provide setup instructions to tenants</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>To help streamline the AutoPay setup process for your tenants, <span class="mc-variable Products.RM variable">Rent Manager</span> has made the <span class="Report">Automatic Payment Instructions</span> letter available for download in the online template library (OTL). This letter provides tenants with step-by-step instructions for configuring AutoPay in TWA. You can download this letter from the <span class="Section">Tenant Letters</span> folder in the OTL, customize it to suit your needs, then distribute it to your tenants.  For more information, refer to <a href="Letters-Templates-Import-Export.html" class="MCXref xref">Import and Export Letter Templates</a></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Review tenant AutoPay setup</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Once a tenant has set up their AutoPay configuration in TWA, you can review their setup in the <span class="Window">Web Access Settings</span> pop-up on their account. You can also disable the tenant's AutoPay from this pop-up.  For more information, refer to <a href="../CSH/Tenant-TWA-Settings.html" class="MCXref xref">Tenant Web Access Settings (Pop-Up)</a></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Metered Utilities High/Low Settings</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/MU-High-Low-Settings.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/MU-High-Low-Settings.htm</a></p>
+
+                                                        <h1 id="ManageMeteredUtilitiesHighLowSettings" data-magellan-target="ManageMeteredUtilitiesHighLowSettings"><a name="kanchor1896"></a><a name="H1"></a>Manage Metered Utilities High/Low Settings</h1>
+                                                        <p>Using the <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="Window">High/Low Settings</span> pop-up, you can create consumption groups to help you manage usage. These ranges instantly flag unusual meter readings, whether too high or too low. Furthermore, you can customize your technician's process in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> by requiring an image of the meter or detailed notes depending on the reading, and quickly review the exceptions with a clean and detailed breakdown in the <span class="Report">High/Low Consumption</span> report. Additionally, you can determine how to handle meter readings with exceptions when posting charges, configure what reasons can be used for exceptions, and set up approval workflows for your property's meter readings. This data can help you make decisions with confidence and catch meter problems before they escalate.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you need to edit an existing consumption group, exception reason, and/or approval workflow, you do not need to complete the full process detailed here. For details about input fields you may want to edit, refer to the tables throughout this topic.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1">
+                                                                </col>
+                                                                <col class="TableStyle-Privileges-Column-Column1">
+                                                                </col>
+                                                                <col class="TableStyle-Privileges-Column-Column1">
+                                                                </col>
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="3">Utilities</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Metered utilities</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Meter types</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage High/Low Settings</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To create a consumption group, exception reasons, and an approval workflow for <span class="mc-variable Products.MU variable">Metered Utilities</span>, go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Service Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> High/Low Settings</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/MU-High-Low-Settings.png" alt="The High/Low Settings pop-up displays with the Consumption Groups tab selected." />
+                                                        </p>
+                                                        <h2 id="Step1CreateaConsumptionGroup" data-magellan-target="Step1CreateaConsumptionGroup"><a name="H2_1"></a>Step 1: Create a Consumption Group</h2>
+                                                        <p>To create a consumption group, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the top left, select the <span class="Tab">Consumption Groups</span> tab.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>To create a new consumption group, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Consumption Group</span> in the top left. To edit an existing group, select the group's name from the list.<br /></p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">General</span> section, enter information into the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Group Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A unique name for the consumption group.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Meter Types</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The meter types that use this consumption group. Click <span class="BigButtons">Select Meter Types</span> and select each meter type this consumption group applies to, then click <span class="BigButtons">OK</span> to close the pop-up. Only meter types not already assigned to a consumption group display.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Utility Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The most accurate categorization that applies to this consumption group's utility (<span class="Field">Water/Sewer</span>, <span class="Field">Gas</span>, <span class="Field">Electric</span>, or <span class="Field">Other</span>).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Consumption Ranges</span> section, enter the following information:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Consumption Range UoM</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit of measurement for the consumption group (e.g., <span class="Field">Therms</span>, <span class="Field">Cubic Feet (CF)</span>). These options are determined by your selection in the <span class="Field">Utility Type</span> field.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Flag all estimates as exceptions</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Any estimated meter readings are labeled as exceptions regardless of their consumption range. For more information, refer to <a href="../CSH/MU-Meter-Exceptions.html" class="MCXref xref">Meter Exceptions (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Set Different Ranges for Occupied/Vacant Units</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p style="padding: 0px;">When checked, sections for <span class="Section">Occupied Units</span> and <span class="Section">Vacant Units</span> display in which you can add ranges specific to occupied and vacant units. Ranges added to the <span class="Section">Occupied Units</span> section apply only to meter readings taken at a unit with a current lease, while ranges added to <span class="Section">Vacant Units</span> apply only to meter readings at units not currently leased by a tenant.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Add consumption ranges to track utility usage for units by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Range</span>. Then, enter information into the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <col class="TableStyle-Standard-Column-Column1">
+                                                                    </col>
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Color</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The color of the badge that displays in the <span class="Field">Consumption Range</span> column when adding meter readings. Select from <span class="Field">Theme Colors</span> or <span class="Field">Custom Color</span> and click <span class="BigButtons">OK</span> to close the pop-up.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Consumption Range</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A classification for meter usage that marks any readings falling within the low and high numbers set on the range. These ranges display on reports and in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Flag as exception</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, a warning is sent in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> to your service technician when a reading is flagged as an exception. The language of the warning comes from what is inputted in the <span class="Field">Description</span> field. The default selections <span class="Field">Require Note</span> and <span class="Field">Require Image</span> require that your technician check the meter for accuracy and verify the reading with a photo and/or note.</p>
+                                                                                <p>If this option is selected, the following fields are available to establish <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> settings:</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Description</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The text that displays in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> to explain the reason for the exception alert.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Require image</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The user completing the meter reading in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> must attach an image.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Require Note</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The user completing the meter reading in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> must add a history/note item.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Include Off Cycle Readings</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, flags off-cycle move-out readings that fall within this consumption range as an off-cycle exception. This field displays only if the <span class="Field">Set Different Ranges for Occupied/Vacant Units</span> option is not enabled, or if it is enabled and the range is being added in the <span class="Section">Occupied Units</span> section.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A unique name for the consumption range (e.g., <span class="Input">Low</span>, <span class="Input">High</span>). When adding meter readings, if the range's conditions are met, this text displays on the badge in the <span class="Field">Consumption Range</span> column.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>To add a consumption range with a range of <span class="Field">-999999</span> to <span class="Field">-1</span> for units with negative utility consumption, click the drop-down arrow next to <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Range</span> and select <span class="ActionItems">Add Negative Consumption Range</span>.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>To add a consumption range with a range of <span class="Field">0</span> to <span class="Field">0</span> for units with no utility consumption, click the drop-down arrow next to <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Range</span> and select <span class="ActionItems">Add Zero Consumption Range</span>. This option is available only for occupied units.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Add any additional ranges to the consumption group as needed.</p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The new consumption group is created and automatically assigned to the selected <span class="Field">Meter Types</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2EstablishExceptionReasons" data-magellan-target="Step2EstablishExceptionReasons"><a name="H2_2"></a>Step 2: Establish Exception Reasons</h2>
+                                                        <p>To add exception reasons, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the top left, select the <span class="Tab">Exception Reasons</span> tab.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/MU-High-Low-Settings-Exception-Reasons.png" alt="The High/Low Settings pop-up displays with the Exception Reasons tab selected." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Utility Types</span> section on the left, select the desired utility type from the list.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Posting Restriction</span> section, choose one of the following options to determine how meter readings with exceptions are handled when posting charges.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Do not consider exception reasons when posting readings and utility charges</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Meter readings are posted regardless if exceptions are present.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Warn before posting exceptions without a reason</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If attempting to post readings that have exceptions without a reason set, the <span class="Window">Confirm Posting</span> pop-up displays before the user can proceed with the posting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Require reasons on all exceptions before posting readings and utility charges</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Meter readings are posted only when all exception reasons are selected for the specified utility type. Selecting this is option also enables <span class="Tab">Approval Workflows</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section"><span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span></span> section, enable <span class="Field">Allow rmAppSuite users to select a reason for exceptions</span> to prompt the user adding a reading in the exception range to select one of the reasons defined below.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Manage Consumption Exception Reasons</span> section, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Reason</span> and enter the name of the reason to be used on meter exceptions (e.g., <span class="Input">Meter Malfunction</span>, <span class="Input">Faulty Appliance</span>, <span class="Input">Recent Move In/Out</span>, <span class="Input">Water Leak</span>).</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Add any additional exception reasons as needed.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The new exception reason is created and automatically assigned to the selected <span class="Field">Utility Types</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3CreateanApprovalWorkflow" data-magellan-target="Step3CreateanApprovalWorkflow"><a name="H2_3"></a>Step 3: Create an Approval Workflow</h2>
+                                                        <p>To create an approval workflow, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the top left, select the <span class="Tab">Approval Workflows</span> tab.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/MU-High-Low-Settings-Approval-Workflow.png" alt="The High/Low Settings pop-up displays with the Approval Workflows tab selected." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>To create a new workflow, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Approval Workflow</span> in the top left. To edit an existing workflow, select the workflow's name from the list. If all properties are assigned to an approval workflow for every utility type, this option is not available.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Check <span class="Field">Enable Approval Workflow</span>.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">General</span> section, enter information in the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Assign to Properties</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Click <span class="BigButtons">Select Properties</span> to establish the properties where this workflow is used. A property can be assigned to only one workflow for each utility type.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>
+                                                                                        Only properties to which you have access display. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Utility Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The most accurate categorization that applies to this approval workflow. Options display in this field only if, on the <span class="Tab">Exception Reasons</span> tab, the utility type has the <span class="Field">Require reasons on all exceptions before posting readings and utility charges</span> option enabled.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Workflow Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The unique label to identify  this workflow.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Select Reviewers &amp; Approvers</span> section, the following fields display:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Approvers/Final Approvers</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The user(s) or role(s) responsible for approving or rejecting meter exceptions. This field displays as <span class="Field">Final Approvers</span> if <span class="Field">Enable a two-step approver process</span> is toggled on.</p>
+                                                                                <p>When the two-step process is enabled, the <span class="Field">Final Approvers</span> can either approve or reject the exceptions. When approved, the exceptions are sent to the <span class="Field">Reviewers</span> to post the readings. If the exceptions are rejected, they are resubmitted to the <span class="Field">Conditional Approvers</span>.</p>
+                                                                                <p>Check <span class="Field">Notify final approvers by email when meter readings are ready for approval</span> to automatically send an email to the selected user(s) or role(s) when the <span class="Window">Meter Exceptions</span> have a status of <span class="Field">Needs Final Approval</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Conditional Approvers</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The user(s) or role(s) responsible for approving or rejecting meter exceptions. This field displays only when <span class="Field">Enable a two-step approver process</span> is toggled on.</p>
+                                                                                <p>If the conditional approver approves all the exceptions, they are submitted to the <span class="Field">Approvers</span>. If they reject the exceptions, they are resubmitted to the <span class="Field">Reviewers</span>.</p>
+                                                                                <p>Check <span class="Field">Notify conditional approvers by email when meter readings are ready for approval</span> to automatically send an email to the selected user(s) or role(s) when the <span class="Window">Meter Exceptions</span> have a status of <span class="Field">Needs Conditional Approval</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Reviewers</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The user(s) or role(s) responsible for reviewing and setting the exception reason(s) for meter exceptions. Check <span class="Field">Notify reviewers by email when meter readings are ready for review</span> to automatically send an email to the selected user(s) or role(s) when the <span class="Window">Meter Exceptions</span> have a status of <span class="Field">Needs Review</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section">Reading Lock Options</span> section, choose one of the following options to determine when unposted meter exceptions are locked for reviewers and cannot be edited.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Allow changes to exceptions at any time</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Exceptions can be modified by any user with access.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Lock exceptions after they are approved</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>When exceptions are approved, the <span class="Window">Meter Readings</span> fields for the corresponding unit/utility are locked and cannot be edited.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Lock exceptions after they are initially flagged</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>When meter readings are initially flagged as exceptions, the <span class="Window">Meter Readings</span> fields for the corresponding unit/utility can be edited only by users defined as <span class="Field">Approvers</span> for the associated properties.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The new approval workflow is created for the selected properties, reviewers, and approvers.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Management Fee Setup Comparison</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Management-Fee-Setup-Comparison.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Management-Fee-Setup-Comparison.htm</a></p>
+
+                                                        <h1 id="ManagementFeeSetupComparison" data-magellan-target="ManagementFeeSetupComparison"><a name="kanchor243"></a><a name="H1"></a>Management Fee Setup Comparison</h1>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> offers two ways to define the management fee structure that you have established with the owners whose properties you manage: a Standard method and an Advanced method. This article describes the differences between the setups and provides use-case examples to help you decide which setup is appropriate for each of your owner contracts. You can then enter the details of the setup on the <span class="Window">Property Fees Setup</span> page.</p>
+                                                        <p>The newer Standard method examines all tenant and prospect payments allocated to specified charge types since your last management fee posting, which allows you to post fees as often as you like. Additionally, more transparency for the transaction details of a management fee posting are available with this method, and that transparency helps you and your owners understand the charge calculations in greater detail.</p>
+                                                        <p>The Advanced method is the original method by which <span class="mc-variable Products.RM variable">Rent Manager</span> calculates management fees. This method examines transaction activity of specified general ledger accounts over the period of time you define at the time you post fees. In addition to tenant and prospect payments, this method allows you to collect property-wide income, and percentages of net or total income. However, you may miss income owed to your company if a transaction is dated outside of the specified date range.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The Standard method examines allocated payment activity, which is when a payment is applied to an outstanding charge or when a charge is posted and a prepayment is applied to that charge. </p>
+                                                            <p>You must allocate payments to charges for that income to be included in Standard management fee calculations.</p>
+                                                        </div>
+                                                        <h2 id="KeyFeaturesofManagementFeeSetups" data-magellan-target="KeyFeaturesofManagementFeeSetups"><a name="H2_1"></a>Key Features of Management Fee Setups</h2>
+                                                        <p>The following table explains if common management fee settings are available with each method.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1" style="text-align: center;">Fee Setup Component</th>
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1" style="text-align: center;">Available with Standard</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1" style="text-align: center;">Available with Advanced</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Minimum/Maximum Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Unit Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Flat Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Occupied Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>100% Pass-Through Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Partial Pass-Through Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;"><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>% of Total or Net Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">&#160;</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>% of General Ledger Accounts (including non-tenant or non-prospect transactions)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">&#160;</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>% of Expenses, Assets, or Liabilities</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">&#160;</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Accrual Basis Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" style="text-align: center;">&#160;</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="text-align: center;"><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Chart Account Transfers</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1" style="text-align: center;">&#160;</td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="text-align: center;">
+                                                                        <p><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to the following items:</p>
+                                                        <h3><a name="H3_1"></a>Credits Applied to Charges</h3>
+                                                        <p colspan="2">The Advanced and Standard methods allow you to issue a tenant credit and apply it to an open charge from which you can collect fees.</p>
+                                                        <h3><a name="H3_2"></a>Income Recorded Through Journal Entries and Deposits</h3>
+                                                        <p>Using the Advanced method, you can collect fees on income that is directly coded to GL&#160;accounts. </p>
+                                                        <p>For example, if you add <span class="Input">Washer and Dryer Income</span> from common laundry areas on the <span class="Tab">Other Items</span> tab of a deposit, you need to use the Advanced method because this property-wide income is not linked to a charge assessed to a tenant or prospect.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Management-Fee-Setup-Comparison-Make-Deposit-24.png" class="lightbox" alt="The Make Deposit page displays with one line added to the Other Items tab." />
+                                                        </p>
+                                                        <p>With the Standard method, you cannot. Fees must be part of a tenant or prospect payment.</p>
+                                                        <h3><a name="H3_3"></a>Fees on Asset, Expense, or Liability Accounts</h3>
+                                                        <p>The Advanced method allows you to collect fees on expenses even if they are not billed back to tenants. If you collect fees on asset, liability, or expense account types without a corresponding tenant charge, you should use the Advanced method.</p>
+                                                        <p>With the Standard method, you cannot collect fees on expenses unless they are billed back to tenants. When the tenant pays the charge, you receive that fee income.</p>
+                                                        <h3><a name="H3_4"></a>Prepayments</h3>
+                                                        <p>Since the Advanced method is based on general ledger account activity, the prepayment is added to the management fee posting. If you collect fees on prepayments before they are applied to charges, you should use the Advanced method.</p>
+                                                        <p>With the Standard method, tenant prepayments are not assessed as part of a management fee posting until the charge is posted.</p>
+                                                        <p>For example, if a tenant prepays on the 28th for the following month, and you post management fees on the last day of the month, that prepayment is not included in the fee posting. When you charge rent on the 1st of the month, then the payment is applied to the rent charge, and the transaction is included in the next management fee posting.</p>
+                                                        <h3><a name="H3_5"></a>Online Payments with <span class="mc-variable Products.TWA variable">Tenant Web Access</span></h3>
+                                                        <p>With the Advanced method, tenants can pay online. If a payment is made on the same day as a management fee posting, it may not be included in the next management fee calculation.</p>
+                                                        <p>For example, if you post management fees at 4:30 p.m. on the last day of the month to close your books, and a tenant pays their rent at 7:00 p.m.&#160;that evening, it's possible that you could miss including that payment on your next fee posting. You would consider the books closed as of the end of the business day and start the next financial period the following day, thereby missing any income that was received after the close of business on the day you last posted management fees.</p>
+                                                        <p>You can work around this by always posting your management fees for the previous day.</p>
+                                                        <p>Using the Standard method, tenants can pay online at any time, and payments made on the same day as a fee posting are included in the next posting.</p>
+                                                        <h3><a name="H3_6"></a>Fee Withholding</h3>
+                                                        <p>The Advanced method allows you to reallocate funds from one general ledger account to another each time fees are posted. You could, for example, withhold a portion of your fees for taxes.</p>
+                                                        <p>The Standard method examines transactions, not general ledger activity, so this option is unavailable.</p>
+                                                        <h2 id="BeforeYouSwitch" data-magellan-target="BeforeYouSwitch"><a name="H2_2"></a>Before You Switch</h2>
+                                                        <p>If you have decided that a different type of management fee setup is more appropriate for your business, <span class="mc-variable Products.RM variable">Rent Manager</span>'s conversion wizard guides you through that process. </p>
+                                                        <p>For the best results, do the following:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p> Decide on when the new fee setup should take effect in advance.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Ensure that all transactions are recorded up to that date.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Post management fees with the current setup one final time on the day before the new fee setup starts.</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Refer to the following topics for more information on switching management fee structures:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Information</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>How do I&#160;convert an Advanced fee setup for a single property to Standard?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Refer to <a href="../Other/Management-Fee-Convert-Advanced-to-Standard.html" class="MCXref xref">Convert Advanced Management Fee Setup to Standard</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>How do I&#160;convert a Standard fee setup for a single property to Advanced?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Refer to <a href="../Other/Management-Fee-Convert-Standard-To-Advanced-Setup.html" class="MCXref xref">Convert Management Fee Setup to Advanced</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>How do I&#160;set up management fees for the first time?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Refer to <a href="../CSH/Property-Fees-Setup.html" class="MCXref xref">Property Fees Setup (Pop-Up)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you switched from Advanced to Standard, and the <span class="Field">Active Dates</span> for both of those fee structures overlap, <span class="mc-variable Products.RM variable">Rent Manager</span> uses the fee setup that is active on the <span class="Field">Post Date</span> when posting management fees.</p>
+                                                        </div>
+                                                    
+</main>
+</body>
+</html>

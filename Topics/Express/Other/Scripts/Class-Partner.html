@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partner Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Partner.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Partner.htm</a></p>
+
+                                                        <h1 id="PartnerClassScript" data-magellan-target="PartnerClassScript"><a name="aanchor667"></a>
+                                                            <a name="kanchor1120"></a><a name="H1"></a>Partner Class (Script)</h1>
+                                                        <p>This class examines partner account information located on the owner <span class="Window">Ownership</span> page. It is preceded by the Owner class and can be followed by a partner-level scripting function or an other class associated with the partner.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Owner().Partner().SecurityDepositHeld()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the total amount of all security deposits <span class="Stress">currently</span> held for all tenants across all the properties of the partner who shares ownership with the selected owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameter" data-magellan-target="ClassParameter"><a name="H2_1"></a>Class Parameter</h2>
+                                                        <p>This class can specify a single, optional parameter: an index.</p>
+                                                        <h3><a name="H3_1"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific partner on an owner account by using a number to identify each partner listed. For example, if there are three partners listed on a owner’s account, they are referenced by indexes 0, 1, and 2. You can specify which partner you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first partner in the list.</p>
+                                                        <p class="Example">[Owner().Partner(1).PaymentMethod]</p>
+                                                        <p>Displays the <span class="Field">Payment Method</span> of the first additional partner who shares ownership in the properties owned by the selected owner as entered on the owner's <span class="Section">Miscellaneous</span> tile.</p>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_2"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.html">Script Functions</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.html">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16"> This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Owner</span> details page for the owner's partner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Contact.html">Contact</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().Contact().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16">This class retrieves contact information for the partner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_3"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.16,Snippet Conditions.21,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Payment Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().PaymentMethod]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16">Displays the <span class="Field">Payment Method</span> entered on the owner's <span class="Section">Miscellaneous</span> tile for the partner who shares ownership in the properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Portal User Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().PortalUserName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16">Displays the <span class="Field">Username</span> for the owner partner's <span class="mc-variable Products.OWA variable">Owner Web Access</span> account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Charged.html">Security Deposit Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().SecurityDepositCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16">Displays the total amount of all security deposits posted for all tenants across all the properties of the partner who shares ownership with the selected owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.9,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Held.html">Security Deposit Held</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().SecurityDepositHeld()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16">Displays the total amount of all security deposits <span class="Stress">currently</span> held for all tenants across all the properties of the partner who shares ownership with the selected owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Received.html">Security Deposit Received</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().SecurityDepositReceived()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16">Displays the total amount of all security deposits paid by all tenants across all the properties of the partner who shares ownership with the selected owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Refunded.html">Security Deposit Refunded</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.16">[Owner().Partner().SecurityDepositRefunded()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.16">Displays the total amount of all security deposits refunded to all tenants across all the properties of the partner who shares ownership with the selected owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

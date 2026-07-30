@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work Order Count Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Work-Order-Count.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Work-Order-Count.htm</a></p>
+
+                                                        <h1 id="WorkOrderCountFunctionScript" data-magellan-target="WorkOrderCountFunctionScript"><a name="aanchor1033"></a>
+                                                            <a name="kanchor1717"></a><a name="H1"></a>Work Order Count Function (Script)</h1>
+                                                        <p>This function displays the number of line items on the work orders that have inventory items specified for the selected issue.</p>
+                                                        <p>The class that utilizes this function and the location from where the scripting information is pulled in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().WorkOrderCount()]</p>
+                                                                        <p>Displays information found on the <span class="Section">Work Orders Table</span> tile on the issue's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[WorkOrderCount(<span class="Optional">"ServiceIssueID"</span>, <span class="Optional">"PropertyShortNames"</span>, <span class="Optional">"UnitNames"</span>, <span class="Optional">"ItemNames"</span>, <span class="Optional">"VendorNames"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ServiceIssueID</h3>
+                                                        <p>Select the service issue with this Issue ID. If this parameter is not specified, it defaults to the oldest/first issue on the linked account.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If ServiceManager is the only class, its parameter is ServiceIssueID. If another class precedes the ServiceManager class, the ServiceManager class instead uses the Index parameter, and the entity of the preceding class must be associated with a service issue in order for the script to return results.</p>
+                                                        </div>
+                                                        <p class="Example">[WorkOrderCount("23")]</p>
+                                                        <p>Displays the number of line items in the work order for service issue number 23.</p>
+                                                        <h3 class="Optional">PropertyShortNames</h3>
+                                                        <p>Enter the short name of the property specified on the work order. Multiple property names may be separated by commas.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.2">[WorkOrderCount("","RIVER")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.2">Displays the number of line items in the work order that specify <span class="Field">RIVER</span> in the <span class="Column">Property</span> column.</p>
+                                                        <h3 class="Optional">UnitNames</h3>
+                                                        <p colspan="2">Enter the name of the unit specified on the work order. Multiple unit names may be separated by commas.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.2">[WorkOrderCount("","","17")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.2">Displays the number of line items in the work order that specify <span class="Field">17</span> in the <span class="Column">Unit</span> column.</p>
+                                                        <h3 class="Optional">ItemNames</h3>
+                                                        <p colspan="2">Enter the inventory item specified on the work order. Multiple items may be separated by commas.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.2">[WorkOrderCount("","","","Labor")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.2">Displays the number of line items in the work order that specify the inventory item <span class="Field">Labor</span> in the <span class="Column">Item</span> column.</p>
+                                                        <h3 class="Optional">VendorNames</h3>
+                                                        <p>Enter the name of the vendor specified on the work order. Multiple vendor names may be separated by commas.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.2">[WorkOrderCount("","","","","Home Depot,Lowe's")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.2">Displays the number of line items in the work order that specify <span class="Field">Home Depot</span> and <span class="Field">Lowe's</span> in the <span class="Column">Vendor</span> column.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[ServiceManager().WorkOrderCount()]</p>
+                                                        <p>Displays the number of line items with inventory items in the work order for the selected service issue. </p>
+                                                        <p class="Example">[ServiceManager(57).WorkOrderCount()]</p>
+                                                        <p>Displays the number of line items with inventory items in the work order for service issue number 57. </p>
+                                                        <p class="Example">[Unit().ServiceManager(1).WorkOrderCount()]</p>
+                                                        <p>Displays the number of line items with inventory items in the work order for the second oldest  service issue, as sorted by opened date, at the selected unit.</p>
+                                                        <p class="Example">[Tenant().ServiceManager().WorkOrderCount("","","","","Home&#160;Depot")]</p>
+                                                        <p>Displays the number of line items with Home Depot as the vendor in the oldest service issue for the selected tenant.</p>
+                                                        <p class="Example">[$i = 0; while($i&lt;WorkOrderCount("223"), echo(WorkOrder("223",$i) &amp; linefeed); $i=$i+1]</p>
+                                                        <p>Displays all line items with inventory items in the work order for service issue number 223 in their default format.</p>
+                                                    
+</main>
+</body>
+</html>

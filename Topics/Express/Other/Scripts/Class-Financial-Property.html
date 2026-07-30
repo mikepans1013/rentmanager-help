@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Financial Property Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Financial-Property.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Financial-Property.htm</a></p>
+
+                                                        <h1 id="FinancialPropertyClassScript" data-magellan-target="FinancialPropertyClassScript"><a name="aanchor30"></a>
+                                                            <a name="kanchor51"></a><a name="H1"></a>Financial Property Class (Script)</h1>
+                                                        <p>This class examines information specific to the property assigned to track financial and reporting activity for an asset. It is preceded by the Asset class or Home class and can be followed by a financial property-level scripting function or another class associated with the financial property.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Asset().FinancialProperty.ManagerName]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Manager</span> of the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Home.FinancialProperty.OpenCharges()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the total value of all open charges at the financial property of the tenant's home.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_1"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.8,Snippet Conditions.14"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.html">Script Functions</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.html">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6"> This class retrieves address data from the <span class="Section">Primary Address</span> tile on the <span class="Window">Property</span> details page for the financial property of the asset or home.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.Owner().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">This class retrieves data about an owner for the financial property of the asset or home.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Ownership.html">Ownership</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.Ownership().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">This class retrieves data from the <span class="Window">Owners</span> pop-up of the financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Phone-Number.html">Phone Number</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">This class retrieves phone number data for the financial property of the asset or home.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">Primary Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PrimaryOwner.<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">This class retrieves data about the owner on the <span class="Section">Primary Owner</span> summary card for the financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1,Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.11,Snippet Conditions.12,Snippet Conditions.17,Snippet Conditions.18,Snippet Conditions.24,Snippet Conditions.25,Snippet Conditions.14,Snippet Conditions.21,Snippet Conditions.34,Snippet Conditions.35"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Amount-Charged.html">Amount Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.AmountCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount of charges posted on a specified date for the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Amount-Paid.html">Amount Paid</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.AmountPaid()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount paid by tenants at the asset's financial property for a specified date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Apply Now URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.ApplyNowURL]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="mc-variable Products.ApplyNow variable">Apply Now</span> URL at which an application can be submitted for the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.AssetCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of assets with the same financial property as the selected asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent17">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.AssetList]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.6">Displays a list of asset names (separated by commas) with the same financial property as the selected asset.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Available-Unit-Count.html">Available Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.AvailableUnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of available units at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Available-Unit-List.html">Available Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.AvailableUnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays a list of names (separated by commas) of every available unit at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Name 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.BillingName1]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Billing Name 1</span> field as entered on the <span class="Section">Other Information</span> tile for the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Name 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.BillingName2]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Billing Name 2</span> field as entered on the <span class="Section">Other Information</span> tile for the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Board-Member-List.html">Board Member List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.BoardMemberList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the full name of every board member at the asset's financial property. The output is formatted as displayed below:</p>
+                                                                        <p class="Input" data-mc-conditions="Snippet Conditions.6">Carl Branson<br />Bridgett Hargitae<br />Devin Lautner<br />Bruce Shultz</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Calculated-Square-Footage.html">Calculated Square Footage</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.CalculatedSquareFootage()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total <span class="Field">Square Footage</span> of all active units at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.23,Snippet Conditions.21,Snippet Conditions.35,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.Comment]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the text entered in the <span class="Field">Comments</span> field of the asset's financial property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Committee-Member-List.html">Committee Member List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.CommitteeMemberList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the full name of every committee member at the asset's financial property. The output is formatted as displayed below:</p>
+                                                                        <p class="Input" data-mc-conditions="Snippet Conditions.6">Gemma Gates<br />Erica Baddam<br />Muhammad Abadi<br />Jocelyn Jones</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Current Tenant Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.CurrentTenantCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the number of tenants currently occupying the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Bank Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.DefaultBankName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Default Bank</span> selected on the asset's financial property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Bank Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.DefaultBankNumber]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the GL account number of the <span class="Field">Default Bank</span> selected on the property <span class="Section">Other Information</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Service Issue User</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.DefaultServiceIssueUser]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the user selected in the <span class="Field">Assign Service Issues</span> field on the asset's financial property <span class="Section">Other Information</span>. If <span class="Field">&lt;System Default&gt;</span> is selected, nothing displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.DisplayColor]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the name of the color selected in the <span class="Field">Display Color</span> field of the financial property's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.DisplayColorCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the hexadecimal code of the color selected in the <span class="Field">Display Color</span> field of the financial property's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.DisplayColorID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the internal <span class="mc-variable Products.RM variable">Rent Manager</span> color ID of the color selected in the <span class="Field">Display Color</span> field of the financial property's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.Email]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Email</span> as entered on the asset's financial property <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fiscal Year End</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.FiscalYearEnd]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">End</span> date selected on the asset's financial property <span class="Section">Fiscal Year</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fiscal Year Start</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.FiscalYearStart]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Start</span> date selected on the asset's financial property <span class="Section">Fiscal Year</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Flat Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.FlatFee]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Monthly Flat Fee</span> as entered on the asset's financial property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.27,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.17,Snippet Conditions.32">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image.html">Image</a> (Logo)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.Image(Property.LogoPath())]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the image uploaded to the asset's financial property <span class="Section">Property Logo</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.12,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-Count.html">Image Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.ImageCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of images uploaded to the asset's financial property details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.19,Snippet Conditions.12,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-URL.html">Image URL</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.ImageURL()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the URL address for a selected image uploaded to the asset's financial property details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.31,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Active</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.IsActive]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays <span class="Input">True</span> if <span class="Field">Active</span> is enabled on the asset's financial property <span class="Section">General</span> tile; otherwise, displays <span class="Input">False</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Commercial</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.IsCommercial]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays <span class="Input">True</span> if the asset's financial property has <span class="Field">Commercial</span> as the selected property type on the <span class="Section">General</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Property Level Online Listings</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.IsPropertyLevelOnlineListing]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays <span class="Input">True</span> if the <span class="Field">Property Level Online Listings</span> option on the asset's financial property <span class="Section">Other Information</span> tile is checked; otherwise, <span class="Input">False</span> displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Management Fee Post</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.LastManagementFeePost]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the date of the most recent management fee posting, as shown on the asset's financial property <span class="Window">Property Fee</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Posted</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.LastPosted]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the most recent post date of recurring charges at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Logo Image URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.LogoImageURL]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the URL address of the image uploaded to the asset's financial property <span class="Section">Property Logo</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Logo Path</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.LogoPath]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the file path of the image uploaded to the asset's financial property <span class="Section">Property Logo</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Manager Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.ManagerName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the name of the <span class="Field">Manager</span> as entered on the asset's financial property <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Market-Rent.html">Market Rent</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.MarketRent()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount of <span class="Field">Market Rent</span> for all units at the asset's financial property, as entered on each unit's <span class="Window">View Market Rent</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Maximum Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.MaximumFee]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Per Post Max Fee</span> for advanced fee setups, the <span class="Field">Monthly Max Fee</span> for standard fee setups, or the <span class="Field">Per Unit Max Fee</span> for fee setups with the <span class="Field">Post Per Unit</span> option enabled, as listed on the asset's financial property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Minimum Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.MinimumFee]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Per Post Min Fee</span> for advanced fee setups, the <span class="Field">Monthly Min Fee</span> for standard fee setups, or the <span class="Field">Per Unit Max Fee</span> for fee setups with the <span class="Field">Post Per Unit</span> option enabled, as listed on the asset's financial property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.17,Snippet Conditions.26,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.Name]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Full Name</span> as entered on the asset's financial property <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Occupancy-Count.html">Occupancy Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.OccupancyCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of contacts on the tenant's <span class="Window">View Contacts</span> pop-up for each tenant at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Occupied-Unit-Count.html">Occupied Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.OccupiedUnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of occupied units at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Occupied-Unit-List.html">Occupied Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.OccupiedUnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays a list of all occupied units (separated by commas) at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>One Month Only</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.OneMonthOnly]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays <span class="Input">True</span> if <span class="Field">One Month Only</span> is checked in the <span class="Section">Per Day Options</span> section on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges.html">Open Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.OpenCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total value of all open charges at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Credits.html">Open Credits</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.OpenCredits()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total value of all open credits at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent Net Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PercentNetIncome]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the value entered in the <span class="Field">% of Net Income</span> field on the asset's financial property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent Total Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PercentTotalIncome]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the value entered in the <span class="Field">% of Total Income</span> field on the asset's financial property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Property-All-Recurring-Charges.html">Property All Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PropertyAllRecurringCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total value of all recurring charges in effect for the current tenants of the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PropertyID]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the system-generated ID number for the asset's financial property.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Image</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PropertyImage]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays a selected image uploaded to the asset's financial property details page.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Property-Recurring-Charges.html">Property Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PropertyRecurringCharges()]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total value of property-level recurring charges, as specified on the asset's financial property <span class="Window">View Recurring Charges</span> pop-up.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12,Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.PropertyType]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Property Type</span> as entered on the asset's financial property <span class="Section">General</span> tile.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Recurring Charge Posting Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.RecurringChargePostingDay]</p>
+                                                                                        <p>Displays the <span class="Field">Posting Day</span> as entered on the asset's financial property <span class="Section">Other Information</span> tile.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Charge Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.RentChargeType]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the name of every <span class="Field">Rent Charge Type</span> selected on the asset's financial property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Rented-Square-Footage.html">Rented Square Footage</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.RentedSquareFootage()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total <span class="Field">Square Footage</span> as entered on the unit <span class="Section">Miscellaneous</span> tile for of all rented units at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Charged.html">Security Deposit Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.SecurityDepositCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount of all security deposits posted for all tenants associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.9,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Held.html">Security Deposit Held</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.SecurityDepositHeld()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount of all security deposits <span class="Stress">currently</span> held for all tenants associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Received.html">Security Deposit Received</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.SecurityDepositReceived()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount of security deposits paid by all tenants associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Refunded.html">Security Deposit Refunded</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.SecurityDepositRefunded()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount of security deposits refunded to tenants associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Short Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.ShortName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Short Name</span> as entered on the asset's financial property <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.2,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Square Footage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.SquareFootage]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Total Sq Ft</span> as entered on the asset's financial property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tax ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.TaxID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Property Tax ID</span> as entered on the asset's financial property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Tenant-Count.html">Tenant Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.TenantCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of tenants associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenant List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.TenantList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the full names of all current tenants, past tenants, prospects, and lost prospects associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Allocations.html">Total Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.TotalAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total value of paid allocations for all tenants associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.31,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Credits.html">Total Credits</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.TotalCredits()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total amount of credits posted for all tenants associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Prepay-Allocations.html">Total Prepay Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.TotalPrepayAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total value of prepayments and/or credits that are unapplied to charges at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Count.html">Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.UnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of active and inactive units associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-List.html">Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.UnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Name</span> of every active and inactive unit associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Vacant-Unit-Count.html">Vacant Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.VacantUnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the total number of vacant units associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-Vacant-Unit-List.html">Vacant Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.6">[<span class="Required">Class().</span>FinancialProperty.VacantUnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.6">Displays the <span class="Field">Name</span> of every vacant unit associated with the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

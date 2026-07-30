@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Primary Owner Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Primary-Owner.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Primary-Owner.htm</a></p>
+
+                                                        <h1 id="PrimaryOwnerClassScript" data-magellan-target="PrimaryOwnerClassScript"><a name="aanchor28"></a>
+                                                            <a name="kanchor48"></a><a name="H1"></a>Primary Owner Class (Script)</h1>
+                                                        <p>This class examines primary owner data on a property account. The primary owner is specified on the property's details page. The class is preceded by the Property class or Financial Property class and can be followed by a primary owner-level scripting function or another class associated with the primary owner.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Property().PrimaryOwner.PaymentMethod]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Payment Method</span> of the primary owner on the owner's details page on the <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Property().PrimaryOwner.PartnerCount]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the number of additional owners in the property's ownership.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_1"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.html">Script Functions</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.html">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Owner</span> details page for the primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Contact.html">Contact</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Contact().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">This class retrieves contact information for the primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Ownership.html">Ownership</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Ownership().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">This class retrieves data about the <span class="Field">Primary Owner</span> listed on the <span class="Section">Primary Owner</span> summary card of the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1,Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.11,Snippet Conditions.12,Snippet Conditions.17,Snippet Conditions.18,Snippet Conditions.24,Snippet Conditions.25,Snippet Conditions.14,Snippet Conditions.21,Snippet Conditions.34,Snippet Conditions.35"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.21,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Address Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.AddressCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the number of addresses entered on the details page for the primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Balance.html">Balance</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Balance()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the primary owner's account balance as of a specified date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Bank-Balance.html">Bank Balance</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.BankBalance()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total balance of the primary owner's bank account(s) as displayed in the <span class="Field">Balance</span> field on the primary owner's scoreboard.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.35,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Charges-List.html">Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.ChargesList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays each charge linked to the selected primary owner within a specified date range.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.23,Snippet Conditions.21,Snippet Conditions.35,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Comment]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the text entered in the <span class="Section">Comment</span> tile of the <span class="Window">Owner</span> details page for the primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Contribution Account Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.ContributionAccountName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the <span class="Field">Contribution Account</span> entered on the <span class="Window">Owner</span> details page for the primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Contribution Account Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.ContributionAccountNumber]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the GL account number for the primary owner's contribution account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.DisplayName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the <span class="Field">Display Name</span> entered on the primary owner's <span class="Section">General</span>tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Draw Account Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.DrawAccountName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the <span class="Field">Draw Account</span> entered on the <span class="Window">Owner</span> details page for the primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Draw Account Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.DrawAccountNumber]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the GL account number for the primary owner's draw account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.21,Snippet Conditions.13">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Pay Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.LastPayDate]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the date the primary owner was last paid as shown on the primary owner's <span class="Window">Checks</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.17,Snippet Conditions.26,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Name]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the <span class="Field">Name</span> as entered on the primary owner's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges-Amount.html">Open Charges Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.OpenChargesAmount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of open charges as listed on the primary owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges-List.html">Open Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.OpenChargesList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays a list of each of open charge on the primary owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Owner ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.OwnerID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the system-generated ID for the primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Owner-Last-Payment-Amount.html">Owner Last Payment Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.OwnerLastPaymentAmount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the dollar amount the owner was last paid as shown on the primary owner's <span class="Window">Checks</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Partner Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.PartnerCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the number of unique partners the primary owner has across all their ownerships, as listed on each property's <span class="Window">Owners</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.21,Snippet Conditions.13">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Partner List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.PartnerList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays a list of names (separated by commas) for each unique partners the primary owner has across all their ownerships, as listed on each property's <span class="Window">Owners</span> pop-up. The output is formatted as displayed below:</p>
+                                                                        <p class="Input" data-mc-conditions="Snippet Conditions.21">Emily Welsh, Clarkson Inc.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.16,Snippet Conditions.21,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Payment Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.PaymentMethod]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the <span class="Field">Payment Method</span> entered on the primary owner's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Payments.html">Payments</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Payments()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays a list of payments for the selected primary owner. The function creates a separate line for each payment that includes  the charge type, name, and date the payment was posted to the primary owner's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Portal User Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.PortalUserName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the <span class="Field">Username</span> for the primary owner's <span class="mc-variable Products.OWA variable">Owner Web Access</span> account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Charged.html">Security Deposit Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.SecurityDepositCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of all security deposits posted for all tenants across all the primary owner's properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.9,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Held.html">Security Deposit Held</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.SecurityDepositHeld()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of all security deposits <span class="Stress">currently</span> held for all tenants across all the primary owner's properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Received.html">Security Deposit Received</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.SecurityDepositReceived()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of all security deposits paid by all tenants across all the primary owner's properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Refunded.html">Security Deposit Refunded</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.SecurityDepositRefunded()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of all security deposits refunded to all tenants across all the primary owner's properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tax ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.TaxID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the <span class="Field">Tax ID</span> as entered on the primary owner's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Charged.html">Total Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.TotalCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of charges posted to the primary owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.31,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Credits.html">Total Credits</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.TotalCredits()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of credits posted to the primary owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Payments.html">Total Payments</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Payments()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total amount of payments posted to the primary owner's <span class="Window">Management Company</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Reserve.html">Total Reserve</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.TotalReserve()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the total <span class="Field">Reserve</span> amount as entered on the primary owner's <span class="Window">Ownerships</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Transactions.html">Transactions</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.Transactions()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays each transaction associated with the owner within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the primary owner displays, as shown below.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">
+                                                                            <img src="../../../../assets/Resources/Images/PNGs/Owner%20Transaction%20Script.png" alt="" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.html">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[<span class="Required">Class().</span>PrimaryOwner.UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the value of the specified owner-type user defined field (UDF). The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.21">[Property().PrimaryOwner.UserDefinedField("Preferred Contact Method")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.21">Displays the value for the <span class="Field">Preferred Contact Method</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

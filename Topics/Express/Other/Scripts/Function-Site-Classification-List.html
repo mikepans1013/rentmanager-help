@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Classification List Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Site-Classification-List.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Site-Classification-List.htm</a></p>
+
+                                                        <h1 id="SiteClassificationListFunctionScript" data-magellan-target="SiteClassificationListFunctionScript"><a name="aanchor807"></a>
+                                                            <a name="kanchor1326"></a><a name="H1"></a>Site Classification List Function (Script)</h1>
+                                                        <p>This function can be used with the Unit class to display a list of site classifications for a unit, or a list of site classifications in a date range. Site classifications are determined by the site's legal owner, whether the site can be rented, the occupancy status, and the type of asset(s) and/or resident-owned RV present at that site.</p>
+                                                        <p>This script returns data only from units associated with properties that have a <span class="Field">Property Type</span> of <span class="Field">Manufactured Housing</span>. The unit's site classification can be found on the unit's details page on the scoreboard.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Unit-Details-Site-Classification.png" alt="The Scoreboard of unit Lot #101 shows a site classification of Community Owned - Occupied" class="lightbox" />
+                                                        </p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Optional">Class()</span>.Unit.SiteClassificationList()]</p>
+                                                                        <p>Displays the list of site classifications assigned to the unit, as shown on the unit's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[SiteClassificationList(<span class="Optional">"FromDate"</span>,<span class="Optional">"ToDate"</span>,<span class="Optional">"Format"</span>)</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>FromDate</h3>
+                                                        <p>Specify the start date to use when examining site classifications. If no date is specified, the function uses the beginning of time.</p>
+                                                        <p class="Example">[SiteClassificationList("1/5/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the list of site classifications that applied to the unit from January 5, <span class="mc-variable Dates.Year4 variable">2026</span> and on.</p>
+                                                        <h3 class="Optional"><a name="H3_2"></a>ToDate</h3>
+                                                        <p>Specify the ending date to use when examining site classifications. If no date is specified, the function uses the end of time.</p>
+                                                        <p class="Example">[SiteClassificationList("","1/5/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the list of site classifications that applied to the unit since the beginning of time until January 5, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_3"></a>Format</h3>
+                                                        <p>List details of the site classification using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <h3><a name="H3_4"></a>Default Format</h3>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays the site classification name, the date the classification first applied, and the date on which the classification ended.</p>
+                                                        <p class="Formula">"$_Name\t$_FromDate\t$_ToDate"</p>
+                                                        <p class="Formula">
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script-Site-Classification-List-Function.png" alt="The SiteClassificationList function displays a list of two site classifications for a unit." />
+                                                        </p>
+                                                        <h3><a name="H3_5"></a>Variables</h3>
+                                                        <p>The following variables can be used in the Format parameter:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Duration</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the number of days the unit has spent in this site classification.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_FromDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date this unit was first associated with this site classification.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the name of the site classification, as shown on the unit's details page.</p>
+                                                                        <p>If there is no homeowner status assigned to the unit to determine a site classification, <span class="Input">&lt;Unassigned Homeowner Status&gt;</span> displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_ToDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the last date this unit was still associated with the site classification before it changed. If there are no future classifications, this output displays blank.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Example">[SiteClassificationList("","","$_Name\t$_Duration")]</p>
+                                                        <p>Displays a list with a customized output that shows the current site classification's name and how long it's been assigned to that classification.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Unit.SiteClassificationList("5/10/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays a list of the unit's assigned site classifications since May 10, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[Unit.SiteClassificationList("2/12/<span class="mc-variable Dates.Year4 variable">2026</span>","10/20/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays a list of the unit's assigned site classifications from January 12, <span class="mc-variable Dates.Year4 variable">2026</span> through October 20, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[Tenant().Lease(1).Unit.SiteClassificationList()]</p>
+                                                        <p>Displays a list of the site classifications for the unit associated with the tenant's first additional lease.</p>
+                                                        <p class="Example">[Unit.SiteClassificationList("","","$_Name\t$_FromDate\t$_Duration")]</p>
+                                                        <p>Displays a customized output that shows a list of the unit's site classifications, including the classification name, the day the current classification first applied, and how long the unit has been assigned to that classification.</p>
+                                                        <p class="Input">Community Owned - Occupied	7/11/<span class="mc-variable Dates.Year4 variable">2026</span> 112<br />Community Owned - Vacant 10/31/<span class="mc-variable Dates.Year4 variable">2026</span> 20<br />Abandoned - Community Owned - 11/20/<span class="mc-variable Dates.Year4 variable">2026</span> 55</p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Image.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Image.htm</a></p>
+
+                                                        <h1 id="ImageFunctionScript" data-magellan-target="ImageFunctionScript"><a name="aanchor251"></a>
+                                                            <a name="kanchor412"></a><a name="H1"></a>Image Function (Script)</h1>
+                                                        <p>This function embeds the specified image file using a file path or field in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Contact.html">Contact</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Field">
+[<span class="Required">Class().</span>Contact().Image(Contact.ImagePath)]</p>
+                                                                        <p>Displays information from the entity's <span class="Window">View&#160;Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Financial-Property.html">Financial Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.Image(Property.LogoPath)]</p>
+                                                                        <p>Displays information from the <span class="Section">Property Logo</span> tile of the financial property for the selected asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Pet.html">Pet</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">
+[Tenant().Pet().Image()]</p>
+                                                                        <p>Displays information from the <span class="Section">Pets</span> tile on the tenant's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().Image(Property.LogoPath)]</p>
+                                                                        <p>Displays information from the property's <span class="Section">Property Logo</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-System.html">System</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[System.Image()]
+</p>
+                                                                        <p>Displays information from the specified file path.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Violation.html">Violation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">
+[Violation().Image()]</p>
+                                                                        <p>Displays information from the violation's <span class="Section">Violation Image</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The parameters listed below apply only when using this function with the specified classes. Using these parameters with other classes returns no data.</p>
+                                                        </div>
+                                                        <h3><a name="H3_1"></a>Parameters for Violation, Pet, and System Classes</h3>
+                                                        <p class="Formula">[System.Image(<span class="Required">"Path"</span>,<span class="Optional">"Width"</span>,<span class="Optional">"Height"</span>,<span class="Optional">"IsInches")</span>]
+</p>
+                                                        <p class="Formula">Image(<span class="Optional">"Width"</span>,<span class="Optional">"Height"</span>,<span class="Optional">"IsInches"</span>)</p>
+                                                        <h3 class="Required"><a name="H3_2"></a>Path</h3>
+                                                        <p>Specify the file path where the image is located in your system. This parameter applies only when using this function with the System class.</p>
+                                                        <p class="Formula">[Image("\\tsclient\C\myImage.jpg")]</p>
+                                                        <p>Displays the image named myImage.jpg located in this system path.</p>
+                                                        <h3 class="Optional">Width</h3>
+                                                        <p>Specify the width of the image. If a height parameter value is not specified after the width, the image is scaled proportionately.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[Image("100")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the image of the specified entity scaled to 100 pixels wide and a proportional height.</p>
+                                                        <h3 class="Optional">Height</h3>
+                                                        <p>Specify the height of the image. If a width parameter value is not specified before the height, the image is scaled proportionally.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[Image("","150")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the image of the specified entity scaled to 150 pixels high and a proportional width.</p>
+                                                        <h3 class="Optional">IsInches</h3>
+                                                        <p>Enter the value <span class="Input">False</span> if the width and height are in pixels and <span class="Input">True</span> if they are in inches. If no parameter value is specified, the function defaults to <span class="Input">False</span>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>In addition to <span class="Input">True</span> and <span class="Input">False</span>, this parameter also accepts the following alternate input options: <span class="Input">T</span> and <span class="Input">F</span>, <span class="Input">Yes</span> and <span class="Input">No</span>, and <span class="Input">Y</span> and <span class="Input">N</span>. The options <span class="Input">T</span>, <span class="Input">Yes</span>, and <span class="Input">Y</span> all behave the same as <span class="Input">True</span>, while <span class="Input">F</span>, <span class="Input">No</span>, and <span class="Input">N</span> all behave the same as <span class="Input">False</span>.</p>
+                                                        </div>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[Image("3","","True")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the image of the specified entity scaled to 3 inches wide and a proportional height.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[Image("","5","Yes")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the image of the specified entity scaled to 5 inches tall and a proportional width.</p>
+                                                        <h3><a name="H3_3"></a>Parameters for the Contact Class</h3>
+                                                        <p class="Formula">Image(<span class="Required">Contact.ImagePath</span>)</p>
+                                                        <h3 class="Required"><a name="H3_4"></a>Contact.ImagePath</h3>
+                                                        <p>The Contact.ImagePath script entered as a parameter directs <span class="mc-variable Products.RM variable">Rent Manager</span> to the location of the image.</p>
+                                                        <p class="Formula">[Tenant().Contact().Image(Contact.ImagePath)]</p>
+                                                        <p>Displays the  image on the <span class="Window">View&#160;Contacts</span> pop-up of the specified tenant contact.</p>
+                                                        <h3><a name="H3_5"></a>Parameters for the Property and Financial Property Classes</h3>
+                                                        <p class="Formula">Image(<span class="Required">Property.LogoPath</span>)</p>
+                                                        <h3 class="Required"><a name="H3_6"></a>Property.LogoPath</h3>
+                                                        <p>The Property.LogoPath script entered as a parameter directs <span class="mc-variable Products.RM variable">Rent Manager</span> to the location of the image.</p>
+                                                        <p class="Example">[Property().Image(Property.LogoPath)]</p>
+                                                        <p>Displays the  image on the <span class="Section">Property Logo</span> tile of the selected property.</p>
+                                                        <p class="Example">[Asset().FinancialProperty.Image(Property.LogoPath)]</p>
+                                                        <p>Displays the image on the <span class="Section">Property Logo</span> tile of the specified asset's financial property.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[System.Image("\\tsclient\C\myImage.jpg","500")]</p>
+                                                        <p>Displays the image named myImage.jpg located in this system path, scaled to 500 pixels wide and a proportional height.</p>
+                                                        <p class="Example">[Violation().Image("4","","True")]</p>
+                                                        <p>Displays the image of the specified violation, scaled to 4 inches wide and a proportional height.</p>
+                                                        <p class="Example">[Property().Image(Property.LogoPath)]</p>
+                                                        <p>Displays the image on the <span class="Section">Property Logo</span> tile of the selected property, at its original size.</p>
+                                                        <p class="Example">[Tenant().Contact().Image(Contact.ImagePath)]</p>
+                                                        <p>Displays the image on the <span class="Window">View&#160;Contacts</span> pop-up of the specified tenant contact, at its original size.</p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAM Reconciliation</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/MicroContent/Resources/MicroContent/Improve-Search/cam-reconciliation.htm">https://rmxhelp.rentmanager.com/MicroContent/Resources/MicroContent/Improve-Search/cam-reconciliation.htm</a></p>
+
+        <h1><a name="H1"></a>CAM Reconciliation</h1>
+        <p>Common area maintenance (CAM) reconciliation is a process that allows you to compare the total amount of <span class="Stress">commercial recoverable expenses</span> (CRE) incurred by selected properties and <span class="Stress">CRE charges</span> posted to tenants of those properties over a specified period of time. CAM reconciliations are often performed at the end of a month, quarter, or year to determine if your tenants were charged too much or too little to cover the actual CRE for the respective properties.</p>
+        <p>When calculating CAM reconciliation charges, <span class="mc-variable Products.RM variable">Rent Manager</span> first calculates the CRE&#160;amount based on the information entered on the CRE&#160;recurring charges for each property. The amount is divided among the tenants of the properties based on the CRE distribution method you select. Tenants then receive a credit or a charge to their account(s) depending on the result.</p>
+        <div class="privs">
+            <p class="label1">Related Privileges</p>
+            <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                <col class="TableStyle-Privileges-Column-Column1" />
+                <col class="TableStyle-Privileges-Column-Column1" />
+                <col class="TableStyle-Privileges-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-Privileges-Head-Header1">
+                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-Privileges-Body-Body1">
+                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Commercial Recoverable Expenses (CRE)</td>
+                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Reconcile CAM</td>
+                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>For more information, refer to <a href="../../../../Topics/Express/Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+        </div>
+        <p>To open the <span class="Window">CAM&#160;Reconciliation</span> page, go to <span class="Navigation"><img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Receivables <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Commercial <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> CAM Reconciliation</span>.</p>
+        <p class="Required">
+            <img src="../../../../assets/Resources/Images/PNGs/RMX-CAM-Reconciliation-2024.png" class="lightbox" alt="The CAM Reconciliation page displays the options available for reconciliations." />
+        </p>
+        <h2><a name="H2_1"></a>Step 1: Select CAM Reconciliation Settings</h2>
+        <p>To perform a CAM reconciliation, do the following:</p>
+        <ol>
+            <li value="1">
+                <p>In the <span class="Section">Options</span> section, select the desired information for each field.</p>
+                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Standard-Head-Header1">
+                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Properties</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The properties you wish to reconcile from the drop-down list. Alternatively, select a property <span class="Field">Group</span> from the drop-down list.</p>
+                                <div class="info">
+                                    <p class="label1">More Information</p>
+                                    <p>
+                                        This field populates only with the properties to which you have access. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../../../../Topics/Express/KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Date Range</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The date range to reconcile only commercial recoverable charges and expenses posted during this period.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Charge Types to Reconcile</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The charge types to reconcile against commercial recoverable expense accounts. Only charge types defined as CRE charges display.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Accounts to Reconcile Against</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The CRE-based expense accounts to reconcile against your selected CRE charges. Only expense accounts defined as CRE expenses display.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Basis</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>Select either a <span class="Field">Cash</span> or <span class="Field">Accrual</span> accounting basis to calculate CRE over the specified date range.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Subtract Base Amount</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>Subtracts the <span class="Column">Base Amount</span> value entered on the commercial lease's <span class="Tab">Charge Type Setup</span> tab from the reconciled amount using the following formula:</p>
+                                <p class="Formula">Adjusted Expense = CRE Total – Base Amount</p>
+                                <p>For example, if the overall CRE total is $100,000 and Tenant A has a base amount of $5,000, <span class="mc-variable Products.RM variable">Rent Manager</span> uses the previously selected distribution method to allocate Tenant A's portion of $95,000 ($100,000 – $5,000).</p>
+                                <p>If Tenant B does not have an applicable base amount, <span class="mc-variable Products.RM variable">Rent Manager</span> uses the same distribution method to allocate Tenant B's portion of the full $100,000 CRE expense amount.</p>
+                                <div class="info">
+                                    <p class="label1">More Information</p>
+                                    <p>Subtracting base amounts can reduce a tenant's total reconciliation amount to zero, but never a negative amount.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                <p>Limit by move in/move out</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                <p>Limits each tenant's portion of the CRE amount by the period of time in which they actually occupied a unit included in the reconciliation.</p>
+                                <div class="info">
+                                    <p class="label1">More Information</p>
+                                    <p>If the tenant has a lease renewal within this date range, <span class="mc-variable Products.RM variable">Rent Manager</span> uses the terms of the lease in effect on the <span class="Field">To</span> date of the <span class="Field">Date Range</span>.</p>
+                                    <p>The <span class="Field">Base Amount</span> and <span class="Field">Cap Amount</span> specified in that lease are used in the reconciliation.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li value="2">
+                <p>In the <span class="Section">Select How to Divide the Amount Between Tenants</span> section, choose the CRE distribution method.</p>
+                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Standard-Head-Header1">
+                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Tenant's percentage of the total square footage of the property</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>Charges CRE to commercial tenants based on the percentage of each tenant’s rented square footage of the overall property’s square footage. <span class="mc-variable Products.RM variable">Rent Manager</span> calculates the total square footage of all the units at the specified property, then divides the square footage of the unit occupied by the tenant to determine the pro-rata share.</p>
+                                <p>For example, if the CRE charge is <span class="Stress">$3000</span> and a commercial tenant rents <span class="Stress">50%</span> of the total square footage of the property, that tenant is charged <span class="Stress">$1500</span> of the CRE charge amount.</p>
+                                <p>For this option to work, the tenant's rental unit must have the <span class="Field">Square Footage</span> defined on the <span class="Window">Unit</span> details page and the <span class="Field">Total Sq Ft</span> defined on the <span class="Window">Property</span> details page.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Divide evenly among current tenants</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>Charges CRE by the total charge divided by the total number of units in the property. This means that part of the total CRE charge is not assigned if there are any vacant units in the property.</p>
+                                <p>For example, if your property has ten units and eight are rented, each of the eight tenants would be assigned <span class="Stress">1/10</span> of the total CRE charge.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Use commercial recoverable expense (CRE) setup of the selected lease</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                    <col class="TableStyle-Standard-Column-Column1" />
+                                    <tbody>
+                                        <tr class="TableStyle-Standard-Body-Body1">
+                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                <p colspan="2">Charges each commercial tenant the percentage of expenses you defined on the commercial lease's <span class="Tab">CRE Setup</span> tab.</p>
+                                                <p>For this option to work, you must have all percentages on the commercial lease's <span class="Tab">CRE Setup</span> tab and have expenses in the selected CRE accounts for the selected date range.</p>
+                                                <div class="info">
+                                                    <p class="label1">More Information</p>
+                                                    <p>If this option is selected, the only options available on the <span class="Window">CRE&#160;Amount to be Divided</span> page are <span class="Field">Use expenses from:</span> and <span class="Field">Use budget expenses from:</span>, as these are the options that are based on expense accounts.</p>
+                                                </div>
+                                                <p>Select to use either <span class="Field">Pro rata share</span> or <span class="Field">Administrative fees</span>.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-Standard-Body-Body1">
+                                            <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">Pro rata share</td>
+                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                <p>The percentage of the expenses for the selected CRE account, as defined on the commercial lease's <span class="Tab">CRE Setup</span> tab.</p>
+                                                                <p class="Formula">Pro Rata Share = CRE Account * Pro Rata Share %</p>
+                                                                <p>For example, if an expense account has expenses of <span class="Stress">$500</span> and the percentage entered is <span class="Stress">15</span>, the pro-rata share amount would be $75 (15% of $500, calculated as 500 * 0.15).</p>
+                                                                <p>Up to 4 decimal places may be used.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If the option <span class="Field">Subtract Base Amount</span> is selected, the tenant's base amount is first subtracted from the expense. The result is then multiplied by the by the tenant's pro rata share percentage for the corresponding CRE&#160;expense.</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">Admin Fees</td>
+                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                <p>This is calculated by first determining the pro-rata share for each commercial tenant and then multiplying that value by the administrative fee percentage defined on the commercial lease's <span class="Tab">CRE Setup</span> tab.</p>
+                                                                <p class="Formula">Administrative Fees = Pro Rata Share&#160;* Administrative Fee %</p>
+                                                                <p>For example, if the pro-rata share is <span class="Stress">$75</span> and the administrative fee is <span class="Stress">1%</span>, the fee would be $0.75 (10% of $75, calculated as 75* 0.01).</p>
+                                                                <p>Up to four decimal places may be used.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                <p>Show expenses with 0% pro rata share</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                <p>Include accounts that do not have a pro rata share.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                <p>Use percentage in tenant’s user defined field</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                <p colspan="2">Charge CRE based on the percent value specified in a selected tenant-type user defined field (UDF).</p>
+                                <p>For this option to work, you must create tenant-level UDFs specifically for tracking percentages for each tenant who should receive a CRE charge. Additionally, each applicable tenant must have a numeric value (ranging from 0-100) entered in the UDF.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li value="3">
+                <p>In the <span class="Section">Reconciliation Charge Information</span> section, select the desired information for each field.</p>
+                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Standard-Head-Header1">
+                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Date</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The date for which the reconciliation charge/credit is added to the tenant account(s).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Charge Type</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The charge type to use when posting this reconciliation to tenant accounts.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Use last day in range</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The date listed on the transaction is the end date selected in the <span class="Section">Options</span> section <span class="Field">Date Range</span> field.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Create invoices for posted charges</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <div class="privs">
+                                    <p class="label1">Related Privileges</p>
+                                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Sales/Invoicing</td>
+                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Invoices</td>
+                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>For more information, refer to <a href="../../../../Topics/Express/Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                </div>
+                                <p>Creates tenant invoices for CAM reconciliation charges.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                <p>Comment</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                <p>A comment for the CAM&#160;reconciliation charges/credits that displays on the tenant's <span class="Window">View Transactions</span> pop-up.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li value="4">
+                <p>Click <span class="BigButtons">Reconcile</span>.</p>
+            </li>
+        </ol>
+        <h2><a name="H2_2"></a>Step 2:&#160;Select Accounts to Reconcile and Post Charges</h2>
+        <p>
+            <img src="../../../../assets/Resources/Images/PNGs/RMX-CAM-Reconciliation-Results-2024.png" class="lightbox" alt="The CAM Reconciliation page displays the tenants with balances to be reconciled." />
+        </p>
+        <p>To select the accounts you wish to reconcile and post charges to, do the following:</p>
+        <ol>
+            <li value="1">
+                <p>Review the summary page and all tenants with reconcilable charges.</p>
+                <div class="info">
+                    <p class="label1">More Information</p>
+                    <p>If a tenant in the list has a commercial lease <span class="Field">Base Terms</span> entered on the <span class="Tab">Charge Type Setup</span> tab that does not align with the selected <span class="Field">Date Range</span>, <span class="mc-variable Products.RM variable">Rent Manager</span> displays a warning and highlight the affected tenant in yellow.</p>
+                    <p>For example, if a tenant has a base term of <span class="Field">Monthly</span> and the <span class="Section">Date Range</span> is for two months, <span class="mc-variable Products.RM variable">Rent Manager</span> warns you that the date range does not match the base term.</p>
+                    <p>To correct this, change the <span class="Section">Date Range</span> to match the <span class="Field">Base Term</span>. You may wish to perform multiple reconciliations with groups of tenants who use the same <span class="Field">Base Term</span>.</p>
+                </div>
+                <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <col class="TableStyle-Standard-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Standard-Head-Header1">
+                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Tenant</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The tenant for whom the charges are posted. If the tenant has multiple leases for the same unit, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/arrow_right_19x19.png" class="inline-image" alt="Show More" style="width: 19;height: 19;" /> to view an itemized breakdown of the expenses for each lease.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Property</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The commercial property the tenant occupies. This column displays only if, in the <span class="Section">Options</span> section, more than one property is selected for CAM reconciliation.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Unit</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The unit the commercial tenant leases at the property.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Lease Dates</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The <span class="Field">Lease Start</span> and <span class="Field">Lease End</span> dates for the commercial tenant's lease.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Move Dates</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The <span class="Field">Move In</span> and, if applicable, <span class="Field">Move Out</span> date for the commercial tenant's lease.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Total Expenses</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The actual commercial recoverable expenses during the date range that the tenant is responsible for paying, based on the selected distribution strategy.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Expense Adjustments</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The total dollar amount of expense adjustments for the tenant's lease. Expense adjustments can be created to add or deduct amounts from a selected general ledger (GL)&#160;account while performing a CAM reconciliation.</p>
+                                <p>If this value is positive, the general ledger (GL) account adjustment is an addition. If the value is negative, the GL account adjustment is a deduction.</p>
+                                <div class="info">
+                                    <p class="label1">More Information</p>
+                                    <p>To add a one-time expense adjustment for a tenant, click the value in this column to open the <span class="Window">CAM Expense Adjustments</span> pop-up, then click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline-image" alt="Add a one-time adjustment" style="width: 19;height: 19;" />. For more information, refer to <a href="../../../../Topics/Express/Action/CAM-Expense-Adjustments-One-Time-Add.html" class="MCXref xref">Add a One-Time CAM Expense Adjustment</a>.</p>
+                                    <p>To delete an existing one-time expense adjustment from the list, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/cancel_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" />. If the adjustment is associated with a single tenant lease, the <span class="Stress">entire</span> adjustment is deleted. If the adjustment is associated with multiple tenant leases, the lease is removed from the adjustment but the adjustment is <span class="Stress">not</span> deleted.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Pro Rata %</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The percentage used in the pro-rata share calculation based on the division method selected in the <span class="Section">Select How to Divide the Amount Between Tenants</span> section.</p>
+                                <p>If the <span class="Field">Use commercial recoverable expense (CRE) setup of the selected lease</span> distribution method is selected, <span class="Field">Pro rata share</span> is checked, and there are multiple percentages for the expense accounts, <span class="Input">&lt;Varies&gt;</span> displays.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Sq Ft (%)</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The square footage of the unit the commercial tenant occupies at the property. This option displays only if, in the <span class="Section">Select How to Divide the Amount Between Tenants</span> section, <span class="Field">Percentage of property total sq. ft.</span> is selected.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Pro Rata Amount</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The total dollar amount much of the actual commercial recoverable expenses this tenant is responsible for paying, based on the option selected in the <span class="Section">Select How to Divide the Amount Between Tenants</span> section.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                <p>Previously Charged</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                <p>The total of all selected CRE charges that have been charged to this tenant's account.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Body1">
+                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                <p>Reconcile Amount</p>
+                            </td>
+                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                <p>The reconciled amount that can be posted to the tenant based on the <span class="Column">Cap Amount</span> and <span class="Column">Cap Term</span> entered on the commercial lease's <span class="Tab">Charge Type Setup</span> tab.</p>
+                                <p>If a <span class="Column">Cap Amount</span> is not defined, the capped amount shown defaults to the reconciled amount. If a <span class="Column">Cap Amount</span> is defined, the capped amount shown is the value that is posted.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li value="2">
+                <p>Select the tenant(s) for whom you wish to post CAM reconciliation charges.</p>
+            </li>
+            <li value="3">
+                <p>To automatically generate the <span class="Report">CAM Reconciliation Statement</span> for the selected properties after posting reconciliation charges, check <span class="Field">Run CAM Reconciliation Statements</span>.</p>
+            </li>
+            <li value="4">
+                <p>Click <span class="BigButtons">Post Charges</span>.</p>
+            </li>
+            <li value="5">
+                <p>Click <span class="BigButtons">Yes</span> on the confirmation pop-up.<br />The CAM&#160;reconciliation charges/credits are posted to the selected tenant account(s).</p>
+                <div class="info">
+                    <p class="label1">More Information</p>
+                    <p>Tenants with CRE charges <span class="Stress">less</span> than their allocated portion of the commercial recoverable expenses receive a CRE charge to cover the difference, while tenants with charges <span class="Stress">greater</span> than their portion receive a CRE credit to cover the difference.</p>
+                </div>
+            </li>
+        </ol>
+    
+</main>
+</body>
+</html>

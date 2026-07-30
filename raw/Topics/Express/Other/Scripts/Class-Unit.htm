@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-output-analytics-server="https://lcs202202281700482.api.madcapcentral.com/" data-mc-output-analytics-topic-id="1xBCeJNnhjAPyXZp0OqabpHvWdZB8I86vlAtwWUMkh0C31xc1Ixy+Uv90OuQetJV0vTDrc4d3gZiR668T5rz0vOVFQJGLtIZdFzmhuvO4Lc3PTUOEkl402aBAp9NvFybaMmVpWEUhH+oMicDDYup+Pu1gZPOi4ORMACQDeo/EdV9yxvsc3xsOA==" data-mc-has-content-body="True" data-mc-conditions="Content.Important,Status.Published" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="Dependencies" content="Reference Topics - mark which ones in file tags" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Unit Class (Script)</title>
+        <label class="mode-switcher" id="theme-toggle">
+            <input type="checkbox" name="checkbox" /><span class="slider round"></span>
+        </label>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/RMX-Branding.css" rel="stylesheet" type="text/css" />
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="../../../../Resources/Stylesheets/lity.css" rel="stylesheet" />
+        <link href="../../../../Resources/Stylesheets/MainStylesDark.css" rel="stylesheet" type="text/css" data-theme="dark-main" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Tablestyles/Script.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Tablestyles/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script>/* <![CDATA[ */
+			(function () {
+			var theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.dataset.theme = theme;
+
+			// Prevent white flash on first paint when in dark mode
+			if (theme === 'dark') {
+			var s = document.createElement('style');
+			s.id = 'early-dark-paint';
+			s.textContent =
+			"html,body{background:#0e1319;color:#e8e8e8}" +           // minimal dark bg + readable text
+			"html[data-theme='dark']{color-scheme:dark}";              // hints UA (form controls, scrollbars)
+			document.head.appendChild(s);
+			}
+			})();
+		/* ]]> */</script>
+        <script src="../../../../Resources/Scripts/custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/bootstrap.js">
+        </script>
+        <script src="../../../../Resources/Scripts/lightbox.js">
+        </script>
+        <script src="../../../../Resources/Scripts/lity.js">
+        </script>
+        <script src="../../../../Resources/Scripts/addLityAttribute.js">
+        </script>
+        <script src="../../../../Resources/Scripts/Dark-Mode.js">
+        </script>
+        <script src="../../../../Resources/Scripts/glanceCobrowse.js">
+        </script>
+        <script src="../../../../Resources/Scripts/microContentTopics.js">
+        </script>
+        <script src="../../../../Resources/Scripts/mobileResponseTableDisplay.js">
+        </script>
+        <script type="text/javascript" src="../../../../Skins/Default/Scripts/Topic-ToolBar.js">
+        </script>
+    </head><a name="top"></a>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="2" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="topic-background">
+                                        <div class="search">
+                                            <form class="search" action="#">
+                                                <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                    <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search..." />
+                                                    <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                        </div>
+                                                        <div class="search-filter-content" id="sf-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-submit-wrapper" dir="ltr">
+                                                        <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="row collapse">
+                                            <div class="topic-layout">
+                                                <div>
+                                                    <div data-sticky-container="" id="fsz_WF-9G0ePOX3fFhqUKA">
+                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="fsz_WF-9G0ePOX3fFhqUKA:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
+                                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container-on="small" class="nocontent menu _Skins_Topic_Headers_Menu mc-component">
+                                                                <li class="tree-node"><a href="#UnitClassScript">Unit Class (Script)</a>
+                                                                    <ul>
+                                                                        <li class="tree-node"><a href="#ClassParameters">Class Parameters</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#RecommendedClasses">Recommended Classes</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#AvailableFunctions">Available Functions</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_ToolBar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                        <div class="button-group-container-left">
+                                                            <button class="button needs-pie remove-highlight-button" title="Remove Search Highlights">
+                                                                <div>
+                                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                                        <div class="button-icon"> </div>
+                                                                    </div><span class="button-text">Remove Highlights</span>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div role="main" id="mc-main-content">
+                                                        <h1 id="UnitClassScript" data-magellan-target="UnitClassScript"><a name="aanchor375"></a>
+                                                            <MadCap:concept term="Ref-Script Classes" /><a name="kanchor620"></a><a name="H1"></a>Unit Class (Script)</h1>
+                                                        <p>This class examines unit information and can be followed by either a unit-level scripting function or another class associated with the unit.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Unit().Bedrooms]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the number of bedrooms in the unit as entered on the <span class="Window">Unit</span> details page for the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Unit().Address().State]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the state of the unit's address marked as <span class="Field">Default</span> as entered on the <span class="Window">Unit</span> details page for the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameters" data-magellan-target="ClassParameters"><a name="H2_1"></a>Class Parameters</h2>
+                                                        <p>This class can specify a single, optional parameter: an ID.</p>
+                                                        <h3><a name="H3_1"></a>ID</h3>
+                                                        <p>The ID is a system-generated, unique number assigned by <span class="mc-variable Products.RM variable">Rent Manager</span>. The ID is assigned in the order of the unit's creation date. This number does not display on any window but may be used in scripting. If no ID is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to using the ID of the account selected before running the script.</p>
+                                                        <p>To learn the ID number of a selected account, the script <span class="Formula">[Unit().UnitID]</span> can be used. Entering a distinct ID in this class parameter allows you to specify the account that the following function examines.</p>
+                                                        <p class="Example">[Unit(102).Floor]</p>
+                                                        <p>Displays the <span class="Field">Floor</span> as entered on the unit's <span class="Section">General</span> tile for the unit with the ID&#160;of 102.</p>
+                                                        <h3><a name="H3_2"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific unit by using a number to identify each unit listed. For example, if there are three units listed, they are referenced by indexes 0, 1, and 2. You can specify which unit you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0.</p>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_2"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.htm">Script Functions</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.htm">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This class retrieves address data from the <span class="Section">Addresses</span> tile on the <span class="Window">Unit</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.htm">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Asset().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29"> This class retrieves asset data from the <span class="Section">Assets</span> tile on the <span class="Window">Unit</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Marketing.htm">Marketing</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Marketing.<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This class retrieves data from the unit's <span class="Window">Marketing Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.9,Snippet Conditions.14,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.htm">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Property().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This class retrieves property data for the associated unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.htm">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().ServiceManager().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This class retrieves data from service issues linked to a unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.25,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.htm">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Tenant().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This class retrieves data about the tenant occupying the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Unit-Type.htm">Unit Type</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UnitType().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This class retrieves data from the <span class="Field">Unit Type</span> field on the <span class="Section">General</span> tile of the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Violation.htm">Violation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Violation().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This class retrieves violation data for a tenant associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_3"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.21,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Address Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().AddressCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of addresses entered for the selected unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Aggregate-Chart-Value.htm">Aggregate Chart Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().AggregateChartValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays unit-level financial data based on the function's required <span class="Field">Name</span> parameter.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This scripting function must be used in conjunction with the unit FillChart function, which must be run first to generate the collection of financial data as defined by your parameters (e.g., date range and accounting method). This script can then be used to retrieve a selected value from that data. For more information, refer to <a href="Function-Fill-Chart.htm" class="MCXref xref">Fill Chart Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenities Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().AmenitiesCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of amenities checked on the unit's <span class="Section">Amenities</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenities List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().AmenitiesList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays a list of amenities (separated by commas) as entered on the unit's <span class="Section">Amenities</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Amenity.htm">Amenity</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Amenity()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the name of a checked amenity as listed on the unit's <span class="Section">Amenities</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Amps</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Amps]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of amperes (amps) the outlet is rated for, which is entered on the unit's <span class="Section">RV / Campground Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Apply Now URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().ApplyNowURL]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the <span class="mc-variable Products.ApplyNow variable">Apply Now</span> URL at which an application can be submitted for the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p style="font-weight: bold;font-style: normal;" data-mc-conditions="Snippet Conditions.29">[Unit().AssetCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of assets assigned to the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent17">
+                                                                            <p style="font-weight: bold;font-style: normal;" data-mc-conditions="Snippet Conditions.29">[Unit().AssetList]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.29">Displays a list of asset names (separated by commas) assigned to the unit.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Availability.htm">Availability</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Unit().Availability()]</p>
+                                                                                        <p>Displays unit availability data for the selected field.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Available.htm">Available</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().Available()]</p>
+                                                                        <p>Displays <span class="Input">True</span> if the unit is available and <span class="Input">False</span> if it is not available.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bathrooms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Bathrooms]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of bathrooms as entered on the unit's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bedrooms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Bedrooms]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of bedrooms as entered on the unit's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Chart-Value.htm">Chart Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().ChartValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays unit-level account data based on the function's required GL <span class="Field">Account Number</span> and <span class="Field">Field</span> parameters.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This scripting function must be used in conjunction with the Unit FillChart function, which must be run first in your scripting to generate the collection of financial data as defined by your parameters (e.g., date range and accounting method). This script can then be used to retrieve a selected value from that data. For more information, refer to <a href="Function-Fill-Chart.htm" class="MCXref xref">Fill Chart Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.23,Snippet Conditions.21,Snippet Conditions.35,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Comment]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the text entered in the <span class="Field">Comment</span> field of the Unit's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Current Tenant Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p style="font-weight: bold;font-style: normal;" data-mc-conditions="Snippet Conditions.29">[Unit().CurrentTenantCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays number of tenants currently occupying the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Days-Vacant.htm">Days Vacant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().DaysVacant()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of days the unit has been vacant. If the unit it currently occupied or has never been occupied, nothing displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().DisplayColor]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the name of the color selected in the <span class="Field">Display Color</span> field of the unit's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().DisplayColorCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the hexadecimal code of the color selected in the <span class="Field">Display Color</span> field of the unit's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().DisplayColorID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the internal <span class="mc-variable Products.RM variable">Rent Manager</span> color ID of the color selected in the <span class="Field">Display Color</span> field of the unit's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Fill-Chart.htm">Fill Chart</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().FillChart()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays a collection of unit-specific GL account data related to the unit.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This scripting function must be used in conjunction with the other Unit ChartValue functions. For more information, refer to <a href="Function-Chart-Value.htm" class="MCXref xref">Chart Value Function (Script)</a> and <a href="Function-Aggregate-Chart-Value.htm" class="MCXref xref">Aggregate Chart Value Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Floor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Floor]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the <span class="Field">Floor</span> as entered on the unit's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-History-Count.htm">History Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().HistoryCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total number of history/notes on the unit's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.12,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-Count.htm">Image Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().ImageCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total number of images uploaded to the unit details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.19,Snippet Conditions.12,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-URL.htm">Image URL</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().ImageURL()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the URL address for a selected image uploaded to the unit details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Asset</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().IsAsset]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays <span class="Input">True</span> if the unit is an asset; otherwise, <span class="Input">False</span> displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Last-Move-Out.htm">Last Move Out</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().LastMoveOut()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the most recent <span class="Column">Move Out Date</span> as specified on the unit's <span class="Section">Occupancy</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Market-Rent.htm">Market Rent</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().MarketRent()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total amount of <span class="Field">Market Rent</span> for the unit, as entered on the <span class="Window">View Market Rent</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Max Occupancy</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().MaxOccupancy]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the <span class="Field">Max Occupancy</span> of the unit as entered on the unit's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Move-In-Count.htm">Move In Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().MoveInCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of move ins as listed on the unit's <span class="Section">Occupancy</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Move-Out-Count.htm">Move Out Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().MoveOutCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of move outs as listed on the unit's <span class="Section">Occupancy</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.17,Snippet Conditions.26,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Name]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the <span class="Field">Name</span> as entered on the unit <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.32,Snippet Conditions.15,Snippet Conditions.13,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.34,Snippet Conditions.8,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Note.htm">Note</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().Note()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays information about the most recent note on the unit's <span class="Section">History/Notes</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Pricing</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Unit().Pricing()]</p>
+                                                                                        <p>Displays <span class="mc-variable Integrations.Product-LRO variable">Rainmaker LRO</span> pricing information.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Pricing List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Unit().PricingList()]</p>
+                                                                                        <p>Displays a list of the pricing information for <span class="mc-variable Integrations.Product-LRO variable">Rainmaker LRO</span>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Prohibited Equipment</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().ProhibitedRVs()]</p>
+                                                                        <p>Displays a list of prohibited RV types and other prohibited equipment as defined on the unit's <span class="Section">RV/Campground Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.20,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Pull Through</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().PullThrough]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays <span class="Input">Yes</span> if <span class="Field">Pull-Through</span> is checked on the unit's <span class="Section">RV / Campground Information</span> tile; otherwise, displays <span class="Input">No</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Charged.htm">Security Deposit Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().SecurityDepositCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total amount of all security deposits posted for all tenants associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.9,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Held.htm">Security Deposit Held</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().SecurityDepositHeld()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total amount of all security deposits <span class="Stress">currently</span> held for all tenants associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Received.htm">Security Deposit Received</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().SecurityDepositReceived()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total amount of security deposits paid by all tenants associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Refunded.htm">Security Deposit Refunded</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().SecurityDepositRefunded()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total amount of security deposits refunded to tenants associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.15,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Set-History-Filter.htm">Set History Filter</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().SetHistoryFilter()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">This function is designed to filter the total collection of unit history/note items based on the assigned parameter values. This filtered collection becomes the data set used by the Note and HistoryCount functions that are run after it is applied. It remains in effect until it is run again with different parameters.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Site-Classification-Count.htm">Site Classification Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().SiteClassificationCount()]</p>
+                                                                        <p>Displays the number of site classifications associated with the home-type asset located at the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Slide Outs</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().SlideOuts()]</p>
+                                                                        <p>Displays the value of the RV slide outs allowed at the unit as listed on the unit's <span class="Section">RV/Campground Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.2,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Square Footage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().SquareFootage]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the <span class="Field">Square Footage</span> as entered on the unit's <span class="Section">Miscellaneous</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">STR Marketing Description</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().STRMarketingDescription()]</p>
+                                                                        <p>Displays the unit's <span class="Field">Marketing Description</span> as entered on the unit's details page in the <span class="Section">Miscellaneous</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Tenant-Count.htm">Tenant Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().TenantCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of tenants associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenant List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p style="font-weight: bold;font-style: normal;" data-mc-conditions="Snippet Conditions.29">[Unit().TenantList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the full names of all current and past tenants associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Accounts.htm">Total Accounts</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().TotalAccounts()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the number of current occupants for the unit as entered on the unit's <span class="Section">Occupancy</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Allocations.htm">Total Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().TotalAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total value of paid allocations for all tenants associated with the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Occupants.htm">Total Occupants</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().TotalOccupants()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total number of contacts associated with the unit, as listed on the tenant's <span class="Window">View Contacts</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Prepay-Allocations.htm">Total Prepay Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().TotalPrepayAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total value of prepayments and/or credits that are unapplied to charges associated with the specified unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Unit-Default-Security-Deposit.htm">Total Unit Default Security Deposit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().TotalUnitDefaultSecurityDeposit()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total value of all unit-level security deposits as listed in the unit's <span class="Section">Default Security Deposits</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Availability.htm">Unit Availability</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UnitAvailability()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays <span class="Input">Occupied</span> or <span class="Input">Vacant</span> according to the unit's status.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UnitID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the system-generated ID of the selected unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Image.htm">Unit Image</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UnitImage(ImageType)]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays a selected image uploaded to the unit details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Unit Length</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().UnitLength]</p>
+                                                                        <p>Displays the length listed on the unit's <span class="Section">RV / Campground Information</span> tile. The output can include whole numbers and decimals, formatted as displayed below:</p>
+                                                                        <p><span class="Input">33.00</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Recurring-Charges.htm">Unit Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UnitRecurringCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total amount of unit-level recurring charges, as specified on the unit <span class="Window">View Recurring Charges</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Rent-Recurring-Charges.htm">Unit Rent Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UnitRentRecurringCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the total amount of unit-level rent recurring charges, as specified on the unit <span class="Window">View Recurring Charges</span> pop-up. Charge types that are designated as rent charges are specified for each property in the <span class="Field">Rent Charge Type</span> field on the property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Status.htm">Unit Status</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UnitStatus()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the name of the current status of the unit as listed in the <span class="Section">Unit Status</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.7">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Status-Information.htm">Unit Status Information</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().UnitStatusInformation()]</p>
+                                                                        <p>Displays status information of the unit as listed in the <span class="Section">Unit Status</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Unit Width</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().UnitWidth]</p>
+                                                                        <p>Displays the width listed on the unit's <span class="Section">RV / Campground Information</span> tile. The output can include whole numbers and decimals, formatted as displayed below:</p>
+                                                                        <p><span class="Input">9.00</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.htm">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the value of the unit-type user defined field (UDF). The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.29">[Unit().UserDefinedField("Smoking")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.29">Displays the value for the <span class="Field">Smoking</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="links">
+                                                        <div class="MCRelationshipsProxy_0">
+                                                            <p class="pageHeading_page_0">Related Information</p>
+                                                            <p class="pageItem_page_0"><a href="../../KB/Script-Scripting.htm">Scripting</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../KB/Script-Classes.htm">Script Classes</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../CSH/Units.htm">Units (Page)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../../CSH/Units-Details.htm">Unit Details (Page)</a>
+                                                            </p>
+                                                            <p class="taskHeading_task_0">Related Tasks</p>
+                                                            <p class="taskItem_task_0"><a href="../../KB/Script-Index-Unit.htm">Unit Indexing</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="topic-background">
+                                        <script type="text/javascript" src="../../../../Resources/Scripts/Back-to-Top-Button.js">
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <div class="footer center">
+        <div class="master-page-footer">
+            <div>
+                <p class="footer-header">Product Support</p>
+                <p>Monday-Friday</p>
+                <p>8:00 a.m.-7:00 p.m. (EST)</p>
+                <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
+                </p>
+                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                </p>
+            </div>
+            <div>
+                <p class="footer-header">Resources</p>
+                <p><a href="https://www.rentmanager.com/training/#Training_Calendar" target="_blank">Training Calendar</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/virtual-classroom-enrollment-form/">Virtual Classroom Enrollment</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/podcast/">Beyond Rent Podcast</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/submit-a-feature-request/">Submit a Feature Request</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+    </div>
+</html>

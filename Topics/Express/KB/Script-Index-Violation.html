@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Violation Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Violation.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Violation.htm</a></p>
+
+                                                        <h1 id="ViolationIndexing" data-magellan-target="ViolationIndexing"><a name="aanchor752"></a>
+                                                            <a name="kanchor1242"></a><a name="H1"></a>Violation Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>When the Violation class is used as a child class in a script (e.g., <span class="Formula">Tenant().Violation().<span class="Required">Function</span></span>), an index can be specified to uniquely identify violations that are associated with the preceding class. For example, tenants can be associated with multiple past or current violations, and indexing can be used to identify each of those violations.</p>
+                                                        <h2 id="ViolationIndexRelationships" data-magellan-target="ViolationIndexRelationships"><a name="H2_1"></a>Violation Index Relationships</h2>
+                                                        <p>The Violation class may use an index parameter when it is preceded by certain classes. Each class is described below.</p>
+                                                        <p>Violations are indexed by <span class="Field">Violation Date</span>, from most recent to oldest. The most recent violation has an index of 0, the second most recent violation has an index of 1, and so on. To examine the oldest violation, enter an index of <span class="Input">ViolationCount-1</span>, as in <span class="Input">Violation(ViolationCount-1)</span>.</p>
+                                                        <h3><a name="H3_1"></a>Tenant.Violation Indexing</h3>
+                                                        <p>You can determine a violation's index for a tenant from the <span class="Window">Violations</span> page.</p>
+                                                        <p class="Example">
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Violation-Tenant-JL-25.png" alt="The Violations page shows three violations for Alexander Shore marked with their corresponding indexes." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Tenant.Violation(2).ViolationDate]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">08/02/2022</span>, the violation date of the third most recent violation for the tenant Alexander Shore.</p>
+                                                        <h3><a name="H3_2"></a>Unit.Violation Indexing</h3>
+                                                        <p>You can determine a violation's index for a unit from the <span class="Window">Violations</span> page.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Violation-Unit-JL-25.png" alt="The Violations page shows three violations for unit CC1141 marked with their corresponding indexes." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Unit.Violation(1).ViolationDate]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">08/09/2022</span>, the violation date of the second most recent violation at the unit CC1141.</p>
+                                                    
+</main>
+</body>
+</html>

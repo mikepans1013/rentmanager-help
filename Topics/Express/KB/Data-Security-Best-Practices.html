@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Practices for Rent Manager Data Security</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Data-Security-Best-Practices.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Data-Security-Best-Practices.htm</a></p>
+
+                                                        <h1 id="BestPracticesforRentManagerDataSecurity" data-magellan-target="BestPracticesforRentManagerDataSecurity"><a name="kanchor1443"></a><a name="H1"></a>Best Practices for Rent Manager Data Security</h1>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> stores everything important to your business: account information, financial data, and so much more. This data must always be kept safe and secure. You want to prevent user mistakes as well as malicious activity. This topic covers how to lock down user permissions, limit employees to only seeing what they need to be successful in their roles, and implement safeguards to protect the fidelity of your financial data.</p>
+                                                        <h2 id="LimitUserAccessThroughRolesandPermissions" data-magellan-target="LimitUserAccessThroughRolesandPermissions"><a name="H2_1"></a>Limit User Access Through Roles and Permissions</h2>
+                                                        <p>Tailoring the information to which your users have access is the simplest, most effective way to improve the security of your <span class="mc-variable Products.RM variable">Rent Manager</span> data. There are four key elements of user access management to consider, known as classic controls:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>User accounts</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Multifactor authentication (MFA)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Privileges</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Roles</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>By utilizing these tools in <span class="mc-variable Products.RM variable">Rent Manager</span>, you can prevent users from viewing and editing any data that they should not be privy to. This not only helps to limit intentional harm from bad actors, but also keeps users from making honest mistakes and/or using privileges they should not have.</p>
+                                                        <p>Each of these controls are described below.</p>
+                                                        <h3><a name="H3_1"></a>User Accounts</h3>
+                                                        <p>When setting up user accounts, you can determine an individual's account information, privileges, display defaults, and access to reports, letters, and filters. This ensures the user can be easily identified in the system, access the areas of <span class="mc-variable Products.RM variable">Rent Manager</span> that are needed to perform their tasks, and unable to access the areas of <span class="mc-variable Products.RM variable">Rent Manager</span> you determine are outside of what their role needs access to. For more information, refer to <a href="../Action/Users-Add.html" class="MCXref xref">Add a User</a>.</p>
+                                                        <p>On the user's <span class="Tab">General</span> tab, you can choose the bank accounts, properties, and additional options they can access. For example, you may want to grant your maintenance technicians the Inspector option so they can complete inspections using <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>, or limit a property manager to have access only to a specific property group. For more information, refer to <a href="../CSH/User-Details.html" class="MCXref xref">User Details (Page)</a>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The following are important guidelines for user accounts:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Each <span class="mc-variable Products.RM variable">Rent Manager</span> user should have their own user account. This allows you to keep your data secure and control what each user has access to in your database.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Diligently maintain active and inactive users. If a user is no longer with your company, you can deactivate the user account by unchecking <span class="Field">Active</span> on the user's <span class="Tab">General</span> tab. Maintaining active and inactive users ensures your historical data is maintained. <span class="Stress">Never</span> reassign a username, or it will appear that everything the previous user did was done by the new user.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>You can have unlimited <span class="mc-variable Products.RM variable">Rent Manager</span> users. The list of users has no affect on your number of <span class="mc-variable Products.RM variable">Rent Manager</span> licenses. However, as a best practice, your employees who do <span class="Stress">not</span> regularly use <span class="mc-variable Products.RM variable">Rent Manager</span> as part of their job should not have their own user account. If an employee without a <span class="mc-variable Products.RM variable">Rent Manager</span> account needs information from the software, then they can contact an employee who already has access for this information.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <h3><a name="H3_2"></a>Multifactor Authentication</h3>
+                                                        <p>Before you can utilize MFA in <span class="mc-variable Products.RM variable">Rent Manager</span>, you first need to enable the <span class="Field">Require Multifactor Authentication (MFA) to log in</span> option in system preferences. With this option enabled, users must have an email address entered on their account's <span class="Tab">General</span> tab and download an authenticator application, such as Google Authenticator or Microsoft Authenticator, which will be used to confirm their future login attempts. For more information, refer to <a href="Multifactor-Authentication-Set-Up.html" class="MCXref xref">Multifactor Authentication (MFA)</a>.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Once enabled, users across <span class="Stress">all</span> your database locations are required to use an authenticator app to log in to <span class="mc-variable Products.RM variable">Rent Manager</span>. This change is effective immediately, so it is recommended that you speak to your team about this change before enabling the setting. For more information, refer to <a href="../CSH/Locations-Manage.html" class="MCXref xref">Manage Locations (Pop-Up)</a>.</p>
+                                                        </div>
+                                                        <h3><a name="H3_3"></a>Privileges</h3>
+                                                        <p>To establish permissions for a user, go to their user account and click the <span class="Tab">Privileges</span> tab. Privileges are broken into several different groups, such as <span class="Section">Properties/Units</span>, <span class="Section">Service Manager</span>, and <span class="Section">Tenants/Prospects</span>, to make it easier to find the user access you wish to grant or remove for each account.</p>
+                                                        <p>Action-based privileges, such as unlocking user accounts, include only the <span class="Column">Enabled</span> option. Others, such as tenant and property information, provide options to <span class="Column">Add</span>, <span class="Column">View</span>, <span class="Column">Edit</span>, and <span class="Column">Delete</span> associated information. It is <span class="Stress">strongly</span> recommended that the ability to delete information is given sparingly, such as for administrators or other high-level users. For more information on privilege management, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        <p>The following privileges should be granted only to the users who absolutely need them.</p>
+                                                        <p class="Subheading">Critical Setup Privileges</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Beginning balances</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows users to view and/or edit beginning balances for general ledger accounts. Beginning balances are used to establish your accounts' financial position prior to when your business started using <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, refer to <a href="../Other/Beginning-Balances.html" class="MCXref xref">Beginning Balances</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Override accounting close date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows users to add, edit, or delete transactions dated before the most recent accounting close date, which locks transactions and payments that occur in a prior accounting period.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Set accounting close date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Allows users to set the accounting close date and lock transactions that occurred on or before the close date. For more information, refer to <a href="../Other/System-Preferences/Accounting-Close.html" class="MCXref xref">Accounting Close (System Preferences)</a> and <a href="../CSH/Property-Accounting-Close.html" class="MCXref xref">Property Accounting Close (Pop-Up)</a> topics.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to <a href="../Other/Privileges/Setup.html" class="MCXref xref">Setup Privilege Group</a> topic.</p>
+                                                        <p class="Subheading">Critical System Privileges</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Allow user to unlock other users</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows users to unlock another user's account who has been prevented from logging in after three failed login attempts.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Manage all users and privileges</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows users to add, view, and/or edit all user accounts and their associated privileges, including providing access to properties, bank accounts, and reports.</p>
+                                                                        <div class="warning">
+                                                                            <p class="label1">Warning</p>
+                                                                            <p>Assignment of this privilege should be <span class="Stress">very</span> limited. A user with this privilege has the potential to change any user in the system as well as create new users (including a new one for themselves) with <span class="Stress">all</span> privileges and access to <span class="Stress">all</span>&#160;reports.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Manage assigned users and privileges</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows users to add, view, and/or edit only the user accounts and their associated privileges for which the user is designated as the <span class="Field">Supervisor</span>. Supervisors may edit or add new subordinate user accounts with privileges only up to the level of their own privileges (i.e., supervisors are not able to grant any permission to a subordinate that they do not have themselves).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>System Preferences</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows users to view and edit settings that affect your entire database in system preferences, such as your general ledger start date and default options for other financial settings.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>System Web Preferences</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Allows users to view and edit settings that affect your web portals in system web preferences, such as how tenants can submit payments via <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to <a href="../Other/Privileges/System.html" class="MCXref xref">System Privilege Group</a>.</p>
+                                                        <p class="Subheading">Critical Accounting Privileges</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Charge types</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows a user to add, view, edit, or delete charge types used for transactions.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>General ledger accounts</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows a user to add, view, edit, or delete general ledger (GL) accounts. For more information, refer to <a href="../CSH/Chart-of-Accounts.html" class="MCXref xref">Chart of Accounts (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Journal entries</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Allows a user to add, view, edit, or delete journal entries. For more information, refer to <a href="../CSH/Journals.html" class="MCXref xref">Journals (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to <a href="../Other/Privileges/Accounting.html" class="MCXref xref">Accounting Privilege Group</a>.</p>
+                                                        <p class="Subheading">Critical Owners Privilege</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Allow backdating of transactions prior to last fee posting</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Allows a user to add, edit, or delete transactions with a date prior to the property's last management fee posting.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to <a href="../Other/Privileges/Owners.html" class="MCXref xref">Owners Privilege Group</a>.</p>
+                                                        <p class="Subheading">Critical Receivables Privileges</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Allow to backdate charges</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows a user to select a date that occurred in the past when entering charges.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Allow to backdate payments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows a user to select a date that occurred in the past when entering payments.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Allow to credit tenants</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows a user to apply a credit to a tenant's account through recurring or one-time charges.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Allow to NSF/Void a Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Allows a user to perform payment reversals for non-sufficient funds (NSF) or void a payment from a tenant or prospect's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to <a href="../Other/Privileges/Receivables.html" class="MCXref xref">Receivables Privilege Group</a>.</p>
+                                                        <p class="Subheading">Critical Payables Privileges</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Allow user to pay bills</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows a user to process payments for bills.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Approve all bills</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Allows a user to approve all bills, regardless of the bill amount. Alternatively, you can establish three tiers of bills with different approval thresholds, then grant select users the ability to approve tier 1, 2, and/or 3 bills. For more information, refer to <a href="Bills-Approval-Set-Up.html" class="MCXref xref">Set Up Bill Approval</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>View private vendors</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Allows a user to see private vendors in the vendor list. With this privilege, a user may select this vendor for processes such as writing checks, paying bills, creating purchase orders (POs), entering credit card transactions, running payables reports, or setting management company preferences.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information, refer to <a href="../Other/Privileges/Payables.html" class="MCXref xref">Payables Privilege Group</a>.</p>
+                                                        <h3><a name="H3_4"></a>Roles</h3>
+                                                        <p>Rather than manually setting the privileges for each user individually, you can save time and ensure consistency by adding user roles. Roles allow you to establish a set of privileges for different jobs at your company, such as maintenance technician or accountant, and easily apply those privileges to applicable users. If needed, you can even add additional privileges directly to a user on top of the ones inherited from the user role. </p>
+                                                        <p>Once you've created a user role and set up the privileges you want to include, you can apply the role directly from the <span class="Window">User Roles</span> page or by going to a user's account. For more information, refer to <a href="../CSH/User-Roles.html" class="MCXref xref">User Roles (Page)</a>.</p>
+                                                        <h2 id="ProvideCustomInterfacesforUsers" data-magellan-target="ProvideCustomInterfacesforUsers"><a name="H2_2"></a>Provide Custom Interfaces for Users</h2>
+                                                        <p>Given the huge variety of tools and reports available in <span class="mc-variable Products.RM variable">Rent Manager</span>, not all of them are going to be relevant to every employee's day-to-day operations. Customizing the <span class="mc-variable Products.RM variable">Rent Manager</span> experience using layouts and the <span class="mc-variable Products.RM-Express variable">Express</span> workspace helps you to streamline your workflow to best suit the needs of you and your colleagues.</p>
+                                                        <h3><a name="H3_5"></a>Layouts</h3>
+                                                        <p>Layouts allow you to customize how the pages displays in select areas of <span class="mc-variable Products.RM variable">Rent Manager</span>. Tiles can be added, deleted, or repositioned on layouts to create a personalized experience that best suits the workflows of you and your colleagues. Layouts also allow you to customize access for certain user roles on a granular level, such as removing their ability to view the <span class="Section">Transactions</span> tile for tenants while still allowing them to add and edit tenants.</p>
+                                                        <p>There are two kinds of layouts: personal layouts and system layouts. Personal layouts are unique to specific <span class="mc-variable Products.RM variable">Rent Manager</span> user accounts, while system layouts can be accessed by and even assigned to multiple users to streamline their <span class="mc-variable Products.RM variable">Rent Manager</span> experience.</p>
+                                                        <p>When customizing layouts, you can either build a brand new layout or copy an existing layout from a user account or from default system layouts. Creating a new layout from scratch offers the most granular control for the content and structure of the tiles, but you can also use the default page layout as a base template to save time. Copying a user's layout allows you to utilize or share a personal layout that has proven useful with other employees, such as maintenance technicians or accountants.</p>
+                                                        <p>For more information, refer to <a href="../Other/Layouts-Personal-Add.html" class="MCXref xref">Add a Personal Layout</a> and <a href="../Other/Layouts-System-Add.html" class="MCXref xref">Add a System Layout</a>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If your business keeps track of information that should be visible only to a select few users, but does not have a corresponding field in <span class="mc-variable Products.RM variable">Rent Manager</span>, you can create encrypted user-defined fields (UDFs) to limit access to that data for individual users. These encrypted UDFs can also be added to custom layouts to ensure that information is visible only to specified users, even if other users have access to that layout. For more information, refer to <a href="../Action/UDFs-Add-Encrypted.html" class="MCXref xref">Add an Encrypted User Defined Field</a>.</p>
+                                                        </div>
+                                                        <h3><a name="H3_6"></a>My Workspace</h3>
+                                                        <p>The <span class="Window">My Workspace</span> page is the default home screen when you log into <span class="mc-variable Products.RM-Express variable">Express</span>. By customizing the <span class="Section">My Favorites</span> and <span class="Section">My Reports</span> tiles, you can quickly access your most-viewed pages and reports to save yourself time.</p>
+                                                        <p>To change the shortcuts on either tile, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="Settings" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Edit</span> in the top right, then click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/star_outline_19x19.png" alt="Star" class="inline" style="width: 19;height: 19;" /> next to the pages/reports you want to include or exclude from the associated tile. The available options are divided into tabs and subsections to make it easy to find exactly what you need.</p>
+                                                        <h2 id="TrackUserActivity" data-magellan-target="TrackUserActivity"><a name="H2_3"></a>Track User Activity</h2>
+                                                        <p>When a security issue arises, you need to be able to identify how the issue came to be and which user(s) could be responsible for it. <span class="mc-variable Products.RM variable">Rent Manager</span> includes reports that show you what changes a user has made, when they were accessing <span class="mc-variable Products.RM variable">Rent Manager</span>, and which users have access to essential privileges.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Report</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Audit Trail</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This report allows administrators to monitor user actions that affect financial data, setup, and other important aspects of your database. User actions are classified by audit types to help you identify and filter the report contents. For more information, refer to <a href="../Other/Reports/Audit-Trail.html" class="MCXref xref">Audit Trail</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Privilege User Listing</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This report can be used to track whether specific privileges are granted to users and/or user roles so you can monitor and maintain your <span class="mc-variable Products.RM variable">Rent Manager</span> database security. The report also displays which users have access to which properties, banks, and/or reports. For more information, refer to <a href="../Other/Reports/Privilege-User-Listing.html" class="MCXref xref">Privilege User Listing (Report)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>User Activity Log</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>This report displays the date and time that each user logged in and out of <span class="mc-variable Products.RM variable">Rent Manager</span>. It also shows the duration of each session and the total active time for the period, which can help you narrow down users that could have made problematic changes to your data. For more information, refer to <a href="../Other/Reports/User-Activity-Log.html" class="MCXref xref">User Activity Log&#160;(Report)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>In addition to these reports, many pages in <span class="mc-variable Products.RM variable">Rent Manager</span> include additional information that can be viewed by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/info_outline_19x19.png" alt="Info" class="inline" style="width: 19;height: 19;" />. For example, if you are viewing a check, you can click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/info_outline_19x19.png" alt="Info" class="inline" style="width: 19;height: 19;" /> to see the user who created the check, the user who last edited the check, and the date and times that both events occurred.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Data-Security-Info-Icon.png" alt="The Check details page displays with information about the check's creation and most recent update." />
+                                                        </p>
+                                                    
+</main>
+</body>
+</html>

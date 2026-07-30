@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a Short Term Rental Property</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Property-Add-STR.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Property-Add-STR.htm</a></p>
+
+                                                        <h1 id="AddaShortTermRentalProperty" data-magellan-target="AddaShortTermRentalProperty"><a name="kanchor689"></a><a name="H1"></a>Add a Short Term Rental Property</h1>
+                                                        <p data-mc-conditions="Snippet Conditions.2">Short-term rental (STR) portfolios can contain a wide variety of housing options, such as campgrounds, RV parks, hotels, vacation rentals, and hostels. With <span class="mc-variable Products.RM variable">Rent Manager</span>, you can set up short term rental (STR) properties to accommodate different types of amenities and guest experiences, easily view the property's availability, make a reservation, and check in guests.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.2">These differ from traditional properties in <span class="mc-variable Products.RM variable">Rent Manager</span>, as guests do not sign leases to rent spaces at these properties but instead use reservations that require a check-in, and depart after a few days or weeks. These guests are added through a specific STR workflow but after creation are tracked as prospects and tenants in your database. Units at these properties can have one guest check out and another check in on the same day. Rates are based on the length of the stay, or long-term rentals with recurring charges can be set up as well.</p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>By default, the financial entities in your <span class="mc-variable Products.RM variable">Rent Manager</span> database are called <span class="Input">Properties</span>. You can customize the entity name in system preferences to meet your business needs. For example, if you own only properties that are campgrounds, you can change <span class="Input">Property</span> to <span class="Input" data-mc-conditions="Snippet Conditions.2">Campground</span>. This updates the entity name for your entire <span class="mc-variable Products.RM variable">Rent Manager</span> database, so be sure to choose an entity name that works best for all your business purposes. For more information, refer to <a href="System-Preferences/Entity-Type.html" class="MCXref xref">Entity Types (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <p>All accounting in <span class="mc-variable Products.RM variable">Rent Manager</span> is <span class="Stress">property-specific</span>, meaning all transactions (tenant or prospect payments, journal entries, and so on) are linked to at least one property. This means you should create a property in <span class="mc-variable Products.RM variable">Rent Manager</span> for each financial entity. This helps organize the financial data in <span class="mc-variable Products.RM variable">Rent Manager</span> so that your finances can be structured in a way that best suits your business. It also provides more flexibility in reporting.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To streamline the creation process, consider setting up property UDFs, management fee templates, and other information related to your properties before adding properties. For more information, refer to <a href="../KB/Property-Customize-Options.html" class="MCXref xref">Customize Property&#160;Options</a>.</p>
+                                                        </div>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>If you are a fee-based management company, you also need to create a separate property for the management company, since it is its own financial entity. For example, you have expenses that are unrelated to any of your properties, such as the cost of installing new computers at the office.</p>
+                                                            <p>Once your company property is created, it must be established as the management company in system preferences so you can collect management fees from your owners. For more information, refer to <a href="System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1CreatethePropertyandAddGeneralInformation" data-magellan-target="Step1CreatethePropertyandAddGeneralInformation"><a name="H2_1"></a>Step 1: Create the Property and Add General Information</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="3">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Add</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Property Bank Settings</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Management fee setup</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To create a property, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline-image" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span>.<br />The <span class="Window">Properties</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_18x18.png" class="inline-image" style="width: 18;height: 18;" alt="" /> <span class="BigButtons">Add Property</span>.</p>
+                                                                <p data-mc-conditions="Snippet Conditions.2">
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Property-Add-STR-NC-2025.png" alt="The Add Property wizard displays general information about an RV Park property." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">General Information</span> section, enter the property's information into the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Display Color</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A color to help identify properties of certain types, groups, or any other specifications you prefer. The color displays as a bar to the left of the property in some areas of <span class="mc-variable Products.RM variable">Rent Manager</span>, such as the <span class="Input">Properties</span> list page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The full legal name of the property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Property Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Select either <span class="Field">Short Term Rental</span> or <span class="Field">RV/Campground</span> to establish the category that best describes the property. Click the drop-downs below for more information on these property types.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0" data-mc-conditions="Snippet Conditions.2">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>RV/Campground</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>This is the best property type to select for campgrounds or RV parks. Units added to the property allow you to establish the size of the space, amp service(s) that can be accommodated, and if the space allows for pull-through parking for each unit. Additionally, you can set up rate schedules for the property and allow guests to submit reservations via the STR Online Booking portal. For more information, refer to <a href="../CSH/STR-Online-Booking.html" class="MCXref xref">STR&#160;Online Booking (Pop-Up)</a> or <a href="../CSH/STR-Rate-Schedule.html" class="MCXref xref">STR Rate Schedules (Pop-Up)</a>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Short Term Rental</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>This property type is best used for other short term rentals such as vacation homes, hotels, or hostels. This property type works similarly to most other property types (such as <span class="Field">Apartment</span>, <span class="Field">Single Family</span>, and so on) and uses internet listing service (ILS) sites for marketing, but still counts as an STR property for reservations, reporting, and other <span class="mc-variable Products.RM variable">Rent Manager</span> functions.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Short Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>An abbreviated name for the property (ten characters or less) which displays on reports and drop-down lists in various areas of <span class="mc-variable Products.RM variable">Rent Manager</span>, such as bills and checks.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Other Information</span> section, enter or select additional property information into the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Any additional notes or information about the property you wish to display on the property's details page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Default Bank</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The operating bank account for this property. This is the bank that typically pays expenses and receives payments for this property.</p>
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <p>This field populates with only banks to which you have access. Your access to banks can be managed on the user's details page. For more information, refer to <a href="../KB/Users-Limit-Bank-Credit-Card-Access.html" class="MCXref xref">Limit Access to a Bank or Credit Card</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>NSF Fee</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The default non-sufficient funds (NSF) fee charged to tenants whose payments are rejected.</p>
+                                                                                <p>To set a property-specific NSF fee amount, select <span class="Field">Override system default</span> and enter the property's NSF fee amount in the <span class="Field">Custom Amount</span> field.</p>
+                                                                                <p>For more information, refer to <a href="System-Preferences/General-Ledger-System-Accounts.html" class="MCXref xref">General Ledger System Accounts (System Preferences)</a> and <a href="../CSH/Charge-Type-Details.html" class="MCXref xref">Charge Type Details (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Posting Day</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The day of the month on which users should post recurring charges to the tenant accounts at this property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Tax ID</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property's legal tax identification code.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge types to be considered rent charges for this property. This is important for certain reports, such as the <span class="Report" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.2">Summary Rent Roll</span>, and late fee calculations when the <span class="Field">On Rent Only</span> option is selected for late fees setups.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                                <p>Statement Method</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The preferred delivery method of tenant statements for tenants associated with this property. This method is selected by default when adding tenants to this property.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>This field determines which tenants are included when generating a <span class="Report">Tenant Statement</span> report based on the selection in the <span class="Field">Statement Method</span> report option. The user generating the report can then select the delivery method for the report based on this selection. For more information, refer to <a href="Reports/Tenant-Statement-8.5x11.html" class="MCXref xref">Tenant Statement 8.5x11 (Report)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>&lt;Use System Default&gt;</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Use the default <span class="Field">Statement Method</span> established in system preferences for tenants added to this property. The method selected in system preferences displays in parentheses (e.g., <span class="Input">&lt;Use System Default&gt; (Email)</span>). For more information, refer to <a href="System-Preferences/Report-Options-General.html" class="MCXref xref">General Report Options (System Preferences)</a>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Email</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Tenants added to this property default to a <span class="Field">Statement Method</span> of <span class="Field">Email</span>. When generating tenants statements, tenants with this option selected display only if the report option for <span class="Field">Statement Method</span> has <span class="Field">Email</span> or <span class="Field">All</span> selected.</p>
+                                                                                                <div class="info">
+                                                                                                    <p class="label1">More Information</p>
+                                                                                                    <p>This option can be used with <span class="mc-variable Products.TA variable">Task Automation</span> to send tenant statements on a schedule. For more information, refer to <a href="../CSH/Automation-Tenant-Statement-Schedules.html" class="MCXref xref">Tenant Statement Automation Schedules (Page)</a>.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Print</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Tenants added to this property default to a <span class="Field">Statement Method</span> of <span class="Field">Print</span>. When generating tenant statements, tenants with this option selected display only if the report option for <span class="Field">Statement Method</span> has <span class="Field">Print</span> or <span class="Field">All</span> selected.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>No Statement</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>By default, tenants added to this property are set to <span class="Stress">not</span> receive tenant statements. When generating tenant statements, any tenants with a <span class="Field">Statement Method</span> of <span class="Field">No Statement</span> do <span class="Stress">not</span> display in the results and no statement is generated for them.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>VPO</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Tenants added to this property default to a <span class="Field">Statement Method</span> of <span class="Field">VPO</span>, for <span class="mc-variable Products.VPO variable">Virtual Post Office</span>. When generating tenants statements, tenants with this option selected display only if the report option for <span class="Field">Statement Method</span> has <span class="Field">VPO</span> or <span class="Field">All</span> selected. For more information on VPO, refer to <a href="../KB/VPO-Set-Up.html" class="MCXref xref">Set Up Virtual Post Office (VPO)</a>.</p>
+                                                                                                <div class="info">
+                                                                                                    <p class="label1">More Information</p>
+                                                                                                    <p>This option can be used with <span class="mc-variable Products.TA variable">Task Automation</span> to send tenant statements on a schedule. For more information, refer to <a href="../CSH/Automation-Tenant-Statement-Schedules.html" class="MCXref xref">Tenant Statement Automation Schedules (Page)</a>.</p>
+                                                                                                </div>
+                                                                                                <div class="prefs">
+                                                                                                    <p class="label1">Related Preferences</p>
+                                                                                                    <p>This option displays only if <span class="mc-variable Products.VPO variable">Virtual Post Office</span> is enabled in system preferences. For more information, refer to <a href="System-Preferences/VPO-General.html" class="MCXref xref">VPO General (System Preferences)</a>.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Add Unit, Unit Types, Amenities, and Users</span> section, enter the applicable property information into the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Automatically Create a Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Properties/Units</td>
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Units</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                                </div>
+                                                                                <p>If you would like to automatically create a unit for this property when the property is added, check <span class="Field">Automatically Create a Unit</span>. Then in the <span class="Field">Type of Unit to create</span> field, select the unit type you wish to use for that unit. When the property creation process is completed, a unit of that unit type is automatically added to the property.</p>
+                                                                                <p data-mc-conditions="Snippet Conditions.2">This is useful for properties that have only one unit, such as a vacation home, because properties require at least one unit in <span class="mc-variable Products.RM variable">Rent Manager</span> to properly track and record leases, finances, and other important information. For properties that have multiple units, such as campgrounds and hotels, you can add multiple units to the property all at once after the property is created.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property Amenities</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>All amenities available at this property. You can select amenities that apply only to the entire property, or you can also select amenities that apply only to some units. You have the ability to establish unit amenities at the unit level later.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Users with Access to the Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>All users that require access to this specific property. Their level of access is determined by their user permissions.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Valid Unit Types for Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>All unit types available at this property. This determines what unit types you can choose later when you add units to the property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section">Marketing Configuration</span> section, it is recommended that you select <span class="Field">Property-level marketing</span>, which allows units to pull all their information from the marketing information established on the property.</p>
+                                                                <div class="info" data-mc-conditions="Snippet Conditions.2">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Properties of the <span class="Field">RV/Campground</span> type automatically use property-level marketing and are marketed via the STR Online Booking portal.</p>
+                                                                    <p>Properties of the <span class="Field">Short Term Rental</span> type are marketed via internet listing service (ILS) sites. Although some ILS sites still support unit-level marketing, most support only property-level marketing.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>In the <span class="Section">Addresses</span> section, enter the address(es) for the property. Check <span class="Field">Default</span> for the address you wish to use in reports and other areas of <span class="mc-variable Products.RM variable">Rent Manager</span> that pull the property's address, such as invoices.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Address types for the property, such as an alternate or billing address, can be created or edited to easily record and reference multiple addresses on the same property account. For more information, refer to<a href="Property-Addresses.html" class="MCXref xref">Property Addresses</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>In the <span class="Section">Contact Information</span> section, enter the property's contact information into the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Email</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The primary email address used for correspondence with the property or property manager.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Manager Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The name of the person responsible for managing the property. This is often the property's primary contact.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>In the <span class="Section">Phone Numbers</span> section, enter any relevant phone numbers for the property. The available columns are described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Default</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Check to set this phone number as the contact to use in reports and other areas of <span class="mc-variable Products.RM variable">Rent Manager</span> that pull the property's phone number. Only one default number can be selected for the property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Extension</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If applicable, the extension that must be dialed for this phone number.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of each phone number type that currently exists in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The full ten-digit phone number of the associated phone number type listed in the <span class="Field">Name</span> column.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>T (Is Text Ready)</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Check to mark the phone number as text-enabled, meaning the number can receive text messages.</p>
+                                                                                <p>This is also used with <span class="mc-variable Products.TextB variable">Text Broadcasting</span> to determine which phone numbers can be sent texts from <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2EnterPropertyUDFValues" data-magellan-target="Step2EnterPropertyUDFValues"><a name="H2_2"></a>Step 2: Enter Property UDF Values</h2>
+                                                        <p>The Add Property wizard displays user defined field information.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Property-Add-UDF-NC-2025.png" alt="The Add Property wizard displays user defined field information." />
+                                                        </p>
+                                                        <p>After entering the property's general information, select the <span class="Tab">User Defined Fields</span> tab on the left. In the <span class="Section">User Defined Fields</span> section, only required UDFs display in the <span class="Column">Name</span> column. Required UDFs are marked with an asterisk (*) and <span class="Stress">must</span> have a <span class="Column">Value</span> entered to create the property.</p>
+                                                        <p>To view all the property-type UDFs in the database, click <span class="ActionItems">View All UDFs</span>. For each UDF applicable to the property you are adding, enter or select the information in the <span class="Field">Value</span> column for the associated UDF.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If there are multiple owners for your properties in <span class="mc-variable Products.RM variable">Rent Manager</span>, complete step 4. If you are a fee-based management company, complete steps 4 and 5.</p>
+                                                            <p>If you are not a fee-based management company and all properties in the database are owned by a single owner, you do <span class="Stress">not</span> need to set up any owners or management fees in the following sections. Click <span class="BigButtons">Save and Finish</span> to complete the creation process and skip the remaining steps below. Alternatively, click <span class="BigButtons">Save and New</span> to complete the creation process and refresh the pop-up to add another property.</p>
+                                                        </div>
+                                                        <h2 id="Step3AddPropertyOwners" data-magellan-target="Step3AddPropertyOwners"><a name="H2_3"></a>Step 3: Add Property Owner(s)</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Property-Add-Ownerships-NC-2025.png" alt="The Add Property wizard displays ownership information." />
+                                                        </p>
+                                                        <p>After entering values for the property's user defined fields, select the <span class="Tab">Ownerships</span> tab on the left. Then, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>If the owner(s) of the property are not yet added to <span class="mc-variable Products.RM variable">Rent Manager</span>, on the right, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /><span class="BigButtons">Add</span> to create the owner account(s). For more information, refer to <a href="Owners-Add.html" class="MCXref xref">Add an Owner</a>.</p>
+                                                                <div class="privs">
+                                                                    <p class="label1">Related Privileges</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                </div>
+                                                                <p>If the owners are already in the database, continue to the next step.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Under the <span class="Section">Ownerships</span> section, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Ownership</span>.<br />A row of editable fields display.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Enter the owner information into the available fields for each column described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>End</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which this owner's contract ends for this property. If the contract end date is not known or there is no contract end date, leave this field blank.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Owner</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The owner account that is the owner of this property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Percentage</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The percent amount of the property that belongs to this owner. If this is the only owner, enter <span class="Input">100</span>. If there are multiple owners, the total percentage cannot exceed one hundred percent.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Reserve</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount of the owner's reserve funds for this property. This is a minimum balance that must be maintained in this property's bank at all times for this owner.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>If the owner has the option <span class="Field">Balance reserves across ownership</span> enabled on their account, the owner's profitable properties cover any other properties they own that are operating with a reserve balance that is below the set minimum or in the negative. For more information, refer to <a href="../CSH/Owners-Details.html" class="MCXref xref">Owner Details (Page)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Start</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The date on which the owner's contract begins for this property. Owner contract dates are important for historical records in <span class="mc-variable Products.RM variable">Rent Manager</span> and are also crucial to maintaining accurate data generated in owner-related reports.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>If applicable, repeat steps 2–3 for each additional property owner.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Field">Primary Owner</span> field above the owner list, select the owner of the property. If the property has more than one owner, consider choosing the owner with the highest percent of ownership. If there is no owner with a higher percentage of ownership, choose the owner with whom you communicate more frequently.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>If you are not a fee-based management company, there are no further fields to complete. Click <span class="BigButtons">Save and Finish</span> to complete the creation process and close the pop-up. Alternatively, click <span class="BigButtons">Save and New</span> to complete the creation process and refresh the pop-up to add another property.<br />Otherwise, proceed to step 5 to set up your company's management fees for the property.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4EstablishPropertyManagementFees" data-magellan-target="Step4EstablishPropertyManagementFees"><a name="H2_4"></a>Step 4: Establish Property Management Fees</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Property-Add-Mgmt-Fee-Setup-NC-2025.png" alt="The Management Fee Setup tab displays a custom Standard fee setup for the property." />
+                                                        </p>
+                                                        <p>After entering information for the property's owners,  do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the left, select the <span class="Tab">Management Fee Setup</span> tab.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Method</span> field, select the type of management fees to collect for the property. The options are described below. For more information, refer to <a href="../KB/Management-Fee-Setup-Comparison.html" class="MCXref xref">Management Fee Setup Comparison</a>.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Advanced</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="Field">Advanced</span> method examines transaction activity for specific general ledger (GL) accounts over a period of time defined during fee posting. This method allows you to collect property-wide income, and percentages of total or net income.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Standard</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The <span class="Field">Standard</span> method examines payments allocated to specific charge types since the last management fee posting. This method allows you to post fees as often as you like.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">Start</span> field, enter the date on which this management fee setup begins for this property.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Field">End</span> field, enter the date on which this management fee setup ends. If the end date is unknown or there is no end date, leave this field blank.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Field">Templates</span> field, select if you wish to use a fee template or create a custom fee setup for this property.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Custom</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>To use a custom management fee setup specific to this property, select <span class="Field">&lt;Custom Setup&gt;</span>. Then enter the required information into the available fields. The fields that display differ depending on the selected <span class="Field">Method</span> type. For field information, refer to <a href="../CSH/Property-Fees-Setup.html" class="MCXref xref">Property Fees Setup (Pop-Up)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Template</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>To use a management fee template already created in your database, select that fee template from the list. Only templates of the selected <span class="Field">Method</span> type display. For more information, refer to <a href="../CSH/Management-Fee-Templates.html" class="MCXref xref">Management Fee Templates (Page)</a>.</p>
+                                                                                <p>If you select a fee template, the fields in this section are grayed out and the information is pulled directly from the template setup.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">Save and Finish</span> to complete the creation process and close the pop-up. Alternatively, click <span class="BigButtons">Save and New</span> to complete the creation process and refresh the pop-up to add another property.<br />The property is added to <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If your database uses <span class="mc-variable Products.TA variable">Task Automation</span>, you may see the following pop-up upon clicking <span class="BigButtons">Save and Finish</span> or <span class="BigButtons">Save and New</span>:</p>
+                                                                    <p>
+                                                                        <img src="../../../assets/Resources/Images/PNGs/RMX-Property-Add-Residential-Task-Automation-Pop-up-SG-2023.png" alt="The pop-up message advising users to add the new property to any Task Automation setups." />
+                                                                    </p>
+                                                                    <p>Newly created properties are <span class="Stress">not</span> automatically added to your <span class="mc-variable Products.TA variable">Task Automation</span> schedules. If you want the new property to have automated postings, you must add it to each desired <span class="mc-variable Products.TA variable">Task Automation</span> schedule, unless that schedule has <span class="Field">**All Properties</span> selected.</p>
+                                                                    <p>If you add the new property to a property group or property filter and that group or filter is selected for a <span class="mc-variable Products.TA variable">Task Automation</span> schedule, the property is included in the schedule by default. For more information, refer to <a href="../CSH/Property-Groups.html" class="MCXref xref">Property Groups (Page)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 data-mc-conditions="Snippet Conditions.2,Snippet Conditions.3" id="NextSteps" data-magellan-target="NextSteps">Next Steps</h2>
+                                                        <p data-mc-conditions="Snippet Conditions.2">After creating the property, there are other settings you need to set up for your STR property. Select the property from the list to open its details page. These setups are described in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0" data-mc-conditions="Snippet Conditions.2">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Setup</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Set Guest Account Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div class="privs">
+                                                                            <p class="label1">Related Privileges</p>
+                                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <thead>
+                                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System Preferences</td>
+                                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                        </div>
+                                                                        <p>Before taking reservations, establish how guest accounts are tracked in <span class="mc-variable Products.RM variable">Rent Manager</span>. Users can add guests to <span class="mc-variable Products.RM variable">Rent Manager</span> as tenant accounts or prospect accounts depending on your system preferences. The available options are described below. For more information, refer to <a href="System-Preferences/General-Options-STR-Reservations.html" class="MCXref xref">Short Term Rental (STR) Reservations (System Preferences)</a>.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>For guests making reservations using the STR Online Booking Portal, the option <span class="Field">Type of account created when booking a reservation</span> in system web preferences determines if guest accounts created from the portal are added to <span class="mc-variable Products.RM variable">Rent Manager</span> as tenant or prospect accounts. For more information, refer to <a href="System-Web-Preferences/STR-Online-Booking-Settings.html" class="MCXref xref">STR Online Booking RV/Campground Settings (System Web Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Prospect</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Guests are added to <span class="mc-variable Products.RM variable">Rent Manager</span> as prospect accounts. When the guest checks in for their reservation, their account is automatically converted to a tenant account.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Tenant</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Guests are added to <span class="mc-variable Products.RM variable">Rent Manager</span> as tenant accounts.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Tenant or Prospect</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>Users can choose to add a guest as a prospect or tenant account. Any guests added as prospect accounts are automatically converted to tenant accounts when they check in for their reservation.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Marketing</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div class="privs">
+                                                                            <p class="label1">Related Privileges</p>
+                                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <thead>
+                                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="Snippet Conditions.3">
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Properties/Units</td>
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Properties</td>
+                                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                        </div>
+                                                                        <p>Establish your marketing information for the STR property.</p>
+                                                                        <p>For an <span class="Field">RV/Campground</span> property, on the action bar to the right, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline-image" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">Marketing Setup</span>. For more information, refer to <a href="../CSH/Marketing-Setup-STR-Property.html" class="MCXref xref">STR Property Marketing Setup (Pop-Up)</a>.</p>
+                                                                        <p>For a <span class="Field">Short Term Rental</span> property, the marketing setup varies depending on if the property is set to use unit-level marketing or property-level marketing. For more information, refer to <a href="../CSH/Marketing-Setup-Property.html" class="MCXref xref">Property Marketing Setup (Pop-Up)</a> or <a href="../CSH/Marketing-Setup-Unit.html" class="MCXref xref">Unit Marketing Setup (Pop-Up)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>STR Settings</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div class="privs">
+                                                                            <p class="label1">Related Privileges</p>
+                                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <thead>
+                                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties</td>
+                                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                                    </tr>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage STR Rate Schedules</td>
+                                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                        </div>
+                                                                        <p>For an <span class="Field">RV/Campground</span> property, you can create groups of similar sites, determine the lengths of stay allowed at the property, and establish any discounts or tax types for fees at the property.</p>
+                                                                        <p>On the action bar to the right, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline-image" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span><span class="ActionItems">STR Settings</span>. For more information, refer to <a href="../CSH/STR-Property-Settings.html" class="MCXref xref">Property STR Settings (Pop-Up)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Rate Schedules</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <div class="privs">
+                                                                            <p class="label1">Related Privileges</p>
+                                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                <thead>
+                                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties</td>
+                                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                                    </tr>
+                                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage STR Rate Schedules</td>
+                                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                        </div>
+                                                                        <p>For an <span class="Field">RV/Campground</span> property, you can establish rate schedules to determine what to charge for reservations based on length of stay, holidays, number of guests or pets, and so on. You can create multiple schedules for one property to account for season, year, or anything in between.</p>
+                                                                        <p>In the <span class="Section">STR Rate Schedules</span> tile, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" class="inline-image" alt="View More" style="width: 19;height: 19;" /> in the header and select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Rate Schedule</span>. For more information, refer to <a href="STR-Rates-Add.html" class="MCXref xref">Add an STR Rate Schedule</a>.</p>
+                                                                        <p>You must set up the property's STR settings before creating rate schedules.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

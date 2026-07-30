@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account No Longer Active Message in Tenant Web Access (TWA)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/TWA-Account-No-Longer-Active.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/TWA-Account-No-Longer-Active.htm</a></p>
+
+                                                        <h1 id="AccountNoLongerActiveMessageinTenantWebAccessTWA" data-magellan-target="AccountNoLongerActiveMessageinTenantWebAccessTWA"><a name="kanchor549"></a><a name="H1"></a>Account No Longer Active Message in Tenant Web Access (TWA)</h1>
+                                                        <p>When attempting to log in to <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>, tenants can sometimes encounter an <span class="Window">Account No Longer Active</span> error. In most cases, this error indicates that the tenant's account has a status of <span class="Field">Past</span> <span class="Stress">and</span> that they have had that status for a longer time than allowed by system web preferences. To resolve the issue, you can extend a <span class="Field">Past</span> tenant's TWA access, change your system web preferences to allow for a longer access period, or, if applicable, update inaccurate lease information to ensure the tenant has the correct status.</p>
+                                                        <h2 id="Step1VerifyandUpdateTenantStatus" data-magellan-target="Step1VerifyandUpdateTenantStatus"><a name="H2_1"></a>Step 1: Verify and Update Tenant Status</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Modify tenant movein/moveout dates</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To begin troubleshooting this error, review the affected tenant's account details. Doing so allows you to determine if relevant information is accurate and correct it as needed.</p>
+                                                        <p>To review a tenant's status, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span> and select a tenant.<br />The tenant's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top of the details page, examine the tenant's status badge. It displays one of three statuses (<span class="Field">Past</span>, <span class="Field">Current</span>, <span class="Field">Future</span>) based on the <span class="Field">Move In</span> and <span class="Field">Move Out</span> dates on the tenant's most recent lease.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/TWA-Account-No-Longer-Active-Status-JL-25.png" alt="The tenant details header displays a Current status badge highlighted in orange." />
+                                                                </p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Status</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Current</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The tenant's <span class="Field">Move In</span> date is on or before the present date <span class="Stress">and</span> their <span class="Field">Move Out</span> date is blank or one or more days in the future.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Future</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The tenant's <span class="Field">Move In</span> date is blank or one or more days after the present date.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Past</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The tenant's <span class="Field">Move Out</span> date is on or before the present date.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>On the <span class="Section">Leases</span> tile, review the <span class="Field">Move In</span> and <span class="Field">Move Out</span> dates of the most recent lease for accuracy. If one of the dates is incorrect, update the lease details with correct information. For example, if a tenant's <span class="Field">Move Out</span> is supposed to be <span class="Input">10/31/2025</span>, but was erroneously entered as <span class="Input">10/31/2024</span>, update the field to accurately reflect the lease. For more information, refer to <a href="../CSH/Lease-Details.html" class="MCXref xref">Lease Details (Page)</a>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <p>After updating a tenant's lease with accurate information, invite them to attempt to log in again. If the issue was caused by inaccurate <span class="Field">Status</span>, the tenant should now be able to log in without error. However, if the tenant is still unable to log in, or if you determine that the tenant's <span class="Field">Move In</span> date, <span class="Field">Move Out</span> date, and <span class="Field">Status</span> are correct, proceed to the next troubleshooting step.</p>
+                                                        <h2 id="Step2ReviewandUpdateSystemWebPreferences" data-magellan-target="Step2ReviewandUpdateSystemWebPreferences"><a name="H2_2"></a>Step 2: Review and Update System Web Preferences</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System Web Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>The system web preference <span class="Field">Past tenants remain active for X days after move out</span> determines the number of days after a tenant's <span class="Field">Move Out</span> date that a tenant can still access their TWA account.</p>
+                                                        <p>To review this preference, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Web Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<span class="mc-variable Products.TWA variable">Tenant Web Access</span>&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General</span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">General</span> tile, examine the <span class="Field">Past tenants remain active for X days after move out</span> field.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Optionally, update this field to give tenants more time to access TWA after their <span class="Field">Move Out</span> date. For example, if today's date is 12/01/<span class="mc-variable Dates.Year4 variable">2026</span>, the affected tenant has a <span class="Field">Move Out</span> date of <span class="Input">10/31/<span class="mc-variable Dates.Year4 variable">2026</span></span>, and the field is set to <span class="Input">30</span>, the tenant receives the <span class="Window">Account No Longer Active</span> error when logging in. If you extend the number of days to <span class="Input">31</span>, the tenant can to log in today.<br /></p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>The <span class="Field">Past tenants remain active for X days after move out</span> field can be set to a maximum of 60 days and affects all tenants in your database. Instead of making system-wide changes, you can extended access for individual tenants on their <span class="Section">Web Access Settings</span> pop-up as outlined in the next troubleshooting step.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>After saving any changes, invite the tenant to attempt to log in again. If their <span class="Field">Move Out</span> date meets the criteria set in system web preferences, the tenant should now be able to log in without error.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3ExtendTWAAccess" data-magellan-target="Step3ExtendTWAAccess"><a name="H2_3"></a>Step 3: Extend TWA Access</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="Snippet Conditions.3">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>If a tenant's <span class="Field">Move Out</span> date is accurate and falls outside of the 60-day maximum allowed by system web preferences or you do not wish to update the maximum allowed for all tenants in the system, you can extend the individual tenant's access to resolve their <span class="Window">Account No Longer Active</span> error. Doing so allows them to view account details and make payments in TWA.</p>
+                                                        <p>To extend a tenant's access, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span> and select a tenant.<br />The tenant's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the action bar to the right, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="Settings" style="width: 19;height: 19;"></img> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">TWA&#160;Settings</span>.<br />The <span class="Window">Web Access Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>To the right of the <span class="Field">TWA Access Expired</span> badge, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="Settings" style="width: 19;height: 19;" />.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>A <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline" alt="Settings" style="width: 19;height: 19;" /> displays if <span class="Stress">all</span> the following conditions are met:</p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p>The <span class="Field">Balance Due</span> shown on the tenant's scoreboard is greater than 0.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>On the tenant's <span class="Section">Miscellaneous</span> tile, <span class="Field">Don't Allow TWA Payments</span> is unchecked.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>The tenant's <span class="Field">Status</span> is set to <span class="Field">Past</span>.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>The tenant's <span class="Field">Move Out</span> date is past the days allotted in the <span class="Field">Past tenants remain active for X days after move out</span> field in system web preferences. For more information, refer to <a href="../Other/System-Web-Preferences/TWA-General.html" class="MCXref xref">Tenant Web Access General (System Web Preferences)</a>.</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Extend TWA Access</span> pop-up, click <span class="BigButtons">Extend Access</span>.<br />The tenant can access TWA until their <span class="Field">Balance Due</span> is zero or until six months have passed without a login.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

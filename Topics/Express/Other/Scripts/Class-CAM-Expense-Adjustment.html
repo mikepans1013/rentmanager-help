@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAM Expense Adjustment Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-CAM-Expense-Adjustment.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-CAM-Expense-Adjustment.htm</a></p>
+
+                                                        <h1 id="CAMExpenseAdjustmentClassScript" data-magellan-target="CAMExpenseAdjustmentClassScript"><a name="aanchor828"></a>
+                                                            <a name="kanchor1354"></a><a name="H1"></a>CAM Expense Adjustment Class (Script)</h1>
+                                                        <p>This class examines active (non-canceled) CAM&#160;expense adjustments for a tenant's lease. After declaring the Lease class, a CAM&#160;expense adjustment–level scripting function can be specified.</p>
+                                                        <p>Most of the information retrieved by the scripting functions can be found on the adjustment's details pop-up for the CAM expense adjustment.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment(1).GLAccount()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the general ledger account selected on the second-listed CAM expense adjustment for the tenant's first-listed lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameter" data-magellan-target="ClassParameter"><a name="H2_1"></a>Class Parameter</h2>
+                                                        <p>A single, optional parameter can be specified for this class: an index.</p>
+                                                        <h3><a name="H3_1"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific CAM expense adjustment on a tenant account by using a number to identify each adjustment listed for the specified lease in your script. For example, if there are three expense adjustments associated with a lease, they are referenced from oldest to newest with indexes 0, 1, and 2. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first expense adjustment added to the original lease.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>For amortized CAM expense adjustments, each individual entry on the <span class="Window">CAM Expense Adjustments</span>page counts as its own, singular expense adjustment in scripting. For more information, refer to <a href="../../KB/Script-Index-CAM-Expense-Adjustments.html" class="MCXref xref">CAM Expense Adjustment Indexing</a>.</p>
+                                                        </div>
+                                                        <p class="Example">[Tenant().Lease(1).CAMExpenseAdjustment().Reference()]</p>
+                                                        <p>Displays the <span class="Field">Reference #</span> for the first-listed CAM&#160;expense adjustment of the tenant's second-listed lease.</p>
+                                                        <p class="Example">[Tenant().Lease().CAMExpenseAdjustment(3).Type()]</p>
+                                                        <p>Displays the <span class="Field">Type</span> of CAM expense adjustment (<span class="Input">One-time</span> or <span class="Input">Amortization</span>) for the fourth-listed adjustment of the tenant's first-listed lease.</p>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.22,Snippet Conditions.23,Snippet Conditions.10,Snippet Conditions.37,Snippet Conditions.38">The following examples reflect the syntax that displays when you double-click the functions in the <span class="Section">Insertable Fields</span> section.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Adjustment-Amount.html">Adjustment Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().AdjustmentAmount()]</p>
+                                                                        <p>Displays the dollar amount in the <span class="Field">Adj. Amount</span> column of the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Adjustment-Date.html">Adjustment Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().AdjustmentDate()]</p>
+                                                                        <p>Displays the date in the <span class="Field">Adj. Date</span> column of the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Adjustment-List.html">Adjustment List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().AdjustmentList()]</p>
+                                                                        <p>Displays a detailed list of all CAM expense adjustments applied to the lease, including the reference number, type, GL account, date, amount, and notes.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.25,Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Count.html">Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.37">[Tenant().Lease().CAMExpenseAdjustment().Count()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.37">Displays the number of CAM expense adjustments applied to the lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Final-Date.html">Final Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().FinalDate()]</p>
+                                                                        <p>Examines the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page. The data displayed varies depending on the adjustment's <span class="Field">Type</span>, as detailed below.</p>
+                                                                        <p>For one-time adjustments, displays the date in the <span class="Field">Adj. Date</span> field on the <span class="Window">One-time Adjustment Details</span> pop-up.</p>
+                                                                        <p>For amortized adjustments, displays the date in the <span class="Column">Adjustment Date</span> column for the last <span class="Column">Period</span> listed on the <span class="Window">Amortization Details</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-GL-Account.html">GL Account</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().GLAccount()]</p>
+                                                                        <p>Displays the general ledger account in the <span class="Field">GL Account</span> column of the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Internal-Note.html">Internal Note</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().InternalNote()]</p>
+                                                                        <p>Displays the text in the <span class="Field">Internal Note</span> column of the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Periods.html">Periods</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().Periods()]</p>
+                                                                        <p>Examines the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page. The data displayed varies depending on the adjustment's <span class="Field">Type</span>, as detailed below.</p>
+                                                                        <p>For one-time adjustments, displays the output <span class="Input">One-time</span>.</p>
+                                                                        <p>For amortized adjustments, displays the number entered in the <span class="Field">Periods</span> field, followed by <span class="Field">Months</span> or <span class="Field">Years</span> depending on the selection in the <span class="Window">Amortization Details</span> pop-up (e.g., <span class="Input">3 Years</span>, <span class="Input">6 Months</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.10,Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p data-mc-conditions="Snippet Conditions.37"><a href="Function-Reference.html">Reference</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.37">[Tenant().Lease().CAMExpenseAdjustment().Reference()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.37">Displays the reference number in the <span class="Field">Ref#</span> column of the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Set-Adjustment-Filter.html">Set Adjustment Filter</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().SetAdjustmentFilter()]</p>
+                                                                        <p>Removes any filters applied to CAM expense adjustments associated with the lease. Parameters can be used to establish filters for CAM expense adjustments in scripting.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.23,Snippet Conditions.22,Snippet Conditions.33,Snippet Conditions.36,Snippet Conditions.37,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p data-mc-conditions="Snippet Conditions.37"><a href="Function-Start-Date.html">Start Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.37">[Tenant().Lease().CAMExpenseAdjustment().StartDate()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.37">Examines the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.37">For one-time adjustments, displays the date in the <span class="Field">Adj. Date</span> field on the <span class="Window">One-time Adjustment Details</span> pop-up.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.37">For amortized adjustments, displays the date in the <span class="Field">Start Date</span> field on the <span class="Window">Amortization Details</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Tenant-Note.html">Tenant Note</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().TenantNote()]</p>
+                                                                        <p>Examines the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page. Displays the text in the <span class="Section">Tenant Note</span> section in the details of the <span class="Field">Note</span> field on the <span class="Window">Amortization Details</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Amount.html">Total Amount</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().TotalAmount()]</p>
+                                                                        <p>Examines the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                        <p>For one-time adjustments, displays the dollar amount in the <span class="Field">Adj. Amount</span> field on the <span class="Window">One-time Adjustment Details</span> pop-up.</p>
+                                                                        <p>For amortized adjustments, displays the dollar amount in the <span class="Field">Total Amount</span> field  on the <span class="Window">Amortization Details</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.18,Snippet Conditions.36,Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p data-mc-conditions="Snippet Conditions.37"><a href="Function-Type.html">Type</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.37">[Tenant().Lease().CAMExpenseAdjustment().Type()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.37">Displays the type of adjustment (<span class="Input">Amortization</span> or <span class="Input">One-time</span>) in the <span class="Field">Type</span> column of the lease's first-listed adjustment on the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

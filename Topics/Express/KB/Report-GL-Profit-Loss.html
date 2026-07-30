@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>General Ledger and Profit &amp; Loss</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Report-GL-Profit-Loss.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Report-GL-Profit-Loss.htm</a></p>
+
+                                                        <h1 id="GeneralLedgerandProfitLoss" data-magellan-target="GeneralLedgerandProfitLoss"><a name="kanchor1591"></a><a name="H1"></a>General Ledger and Profit &amp; Loss</h1>
+                                                        <p>Running the <span class="Report">General Ledger</span> and the <span class="Report">Profit &amp; Loss</span> reports together with comparable report options allows you to verify the total income values match, thus ensuring your financial data in <span class="mc-variable Products.RM variable">Rent Manager</span> matches your real-world finances. This topic walks you through how to set up and generate each report so that they provide the fullest picture of your company's performance. This comparison is usually done at the end of the month, or if you need to find the full details on a balance amount.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p data-mc-conditions="Snippet Conditions.3">The information contained here does not replace the advice of an accountant. If you are unclear about how to interpret the data presented in the related reports, please consult your accountant.</p>
+                                                        </div>
+                                                        <p>The <span class="Report">General Ledger</span> report allows you to examine transactions that impacted specific general ledger (GL) accounts over a given date range. The report displays all activity during the specified date range, giving you the ability to see how the selected GL accounts reached their balances.</p>
+                                                        <p>The <span class="Report">Profit &amp; Loss</span> shows financial activity in all income accounts and all expense accounts during a designated time range. It provides valuable insight into your company's profitability.</p>
+                                                        <p>Both reports provide you with total income data, yet they display this data differently. The <span class="Report">Profit &amp; Loss</span> displays your company's total income during a specified time period; whereas the <span class="Report">General Ledger</span> provides you with detailed account activity, showing you credits and debits against your GL accounts during the specified time period. Subtracting the total debits from the total credits gives you the same amount as the total income on the <span class="Report">Profit &amp; Loss</span>. In other words, the <span class="Report">General Ledger</span> provides an expanded view of the income listed on the <span class="Report">Profit &amp; Loss</span> to show exactly where those charges are coming from.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Run reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Run accounting reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>Additionally, on the <span class="Tab">Reports</span> tab, you must have access to <span class="Field">General Ledger</span> and <span class="Field">Profit &amp; Loss</span>.</p>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>The <span class="Report">General Ledger</span> and the <span class="Report">Profit &amp; Loss</span> display different information, but when examined together, these two reports give insight into your management company's financial health.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Report-Comparison-GL-Profit-Loss.png" alt="The General Ledger and Profit &amp; Loss reports for one property display side-by-side." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="ReportOptions" data-magellan-target="ReportOptions"><a name="H2_1"></a>Report Options</h2>
+                                                        <p>To populate comparable reports, use the report option combinations listed in the table below. Follow these guidelines to generate a <span class="Report">General Ledger</span> and <span class="Report">Profit &amp; Loss</span> that complement each other. Report options not mentioned do not affect comparability.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">General Ledger</th>
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Profit &amp;&#160;Loss</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Cash or Accrual</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Cash or Accrual</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Regardless of if you run in <span class="Field">Cash</span> or <span class="Field">Accrual</span>, the selected option needs to be the same for both reports.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Chart Accounts to Include</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>n/a</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Because the <span class="Report">Profit &amp;&#160;Loss</span> includes all income and expense accounts, be sure only <span class="Stress">all</span> Income and Expense GL accounts are selected on the  <span class="Report">General Ledger</span>. Non-income and non-expense accounts should be unchecked. This can be quickly selected using the <span class="Field">From Account</span> and <span class="Field">To Account</span> fields, selecting the first income account and the last expense account.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>For troubleshooting purposes, it is also recommended that you select the GL account set as the net income system account, as selected in the <span class="Field">Net income account</span> field of system preferences. For more information, refer to <a href="../Other/System-Preferences/General-Ledger-System-Accounts.html" class="MCXref xref">General Ledger System Accounts (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Date Range</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Date Range</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The same date range needs to be used for both reports.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Detail or Summary</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>n/a</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>For troubleshooting purposes, it is recommended you select <span class="Field">Detail</span> so that you can view full transaction activity and click on a transaction to drill down to its details.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Exclude period adjustments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Exclude period adjustments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Checking this option removes any journal entries marked as a <span class="Field">Period Adjustment</span> from the report results. If you select this option for one report, be sure to select it for the other.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Properties/Owners to Include</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Properties/Owners to Include</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The same <span class="Field">Properties</span>, <span class="Field">Owners</span>, or property <span class="Field">Group</span> must be included in both reports.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="TroubleshootingIfIncomeAmountsAreDifferent" data-magellan-target="TroubleshootingIfIncomeAmountsAreDifferent"><a name="H2_2"></a>Troubleshooting If Income Amounts Are Different</h2>
+                                                        <p>If your report options are correctly matched according to the table above, the <span class="Field">Credit</span> field total at the end of the <span class="Report">General Ledger</span> matches the <span class="Field">Total Income</span> field total on the <span class="Report">Profit &amp; Loss</span>, while the <span class="Field">Debit</span> field total matches the <span class="Field">Total Expense</span> field total. If you subtract the <span class="Field">Debit</span> total from the <span class="Field">Credit</span> total (or subtract <span class="Field">Expense</span> total from <span class="Field">Income</span> total), the difference amount matches the <span class="Field">Net Income</span> shown on the <span class="Report">Profit &amp; Loss</span>.</p>
+                                                        <p class="Formula">Credit – Debit = Net Income</p>
+                                                        <p class="Formula">Income – Expense = Net Income</p>
+                                                        <p>Sometimes, when you run the <span class="Report">General Ledger</span> and the <span class="Report">Profit &amp; Loss</span>, the total income amounts may not match. In order to get the clearest picture of your management company's financial health, you'll want the total income amounts to match. The discrepancy in total income amounts is usually caused by human error or transactions coded to the net income general ledger account.</p>
+                                                        <h3><a name="H3_1"></a>Manual Transactions are not Included in the P&amp;L</h3>
+                                                        <p>Net income on the <span class="Report">Profit &amp; Loss</span> is calculated by subtracting the <span class="Field">Expense</span> total from <span class="Field">Income</span> total.</p>
+                                                        <p class="Formula">Income – Expense = Net Income</p>
+                                                        <p>This covers seamless transactions such as charges, payments, and checks used to pay expenses. It <span class="Stress">does not</span> include other manual transactions such as beginning balances, journal entries, checks written to transfer funds, or <span class="Section">Other Income</span> entered on deposits (also known as <span class="Input">Step 3 Deposits</span>), all of which are included in the <span class="Report">General Ledger</span>. This may cause the amounts on the <span class="Report">Profit &amp; Loss</span> and <span class="Report">General Ledger</span> to show differently.</p>
+                                                        <p>You can track down the cause of these differences from the <span class="Report">General Ledger</span> report's section for your net income account and look for any activity in that account. From there, you can click on any transactions and determine if they need to be corrected, such as tying income to a specific property or tenant or tying expense transactions to the correct GL account.</p>
+                                                    
+</main>
+</body>
+</html>

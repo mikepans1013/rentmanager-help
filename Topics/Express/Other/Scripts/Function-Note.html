@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Note Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Note.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Note.htm</a></p>
+
+                                                        <h1 id="NoteFunctionScript" data-magellan-target="NoteFunctionScript"><a name="aanchor1254"></a>
+                                                            <a name="kanchor2087"></a><a name="H1"></a>Note Function (Script)</h1>
+                                                        <p>This function displays information about a single history note on the selected entity. By default, this includes the date and time the note was created, the category, type, description, and the username of the person who created the note.</p>
+                                                        <p>This function can be preceded by the History class to further specify, using an index, which history item information displays. If you do not specify an index for the History class, the function pulls information about the most recent note posted to the account. Optionally, use the available parameters to specify which parts of the note display.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>You can pre-filter history items to display for this function by inserting the <a href="Function-Set-History-Filter.html">SetHistoryFilter Function</a> before the Note function. This results in the parameters specified automatically apply to the Note function anywhere it is used after SetHistoryFilter.</p>
+                                                        </div>
+                                                        <p>Classes that utilize this function and the locations from where the scripting information is pulled in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.html">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Asset().History().Note()]</p>
+                                                                        <p>Displays information found on the asset's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Evictions.html">Eviction</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Eviction().Note()]</p>
+                                                                        <p>Displays information found on the <span class="Window">Eviction Notes</span> tile of the eviction.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Home.html">Home</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Home().History().Note()]</p>
+                                                                        <p>Displays information found on the home-type asset's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Job.html">Job</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Job().History().Note()]</p>
+                                                                        <p>Displays information found on the job's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().History().Note()]</p>
+                                                                        <p>Displays information found on the owner's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner-Prospect.html">Owner Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[OwnerProspect().History().Note()]</p>
+                                                                        <p>Displays information found on the owner prospect's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">Primary Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().PrimaryOwner().History().Note()]</p>
+                                                                        <p>Displays information found on the primary owner's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().History().Note()]</p>
+                                                                        <p>Displays information found on the property's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().History().Note()]</p>
+                                                                        <p>Displays information found on the <span class="Window">History/Notes</span> pop-up of the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().History().Note()]</p>
+                                                                        <p>Displays information found on the tenant's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().History().Note()]</p>
+                                                                        <p>Displays information found on the unit's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Vendor.html">Vendor</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Vendor().History().Note()]</p>
+                                                                        <p>Displays information found on the vendor's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Violation.html">Violation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Violation().History().Note()]</p>
+                                                                        <p>Displays information found on the<span class="Window"> History/Notes</span> pop-up of the violation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[Note(<span class="Optional">"Category"</span>, <span class="Optional">"Type"</span>, <span class="Optional">"FromDate"</span>, <span class="Optional">"ToDate"</span>, <span class="Optional">"Level"</span>, <span class="Optional">"ExcludedCategories"</span>, <span class="Optional">"ExcludedTypes"</span>, <span class="Optional">"Format"</span>)]</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If using SetHistoryFilter prior to the Note function, each parameter specified in SetHistoryFilter is used by default. Any filters applied to the Note function are applied in addition to the parameters specified in SetHistoryFilter.</p>
+                                                        </div>
+                                                        <h3 class="Optional">Category</h3>
+                                                        <p colspan="2">Display the most recent history items with this category assigned.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.2">[Note("Complaints")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.2">Displays information about the most recent history item with the category <span class="Field">Complaints</span> assigned.</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Type</h3>
+                                                        <p>Displays the most recent history items categorized with this type. If no Type parameter is defined, the most recent history item is returned.</p>
+                                                        <p>The following values may be used in the Type parameter:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">History Type</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Appointments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","Appointment")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Appointment</span> type in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                        <p>Only appointments for the user generating the script are counted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Call</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","Call")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Call</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email - Note</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","Email")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Email - Note</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Note</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","Note")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Note</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>OWA&#160;Files</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","OWAFile")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">OWA&#160;File</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Phone Broadcast</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","PhoneBroadcast")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Phone Broadcast</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>rmVoIP</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","NDT")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field"><span class="mc-variable Products.NDT variable">rmVoIP</span></span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email - Sent/Received</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","SentEmail")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Email - Sent/Received</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>System</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","System")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">System</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Task</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","Task")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Task</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Text Messages</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","TextMessages")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Text Messages</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Visit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Note("","Visit")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Visit</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Web Conversation</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Note("","CompletedWebConversations")]</p>
+                                                                        <p>Displays information about the most recent history item assigned the <span class="Field">Web Conversation</span> type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3 class="Optional"><a name="H3_2"></a>FromDate</h3>
+                                                        <p>Select only history items dated on or after this date. If no date is specified, the function uses the beginning of time.</p>
+                                                        <p class="Example">[Note("","",1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays information about the last history item posted on or after January 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_3"></a>ToDate</h3>
+                                                        <p>Select only history items dated on or before this date. If no date is specified, the function uses the end of time.</p>
+                                                        <p class="Example">[Note("","","","12/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays information last history item posted on or before December 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_4"></a>Level</h3>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The Level parameter applies only to the function when it is used with the Tenant, Asset, Home, OwnerProspect, Prospect, ServiceManager, Unit, Job, or Violation classes. If using this function with the Owner, Vendor, or PrimaryOwner classes, there is no Level parameter. </p>
+                                                        </div>
+                                                        <p>Specify the entity type(s) of the history item to examine. Each level should be separated by a comma.</p>
+                                                        <p class="Example">[Note("","","","","Tenant")]</p>
+                                                        <p>Displays information about the most recent tenant-level history item associate with the current entity.</p>
+                                                        <h3 class="Optional">ExcludedCategories</h3>
+                                                        <p colspan="2">Exclude the history items with this category assigned. Each excluded category should be separated with a comma.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.2">[Note("","","","","Complaints,Legal")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.2">Displays information about the last history item posted excluding those assigned the categories of <span class="Field">Complaints</span> and <span class="Field">Legal</span>.</p>
+                                                        <h3 class="Optional">ExcludedTypes</h3>
+                                                        <p colspan="2">Exclude the history items with this type assigned. Each excluded type should be separated with a comma.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.2">[Note("","","","","","System,Email")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.2">Displays information about the last history item posted excluding those with the type of<span class="Field"> System</span> and <span class="Field">Email - Note</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_5"></a>Format </h3>
+                                                        <p>List details of each history item using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <p class="Subheading">Default Format</p>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays the date and time the item was created, the item category, the item type, the text entered in the <span class="Field">Note</span> field, and the user that created the item variables, separated by tabs:</p>
+                                                        <p class="Formula">"\t$_Date\t$_Time\t$_Category\t$_Type\t$_Regarding\t$_CreatedBy\n"</p>
+                                                        <p class="Subheading">Variables</p>
+                                                        <p>The following variables may be used in the Format parameter:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Category</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Category</span> assigned to the history item.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_CreatedBy</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="mc-variable Products.RM variable">Rent Manager</span> user who created the history item. </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date on which the item was created. </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Regarding</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the text entered in the <span class="Field">Note</span> field of the history item.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Time</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the time the item was created.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Type</span> of the history item.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().Note]</p>
+                                                        <p>Displays information about the most recent history item posted to the selected tenant's account.</p>
+                                                        <p class="Example">[Vendor().History(1).Note]</p>
+                                                        <p>Displays information about the second most recent history item posted to the selected vendor's account.</p>
+                                                        <p class="Example">[Owner().Note("Legal")]</p>
+                                                        <p>Displays information about the most recent history item with the category of <span class="Field">Legal</span> posted to the selected owner's account.</p>
+                                                        <p class="Example">[Tenant().Note("","","","","","","","$_Regarding")]</p>
+                                                        <p>Displays only the description of the history item last posted to the selected tenant's account.</p>
+                                                        <p class="Example">[Violation().Note("","Email","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays information about the most recent <span class="Field">Email - Note</span> type history item posted on or after January 1, <span class="mc-variable Dates.Year4 variable">2026</span> for the selected violation.</p>
+                                                        <p class="Example">[Tenant.Eviction().Note("","Notice","Call")]</p>
+                                                        <p>Displays information about the most recent note item with the category of <span class="Field">Notice</span> and the <span class="Field">Call</span> type on the tenant's eviction.</p>
+                                                    
+</main>
+</body>
+</html>

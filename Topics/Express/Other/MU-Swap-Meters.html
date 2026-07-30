@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swap Meters</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/MU-Swap-Meters.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/MU-Swap-Meters.htm</a></p>
+
+                                                        <h1 id="SwapMeters" data-magellan-target="SwapMeters"><a name="kanchor150"></a><a name="H1"></a>Swap Meters</h1>
+                                                        <p>Whenever you need to swap out the physical utility meters at a property—whether it be to replace faulty equipment, upgrade to smart meters, or any other reason—you can use the <span class="Window">Swap Meters</span> tool to efficiently record this process in <span class="mc-variable Products.RM variable">Rent Manager</span>. This tool allows you to seamlessly combine the old meter's last reading and the new meter's reading into one posted charge, even if you need to swap the meters in the middle of a billing period. This helps reduce confusion from tenants and prevents the updating of the meters from slipping through the cracks.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Utilities</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Metered utilities</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1InitiatetheMeterSwap" data-magellan-target="Step1InitiatetheMeterSwap"><a name="H2_1"></a>Step 1: Initiate the Meter Swap</h2>
+                                                        <p>To start the process to swap a meter, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Navigate to one of the following pages:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Page</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Navigation</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Meter Readings</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;"></img> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Meter Readings</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Meter Readings Setup</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;"></img> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Meter Readings Setup</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>The <span class="Window">Meter Readings</span> or <span class="Window">Meter Readings Setup</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the following filters to populate the list of meters:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property of the unit that has a meter in need of replacing.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Utility</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The type of utility meter that needs replacing.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>The list of units and meters of the selected utility at the property displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>For the meter you wish to swap, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" alt="Options" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Swap Meter</span>.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you are on the <span class="Window">Meter Readings</span> page and the meter you wish to swap does not display in the list, uncheck the <span class="Field">Show consumption exceptions only</span> and <span class="Field">Show units with no readings only</span> options at the top.</p>
+                                                                </div>
+                                                                <p>The <span class="Window">Swap Meters</span> wizard displays.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2EnterCurrentMeterInformation" data-magellan-target="Step2EnterCurrentMeterInformation"><a name="H2_2"></a>Step 2: Enter Current Meter&#160;Information</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Swap-Meters-SG-2025.png" alt="The first page of the Swap Meter wizard displays the first meter reading for an electric meter." class="lightbox" />
+                                                        </p>
+                                                        <p>The top of the pop-up displays information about the meter's unit, such as the tenant and their contact information. Additionally, information regarding the meter itself and its previous reading displays below, such as the meter number and the date that reading was taken.</p>
+                                                        <p>Select one of the options below and enter the needed information, then click <span class="BigButtons">Next</span>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Enter a Current Reading later via <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span></p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If you are swapping the meter now but not currently at the meter and wish to record that information later, select this option. This allows technicians to add the reading later via <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>'s Off-Cycle Reads tool.</p>
+                                                                        <p>In the drop-down field below, select which user(s) receive an email notification alerting them that this meter reading is now available as an off-cycle reading in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> so they can add the reading information.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Enter the Current Reading now</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>If you are recording the old meter's current reading at this time, select this option. Then enter the reading and the date that reading was taken in the associated fields.</p>
+                                                                        <p>If the meter cannot be accessed by the technician, click <span class="ActionItems">Estimate</span> to have <span class="mc-variable Products.RM variable">Rent Manager</span> calculate an estimated meter reading based on the selected configuration. For more information, refer to <a href="MU-Estimate-Reading.html" class="MCXref xref">Estimate a Metered Utility Reading</a>.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>The <span class="ActionItems">Estimate</span> option displays only if the <span class="Field">Enable Meter Estimates</span> option is checked in your <span class="Window">Meter Estimates</span> system defaults. For more information, refer to <a href="../CSH/MU-Meter-Estimates.html" class="MCXref xref">Meter Estimates (Page)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step3EnterNewMeterInformation" data-magellan-target="Step3EnterNewMeterInformation"><a name="H2_3"></a>Step 3: Enter New Meter Information</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Swap-Meters-pg2-SG-2025.png" alt="The second page of the Swap Meters pop-up displays information for a new water meter." />
+                                                        </p>
+                                                        <p>To record the information for the meter replacing the previous meter, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Select one of the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>New Meter</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The meter you are installing as a replacement is brand new and has never been used.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Used Meter</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The meter you are installing as a replacement has been used previously for another unit, location, or purpose.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Enter information into the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Meter Number</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unique number for the replacement meter. This may be a serial number or other identification number.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Meter Unit of Measure</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The unit of measurement (e.g., <span class="Field">Gallons</span>, <span class="Field">Cubic Feet (CF)</span>) used on the meter for tracking utility usage.
+This field does not display if the utility does not use a unit of measure.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If you selected <span class="Field">Used Meter</span>, select one of the options below:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Enter Initial Reading later via <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span></p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If you are swapping the meter now but not currently at the meter and wish to record that information later, select this option. This allows technicians to add the replacement meter's initial reading later via <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>'s Off-Cycle Reads tool.</p>
+                                                                                <p>In the drop-down field below, select which user(s) should receive an email notification alerting them that this meter reading is now available as an off-cycle reading in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> so they can add the initial reading information.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Enter the Initial Reading now</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Enter the reading that currently shows on the replacement meter. This reading is used as the starting point for tracking usage, preventing the tenant from being charged for old readings on a used meter that was just installed. Then enter the date on which the initial reading was recorded.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Next</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4ReviewandConfirmMeterSwap" data-magellan-target="Step4ReviewandConfirmMeterSwap"><a name="H2_4"></a>Step 4: Review and Confirm Meter Swap</h2>
+                                                        <p>On the final page of the <span class="Window">Swap Meters</span> wizard, a summary of all information entered for the meter replacement displays and allows you to create a service issue for performing the physical meter swap. To finalize the meter swap, do the following;</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Carefully review this information to ensure all the details and readings have been added correctly.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Do you want to create a service issue for this meter swap?</span> field, select one of the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Not right now</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Proceed with the meter swap in <span class="mc-variable Products.RM variable">Rent Manager</span> without creating a service issue. An issue can be created later for the physical meter replacement in the real world.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Yes</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Proceed with the meter swap and automatically create a service issue for the physical meter replacement in the real world after completing the <span class="Window">Swap&#160;Meters</span> wizard.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="privs">
+                                                                    <p class="label1">Related Privileges</p>
+                                                                    <p>This field displays only if the user has the following privilege:</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="">
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Service Manager</td>
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Issues</td>
+                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Swap Meter</span>.<br />The meter is swapped and both readings from the previous meter and the replacement meter will be combined into one charge when posting utility charges for the tenant.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you selected <span class="Field">Yes</span> for creating a service issue for the meter swap, the <span class="Window">New Issue</span> wizard to create the service issue displays. Fill out the needed information to perform the meter swap in the real world and click <span class="BigButtons">Save</span>. For more information, refer to <a href="Issue-Add.html" class="MCXref xref">Add an Issue</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_5"></a>Next Steps</h2>
+                                                        <p>After performing the meter swap, you can perform the actions described below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Action</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Record Off-Cycle Readings in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span></p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If during the meter swap process you selected the option to have a technician record a current or initial reading later, your techs can go use the <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> app to access the Off-Cycle Readings tool and record the reading information. This information will then be synced to <span class="mc-variable Products.RM variable">Rent Manager</span> and the meter information is fully updated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Update additional meter information</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>During the conversion process, additional information about the meter is automatically transferred from the previous meter to the replacement meter, such as the class code, route, and so on. If you need to update this information for the replacement meter, you can do so on the <span class="Window">Meter Readings Setup</span> page after the swap is completed. For more information, refer to <a href="../CSH/MU-Meter-Reading-Setup.html" class="MCXref xref">Meter Readings Setup (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

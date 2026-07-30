@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lease Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Lease.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Lease.htm</a></p>
+
+                                                        <h1 id="LeaseIndexing" data-magellan-target="LeaseIndexing"><a name="aanchor869"></a>
+                                                            <a name="kanchor1425"></a><a name="H1"></a>Lease Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>When the Lease class is used as a child class in a script (e.g., <span class="Formula">Tenant().Lease().<span class="Required">Function</span></span>), an index can be specified to uniquely identify leases that are associated with the tenant. Tenants may have multiple leases associated with their account, and indexing can be used to identify each of those leases.</p>
+                                                        <h2 id="LeaseIndexRelationships" data-magellan-target="LeaseIndexRelationships"><a name="H2_1"></a>Lease Index Relationships</h2>
+                                                        <p>The Lease class may use an index parameter when it is preceded by certain classes. Each class is described below.</p>
+                                                        <h3><a name="H3_1"></a>Tenant.Lease Indexing</h3>
+                                                        <p>The Lease class may use an index parameter when it is preceded by the Tenant class.</p>
+                                                        <p>Leases associated with the tenant are indexed based upon the order in which the leases appear on the tenant's details page in the <span class="Tab">Leases</span> tile. The topmost lease has an index of 0, the lease immediately below has an index of 1, and so on.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Units can be reordered on the <span class="Section">Leases</span> tile by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /> and using <img src="../../../assets/Resources/Images/ICONS/Non-Icons/Drag%20Reorder_25x19.png" alt="Drag to Reorder" class="inline" style="width: 25;height: 19;" /> to move units up and down the list. Reordering the list alters the output of existing scripts. New units are added to the bottom of the section.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Unit-Tenant-Leases-Tile-2024.png" alt="The Leases tile for the tenant displays with two unit leases." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Tenant.Lease(1).Unit.Name]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">SW003</span>, the name of the second lease listed.</p>
+                                                    
+</main>
+</body>
+</html>

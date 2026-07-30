@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Defined Field Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-User-Defined-Field.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-User-Defined-Field.htm</a></p>
+
+                                                        <h1 id="UserDefinedFieldFunctionScript" data-magellan-target="UserDefinedFieldFunctionScript"><a name="aanchor385"></a>
+                                                            <a name="kanchor637"></a><a name="H1"></a>User Defined Field Function (Script)</h1>
+                                                        <p>This function displays the information defined for the specified user defined field of the selected entity, as shown on the <span class="Section">UDFs</span> tile.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Some UDF&#160;<span class="Field">Field Type</span> options work differently in scripting. Depending on the type of UDF selected from the <span class="Section">User Defined Fields</span> section of the <span class="Section">Insertable Fields</span> list, some UDFs may display differently.</p>
+                                                            <p>For example, UDFs with a <span class="Field">Field Type</span> of <span class="Field">Image</span> use the ImageUserDefinedField function to display picture in the script's output. </p>
+                                                            <p class="Example">[ServiceManager(92).ImageUserDefinedField("Bathroom Photo","","2",True)]</p>
+                                                            <p>Displays the image for the issue-type image UDF "Bathroom Photo" of service issue 92, scaled to 2 inches high and proportional width.</p>
+                                                            <p>Alternatively, you can use the UserDefinedField function for UDFs with a <span class="Field">Field Type</span> of <span class="Field">Encrypted Text</span>, but the script's output displays the sensitive information <span class="Stress">only</span> if the user has the appropriate permissions.</p>
+                                                        </div>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.html">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Asset().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Contact.html">Contact</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Contact().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Current-User.html">Current User</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[CurrentUser.UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the current user.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Evictions.html">Eviction</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Eviction.UserDefinedField()]</p>
+                                                                        <p>Dispalys the information in the specified user defined field for the eviction</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Home.html">Home</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Home().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the home-type asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Job.html">Job</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Job().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the current job.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Lease.html">Lease</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the tenant's lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Loan.html">Loan</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Loan(Tenant.TenantLoanCount()-1).UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the tenant's loan.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you insert a function from the <span class="Section">Insertable Fields</span> list in a letter template, the index automatically populates with a scripted formula: <span class="Formula" data-mc-conditions="Snippet Conditions.1">(Tenant.TenantLoanCount() - 1)</span>. This allows you to return data for the most recent loan created for the tenant.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner-Prospect.html">Owner Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[OwnerProspect().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the owner prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">Primary Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().PrimaryOwner.UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the property's primary owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Prospect.html">Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Prospect().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the prospect.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-System.html">System</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[System.UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified system-level user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Vendor.html">Vendor</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Vendor().UserDefinedField()]</p>
+                                                                        <p>Displays the information in the specified user defined field for the vendor.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[UserDefinedField(<span class="Required">"Name"</span>)]</p>
+                                                        <h3 class="Required"><a name="H3_1"></a>Name</h3>
+                                                        <p>Specify the name of the UDF to display.</p>
+                                                        <p class="Example">[UserDefinedField("Driver's License Number")]</p>
+                                                        <p>Displays the information defined in the "Driver's License Number" UDF.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>For UDFs with a <span class="Field">Field Type</span> of <span class="Field">Image</span>, you should instead use the ImageUserDefinedField function.</p>
+                                                            <p> This function uses different parameters than the UserDefinedField function, as described below.</p>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <col class="TableStyle-Standard-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Standard-Head-Header1">
+                                                                        <th class="TableStyle-Standard-HeadE-Column1-Header1">Parameter</th>
+                                                                        <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Width</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>Specify the width of the image. If a height parameter value is not specified after the width, the image is scaled proportionately.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                            <p>Height</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                            <p>Specify the height of the image. If a width parameter value is not specified before the height, the image is scaled proportionately.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Standard-Body-Body1">
+                                                                        <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                            <p>IsInches</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                            <p>Enter the value <span class="Input">False</span> if the width and height are in pixels and <span class="Input">True</span> if they are in inches. If no parameter value is specified, the function defaults to <span class="Input">False</span>.</p>
+                                                                            <p>In addition to <span class="Input">True</span> and <span class="Input">False</span>, this parameter also accepts the following alternate input options:&#160;<span class="Input">T</span> and <span class="Input">F</span>, <span class="Input">Yes</span> and <span class="Input">No</span>, and <span class="Input">Y</span> and <span class="Input">N</span>. The options <span class="Input">T</span>, <span class="Input">Yes</span>, and <span class="Input">Y</span> all behave the same as <span class="Input">True</span>, while <span class="Input">F</span>, <span class="Input">No</span>, and <span class="Input">N</span> all behave the same as <span class="Input">False</span>.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Prospect().UserDefinedField("Car Model")]</p>
+                                                        <p>Displays the information in the prospect-type UDF "Car Model" for the prospect.</p>
+                                                        <p class="Example">[Tenant().Loan(Tenant.TenantLoanCount()-1).UserDefinedField("Door Number")]</p>
+                                                        <p>Displays the information in the loan-type UDF "Door Number" for  the tenant's most recent loan.</p>
+                                                        <p class="Example">[Unit(122).UserDefinedField("Nearest Cross Street")]</p>
+                                                        <p>Displays the information in the unit-type UDF "Nearest Cross Street" for the unit with the system-generated account ID 122.<br /></p>
+                                                        <p class="Example">[Eviction.UserDefinedField("Priority")]</p>
+                                                        <p class="Formula" style="font-weight: normal;">Displays the information in the in the eviction-type UDF "Priority" for the tenant's most recent eviction.</p>
+                                                    
+</main>
+</body>
+</html>

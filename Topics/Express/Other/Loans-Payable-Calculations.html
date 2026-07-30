@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loans Payable Calculations</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Loans-Payable-Calculations.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Loans-Payable-Calculations.htm</a></p>
+
+                                                        <h1 id="LoansPayableCalculations" data-magellan-target="LoansPayableCalculations"><a name="kanchor703"></a><a name="H1"></a>Loans Payable Calculations</h1>
+                                                        <p>Your loans are amortized over time. This means that a monthly payment is a set value, but the amount of interest and principal that make up that set payment vary each month. Each payment made reduces the outstanding principal balance, which usually makes the next month's interest calculation lower. This is what allows the monthly payment amount to remain the same.</p>
+                                                        <p>The calculations specific to your loan should be included on your loan's physical promissory note or amortization schedule provided by the bank that hosts the loan.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>For new loans that have not yet had a first payment, the Actual/360 and Actual/365 calculation methods use the amount of days between the loan origination date and the first payment date to calculate the amount of interest due.</p>
+                                                        </div>
+                                                        <p>The example calculations used in the headings below use the following example loan information:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Principal = $100,000.00</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Interest Rate = 4.5%</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Monthly Payment (principal + interest only) = $1,000.00</p>
+                                                            </li>
+                                                        </ul>
+                                                        <h2 id="30360" data-magellan-target="30360"><a name="H2_1"></a>30/360</h2>
+                                                        <p>This calculation method assumes every month has 30 days and a year is 360 days long. The table below describes these calculation formulas and their results using the example loan information.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Calculation</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Formula</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Interest Payment = ((Outstanding Principal Balance * Interest Rate) / 360) * 30</p>
+                                                                        <p>This results in an interest payment of $375.00 as shown below.</p>
+                                                                        <p class="Formula">375 = ((100,000 * 0.045) / 360) * 30</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Principal Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Principal Payment = Monthly Payment  – Interest Payment</p>
+                                                                        <p>This results in a principal payment of $625.00 (<span class="Formula">625 = 1,000 – 375</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>New Remaining Principal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">New Remaining Principal = Total Principal – Principal Payment</p>
+                                                                        <p>This results in a remaining principal balance of $99,375 (<span class="Field">99,375 = 100,000 – 625</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="30365" data-magellan-target="30365"><a name="H2_2"></a>30/365</h2>
+                                                        <p>This calculation method assumes every month has 30 days and a year is 365 days long. The table below describes these calculation formulas and their results using the example loan information.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Calculation</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Formula</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Interest Payment = ((Outstanding Principal Balance * Interest Rate) / 365) * 30</p>
+                                                                        <p>This results in an interest payment of $369.86 as shown below.</p>
+                                                                        <p class="Formula">369.86 = ((100,000 * 0.045) / 365) * 30</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Principal Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Principal Payment = Monthly Payment  – Interest Payment</p>
+                                                                        <p>This results in a principal payment of $630.14 (<span class="Formula">630.14 = 1,000 – 369.86</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>New Remaining Principal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">New Remaining Principal = Total Principal – Principal Payment</p>
+                                                                        <p>This results in a remaining principal balance of $99,369.86 (<span class="Field">99,369.86 = 100,000 – 630.14</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Actual360" data-magellan-target="Actual360"><a name="H2_3"></a>Actual/360</h2>
+                                                        <p>This calculation method—also called 365/360—uses the actual number of days in each month (30 days in April, 31 days in May, and so on) and assumes a year is 360 days long. The table below describes these calculation formulas and their results using the example loan information assuming that the calculation is for the month of February on a leap year (29 days).</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Calculation</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Formula</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Interest Payment = ((Outstanding Principal Balance * Interest Rate) / 360) * 29</p>
+                                                                        <p>This results in an interest payment of $362.50 as shown below.</p>
+                                                                        <p class="Formula">362.50 = ((100,000 * 0.045) / 360) * 29</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Principal Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Principal Payment = Monthly Payment  – Interest Payment</p>
+                                                                        <p>This results in a principal payment of $637.50 (<span class="Formula">637.50 = 1,000 – 362.50</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>New Remaining Principal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">New Remaining Principal = Total Principal – Principal Payment</p>
+                                                                        <p>This results in a remaining principal balance of $99,362.50 (<span class="Field">99,362.50 = 100,000 – 637.50</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Actual365" data-magellan-target="Actual365"><a name="H2_4"></a>Actual/365</h2>
+                                                        <p>This calculation method—also called 365/365—uses the actual number of days in each month (30 days in April, 31days in May, and so on) and assumes a year is 365 days long. The table below describes these calculation formulas and their results using the example loan information assuming that the calculation is for the month of February on a leap year (29 days).</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Calculation</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Formula</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Interest Payment = ((Outstanding Principal Balance * Interest Rate) / 365) * 29</p>
+                                                                        <p>This results in an interest payment of $357.53 as shown below.</p>
+                                                                        <p class="Formula">357.53 = ((100,000 * 0.045) / 365) * 29</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Principal Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">Principal Payment = Monthly Payment  – Interest Payment</p>
+                                                                        <p>This results in a principal payment of $642.47 (<span class="Formula">642.47 = 1,000 – 357.53</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>New Remaining Principal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">New Remaining Principal = Total Principal – Principal Payment</p>
+                                                                        <p>This results in a remaining principal balance of $99,357.53 (<span class="Field">99,357.53 = 100,000 – 642.47</span>).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>There is an additional calculation method called Actual/Actual. This method works the same as Actual/365 except that on leap year, the calculation uses 366 for the year:</p>
+                                                            <p class="Formula">Interest Payment = ((Outstanding Principal Balance * Interest Rate) / 366) * 29</p>
+                                                        </div>
+                                                    
+</main>
+</body>
+</html>

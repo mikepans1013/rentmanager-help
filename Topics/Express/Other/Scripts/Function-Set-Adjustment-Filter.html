@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Adjustment Filter Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Set-Adjustment-Filter.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Set-Adjustment-Filter.htm</a></p>
+
+                                                        <h1 id="SetAdjustmentFilterFunctionScript" data-magellan-target="SetAdjustmentFilterFunctionScript"><a name="aanchor1059"></a>
+                                                            <a name="kanchor1767"></a><a name="H1"></a>Set Adjustment Filter Function (Script)</h1>
+                                                        <p>This function filters CAM&#160;expense adjustment items associated with the selected entity based on the assigned parameter values. The CAMExpenseAdjustment functions that are used after this script retrieve values based on the parameter filters set in the SetAdjustmentFilter function and determine what output to display based on that information.</p>
+                                                        <p>If this function is run again with different parameters, any following CAMExpenseAdjustment functions are run again based on the new parameter filters. If this function is run again with no parameters, all filters are removed for examining any adjustment item scripts that follow.</p>
+                                                        <p>This function is useful for establishing filter parameters in one location that are then applied to multiple CAMExpenseAdjustment scripts that follow so that you don't have to establish the same parameters for every single CAMExpenseAdjustment function.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This function is used in conjunction with any functions that follow the CAMExpenseAdjustment class. This function must be run first in your scripting to compile the data set as defined by your parameters, but does not directly display any output. For a list of all CAMExpenseAdjustment functions, refer to <a href="Class-CAM-Expense-Adjustment.html" class="MCXref xref">CAM Expense Adjustment Class (Script)</a>.</p>
+                                                            <p>Any Lease class or CAMExpenseAdjustment class indexes must be established on the functions that follow, as the SetAdjustmentFilter class filters only by the function's parameters.</p>
+                                                        </div>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-CAM-Expense-Adjustment.html">CAM&#160;Expense Adjustment</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().CAMExpenseAdjustment().SetAdjustmentFilter()]</p>
+                                                                        <p>Examines information found on the CAM&#160;expense adjustment's details pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[SetAdjustmentFilter(<span class="Optional">"FromDate"</span>,<span class="Optional">"ToDate"</span>,<span class="Optional">"GLAccount"</span>,<span class="Optional">"AdjustmentType"</span>,<span class="Optional">"Reference"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>FromDate</h3>
+                                                        <p>Specify the date on or after which to examine CAM adjustments. If no date is specified, the function defaults to the beginning of time.</p>
+                                                        <p colspan="2" class="Example">[SetAdjustmentFilter("12/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">All following CAMExpenseAdjustment function scripts display information from the expense adjustment with the earliest date, starting on or after December 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_2"></a>ToDate</h3>
+                                                        <p>Specify the date on or before which to examine CAM adjustments. If no date is specified, the function defaults to the end of time.</p>
+                                                        <p colspan="2" class="Example">[SetAdjustmentFilter("","12/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">All following CAMExpenseAdjustment function scripts display information from the expense adjustment with the earliest date, starting on or before December 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_3"></a>GLAccount</h3>
+                                                        <p>Enter the number of the general ledger (GL) account for which to examine CAM adjustments.</p>
+                                                        <p colspan="2" class="Example">[SetAdjustmentFilter("","","5101")]</p>
+                                                        <p colspan="2">All following CAMExpenseAdjustment function scripts display information from the expense adjustment with the earliest date that expenses GL&#160;account number 5101 (e.g., <span class="Input">5101 - Landscaping</span>).</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_4"></a>AdjustmentType</h3>
+                                                        <p>Specify if you want to examine <span class="Field">Amortization</span> or <span class="Field">One-Time</span> CAM&#160;expense adjustments.</p>
+                                                        <p colspan="2" class="Example">[SetAdjustmentFilter("","","","One-Time")]</p>
+                                                        <p colspan="2">All following CAMExpenseAdjustment function scripts display information from  the one-time expense adjustment with the earliest date.</p>
+                                                        <p colspan="2" class="Example">[SetAdjustmentFilter("","","","Amortization")]</p>
+                                                        <p colspan="2">All following CAMExpenseAdjustment function scripts display information from  the amortization expense adjustment with the earliest date.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_5"></a>Reference</h3>
+                                                        <p>Enter the system-generated reference number of the CAM adjustment you wish to examine, as displayed in the <span class="Column">Ref#</span> column of the <span class="Window">CAM Expense Adjustments</span> page.</p>
+                                                        <p colspan="2" class="Example">[SetAdjustmentFilter("","","","","14")]</p>
+                                                        <p colspan="2">If it is a one-time adjustment, all following CAMExpenseAdjustment function scripts display information from  expense adjustment number <span class="Input">14</span>.</p>
+                                                        <p colspan="2">If it is an amortization adjustment, all following CAMExpenseAdjustment function scripts display information from  the first period of expense adjustment number <span class="Input">14</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used. These examples do not generate output, but collect data for the CAMExpenseAdjustment functions that follow them.</p>
+                                                        <p class="Example">[Tenant().Lease().CAMExpenseAdjustment().SetAdjustmentFilter()]</p>
+                                                        <p>Removes any filters to the adjustment function scripts that follow.</p>
+                                                        <p class="Example">[Tenant().Lease().CAMExpenseAdjustment().SetAdjustmentFilter("01/01/<span class="mc-variable Dates.Year4 variable">2026</span>", "12/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "", "One-Time")]</p>
+                                                        <p>Filters following adjustment scripts to display information from the one-time CAM&#160;expense adjustment with the earliest date in the year <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[Tenant().Lease().CAMExpenseAdjustment().SetAdjustmentFilter("","","","Amortization")]</p>
+                                                        <p>Filters following adjustment scripts to display information from the amortization-type CAM&#160;expense adjustment with the earliest date.</p>
+                                                        <p class="Example">[Tenant().Lease().CAMExpenseAdjustment().SetAdjustmentFilter("","","","","20")]</p>
+                                                        <p>Filters following adjustment scripts to display information from CAM&#160;expense adjustment number 20.</p>
+                                                    
+</main>
+</body>
+</html>

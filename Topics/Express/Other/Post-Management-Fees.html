@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post Management Fees</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Post-Management-Fees.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Post-Management-Fees.htm</a></p>
+
+                                                        <h1 id="PostManagementFees" data-magellan-target="PostManagementFees"><a name="kanchor1760"></a><a name="H1"></a>Post Management Fees</h1>
+                                                        <p>If you are a fee-based management company, management fees are the fees you collect for managing properties. After you have collected receivables—such as rent and late fees—for the properties you manage and paid any bills that are due, you can calculate and post your management fees. This process transfers funds from the trust accounts of your managed properties to the operating bank account of your management company.</p>
+                                                        <p>If you run the <span class="Report">Profit &amp; Loss</span> report for the management company property, management fees are listed as income. When generating the <span class="Report">Profit &amp; Loss</span> report for any owners that paid management fees, the management fees are instead listed as expenses.</p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>Before you begin processing management fees, you must set up a property as your management company and configure how to handle management fees in system preferences. For more information, refer to <a href="System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a> and <a href="System-Preferences/Owners-Management-Fee-Setup.html" class="MCXref xref">Management Fee Setup (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Owners</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Post management fees</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1SelectFeestoPost" data-magellan-target="Step1SelectFeestoPost"><a name="H2_1"></a>Step 1: Select Fees to Post</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Post-Management-Fees.png" alt="The Post Management Fees page displays multiple properties selected for posting fees." class="lightbox" />
+                                                        </p>
+                                                        <p>The first step of posting management fees is to select which owners or properties to post for, as well as when to post the fees. To begin posting management fees, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Management Fees <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Post Management Fees</span>.<br />The <span class="Window">Post Management Fees</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Post date</span> field, enter the date on which to post the management fees. By default, yesterday's date populates.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Management fees are applied to the transaction activity that occurred since the day <span class="Stress">after</span> the last management fee posting. This date displays in the <span class="Column">Last Fee Post</span> column.</p>
+                                                                    <p>If a <span class="Field">Type</span> of <span class="Field">Owner</span> is selected, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/arrow_forward_ios_19x19.png" alt="Expand" class="inline" style="width: 19;height: 19;" /> next to an owner's name to view their properties and the associated <span class="Field">Last Fee Post</span> dates.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">Type</span> field, select whether you would like to post management fees by <span class="Field">Property</span> or by <span class="Field">Owner</span>.<br />The page updates to display owners or properties based on your selection.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Check each property or owner that should have their management fees posted. Alternatively, in the <span class="Field">Group</span> field at the top of the page, select a property or owner group to select only properties or owners that are part of that group.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Calculate Fees</span>.<br />A new page displays with the fee calculations.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2ReviewCalculatedFees" data-magellan-target="Step2ReviewCalculatedFees"><a name="H2_2"></a>Step 2: Review Calculated Fees</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Post-Man-Fees-Review-CR-26.png" alt="The Post Management Fees page displays the the total management fee amounts to review before posting." />
+                                                        </p>
+                                                        <p>After calculating fees, a new page displays with the management fees for each property based on the property's management fee setup. If the fee setup for the property has no value entered for a field, the associated column displays blank.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The calculation of the amounts in each column varies slightly depending on whether the property uses an <span class="Field">Advanced</span> fee setup or <span class="Field">Standard</span> fee setup. Advanced setups calculate the management fees on a <span class="Stress">per posting</span> basis, while standard setups calculate the fees on a <span class="Stress">per month</span> basis. For more information, refer to <a href="../KB/Management-Fee-Setup-Comparison.html" class="MCXref xref">Management Fee Setup Comparison</a>.</p>
+                                                        </div>
+                                                        <p>Review the information on this page to verify it is correct. The total values for each column display at the bottom of the <span class="Section">Management Fees</span> section. Each column is described in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The property for which management fees are being posted. This column displays only if you selected the posting <span class="Field">Type</span> to be <span class="Field">Property</span> on the previous page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Owner</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the owner (as it displays on the owner's details page in the <span class="Field">Name</span> field) of the property for which management fees are being posted.</p>
+                                                                        <p>If you selected the posting <span class="Field">Type</span> to be <span class="Field">Owner</span> on the previous page, all properties owned by that owner display under the owner's name.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Min Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The defined <span class="Stress">minimum</span> dollar amount in fees to collect from the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Max Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The defined <span class="Stress">maximum</span> dollar amount in fees to collect from the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Flat Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A flat-rate fee amount collected every month or every posting, depending on the fee setup configuration.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Unit Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A flat-rate fee amount collected for <span class="Stress">each unit</span> at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Occupied Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A flat-rate fee amount collected for each unit with an active lease at the property at the time of the posting. This fee posts every time you post management fees.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>% of Total Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total dollar amount collected from the property's total gross income, based on the fee setup configuration.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>% of Net Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total dollar amount collected from the property's income after expenses and deductions are taken out, based on the fee setup configuration.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fee %</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The dollar amount collected from rental income and other specified general ledger (GL) accounts or charge types, based on the fee setup configuration.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Pass Thru</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The dollar amount collected for charges marked as pass-through, meaning they are transferred to the management company directly.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total dollar amount of management fees collected for the management company in this posting.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Chart Transfers</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>If applicable, the dollar amount transferred between two GL accounts whenever management fees are posted. This applies only to <span class="Field">Advanced</span> management fee setups.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>This column displays only if <span class="Field">Show transfer grid when setting up management fees</span> is enabled in system preferences. For more information, refer to <a href="System-Preferences/Owners-Management-Fee-Setup.html" class="MCXref xref">Management Fee Setup (System Preferences)</a>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step3PostManagementFees" data-magellan-target="Step3PostManagementFees"><a name="H2_3"></a>Step 3: Post Management Fees</h2>
+                                                        <p>After confirming the fee calculations are accurate, you are ready to finish posting. To post the management fees, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Payment Options</span> section, select how the funds for the fees are transferred in the <span class="Field">Payment Method</span> field. Each option is described below.</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>ACH</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An automated transfer handled by your bank that uses the automated clearing house network for added security.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Check</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A physically-routed payment drawn against deposited funds from the payer to the payee.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Debit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A preauthorized payment that allows a bank to pay a certain amount directly to a bank or company at regular intervals.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>EFT</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An electronic funds transfer for any type of digital payment including, but not limited to, a credit or debit card.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p><span class="mc-variable Integrations.Product-ePay variable">ePay</span>
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>An electronic payment transferred via the <span class="mc-variable Integrations.PP-Zego variable">Zego ePay</span> integration. This option displays only if <span class="mc-variable Integrations.Product-ePay variable">ePay</span> is enabled in <span class="mc-variable Products.RM variable">Rent Manager</span> and the PayDirect feature is enabled for your <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> account.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>This feature is licensed and must be purchased separately. For more information, contact your sales representative at <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Override Comment</span> field, optionally enter a custom comment that replaces the default text (e.g., <span class="Input">Management Fee: Riverview Apartments</span>) that normally displays on the owner account's <span class="Window">Management Company</span> pop-up in the <span class="Column">Comment</span> column. To add a memorized comment, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Memorized" style="width: 19;height: 19;" />.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>To create a single bill or check to the management company for each bank account that itemizes the properties in the fee posting, check <span class="Field">Group checks/bills by bank account</span>.</p>
+                                                                <div class="prefs">
+                                                                    <p class="label1">Related Preferences</p>
+                                                                    <p>When posting management fees, a bill for the property and/or check for payment to the management company is created depending on your selections in system preferences. For more information, refer to <a href="System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Post Fees</span>.<br />The management fees are posted to each owner's account.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_4"></a>Next Steps</h2>
+                                                        <p>After management fees are posted, there are additional tasks you may need to complete. See the table below for more information.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Action</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Collect payment or post charges for fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Depending on your settings in system preferences, you may need to create a bill for the property or add charges or send an invoice to an owner for the management fees owed. Additionally, you may need to add the payments from those owners to <span class="mc-variable Products.RM variable">Rent Manager</span>, and then deposit those payments. If any of these steps are enabled in system preferences, the actions are automatically performed when you post management fees. For more information, refer to <a href="System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Post owner distributions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>After you collect the management fees you are owed, you need to pay out the rest of the owners profits to the owner based on your contract. For more information, refer to <a href="Pay-Owners.html" class="MCXref xref">Pay Owners</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Send out Owner Statements</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Once all the finances have been taken care of, you need to send out statements to your owners to provide them with their financial information. You can send these statements by mail, email, or even post the statements to <span class="mc-variable Products.OWA2 variable">Owner Web Access (OWA)</span> for them to access through the OWA portal. For more information, refer to <a href="Reports/Owner-Statement.html" class="MCXref xref">Owner Statement (Report)</a>, <a href="Reports/Basic-Owner-Statement.html" class="MCXref xref">Basic Owner Statement (Report)</a>, and <a href="../KB/Report-Share.html" class="MCXref xref">Share Reports</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

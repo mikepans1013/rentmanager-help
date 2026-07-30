@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-output-analytics-server="https://lcs202202281700482.api.madcapcentral.com/" data-mc-output-analytics-topic-id="1xBCeJNnhjAPyXZp0OqabpHvWdZB8I86vlAtwWUMkh0C31xc1Ixy+Uv90OuQetJV0vTDrc4d3gZiR668T5rz0tkXbGMhHn5y/aH3wy90PX084addhFF0NY0cNghz7YLETXw85A0Wyx/Rov4njaxu91jfewu27fvwJbY1tsCyYvcqbVieXbCwFfVRWSiEkHdF" data-mc-has-content-body="True" data-mc-conditions="Content.Important,Status.Published" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="Dependencies" content="Training RMU" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Application Field Data Types</title>
+        <label class="mode-switcher" id="theme-toggle">
+            <input type="checkbox" name="checkbox" /><span class="slider round"></span>
+        </label>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/RMX-Branding.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+        <link href="../../../Resources/Stylesheets/lity.css" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/MainStylesDark.css" rel="stylesheet" type="text/css" data-theme="dark-main" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Tablestyles/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/custom.js">
+        </script>
+        <script>/* <![CDATA[ */
+			(function () {
+			var theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.dataset.theme = theme;
+
+			// Prevent white flash on first paint when in dark mode
+			if (theme === 'dark') {
+			var s = document.createElement('style');
+			s.id = 'early-dark-paint';
+			s.textContent =
+			"html,body{background:#0e1319;color:#e8e8e8}" +           // minimal dark bg + readable text
+			"html[data-theme='dark']{color-scheme:dark}";              // hints UA (form controls, scrollbars)
+			document.head.appendChild(s);
+			}
+			})();
+		/* ]]> */</script>
+        <script src="../../../Resources/Scripts/bootstrap.js">
+        </script>
+        <script src="../../../Resources/Scripts/lightbox.js">
+        </script>
+        <script src="../../../Resources/Scripts/lity.js">
+        </script>
+        <script src="../../../Resources/Scripts/addLityAttribute.js">
+        </script>
+        <script src="../../../Resources/Scripts/Dark-Mode.js">
+        </script>
+        <script src="../../../Resources/Scripts/glanceCobrowse.js">
+        </script>
+        <script src="../../../Resources/Scripts/microContentTopics.js">
+        </script>
+        <script src="../../../Resources/Scripts/mobileResponseTableDisplay.js">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic-ToolBar.js">
+        </script>
+    </head><a name="top"></a>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="2" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="topic-background">
+                                        <div class="search">
+                                            <form class="search" action="#">
+                                                <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                    <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search..." />
+                                                    <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                        </div>
+                                                        <div class="search-filter-content" id="sf-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-submit-wrapper" dir="ltr">
+                                                        <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="No-H2s">
+                                            <div>
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_ToolBar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Search Highlights">
+                                                            <div>
+                                                                <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                                    <div class="button-icon"> </div>
+                                                                </div><span class="button-text">Remove Highlights</span>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div role="main" id="mc-main-content">
+                                                    <h1><a name="aanchor1182"></a>
+                                                        <MadCap:concept term="Informational" /><a name="kanchor1971"></a><a name="H1"></a>Application Field Data Types</h1>
+                                                    <p>When adding a field to an application template, there are multiple options available in the <span class="Field">Data Type</span> drop-down list. This selection determines the kind of value an applicant can enter or select in the field. After selecting a data type, the <span class="Section">Options</span> tile may update to allow for further customization of the field. Marking a field as required and setting the alignment and column span of each field is available for all data types.</p>
+                                                    <div class="info">
+                                                        <p class="label1">More Information</p>
+                                                        <p>If a <span class="mc-variable Products.RM variable">Rent Manager</span> field or user-defined field (UDF) is selected in the <span class="Field">Match To</span> drop-down list, the <span class="Field">Data Type</span> field automatically uses the option that corresponds to the <span class="Field">Match To</span> field and cannot be edited.</p>
+                                                    </div>
+                                                    <p>Each data type and its related fields are described below.</p>
+                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Standard-Head-Header1">
+                                                                <th class="TableStyle-Standard-HeadE-Column1-Header1">Data Type</th>
+                                                                <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Date</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to enter a date in <span class="Input">mm/dd/yyyy</span> format or select a date from a drop-down calendar. Additionally, you can use the <span class="Field">Minimum Date</span> and <span class="Field">Maximum Date</span> fields to restrict the earliest and latest date an applicant can enter, respectively.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Dropdown</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to select a single option from a drop-down list of options you establish. To determine what options are available for the recipient to select, in the <span class="Field">Dropdown Options</span> field, type an option, then click <img src="../../../Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="Add Option" class="inline" style="width: 19;height: 19;" /> to add it to the list.</p>
+                                                                    <p>Optionally, to add an option where the recipient can submit their own custom response, check <span class="Field">Allow users to enter another choice</span>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Email</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to enter an email address and requires that the entry includes the period (<span class="Input">.</span>) and <span class="Input">@</span> characters.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>File</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to attach a file, such as a document or PDF.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Image</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to attach an image file, such as a JPG or PNG.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Lead Source Dropdown</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to select one of your lead sources from a drop-down list. In the <span class="Column">Lead Source</span> column, check each lead source to be available for the applicant to select from. For more information, refer to <a href="../CSH/Prospect-Lead-Sources.htm" class="MCXref xref">Prospect Lead Sources (Page)</a>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                    <p>Multi Line Text</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to enter a longer text response. This is recommended for fields that may require a few sentences in response because it can provide a larger text box for the recipient to write in.</p>
+                                                                    <p>The following options allow you to further limit what the recipient can enter in the field:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                    <p>Minimum Length</p>
+                                                                                </td>
+                                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                    <p>The minimum number of characters that must be entered before the application can be submitted.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                    <p>Maximum Length</p>
+                                                                                </td>
+                                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                    <p>The maximum number of character that can be entered into the field.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                                <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                    <p>Number of Lines</p>
+                                                                                </td>
+                                                                                <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                    <p>The height of the text box to display on the application. For example, if you enter <span class="Input">2</span>, the text box displays two lines tall. The recipient can still type more than two lines as long as it is within the character limit.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Numeric</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to enter only numbers into the field. Letters and symbols are not accepted. Additionally, you can use the <span class="Field">Minimum Value</span> and <span class="Field">Maximum Value</span> fields to limit the lowest and highest number an applicant can enter, respectively.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Pet Type Dropdown</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to select one of your pet types from a drop-down list. The options available for the recipient to select are determined by your pet types in <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, refer to <a href="../CSH/Pet-Types.htm" class="MCXref xref">Pet Types (Page)</a>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Phone Number</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to enter only a ten-digit numeric value. The field formats the numbers into a standard phone number format (e.g., <span class="Input">(555) 555-5555</span>).</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Property</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>The field displays the name of the property linked to the application, such as the property the applicant is applying to or the property management company who manages applications. This data type is used for informational purposes only and the recipient cannot edit the selection in the field.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>SSN</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to enter only a nine-digit numeric value for their social security number (SSN). The field will format the numbers into a social security number format such as <span class="Input">123-45-6789</span>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>State</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to select a state in the United States (including Puerto Rico) or a province in Canada from a drop-down list.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Text</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>Allows the recipient to enter a plain text response. Additionally, you can use the <span class="Field">Minimum Length</span> and <span class="Field">Maximum Length</span> fields to set the highest and lowest number of characters an applicant can enter, respectively.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                    <p>Unit/Unit Type</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                    <p>This field displays the name of the unit or unit type linked to this application, such as the option selected by the applicant or assigned to them by a user. This data type is used for informational purposes only and the recipient cannot edit the selection in the field.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                    <p>Yes/No</p>
+                                                                </td>
+                                                                <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                    <p>By default, this displays as the field label with a checkbox next to it on the application. If the recipient checks the box, this indicates <span class="Input">Yes</span> or <span class="Input">True</span>. For example, if the <span class="Field">Label</span> is named <span class="Input">Do you have pets?</span>, the recipient would check the box to indicate that they do have pets.</p>
+                                                                    <p>If the option <span class="Field">Display as Dropdown</span> is checked, this field allows the recipient to select either a <span class="Field">Yes</span> or <span class="Field">No</span> answer from a drop-down list. You can customize how these options display to the recipient in the <span class="Field">Yes Display Text </span>and <span class="Field">No Display Text</span> fields, such as setting them to <span class="Input">True</span> and <span class="Input">False</span> respectively.</p>
+                                                                    <div class="info">
+                                                                        <p class="label1">More Information</p>
+                                                                        <p>Fields with this data type can be selected as a <span class="Field">Dependent Field</span> on the <span class="Section">Information</span> tile for other fields. This means that the field cannot be edited by the recipient unless the <span class="Field">Yes</span> equivalent option is selected for the dependent field.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="links">
+                                                    <div class="MCRelationshipsProxy_0">
+                                                        <p class="pageHeading_page_0">Related Information</p>
+                                                        <p class="pageItem_page_0"><a href="../CSH/Applications.htm">Applications (Page)</a>
+                                                        </p>
+                                                        <p class="pageItem_page_0"><a href="Apply-Now-Applications.htm">Apply Now Applications</a>
+                                                        </p>
+                                                        <p class="taskHeading_task_0">Related Tasks</p>
+                                                        <p class="taskItem_task_0"><a href="../Other/Application-Primary-Add.htm">Add a Primary Application Template</a>
+                                                        </p>
+                                                        <p class="taskItem_task_0"><a href="../Other/Application-Subapplication-Add.htm">Add a Sub-Application Template</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript" src="../../../Resources/Scripts/Back-to-Top-Button.js">
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <div class="footer center">
+        <div class="master-page-footer">
+            <div>
+                <p class="footer-header">Product Support</p>
+                <p>Monday-Friday</p>
+                <p>8:00 a.m.-7:00 p.m. (EST)</p>
+                <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
+                </p>
+                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                </p>
+            </div>
+            <div>
+                <p class="footer-header">Resources</p>
+                <p><a href="https://www.rentmanager.com/training/#Training_Calendar" target="_blank">Training Calendar</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/virtual-classroom-enrollment-form/">Virtual Classroom Enrollment</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/podcast/">Beyond Rent Podcast</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/submit-a-feature-request/">Submit a Feature Request</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+    </div>
+</html>

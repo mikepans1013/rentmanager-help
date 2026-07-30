@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAM Expense Adjustment Indexing</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-CAM-Expense-Adjustments.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-CAM-Expense-Adjustments.htm</a></p>
+
+                                                        <h1 id="CAMExpenseAdjustmentIndexing" data-magellan-target="CAMExpenseAdjustmentIndexing"><a name="aanchor899"></a>
+                                                            <a name="kanchor1478"></a><a name="H1"></a>CAM Expense Adjustment Indexing</h1>
+                                                        <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
+                                                        <p>The CAMExpenseAdjustment class is used as a child class in a script (e.g., <span class="Formula">[Tenant().Lease().CAMExpenseAdjustment()<span class="Required">.Function</span>]</span>), and an index can be specified to uniquely identify the common area maintenance (CAM) expense adjustments that are associated with the preceding class. For example, tenants may have multiple adjustments associated with their lease, and indexing can be used to identify each of those adjustments.</p>
+                                                        <h2 id="CAMExpenseAdjustmentIndexRelationships" data-magellan-target="CAMExpenseAdjustmentIndexRelationships"><a name="H2_1"></a>CAM Expense Adjustment Index Relationships</h2>
+                                                        <p>With CAMExpenseAdjustment scripts, the indexing results vary depending on the index of the preceding Lease class. Additionally, amortization-type expense adjustments share a reference number, but each period in the amortized adjustment has its own index.</p>
+                                                        <h3><a name="H3_1"></a>Single-Lease Adjustment Indexing</h3>
+                                                        <p>CAM expense adjustments are attached to specific leases for a tenant, starting with the individual adjustment with the earliest date.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Scripting-Indexing-CAMExpenseAdjustment-SingleLease-SG-2023.png" alt="The CAM Expense Adjustments page displays a lease's adjustments ordered oldest to newest." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Tenant().Lease().CAMExpenseAdjustment(2).GLAccount()]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">5108 Plumbing</span> because adjustment number 17 is the CAM expense adjustment with the second-earliest date for tenant <span class="Input">Marco's Bistro</span>'s lease at White Oak Shopping Center (<span class="Input">OAK</span>).</p>
+                                                        <h3><a name="H3_2"></a>Multiple-Lease Indexing</h3>
+                                                        <p>When it comes to tenants who have CAM expense adjustments applied to multiple leases, you first apply the index to the preceding Lease class. Then the index you apply to the CAMExpenseAdjustment class examines only the expense adjustments associated with that lease.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Lease indexes are determined by the order in which the tenant's leases are listed on their account's details page on the <span class="Section">Leases</span> tile. For example, the first lease in the list is index <span class="Input">0</span>, the second lease listed is index <span class="Input">1</span>, and so on. For more information, refer to <a href="Script-Index-Lease.html" class="MCXref xref">Lease Indexing</a>.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Scripting-Indexing-CAMExpenseAdjustment-MultiLease-SG-2023.png" alt="The CAM Expense Adjustments page displays the adjustments for two leases ordered oldest to newest." class="lightbox" />
+                                                        </p>
+                                                        <p class="Example">[Tenant().Lease(1).CAMExpenseAdjustment(2).AdjustmentAmount()]</p>
+                                                        <p>Using the information in the above image, this returns <span class="Input">1666.66</span> because the third period of adjustment number <span class="Input">20</span> is the CAM expense adjustment with the third-earliest date for tenant <span class="Input">Marco's Bistro</span>'s third-listed lease, which is associated with property Tri County Mall (<span class="Input">TCM</span>).</p>
+                                                    
+</main>
+</body>
+</html>

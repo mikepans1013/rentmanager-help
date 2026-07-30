@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loans Payable Rate-and-Term Refinance</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Loans-Payable-Refinance-Rate-Variables.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Loans-Payable-Refinance-Rate-Variables.htm</a></p>
+
+                                                        <h1 id="LoansPayableRateandTermRefinance" data-magellan-target="LoansPayableRateandTermRefinance"><a name="kanchor1656"></a><a name="H1"></a>Loans Payable Rate-and-Term Refinance</h1>
+                                                        <p>When you refinance a loan, you can record the updated loan information so that <span class="mc-variable Products.RM variable">Rent Manager</span> accurately calculates your monthly interest and principal payments under the new loan terms. If your loan refinance is a rate-and-term refinance, you can update the interest rate, the term (or duration) of the loan, or both. You can also record additional costs such as escrow, insurance, and closing costs. After you set up a loans payable refinance, <span class="mc-variable Products.RM variable">Rent Manager</span> continues to track information about outstanding loan payments and loan transactions.</p>
+                                                        <p>The records related to your previous loan are marked as <span class="Field">Closed</span> and remain in <span class="mc-variable Products.RM variable">Rent Manager</span> for historical and financial reporting reasons.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This process is for the <span class="Field">Rate-and-Term</span> refinance option. For information on the <span class="Field">Cash-In</span> and <span class="Field">Cash-Out</span> refinance options, refer to <a href="Loans-Payable-Refinance-Cash-In.html" class="MCXref xref">Loans Payable Cash-In Refinance</a> and <a href="Loans-Payable-Refinance-Cash-Out.html" class="MCXref xref">Loans Payable Cash-Out Refinance</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Accounting</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Journal entries</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Add</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Payables</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Loans Payable</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>Before you can refinance a loan, you must select a <span class="Field">Loans payable refinance clearing account</span> in system preferences. For more information, refer to <a href="System-Preferences/General-Ledger-System-Accounts.html" class="MCXref xref">General Ledger System Accounts (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1SelectRefinanceType" data-magellan-target="Step1SelectRefinanceType"><a name="H2_1"></a>Step 1: Select Refinance Type</h2>
+                                                        <p>To set up a rate-and-term refinance in <span class="mc-variable Products.RM variable">Rent Manager</span>, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Payables <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Loans Payable <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Loans Payable</span> and select a loan from the list.<br />The loan's details page displays.<br /></p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top of the details page, click <span class="BigButtons">Refinance</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/RMX-Refinance-Loan-Wizard-Rate-and-Term-LC-090524.png" alt="The Refinance Loan pop-up with the first tab selected." class="lightbox" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Field">Refinance Type</span> drop-down, select <span class="Field">Rate-and-Term</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2ReviewNewLoanBasicDetails" data-magellan-target="Step2ReviewNewLoanBasicDetails"><a name="H2_2"></a>Step 2: Review New Loan Basic Details</h2>
+                                                        <p>In the <span class="Section">Loan Details</span> section, review the following information. These fields display the same information as the previous loan, but they can be updated as needed.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Loans-Payable-Refinance-Rate-and-Term-Loan-Details-LC-090624.png" alt="The Loan Details section displays basic information about the new loan." />
+                                                        </p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>New Loan's Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A new name to help you identify the refinanced loan in <span class="mc-variable Products.RM variable">Rent Manager</span>. The name must be unique from other existing loan names, and it must be different from the previous loan's name.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Loan Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The number assigned to the loan by the lender.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The property on which financial transactions associated with the loan are recorded. The property cannot be changed when refinancing a loan.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset Link</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>An optional link to an asset in <span class="mc-variable Products.RM variable">Rent Manager</span>. For example, if the loan is for a manufactured home that you enter into <span class="mc-variable Products.RM variable">Rent Manager</span> as an asset, link the asset here. This link does not affect financial reporting. For more information, refer to <a href="../CSH/Assets.html" class="MCXref xref">Assets (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Vendor (Lender)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The financial institution that provided the loan and receives payments from you. You must add the lender as a vendor account in <span class="mc-variable Products.RM variable">Rent Manager</span> and assign the vendor to the property associated with the loan. For more information, refer to <a href="../CSH/Vendors.html" class="MCXref xref">Vendors (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step3ReviewGeneralLedgerandBankAccounts" data-magellan-target="Step3ReviewGeneralLedgerandBankAccounts"><a name="H2_3"></a>Step 3: Review General Ledger and Bank Accounts</h2>
+                                                        <p>In the <span class="Section">Chart Accounts</span> section, review the general ledger (GL) and bank accounts where monthly loan payments are recorded. These fields display the same information as the previous loan, but they can be updated as needed.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Add-Loan-Wizard-Chart-Accounts-Section-LC-081424.png" alt="The Chart Accounts section displays the principal, interest, and bank accounts used to record payments on this loan." class="lightbox" />
+                                                        </p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Principal Account</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The GL account used to track payments related to the principal portion of the loan.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Account</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The GL account used to track payments related to the interest portion of the loan.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Bank Account</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The bank account used to make payments on the loan.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step4SetUpNewLoanPaymentSchedule" data-magellan-target="Step4SetUpNewLoanPaymentSchedule"><a name="H2_4"></a>Step 4: Set Up New Loan Payment Schedule</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>When adding loan information, some fields automatically calculate and display a value based on options you select in earlier steps. This workflow includes descriptions of all fields. However, you may not need to enter information in all of the fields described here.</p>
+                                                        </div>
+                                                        <p>In these sections, enter information to determine when payments are due for the refinanced loan and how much is due for each payment.</p>
+                                                        <h3><a name="H3_1"></a>Loan Dates</h3>
+                                                        <p>In this section, enter the following information about important dates that determine the frequency and duration of loan payments:</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Refinance-Rate-and-Term-Loan-Dates-Section-LC-090524.png" alt="The Loan Dates section displays the origination, first payment, and maturity date and the loan terms." class="lightbox" data-mc-conditions="Content.Update" />
+                                                        </p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Origination Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the lender refinanced the loan. For loans that are not interest only, this is typically the date on which interest begins to accrue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Payment Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the first payment on the refinanced loan is due.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Term (Months)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The amount of time you have to pay off the loan, entered in months.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Maturity Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The date on which the final loan payment is due. This date is automatically calculated based on the other fields in this section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_2"></a>Principal</h3>
+                                                        <p>In this section, enter the <span class="Field">New Loan's Total Principal Amount</span>, which is the total dollar amount of the remaining principal. This is the amount, minus interest, that you are expected to pay back by the <span class="Field">Maturity Date</span>. The principal amount can include additional financed costs. The amount in this field must match the sum of the current loan's remaining principal and any additional financed costs.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Loans-Payable-Refinance-Rate-and-Term-Principal-LC-090624.png" alt="The Principal section displays the total principal amount of the new loan." class="lightbox" />
+                                                        </p>
+                                                        <p>If you need to itemize the journal entries for any additional costs that are included in your principal amount, such as insurance, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Cost</span> to add as many line items as needed. Then select a <span class="Field">GL Account</span> and enter an <span class="Field">Amount</span> for each line item.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>When you enter additional line items in this section, the amounts are <span class="Stress">not</span> recorded twice in your journal entries. The journal entry records the liability of the full <span class="Field">New Loan's Total Principal Amount</span>, debits each additional account listed here for the entered amount, and debits the <span class="Field">Asset Account</span> for the remaining balance.</p>
+                                                        </div>
+                                                        <h3><a name="H3_3"></a>Interest</h3>
+                                                        <p>To set up information about interest rates on the loan, enter the following information:</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Add-Loan-Interest-Section-LC-081424.png" alt="The Interest section detmerines how interest is calculated for the loan." class="lightbox" />
+                                                        </p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Interest Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <p style="padding: 0px;">The method used to calculate interest between monthly payments. The following methods are available:</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>30/360</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This method assumes 30 days in a month and 360 days in a year.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>30/365</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This method assumes 30 days in a month and 365 days in a year.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Actual/360 (365/360)</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This method divides the annual rate by 360 to get a daily rate, then multiples that rate by the actual number of days in a given month.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Actual/365 (365/365)</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This method divides the annual rate by 365 to get a daily rate, then multiplies that rate by the actual number of days in a given month.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Actual/Actual</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>This method divides the annual rate by the actual number of days in a given year to get a daily rate, then multiplies that rate by the actual number of days in a given month.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Defines the loan as either <span class="Field">Fixed Rate</span> or <span class="Field">Variable Rate</span>. Fixed rate loans use the same interest rate for each term, while variable rate loans use rates that change on intervals specified by your lender.</p>
+                                                                        <div class="warning">
+                                                                            <p class="label1">Warning</p>
+                                                                            <p>The <span class="Field">Interest Type</span> can be selected only during the initial setup of the refinanced loan and cannot be changed after the loan is set up in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Rate (%)/Initial Interest Rate (%)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>For <span class="BigButtons">Fixed Rate</span> loans, the interest rate that applies for the full loan term. For <span class="BigButtons">Variable Rate</span> loans, this is the initial rate for that is used until adjusted by your lender.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Interest-Only Loan</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Indicates that this is a loan for which you are required to pay only interest (and not principal) for either the full term or part of the term.</p>
+                                                                        <p>When this option is checked, the <span class="Field">Full Term</span> and <span class="Field">Set Term</span> options display.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Full Term</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The loan is interest only for the entire term of the loan.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Set Term</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>The loan is interest only for a set portion of the term. Enter the <span class="Field">Interest-Only Start Date</span> and <span class="Field">Interest-Only End Date</span> to represent the portion of the full term for which the loan is interest only.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_4"></a>Monthly Payment</h3>
+                                                        <p>To specify your monthly loan payment, method, and payment allocations, enter the following information:</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Add-Loan-Monthly-Payment-Section-LC-081424.png" alt="The Monthly Payment section displays information about how much money is due each month for loan payments." class="lightbox" />
+                                                        </p>
+                                                        <p class="Subheading">Add the Total Monthly Payment</p>
+                                                        <p> The amount is typically the same each month and includes payments toward both the principal and interest owed. However, the balance of those two changes as you pay down the loan.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Monthly Payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total dollar amount you pay toward the loan each month.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Payment Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The method used to record payments toward this loan. The following options are available:</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Journal</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>A journal entry that records which GL accounts are debited and which are credited by the payment.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Check</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>A physically routed payment drawn against deposited funds from the payer to the payee.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>EFT</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>An electronic funds transfer for any type of digital payment including, but not limited to, a credit or debit card.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>ACH</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>An automated transfer handled by your real-world bank that uses the automated clearing house network for additional security.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Loan includes a balloon payment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Indicates that the loan includes a balloon payment, which is a large, one-time payment due at the end of the loan. Then, enter the <span class="Field">Balloon Payment Date</span>, which is the date the payment is due.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Subheading">Add Additional Allocations</p>
+                                                        <p>By default, <span class="mc-variable Products.RM variable">Rent Manager</span> calculates an estimated monthly principal and interest payment amount and allocates that amount to the <span class="Field">Principal Account</span> and <span class="Field">Interest Account</span> selected in the <span class="Section">Chart Accounts</span> section. The <span class="Field">Principal + Interest</span> amount is not always the same as your <span class="Field">Total Monthly Payment Amount</span>. Your total allocations must match your <span class="Field">Total Monthly Payment</span>.</p>
+                                                        <p>To add additional payments and itemize the allocations, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Allocation</span> to add as many line items as needed. Then, select a <span class="Field">GL Account</span> and enter an <span class="Field">Amount</span> for each line item. The dollar total of all allocations in the <span class="Column">Amount</span> column must match the <span class="Field">Total Monthly Payment</span> amount.</p>
+                                                        <p class="Subheading">Preview Amortization Schedule</p>
+                                                        <p> After you enter all required information, you can click <span class="BigButtons">Preview Amortization Schedule</span> on the bottom of the wizard to view an example of how the balance changes over time. If you need to make changes to the schedule, on the <span class="Window">Amortization Schedule</span> pop-up, use the <span class="ActionItems">Click Here</span> link to change the <span class="Field">Interest Method</span> and <span class="Field">Monthly Principal + Interest</span> until the schedule matches your loan. When finished, click <span class="BigButtons">Update</span> to apply the changes directly to the add wizard.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Loans-Payable-Add-New-Amortization-LC-2024.png" alt="The Amortization Schedule pop-up showing four months of payments." class="lightbox" />
+                                                        </p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p> Because this schedule is what determines how much money <span class="mc-variable Products.RM variable">Rent Manager</span> records for your monthly payments, it is important to use <span class="BigButtons">Preview Amortization Schedule</span> before saving your loan. Make sure the schedule matches your real world loan paperwork as closely as possible.</p>
+                                                        </div>
+                                                        <h2 id="Step5SetUpClosingTransaction" data-magellan-target="Step5SetUpClosingTransaction"><a name="H2_5"></a>Step 5: Set Up Closing Transaction</h2>
+                                                        <p>If you have not already recorded closing costs associated with the loan in <span class="mc-variable Products.RM variable">Rent Manager</span>, such as down payment, appraisal fees, or title insurance, you can enter them here.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Loans-Payable-Refinance-Rate-and-Term-Cash-to-Close-LC-090624.png" alt="The Cash to Close Transaction section with one additional expense entered." class="lightbox" />
+                                                        </p>
+                                                        <p>To record closing costs, check <span class="Field">Record cash to close transaction</span> and enter the following information:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Payment Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <p style="padding: 0px;">The method used to record closing transaction payments. The following methods are available:</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p style="padding: 0px;">Journal</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>A journal entry that records which GL accounts are debited and which are credited by the payment.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Check</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>A physically routed payment drawn against deposited funds from the payer to the payee.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>EFT</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>An electronic funds transfer for any type of digital payment including, but not limited to, a credit or debit card.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>ACH</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>An automated transfer handled by your real-world bank that uses the automated clearing house network for additional security.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bank Account</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The bank account used to make payments on closing transaction costs.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the closing transaction costs were paid.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Memo</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>An optional note explaining the transaction that displays on the payment method's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For each closing expense you need to record, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Item</span>. Then, select a <span class="Field">GL Account</span> and enter an <span class="Field">Amount</span> for each line item.</p>
+                                                        <h2 id="Step6SetUpLoanAutomation" data-magellan-target="Step6SetUpLoanAutomation"><a name="H2_6"></a>Step 6: Set Up Loan Automation</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Before you can set up loan automation, you must enable <span class="Field">Loans Payable</span> task automation in system preferences. For more information, refer to <a href="System-Preferences/Task-Automation.html" class="MCXref xref">Task Automation (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <p>To have <span class="mc-variable Products.RM variable">Rent Manager</span> automatically post monthly payments for this loan, in the <span class="Section">Loan Automation</span> section, check <span class="Field">Automate loan payments</span>. Then, enter the day of the month on which you want payments to post. You can also enter an email address that receives notifications when automated posting occurs.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Add-Loan-Loan-Automation-Section-LC-081424.png" alt="The Loan Automation section displays options for automatically posting loan payments." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="Step7AddLoanDocuments" data-magellan-target="Step7AddLoanDocuments"><a name="H2_7"></a>Step 7: Add Loan Documents</h2>
+                                                        <p>In the <span class="Section">Loan Documents</span> section, click <span class="ActionItems">Upload Files</span> to attach any loan-related documents to the <span class="mc-variable Products.RM variable">Rent Manager</span> record for the loan.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Add-Loan-Loan-Documents-Section-LC-081424.png" alt="The blank Loan Documents section with the Uplod Files button." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="Step8SavetheLoan" data-magellan-target="Step8SavetheLoan"><a name="H2_8"></a>Step 8: Save the Loan</h2>
+                                                        <p>After all information is entered and correct, you can save the loan. Before saving, you can view an example of the amortization schedule for the loan, click <span class="BigButtons">Preview Amortization Schedule</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Add-Loan-Amortization-Schedule-LC-081524.png" alt="The Amorization Schedule preview pop-up displays an example schedule based on the loan information you enter." class="lightbox" />
+                                                        </p>
+                                                        <p>To finalize everything and start the new schedule in <span class="mc-variable Products.RM variable">Rent Manager</span>, click <span class="BigButtons">Save</span>.</p>
+                                                    
+</main>
+</body>
+</html>

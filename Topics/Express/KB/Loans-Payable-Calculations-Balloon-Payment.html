@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loans Payable Balloon Payment Calculations</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Loans-Payable-Calculations-Balloon-Payment.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Loans-Payable-Calculations-Balloon-Payment.htm</a></p>
+
+                                                        <h1 id="LoansPayableBalloonPaymentCalculations" data-magellan-target="LoansPayableBalloonPaymentCalculations"><a name="aanchor891"></a>
+                                                            <a name="kanchor1463"></a><a name="H1"></a>Loans Payable Balloon Payment Calculations</h1>
+                                                        <p>When you add a loan to <span class="mc-variable Products.RM variable">Rent Manager</span>, you can mark it as a loan that allows for a balloon payment. With these loans, you make lower monthly payments throughout the life the loan, with the expectation that you pay back a large lump sum&#160;at the end of the loan.</p>
+                                                        <p>For example, you may have a 30-year loan with a balloon payment due at 10 years. In this case, your total principal and interest amounts are amortized over the full life of the loan (30 years), resulting in significantly lower monthly payments for those first 10 years than if the same loan was amortized for only 10 years. You can then pay off the remaining balance in one lump sum, or it is also common to refinance these loans before the balloon payment is due.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Loans-Payable-Add-Monthly-Payment-25.png" alt="The Monthly Payment tile displays with payment details." class="lightbox" />
+                                                        </p>
+                                                        <p>Relevant data for calculating the monthly payment for loans with balloon payments is entered in the <span class="Section">Loan Dates</span>, <span class="Section">Principal</span>, and <span class="Section">Interest</span> sections when adding a loan to <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information about creating a new loan, refer to <a href="../Other/Loans-Payable-Add-New.html" class="MCXref xref">Add a New Loans Payable Loan</a>.</p>
+                                                        <h2 id="LoanInformationSetupExample" data-magellan-target="LoanInformationSetupExample"><a name="H2_1"></a>Loan Information Setup Example</h2>
+                                                        <p>To demonstrate how <span class="mc-variable Products.RM variable">Rent Manager</span> handles balloon payment loans, assume the following values:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Payment Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>03/01/2024</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>360 (months)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Principal Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>100,000</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Method</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>30/360</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Interest Rate (Fixed)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>5.0000%</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Balloon Payment Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>03/01/2034</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>Entered in the <span class="Window">Add Loan</span> wizard in <span class="mc-variable Products.RM variable">Rent Manager</span>, this information represents a 30-year, fixed-rate loan of $100,000 with the first payment due on 03/01/2024. The loan uses a 30/360 interest calculation method and has a fixed rate of 5%. The balloon payment is due in 10 years from the loan origination date.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Loans-Payable-Add-Loan-Dates-25.png" alt="The Loan Dates tile displays with loan date details." class="lightbox" />
+                                                        </p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Loans-Payable-Add-Principal-25.png" alt="The Principal tile displays with the pincipal amount." class="lightbox" />
+                                                        </p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Loans-Payable-Add-Interest-25.png" alt="The Interest tile displays with the interest method, type, and rate." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="MonthlyPaymentsCalculationExample" data-magellan-target="MonthlyPaymentsCalculationExample"><a name="H2_2"></a>Monthly Payments Calculation Example</h2>
+                                                        <p>During loan creation, <span class="mc-variable Products.RM variable">Rent Manager</span> automatically calculates your normal <span class="Field">Total Monthly Payment</span>, including both principal and interest payments. While your monthly payment usually stays the same each month, the split between principal and interest changes as you pay down the loan (the interest payment decreases proportionally to principal payment increasing).</p>
+                                                        <p>In the example data, the 30-year loan term with a balloon payment due at 10 years allows for a <span class="Field">Total Monthly Payment</span> of <span class="Field">$536.82</span>. If this same loan were amortized for a 10-year loan, the <span class="Field">Total Monthly Payment</span> would be <span class="Field">$1,060.66</span>.</p>
+                                                        <p>This monthly payment of <span class="Field">$536.82</span> is due each month until the <span class="Field">Balloon Payment Date</span> you set when adding your loan. The <span class="Window">Amortization Schedule</span> for this loan proceeds as though this was a standard 30-year loan.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Balloon-Payment-Amortization-Example-1-LC-082124.png" alt="The Amortization Schedule displays a monthly breakdown of interest and principal payments due." class="lightbox" />
+                                                        </p>
+                                                        <p>When the <span class="Field">Balloon Payment Date</span> arrives, the <span class="Window">Amortization Schedule</span> displays one final lump sum payment for the remaining principal amount.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/RMX-Balloon-Payment-Amortization-Example-2-LC-082124.png" alt="The Amortization Schedule for a balloon payment loan with the balloon payment highlighted." class="lightbox" />
+                                                        </p>
+                                                    
+</main>
+</body>
+</html>

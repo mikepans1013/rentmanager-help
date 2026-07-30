@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metered Utilities (MU)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/MU-Metered-Utilities.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/MU-Metered-Utilities.htm</a></p>
+
+                                                        <h1 id="MeteredUtilitiesMU" data-magellan-target="MeteredUtilitiesMU"><a name="kanchor1803"></a><a name="H1"></a>Metered Utilities (MU)</h1>
+                                                        <p><span class="mc-variable Products.MU2 variable">Metered Utilities (MU)</span> allows you to bill tenants for usage of utilities such as gas, electric, water, and sewer. Every billing period, individual meter readings are entered and utility consumption charges are calculated and billed to the appropriate tenant. Meter readings can be entered manually, through mobile devices or scanners, or file imports.</p>
+                                                        <p>The <span class="mc-variable Products.MU variable">Metered Utilities</span> tool is most useful if you do any of the following:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Use meters and measure usage or consumption of the utility</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Charge tenants based on utility consumption</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Are required by city, state, or federal law to charge tenants based on consumption</p>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>You may <span class="Stress">not</span> want to use <span class="mc-variable Products.MU variable">Metered Utilities</span> if you charge tenants a set amount for utilities each billing period that does not change. In this case, use recurring charges instead.</p>
+                                                            <p>Additionally, you may <span class="Stress">not</span> want to use <span class="mc-variable Products.MU variable">Metered Utilities</span> if you have one bill for metered utilities at the whole property and need to divide the total amount among the tenants at the property, you should instead use non-recurring or recurring commercial recoverable expenses (CRE) charges. This allows you to divide that total amount by division options, such as evenly or by a percentage of the total square footage. For more information, refer to <a href="../Action/Recurring-Charges-Add-CRE-Charge.html" class="MCXref xref">Add a CRE Recurring Charge</a>.</p>
+                                                        </div>
+                                                        <h2 id="UtilitiesandMeterTypes" data-magellan-target="UtilitiesandMeterTypes"><a name="H2_1"></a>Utilities and Meter Types</h2>
+                                                        <p>Before you can use the <span class="mc-variable Products.MU variable">Metered Utilities</span> tool, you need to add each utility that you intend to track, set up associated meter types to determine how usage is calculated, and enter information for the specific meters at each unit. For more information, refer to <a href="MU-Metered-Utilities-Set-Up.html" class="MCXref xref">Set Up Metered Utilities</a>.</p>
+                                                        <p>Utilities represent what you are measuring, such as gas, electricity, and water. Meter types are the physical meters that read consumption for an associated utility. There are two meter types in <span class="mc-variable Products.RM variable">Rent Manager</span>: <span class="Field">Standard</span> and <span class="Field">MU-Plus</span>. Standard meter types are used to calculate utility charges with fixed consumption ranges and utility rates. They provide a basic method of calculating utility charges with fixed consumption ranges and utility rates. These meters calculate one charge based on the total consumption, which can be a tiered rate.</p>
+                                                        <p><span class="mc-variable Products.MU+2 variable">Metered Utilities Plus (MU-Plus)</span> allows you to use blended rates, apply medical or income discounts, add state and local taxes, or incorporate almost any kind of complex billing calculation. These calculations are done using <span class="mc-variable Products.RM variable">Rent Manager</span> scripting and the variables have more attributes to allow for more precise customization. Additionally, tenant statements provide more itemized detail about utilities when using MU-Plus meter types.</p>
+                                                        <p>You may need to use a MU-Plus meter type for the following circumstances:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>If you need to perform complex calculations like rounding, rate blends, if statements, min/max, or per day fees.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>If you have low-income or medical tenants who qualify for billing discounts.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>If you have different rate zones, meaning tenants in different locations pay different amounts.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>If you are required by law or would prefer to provide details usage statements to tenants that itemize the charge into smaller components.</p>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>MU-Plus is often used to meet legal requirements and can involve complex calculations and <span class="mc-variable Products.RM variable">Rent Manager</span> scripting knowledge. If you would like to get a quote for the Professional Services team at <span class="mc-variable LCS.LCS variable">LCS</span> to create your MU-Plus meter types, contact your sales representative at <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                        </div>
+                                                        <h2 id="MeterReadingWorkflow" data-magellan-target="MeterReadingWorkflow"><a name="H2_2"></a>Meter Reading Workflow</h2>
+                                                        <p>Every month or billing period, individual meter readings are entered, and utility consumption charges are calculated and billed to the appropriate tenant. Technicians can use <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> to record meter readings on the app's <span class="Window">Meter Readings</span> screen, or fill out a printed <span class="Report">Utility Field Entry</span> report and enter the readings later. For more information, refer to <a href="MU-Meter-Readings-Add.html" class="MCXref xref">Add Meter Readings</a> and <a href="../Other/Reports/Utility-Field-Entry.html" class="MCXref xref">Utility Field Entry (Report)</a>.</p>
+                                                        <p>Once meter readings for occupied units are entered, you can apply consumption-based utility fees to tenant accounts. For more information, refer to <a href="../Other/MU-Utilities-Post.html" class="MCXref xref">Post Utilities</a>.</p>
+                                                        <h2 id="MeterReadingTools" data-magellan-target="MeterReadingTools"><a name="H2_3"></a>Meter Reading Tools</h2>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> has a variety of tools to use while managing the consumption of your meters to account for all readings regardless of the situation. Before you can utilize these tools, you need to add meter information for each unit's meter on the <span class="Window">Meter Readings Setup</span> page. For more information, refer to <a href="../CSH/MU-Meter-Reading-Setup.html" class="MCXref xref">Meter Readings Setup (Page)</a></p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Tool</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>High/Low Settings</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Window">High/Low Settings</span> pop-up allows you to determine the <span class="Tab">Consumption Groups</span>, <span class="Tab">Exception Reasons</span>, and <span class="Tab">Approval Workflows</span> for your meter readings. Each tab is described below. For more information, refer to <a href="../Other/MU-High-Low-Settings.html" class="MCXref xref">Manage Metered Utilities High/Low Settings</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Consumption Groups</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This tab helps you manage usage by creating ranges that instantly flag unusual meter readings, whether too high or low. Furthermore, you can customize your technicians' process in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span> by requiring an image of the meter or detailed notes depending on the reading, and quickly review the exceptions with a clean and detailed breakdown in the <span class="Report">High/Low Consumption</span> report.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Exception Reasons</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This tab allows you to choose how to handle meter readings with exceptions when posting charges, as well as configure what reasons (e.g., <span class="Input">water leak</span>, <span class="Input">recent move in/out</span>, <span class="Input">meter malfunction</span>) can be used on meter exceptions.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Approval Workflows</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>This tab allows you to create meter reading workflows for your properties, choose the users who are responsible for reviewing and approving meter exceptions, and determine when unposted exceptions are locked for reviewers and cannot be edited.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Meter Exceptions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Meter exceptions allow you to view and manage all unposted meter readings flagged as exceptions for the selected <span class="Field">Property</span>, <span class="Field">Utility</span>, and single <span class="Field">Billing Period</span>. For more information, refer to <a href="../CSH/MU-Meter-Exceptions.html" class="MCXref xref">Meter Exceptions (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Meter Estimates</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Meter estimates allow you to establish the estimate methods used to automatically calculate estimated readings and the number of repeated meter estimates allowed before users are warned. For more information, refer to <a href="../CSH/MU-Meter-Estimates.html" class="MCXref xref">Meter Estimates (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Meter Swaps</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The meter swap tool allows you to accurately track every meter change and bill without gaps. Whether it's swapping out a faulty meter, installing a smart upgrade, or preparing for a new tenant, this tool eliminates the need to manually track two sets of readings—one from the meter being removed, and one from the new meter. In addition, you can link meter swaps directly to service issues, ensuring nothing slips through the cracks. For more information, refer to <a href="../Other/MU-Swap-Meters.html" class="MCXref xref">Swap Meters</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Off-Cycle Meter Readings</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The off-cycle meter readings tool allows you to instantly trigger a utility meter read when residents move in or out, or a meter is swapped. As soon as the request is submitted, your maintenance tech is automatically notified to capture the meter reading in <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>. In addition, the off-cycle readings tool provides the ability to select the type of reading, improving data integrity, reducing operational overhead, and enhancing tenant confidence in their usage data. For more information, refer to <a href="../Other/Prospect-Move-In-Wizard.html" class="MCXref xref">Move In Wizard</a> and <a href="../Other/Tenants-Move-Out-Wizard.html" class="MCXref xref">Move Out Wizard</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ConsumptionMonitoring" data-magellan-target="ConsumptionMonitoring"><a name="H2_4"></a>Consumption Monitoring</h2>
+                                                        <p>With <span class="mc-variable Products.MU variable">Metered Utilities</span>, you can monitor consumption using a series of reports or for individual tenants or units. You can also print their utility consumption history.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Consumption</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Reports</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> includes multiple reports that can be generated for metered utility lists, usage, and financial information. Some key reports are described below.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>This is not a complete list of reports associated with <span class="mc-variable Products.MU variable">Metered Utilities</span>. Additional reports can be generated by going to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/RM/reports_19x19.png" alt="Reports" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span></span> and selecting a report from the list.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Utility Consumption</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This report displays a list of utility consumption through meter readings and the charges for each. You can use this report to quickly compare consumption rates between multiple units or for the same unit across a period of time. This can help you look for irregularities in utility consumption rates or charges.</p>
+                                                                                        <p>For more information, refer to <a href="../Other/Reports/Utility-Consumption.html" class="MCXref xref">Utility Consumption (Report)</a>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>High/Low Consumption</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This report displays metered utility readings based on the consumption amount and the consumption range that the amount falls under. This report can be used to review meter readings with abnormally low or high consumption amounts to verify that there are no issues with the meter, or to check with the tenant to understand the cause of their atypical consumption rate.</p>
+                                                                                        <p>For more information, refer to <a href="../Other/Reports/High-Low-Consumption.html" class="MCXref xref">High/Low Consumption (Report)</a>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Utility Cost Recovery</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>This report displays the amount your company is spending on utilities compared to the amount that tenants are being charged.</p>
+                                                                                        <p>For more information, refer to <a href="../Other/Reports/Utility-Cost-Recovery.html" class="MCXref xref">Utility Cost Recovery (Report)</a>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenant</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>To view the utility consumption of a specific tenant, you can access the tenant's utility consumption history on the their account's <span class="Window">Tenant Consumption History</span> pop-up. For more information, refer to <a href="../CSH/MU-Tenant-Consumption-History.html" class="MCXref xref">Tenant Consumption History (Pop-Up)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>To view the utility consumption of a specific unit (regardless of the tenant(s) that leased it), you can access the unit's utility consumption history on the unit's details page or the <span class="Window">Meter Readings</span> page. For more information, refer to <a href="../CSH/MU-Unit-Consumption-History.html" class="MCXref xref">View Consumption History (Pop-Up)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

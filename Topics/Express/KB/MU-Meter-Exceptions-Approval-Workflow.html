@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meter Exceptions Approval Workflow</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/MU-Meter-Exceptions-Approval-Workflow.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/MU-Meter-Exceptions-Approval-Workflow.htm</a></p>
+
+                                                        <h1 id="MeterExceptionsApprovalWorkflow" data-magellan-target="MeterExceptionsApprovalWorkflow"><a name="H1"></a>Meter Exceptions Approval Workflow</h1>
+                                                        <p>To ensure that abnormal meter readings—known as exceptions—are thoroughly investigated before being posted, <span class="mc-variable Products.RM variable">Rent Manager</span> allows you to establish approval workflows. These workflows benefit your <span class="mc-variable Products.MU variable">Metered Utilities</span> process by producing cleaner data, stronger oversight, and greater confidence that utility billing is accurate with every posting. First, a reviewer examines the abnormal readings and marks each one with an <span class="Field">Exception Reason</span> to explain the unexpected consumption. An approver then analyzes the reviewer's work and either approves it for posting or sends it back to the reviewer for a follow-up. Once each exception is reviewed and approved, your meter readings can be posted.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To utilize an approval workflow, you must have already established, on the <span class="Window">High/Low Settings</span> pop-up, at least one consumption group, exception reason, and approval workflow. For more information, refer to <a href="../Other/MU-High-Low-Settings.html" class="MCXref xref">Manage Metered Utilities High/Low Settings</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Utilities</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Metered utilities</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step1ReviewExceptions" data-magellan-target="Step1ReviewExceptions"><a name="H2_1"></a>Step 1: Review Exceptions</h2>
+                                                        <p>When meter readings are flagged as exceptions, reviewers in an approval workflow are responsible for providing reasons that account for or explain the exception. For example, a water meter might record unexpectedly high water consumption during a billing period. After investigating the issue, a reviewer selects the <span class="Field">Exception Reason</span> that best explains the excess consumption (for example, the high water consumption could be caused by a leaky sink, so the reviewer could choose a reason like <span class="Input">Water Leak</span>). Once all exceptions have reasons selected, the batch is submitted for approval in the next stage of the approval workflow.</p>
+                                                        <p>To review reading exceptions, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Meter Readings</span>.<br />The <span class="Window">Meter Readings</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the <span class="Field">Property</span>, <span class="Field">Utility</span>, and single <span class="Field">Billing Period</span> the exception is associated with.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Review Meter Exceptions</span>.<br />The <span class="Window">Meter Exceptions</span> page displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select an exception from the list.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/MU-Exception-Details.png" alt="The Meter Exception Details pop-up displays a reading for a recent move in/move out exception." class="Menu" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>On the <span class="Section">Exception Review</span> tile, in the <span class="Field">Exception Reason</span> field, select a reason from the list that accounts for the exception.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>If applicable, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Add Note</span> to add a note that provides additional details about the exception.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Click <span class="BigButtons">Save</span> to save your changes to this exception without sending it for approval, or click <span class="BigButtons">Save &amp; Submit</span> to send it for approval.<br /></p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Repeat steps 4–7 until all meter exceptions in the batch have an <span class="Field">Exception Reason</span>.<br />The updates to the <span class="Window">Meter Exception Details</span> are applied and ready to be approved or rejected.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2ApproveExceptions" data-magellan-target="Step2ApproveExceptions"><a name="H2_2"></a>Step 2: Approve Exceptions</h2>
+                                                        <p>After meter exceptions are given an <span class="Field">Exception Reason</span> by reviewers, approvers must determine if the reason given adequately accounts for each exception. If the reason given is sufficient, the exception is marked as approved. Alternatively, approvers can reject the reason given, sending the rejected exceptions back to the reviewers for further investigation. Once all meter exceptions in a batch are approved, the batch is considered ready to post.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Depending on the settings established in the <span class="Window">High/Low Settings</span> pop-up's <span class="Tab">Approval Workflows</span> tab, .approval workflows have either a one-step or two-step approver process. For more information, refer to <a href="../Other/MU-High-Low-Settings.html" class="MCXref xref">Manage Metered Utilities High/Low Settings</a>.</p>
+                                                        </div>
+                                                        <h3><a name="H3_1"></a>One-Step Approval Process</h3>
+                                                        <p>In a one-step approval process, only a single approver is needed to approve or reject a reading's <span class="Field">Exception Reason</span>. To approve exceptions in a one-step approval process, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;"></img> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Meter Readings</span>.<br />The <span class="Window">Meter Readings</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the <span class="Field">Property</span>, <span class="Field">Utility</span>, and single <span class="Field">Billing Period</span> the exception is associated with.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Review Meter Exceptions</span>.<br />The <span class="Window">Meter Exceptions</span> page displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the banner at the top of the page, click <span class="ActionItems">View Exception Details</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Meter-Exception-Details-Approval.png" alt="The Meter Exception Details pop-up displays an exception being approved." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>On the <span class="Section">Approval Workflow</span> tile, in the <span class="Field">Would you like to approve this exception?</span> field, select either <span class="Field">Approve</span> or <span class="Field">Reject</span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>If you selected <span class="Field">Reject</span>, in the optional <span class="Field">Approver Note</span> field, enter a comment to provide reviewers with the reasons for the rejection and/or with recommend steps to address any issues.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>If applicable, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Add Note</span> to add a note that provides additional details about the approval or rejection of the exception.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Click <span class="BigButtons">Save</span> to save your changes to this exception without approving or rejecting it, or click <span class="BigButtons">Save &amp; Submit</span> to approve or reject it.<br /></p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Repeat steps 4–8 until all meter exceptions in the batch have are approved or rejected.<br />The updates to the <span class="Window">Meter Exception Details</span> are approved, or are sent back for follow-up.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Two-Step Approval Process</h3>
+                                                        <p>In a two-step approval process, an <span class="Field">Exception Reason</span> must be approved by both a conditional approver and a final approver before readings can be posted. The process for both types of approvers is essentially the same as the one-step approver process outlined above, but with the following differences:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Approver</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Workflow</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Conditional Approver</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Initially, the conditional approver either approves or rejects the <span class="Field">Exception Reason</span> provided by the reviewer in<a href="#H2_1" class="MCXref xref">Step 1: Review Exceptions</a>. If they conditionally approve and submit all exceptions, the batch is sent forward to the final approver. If the conditional approver rejects at least one <span class="Field">Exception Reason</span>, the batch is sent back to the reviewer for a follow-up (see <a href="#H2_3" class="MCXref xref">Step 3: Follow Up</a>).</p>
+                                                                        <p>If the final approver rejects at least one conditional approval, the batch is sent back to the conditional approver for investigation. The conditional approver then completes a follow-up (see <a href="#H2_3" class="MCXref xref">Step 3: Follow Up</a>)and sends the batch back to the reviewer an additional follow up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Final Approver</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The final approver either approves or rejects the conditional approval given by the conditional approver. If they give final approval and submit all exceptions, the batch is ready to post. If they reject at least one conditional approval, the batch is sent back to the conditional approver.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step3FollowUp" data-magellan-target="Step3FollowUp"><a name="H2_3"></a>Step 3: Follow Up</h2>
+                                                        <p>If an approver rejects at least one meter exception reason, reviewers are required to follow up on the exception. For example, if exceptions have been reported at the same unit for multiple months, an approver might want a thorough investigation to determine if there are more serious issues with the meter or unit. After follow-ups are submitted, approvers can approve or reject the follow-up.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If no meter exception reasons are rejected by an approver, proceed to <a href="#H2_4" class="MCXref xref">Step 4: Post Meter Readings</a>.</p>
+                                                        </div>
+                                                        <p>To follow up on a rejected exception, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Meter Readings</span>.<br />The <span class="Window">Meter Readings</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the <span class="Field">Property</span>, <span class="Field">Utility</span>, and <span class="Field">Billing Period</span> the exception is associated with.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Review Meter Exceptions</span>.<br />The <span class="Window">Meter Exceptions</span> page displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select a rejected exception from the list.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/MU-Meter-Exception-Details-Rejected.png" alt="The Meter Exception Details pop-up displays a rejected exception reason." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Approval Workflow</span> tile, update the rejected exception using one or both of the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Add Note or Attachment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>In the <span class="Section">History/Notes</span> section, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Add Note</span> to open the <span class="Window">Note Details</span> pop-up. In the <span class="Field">Note</span> field, enter a description of the follow-up performed. Alternatively, in the <span class="Field">File Attachments</span> field, upload a file or image documenting the follow-up by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/cloud_upload_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Upload</span> or paste an image from your clipboard by clicking <img src="../../../assets/Resources/Images/ICONS/Express-App/RM/Paste-from-clipboard_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> <span class="ActionItems">Paste</span>. After adding a note or attachment, click <span class="BigButtons">Save</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Change Exception Reason</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>In the <span class="Field">Exception Reason</span> drop-down, select a new reason from the list. You might choose this option if, upon further review, the original reason selected was not accurate.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>In the two-step approval process, the option to change an <span class="Field">Exception Reason</span> is not available to conditional approvers who are doing a follow-up. Instead, conditional approvers <span class="Stress">must</span> add a note or attachment in the <span class="Window">Meter Exception Details</span> pop-up. After doing so, the batch can be saved, submitted, and sent back to the reviewer.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">Save</span> to save your changes to this exception without submitting it for approval, or click <span class="BigButtons">Save &amp; Submit</span> to send the exception for approval.<br />The updates to the <span class="Window">Meter Exception Details</span> are applied.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step4PostMeterReadings" data-magellan-target="Step4PostMeterReadings"><a name="H2_4"></a>Step 4: Post Meter Readings</h2>
+                                                        <p>After all meter exceptions in a batch are reviewed and their exception reasons approved, you can post the readings.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Utilities</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Post utility information</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To post meter readings, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Services <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.MU variable">Metered Utilities</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Meter Readings</span>.<br />The <span class="Window">Meter Readings</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select the <span class="Field">Property</span>, <span class="Field">Utility</span>, and <span class="Field">Billing Period</span> to post readings for.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Post Readings</span>.<br />The <span class="Window">Post Utilities</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Enter or select the posting options that display. For more information, refer to <a href="../Other/MU-Utilities-Post.html" class="MCXref xref">Post Utilities</a>.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Post Utilities</span>.<br />The readings and associated charges are posted to tenant accounts.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

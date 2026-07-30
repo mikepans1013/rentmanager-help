@@ -1,0 +1,276 @@
+# Cash Flow MTD Comparison (Report)
+
+Source: https://rmxhelp.rentmanager.com/Topics/Express/Other/Reports/Cash-Flow-MTD-Comparison.htm
+
+The Cash Flow MTD Comparison report displays how transactions in general ledger (GL) accounts impact the cash balance on the income statement and balance sheet over two time periods: a selected date range and the last month of that selected date range. By setting the date range to include multiple months, for example 1/1/ 2026 to 12/31/ 2026 , this report provides users with a clear picture of how the company has received and spent cash over a longer period of time in comparison to a single month. The report displays the selected date range in the right column, while the last month in the date range displays in the left column.
+
+ More Information
+
+ The GL start date is considered the financial start date, so any transactions or information dated before the GL start date are not included in the report results.
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Letter/Email Templates/Reports/Packets
+ Run reports
+ Enabled
+
+ Run accounting reports
+ Enabled
+
+ Additionally, on the Reports tab, you must have access to Cash Flow MTD Comparison .
+
+ For more information, refer to Control User Access .
+
+ To view the Cash Flow MTD Comparison report, do the following:
+
+ -
+ Go to arrow_forward Financial Statements arrow_forward Cash Flow arrow_forward Cash Flow MTD Comparison .
+The Reports: Cash Flow MTD Comparison page displays.
+
+ -
+ Adjust the report options as desired. Each option is described below.
+
+ -
+ Generate the report in your desired file format(s).
+
+ Related Preferences
+
+ Reports may look different depending on whether or not the Use modernized report style system preference is enabled. For more information, refer to General Report Options (System Preferences) .
+
+ Report Options
+
+ The report options described below determine what data displays in the report.
+
+ Properties/Owners to Include
+
+ Check each property or owner to be included in the report. Alternatively, select a property or owner Group . When the Owners tab is selected, results generate only for owners with active ownerships. If all selected owners currently do not have active ownerships, and Restrict by owner contract dates is selected, an error message displays stating that no reports were generated. For more information on establishing active ownerships, refer to Property Owners (Pop-Up) .
+
+ More Information
+
+ Only information related to the properties to which you have access displays. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to Limit Access to a Property .
+
+ Optionally, check Show Inactive Properties to include properties that are no longer active.
+
+ Restrict by Owner Contract Dates
+
+ This option becomes available when the Owner tab is selected.
+
+ Check to display only data that is within the active contract dates for each of the selected owners, regardless of the date range . This option is useful if, for example, your contract with one owner is ending and another contract with a different owner is beginning.
+
+ Option
+ Description
+
+ Checked
+
+ The report filters to display only data within the selected owner or owners' active contract.
+
+ For example, if the report is generated for 01/01/ 2026 – 12/31/ 2026 , and Owner A has an active contract from January to June of 2026 , the report displays only data at the properties owned by Owner A from January 2026 to June 2026 .
+
+ Unchecked
+
+ The report displays current data for any months included in the report date range regardless of owner contracts.
+
+ Date Range
+
+ Enter or select the date range to determine the data that displays in the report.
+
+ To the right of the Date Range option, you can click Date to manually select a date range, or Period select a date range based on accounting periods.
+
+ Set a Date Range
+
+ In the Date Range section, set the From and To dates for which the report should examine data.
+
+ These fields automatically populate with today’s date. Enter a different date or select a date from the calendar. Alternatively, adjust the dates using the available preset buttons or click to open more options for setting a date range.
+
+ Select an Accounting Period
+
+ Related Preferences
+
+ To generate the report using accounting periods, the General Ledger Settings (System Preferences) option to Enable accounting periods must be enabled.
+
+ Financial reports default to the manual Date view unless the General Ledger Settings (System Preferences) option to Default to accounting periods for financial reports is checked. Enabling this option sets the financial reports to default to the Period view for Date Range .
+
+ Configure the following options to determine the period Date Range uses:
+
+ Option
+ Description
+
+ Series
+
+ Select the desired series, as defined in accounting periods.
+
+ Single Period
+
+ Select Single Period to generate the report for one accounting period.
+
+ When this option is selected, you can also select the Year of the period you wish to use and the Period, which allows you to generate the report from the period's Start Date through the period's End Date .
+
+ Multiple Periods
+
+ Select Multiple Periods to generate the report across multiple accounting periods.
+
+ When this option is selected, you can also select a Start Year and End Year or a Start Period and End Period to determine the To and From date for which the report is generated.
+
+ Cash or Accrual
+
+ This option determines whether the financial activity is calculated on a cash or accrual basis.
+
+ Option
+ Description
+
+ Accrual
+
+ Includes all transactions for which income was earned and expenses were incurred, regardless of whether the payment was received or disbursed.
+
+ Cash
+
+ Includes only transactions for which payments are received or made.
+
+ Chart of Accounts Mapping
+
+ To customize how general ledger accounts display in the report, select the name of the desired Chart Mapping . If no chart mappings are created, < None > displays. For more information, refer to Chart Accounts Mapping (Page) .
+
+ Detail or Summary
+
+ This option determines how much information is displayed in the report.
+
+ Option
+ Description
+
+ Detail
+
+ The report displays detailed financial information about the each general ledger (GL) account of a specific type. For example, the Operating Activities section of the report includes subsections for Income , Expense , and Non Operating Expense GL accounts in addition to an Adjustments to Net Income subsection.
+
+ Summary
+
+ The report displays condensed financial information about each GL account type ( Operating Activities , Investing Activities , and Financing Activities ).
+
+ Separation Method
+
+ This option becomes available when the Properties tab is selected.
+
+ Select one of the following options to determine how the report results are batched:
+
+ Option
+ Description
+
+ Do not separate
+
+ All selected properties are combined into a single report.
+
+ Separate by Properties
+
+ Generates a separate report for each selected property.
+
+ Separate by Units
+
+ Generates a separate report for each unit associated with the selected properties.
+
+ Collapse All Parent Accounts
+
+ Check to display only the total value of the parent account in the report. Otherwise, the value of the parent account and all subaccounts and their values.
+
+ Show Whole Dollar Only
+
+ If checked, general ledger account totals are rounded to the nearest whole dollar (0–49 cents is rounded down, and 50–99 cents is rounded up). Otherwise, the actual amount displays.
+
+ Report Results
+
+ The report results are described below including, if applicable, section, column, and subreport descriptions.
+
+ Report Header
+
+ The report header displays the report name and key information selected in the report options, such as date information and which properties were examined in the report.
+
+ Operating Activities
+
+ The Operating Activities section tracks cash received and lost from daily business activities like collecting rent, paying maintenance costs, and supply purchases. The Month to Date column displays the values for the last month in the date range, while the second column displays the value for the entire Date Range .
+
+ More Information
+
+ If you run the report in Detail mode, the report displays the change over the Date Range of each individual Income and Expense account separately. Additionally, Adjustments to reconcile Net Income to net cash provided by operations displays under the Adjustments to Net Income section.
+
+ If you run the report in Summary mode, the total of your Income transactions minus your Expense transactions over the Date Range shows as Net Income . Additionally, Adjustments to reconcile Net Income to net cash provided by operations displays under the Net Income row.
+
+ Adjustments to reconcile Net Income to net cash provided by operations lists all of the operational activities that impacted Net Income without being linked income- or expense-type accounts or affecting your cash flow. For example, depreciation is an expense that is subtracted from your Net Income but not your bank account that is part of your cash flow. Collecting security deposits increases the bank but also has no effect on Net Income .
+
+ More Information
+
+ If a security deposit does not display in the report results, you should check for the following:
+
+ -
+ Confirm the charge type is selected as a security deposit charge type in the security deposit options system preferences. For more information, refer to Security Deposit General Options (System Preferences) .
+
+ -
+ On the tenant's account, ensure a payment has been allocated to the charge.
+
+ -
+ On the security deposit transaction, ensure that the unit selected in the Unit field is linked to same unit where the security deposit is being held.
+
+ Investing Activities
+
+ The Investing Activities section tracks cash received and lost from investments in marketable securities and in long-term assets like land, buildings, etc. Transactions linked to Fixed Asset or Other Asset accounts are considered investing activities.
+
+ As a rule, when you purchase assets in the specified reporting period, negative totals display in this section of the report because an asset purchase represents a cash outflow. If you sell assets, positive totals display in this section because you are receiving a cash inflow. For example, after receiving an offer for $3,000 for a portion of unused land, you decide to sell it. Since you made money by selling an asset, this entry displays as a positive number. A few days later, you decide to purchase new mowers to help with lawn maintenance using the money earned from selling the land. Since you are spending money to buy an asset, this entry displays as a negative number.
+
+ Financing Activities
+
+ The Financing Activities section tracks cash received and lost from activities used to finance the business like taking out or paying off long-term loans, receiving owner contributions, distributing funds back to owners, etc. Transactions linked to Long Term Liability or Equity accounts are considered financing activities.
+
+ Taking out a loan, payments made against long-term loans, acquisition of equity funds, and a release of equity funds may display in this section of the report if applicable.
+
+ Summary Subreport
+
+ Beneath the Financing Activities section, the Summary subreport displays three additional rows that summarize key financial information in the report. Each row is described below.
+
+ Row
+ Description
+
+ Net cash increase for period
+
+ The total change in cash balance between all of your GL accounts over the entire Date Range . This value is the sum of the totals from the Operating Activities , Investing Activities , and Financing Activities sections.
+
+ Cash at beginning of period
+
+ The sum of all bank accounts of the selected properties as of one day prior to the selected Date Range . This sum includes both deposited and undeposited funds.
+
+ Cash at end of period
+
+ The total cash at the end of the entire Date Range . This includes both deposited and undeposited funds. It is calculated using the following formula:
+
+ Cash at end of period = Cash at beginning of period +/- Net cash increase for the period
+
+ Column Descriptions
+
+ The columns that display in the report are described below.
+
+ Column
+ Description
+
+ Account
+
+ The GL account name and number associated with your cash flow for each listed month.
+
+ Month to Date Amount
+
+ The total dollar amount of cash flow for the last month of the Date Range .
+
+ % Income (Month to Date)
+
+ The percentage increase or decrease in cash flow for the associated GL account for the last month of the Date Range .
+
+ This column displays only if, in the Detail or Summary report option, Detail is selected.
+
+ Amount
+
+ The total dollar amount of cash flow for the entire Date Range .
+
+ % Income
+
+ The percentage increase or decrease in cash flow for the associated GL account for the entire Date Range .
+
+ This column displays only if, in the Detail or Summary report option, Detail is selected.

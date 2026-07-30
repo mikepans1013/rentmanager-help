@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply Now Scripts</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Apply-Now.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Apply-Now.htm</a></p>
+
+                                                        <h1 id="ApplyNowScripts" data-magellan-target="ApplyNowScripts"><a name="kanchor879"></a><a name="H1"></a>Apply Now Scripts</h1>
+                                                        <p><span class="mc-variable Products.ApplyNow variable">Apply Now</span> scripting functions are used when customizing the <span class="mc-variable Products.ApplyNow variable">Apply Now</span> verification email, found in system web preferences. These functions return data based on information in applications submitted through <span class="mc-variable Products.ApplyNow variable">Apply Now</span>. The <span class="mc-variable Products.ApplyNow variable">Apply Now</span> functions allow for a more detailed verification email to be sent to the applicant.</p>
+                                                        <p>To use these functions in your <span class="mc-variable Products.ApplyNow variable">Apply Now</span> verification emails, go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Web Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.TWA variable">Tenant Web Access</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.ApplyNow variable">Apply Now</span> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Apply Now Verification Email <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Customize <span class="mc-variable Products.ApplyNow variable">Apply Now</span> Verification Email</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Apply-Now-2024.png" alt="The Customize Apply Now Verification Email pop-up displays with an email body that includes scripts." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_1"></a>Available Functions</h2>
+                                                        <p>Update the email body fields to include the desired <span class="mc-variable Products.ApplyNow variable">Apply Now</span> script functions from the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Applicant Email Address</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ApplicantEmailAddress]</p>
+                                                                        <p>Displays the applicant's email address.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If the applicant signs up for <span class="mc-variable Products.ApplyNow variable">Apply Now</span> through <span class="mc-variable Products.TWA variable">Tenant Web Access</span>, this function displays the email address entered when creating the user account.</p>
+                                                                            <p>If the applicant has an existing prospect account and the application was emailed through the prospect account, this function displays the <span class="Field">To</span> email address in the composed email.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Applicant First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ApplicantFirstName]</p>
+                                                                        <p>Displays the first name of the applicant.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If the applicant signs up for <span class="mc-variable Products.ApplyNow variable">Apply Now</span> through <span class="mc-variable Products.TWA variable">Tenant Web Access</span>, this function displays the first name entered when creating the user account.</p>
+                                                                            <p>If the applicant has an existing prospect account and the application was emailed through the prospect account, this function displays the <span class="Field">First Name</span> entered on the prospect account.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Applicant Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ApplicantLastName]</p>
+                                                                        <p>Displays the last name of the applicant.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If the applicant signs up for <span class="mc-variable Products.ApplyNow variable">Apply Now</span> through <span class="mc-variable Products.TWA variable">Tenant Web Access</span>, this function displays the last name entered when creating the user account.</p>
+                                                                            <p>If the applicant has an existing prospect account and the application was emailed through the prospect account, this function displays the <span class="Field">Last Name</span> entered on the prospect account.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Email Address</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[PropertyEmailAddress]</p>
+                                                                        <p>Displays the <span class="Field">Email Address</span> on the <span class="Section">General</span> section of the property to which the applicant applied.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Management Company</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[PropertyManagementCompany]</p>
+                                                                        <p>Displays the  <span class="Field">Full Name</span> on the <span class="Section">General</span> section of the management company property. For more information, refer to <a href="../Other/System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Management Company Email Address</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[PropertyManagementCompanyEmailAddress]</p>
+                                                                        <p>Displays the <span class="Field">Email Address</span> on the <span class="Section">General</span> section of the management company property. For more information, refer to <a href="../Other/System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Manager</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[PropertyManager]</p>
+                                                                        <p>Displays the name of the <span class="Field">Manager</span> on the <span class="Section">General</span> section of the property to which the applicant applied.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Property Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[PropertyName]</p>
+                                                                        <p>Displays the  <span class="Field">Full Name</span> on the <span class="Section">General</span> section of the property to which the applicant applied.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

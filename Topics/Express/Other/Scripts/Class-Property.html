@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Property.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Property.htm</a></p>
+
+                                                        <h1 id="PropertyClassScript" data-magellan-target="PropertyClassScript"><a name="aanchor1092"></a>
+                                                            <a name="kanchor1821"></a><a name="H1"></a>Property Class (Script)</h1>
+                                                        <p>This class retrieves data about the properties you have entered for the property in <span class="mc-variable Products.RM variable">Rent Manager</span> and can be followed by either a property-level scripting function or another class associated with the property.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Property().Email]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the email address for the tenant's default property as listed on the <span class="Window">Property</span> details page in the <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Property().Address().State]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the state of the property address marked as <span class="Field">Default</span> on the <span class="Window">Property</span> details page in the <span class="Section">Primary Address</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To examine information for your management company's property, replace the Property class with the ManagementCompany class. It can be utilized in any template type and followed by either a property-level scripting function or another class associated with the property designated as the management company in <a href="../System-Preferences/Owners-Management-Company.html" class="MCXref xref">Management Company (System Preferences)</a>.</p>
+                                                            <p>The following are examples of this class in scripts:</p>
+                                                            <p class="Example">[Tenant().ManagementCompany.Address().CityStatePostalCode]</p>
+                                                            <p>Displays the city, state, and postal code of the address marked as <span class="Field">Default</span> for the management company's property.</p>
+                                                            <p class="Example">[Owner().ManagementCompany.DefaultBankName]</p>
+                                                            <p>Displays the name of the default bank for the management company's property as entered on the property <span class="Section">Other Information</span> tile.</p>
+                                                        </div>
+                                                        <h2 id="ClassParameters" data-magellan-target="ClassParameters"><a name="H2_1"></a>Class Parameters</h2>
+                                                        <p>A single, optional parameter may be specified for this class: an ID or index.</p>
+                                                        <h3><a name="H3_1"></a>ID</h3>
+                                                        <p>The ID is a system-generated, unique number assigned by <span class="mc-variable Products.RM variable">Rent Manager</span>. The ID is assigned in the order of the account <span class="Field">Create Date</span>. This number does not display on any window but may be used within scripting. If no ID is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to using the ID of the account selected before running the script.</p>
+                                                        <p>To learn the ID number of a selected account, the script <span class="Formula">[Property().PropertyID]</span> can be used. Entering a distinct ID in this class parameter allows you to specify the account that the following function examines.</p>
+                                                        <p colspan="2" class="Example">[Property(30).ManagerName]</p>
+                                                        <p colspan="2">Displays the <span class="Field">Manager</span> entered for the property with the ID&#160;of 30.</p>
+                                                        <h3 colspan="2"><a name="H3_2"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific property on an account by using a number to identify each property  listed. For example, if there are three properties listed on an owner’s account, they are referenced by indexes 0, 1, and 2. You can specify which property you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first property in the list. </p>
+                                                        <p class="Example">[OwnerProspect.Property(1).Name]</p>
+                                                        <p colspan="2">Displays the name of the first additional property of the selected owner prospect.</p>
+                                                        <h2 id="RecommendedClasses" data-magellan-target="RecommendedClasses"><a name="H2_2"></a>Recommended Classes</h2>
+                                                        <p>This class is often followed by one of these recommended classes. Adding an additional class lets you use a function in the additional class.</p>
+                                                        <p><span class="Required"><span class="Formula">Function</span></span> represents a scripting function that must be inserted into the script. For a complete list of functions, refer to <a href="../../KB/Script-Functions.html">Script Functions</a>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.3,Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.16,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Address.html">Address</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Address().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves address data from the <span class="Section">Primary Address</span> tile on the <span class="Window">Property</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.html">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Asset().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data about assets assigned to the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Home.html">Home</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Home().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data about assets designated as homes for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Marketing.html">Marketing</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Marketing.<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data from the property's <span class="Window">Marketing Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Owner().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data about an owner of the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Ownership.html">Ownership</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Ownership().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data from the <span class="Window">Owners</span> pop-up for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.31,Snippet Conditions.13,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Phone-Number.html">Phone Number</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PhoneNumber().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves phone number data for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">Primary Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PrimaryOwner.<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data about the owner listed on the <span class="Section">Primary Owner</span> summary card for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().ServiceManager().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data from issues linked to a property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.25,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Tenant().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data about past, current, and future tenants of the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.9,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.25,Snippet Conditions.28">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Unit().<span class="Required">Function</span>]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This class retrieves data about a unit at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_3"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.21,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.20">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Address Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AddressCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of addresses listed for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Aggregate-Budget-Value.html">Aggregate Budget Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AggregateBudgetValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays property-level financial data related to the budget of the selected property.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This scripting function must be used in conjunction with the Property FillBudget function. For more information, refer to <a href="Function-Fill-Budget.html" class="MCXref xref">Fill Budget Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Aggregate-Chart-Value.html">Aggregate Chart Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AggregateChartValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays property-level financial data related to the selected property based on the specified field.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This scripting function must be used in conjunction with the Property FillChart function. For more information, refer to <a href="Function-Fill-Chart.html" class="MCXref xref">Fill Chart Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenities Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p style="font-weight: bold;font-style: normal;" data-mc-conditions="Snippet Conditions.19">[Property().AmenitiesCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of checked amenities available at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.20,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenities List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p style="font-weight: bold;font-style: normal;" data-mc-conditions="Snippet Conditions.19">[Property().AmenitiesList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays a list of amenities (separated by commas) available at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.7,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Amenity.html">Amenity</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p style="font-weight: bold;font-style: normal;" data-mc-conditions="Snippet Conditions.19">[Property().Amenity()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the name of the first checked amenity available at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Amount-Charged.html">Amount Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AmountCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount of charges posted on a specified date for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Amount-Paid.html">Amount Paid</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AmountPaid()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount paid by tenants at property for a specified date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Apply Now URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().ApplyNowURL]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="mc-variable Products.ApplyNow variable">Apply Now</span> URL at which an application can be submitted for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AssetCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the number of assets assigned to the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Asset List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent17">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AssetList]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.19">Displays a list of asset names (separated by commas) assigned to the property.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Available-Unit-Count.html">Available Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AvailableUnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of available units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Available-Unit-List.html">Available Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().AvailableUnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays a list of names (separated by commas) of every available unit at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Name 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().BillingName1]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Billing Name 1</span> field as entered on the <span class="Section">Other Information</span> tile for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Name 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().BillingName2]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Billing Name 2</span> field as entered on the <span class="Section">Other Information</span> tile for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Board-Member-List.html">Board Member List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().BoardMemberList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the full name of every board member at an association-type property. The output is formatted as displayed below:</p>
+                                                                        <p class="Input" data-mc-conditions="Snippet Conditions.19">Carl Branson<br />Bridgett Hargitae<br />Devin Lautner<br />Bruce Shultz</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Budget-Comment.html">Budget Comment</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().BudgetComment()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the comment entered for a cell on the <span class="Window">Budget</span> pop-up for the property, based on the specified GL account number and field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Budget-Value.html">Budget Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().BudgetValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the value entered for a cell on the <span class="Window">Budget</span> pop-up for the property, based on the specified GL account number and field.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This scripting function must be used in conjunction with the Property FillBudget function. For more information, refer to <a href="Function-Fill-Budget.html" class="MCXref xref">Fill Budget Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Calculated-Square-Footage.html">Calculated Square Footage</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().CalculatedSquareFootage()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total <span class="Field">Square Footage</span> of all active units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Chart-Value.html">Chart Value</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().ChartValue()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the account data of the specified GL account number and its field.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This scripting function must be used in conjunction with the Property FillChart function. For more information, refer to <a href="Function-Fill-Chart.html" class="MCXref xref">Fill Chart Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.23,Snippet Conditions.21,Snippet Conditions.35,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Comment]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the text entered in the <span class="Field">Comments</span> field of the property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Committee-Member-List.html">Committee Member List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().CommitteeMemberList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the full name of every committee member at an association-type property. The output is formatted as displayed below:</p>
+                                                                        <p class="Input" data-mc-conditions="Snippet Conditions.19">Gemma Gates<br />Erica Baddam<br />Muhammad Abadi<br />Jocelyn Jones</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Current Tenant Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().CurrentTenantCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the number of tenants currently occupying the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Bank Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().DefaultBankName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Default Bank</span> entered on the property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Bank Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().DefaultBankNumber]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the GL account number of the <span class="Field">Default Bank</span> selected on the property <span class="Section">Other Information</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Default Service Issue User</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().DefaultServiceIssueUser]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the user selected in the <span class="Field">Assign Service Issues</span> field on the property <span class="Section">Other Information</span>. If <span class="Field">&lt;System Default&gt;</span> is selected, nothing displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().DisplayColor]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the name of the color selected in the <span class="Field">Display Color</span> field of the property's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.20,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().DisplayColorCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the hexadecimal code of the color selected in the <span class="Field">Display Color</span> field of the property's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.28,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Color ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().DisplayColorID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the internal <span class="mc-variable Products.RM variable">Rent Manager</span> color ID of the color selected in the <span class="Field">Display Color</span> field of the property's <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property.Email]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Email</span> as entered on the property <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Bank Account Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent59">
+                                                                            <p class="Formula">[Property().EpayBankAccountName]</p>
+                                                                            <p>Displays the name of the <span class="Field">Bank Account</span> selected on the property <span class="Window"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Fee Charge Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent60">
+                                                                            <p class="Formula">[Property().EpayFeeChargeType]</p>
+                                                                            <p>Displays the name of the <span class="Field">Fee Type</span> selected on the property <span class="Window"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Merchant ID</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent61">
+                                                                            <p class="Formula">[Property().EpayMerchantID]</p>
+                                                                            <p>Displays the account identifier provided by <span class="mc-variable Integrations.Partner-Zego variable">Zego</span> as entered on the <span class="Window">System Preferences: <span class="mc-variable Integrations.Product-ePay variable">ePay</span> General</span> page.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Warning Limit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent62">
+                                                                            <p class="Formula">[Property().EpayWarningLimit]</p>
+                                                                            <p>Displays the amount entered in the <span class="Field"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Warning Limit</span> field on the property <span class="Window"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Exclude Holidays</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent63">
+                                                                            <p class="Formula">[Property().ExcludeHolidays]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Exclude Holidays</span> is checked on the property's <span class="Window">Late Fees</span> pop-up; otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Exclude Weekends</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent64">
+                                                                            <p class="Formula">[Property().ExcludeWeekends]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Exclude Weekends</span> is checked on the property's <span class="Window">Late Fees</span> pop-up; otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Fill-Budget.html">Fill Budget</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().FillBudget()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays a collection of property-specific GL account data related to the property budget.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This must be used in conjunction with the other Property BudgetValue functions. For more information, refer to <a href="Function-Budget-Value.html" class="MCXref xref">Budget Value Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Fill-Chart.html">Fill Chart</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().FillChart()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays a collection of property-specific GL account data related to the job.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This scripting function must be used in conjunction with the other Property ChartValue functions. For more information, refer to <a href="Function-Chart-Value.html" class="MCXref xref">Chart Value Function (Script)</a> and <a href="Function-Aggregate-Chart-Value.html" class="MCXref xref">Aggregate Chart Value Function (Script)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fiscal Year End</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().FiscalYearEnd]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">End</span> date selected on the property <span class="Section">Fiscal Year</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fiscal Year Start</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().FiscalYearStart]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Start</span> date selected on the property <span class="Section">Fiscal Year</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fixed Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().FixedAmount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the value entered in the <span class="Field">Fixed Amount</span> field of the property <span class="Window">Late Fees</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Fixed Rent Only</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent71">
+                                                                            <p class="Formula">[Property().FixedRentOnly]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">On Rent Only</span> is checked on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Flat Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().FlatFee]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Monthly Flat Fee</span> as entered on the property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Grace Period Days</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent77">
+                                                                            <p class="Formula">[Property().GracePeriodDays]</p>
+                                                                            <p>Displays the <span class="Field">Days</span> field in the <span class="Section">Grace Period</span> section on the property's <span class="Window">Late Fees</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Grace Period Exclude Holidays</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent79">
+                                                                            <p class="Formula">[Property().GracePeriodExcludeHolidays]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Exclude Holidays</span> is checked in the <span class="Section">Grace Period</span> section on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Grace Period Exclude Weekends</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent80">
+                                                                            <p class="Formula">[Property().GracePeriodExcludeWeekends]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Exclude Weekends</span> is checked in the <span class="Section">Grace Period</span> section on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Grace Period Non Retroactive</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent81">
+                                                                            <p class="Formula">[Property().GracePeriodNonRetroactive]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Non Retroactive</span> is checked in the <span class="Section">Grace Period</span> section on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Has Late Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent83">
+                                                                            <p class="Formula">[Property().HasLateFees]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Enable Special Late Charge</span> is checked on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-History-Count.html">History Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().HistoryCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of history/notes on the property's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.27,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.17,Snippet Conditions.32">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image.html">Image</a> (Logo)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property.Image(Property.LogoPath())]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the image uploaded to the property's <span class="Section">Property Logo</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.12,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-Count.html">Image Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().ImageCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of images uploaded to the property details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.19,Snippet Conditions.12,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-URL.html">Image URL</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().ImageURL()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the URL address for a selected image uploaded to the property details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.31,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Active</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().IsActive]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays <span class="Input">True</span> if <span class="Field">Active</span> is enabled on the property <span class="Section">General</span> tile; otherwise, displays <span class="Input">False</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Commercial</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().IsCommercial]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays <span class="Input">True</span> if the property has <span class="Field">Commercial</span> as the selected property type on the <span class="Section">General</span> tile. Otherwise, <span class="Input">False</span> displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Epay Enabled</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent91">
+                                                                            <p class="Formula">[Property().IsEpayEnabled]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Enable <span class="mc-variable Integrations.Product-ePay variable">ePay</span></span> is checked on the property <span class="Window"><span class="mc-variable Integrations.Product-ePay variable">ePay</span> Settings</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Property Level Online Listings</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().IsPropertyLevelOnlineListings]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays <span class="Input">True</span> if the <span class="Field">Property Level Online Listings</span> option on the property <span class="Section">Other Information</span> tile is checked; otherwise, <span class="Input">False</span> displays.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Last-Hard-Close-Date.html">Last Hard Close Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().LastHardCloseDate()]</p>
+                                                                        <p>Displays the accounting close date for the previous period.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Last-Hard-Close-Effective-Date.html">Last Hard Close Effective Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().LastHardCloseEffectiveDate()]</p>
+                                                                        <p>Displays the accounting close effective date for the previous period.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Management Fee Post</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().LastManagementFeePost]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the date of the most recent management fee posting, as shown on the property <span class="Window">Property Fee</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Posted</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().LastPosted]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the most recent post date of recurring charges at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Logo Image URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().LogoImageURL]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the URL address of the image uploaded to the property <span class="Section">Property Logo</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Logo Path</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().LogoPath]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the file path of the image uploaded to the property <span class="Section">Property Logo</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Manager Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().ManagerName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the name of the <span class="Field">Manager</span> as entered on the property <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.8">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Market-Rent.html">Market Rent</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().MarketRent()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount of <span class="Field">Market Rent</span> for all units at the property, as entered on each unit's <span class="Window">View Market Rent</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Maximum Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().MaximumFee]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Per Post Max Fee</span> for advanced fee setups, the <span class="Field">Monthly Max Fee</span> for standard fee setups, or the <span class="Field">Per Unit Max Fee</span> for fee setups with the <span class="Field">Post Per Unit</span> option enabled, as listed on the asset's financial property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Minimum Balance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent126">
+                                                                            <p class="Formula">[Property().MinimumBalance]</p>
+                                                                            <p>Displays the <span class="Field">Minimum Balance</span> as entered in the <span class="Section">Per Day</span> section of the property <span class="Window">Late Fees</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Minimum Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().MinimumFee]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Per Post Min Fee</span> for advanced fee setups, the <span class="Field">Monthly Min Fee</span> for standard fee setups, or the <span class="Field">Per Unit Max Fee</span> for fee setups with the <span class="Field">Post Per Unit</span> option enabled, as listed on the property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29,Snippet Conditions.7,Snippet Conditions.30,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.17,Snippet Conditions.26,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Name]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Full Name</span> as entered on the property <span class="Section">General</span> tile.</p>
+                                                                        <div class="info" data-mc-conditions="Snippet Conditions.19">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If preceded by the OwnerProspect class (<span class="Formula">OwnerProspect.Property.Name</span>) in an owner prospect-type letter template or report, this function may also be used retrieve property data associated with a potential owner.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Next-Hard-Close-Date.html">Next Hard Close Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().NextHardCloseDate()]</p>
+                                                                        <p>Displays the accounting close date for the property's current period.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Next-Hard-Close-Effective-Date.html">Next Hard Close Effective Date</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().NextHardCloseEffectiveDate()]</p>
+                                                                        <p>Displays the accounting close effective date for the property's current period.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.2,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.32,Snippet Conditions.15,Snippet Conditions.13,Snippet Conditions.33,Snippet Conditions.31,Snippet Conditions.34,Snippet Conditions.8,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Note.html">Note</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().Note()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays information about the most recent note on the property's <span class="Section">History/Notes</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Occupancy-Count.html">Occupancy Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().OccupancyCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of contacts on the tenant's <span class="Window">View Contacts</span> pop-up for each tenant at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Occupied-Unit-Count.html">Occupied Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().OccupiedUnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of occupied units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Occupied-Unit-List.html">Occupied Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().OccupiedUnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays a list of all occupied units (separated by commas) at the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>One Month Only</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().OneMonthOnly]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays <span class="Input">True</span> if <span class="Field">One Month Only</span> is checked in the <span class="Section">Per Day Options</span> section on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Charges.html">Open Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().OpenCharges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total value of all open charges at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Open-Credits.html">Open Credits</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">Property().OpenCredits()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total value of all open credits at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Owner Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().OwnerCount]</p>
+                                                                        <p>Displays the number of owners listed on the property's <span class="Window">Owners</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Owner List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().OwnerList]</p>
+                                                                        <p>Displays a list of the names for all owners listed on the property's <span class="Window">Owners</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Owner Prospect Property ID</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent138">
+                                                                            <p class="Formula">[OwnerProspect().Property().OwnerProspectPropertyID()]</p>
+                                                                            <p>Displays the system-generated owner prospect property ID of the selected property</p>
+                                                                            <div class="info">
+                                                                                <p class="label1">More Information</p>
+                                                                                <p>This function is available <span class="Stress">only</span> in an owner prospect-type letter template or report where the Property class is a child class.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Ownership Count</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().OwnershipCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of properties owned by the owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Ownership List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().OwnershipList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays a list of short name(s) (separated by commas) for each of the owner's properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Day Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent142">
+                                                                            <p class="Formula">[Property().PerDayAmount]</p>
+                                                                            <p>Displays the <span class="Field">Amount</span> as entered in the <span class="Section">Per Day Options</span> section on the property <span class="Window">Late Fees</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Day Limit Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent146">
+                                                                            <p class="Formula">[Property().PerDayLimitAmount]</p>
+                                                                            <p>Displays the <span class="Field">Late Fee Limit</span> as entered in the <span class="Section">Per Day Options</span> section on the property <span class="Window">Late Fees</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent Amount</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent143">
+                                                                            <p class="Formula">[Property().PercentAmount]</p>
+                                                                            <p>Displays the <span class="Field">Percent</span> as entered in the <span class="Section">Posted Late Fees</span> section on the property <span class="Window">Late Fees</span> pop-up.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent Fee On Full Charge</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent144">
+                                                                            <p class="Formula">[Property().PercentFeeOnFullCharge]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">Full Charge Amount Only</span> is checked in the <span class="Section">Posted Late Fees</span> section on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent Net Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PercentNetIncome]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the value entered in the <span class="Field">% of Net Income</span> field on the property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent Rent Only</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent145">
+                                                                            <p class="Formula">[Property().PercentRentOnly]</p>
+                                                                            <p>Displays <span class="Input">True</span> if <span class="Field">On Rent Only</span> is checked for the <span class="Field">Percent</span> field in the <span class="Section">Posted Late Fees</span> section on the property <span class="Window">Late Fees</span> pop-up. Otherwise, displays <span class="Input">False</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Percent Total Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PercentTotalIncome]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the value entered in the <span class="Field">% of Total Income</span> field on the property <span class="Window">Fees Setup</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.15,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Phone Number Count</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PhoneNumberCount]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total count of phone numbers as entered on the property's <span class="Section">Phone Numbers</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Property-All-Recurring-Charges.html">Property All Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PropertyAllRecurring Charges()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total value of all recurring charges in effect for the current tenants of the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PropertyID]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the system-generated property ID number.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Image</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PropertyImage]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays a selected image uploaded to the property details page.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Property-Recurring-Charges.html">Property Recurring Charges</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">Property().PropertyRecurringCharges()]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total value of property-level recurring charges, as specified on the property <span class="Window">View Recurring Charges</span> pop-up.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12,Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().PropertyType]</p>
+                                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Property Type</span> as entered on the property's <span class="Section">General</span> tile.</p>
+                                                                                        <div class="info" data-mc-conditions="Snippet Conditions.19">
+                                                                                            <p class="label1">More Information</p>
+                                                                                            <p>If preceded by the OwnerProspect class (<span class="Formula">OwnerProspect.Property.PropertyType</span>) in an owner prospect-type letter template or report, this function may also be used retrieve property data associated with a potential owner.</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Recurring Charge Posting Day</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[Property().RecurringChargePostingDay]</p>
+                                                                                        <p>Displays the <span class="Field">Posting Day</span> as entered on the property's <span class="Section">Other Information</span> tile.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rent Charge Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().RentChargeType]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the name of every <span class="Field">Rent Charge Type</span> selected on the property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Rented-Square-Footage.html">Rented Square Footage</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().RentedSquareFootage()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total <span class="Field">Square Footage</span> as entered on the unit <span class="Section">Miscellaneous</span> tile for of all rented units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Charged.html">Security Deposit Charged</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().SecurityDepositCharged()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount of all security deposits posted for all tenants associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.9,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Held.html">Security Deposit Held</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().SecurityDepositHeld()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount of all security deposits <span class="Stress">currently</span> held for all tenants associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Received.html">Security Deposit Received</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().SecurityDepositReceived()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount of security deposits paid by all tenants associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.16,Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Security-Deposit-Refunded.html">Security Deposit Refunded</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().SecurityDepositRefunded()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount of security deposits refunded to tenants associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.15,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.32,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.31,Snippet Conditions.33,Snippet Conditions.34,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Set-History-Filter.html">Set History Filter</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().SetHistoryFilter()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">This function is designed to filter the total collection of property history/note items based on the assigned parameter values. This filtered collection becomes the data set used by the Note and HistoryCount functions that are run after it is applied. It remains in effect until it is run again with different parameters.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.33">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Short Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().ShortName]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Short Name</span> as entered on the property <span class="Section">General</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.2,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Square Footage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().SquareFootage]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Total Sq Ft</span> as entered on the property <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.31">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tax ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().TaxID]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Property Tax ID</span> as entered on the property's <span class="Section">Other Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Tenant-Count.html">Tenant Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().TenantCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the number of tenants associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenant List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().TenantList]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the full names of all current tenants, past tenants, prospects, and lost prospects associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.29,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.9">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Allocations.html">Total Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().TotalAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total value of paid allocations for all tenants associated with property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.31,Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.13,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Credits.html">Total Credits</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().TotalCredits()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total amount of credits posted for all tenants associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.29">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Total-Prepay-Allocations.html">Total Prepay Allocations</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().TotalPrepayAllocations()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total value of prepayments and/or credits that are unapplied to charges at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19,Snippet Conditions.28,Snippet Conditions.15">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-Count.html">Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().UnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of active and inactive units associated with the property.</p>
+                                                                        <div class="info" data-mc-conditions="Snippet Conditions.19">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If preceded by the OwnerProspect class (<span class="Formula">OwnerProspect.Property.UnitCount</span>) in an owner prospect-type letter template or report, this function may also be used retrieve property data associated with a potential owner.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Unit-List.html">Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().UnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Name</span> of every active and inactive unit associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.3,Snippet Conditions.28,Snippet Conditions.27,Snippet Conditions.10,Snippet Conditions.2,Snippet Conditions.5,Snippet Conditions.8,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.21,Snippet Conditions.22,Snippet Conditions.25,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.19,Snippet Conditions.9,Snippet Conditions.33,Snippet Conditions.40">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-User-Defined-Field.html">User Defined Field</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().UserDefinedField()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the value of the property-type user defined field (UDF). The <span class="Field">Name</span> of the desired UDF must be specified as a parameter. An example is shown below.</p>
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().UserDefinedField("Status")]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the value for the <span class="Field">Status</span> user defined field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Vacant-Unit-Count.html">Vacant Unit Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().VacantUnitCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the total number of vacant units associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.19">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-Vacant-Unit-List.html">Vacant Unit List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.19">[Property().VacantUnitList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.19">Displays the <span class="Field">Name</span> of every vacant unit associated with the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

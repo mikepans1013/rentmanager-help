@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Survey Scripts</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Surveys.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Surveys.htm</a></p>
+
+                                                        <h1 id="SurveyScripts" data-magellan-target="SurveyScripts"><a name="kanchor1375"></a><a name="H1"></a>Survey Scripts</h1>
+                                                        <p>There are several areas of <span class="mc-variable Products.RM variable">Rent Manager</span> where you can use survey-specific scripts, such as survey automated notifications and the <span class="Window">Add Survey</span> pop-up. These scripts allow you to pull in data from your surveys directly into the body of the email, text, or page as needed.</p>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_1"></a>Available Functions</h2>
+                                                        <p>When adding scripts to surveys or automated notifications, the function is always preceded by the Survey class. The available survey scripts are described in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.Descripton]</p>
+                                                                        <p>The details entered in the <span class="Field">Description</span> field of the survey.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Display Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.DisplayName]</p>
+                                                                        <p>The name of the survey that displays to recipients as entered in the <span class="Field">Display&#160;Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>End Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.EndDate]</p>
+                                                                        <p>The date on which the survey expires as entered in the <span class="Field">End Date</span> field.</p>
+                                                                        <p>This script applies only to surveys published to <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>. Surveys sent via email and/or text message return no result.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Expiration&#160;Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.ExpirationDate]</p>
+                                                                        <p>The relative date (in <span class="Input">mm/dd/yy</span> format) on which the link to the survey will expire based on the current date and the number entered in the <span class="Field">Link will expire X days after it is sent</span> field. For example, if the current date is 1/1/<span class="mc-variable Dates.Year2 variable">26</span> and the link is set to expire in <span class="Input">7</span> days, the date that displays is <span class="Input">1/8/<span class="mc-variable Dates.Year2 variable">26</span></span>.</p>
+                                                                        <p>This script applies only to surveys sent via email and/or text message. Surveys published to TWA return no result.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.Name]</p>
+                                                                        <p>The internal name of the survey that displays to <span class="mc-variable Products.RM variable">Rent Manager</span> users, as entered in the <span class="Field">Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Response Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.ResponseProperty]</p>
+                                                                        <p>The name of the property associated with the survey response.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Responses</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.Responses]</p>
+                                                                        <p>Displays a list of the responses to each question on the survey. The output returned displays in the format below:</p>
+                                                                        <p class="Input">1. Were you satisfied with the time it took to resolve your issue?<br />No</p>
+                                                                        <p class="Input">2. How did you submit your issue?<br />*** No Response ***</p>
+                                                                        <p class="Input">3. Please rate your overall experience:<br />2 stars</p>
+                                                                        <p>This script applies only to surveys sent via email and/or text message. Surveys published to TWA return no results.<br /></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Send Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Survey.SendDate]</p>
+                                                                        <p>For surveys sent via email and/or text message, the date on which the survey was sent to the recipient in <span class="Input">mm/dd/yy</span> format.</p>
+                                                                        <p>For surveys published to TWA, the date on which the survey was published to TWA in <span class="Input">mm/dd/yy</span> format.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Start&#160;Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Survey.StartDate]</p>
+                                                                        <p>For surveys published to TWA, the date on which the survey was published to TWA in <span class="Input">mm/dd/yy</span> format.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

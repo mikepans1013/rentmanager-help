@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Total Allocations Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Total-Allocations.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Total-Allocations.htm</a></p>
+
+                                                        <h1 id="TotalAllocationsFunctionScript" data-magellan-target="TotalAllocationsFunctionScript"><a name="aanchor333"></a>
+                                                            <a name="kanchor554"></a><a name="H1"></a>Total Allocations Function (Script)</h1>
+                                                        <p>This function displays the total value of applied allocations for the specified class. The parameters in this function can examine only the current state of the allocation and not if it was previously allocated.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The function <a href="Function-Total-Prepay-Allocations.html">TotalPrepayAllocations</a> can be used to evaluate credits and payments that have not yet been applied to a charge. No prepayments or unallocated credits are returned by this script.</p>
+                                                        </div>
+                                                        <p>Classes that utilize this function and the location from which the scripting information is pulled in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Financial-Property.html">Financial Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.TotalAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">View Transactions</span> pop-up for all tenants at the financial property listed for the selected <a href="Class-Asset.html">Asset</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Lease.html">Lease</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().TotalAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">View Transactions</span> pop-up for the specified lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().TotalAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">View Transactions</span> pop-up for all tenants at the specified property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().TotalAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">View Transactions</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().TotalAllocations()]</p>
+                                                                        <p>Displays information from the tenant's <span class="Section">View Transactions</span> pop-up for all tenants at the specified unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[TotalAllocations(<span class="Optional">"ChargeTypes"</span>, <span class="Optional">"CreditTypes"</span>, <span class="Optional">"ChargeFromDate"</span>, <span class="Optional">"ChargeToDate"</span>, <span class="Optional">"CreditFromDate"</span>, <span class="Optional">"CreditToDate"</span>, <span class="Optional">"ExcludeCreditTypes"</span>, <span class="Optional">"AllocationFromDate"</span>, <span class="Optional">"AllocationToDate"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ChargeTypes</h3>
+                                                        <p colspan="2">Specify the charge type(s) you wish to examine. If no charge types are specified, all charge types that have been allocated display. Each charge type should be separated by a comma.</p>
+                                                        <p colspan="2" class="Example">[TotalAllocations("RC")]</p>
+                                                        <p colspan="2">Displays the value of payment received credit type allocations applied to the rent charge (RC) charge type.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_2"></a>CreditTypes</h3>
+                                                        <p colspan="2">Specify the credit type(s) you wish to examine. If no credit types are specified, <span class="Input">PR</span>—or Payment Received—transactions are examined. Each credit type should be separated by a comma.</p>
+                                                        <p colspan="2" class="Example">[TotalAllocations("RC","PR")]</p>
+                                                        <p colspan="2">Displays the value of payment received (PR) credit type allocations applied to the rent charge (RC) charge type.</p>
+                                                        <h3 class="Optional">ChargeFromDate</h3>
+                                                        <p colspan="2">
+                                                            Specify charges posted on or after this date. This examines the date the charge was posted, <span class="Stress">not</span> the date a payment was allocated to a charge. If no date is specified, the function uses the <span class="Field">G/L Start Date</span> as entered in the <span class="Section">General Ledger Settings</span> section of system preferences.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[TotalAllocations("RC","PR","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the value of payment received (PR) credit type allocations that have been applied to the rent charge (RC) charge type starting on January 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional">ChargeToDate</h3>
+                                                        <p>
+                                                            Specify charges posted on or before this date. This examines the date the charge was posted, <span class="Stress">not</span> the date a payment was allocated to a charge. If no date is specified, the function defaults to the end of time.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[TotalAllocations("RC,LC","PR","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","2/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the value of payment received (PR) credit type allocations applied to the rent charge (RC) and late charge (LC) charge types starting on January 1, <span class="mc-variable Dates.Year4 variable">2026</span> through February 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional">CreditFromDate</h3>
+                                                        <p>
+                                                            Specify payments and credits applied on or after this date. If no date is specified, the function uses the <span class="Field">G/L Start Date</span> as entered in the <span class="Section">General Ledger Settings</span> section of system preferences.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[TotalAllocations("RC,LC","PR","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","2/1/<span class="mc-variable Dates.Year4 variable">2026</span>","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the total value of all credits applied to the rent charge (RC) and late charge (LC) charge types from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> to February 1, <span class="mc-variable Dates.Year4 variable">2026</span> and the value of payment received (PR) credit type allocations applied from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> to the current date.</p>
+                                                        <h3 class="Optional">CreditToDate</h3>
+                                                        <p>
+                                                            Specify payments and credits posted on or after this date. If no date is specified, the function defaults to the end of time.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[TotalAllocations("RC,LC","PR","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","2/1/<span class="mc-variable Dates.Year4 variable">2026</span>","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","2/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the total value of all credits applied to the rent charge (RC) and late charge (LC) charge types from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> to February 1, <span class="mc-variable Dates.Year4 variable">2026</span> and the value of payment received (PR) credit type allocations applied from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> to February 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional">ExcludeCreditTypes</h3>
+                                                        <p>Specify whether to ignore certain credit types. If no parameter is specified, the function defaults to False.</p>
+                                                        <p><span class="Input">True</span> means to return all credit types except the type defined in the Credit Types parameter. <span class="Input">False</span> means examine only the credit type specified in the Credit Types parameter.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[TotalAllocations("RC,LC","PR","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","2/1/<span class="mc-variable Dates.Year4 variable">2026</span>","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","2/1/<span class="mc-variable Dates.Year4 variable">2026</span>","True")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the total value of all credits applied to the rent charge (RC) and late charge (LC) charge types from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> to February 1, <span class="mc-variable Dates.Year4 variable">2026</span> and the value of all credit type allocations, except for the payment received (PR) type, applied from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> to February 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional">AllocationFromDate</h3>
+                                                        <p>Specify the start date for displaying allocated credit amounts. If no date is specified, the function uses the <span class="Field">G/L Start Date</span> as entered in the <span class="Section">General Ledger Settings</span> section of system preference.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.1">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This parameter is helpful when troubleshooting and looking for payments and credits issued during the CreditTo and CreditFrom dates that were posted during a closed accounting period and the user chose to date the allocation of that transaction in an open period. This is considered the allocation date of that transaction. </p>
+                                                            <p>Unless you are specifically looking for credits and payments made outside the hard close period, the AllocationFrom and AllocationTo dates should be left blank. Generally, the transactions are allocated on the same date that they are made. </p>
+                                                        </div>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[TotalAllocations("", "PR", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "", "2/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the total value of all payments received in January that were allocated to any charge posted in January but that were actually allocated on February 1 or later.</p>
+                                                        <h3 class="Optional">AllocationToDate</h3>
+                                                        <p>Specify the end date for displaying allocated credit amounts. If no date is specified, the function defaults to the end of time.</p>
+                                                        <div class="info" data-mc-conditions="Snippet Conditions.1">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This parameter is helpful when troubleshooting and looking for payments and credits issued during the CreditTo and CreditFrom dates that were posted during a closed accounting period and the user chose to date the allocation of that transaction in an open period. This is considered the allocation date of that transaction.</p>
+                                                            <p>Unless you are specifically looking for credits or payments made outside the hard close period, the AllocationFrom and AllocationTo dates should be left blank. Generally, the transactions are allocated on the same date that they are made.</p>
+                                                        </div>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[TotalAllocations("", "PR", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "", "2/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "2/28/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the total value of all payments received in January that were allocated to any charge posted in January but that were actually allocated in February.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().TotalAllocations()]</p>
+                                                        <p>Displays the value of all paid allocations for the current tenant.</p>
+                                                        <p class="Example">[Property().TotalAllocations()]</p>
+                                                        <p>Displays the value of all paid allocations for all tenants at the current property.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().TotalAllocations()]</p>
+                                                        <p>Displays the value of all allocations for the unit of the first lease listed for the current tenant.</p>
+                                                        <p class="Example">[Tenant().TotalAllocations("RC", "WCRD", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the value of credits and payments allocated to the rent charge (RC) charge type that were dated from January 1, <span class="mc-variable Dates.Year4 variable">2026</span>, through January 31, <span class="mc-variable Dates.Year4 variable">2026</span>, and the allocated (applied) credits for the work credit (WCRD) credit type that were dated from January 1, <span class="mc-variable Dates.Year4 variable">2026</span>, through January 31, <span class="mc-variable Dates.Year4 variable">2026</span>, for the current tenant.</p>
+                                                        <p class="Example">[Tenant().TotalAllocations("RC", "PR", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "1/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "True")]</p>
+                                                        <p>Displays the value of credits allocated to the rent charge (RC) charge type from January 1, <span class="mc-variable Dates.Year4 variable">2026</span>, through January 31, <span class="mc-variable Dates.Year4 variable">2026</span>, and all allocated (applied) credit types except payment received (PR) from January 1, <span class="mc-variable Dates.Year4 variable">2026</span>, through January 31, <span class="mc-variable Dates.Year4 variable">2026</span>, for the current tenant.</p>
+                                                        <p class="Example">[Tenant().TotalAllocations("", "", "10/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "10/31/<span class="mc-variable Dates.Year4 variable">2026</span>", "", "", "", "11/1/<span class="mc-variable Dates.Year4 variable">2026</span>", "11/30/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the value of credits allocated to all charge types where charges were posted from October 1, <span class="mc-variable Dates.Year4 variable">2026</span>, through October 31, <span class="mc-variable Dates.Year4 variable">2026</span>, and all allocated (applied) credits for all credit types where an allocation was made from November 1, <span class="mc-variable Dates.Year4 variable">2026</span>, through November 30, <span class="mc-variable Dates.Year4 variable">2026</span>, for the current tenant.</p>
+                                                    
+</main>
+</body>
+</html>

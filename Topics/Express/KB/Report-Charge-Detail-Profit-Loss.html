@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charge Detail and Profit &amp; Loss</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Report-Charge-Detail-Profit-Loss.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Report-Charge-Detail-Profit-Loss.htm</a></p>
+
+                                                        <h1 id="ChargeDetailandProfitLoss" data-magellan-target="ChargeDetailandProfitLoss"><a name="kanchor1532"></a><a name="H1"></a>Charge Detail and Profit &amp; Loss</h1>
+                                                        <p>Both the <span class="Report">Charge Detail</span> and <span class="Report">Profit &amp; Loss</span> reports generate lists of charges and income across a date range, but each examines transactions from different sources and calculates balances differently. The <span class="Report">Charge Detail</span> focuses on transaction activity specifically associated with tenants and prospects, while the <span class="Report">Profit &amp; Loss</span> report provides income and expense information from general ledger (GL) accounts.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p data-mc-conditions="Snippet Conditions.3">The information contained here does not replace the advice of an accountant. If you are unclear about how to interpret the data presented in the related reports, please consult your accountant.</p>
+                                                        </div>
+                                                        <p>The <span class="Report">Charge Detail</span> report displays tenants and prospects with posted charges across a selected date range, along with any payments made or credits applied toward those charges.</p>
+                                                        <p>The <span class="Report">Profit &amp; Loss</span> report displays income and expense GL accounts for selected properties or owners across a date range. This profit and loss report also displays the net income to track the financial impact of the selected properties.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Run reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Run accounting reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>Additionally, on the <span class="Tab">Reports</span> tab, you must have access to <span class="Field">Charge Detail</span> and <span class="Field">Profit &amp; Loss</span>.</p>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>When run with comparable report options, the <span class="Report">Charge Detail</span> report's <span class="Column">Amount Charged</span> column can be compared to the <span class="Report">Profit &amp; Loss</span> report's <span class="Field">Income</span> field. However, as these reports do not always include identical data, these values may differ even with those report options selected.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Report-Charge-Detail-Profit-Loss-Comparison-NC-2025.png" alt="The Charge Detail report's Amount Charged matches the Profit &amp; Loss report's Income amount." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="ReportOptions" data-magellan-target="ReportOptions"><a name="H2_1"></a>Report Options</h2>
+                                                        <p>To populate <span class="Report">Charge Detail</span> and <span class="Report">Profit &amp; Loss</span> reports that complement each other, use the report option combinations listed in the table below. Report options not mentioned do not affect comparability and can be left on their default setting.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Charge Detail</th>
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Profit &amp; Loss</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Charges to Include</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>n/a</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>All charge types in the list must be selected. The <span class="Report">Profit &amp; Loss</span> report includes all charges by default.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Date Range</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Date Range</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The same date range needs to be used for both reports.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Properties to Include</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Properties/Owners to Include</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The same properties or property group must be selected for both reports.</p>
+                                                                        <p>If the <span class="Tab">Owners</span> tab is selected for the <span class="Report">Profit &amp; Loss</span> report, then on the <span class="Report">Charge Detail</span> report, select the properties of those selected owners.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenants to Include</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>n/a</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Field">All</span> option must be selected. The <span class="Report">Profit &amp; Loss</span> report includes all tenants by default.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>n/a</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Cash or Accrual</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The <span class="Field">Accrual</span> option must be selected. The <span class="Report">Charge Detail</span> report includes all transactions regardless of whether they are deposited.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="TroubleshootingChargedAmountsThatAreDifferent" data-magellan-target="TroubleshootingChargedAmountsThatAreDifferent"><a name="H2_2"></a>Troubleshooting Charged Amounts That Are Different</h2>
+                                                        <p>While running the reports with the suggested report options above allows the reports to examine data from the same tenants, there are other factors that can cause discrepancies between these value totals.</p>
+                                                        <h3><a name="H3_1"></a>Non-Tenant Transactions</h3>
+                                                        <p>The <span class="Report">Profit &amp; Loss</span> report includes income from all sources, while the <span class="Report">Charge Detail</span> report displays only tenant and prospect transactions. These transactions, such as journal entries, checks, and other income on deposits, can result in the <span class="Report">Profit &amp; Loss</span> report's <span class="Field">Income</span> field value being greater than the <span class="Report">Charge Detail</span> report's <span class="Column">Amount Charged</span> column value.</p>
+                                                        <p>To identify any transactions that are not associated with tenants or prospects, you can generate a <span class="Report">General Ledger</span> directly from the <span class="Report">Profit &amp; Loss</span> report by clicking the dollar amount in the far right column for the general ledger (GL) account. For more information, refer to <a href="../Other/Reports/General-Ledger.html" class="MCXref xref">General Ledger (Report)</a>.</p>
+                                                        <h3><a name="H3_2"></a>Credits Linked to Income</h3>
+                                                        <p>The <span class="Report">Profit &amp; Loss</span> report includes income and expenses related to tenant or prospect credits, while the <span class="Report">Charge Detail</span> report displays only tenant and prospect payments made without credits. These credits can result in the <span class="Report">Profit &amp; Loss</span> report's <span class="Field">Income</span> field value being greater than the <span class="Report">Charge Detail</span> report's <span class="Column">Amount Charged</span> column value.</p>
+                                                        <p>To identify any transactions paid by tenant or prospect credits, you can generate a <span class="Report">Credit Detail</span> report with the same properties, date range, and tenant inclusion settings. For more information, refer to <a href="../Other/Reports/Credit-Detail.html" class="MCXref xref">Credit Detail (Report)</a>.</p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,1284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up Web Developer Suite</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Web-Developer-Suite-Set-Up.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Web-Developer-Suite-Set-Up.htm</a></p>
+
+                                                        <h1 id="SetUpWebDeveloperSuite" data-magellan-target="SetUpWebDeveloperSuite"><a name="kanchor1071"></a><a name="H1"></a>Set Up Web Developer Suite</h1>
+                                                        <p><span class="mc-variable Products.WDS variable">Web Developer Suite</span> allows you to use Web Availability, a licensed feature that integrates <span class="mc-variable Products.RM variable">Rent Manager</span> property and unit availability data with a custom website by creating an HTML search form for your website that searches the <span class="mc-variable Products.RM variable">Rent Manager</span> database in real time and returns data concerning available properties and/or units to your website. Essentially, when potential prospects search your website, this feature searches your <span class="mc-variable Products.RM variable">Rent Manager</span> database and shows them what is available based on the availability settings established in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <p>This topic describes the functionality of <span class="mc-variable Products.WDS variable">Web Developer Suite</span> for web developers so that your <span class="mc-variable Products.RM variable">Rent Manager</span> data can integrate with your website for unit and property availability. Further, the topic provides sample templates (known as profiles in <span class="mc-variable Products.RM variable">Rent Manager</span>) which can be used to upload <span class="mc-variable Products.RM variable">Rent Manager</span> property and unit availability data to your website, and also explains scripts you can use to design your own templates.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Requirements</p>
+                                                            <p>In order to use <span class="mc-variable Products.RM variable">Rent Manager</span>'s Web Availability option, you must have the following requirements:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>You must have <span class="mc-variable Products.WDS variable">Web Developer Suite</span>.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>You must enable the <span class="Field">Enable Availability Web Access</span> option in system preferences. For more information, refer to <a href="../Other/System-Web-Preferences/Licensing.html" class="MCXref xref">Licensing (System Web Preferences)</a>.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>If you are not hosting your site on the <span class="mc-variable Products.RM variable">Rent Manager</span> server, you must have a copy of the <strong>RentManagerWebAgent.dll</strong> file provided by <span class="mc-variable LCS.LCS variable">LCS</span>.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <p>In <span class="mc-variable Products.RM variable">Rent Manager</span>, you create templates that display both the list of results, as well as the detailed information about each property or unit in the list. You can use the basic template for a quick and easy option to work from, or create more customized templates using HTML code. Additionally, HTML templates provide the option to define or link to a CSS style sheet to design your template if you are using an iFrame to embed your unit and property availability into your website.</p>
+                                                        <p>For each template, you establish the criteria that determines what makes a property or unit available to display in the output of a user's search results. On your website, you must include a search page where users can submit keywords or search strings and pull the applicable information from your <span class="mc-variable Products.RM variable">Rent Manager</span> database to the search results page.</p>
+                                                        <h2 id="AssociatedRentManagerFeatures" data-magellan-target="AssociatedRentManagerFeatures"><a name="H2_1"></a>Associated <span class="mc-variable Products.RM variable">Rent Manager</span> Features</h2>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> provides multiple features that allow you to customize the information that can be pulled into your website. As a web developer, you may not be involved in <span class="mc-variable Products.RM variable">Rent Manager</span>'s day-to-day operation, but you must verify these features are properly defined in the database <span class="Stress">before</span> you can set up their associated scripting variables in your Web Availability templates.</p>
+                                                        <h3><a name="H3_1"></a>User-Defined Fields (UDFs)</h3>
+                                                        <p>User-defined fields allow you to define custom information that is not tracked in <span class="mc-variable Products.RM variable">Rent Manager</span> by default. Property-level and unit-level UDFs are used for Web Availability to display this information on your website for the applicable properties and units. This can be used to pull strings of text or an image.</p>
+                                                        <p>The scripting variables used for user-defined fields are provided below. The <span class="Required">red</span> text indicates where you enter the name of the UDF.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property-level UDFs</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">*{propuserdef:<span class="Required">udffieldname</span>}*</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Unit-level UDFs</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">*{unituserdef:<span class="Required">udffieldname</span>}*</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>For more information on property and unit UDFs, refer to <a href="../CSH/Property-UDFs.html" class="MCXref xref">Property User Defined Fields (Pop-Up)</a> and <a href="../CSH/Units-UDFs.html" class="MCXref xref">Unit User Defined&#160;Fields (Pop-Up)</a>.</p>
+                                                        <h3><a name="H3_2"></a>Images</h3>
+                                                        <p>You can pull images from a unit or property's <span class="Section">Images</span> tile in <span class="mc-variable Products.RM variable">Rent Manager</span> by establishing which image type from which to pull the images. Image types are a function of <span class="mc-variable Products.RM variable">Rent Manager</span> that allow you to organize images into different categories in your database. For more information on image types, refer to <a href="Image-Types-Add-Assign.html" class="MCXref xref">Add and Assign an Image Type</a>.</p>
+                                                        <p>The scripting variable used for displaying images is provided below. The <span class="Required">red</span> text indicates where you enter the name of the image type as it displays <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <p class="Formula">*{imagetyperaw:<span class="Required">imagetypename</span>}*</p>
+                                                        <p>Using this scripting variable pulls all the images of that image type for the unit or property, so you need to only enter the variable once for each unit type you wish to include. For example, if you have a unit image type named <span class="Input">Web Unit Images</span> that is specifically used for photos of the units you wish to display on the website, you can use the code <span class="Input">*{imagetyperaw:Web Unit Images}*</span> in your website code. This pulls all images from that unit's <span class="Section">Images</span> tile that have an image type of <span class="Field">Web Unit Images</span>.</p>
+                                                        <h3><a name="H3_3"></a>Amenities</h3>
+                                                        <p>Amenities in <span class="mc-variable Products.RM variable">Rent Manager</span> allow you to track features or conveniences at your units and properties, such as fireplaces, patios, pools, and so on.</p>
+                                                        <p>The scripting variable used for amenities is provided below. The <span class="Required">red</span> text indicates where you enter the name of the amenity in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <p class="Formula">*{amen:<span class="Required">amenityfieldname</span>}*</p>
+                                                        <p>To manage amenities, go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> Rental Info Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties/Units <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Amenities</span>. For more information, refer to <a href="../Other/Amenities-Assign.html" class="MCXref xref">Assign Amenities</a>.</p>
+                                                        <h3><a name="H3_4"></a>Floors</h3>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> allows you to track the floors available at a property or the floor where a unit is located. For more information on how to add floors, refer to <a href="../CSH/Floors.html" class="MCXref xref">Floors (Page)</a>.</p>
+                                                        <p>This is not a required field, so there may be units that do not have a floor assigned in <span class="mc-variable Products.RM variable">Rent Manager</span>. If you are filtering by floor, only units with a floor defined are examined.</p>
+                                                        <p>The scripting variable used for floors is provided below.</p>
+                                                        <p class="Formula">*{floor}*</p>
+                                                        <h3><a name="H3_5"></a>Square Footage</h3>
+                                                        <p>Square footage is used by numerous scripting variables to calculate and return the according property and unit data. This is not a required field, so there may be properties or units that do not have a square footage established in <span class="mc-variable Products.RM variable">Rent Manager</span>. If you filter results by a scripting value that calculates based on square footage, only properties and units with a square footage defined are examined.</p>
+                                                        <p>The table below describes where you can set the square footage for units and properties.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Entity</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">
+                                                                        <p>Location</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span> and select a property. Then, in the <span class="Section">Other Information</span> tile, enter the total square footage of the property in the <span class="Field">Total Sq Ft</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Units</span> and select a unit. Then, in the <span class="Section">Miscellaneous</span> tile, enter the total square footage of the unit in the <span class="Field">Square Footage</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="DefiningTemplates" data-magellan-target="DefiningTemplates"><a name="H2_2"></a>Defining Templates</h2>
+                                                        <p>In order to display your property and unit availability data from <span class="mc-variable Products.RM variable">Rent Manager</span> on your website, you first define templates in <span class="mc-variable Products.RM variable">Rent Manager</span> and then call on the templates in a search form on your website. This involves enabling Web Availability in system web preferences, then establishing the availability settings to determine when a unit or property is available, as well as how these results display in the website search results.</p>
+                                                        <p>When setting up your availability templates (called profiles in <span class="mc-variable Products.RM variable">Rent Manager</span>), there are three types of template structures (also known as retrieval methods in <span class="mc-variable Products.RM variable">Rent Manager</span>) to choose from: <span class="Field">Basic</span>, <span class="Field">HTML</span>, and <span class="Field">API</span>. You can create multiple profiles, but only the unit profile and property profile set as default are used for your website. For more information on creating and managing availability profiles, refer to <a href="../Other/System-Web-Preferences/Availability-Profile.html" class="MCXref xref">Availability Profile (System Web Preferences)</a>.</p>
+                                                        <h2 id="SearchFormToolsforYourWebsite" data-magellan-target="SearchFormToolsforYourWebsite"><a name="H2_3"></a>Search Form Tools for Your Website</h2>
+                                                        <p>You can set up your site to display the available properties and/or units as the results of a search form or in the URL using a query string. If you are not hosting your website on the <span class="mc-variable Products.RM variable">Rent Manager</span> server, you must have a copy of the <span class="Field">RentManagerWebAgent.dll</span> file installed in your <span class="Field">bin</span> folder.</p>
+                                                        <h3><a name="H3_6"></a>Query String</h3>
+                                                        <p>When using a query string, the available properties or units are displayed based on the values passed in the URL. If no values are passed, <span class="Input">all</span> properties or units that are currently available display. To limit the results and display only available properties or units with a particular field value (such as <span class="Field">Unit Type</span>), add that field to the query string.</p>
+                                                        <p>The example below is a query string that displays only available units with a <span class="Field">Unit Type</span> of <span class="Input">Apartment</span>. The <span class="Required">red</span> text indicates information that you must replace with your website's URL and your <span class="mc-variable Products.RM variable">Rent Manager</span> <span class="Field">Company Code</span>. The <span class="Optional">green</span> text indicates the part of the query string which passes the unit type value.</p>
+                                                        <p class="Formula">https://<span class="Required">YourSiteName</span>.com/YourResults?rmwebsvc_command=search_result&amp;<span class="Required">CompanyCode</span>&amp;locations=&amp;fromsearch&amp;mode=javaScript&amp;<span class="Optional">unittypeeq=apartment</span></p>
+                                                        <h3><a name="H3_7"></a>Search Form</h3>
+                                                        <p>When using an HTML search form, the prospect's search submits search strings that pull up the relevant information for the search result page. To establish your search form's settings and format, you must first define the data set for specific hidden outputs.</p>
+                                                        <p>The available hidden inputs are described in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                        <p>Hidden Input </p>
+                                                                        <p>name="xxx"</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Required?</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">
+                                                                        <p>Value </p>
+                                                                        <p>value="xxx"</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>corpid</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p style="text-align: center;"><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Officially known as your <span class="Field">Company Code</span>, which points to your <span class="mc-variable Products.RM variable">Rent Manager</span> database. This is provided when you sign up for web access, and can also be found at the top of <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>headerfooter</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&#160;</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Enter <span class="Input">True</span> to display the header and footer in the output, or <span class="Input">False</span> to hide the header and footer. The header and footer includes information such as <span class="Field">Page 1 of 3</span> and <span class="BigButtons">Previous</span> and <span class="BigButtons">Next</span> navigation buttons.</p>
+                                                                        <p>If this input is not specified, the default is <span class="Input">True</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>locations</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&#160;</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The list of database locations to include, separated by commas.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>maxperpage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&#160;</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Enter a numeric value to determine the maximum number of results to display per page. If this input is not specified, the default maxperpage is <span class="Input">10</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>mode</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p style="text-align: center;"><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Specifies if you are using <span class="Input">javaScript</span> or <span class="Input">RawOutput</span>.</p>
+                                                                        <p>If using <span class="Input">RawOutput</span>, the table header/footer and page numbering is suppressed and the output displays only what is in the template.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>rmwebsvc_command</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p style="text-align: center;"><span class="material-symbols-outlined" style="font-size: large;">Check</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Specifies the type of template (side page) to use.</p>
+                                                                                        <p>Use the values provided below to return the associated output.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                                            <tbody>
+                                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                        <p>Property Detail</p>
+                                                                                                    </td>
+                                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                        <p class="Formula">PropertyDetail</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                        <p>Property List</p>
+                                                                                                    </td>
+                                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                        <p class="Formula">PropertyListing</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                        <p>Unit Detail</p>
+                                                                                                    </td>
+                                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                        <p class="Formula">Detail_View</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                        <p>Unit List</p>
+                                                                                                    </td>
+                                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                        <p class="Formula">Search_Result</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>template</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>&#160;</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The name of the template you wish to use.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Subheading">Example</p>
+                                                        <p>Below is an example of hidden inputs for a search form. Additionally, you must replace the instance of <span class="Input">Your CorpID</span> (marked in <span class="Required">red</span>) with your <span class="mc-variable Products.RM variable">Rent Manager</span> <span class="Field">Company Code</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Search-Form-CorpID-Example-NC-2025.png" alt="A scripting example displays the HTML code needed to apply hidden inputs for search forms, with Your CorpID highlighted." />
+                                                        </p>
+                                                        <p>&lt;form action="" method="get"&gt;<br />&lt;input type="hidden" name="rmwebsvc_command" id="rmwebsvc_command"<br />value="PropertyListing" /&gt;<br />&lt;input type="hidden" name="corpid" id="corpid" value="<span class="Required">Your CorpID</span>" /&gt;<br />&lt;input type="hidden" name="locations" id="locations" value="default" /&gt;<br />&lt;input type="hidden" name="mode" id="mode" value="javaScript" /&gt;<br />&lt;input type="hidden" name="headerfooter" id="headerfooter" value="true" /&gt;<br />&lt;input type="hidden" name="maxperpage" id="maxperpage" value="5" /&gt;<br />&lt;/form&gt;</p>
+                                                        <h3><a name="H3_8"></a>Filters</h3>
+                                                        <p>Filters limit what information displays on the website by applying specific criteria to the data submitted from a <span class="mc-variable Products.RM variable">Rent Manager</span> variable. This allows you to present multiple views of the stored data in a dataset without changing or affecting the data so that only values meeting the specified filtering criteria display on the website.</p>
+                                                        <p>The filter criteria is established through filter expressions composed of comparison operators (using names based on <span class="mc-variable Products.RM variable">Rent Manager</span> variables) or filter variables.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>When it comes to filter expressions, the spaces, colons, and hyphens in <span class="mc-variable Products.RM variable">Rent Manager</span> variables should be replaced with underscores. For example, the variable <span class="Field">unituserdef:pets accepted</span> should be written in the following way as a filter: <span class="Field">unituserdef_pets_accepted</span>.</p>
+                                                        </div>
+                                                        <p class="Subheading">Comparison Operators</p>
+                                                        <p>The available comparison operators are described in the table below. If no conditional is specified, <span class="Input">lk</span> is used by default.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Comparison Operators</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">
+                                                                        <p>Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>eq (EQ)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Equal to</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>ge (GE)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Greater than or equal to</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>gt (GT)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Greater than</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>le (LE)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Less than or equal to</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>lk (LK)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Like</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>lt (LT)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Less than</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>ne (NE)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Not equal to</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The difference between <span class="Input">Equal to</span> and <span class="Input">Like</span> is that <span class="Input">Equal to</span> analyzes the entire string for an exact match, while <span class="Input">Like</span> analyzes the string character by character looking for similar patterns.</p>
+                                                        </div>
+                                                        <p class="Subheading">Availability Filter Variable</p>
+                                                        <p>The variable filter below is used only if you are using a unit availability template that filters availability by <span class="Field">Vacancy and Unit Status</span>.</p>
+                                                        <p class="Formula">availabilitydate</p>
+                                                        <p>This variable is not used in the <span class="Input">*{xxx}*</span> format. It is passed in the filter form as a parameter as the date used to determine which units are available. If it is not passed, all units available on the current date return in the results.</p>
+                                                        <p class="Subheading">Sample Filter Expressions</p>
+                                                        <p>The table below provides various examples of filter expressions.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                        <p>Filter Variables</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>city</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>No comparison operator is specified, so the default operator <span class="Input">like</span> is used. Therefore, this returns properties/units with a <span class="Field">City</span> that is similar to the specified value.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>flooreq</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns units that are located on <span class="Field">Floor</span> the matches the specified value.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>marketrentge</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns units with a <span class="Field">Market Rent</span> amount that is greater than or equal to the specified value.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>unituserdef_number_of_windowsgt</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>This analyzes the unit UDF for <span class="Field">Number of Windows</span> and returns units with a number greater than the specified value.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="OnlineApplications" data-magellan-target="OnlineApplications"><a name="H2_4"></a>Online Applications</h2>
+                                                        <p>When creating a website, you may wish to link a user to an online application form where they can submit their information to apply for a unit. Below we provide the code for linking to the proper <span class="mc-variable Products.ApplyNow variable">Apply Now</span> website for prospects to submit their applications online.</p>
+                                                        <p><span class="mc-variable Products.ApplyNow variable">Apply Now</span> is a <span class="mc-variable Products.RM variable">Rent Manager</span> feature that allows prospective tenants to securely submit an online application and automates the process of receiving rental applications, collecting application fees, and screening prospects. You can also create and customize the application forms via <span class="mc-variable Products.RM variable">Rent Manager</span>'s application designer. For more information, refer to <a href="Apply-Now-Applications.html" class="MCXref xref">Apply Now Applications</a>.</p>
+                                                        <h3><a name="H3_9"></a>Link to <span class="mc-variable Products.ApplyNow variable">Apply Now</span></h3>
+                                                        <p>To direct the prospect to a general <span class="mc-variable Products.ApplyNow variable">Apply Now</span> link where they manually select the property and unit they wish to apply for, use the link below in your code. The <span class="Required">red</span> text indicates information that you must replace with your <span class="mc-variable Products.RM variable">Rent Manager</span> <span class="Field">Company Code</span>.</p>
+                                                        <p class="Navigation">https://<span class="Required">CompanyCode</span>.twa.rentmanager.com/applynow</p>
+                                                        <p>If you would like to provide a more specialized link that preselects a property, or a property and unit, you can add a more specific URL that defines that information.</p>
+                                                        <p>For example, to direct a prospect to apply for a specific unit, use the link below in your code. The <span class="Required">red</span> text indicates information that you must replace your <span class="mc-variable Products.RM variable">Rent Manager</span> <span class="Field">Company Code</span>. The <span class="Optional">green</span> text indicates the part of the query string which passes the property and unit values.</p>
+                                                        <p class="Navigation">https://<span class="Required">CompanyCode</span>.twa.rentmanager.com/applynow?pid=<span class="Optional">PropertyID</span>&amp;uid=<span class="Optional">UnitID</span></p>
+                                                        <p>For more information on how to customize and use <span class="mc-variable Products.ApplyNow variable">Apply Now</span> links, refer to <a href="Apply-Now-Links.html" class="MCXref xref">Create and Customize Apply Now Links</a>.</p>
+                                                        <h2 id="ScriptingVariables" data-magellan-target="ScriptingVariables"><a name="H2_5"></a>Scripting Variables</h2>
+                                                        <p>Specific variables are available for you to use to pull property-level and unit-level data. You can use both unit and property variables to pull unit information. Each of these fields can be found in the <span class="Section">Insertable Fields</span> of script builder. For more information, refer to <a href="Script-Scripting.html" class="MCXref xref">Scripting</a>.</p>
+                                                        <h3><a name="H3_10"></a>Property Variables</h3>
+                                                        <p>Property variables can be used in your templates to display property-specific information. Property-specific variables generally begin with <span class="Input">p</span>, but not always. Most fields listed in the table are located on each property's details page in <span class="mc-variable Products.RM variable">Rent Manager</span> unless otherwise specified.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                        <p> Insertable Field</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                        <p>Variable</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1"><span class="mc-variable Products.RM variable">Rent Manager</span> Data</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Append Unit List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{unitlist}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A list of units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Append Unit Type List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{unittypelist}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A list of unit types at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillcity}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The city listed for the property's address marked as <span class="Field">Billing</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing CSZ</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillcsz}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The city, state, and zip code listed for the property's address marked as <span class="Field">Billing</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Name 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillname1}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name entered in the <span class="Section">Other Information</span> tile's <span class="Field">Billing Name 1</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Name 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillname2}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name entered in the <span class="Section">Other Information</span> tile's <span class="Field">Billing Name 2</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillstate}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The state listed for the property's address marked as <span class="Field">Billing</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Street 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillstreet1}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The first line of the street listed for the property's address marked as <span class="Field">Billing</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Street 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillstreet2}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The second line of the street listed for the property's address marked as <span class="Field">Billing</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Billing Zip</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pbillzip}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The zip code listed for the property's address marked as <span class="Field">Billing</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pcity}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The city listed for the property's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pcomments}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Any text entered in the <span class="Section">Other Information</span> tile's <span class="Field">Comment</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>CSZ</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pcsz}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The city, state, and zip code listed for the property's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pemail}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The property's email address specified in the <span class="Section">General</span> tile's <span class="Field">Email</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Manager</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pmanager}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the property's primary manager entered in the <span class="Section">General</span> tile's <span class="Field">Manager</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Maximum Square Feet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{maxsquarefeet}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The largest amount entered in the <span class="Field">Square Footage</span> field on the <span class="Tab">General</span> tab of a unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Maximum Vacant Square Feet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{maxvacantsquarefeet}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The largest amount entered in the <span class="Field">Square Footage</span> field for an unoccupied unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Minimum Square Feet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{minsquarefeet}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The smallest amount entered in the <span class="Field">Square Footage</span> field for a unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Minimum Vacant Square Feet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{minvacantsquarefeet}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The smallest amount entered in the <span class="Field">Square Footage</span> field for an unoccupied unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Phone</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pphone}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The phone number marked as <span class="Field">Default</span> for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Detail URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{propertydetailurl}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The URL to the website's detail page for the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{ppid}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The unique, system-generated account number for the property in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{ppropertyname}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The entire name of the property entered in the <span class="Section">General</span> tile's <span class="Field">Full Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pproptype}* or *{ptype}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The category selected in the <span class="Section">General</span> tile's <span class="Field">Property Type</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property User Defined Fields</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{propuserdef:<span class="Required">udfname</span>}*</p>
+                                                                        <p class="Example">For example: </p>
+                                                                        <p>*{propuserdef:school district}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The value entered on the property for the specified property-level UDF, located on the property's <span class="Section">UDFs</span> tile.</p>
+                                                                        <p>Replace the <span class="Required">red</span> text with the UDF's <span class="Field">Name</span>. If the name contains more than one word, spaces are used to separate the words.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Short Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pshortname}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The abbreviated name of the property entered in the <span class="Section">General</span> tile's <span class="Field">Short Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pstate}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The state listed for the property's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pstreet1}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The first line of the street listed for the property's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pstreet2}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The second line of the street listed for the property's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tax ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{ptaxid}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The tax ID number entered in the <span class="Section">Other Information</span> tile's <span class="Field">Property Tax ID</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Occupied Square Feet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{occupiedsquarefeet}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total amount of the <span class="Field">Square Footage</span> entered on all occupied units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Square Footage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{ptotalsquarefootage}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The property's entire square footage amount entered in the <span class="Section">Other Information</span> tile's <span class="Field">Total Sq Ft</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Units</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{totalunits}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total number of units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Total Vacant Units</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{totalvacantunits}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total number of units at the property that are currently vacant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Vacant Square Feet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{vacantsquarefeet}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The total amount of the <span class="Field">Square Footage</span> entered on all vacant units at the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Zip</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>*{pzip}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The zip code listed for the property's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_11"></a>Unit Variables</h3>
+                                                        <p>Unit variables can be used in your templates to display unit-specific information. Most fields listed in the table are located on each unit's details page in <span class="mc-variable Products.RM variable">Rent Manager</span> unless otherwise specified.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                        <p>Insertable Field</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">
+                                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> Data</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenities</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{amen:<span class="Required">amenityname</span>}*</p>
+                                                                        <p class="Example">For example: </p>
+                                                                        <p>*{amen:Ceiling Fan}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns <span class="Input">Yes</span> if the unit has the specified amenity on the <span class="Window">Amenities</span> pop-up, and <span class="Input">No</span> if it does not.</p>
+                                                                        <p>Replace the <span class="Required">red</span> text with the amenity's <span class="Field">Name</span>. If the name contains more than one word, spaces are used to separate the words.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Amenity List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{amenitylist}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Generates an unordered list of the amenities specified on the unit's <span class="Window">Amenities</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Availability Date Result</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{availabilitydateresults}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The information returned depends on the <span class="Field">Search Date</span> selected for the unit profile in use, and the additional settings established for the option.</p>
+                                                                        <p>If <span class="Field">Single Date</span> is selected, the date the unit becomes available displays. If the unit was never occupied, it returns blank.</p>
+                                                                        <p>If <span class="Field">Date Range</span> is selected, a list of dates or date ranges on which the unit becomes available displays separated by commas.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bathrooms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{bathrooms}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The number of bathrooms in the unit entered in the <span class="Section">Miscellaneous</span> tile's <span class="Field">Bathrooms</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Bedrooms</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{bedrooms}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The number of bedrooms in the unit entered in the <span class="Section">Miscellaneous</span> tile's <span class="Field">Bedrooms</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{city}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The city listed for the unit's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>CSZ</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{csz}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The city, state, and zip code listed for the unit's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Floor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{floor}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The floor on which the unit is located as specified in the <span class="Section">General</span> tile's <span class="Field">Floor</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Market Rent</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{marketrent}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The current market rent <span class="Column">Amount</span> entered on the unit's <span class="Window">View Market Rent</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{pid}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The unique, system-generated account number for the unit's property in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{propname}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Field">Full Name</span> of the unit's property entered on the property's details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{proptype}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The type of property (such as <span class="Field">Apartment</span> or <span class="Field">Single Family</span>) where the unit is located, as selected on the property's details page in the <span class="Field">Property Type</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Raw Amenity List</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{amenitylistraw}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Returns a list of all amenities that includes the amenity name, description, and displays <span class="Input">Yes</span> or <span class="Input">No</span> depending on whether or not the unit has that amenity.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Raw Google Map URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{mapurl}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The URL to the unit's location on Google maps.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Raw Image Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{imagetyperaw:<span class="Required">imagetype</span>}*</p>
+                                                                        <p class="Example">For example: </p>
+                                                                        <p>*{imagetyperaw:Web Unit Images}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A list of links to the web collection images. Each link is separated by | (pipe character).</p>
+                                                                        <p>Replace the <span class="Required">red</span> text with the name of the image type to display. All images of that type on the property's <span class="Section">Images</span> tile display. If the name contains more than one word, spaces are used to separate the words. The name must match the image type name in <span class="mc-variable Products.RM variable">Rent Manager</span> exactly.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Square Footage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{squarefootage}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The square footage amount of the unit entered in the <span class="Section">General</span> tile's <span class="Field">Square Footage</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{state}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The state listed for the unit's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{street1}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The first line of the street listed for the unit's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{street2}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The second line of the street listed for the unit's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Detail URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{detailurl}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The URL to the website's detail page for the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{unitid}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The unique, system-generated account number for the unit in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{unit}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the unit entered in the <span class="Section">General</span> tile's <span class="Field">Name</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Type Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{unittype}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The text entered in the <span class="Field">Description</span> field of the unit's unit type.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Type ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{unittypeid}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The unique, system-generated account number for the unit's unit type in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit User Defined Field</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>*{unituserdef:<span class="Required">UDFname</span>}*</p>
+                                                                        <p class="Example">For example: </p>
+                                                                        <p>*{unituserdef:Smoking Allowed}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The value entered on the unit for the specified unit-level UDF, located on the unit's <span class="Section">UDFs</span> tile.</p>
+                                                                        <p>Replace the <span class="Required">red</span> text with the UDF's <span class="Field">Name</span>. If the name contains more than one word, spaces are used to separate the words. The name must match the UDF name in <span class="mc-variable Products.RM variable">Rent Manager</span> exactly.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Zip</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>*{zip}*</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The zip code listed for the unit's address marked as <span class="Field">Default</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_12"></a>Recursion Feature</h3>
+                                                        <p>Templates can be parsed recursively, meaning that if you define a script within a script, <span class="mc-variable Products.RM variable">Rent Manager</span> searches the database until a value is found. This function is particularly useful with user-defined fields (UDFs) and multisites. For example, you can assign a scripting variable as its field value and point to the value of the corresponding UDF. This feature can be used for property and unit UDFs.</p>
+                                                        <p>For example, consider a scenario where you have a property with the following two UDFs and values entered on the property's <span class="Section">UDFs</span> tile:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <col class="TableStyle-Standard-Column-Column1">
+                                                            </col>
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">UDF Name</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Test1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Hello World!</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Test2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>*{propuserdef:Test1}*</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>In this scenario, if you define <span class="Input">*{propuserdef:Test2}*</span> on an availability template, the system sees that the <span class="Field">Test2</span> UDF is pointing to the <span class="Field">Test1</span> UDF, and therefore returns <span class="Field">Test1</span>'s value of <span class="Input">Hello World!</span> in the output.</p>
+                                                        <h2 id="SampleSearchFormsandTemplates" data-magellan-target="SampleSearchFormsandTemplates"><a name="H2_6"></a>Sample Search Forms and Templates</h2>
+                                                        <p>Below are sample templates and search form coding you can reference when creating your own. Depending on the code you enter, the format and style of the search form may change. Below is an example of a search form:</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Search-Form-Image-NC-2025.png" alt="A custom website search forms displays filtering options for location, unit size, and pricing." />
+                                                        </p>
+                                                        <p>The examples below determine the web pages that display during the following workflow used by the prospect on your website:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>An initial search page where the prospect enters their filter criteria.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>The property list that is narrowed down by the search criteria the prospect entered.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>The property detail page for the property that the prospect selects from the list.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>The unit list for the selected property.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>The unit detail page for the unit selected by the prospect.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_13"></a>Initial Search Form Page</h3>
+                                                        <p>The code below defines an example of a search form that displays the initial search results. Additionally, you must replace the instance of <span class="Input">Your CorpID</span> (marked in <span class="Required">red</span>) with your <span class="mc-variable Products.RM variable">Rent Manager</span> <span class="Field">Company Code</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Initial-Search-Form-Example-NC-2025.png" alt="A scripting example displays the HTML code needed to set up the initial website search form, with Your CorpID highlighted." />
+                                                        </p>
+                                                        <p>&lt;!-- Replace "Your Page To Display Results" in the action of the form with your desired search results page, such as Search_Result --&gt;<br />&lt;form action="Your Page To Display Results" method="get"&gt;<br />&lt;input type="hidden" name="rmwebsvc_command" id="rmwebsvc_command" value="search_result" /&gt;<br />&lt;!-- Replace "Your CorpID" with your Company Code in the value field of rmwebsvc_corpid --&gt;<br />&lt;input type="hidden" name="rmwebsvc_corpid" id="rmwebsvc_corpid" value="<span class="Required">Your CorpID</span>" /&gt;<br />&lt;input type="hidden" name="rmwebsvc_mode" id="rmwebsvc_mode" value="JavaScript" /&gt;<br />&lt;input type="hidden" name="rmwebsvc_locations" id="rmwebsvc_locations" value="default" /&gt;<br />&lt;input type="hidden" name="fromsearch" value="fromsearch" /&gt;<br />&lt;table align="center"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;City&lt;/td&gt;<br />&lt;td&gt;&lt;input name="citylk" type="text" /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;State&lt;/td&gt;<br />&lt;td&gt;&lt;input name="statelk" type="text" /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Zip&lt;/td&gt;<br />&lt;td&gt;&lt;input name="ziplk" type="text" /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Bedrooms&lt;/td&gt;<br />&lt;td&gt;<br />&lt;select name="unituserdef_bedroomseq"&gt;<br />&lt;option value="1"&gt;1&lt;/option&gt;<br />&lt;option value="2"&gt;2&lt;/option&gt;<br />&lt;/select&gt;<br />&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Desired Move In Date&lt;/td&gt;<br />&lt;td&gt;&lt;input name="availabilitydate" type="text" /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;&amp;nbsp;&lt;/td&gt;<br />&lt;td&gt;&lt;input type="submit" value="Search/View All" /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;/form&gt;</p>
+                                                        <h3><a name="H3_14"></a>Property Listing Example</h3>
+                                                        <p>The code below defines an example of the property listing returned by a prospect's search. The code is set in a repeatable format.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Property-Listing-Example-NC-2025.png" alt="A scripting example displays the HTML code needed to set up the properties returned during a web search." />
+                                                        </p>
+                                                        <p>&lt;table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;&lt;a href='https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bpropertydetailurl%7D*'&gt;&lt;img src="https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bpropuserdef:Exterior%20Picture%7D*" border="0" /&gt;&lt;/a&gt;&lt;/td&gt;<br />&lt;td&gt;<br />&lt;table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;&lt;a href='https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bpropertydetailurl%7D*'&gt;*{ppropertyname}*&lt;/a&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Type *{ptype}*&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Street *{pstreet1}*&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;</p>
+                                                        <h3><a name="H3_15"></a>Property Details with Appended Unit Listing Example</h3>
+                                                        <p>The code below defines an example of the selected property's detail page, followed by a list of the units at the property. You can append the available unit list to the same property detail web page by inserting <span class="Input">*{unitlist}*</span> before the final <span class="Input">&lt;/div&gt;</span> in the code.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Property-Details-Appended-Unit-Listing-Example-NC-2025.png" alt="A scripting example displays the HTML code needed to set up the details and units that display for a selected property." />
+                                                        </p>
+                                                        <p>&lt;table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;*{ppropertyname}*&lt;/td&gt;<br />&lt;td&gt;&lt;a href='https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bpropertymapurl%7D*'&gt;Get Directions&lt;/a&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;&lt;img src="https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bpropuserdef:Exterior%20Picture%7D*" /&gt;&lt;/td&gt;<br />&lt;td&gt;Property Description *{propuserdef:Property Description}*&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;!-- append unit list --&gt;<br />*{unitlist}*</p>
+                                                        <h3><a name="H3_16"></a>Unit Listing Example</h3>
+                                                        <p>The code below defines an example of the unit listing returned when the prospect selects a property.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Unit-Listing-Example-NC-2025.png" alt="A scripting example displays the HTML code needed to set up the units listed when a property is selected from a web search." />
+                                                        </p>
+                                                        <p>&lt;table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Unit/Suite: *{unit}*&lt;/td&gt;<br />&lt;td&gt;Square Footage: *{squarefootage}*&lt;/td&gt;<br />&lt;td&gt;&lt;a href='https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bdetailurl%7D*'&gt;Unit Details&lt;/a&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;</p>
+                                                        <h3><a name="H3_17"></a>Unit Detail Example</h3>
+                                                        <p>The code below defines an example of the unit details returned when the prospect selects a unit.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Unit-Details-Example-NC-2025.png" alt="A scripting example displays the HTML code needed to set up the information displayed when a unit is selected from a web search." />
+                                                        </p>
+                                                        <p>&lt;table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;*{street1}*, *{city}*, *{state}* *{zip}*&lt;/td&gt;<br />&lt;td&gt;&lt;a href='https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bmapurl%7D*'&gt;Get Directions&lt;/a&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;br /&gt;<br />&lt;table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;&lt;img src="https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7BUNITUSERDEF:unit%20exterior%7D*" /&gt;&lt;/td&gt;<br />&lt;td&gt;<br />&lt;table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Unit Description: *{unituserdef:Unit Description}*&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Square Footage: *{squarefootage}*&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;br /&gt;<br />&lt;table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;&lt;img src="https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bunitserdef:Unit%20interior%201%7D*" /&gt;&lt;/td&gt;<br />&lt;td&gt;&lt;img src="https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bunitserdef:Unit%20interior%202%7D*" /&gt;&lt;/td&gt;<br />&lt;td&gt;&lt;img src="https://rmxhelp.rentmanager.com/Topics/Express/KB/*%7Bunitserdef:Unit%20interior%203%7D*" /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;br /&gt;<br />&lt;table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"&gt;<br />&lt;tr&gt;<br />&lt;td&gt;Additional Details *{unituserdef:Additional Details}*&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;</p>
+                                                        <h3><a name="H3_18"></a>Search Result Page Example</h3>
+                                                        <p>The search result page displays the HTML added in the template established in the <span class="mc-variable Products.RM variable">Rent Manager</span> system web preferences when defining templates. This page requires the <span class="Formula">RentManagerWebAgent.dll</span> file provided by <span class="mc-variable LCS.LCS variable">LCS</span>.</p>
+                                                        <p>The server-side code <span class="Input">&lt;% thisAvailableUnits.GetContent(); %&gt;</span> indicates where the template data is inserted into the page.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>In the code provided below, the portions of the code shaded in blue must be created in a new web page, or included in your existing web page.</p>
+                                                            <p>Additionally, you must replace the instance of <span class="Input">CorpID</span> (marked in <span class="Required">red</span>) with your <span class="mc-variable Products.RM variable">Rent Manager</span> <span class="Field">Company Code</span>.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/WDS-Search-Results-Example-NC-2025.png" alt="A scripting example displays the HTML code needed to set up the results that display for a web search, with CorpID and required code for the web page highlighted." />
+                                                        </p>
+                                                        <p>&lt;%@ Page Language="C#" %&gt;<br />&lt;%@ Import Namespace="System.IO" %&gt;<br />&lt;%@ Import Namespace="System.Collections.Generic" %&gt;<br />&lt;%@ Import Namespace="System.Text" %&gt;<br />&lt;%@ Import Namespace="System.Net" %&gt;<br />&lt;%@ Import Namespace="System.Text.RegularExpressions" %&gt;<br />&lt;%<br />RentManager.WebAgent.availableUnits thisAvailableUnits = new<br />RentManager.WebAgent.availableUnits();<br />thisAvailableUnits.URL = "https://<span class="Required">CorpID</span>.ua.rentmanager.com/";<br />thisAvailableUnits.corpID = "<span class="Required">CorpID</span>";<br />%&gt;<br />&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br />"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br />&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;<br />&lt;head&gt;<br />&lt;title&gt;Search Results&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;% thisAvailableUnits.GetContent(); %&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</p>
+                                                    
+</main>
+</body>
+</html>

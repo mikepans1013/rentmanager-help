@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Address Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Address.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Address.htm</a></p>
+
+                                                        <h1 id="AddressClassScript" data-magellan-target="AddressClassScript"><a name="aanchor733"></a>
+                                                            <a name="kanchor1222"></a><a name="H1"></a>Address Class (Script)</h1>
+                                                        <p>This class examines address information. The class can be preceded by the Owner, Primary Owner, Tenant, Contact, Unit, Property, or Prospect class and can be followed by an address-level scripting function. Addresses are found on the entity's details page for all classes except the Contact class, which is found on the <span class="Window">View Contacts</span> page.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">
+                                                                        <p role="rowheader">Example</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Address().FullAddress]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">
+                                                                        <p role="rowheader">Result</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the tenant's full address marked as <span class="Field">Default</span> on the tenant's <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">
+                                                                        <p role="rowheader">Example</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Property().Address().State]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">
+                                                                        <p role="rowheader">Result</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the state of the property's address marked as <span class="Field">Default</span> on the property's <span class="Section">Primary Address</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameter" data-magellan-target="ClassParameter"><a name="H2_1"></a>Class Parameter</h2>
+                                                        <p>This class can specify a single, optional parameter: a name or an index.</p>
+                                                        <h3><a name="H3_1"></a>Name</h3>
+                                                        <p>Enter the label of the address type in quotes to specify that address in the script. This is the recommended method because if the order of the addresses is changed, the index values also change.</p>
+                                                        <p colspan="2" class="Example">[Prospect.Address("Alternate").FullAddress]</p>
+                                                        <p colspan="2">Displays the prospect's address named <span class="Field">Alternate</span>.</p>
+                                                        <h3><a name="H3_2"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific address on an account by using a number to identify each address listed. For example, if there are three addresses listed on a tenant’s account, they are referenced by indexes 0, 1, and 2. You can specify which address you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the address marked as <span class="Field">Default</span>.</p>
+                                                        <p>Addresses are pulled from different locations for each unique parent class. The following table provides the location from which address information for each parent class is found.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">
+                                                                        <p>Class</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">
+                                                                        <p>Location</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Owner</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Window">Owner</span> details page on the <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Tenant</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Window">Tenant</span> details page on the <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Contact</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Window">View Contacts</span> page in the <span class="Section">Addresses</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Window">Unit</span> details page on the <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Window">Property</span> details page on the <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Prospect</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The <span class="Window">Prospect</span> details page on the <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Vendor</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The <span class="Window">Vendor</span> details page on the <span class="Section">Addresses</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p colspan="2" class="Example">[Tenant().Address(1).City]</p>
+                                                        <p colspan="2">Displays the address in the first address type listed on the tenant's account that is not checked as <span class="Field">Default</span>.</p>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1,Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.11,Snippet Conditions.12,Snippet Conditions.17,Snippet Conditions.18,Snippet Conditions.24,Snippet Conditions.25,Snippet Conditions.14,Snippet Conditions.21,Snippet Conditions.34,Snippet Conditions.35"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <div class="warning" data-mc-conditions="Snippet Conditions.1">
+                                                            <p class="label1">Warning</p>
+                                                            <p>
+                                                                <img src="../../../../assets/Resources/Images/PNGs/Scripting%20-%20Address%20Details%20-%20SG%20-%208-20-20.png" alt="" />
+                                                            </p>
+                                                            <p>The following address functions display only if they are entered on the <span class="Window">Address Details</span> pop-up (which is accessed from all accounts by clicking <span class="BigButtons">Details</span> in the <span class="Section">Address</span> section):</p>
+                                                            <ul>
+                                                                <li>City</li>
+                                                                <li>City State Postal Code</li>
+                                                                <li>Postal Code</li>
+                                                                <li>State</li>
+                                                                <li>Street 1</li>
+                                                                <li>Street 2</li>
+                                                            </ul>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.1">[<span class="Required">Class().</span>Address().City]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the city of the default address for the specified class.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.24,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>City State Postal Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.1">[<span class="Required">Class().</span>Address().CityStatePostalCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the city, state, and postal code of the default address for the specified class. The output is formatted as displayed below:</p>
+                                                                        <p class="Input" data-mc-conditions="Snippet Conditions.1">Norwood, OH 45212</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Full Address</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent75">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.1">[<span class="Required">Class().</span>Address().FullAddress]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.1">Displays the full default address for the specified class. The output is formatted as displayed below:</p>
+                                                                            <p class="Input">4600 Hawkins Lane<br />Unit H-13<br />Norwood, OH 45212</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.18">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Is Default</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.1">[<span class="Required">Class().</span>Address().IsDefault]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.1">The default output of this script is always <span class="Input">1</span>, because <span class="mc-variable Products.RM variable">Rent Manager</span> always pulls the address marked <span class="Field">Default</span>. The exception is when a parameter for a different address is specified, in which case the output is <span class="Input">0</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.24,Snippet Conditions.1,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Postal Code</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.1">[<span class="Required">Class().</span>Address().PostalCode]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the postal code of the default address for the specified class.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.24,Snippet Conditions.1,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.1">[<span class="Required">Class().</span>Address().State]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the state of the default address for the specified class.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street 1</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Address().Street1]</p>
+                                                                            <p>Displays the first line of the street of the default address for the specified class.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Street 2</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div>
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Address().Street2]</p>
+                                                                            <p>Displays the second line of the street of the default address for the specified class.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.1,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.18,Snippet Conditions.36,Snippet Conditions.37">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p data-mc-conditions="Snippet Conditions.1,Snippet Conditions.2,Snippet Conditions.8,Snippet Conditions.18,Snippet Conditions.36">Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.1">[<span class="Required">Class().</span>Address().Type]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the address type <span class="Field">Label</span> for the default address for the specified class.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

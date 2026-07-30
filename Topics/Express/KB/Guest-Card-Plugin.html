@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set Up Guest Card Plug-in</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Guest-Card-Plugin.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Guest-Card-Plugin.htm</a></p>
+
+                                                        <h1 id="SetUpGuestCardPlugin" data-magellan-target="SetUpGuestCardPlugin"><a name="kanchor1944"></a><a name="H1"></a>Set Up Guest Card Plug-in</h1>
+                                                        <p>The guest cards tool allows you to place a contact form on your website for prospects or owner prospects to quickly submit information requesting that you contact them. This topic covers adding a guest card plug-in to your WordPress website and other non-WordPress websites.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Before setting up the plug-in for a website, you must create a guest card template that defines which questions a prospect or owner prospect should be asked, and in which <span class="mc-variable Products.RM variable">Rent Manager</span> fields to store that information. You can create unique guest card templates for each property and/or unit to ensure that all of the relevant information is provided by the contact. For more information, refer to <a href="../Other/Guest-Cards-Add.html" class="MCXref xref">Add a Guest Card Template</a>.</p>
+                                                            <p>Additionally, if you are using a non-WordPress website, you (or your website developer) also must enable JQuery on your website.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p>To ensure that your web developer can access necessary information from <span class="mc-variable Products.RM variable">Rent Manager</span>, a user account must be created for them with the following privileges:</p>
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Guest Card Templates</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="AddPlugintoWordPressWebsite" data-magellan-target="AddPlugintoWordPressWebsite"><a name="H2_1"></a>Add Plug-in to WordPress Website</h2>
+                                                        <p>After creating a template, you (or your website developer) must configure the plug-in in your WordPress settings.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>WordPress requires a paid membership to add third-party plug-ins to your site. For more information, refer to the <a href="https://wordpress.com/support/contact/" target="_blank">WordPress Support Center</a>.</p>
+                                                        </div>
+                                                        <p>To add a plug-in to your WordPress website, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Download the plug-in file at <a href="http://cdn.rentmanager.com/GuestCards/plugin/wordpress/v1/rmguestcards.zip">Rent Manager Guest Card Plugin</a>.<br />The file is automatically saved to your downloads folder.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In a web browser, log in to your WordPress site and navigate to <span class="Tab">Plugins</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the top right, click <span class="BigButtons">Upload</span>.<br />The <span class="Window">Install plugin</span> page displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select the downloaded guest card plug-in zip file, and click <span class="BigButtons">Install Now</span>.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section"><span class="mc-variable Products.RM variable">Rent Manager</span> Guest Card</span> section, click <span class="BigButtons">Activate</span>.<br />The <span class="Field">RM Guest Card Settings</span> display in the <span class="Section">Settings</span> section.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="Field">RM Guest Card Settings</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Guest-Card-Plugin-WordPress.png" alt="The Rent Manager Guest Card Options pop-up displays options for setting up guest cards on a WordPress website." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Enter information into the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use guest cards default stylesheet?</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>When checked, the guest card form's appearance is supplied by <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>Unless you are working with a developer who can add custom styling to the form, leave this option checked. If unchecked, the form pulls from existing styles from your WordPress theme, and most themes do not have styling in place for the guest card.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>The name of the database you wish to connect to</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the database (also called a Company Code) which should receive the information collected from guests on your site. The Company Code can be found in various places in <span class="mc-variable Products.RM variable">Rent Manager</span>, including the top right of the menu ribbon in <span class="mc-variable Products.RMX variable">Rent Manager Express</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>External services URL</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An optional URL that is used to connect to external services. By default, this is a production URL, but in a development or quality assurance environment this can be changed to map to external services or locally.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>For most users, this option and the following <span class="Field">Access token used to connect to External Services</span> option are not used during the setup.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Access token used to connect to External Services</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If using the optional <span class="Field">External services URL</span>, enter a valid token with guest cards privileges.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Click <span class="BigButtons">Save Changes</span>.</p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>Copy the shortcode, and navigate to the page in the WordPress <span class="Section">Admin</span> panel on which the guest card will appear. Required values are red, optional values are green.</p>
+                                                                <p>[rm-guest-cards template='<span class="Required">YourTemplateName</span>' location='<span class="Required">YourFriendlyLocationName</span>' property='<span class="Optional">YourPropertyShortName</span>' unit='<span class="Optional">YourUnitID</span>']</p>
+                                                            </li>
+                                                            <li value="10">
+                                                                <p>Paste the shortcode into the appropriate location, and replace the following default values with your information:</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you are using WordPress version 5.0 or higher and using the block editor, you must first insert a shortcode block on your page before pasting the shortcode.</p>
+                                                                </div>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Default Value</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>'<span class="Required">yourtemplatename</span>'</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the guest card template you wish to use.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>'<span class="Required">yourfriendlylocationname</span>'</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The specific <span class="mc-variable Products.RM variable">Rent Manager</span> location from which you would like to pull and submit template information.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="11">
+                                                                <p>Optionally, if no property is specified by the user or if the template contains no field that maps to a property, replace '<span class="Required">yourpropertyshortname</span>' with the short name or PropertyID of the property that this plug-in defaults to. If no property is specified, the default property on the guest card template is used when creating the prospect. If you do not wish to specify a property, remove the following text from the shortcode: property='<span class="Required">yourpropertyshortname</span>'.</p>
+                                                            </li>
+                                                            <li value="12">
+                                                                <p>Optionally, replace '<span class="Optional">yourunitID</span>' with the specific system-level UnitID of the unit which is marked as the prospect’s interested unit. If you do not wish to specify a unit, remove the following text from the shortcode: unit='<span class="Optional">yourunitID</span>'.</p>
+                                                            </li>
+                                                            <li value="13">
+                                                                <p>Click <span class="BigButtons">Update</span> to save your changes.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="AddPlugintoOtherTypesofWebsites" data-magellan-target="AddPlugintoOtherTypesofWebsites"><a name="H2_2"></a>Add Plug-in to Other Types of Websites</h2>
+                                                        <p>After creating a template and enabling JQuery, you (or your website developer) must configure the plug-in for your website.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>For an example of the plug-in, sample code can be downloaded at <a href="https://rentmanager.com/wds/Guest_Card_Startup_Files.zip" target="_blank" data-mc-conditions="Content.Update">rentmanager.com</a>.</p>
+                                                        </div>
+                                                        <p>To add a plug-in to your website, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Reference the following required CDN in your file.</p>
+                                                                <p class="Formula">&lt;script type="text/javascript" src="https://cdn.rentmanager.com/js/GuestCardForm.js"&gt;&lt;/script&gt;</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Include the following CSS to add default styling to the form. The form will also pull from your site's built-in styles.</p>
+                                                                <p class="Formula">&lt;link rel="stylesheet" type="text/css" href="https://cdn.rentmanager.com/css/GuestCardForm.css"&gt;</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Include a link to Google's reCAPTCHA API.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Google hosts this link. Therefore, it may change without notice.</p>
+                                                                </div>
+                                                                <p class="Formula">&lt;script type="text/javascript" src="https://www.google.com/recaptcha/api.js"&gt;&lt;/script&gt;</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Create a &lt;div&gt; or other HTML element for your form with any class or ID, such as in the following example. The guest card form is generated inside of this element.</p>
+                                                                <p class="Formula">&lt;div class="rmGuestCardContainer"&gt;&lt;/div&gt;</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Add an options variable in your JavaScript with any name. Available options are defined in the plug-in options below.<br />For example, (replace the text in <span class="Optional">green</span> with your information):</p>
+                                                                <p>var rmGuestCardOptions = {</p>
+                                                                <p>CompanyCode: "<span class="Optional">YOURCOMPANYCODE</span>",</p>
+                                                                <p>Location: "<span class="Optional">Default</span>",</p>
+                                                                <p>TemplateName: "<span class="Optional">YOURTEMPLATE</span>",</p>
+                                                                <p>DefaultProperty: "<span class="Optional">PROPSHORTNAME</span>",</p>
+                                                                <p>UnitID: <span class="Optional">999</span></p>
+                                                                <p>}</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In your script, initialize the form using the code below. Use the class, ID, and options that you specified above.</p>
+                                                                <p class="Formula">$('.rmGuestCardContainer').GuestCardForm("initialize", rmGuestCardOptions);</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_1"></a>Plug-in Options</h3>
+                                                        <p>As part of the guest cards plug-in, several options are available to be passed to modify the plug-in's behavior to suit the needs of any site. The following options are passed in a single object, upon initialization of the guest cards plug-in. Required options are noted in <span class="Required">red</span>.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option Name</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description and Default Function</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p class="Required">CompanyCode</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of your database, which is used when connecting to the <span class="mc-variable Products.RM variable">Rent Manager</span> API.</p>
+                                                                        <p>Default value: N/A</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p class="Required">Location</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The specific <span class="mc-variable Products.RM variable">Rent Manager</span> database location from which you would like to pull and submit template information. For more information, refer to <a href="../CSH/Locations-Manage.html" class="MCXref xref">Manage Locations (Pop-Up)</a><a href="../CSH/Locations-Manage.html" class="MCXref xref">Manage Locations (Pop-Up)</a>.</p>
+                                                                        <p>Default value: N/A</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p class="Required">TemplateName</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the guest card template from which you wish to pull field information. This corresponds to the established guest card template in <span class="mc-variable Products.RM variable">Rent Manager</span>. Multiple templates may be used.</p>
+                                                                        <p>Default value: N/A</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>DefaultProperty</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The short name or PropertyID of the property that this plug-in defaults to if none is specified by the user or if the template contains no field that maps to a property. If no property is entered here in the code, then the default property specified on the guest card template is used when creating the prospect.</p>
+                                                                        <p>The PropertyID is the system-generated ID number of the property. To obtain a property's ID number, you can open a letter template and run the following script:</p>
+                                                                        <p class="Formula">[Property().PropertyID]</p>
+                                                                        <p>For more information, refer to <a href="../Other/Scripts/Class-Property.html" class="MCXref xref">Property Class (Script)</a>.</p>
+                                                                        <p>Default value: None</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>UnitID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>If passed in, UnitID adds an entry to the prospect’s interested units. This corresponds to the system-level ID. You can view a unit's ID by viewing the order in which the units display on the <span class="Report">Unit ID Listing</span> report based on the numbers in the <span class="Column">Unit ID</span> column. This report can be obtained by downloading it from the online template library (OTL). For more information, refer to <a href="../CSH/Online-Template-Library.html" class="MCXref xref">Online Template Library (Page)</a>.</p>
+                                                                        <div class="prefs">
+                                                                            <p class="label1">Related Preferences</p>
+                                                                            <p>If you are using Unit Availability and have established which units in <span class="mc-variable Products.RM variable">Rent Manager</span> are considered available to rent when a visitor conducts a unit availability search on your <span class="mc-variable Products.WTS variable">Web Template Suite</span> website., set this equal to *{unitid}*. For more information, refer to <a href="../Other/System-Web-Preferences/Availability-Profile.html" class="MCXref xref">Availability Profile (System Web Preferences)</a>.</p>
+                                                                        </div>
+                                                                        <p>Default value: None</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>StartInitializationFunction</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This option may be passed in to begin running immediately, prior to initialization.</p>
+                                                                        <p>Default value: None</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>EndInitializationFunction</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This option may be passed in to run after initialization.</p>
+                                                                        <p>Default value: None</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>SubmitFunction</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This option may be passed in to run after submission.</p>
+                                                                        <p>Default value: None</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>ErrorHandlingFunction (xhr, textStatus, err, element)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>This option may be passed in to override error handling from external services and API exceptions in the plug-in. This function takes in the returned xhr object, textstatus, and error, and the parent element on which the plug-in is instantiated.</p>
+                                                                        <p>Default value: A default function for error handling.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

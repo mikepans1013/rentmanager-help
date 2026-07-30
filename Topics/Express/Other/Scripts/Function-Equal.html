@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equal Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Equal.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Equal.htm</a></p>
+
+                                                        <h1 id="EqualFunctionScript" data-magellan-target="EqualFunctionScript"><a name="aanchor495"></a>
+                                                            <a name="kanchor833"></a><a name="H1"></a>Equal Function (Script)</h1>
+                                                        <p>This function compares the values of two text strings to determine whether or not they match. The function displays <span class="Input">1</span> if the values match and <span class="Input">0</span> if they do not. The case of alphabetic characters must be the same to return a match.</p>
+                                                        <p>This function can be utilized by the following class:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-System.html">System</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[System.Equal()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[Equal(<span class="Required">"Value1","Value2"</span>)]</p>
+                                                        <h3 colspan="2" class="Required">Value1</h3>
+                                                        <p colspan="2">This is the first string for the comparison.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[Equal("Margot Lawson","Margot Lawson")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the value <span class="Input">1</span>, as both strings match exactly.</p>
+                                                        <h3 class="Required">Value2</h3>
+                                                        <p colspan="2">This is the second string for the comparison.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.1">[Equal("Margot Lawson","Margaret Lawson")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1">Displays the value <span class="Input">0</span>, as the strings do not match exactly.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[System.Equal("A","A")]</p>
+                                                        <p>Displays the value <span class="Input">1</span>.</p>
+                                                        <p class="Example">[System.Equal("A","a")]</p>
+                                                        <p>Displays the value <span class="Input">0</span> because one character is uppercase and the other is lowercase.</p>
+                                                        <p class="Example">[System.Equal("a","z")]</p>
+                                                        <p>Displays the value <span class="Input">0</span>.</p>
+                                                        <p class="Example">[System.Equal("3","3")]</p>
+                                                        <p>Displays the value <span class="Input">1</span>.</p>
+                                                        <p class="Example">[System.Equal("1","3")]</p>
+                                                        <p>Displays the value <span class="Input">0</span>.</p>
+                                                    
+</main>
+</body>
+</html>

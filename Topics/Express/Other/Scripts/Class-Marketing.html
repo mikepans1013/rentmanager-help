@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marketing Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Marketing.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Marketing.htm</a></p>
+
+                                                        <h1 id="MarketingClassScript" data-magellan-target="MarketingClassScript"><a name="aanchor568"></a>
+                                                            <a name="kanchor963"></a><a name="H1"></a>Marketing Class (Script)</h1>
+                                                        <p>This class examines data about property or unit marketing, such as online listing information. The class can be preceded by the Property class or the Unit class and can be followed by a marketing-level scripting function. Functions in this class typically evaluate fields on the <span class="Window">Marketing Setup</span> pop-up of the specified property or unit.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The parent class for Marketing functions must match the level in which online listings are enabled. For example, if you wanted to generate the <span class="Field">Feed Type</span> within a unit-type letter template for a unit with property marketing enabled, you would use the following script:</p>
+                                                            <p class="Formula">[Property().Marketing.FeedType]</p>
+                                                            <p>To generate information for a unit when property-level marketing is enabled, Property must be the parent class.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Property().Marketing.Laundry]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the selection(s), separated by commas, checked in the <span class="Field">Laundry</span> drop-down list on the property's <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Features</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Unit().Marketing.CompanyName]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Company Info</span> as entered on the unit's <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_1"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1,Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.11,Snippet Conditions.12,Snippet Conditions.17,Snippet Conditions.18,Snippet Conditions.24,Snippet Conditions.25,Snippet Conditions.14,Snippet Conditions.21,Snippet Conditions.34,Snippet Conditions.35"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Agent Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent10">
+                                                                            <p class="Formula">[<span class="Required">Class()</span>.Marketing.AgentEmail]</p>
+                                                                            <p>Displays the leasing agent's <span class="Field">Email Address</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Agent First Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent11">
+                                                                            <p class="Formula">[<span class="Required">Class()</span>.Marketing.FirstName]</p>
+                                                                            <p>Displays the leasing agent's <span class="Field">First Name</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Agent Last Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.LastName]</p>
+                                                                        <p>Displays the leasing agent's <span class="Field">Last Name</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Agent Phone</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent12">
+                                                                            <p class="Formula">[<span class="Required">Class()</span>.Marketing.AgentPhone]</p>
+                                                                            <p>Displays the leasing agent's <span class="Field">Phone Number</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Company City</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.CompanyCity]</p>
+                                                                        <p>Displays the company's <span class="Field">City</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Company Info</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.CompanyInfo]</p>
+                                                                        <p>Displays the <span class="Field">Company Name</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Company State</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.CompanyState]</p>
+                                                                        <p>Displays the company's <span class="Field">State</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Company Street Address</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.CompanyStreetAddress]</p>
+                                                                        <p>Displays the company's <span class="Field">Street</span> address as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Company Website</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.CompanyWebsite]</p>
+                                                                        <p>Displays the <span class="Field">Company Website</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Company ZIP</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.CompanyZIP]</p>
+                                                                        <p>Displays the company's <span class="Field">Postal Code</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Contact Email</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.ContactEmail]</p>
+                                                                        <p>Displays the <span class="Field">Contact Email</span> as entered on the <span class="Window">Marketing Setup</span> tab in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Contact Phone</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.ContactPhone]</p>
+                                                                        <p>Displays the <span class="Field">Contact Phone</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Contact Information</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Deposit Fees</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent52">
+                                                                            <p class="Formula">[<span class="Required">Class()</span>.Marketing.DepositFees]</p>
+                                                                            <p>Displays the security <span class="Field">Deposit Fee(s)</span> required for rental as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Listing Details</span> section.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Feed Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.FeedType]</p>
+                                                                        <p>Displays the <span class="Field">Feed Type</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.12,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-Count.html">Image Count</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.12">[<span class="Required">Class().</span>Marketing.ImageCount()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.12">Displays the number of images assigned to the <span class="Section">Images</span> section. Only images associated with the image type(s) specified on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Field">Unit Images</span> or <span class="Field">Property Images</span> drop-down list.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.29,Snippet Conditions.19,Snippet Conditions.12,Snippet Conditions.8,Snippet Conditions.2">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Image-URL.html">Image URL</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.12">[<span class="Required">Class().</span>Marketing.ImageURL()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.12">Displays the file path to the source file of the selected image on the <span class="Section">Images</span> section. Only images associated with the type(s) specified on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Field">Unit Images</span> or <span class="Field">Property Images</span> drop-down list.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Images.html">Images</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.Images()]</p>
+                                                                        <p>Displays the image from the property or unit <span class="Section">Images</span> section. Only images of the type(s) specified on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Field">Unit Images</span> or <span class="Field">Property Images</span> drop-down list are evaluated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Incl. Utilities</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.Incl.Utilities]</p>
+                                                                        <p>Displays the selection(s), separated by commas, checked in the <span class="Field">Incl. Unities</span> drop-down list on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Features</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Latitude Coordinate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent104">
+                                                                            <p class="Formula">[<span class="Required">Class()</span>.Marketing.LatitudeCoordinate]</p>
+                                                                            <p>Displays the <span class="Field">Latitude</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Laundry</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.Laundry]</p>
+                                                                        <p>Displays the selection(s), separated by commas, checked in the <span class="Field">Laundry</span> drop-down list on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Features</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Lease Terms</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.LeaseTerms]</p>
+                                                                        <p>Displays the selection(s), separated by commas, checked in the <span class="Field">Lease Terms</span> drop-down list on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Listing Details</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Listing URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent120">
+                                                                            <p class="Formula">[<span class="Required">Class()</span>.Marketing.ListingURL]</p>
+                                                                            <p>Displays the <span class="Field">Listing URL</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Longitude Coordinate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.LongitudeCoordinate]</p>
+                                                                        <p>Displays the <span class="Field">Longitude</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Marketing Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.MarketingDescription]</p>
+                                                                        <p>Displays the text or value as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Marketing Description</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Marketing Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #cccccc;">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>.Marketing.MarketingName()]</p>
+                                                                        <p>Displays the <span class="Field">Marketing Name</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Section">Advanced Settings</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Named Insured</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Lease().Insurance().NamedInsured]</p>
+                                                                        <p>Displays the full name of the <span class="Field">Named Insured</span> associated with the policy on the tenant's primary lease.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35,Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Pets</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent148">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.12">[<span class="Required">Class()</span>.Marketing.Pets]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.12">Displays the selection(s), separated by commas, checked in the <span class="Field">Pets</span> drop-down list on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Features</span> section.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Price</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.Price]</p>
+                                                                        <p>Displays <span class="Field">Price</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Listing Details</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12,Snippet Conditions.19,Snippet Conditions.6">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Property Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.PropertyType]</p>
+                                                                                        <p>Displays the <span class="Field">Property Type</span> as entered in <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Rental Classification</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #cccccc;">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>.Marketing.RentalClassification]</p>
+                                                                        <p>Displays the <span class="Field">Rental Classification</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Section">Advanced Settings</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Rental Type</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.RentalType]</p>
+                                                                        <p>Displays the <span class="Field">Rental Type</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Section">Advanced Settings</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.23,Snippet Conditions.12,Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.38">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Status</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.12">[<span class="Required">Class()</span>.Marketing.Status]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.12">Displays the selection in the <span class="Field">Status</span> field in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #cccccc;">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>.Marketing.UnitNumber]</p>
+                                                                        <p>Displays the <span class="Field">Unit Number</span> as entered on the <span class="Window">Marketing Setup</span> pop-up in the <span class="Section">Listing Details</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Virtual Tour URL/ Filepath</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class()</span>.Marketing.VirtualTourURL_Filepath]</p>
+                                                                        <p>Displays the <span class="Field">Virtual Tour URL</span> as entered in the <span class="Window">Marketing Setup</span> pop-up's <span class="Window">Advanced Settings</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

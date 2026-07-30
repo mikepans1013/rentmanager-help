@@ -1,0 +1,259 @@
+# Application Details (Page)
+
+Source: https://rmxhelp.rentmanager.com/Topics/Express/CSH/Application-Details.htm
+
+Applications are part of Apply Now and allow you to track electronic applications submitted by prospects. If you use the Web Template Suite , Web Portal Suite , or Web Developer Suite for Apply Now , those electronic applications are automatically imported to your Rent Manager database where you can choose to use that application's information to create a new prospect or tenant record or update an existing one.
+
+ More Information
+
+ This feature is licensed and must be purchased separately. For more information, contact your sales representative at sales@rentmanager.com .
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Tenants/Prospects
+ Application
+ View
+
+ For more information, refer to Control User Access .
+
+ To review the details of a submitted application, go to arrow_forward Rental Info arrow_forward Leasing arrow_forward Applications and select an application from the list.
+
+ Summary
+
+ In this section, the applicant's account information, template used, and creation and update information associated with the application display.
+
+ The following fields display in this section:
+
+ Field
+ Description
+
+ Account Name
+
+ The name of the main prospect or tenant account associated with the application and their system-generated account number.
+
+ Application Status
+
+ One of two statuses display: In Progress or Completed .
+
+ Completed
+
+ All applications and sub-applications are submitted.
+
+ In Progress
+
+ At least one applicant created an Apply Now account, but not all applications or sub-applications have been submitted.
+
+ Unable to Verify Identity
+
+ At least one applicant has failed the ID verification after three attempts or if, on the ID Verification pop-up, My information is correct was selected after submitting a failed ID verification attempt.
+
+ Applications Completed
+
+ The number of finished applications that are submitted, versus the total number of applications sent out, in the following format:
+
+ Finished Applications Received of Total Applications Sent
+
+ Created Date
+
+ The date on which the first applicant accessed the application.
+
+ Completed Date
+
+ If the application has a status of Completed , the date on which the application and all sub-applications were completed. If the application has a status of In Progress , no date displays.
+
+ Last Updated
+
+ The most recent date that an applicant made a change to their application.
+
+ Applicants
+
+ In this section, each applicant and their name, email, and status displays.
+
+ The following columns display in this section:
+
+ Column
+ Description
+
+ Type
+
+ The primary applicant has a type of Applicant . Any subapplicants display the Applicant Type they selected on their sub-application template.
+
+ Name
+
+ The name of the applicant or sub-applicant as entered by the primary applicant. Primary applicants fill out their own name, and also enter the name(s) of all co-applicants before submitting their own application.
+
+ Email
+
+ The email address of the applicant or subapplicant as entered by the primary applicant. Primary applicants fill out their own email address, and also enter the email(s) of all co-applicants before submitting their own application.
+
+ Screening
+
+ Displays Yes if the applicant was automatically or manually screened. Otherwise, this field displays as blank.
+
+ ID Verification
+
+ One of five statuses may display: In Progress , Overridden ,  Resent , Unable to Verify , or Verified . If the applicant was not required to complete an ID verification request, None displays.
+
+ In Progress
+
+ The ID verification screening is enabled in the online application, but no confirmation response has been received from Ibbie.
+
+ None
+
+ There is no ID verification order for the applicant's application.
+
+ Overridden
+
+ The applicant's identity has not been verified, and a Rent Manager user accessed the Continue Income Verification pop-up and selected Continue Income Verification . This action allows the applicant to resubmit the Income verification order while bypassing the ID verification check.
+
+ Resent
+
+ The applicant is prompted to resubmit an ID verification order after a Rent Manager user accessed the Resend ID Verification pop-up and selected Resend .
+
+ Unable to Verify
+
+ The ID verification order was submitted, but an error code response was received by Ibbie.
+
+ Verified
+
+ The applicant has passed the ID verification and passcode authentication checks. A confirmation response was received from Ibbie.
+
+ Income Verification
+
+ One of eight statuses may display: Canceled , Completed , Error , Expired , Expired - Link Requested , Failed to Create Order , Invitation Error , or Submitted . If the applicant was not required to complete an income verification request, None displays.
+
+ Canceled
+
+ The income verification invitation can no longer be completed by the tenant or prospect. Links generated by the income verification request expire forty-eight hours after being sent.
+
+ To archive the existing income verification request and generate a new verification invitation link for the applicant, click Create .
+
+ Completed
+
+ The income verification report is available on the tenant or prospect account.
+
+ Error
+
+ AmRent encountered an issue during the income verification process and a new income verification invitation link must be sent.
+
+ To archive the existing income verification request and generate a new verification invitation link for the applicant, click Create .
+
+ Expired
+
+ The most recent income verification invitation link has expired.
+
+ If the applicant has an expired link and requested a new link through Tenant Web Access (TWA) , the status Expired - Link Requested displays. To send a new income verification link to the applicant, click Resend .
+
+ Related Preferences
+
+ Income verification invitation links have a limited number of times that a tenant or prospect can access them before they expire, as determined by the value entered for the Allow applicant to refresh the expired verification link X times in system preferences or in the application template's settings. For more information, refer to Set Up Apply Now Application Settings .
+
+ Failed to Create Order
+
+ The income verification order could not be processed due to missing or invalid fields in Rent Manager .
+
+ Invitation Error
+
+ AmRent was unable to send an income verification invitation link to the tenant or prospect. This error is typically caused by an invalid phone number or email address.
+
+ To send a new income verification link to the applicant, click Resend .
+
+ Submitted
+
+ An income verification invitation link has been delivered to the tenant or prospect.
+
+ Status
+
+ One of five statuses may display: Awaiting Income Verification , Awaiting Payment , Awaiting Screening Products , Awaiting Screening Submission , Completed , In Progress , or Not Started .
+
+ Awaiting Income Verification
+
+ The applicant submitted their completed application, but the income verification is still in progress. This status displays only if there are no pending screenings for any applicants.
+
+ Awaiting Payment
+
+ The applicant submitted their completed application, but has not submitted the required payment. This status also displays if the applicant is currently on the payment screen, or closed the application without making payment.
+
+ More Information
+
+ This status does not display if either of the following are true:
+
+ -
+ The applicant is not charged an application fee.
+
+ -
+ The option Do not require payment for application to be submitted is enabled in system web preferences and the applicant has chosen to pay later. For more information, refer to Tenant Web Access Apply Now ePay (System Web Preferences) .
+
+ Awaiting Screening Products
+
+ The applicant submitted their completed application, but the screening check and income verification are still in progress.
+
+ Awaiting Screening Submission
+
+ At least one applicant submitted their completed application and payment while the remaining applicants have not. Screenings are not conducted until all applicants and subapplicants have submitted their applications and all required payment has been received.
+
+ This status displays only if there are no pending income verification requests for any applicants.
+
+ Completed
+
+ The applicant(s) submitted their completed application(s) and, if applicable, made all payments and have completed the screening and/or income verification process(es).
+
+ Related Preferences
+
+ This status also displays if the option Do not require payment for application to be submitted is enabled in system web preferences and the applicant has chosen to pay later. For more information, refer to Tenant Web Access Apply Now ePay (System Web Preferences) .
+
+ In Progress
+
+ The applicant created an Apply Now account, but has not yet submitted their application.
+
+ Not Started
+
+ The applicant has not yet created an Apply Now account.
+
+ The following actions are available from the menu to the right of each applicant:
+
+ Action
+ Description
+
+ Delete
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Tenants/Prospects
+ Application
+ View, Edit
+
+ For more information, refer to Control User Access .
+
+ Remove the selected applicant account from Rent Manager . This option is only available for subapplicants.
+
+ Continue Income Verification
+
+ If the applicant is unable to verify their identification, override the ID verification and submit the income verification order for the applicant. This option displays only if the applicant's ID verification is unsuccessful.
+
+ Resend ID Verification
+
+ Prompt the applicant to retry the ID verification by resending the identity verification order. This option displays only if the applicant's ID verification is unsuccessful after three attempts.
+
+ Applicant Details
+
+ In this section, all information submitted by the applicant displays. If more than one applicant has submitted their application, a drop-down box displays with each applicant's name. Select the applicant from the drop-down list to view the information they submitted.
+
+ Column
+ Description
+
+ Field Name
+
+ The Rent Manager or user-defined field from the selected application template.
+
+ Value
+
+ The information entered into the field and submitted by the selected applicant or subapplicant.

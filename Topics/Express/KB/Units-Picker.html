@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Picker</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Units-Picker.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Units-Picker.htm</a></p>
+
+                                                        <h1 id="UnitPicker" data-magellan-target="UnitPicker"><a name="kanchor168"></a><a name="H1"></a>Unit Picker</h1>
+                                                        <p>With <span class="Window">Unit Picker</span>, you can set up filters to identify units that match the preferences of prospective tenants. Depending on the status of the prospect, you can indicate that they are interested in leasing a unit, place them on a waiting list so they are informed when the unit is available, or reserve the unit for them.</p>
+                                                        <p><span class="Window">Unit Picker</span> can be used to create a new prospect or tenant account, update preferences for an existing prospect, or establish preferences for an existing tenant who is moving to a new, undecided unit. Each workflow is described in this topic.</p>
+                                                        <h2 id="Option1CreateNewProspectorTenantwithUnitPicker" data-magellan-target="Option1CreateNewProspectorTenantwithUnitPicker"><a name="H2_1"></a>Option 1: Create New Prospect or Tenant with Unit Picker</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Unit picker</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>If you have not yet created an account for a prospect in <span class="mc-variable Products.RM variable">Rent Manager</span>, you can use the standalone <span class="Window">Unit Picker</span> page to establish their unit preferences before filling out the rest of their account details.</p>
+                                                        <p>To set up a new prospect's unit preferences with the <span class="Window">Unit Picker</span>, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/search_19x19.png" class="inline" alt="" style="width: 19;height: 19;" />Search <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Unit Picker</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Unit-Picker-Standalone-NC-2024.png" class="lightbox" alt="The Unit Picker page displays filtering options and matching units based on a new prospect's preferences." />
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top of the page, select each <span class="Field">Property</span> the prospect is interested in from the drop-down list.</p>
+                                                                <div class="privs">
+                                                                    <p class="label1">Related Privileges</p>
+                                                                    <p>To allow users to select properties in this field that they otherwise cannot access, the following privilege is required:</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Access limited occupancy information for all properties</td>
+                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <p>If this privilege is disabled, the user can select only properties enabled on their user's details page.</p>
+                                                                    <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>By default, <span class="Field">Only Show Available Units</span> is enabled. If you wish to include unavailable units in the results, uncheck this option.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select the rentable items to include.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Include Assets</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Lists assets assigned to any selected properties. Assets display only if, on the asset's details page, the <span class="Field">Allow asset to be rented</span> option is enabled. For more information, refer to <a href="../CSH/Asset-Details.html" class="MCXref xref">Asset Details (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Include ORI</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Lists units whose unit type(s) have the <span class="Field">Other Rentable Item</span> option enabled. Units displays only if, on the corresponding unit type's details page, the <span class="Field">Other Rentable Item</span>option is enabled. For more information, refer to <a href="../CSH/Unit-Type-Details.html" class="MCXref xref">Unit Type Details (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Include Units</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Lists units associated with any selected properties.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Unit Preference Filters</span> section, select the prospect's preferred unit qualifications.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Expected Move In/Move Out</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The prospect's desired start (<span class="Field">From</span>) and/or end (<span class="Field">To</span>) dates for their potential lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Number of People</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total number of occupants the prospect plans to have in their unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Amenities</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit- and/or property-type amenities the prospect would like to have.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Floors</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The floor(s) of the building that the prospect prefers to live on.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Unit Types</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit type(s) the prospect is interested is renting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent Max.</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The highest dollar amount the prospect wants to pay for rent.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Rent Min.</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The lowest dollar amount the prospect wants to pay for rent.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section">Unit User Defined Field Filters</span> section, select the desired <span class="Field">User Defined Field</span> (UDF) and associated <span class="Field">Value</span> to include only the unit(s) with that value, then click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add UDF Filter</span>. You can add multiple UDFs and values to further filter the results.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Since only unit-type UDFs can be selected in this section, adding a UDF filter removes <span class="Stress">all</span> assets and ORIs from the filtered results. If you want to include assets and ORIs, leave this section blank.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>In the <span class="Section">Units Matching Criteria</span> section, select the rentable item(s) that meet the established filter options that the prospect is interested in. The following columns display.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Floor</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The floor of the property where the rentable item is located.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Max Occupancy</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The highest number of residents that can reside in the rentable item.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property where the rentable item is located.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The active market rent amount for the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Status</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The current status of the rentable item. If it can be rented and/or reserved, <span class="Field">Available</span> displays. If it is occupied or reserved, the status displays the name of the occupant or prospect and the date that their occupancy or reservation ends. Multiple entries are separated by a semicolon (<span class="Input">;</span>).</p>
+                                                                                <p>For example, if a tenant named Alexander Smith is currently occupying the unit but has a <span class="Field">Move Out</span> date of 5/29/<span class="mc-variable Dates.Year4 variable">2026</span>, <span class="Input">Occupied by Alexander Smith until: 5/29/<span class="mc-variable Dates.Year4 variable">2026</span></span> displays in this column.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the rentable item.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Unit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The categorization of the rentable item.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>To create a prospect or tenant account for any matching units, choose one of the following options and complete the corresponding add wizard. For more information about creating prospects and tenants, refer to <a href="../Other/Prospect-Add.html" class="MCXref xref">Add a Prospect</a> and <a href="../Other/Tenant-Add.html" class="MCXref xref">Add a Tenant</a>.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Add Prospect</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="Window">Add Prospect</span> wizard displays with the <span class="Tab">Units Matching Criteria</span> tab's <span class="Column">I</span> (interested) column checked for each unit selected on the <span class="Window">Unit Picker</span> page.</p>
+                                                                                <p>Alternatively, next to <span class="BigButtons">Add Prospect</span>, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/expand_more_19x19.png" class="inline" alt="Expand" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Add Interested Units</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Add Tenant</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <div class="privs">
+                                                                                    <p class="label1">Related Privileges</p>
+                                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                                        <thead>
+                                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants</td>
+                                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                                </div>
+                                                                                <p>To create a tenant account for a matching unit, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Add Tenant</span> on the unit and complete the <span class="Window">Add Tenant</span> wizard. For more information, refer to <a href="../Other/Tenant-Add.html" class="MCXref xref">Add a Tenant</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Add to Wait List</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="Window">Add Prospect</span> wizard displays with the <span class="Tab">Units Matching Criteria</span> tab's <span class="Column">WL</span> (wait list) column checked for each unit selected on the <span class="Window">Unit Picker</span> page. Units with wait-listed prospects can be reviewed by generating the <span class="Report">Prospect Waiting List</span> report. For more information, refer to <a href="../Other/Reports/Prospect-Waiting-List.html" class="MCXref xref">Prospect Waiting List (Report)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Reserve Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The <span class="Window">Add Prospect</span> wizard displays with the <span class="Tab">Units Matching Criteria</span> tab's <span class="Column">R</span> (reserved) column checked for the selected unit. Select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<span class="ActionItems">Reserve Unit</span> on a single unit you wish to reserve for the prospect. </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>To send a letter with additional information about the unit, click <span class="BigButtons">Print Selected&#160;Unit Documents</span> to display the <span class="Window">Compose Letter</span> pop-up. For more information on sending letters, refer to <a href="Letters-Generate-Distribute-Templates.html" class="MCXref xref">Generate and Distribute Letters from Templates</a>.</p>
+                                                                <div class="prefs">
+                                                                    <p class="label1">Related Preferences</p>
+                                                                    <p>Before you can generate a unit-type letter template, you must select a <span class="Field">Unit Info Document</span> in system preferences. For more information, refer to <a href="../Other/System-Preferences/Prospects.html" class="MCXref xref">Prospect (System Preferences)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="10">
+                                                                <p>Once you have completed the <span class="Window">Add Prospect</span> wizard, click <span class="BigButtons">Save and New</span> to create the prospect and leave the wizard open to add an additional prospect, or click <span class="BigButtons">Save and Finish</span> to create the prospect and close the wizard.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Option2EstablishUnitPreferencesforExistingProspect" data-magellan-target="Option2EstablishUnitPreferencesforExistingProspect"><a name="H2_2"></a>Option 2: Establish Unit Preferences for Existing Prospect</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Unit picker</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>If you have already created a prospect account in <span class="mc-variable Products.RM variable">Rent Manager</span>, you can enter their unit preferences directly from that account.</p>
+                                                        <p>To set up an existing prospect's unit preferences, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Prospects</span> and select a prospect from the list.<br />The prospect's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the action bar to the right, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" class="inline" alt="View More" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Unit Picker</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Unit-Picker-Prospect-Details-NC-2024.png" alt="" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>At the top of the pop-up, select each <span class="Field">Property</span> the prospect is interested in from the drop-down list.</p>
+                                                                <div class="privs">
+                                                                    <p class="label1">Related Privileges</p>
+                                                                    <p>To allow users to select properties in this field that they otherwise cannot access, the following privilege is required:</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Access limited occupancy information for all properties</td>
+                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <p>If this privilege is disabled, the user can select only properties enabled on their user's details page.</p>
+                                                                    <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>By default, <span class="Field">Only Show Available Units</span> is enabled. If you wish to include unavailable units in the results, uncheck this option.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the <span class="Section">Unit Preference Filters</span> section, select the prospect's preferred unit qualifications.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Amps</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The desired amperage for an electrical hookup requested by the prospect. This field displays only when properties with the <span class="Field">RV/Campground</span> property type are selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Expected Move In/Move Out</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The prospect's desired start (<span class="Field">From</span>) and/or end (<span class="Field">To</span>) dates for their potential lease. If only properties with the <span class="Field">RV/Campground</span> property type are selected, this field is titled <span class="Field">Expected Arrival/Departure</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Length</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The desired length of the short-term rental (STR) unit in feet. This field displays only when properties with the <span class="Field">RV/Campground</span> property type are the only properties selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Number of People</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total number of occupants the prospect plans to have in their unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Amenities</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit- and/or property-type amenities the prospect would like to have.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Floors</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The floor(s) of the building that the prospect prefers to live on. This field does <span class="Stress">not</span> display if only properties with the <span class="Field">RV/Campground</span> property type are selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Unit Types</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit type(s) the prospect is interested is renting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent Max.</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The highest dollar amount the prospect wants to pay for rent.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent Min.</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The lowest dollar amount the prospect wants to pay for rent.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Show Pull Through Only</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If checked, only units that allow a vehicle can drive through the spot, park, and exit, without needing to reverse are included in the filter results. This field displays only when properties with the <span class="Field">RV/Campground</span> property type are selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Width</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The desired width of the STR unit in feet. This field displays only when properties with the <span class="Field">RV/Campground</span> property type are selected.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section">Unit User Defined Field Filters</span> section, select the desired <span class="Field">User Defined Field</span> (UDF) and associated <span class="Field">Value</span> to include only the unit(s) with that value, then click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add UDF Filter</span>. You can add multiple UDFs and values to further filter the results.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>At the bottom of the pop-up, select unit(s) that meet the established filter options that the prospect is interested in. The following columns display.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Floor</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The floor of the property where the unit is located.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Interested</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Indicates the prospect is interested in leasing the unit but has not made a decision yet.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>This information is available only on a prospect's details page by default, but it can be retrieved for <span class="mc-variable Products.RW variable">Report Writer</span> reports and letter templates using the InterestedUnits function. For more information, refer to <a href="../Other/Scripts/Class-Prospect.html" class="MCXref xref">Prospect Class (Script)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Max Occupancy</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The highest number of residents that can reside in the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property where the unit is located.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The active market rent amount for the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Status</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The current status of the rentable item. If it can be rented and/or reserved, <span class="Field">Available</span> displays. If it is occupied or reserved, the status displays the name of the occupant or prospect and the date that their occupancy or reservation ends. Multiple entries are separated by a semicolon (<span class="Input">;</span>).</p>
+                                                                                <p>For example, if a tenant named Alexander Smith is currently occupying the unit but has a <span class="Field">Move Out</span> date of 5/29/<span class="mc-variable Dates.Year4 variable">2026</span>, <span class="Input">Occupied by Alexander Smith until: 5/29/<span class="mc-variable Dates.Year4 variable">2026</span></span> displays in this column.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The categorization of the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Wait List</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If checked, indicates that the prospect would like to rent the unit whenever it becomes available. Units with wait-listed prospects can be reviewed by generating the <span class="Report">Prospect Waiting List</span> report. For more information, refer to <a href="../Other/Reports/Prospect-Waiting-List.html" class="MCXref xref">Prospect Waiting List (Report)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>To reserve a unit for the prospect, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Reserve Unit</span> on the unit you wish to reserve, then click <span class="BigButtons">Yes</span> on the confirmation pop-up. If the unit you are reserving is at a different property than the one selected on the prospect account, you are prompted to change the prospect's primary property to match the reserved unit.</p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>To send a letter with additional information about the unit, click <span class="BigButtons">Print Selected&#160;Unit Documents</span> to display the <span class="Window">Compose Letter</span> pop-up. For more information on sending letters, refer to <a href="Letters-Generate-Distribute-Templates.html" class="MCXref xref">Generate and Distribute Letters from Templates</a>.</p>
+                                                                <div class="prefs">
+                                                                    <p class="label1">Related Preferences</p>
+                                                                    <p>Before you can generate a unit-type letter template, you must select a <span class="Field">Unit Info Document</span> in system preferences. For more information, refer to <a href="../Other/System-Preferences/Prospects.html" class="MCXref xref">Prospect (System Preferences)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="10">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The prospect's unit preferences are updated and can be viewed on the <span class="Section">Interested Properties/Units</span> and, if a unit was reserved, <span class="Section">Reservation/Expected&#160;Lease Information</span> tiles.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Option3EstablishPreferencesDuringTenantTransfer" data-magellan-target="Option3EstablishPreferencesDuringTenantTransfer"><a name="H2_3"></a>Option 3: Establish Preferences During Tenant Transfer</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Unit picker</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>If a tenant is transferring to a new unit but has not yet decided on the unit they want to move to, you can use the <span class="Window">Transfer a Tenant</span> to create a new prospect account for the resident. Then, you can open the <span class="Window">Unit Picker</span> pop-up to establish the tenant's preferences for their new unit.</p>
+                                                        <p>To set up unit preferences during the tenant transfer process, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span> and select the tenant you need to transfer.<br />The tenant's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Section">Leases</span> tile, select <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" class="inline" alt="Options" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Transfer Tenant</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Unit-Picker-Transfer-Tenant-NC-2024.png" alt="" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>At the top, select <span class="Field">Create a new prospect account</span> from the drop-down list.</p>
+                                                                <div class="prefs">
+                                                                    <p class="label1">Related Preferences</p>
+                                                                    <p>If only the <span class="Field">Create a new tenant account</span> option is selected in system preferences, you <span class="Stress">cannot</span> create a prospect account while completing this wizard. For more information, refer to <a href="../Other/System-Preferences/General-Options-Tenant-Transfers.html" class="MCXref xref">Tenant Transfers (System Preferences)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Field">Property</span> drop-down list, select the property that the tenant wants to transfer to. This becomes their primary property in <span class="mc-variable Products.RM variable">Rent Manager</span>, but you can select units at other properties if the tenant is interested.</p>
+                                                                <div class="privs">
+                                                                    <p class="label1">Related Privileges</p>
+                                                                    <p>To allow users to select properties in this field that they otherwise cannot access, the following privilege is required:</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Access limited occupancy information for all properties</td>
+                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <p>If this privilege is disabled, the user can select only properties enabled on their user's details page.</p>
+                                                                    <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Next</span>.<br />The <span class="Tab">Select New Unit</span> tab displays.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>In the <span class="Section">Find Interested Units</span> section, click <span class="BigButtons">Find Units</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Unit-Picker-Transfer-Tenant-Second-Page-NC-2024.png" alt="" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>At the top of the pop-up, select each <span class="Field">Property</span> the prospect is interested in from the drop-down list.</p>
+                                                                <div class="privs">
+                                                                    <p class="label1">Related Privileges</p>
+                                                                    <p>To allow users to select properties in this field that they otherwise cannot access, the following privilege is required:</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <col class="TableStyle-Privileges-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Privileges-Head-Header1">
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                                <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                                <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Privileges-Body-Body1">
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                                <td class="TableStyle-Privileges-BodyB-Column1-Body1">Access limited occupancy information for all properties</td>
+                                                                                <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <p>If this privilege is disabled, the user can select only properties enabled on their user's details page.</p>
+                                                                    <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>By default, <span class="Field">Only Show Available Units</span> is enabled. If you wish to include unavailable units in the results, uncheck this option.</p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p>In the <span class="Section">Unit Preference Filters</span> section, select the prospect's preferred unit qualifications.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Expected Move In/Move Out</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The prospect's desired start (<span class="Field">From</span>) and/or end (<span class="Field">To</span>) dates for their potential lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Number of People</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total number of occupants the prospect plans to have in their unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Amenities</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit- and/or property-type amenities the prospect would like to have.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Floors</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The floor(s) of the building that the prospect prefers to live on.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Preferred Unit Types</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit type(s) the prospect is interested is renting.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent Max.</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The highest dollar amount the prospect wants to pay for rent.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Rent Min.</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The lowest dollar amount the prospect wants to pay for rent.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="10">
+                                                                <p>In the <span class="Section">Unit User Defined Field Filters</span> section, select the desired <span class="Field">User Defined Field</span> (UDF) and associated <span class="Field">Value</span> to include only the unit(s) with that value, then click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add UDF Filter</span>. You can add multiple UDFs and values to further filter the results.</p>
+                                                            </li>
+                                                            <li value="11">
+                                                                <p>At the bottom of the pop-up, select the unit(s) that meet the established filter options that the prospect is interested in. The following columns display.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Floor</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The floor of the property where the unit is located.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Interested</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Indicates the prospect is interested in leasing the unit but has not made a decision yet.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>This information is available only on a prospect's details page by default, but it can be retrieved for <span class="mc-variable Products.RW variable">Report Writer</span> reports and letter templates using the InterestedUnits function. For more information, refer to <a href="../Other/Scripts/Class-Prospect.html" class="MCXref xref">Prospect Class (Script)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Max Occupancy</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The highest number of residents that can reside in the rentable item.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property where the unit is located.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The active market rent amount for the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Status</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The current status of the rentable item. If it can be rented and/or reserved, <span class="Field">Available</span> displays. If it is occupied or reserved, the status displays the name of the occupant or prospect and the date that their occupancy or reservation ends. Multiple entries are separated by a semicolon (<span class="Input">;</span>).</p>
+                                                                                <p>For example, if a tenant named Alexander Smith is currently occupying the unit but has a <span class="Field">Move Out</span> date of 5/29/<span class="mc-variable Dates.Year4 variable">2026</span>, <span class="Input">Occupied by Alexander Smith until: 5/29/<span class="mc-variable Dates.Year4 variable">2026</span></span> displays in this column.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The categorization of the unit.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Wait List</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>If checked, indicates that the prospect would like to rent the unit whenever it becomes available. Units with wait-listed prospects can be reviewed by generating the <span class="Report">Prospect Waiting List</span> report. For more information, refer to <a href="../Other/Reports/Prospect-Waiting-List.html" class="MCXref xref">Prospect Waiting List (Report)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="12">
+                                                                <p>Click <span class="BigButtons">Apply</span>.<br />The <span class="Window">Unit Picker</span> pop-up closes and the unit preferences are saved.</p>
+                                                            </li>
+                                                            <li value="13">
+                                                                <p>Continue the <span class="Window">Transfer a Tenant</span> wizard. For more information, refer to <a href="../Other/Tenant-Transfer-Wizard.html" class="MCXref xref">Tenant Transfer Wizard</a>.</p>
+                                                            </li>
+                                                            <li value="14">
+                                                                <p>Once finished, click <span class="BigButtons">Transfer</span>.<br />The new prospect account is created with the selected unit preferences, which can be viewed on the account's <span class="Section">Interested Properties/Units</span> tile.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

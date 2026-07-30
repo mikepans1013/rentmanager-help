@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History Count Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-History-Count.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-History-Count.htm</a></p>
+
+                                                        <h1 id="HistoryCountFunctionScript" data-magellan-target="HistoryCountFunctionScript"><a name="aanchor534"></a>
+                                                            <a name="kanchor900"></a><a name="H1"></a>History Count Function (Script)</h1>
+                                                        <p>This function displays the number of history/note items for the specified account based on the parameters selected. For most entities (such as tenants, units, and so on), this information can be found by going to the entity's details page, then in the <span class="Section">History/Notes</span> tile header, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" />. The number of history/note items is located at the bottom of the <span class="Window">History/Notes</span> pop-up.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>You can pre-filter history items to display for this function by inserting the <a href="Function-Set-History-Filter.html" class="MCXref xref">Set History Filter Function (Script)</a> before the HistoryCount function. This results in the parameters specified automatically applying to the function anywhere it is used after SetHistoryFilter.</p>
+                                                        </div>
+                                                        <p>Classes that utilize this function and the locations where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.html">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Asset().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the asset's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Evictions.html">Eviction</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Eviction().HistoryCount()]</p>
+                                                                        <p>On a tenant's <span class="Section">Evictions</span> tile, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /> to view the <span class="Window">Eviction</span> pop-up. This script displays the number of history/note items listed on the <span class="Section">Eviction Notes</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Home.html">Home</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Home().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the home-type asset's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Job.html">Job</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Job().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the job's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the owner's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner-Prospect.html">Owner Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[OwnerProspect().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the owner prospect's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">Primary Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().PrimaryOwner.HistoryCount()]</p>
+                                                                        <p>For the owner set as the property's primary owner, this script displays the number of history/note items listed on the owner's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the property's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the <span class="Section">History/Notes</span> tile of the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the tenant's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the unit's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Vendor.html">Vendor</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Vendor().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the vendor's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Violation.html">Violation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Violation().HistoryCount()]</p>
+                                                                        <p>Displays the number of history/note items listed on the <span class="Section">History/Notes</span> tile of the violation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[HistoryCount(<span class="Optional">"Category"</span>, <span class="Optional">"Type"</span>, <span class="Optional">"FromDate"</span>, <span class="Optional">"ToDate"</span>, <span class="Optional">"Level"</span>, <span class="Optional">"ExcludedCategories"</span>, <span class="Optional">"ExcludedTypes"</span>)]</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If using SetHistoryFilter prior to the HistoryCount function, each parameter specified in SetHistoryFilter is used by default. Any filters applied to the HistoryCount function are applied in addition to the parameters specified in SetHistoryFilter.</p>
+                                                        </div>
+                                                        <h3 class="Optional">Category</h3>
+                                                        <p colspan="2">Display the number of history items with this category assigned.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[HistoryCount("Complaints")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the number of history items with the category <span class="Field">Complaints</span> assigned.</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Type</h3>
+                                                        <p>Displays the number of history items categorized with this type. If no Type parameter is defined, items of all types are returned.</p>
+                                                        <p>The following values may be used in the Type parameter:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">History Type</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Appointments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","Appointment")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Appointment</span>.</p>
+                                                                        <p>Only appointments for the user generating the script are counted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Call</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","Call")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Call</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email - Note</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","Email")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Email - Note</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Note</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","Note")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Note</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>OWA&#160;Files</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","OWAFile")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">OWA&#160;File</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Phone Broadcast</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","PhoneBroadcast")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Phone&#160;Broadcast</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>rmVoIP</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","NDT")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field"><span class="mc-variable Products.NDT variable">rmVoIP</span></span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email - Sent/Received</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","SentEmail")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Email - Sent/Received</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>System</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","System")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">System</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Task</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","Task")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Task</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Text Messages</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","TextMessages")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Text Messages</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Visit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","Visit")]</p>
+                                                                        <p>Displays the number of history/note items with the type of <span class="Field">Visit</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Web Conversation</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[HistoryCount("","CompletedWebConversations")]</p>
+                                                                        <p>Displays the number of history items with the type of <span class="Field">Web Conversation</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3 class="Optional"><a name="H3_2"></a>FromDate</h3>
+                                                        <p colspan="2">Specify the date on or after which to examine history/note items. If no date is specified, the function uses the beginning of time.</p>
+                                                        <p colspan="2" class="Example">[HistoryCount("","","5/4/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the number of history items posted on or after May 4, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_3"></a>ToDate</h3>
+                                                        <p colspan="2">Specify the date on or before which to examine history/note items. If no date is specified, the function uses the end of time.</p>
+                                                        <p class="Example">[HistoryCount("","","","12/6/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the number of history/note items posted on or before December 6, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_4"></a>Level</h3>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The Level parameter applies to the function only when it is used with the Tenant, Asset, Home, OwnerProspect, Prospect, ServiceManager, Unit, Job, or Violation classes. If using this function with the Owner, Vendor, or PrimaryOwner classes, there is no Level parameter.</p>
+                                                        </div>
+                                                        <p>Specify the entity type(s) of the history/note item to examine. Each level should be separated by a comma.</p>
+                                                        <p class="Example">[HistoryCount("","","","","Tenant")]</p>
+                                                        <p>Displays the tenant-level history/note note items associated with the current entity.</p>
+                                                        <h3 class="Optional">ExcludedCategories</h3>
+                                                        <p colspan="2">Exclude the history items with this category assigned. Each excluded category should be separated with a comma.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[HistoryCount("","","","","Complaints,Legal")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays a count of history/note items, excluding those with the categories of <span class="Field">Complaints</span> or <span class="Field">Legal</span>.</p>
+                                                        <h3 class="Optional">ExcludedTypes</h3>
+                                                        <p colspan="2">Exclude the history items with this type assigned. Each excluded type should be separated with a comma.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[HistoryCount("","","","","","System,Email")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays a count of history/note items, excluding those with the types of <span class="Field">System</span> or <span class="Field">Email - Note</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Owner().HistoryCount()]</p>
+                                                        <p>This displays the number of history/note items associated with the current owner.</p>
+                                                        <p class="Example">[Tenant().HistoryCount("Complaints")]</p>
+                                                        <p>This displays the number of history/note items with the category of <span class="Field">Complaints</span> for the current tenant.</p>
+                                                        <p class="Example">[Violation().HistoryCount("","ViolationStages","01/01/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>This displays the number of violation type history/note items from January 1, <span class="mc-variable Dates.Year4 variable">2026</span> until the end of time for the current violation.</p>
+                                                        <p class="Example">[Tenant().Eviction().HistoryCount("Notice","Call")]</p>
+                                                        <p>Displays the number of history/note items with the category of <span class="Field">Notice</span> and the <span class="Field">Call</span> type for the tenant's current eviction.</p>
+                                                    
+</main>
+</body>
+</html>

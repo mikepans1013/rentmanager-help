@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Listings Availability Filters (System Preferences)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/System-Preferences/Online-Listings-Availability-Filters.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/System-Preferences/Online-Listings-Availability-Filters.htm</a></p>
+
+                                                        <h1 id="OnlineListingsAvailabilityFiltersSystemPreferences" data-magellan-target="OnlineListingsAvailabilityFiltersSystemPreferences"><a name="aanchor300"></a>
+                                                            <a name="kanchor503"></a><a name="H1"></a>Online Listings Availability Filters (System Preferences)</h1>
+                                                        <p>These system preferences allow you to specify how <span class="mc-variable Products.RM variable">Rent Manager</span> determines which units or properties should be listed as available on ILS feeds. Both unit and property criteria are available, but the criteria used depends on whether the marketing is enabled on the property-level or unit-level.</p>
+                                                        <p>For properties where property-level marketing is enabled, <span class="mc-variable Products.RM variable">Rent Manager</span> first looks at the <span class="Section">Property Filter Criteria</span> to determine what properties are available. If the property's marketing setup has the <span class="Field">Exclude unit-specific information</span> option unchecked, <span class="mc-variable Products.RM variable">Rent Manager</span> then looks at the <span class="Section">Unit Filter Criteria</span> to determine available units. For properties where unit-level marketing is enabled, <span class="mc-variable Products.RM variable">Rent Manager</span> considers only the <span class="Section">Unit Filter Criteria</span>.</p>
+                                                        <p>For more information, refer to <a href="../../CSH/Marketing-Online-Listings.html" class="MCXref xref">Marketing Online Listings (Page)</a>.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To set these system preferences, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Online Listings <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Availability Filters</span>.<br />The <span class="Window">System Preferences: Online Listings - Availability Filters</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Edit the settings as desired. Each setting is described in the headings below.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The system preference configuration is updated.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="UnitFilterCriteria" data-magellan-target="UnitFilterCriteria"><a name="H2_1"></a>Unit Filter Criteria</h2>
+                                                        <p>To inform <span class="mc-variable Products.RM variable">Rent Manager</span> when a unit should be considered vacant and available, select from one of the options below. This applies to properties with unit-level marketing enabled, or properties with the option <span class="Field">Exclude unit-specific information</span>&#160;unchecked.</p>
+                                                        <h3><a name="H3_1"></a>Vacancy and Unit Status</h3>
+                                                        <p>Determines vacancies based on unit status. Units that are both vacant and available are pushed to the online listing. If selected, the additional fields described below become available and must be configured.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Exclude future leased units</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Excludes units in search results if they have a future tenant with a <span class="Field">Lease Start</span> date in the future.</p>
+                                                                        <p>For example, your ILS services updates the feed on 11/1/<span class="mc-variable Dates.Year4 variable">2026</span>. On that date, unit 100 is vacant and available, but another tenant is starting a lease for that unit on 12/1/<span class="mc-variable Dates.Year4 variable">2026</span>. Therefore, this unit is excluded from the ILS feed.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Occupancy End Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Determines vacancies based on one of the following fields located on the tenant's lease details page. Select one of the options below.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Expected move out</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Unit vacancy is calculated based on the date entered in the <span class="Field">Expected Move Out</span> field of the occupying tenant's lease.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Move Out</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>Unit vacancy is calculated based on the date entered in the <span class="Field">Move Out</span> field of the occupying tenant's lease.</p>
+                                                                                        <div class="prefs">
+                                                                                            <p class="label1">Related Preferences</p>
+                                                                                            <p>If you select this option, this date is considered as your availability filter's occupancy end date, regardless of whether or not the move out has been confirmed. The <span class="Field">Require moveout confirmation to stop recurring charge</span> preference does <span class="Stress">not</span> affect availability filters, only recurring charges. For more information, refer to <a href="General-Options-General.html" class="MCXref xref">General Options (System Preferences)</a>.</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Notice</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>Unit vacancy is calculated based on the date entered in the <span class="Field">Notice</span> field of the occupying tenant's lease.</p>
+                                                                                        <p>If this option is enabled, a rental unit is considered occupied (and therefore not vacant) starting from the <span class="Field">Move In</span> date of the occupying tenant through the <span class="Field">Notice</span> date.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Show units as available <span class="Input">x</span> days after occupancy end</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Sets the unit's availability to the entered number of days after your selected occupancy end date.</p>
+                                                                        <p>For example, if the <span class="Field">Occupancy End Date</span> is set to <span class="Field">Move Out</span> and you enter <span class="Input">10</span> in the field, the unit does not show as available on internet listing service (ILS) sites until ten days after the last move-out date for that unit. Therefore, if a tenant has a move-out date of 4/1/<span class="mc-variable Dates.Year4 variable">2026</span>, the unit is not considered available until 4/11/<span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                                        <p>If unchecked, the unit is considered available the day after the selected occupancy end date.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Show units available within <span class="Input">x</span> days of search date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Units display in ILS search results if they are both vacant and available within the entered number of days from the search date. This allows you to start marketing units before their availability date.</p>
+                                                                        <p>For example, if you enter <span class="Input">14</span> in the field and an individual searches for units on an ILS on 11/1/<span class="mc-variable Dates.Year4 variable">2026</span>, every rental unit with an occupancy end date of 11/15/<span class="mc-variable Dates.Year4 variable">2026</span> or later is included in their search results.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_2"></a>User Defined Field</h3>
+                                                        <p>This option determines vacancies based on a unit-level user-defined field (UDF) with a data type of <span class="Field">Yes/No</span>. All units that have the selected UDF value set to <span class="Field">Yes</span> display as available. For example, if you have a <span class="Field">Yes/No</span> type UDF for <span class="Input">List Online?</span>, selecting this option lists all units with <span class="Field">Yes</span> selected for that UDF.</p>
+                                                        <p>For more information, refer to <a href="../../CSH/User-Defined-Fields.html" class="MCXref xref">User Defined Fields (Page)</a>.</p>
+                                                        <h3><a name="H3_3"></a>Follow Unit Availability Profile</h3>
+                                                        <p>This option determines vacancies based on a unit availability template created in the <span class="Section">Availability Profiles</span> section of system web preferences. Units that meet the availability criteria defined in the selected unit availability profile are included in the feed.</p>
+                                                        <p>For more information, refer to <a href="../System-Web-Preferences/Availability-Profile.html" class="MCXref xref">Availability Profile (System Web Preferences)</a>.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Unit availability profile templates can be used only if they meet the following conditions:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>In the template's <span class="Section">Filter Criteria</span> section under the <span class="Field">Date Range</span> field, the <span class="Field">Show any available within date range</span> option must <span class="Stress">not</span> be checked.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>In the template's <span class="Section">Filter Criteria</span> section, the <span class="Field">Follow Online Listings Feed</span> option must <span class="Stress">not</span> be selected.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <h2 id="PropertyFilterCriteria" data-magellan-target="PropertyFilterCriteria"><a name="H2_2"></a>Property Filter Criteria</h2>
+                                                        <p>To set up the criteria that displays properties as available, select from one of the following options:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Follow unit filter criteria</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Includes properties that have at least one unit that satisfies the <span class="Section">Unit Filter Criteria</span> chosen in the previous section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Show all properties</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>All properties display in the internet listing service (ILS) feed, regardless of the availability settings established in the <span class="Section">Unit Filter Criteria</span> section.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>User Defined Field</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Determines availability based on a property-level user-defined field (UDF) with a data type of <span class="Field">Yes/No</span>. All properties that have the selected UDF value set to <span class="Field">Yes</span> display as available.</p>
+                                                                        <p>For example, if you select a <span class="Field">Yes/No</span> type UDF named <span class="Input">Include in ILS&#160;Listings</span>,  all properties with <span class="Field">Yes</span> selected for that UDF are listed.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

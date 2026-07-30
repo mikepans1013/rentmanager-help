@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservation Class (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Reservation.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Class-Reservation.htm</a></p>
+
+                                                        <h1 id="ReservationClassScript" data-magellan-target="ReservationClassScript"><a name="aanchor202"></a>
+                                                            <a name="kanchor338"></a><a name="H1"></a>Reservation Class (Script)</h1>
+                                                        <p>This class examines information related short-term rental (STR) reservations for guests recorded as tenants or prospects. You can view this information by going to the tenant or prospect's details page and on the <span class="Section">Reservations</span> tile, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /> and select a reservation to open the <span class="Window">Reservation Details</span> page.</p>
+                                                        <p>This class can be preceded by the Tenant class or Prospect class.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');margin-left: 0;margin-right: auto;" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Tenant().Reservation().ReservationProperty]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the name of the <span class="Field">Property</span> at which the guest's reservation is located on the prospect's <span class="Window">Reservation Details</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Script.css');margin-left: 0;margin-right: auto;" class="TableStyle-Script" cellspacing="0">
+                                                            <col class="TableStyle-Script-Column-Header" />
+                                                            <col class="TableStyle-Script-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyE-Header-Body1" role="rowheader">Example</td>
+                                                                    <td class="TableStyle-Script-BodyD-Column2-Body1">
+                                                                        <p class="Formula">[Prospect().Reservation().ArrivalDate]</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Script-Body-Body1">
+                                                                    <td class="TableStyle-Script-BodyB-Header-Body1" role="rowheader">Result</td>
+                                                                    <td class="TableStyle-Script-BodyA-Column2-Body1">
+                                                                        <p>Displays the <span class="Field">Arrival</span> date listed on the prospect's reservation located on the prospect's <span class="Window">Reservation Details</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ClassParameters" data-magellan-target="ClassParameters"><a name="H2_1"></a>Class Parameters</h2>
+                                                        <p>A single, optional parameter can be specified for this class: an index.</p>
+                                                        <h3><a name="H3_1"></a>Index</h3>
+                                                        <p>An index allows you to return information about a specific reservation on an account by using a number to identify each reservation listed. For example, if there are three reservations listed on a guest’s account, they are referenced by indexes 0, 1, and 2. You can specify which reservation you want <span class="mc-variable Products.RM variable">Rent Manager</span> to return information about by referencing an index in your script. If no index is specified, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to an index of 0, which represents the first reservation in the list.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you insert a function from the <span class="Section">Insertable Fields</span> list in a letter template, the index automatically populates with a scripted formula: <span class="Formula" data-mc-conditions="Snippet Conditions.4">Reservation.(ReservationCount - 1)</span>. This allows you to return data for the most recent reservation created for the tenant.</p>
+                                                        </div>
+                                                        <p class="Example">[Tenant().Reservation(ReservationCount - 2).ArrivalDate]</p>
+                                                        <p>Displays the arrival date of the second reservation listed for the tenant.</p>
+                                                        <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_2"></a>Available Functions</h2>
+                                                        <p>This class can be followed by any of these scripting functions. Functions with parameters are hyperlinked in the table below.</p>
+                                                        <p data-mc-conditions="Snippet Conditions.1,Snippet Conditions.3,Snippet Conditions.4,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.11,Snippet Conditions.12,Snippet Conditions.17,Snippet Conditions.18,Snippet Conditions.24,Snippet Conditions.25,Snippet Conditions.14,Snippet Conditions.21,Snippet Conditions.34,Snippet Conditions.35"><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Function</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Adults</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent8">
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Adults]</p>
+                                                                            <p>Displays the <span class="Field"># of Adults</span> listed on the most recent reservation.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Arrival Date</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent15">
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).ArrivalDate]</p>
+                                                                            <p>Displays the <span class="Field">Arrival</span> date listed on the most recent reservation entered.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Balance</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent20">
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Balance]</p>
+                                                                            <p>Displays the total of any remaining open charges for the most recent reservation.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Balance Due Date</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).BalanceDueDate]</p>
+                                                                        <p>Displays the date the remaining balance is due for the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Booking Date</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).BookingDate]</p>
+                                                                        <p>Displays the date of the most recently created reservation in <span class="mc-variable Products.RM variable">Rent Manager</span>. If the reservation was made online, the script displays when the reservation was booked from the STR Online Booking portal.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.9,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.35,Snippet Conditions.21">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Charges-List.html">Charges List</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.35">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).ChargeList()]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.35">Displays a list of charges for the most recently made reservation, as listed on the <span class="Window">View Transactions</span> page for the reservation.</p>
+                                                                        <div class="info" data-mc-conditions="Snippet Conditions.35">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>This function is the same as other ChargesList functions, but when used with the Reservation class, the syntax in the script is written as singular ChargeList.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Checked In</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent26">
+                                                                            <p class="Field">[<span class="Required">Class()</span>.Reservation(ReservationCount - 1).CheckedIn]</p>
+                                                                            <p>Displays the guest check in status of the most recently entered reservation. This function outputs <span class="Input">Yes</span> if the guest has a check in date and time or <span class="Input">No</span> in all other cases.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Checked In Date</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent27">
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).CheckedInDate]</p>
+                                                                            <p>Displays the date and time when <span class="BigButtons">Save</span> was clicked upon completing the <span class="Window">Check In Registration</span> wizard on the most recent reservation. The output is formatted as displayed below:</p>
+                                                                            <p><span style="font-style: italic;" class="mc-variable System.ShortDate variable">7/21/2026</span><i>11:48:26 AM</i>
+                                                                            </p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Children</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent29">
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Children]</p>
+                                                                            <p>Displays the <span class="Field"># of Children</span> listed on the most recent reservation.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.2,Snippet Conditions.6,Snippet Conditions.7,Snippet Conditions.8,Snippet Conditions.28,Snippet Conditions.13,Snippet Conditions.15,Snippet Conditions.19,Snippet Conditions.29,Snippet Conditions.31,Snippet Conditions.23,Snippet Conditions.21,Snippet Conditions.35,Snippet Conditions.3">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Comment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.35">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Comment]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.35">Displays the <span class="Field">Request</span> listed on the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Confirmation Number</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).ConfirmationNumber]</p>
+                                                                        <p>Displays the <span class="Field">Confirmation #</span> number listed on the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Departure Date</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent51">
+                                                                            <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).DepartureDate]</p>
+                                                                            <p>Displays the <span class="Field">Departure</span> date listed on the most recent reservation.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Due At Booking</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).DueAtBooking]</p>
+                                                                        <p>Displays the amount due at time of booking for the tenant or prospect's reservation that occurs last. You can view this information on the tenant or prospect's details page in the <span class="Section">Reservations</span> tile by selecting a reservation <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Transactions tab <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Payment Policy tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.15,Snippet Conditions.20,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lead Source</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.35">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).LeadSource]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.35">Displays the <span class="Field">Lead Source</span> for  the most recent reservation entered.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Long Term Rental</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).LongTermRental]</p>
+                                                                        <p>Displays <span class="Input">Yes</span> if <span class="Field">Long Term Rental</span> is checked on the most recent reservation and <span class="Input">No</span> if not.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Nights</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Nights]</p>
+                                                                        <p>Displays the <span class="Field"># of Nights</span> based on the difference between on the<span class="Field"> Arrival</span> date and <span class="Field">Departure</span> listed on the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Function-Payments.html">Payments</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.35">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Payments]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.28,Snippet Conditions.35">Displays a list of payments made for the most recent reservation. The function creates a separate line for each payment that includes the date and amount of each transaction.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35,Snippet Conditions.12">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Pets</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <div id="microcontent148">
+                                                                            <p class="Formula" data-mc-conditions="Snippet Conditions.35">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Pets]</p>
+                                                                            <p data-mc-conditions="Snippet Conditions.35">Displays the <span class="Field"># of Pets</span> listed on the  most recent reservation</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Reservation Count</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>ReservationCount()]</p>
+                                                                        <p>Displays the number of recent reservations on the guest's account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Reservation Property</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).ReservationProperty]</p>
+                                                                        <p>Displays the name of the <span class="Field">Property</span> listed on the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Reservation Unit Name</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).ReservationUnitName]</p>
+                                                                        <p>Displays the name of the <span class="Field">Unit</span> listed on the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Short Term Reservation ID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).ShortTermReservationID]</p>
+                                                                        <p>Displays the internally generated reservation ID of the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Source</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Source]</p>
+                                                                        <p>Displays the source from which the most recent reservation was made. Reservations can be made from <span class="mc-variable Products.RM variable">Rent Manager</span> or the STR Online Booking Portal.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">Total Charged</td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).TotalCharged]</p>
+                                                                        <p>Displays the total amount of charges, including taxes and fees, due for the most recent reservation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="Snippet Conditions.28,Snippet Conditions.9,Snippet Conditions.13,Snippet Conditions.21,Snippet Conditions.35">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Function-Transactions.html">Transactions</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula" data-mc-conditions="Snippet Conditions.35">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Transactions]</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.35">Displays a list of charges, credits, and payments for the most recent reservation. A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current owner displays, as shown below.</p>
+                                                                        <p data-mc-conditions="Snippet Conditions.35">
+                                                                            <img src="../../../../assets/Resources/Images/PNGs/Owner%20Transaction%20Script.png" alt="" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

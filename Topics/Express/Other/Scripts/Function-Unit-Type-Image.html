@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Type Image Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Unit-Type-Image.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Unit-Type-Image.htm</a></p>
+
+                                                        <h1 id="UnitTypeImageFunctionScript" data-magellan-target="UnitTypeImageFunctionScript"><a name="aanchor15"></a>
+                                                            <a name="kanchor25"></a><a name="H1"></a>Unit Type Image Function (Script)</h1>
+                                                        <p>This function displays the images for the unit type of the selected unit.</p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit-Type.html">Unit Type</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().UnitType().UnitTypeImage()]</p>
+                                                                        <p>Displays information found on the unit type's images section carousel.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[UnitTypeImage(<span class="Optional">"ImageIndex"</span>,<span class="Optional">"Width"</span>,<span class="Optional">"Height"</span>,<span class="Optional">"IsInches"</span>)]</p>
+                                                        <h3 class="Optional">ImageIndex</h3>
+                                                        <p colspan="2">Enter the index value of the image type to display. The first image of a particular image type has an index value of <span class="Input">0</span>, the second has an index value of <span class="Input">1</span>, and so on. </p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.4">[UnitTypeImage("1")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.4">Displays the first additional image on the unit type. </p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Width</h3>
+                                                        <p>Specify the width of the image. If a height parameter value is not specified after the width, the image is scaled proportionately.</p>
+                                                        <p class="Example">[UnitTypeImage("0","100")]</p>
+                                                        <p>Displays the graphic scaled to 100 pixels wide with height proportional.</p>
+                                                        <h3 class="Optional">Height</h3>
+                                                        <p>Specify the height of the image. If a width parameter value is not specified before the height, the image is scaled proportionally.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.4">[UnitTypeImage("0","","50")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.4">Displays the graphic scaled to 50 pixels high with width proportional.</p>
+                                                        <h3 class="Optional">IsInches</h3>
+                                                        <p>Enter the value <span class="Input">False</span> if the width and height are in pixels and <span class="Input">True</span> if they are in inches. If no parameter value is specified, the function defaults to <span class="Input">False</span>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>In addition to <span class="Input">True</span> and <span class="Input">False</span>, this parameter also accepts the following alternate input options: <span class="Input">T</span> and <span class="Input">F</span>, <span class="Input">Yes</span> and <span class="Input">No</span>, and <span class="Input">Y</span> and <span class="Input">N</span>. The options <span class="Input">T</span>, <span class="Input">Yes</span>, and <span class="Input">Y</span> all behave the same as <span class="Input">True</span>, while <span class="Input">F</span>, <span class="Input">No</span>, and <span class="Input">N</span> all behave the same as <span class="Input">False</span>.</p>
+                                                        </div>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.4">[UnitTypeImage("0","3","","True")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.4">Displays the graphic scaled to 3 inches wide and proportional height.</p>
+                                                        <p class="Example" data-mc-conditions="Snippet Conditions.4">[UnitTypeImage("0","","5","Y")]</p>
+                                                        <p data-mc-conditions="Snippet Conditions.4">Displays the graphic scaled to 5 inches high and proportional width.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Unit().UnitType().UnitTypeImage()]</p>
+                                                        <p>Displays the image for the unit type of the selected unit at its existing size.</p>
+                                                        <p class="Example">[Unit().UnitType().UnitTypeImage("1","5","","True")]</p>
+                                                        <p>Displays the first additional image for the unit type of the selected unit scaled to 5 inches wide and proportional height.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().UnitType().UnitTypeImage()]</p>
+                                                        <p>Displays the image for the unit type of the first unit of the first least of the selected tenant at its existing size.</p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Deposit Refunded Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Security-Deposit-Refunded.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Security-Deposit-Refunded.htm</a></p>
+
+                                                        <h1 id="SecurityDepositRefundedFunctionScript" data-magellan-target="SecurityDepositRefundedFunctionScript"><a name="aanchor177"></a>
+                                                            <a name="kanchor299"></a><a name="H1"></a>Security Deposit Refunded Function (Script)</h1>
+                                                        <p>This function displays the total amount of the security deposits refunded for the selected entity as of a specified date.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p> This value may not be equal to the value of all security deposits refunded to past tenants because it includes deposit funds that were allocated to outstanding tenant charges before a refund was completed.</p>
+                                                        </div>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" style="width: 101px;" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Financial-Property.html">Financial Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.SecurityDepositRefunded()]</p>
+                                                                        <p>Displays security deposit information found on the <span class="Section">Transactions</span> tile of the tenants at the financial property of the asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().SecurityDepositRefunded()]</p>
+                                                                        <p>Displays security deposit information found on the <span class="Section">Transactions</span> tile of the tenants at all the owner's properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Partner.html">Partner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().Partner().SecurityDepositRefunded()]</p>
+                                                                        <p>Displays security deposit information found on the <span class="Section">Transactions</span> tile of the tenants at all the properties of the partner who shares ownership with the selected owner.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">Primary Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().PrimaryOwner.SecurityDepositRefunded()]</p>
+                                                                        <p>Displays security deposit information found on the <span class="Section">Transactions</span> tile of the tenants at all the primary owner's properties.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().SecurityDepositRefunded()]</p>
+                                                                        <p>Displays security deposit information found on the <span class="Section">Transactions</span> tile of the tenants at the specified property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().SecurityDepositRefunded()]</p>
+                                                                        <p>Displays security deposit information found on the <span class="Section">Transactions</span> tile of the tenant(s) in the specified unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[SecurityDepositRefunded(<span class="Optional">"AsOfDate"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>AsOfDate</h3>
+                                                        <p colspan="2">Specify the date for which to retrieve the refunded security deposits. If no date is specified, today's date is used by default.</p>
+                                                        <p colspan="2" class="Example">[SecurityDepositRefunded("3/14/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Displays the total amount of security deposits refunded as of March 14, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Asset().FinancialProperty.SecurityDepositRefunded()]</p>
+                                                        <p>Displays the total amount of security deposits refunded to all tenants at the asset's financial property as of today's date.</p>
+                                                        <p class="Example">[Owner().SecurityDepositRefunded()]</p>
+                                                        <p>Displays the total amount of security deposits refunded to all tenants across all the owner's properties as of today's date.</p>
+                                                        <p class="Example">[Owner().Partner().SecurityDepositRefunded()]</p>
+                                                        <p>Displays the total amount of security deposits refunded to all tenants across all the properties of the partner who shares ownership with the selected owner as of today's date.</p>
+                                                        <p class="Example">[Property().PrimaryOwner.SecurityDepositRefunded()]</p>
+                                                        <p>Displays the total amount of security deposits refunded to all tenants across all the primary owner's properties as of today's date.</p>
+                                                        <p class="Example">[Tenant().Property().Owner().SecurityDepositRefunded()]</p>
+                                                        <p>Displays the total amount of security deposits refunded for all properties belonging to the first owner of the default property listed for the current tenant as of today's date.</p>
+                                                        <p class="Example">[Tenant().Lease().Property().Owner().SecurityDepositRefunded()]</p>
+                                                        <p>Displays the total amount of security deposits refunded for all properties belonging to the first owner of the property of the tenant's first lease listed as of today's date.</p>
+                                                        <p class="Example">[Tenant().Lease(1).Property().Owner().SecurityDepositRefunded("6/15/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the total amount of security deposits refunded for all properties belonging to the first owner of the selected property of the tenant's first additional lease as of June 15, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().SecurityDepositRefunded("1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the total amount of security deposits refunded for the unit of the tenant's first lease listed as of January 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                    
+</main>
+</body>
+</html>

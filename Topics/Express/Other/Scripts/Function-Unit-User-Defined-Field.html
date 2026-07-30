@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit User Defined Field Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Unit-User-Defined-Field.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Unit-User-Defined-Field.htm</a></p>
+
+                                                        <h1 id="UnitUserDefinedFieldFunctionScript" data-magellan-target="UnitUserDefinedFieldFunctionScript"><a name="aanchor230"></a>
+                                                            <a name="kanchor378"></a><a name="H1"></a>Unit User Defined Field Function (Script)</h1>
+                                                        <p>This function displays the value of a unit user defined field specified on the prospect <span class="Window">Details</span> page of a selected prospect whose <span class="Field">Status</span> has changed to <span class="Field">Tenant</span>.</p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Prospect.html">Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Prospect().UnitUserDefinedField()]</p>
+                                                                        <p>Displays information found on the prospect's <span class="Section">Unit User Defined Information</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[UnitUserDefinedField(<span class="Optional">"Index"</span>,<span class="Optional">"ShowName"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Index</h3>
+                                                        <p colspan="2">Select the unit user defined field to examine.</p>
+                                                        <p colspan="2" class="Example">[UnitUserDefinedField("1")]</p>
+                                                        <p colspan="2">Displays the value of the first additional unit user defined field specified on the prospect's <span class="Section">Unit User Defined Field Information</span> tile.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_2"></a>ShowName</h3>
+                                                        <p colspan="2">Enter <span class="Input">True</span> to display the name of the unit user defined field or <span class="Input">False</span> to display the value of the unit user defined field.</p>
+                                                        <p colspan="2" class="Example">[UnitUserDefinedField("","True")]</p>
+                                                        <p colspan="2">Displays the name of the first unit user defined field.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().Prospect().UnitUserDefinedField("1")]</p>
+                                                        <p>Displays the value of the first additional unit user defined field specified for the prospect who is now the current tenant.</p>
+                                                        <p class="Example">[Tenant().Prospect().UnitUserDefinedField("2","True")]</p>
+                                                        <p>Displays the name of the second additional unit user defined field specified for the prospect who is now the current tenant.</p>
+                                                        <p class="Example">[Tenant().Prospect().UnitUserDefinedField("","True")]</p>
+                                                        <p>Displays the name of the first unit user defined field specified for the prospect who is now the current tenant.</p>
+                                                    
+</main>
+</body>
+</html>

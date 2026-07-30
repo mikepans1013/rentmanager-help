@@ -1,0 +1,1226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a Tenant</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Tenant-Add.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Tenant-Add.htm</a></p>
+
+                                                        <h1 id="AddaTenant" data-magellan-target="AddaTenant"><a name="kanchor11"></a><a name="H1"></a>Add a Tenant</h1>
+                                                        <p>Tenants in <span class="mc-variable Products.RM variable">Rent Manager</span> generally refer to any people who lease rental units at a property. However, tenants can also be any leaseholders who rent units from your business, such as residents in single-family homes, members of a property's association, owners of commercial companies, or renters of storage units. This topic covers creating tenants in your <span class="mc-variable Products.RM variable">Rent Manager</span> database so you can track their leases at your properties.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>To streamline the creation process, consider setting up tenant user-defined fields (UDFs), charges, lease terms, and other information related to your tenants before adding tenant accounts. For more information, refer to <a href="../KB/Tenant-Customize-Options.html" class="MCXref xref">Customize Tenant Options</a>.</p>
+                                                        </div>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>By default, leaseholders in your <span class="mc-variable Products.RM variable">Rent Manager</span> database are called <span class="Input">Tenants</span>. You can customize the entity name in system preferences to meet your business needs. For example, if you primarily own properties that are single-family homes, you can change <span class="Input">Tenants</span> to <span class="Input">Residents</span>. This updates the entity name for your entire <span class="mc-variable Products.RM variable">Rent Manager</span> database, so be sure to choose an entity name that works best for all your business purposes. For more information, refer to <a href="System-Preferences/Entity-Type.html" class="MCXref xref">Entity Types (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <p>The following steps use the standard add tenant wizard. If a custom wizard is set as the default, you might not see all of the following tiles. For more information about creating custom wizards, refer to <a href="../CSH/Wizards-Custom.html" class="MCXref xref">Custom Wizards (Page)</a>.</p>
+                                                        <h2 id="Step1AddTenantandGeneralInformation" data-magellan-target="Step1AddTenantandGeneralInformation"><a name="H2_1"></a>Step 1: Add Tenant and General Information</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants/Prospects</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Tenants</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To create a tenant account, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Tenants</span>.<br />The <span class="Window">Tenants</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>At the top, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Tenant</span>.<br />The add tenant wizard set as default displays.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If your system has multiple add wizards set up using custom wizards, you will first be prompted to select the property. Your selection determines which wizard to display. If you change the selection during the add process, you will be prompted to switch wizards if applicable. For more information, refer to <a href="Wizards-Add.html" class="MCXref xref">Design a Wizard</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Tenant Account</span> and <span class="Section">Addresses</span> tiles, enter the following information:</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Standard-Add-Tenant-Tenant-Information.png" alt="The Tenant Account and Addresses tiles of the Add Tenant wizard displays an example of general tenant information." class="lightbox" />
+                                                                </p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>First Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The tenant's given or preferred name. For commercial tenants, this is the name of the primary contact for the lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Middle Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The tenant's middle or alternative name. For commercial tenants, this is the name of the primary contact for the lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Last Name</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The tenant's surname. For commercial tenants, this is the name of the primary contact for the lease.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Is Company</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If this is a commercial tenant, check <span class="Field">Is Company</span>. This option displays only if the selected property has a <span class="Field">Property Type</span> of <span class="Field">Commercial</span>.</p>
+                                                                                <p>If this option is checked, enter the required <span class="Field">Company Name</span>, which is the name displayed as the tenant throughout <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>To define further commercial lease information for the tenant such as charge escalations and commercial recoverable expenses (CRE), you can edit their lease information after the tenant creation process is complete. For more information, refer to <a href="Lease-Add-Commercial.html" class="MCXref xref">Add a Commercial Lease</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Addresses</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The address(es) for the tenant. For the address you wish to use in reports and other areas of <span class="mc-variable Products.RM variable">Rent Manager</span>, such as contact labels, check <span class="Field">Default</span>. By default, you can enter a <span class="Tab">Primary</span> and <span class="Tab">Alternate</span> address. You can also create other address types to include here.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2EnterLeaseInformation" data-magellan-target="Step2EnterLeaseInformation"><a name="H2_2"></a>Step 2: Enter Lease Information</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Standard-Add-Tenant-Lease.png" alt="The Lease tile of the Add Tenant wizard displays an example of a tenant's lease information." class="lightbox" />
+                                                        </p>
+                                                        <p>In the <span class="Section">Lease</span> tile, enter or select the following information:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Property</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The property at which the tenant is leasing a unit.</p>
+                                                                        <p>If the selected property has the <span class="Field">Property Type</span> of <span class="Field">Manufactured Housing</span> and the tenant has an RV that occupies the unit site, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Resident-Owned RV</span> to open the <span class="Window">Add RV</span> pop-up and complete the following fields:</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p># of Slide Outs</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The number of room extenders on the tenant's RV.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Amps</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The amperage of the electrical hookup that the tenant's RV requires.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Homeowner Status </p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The ownership status of the RV (<span class="Field">Resident Owned</span>, <span class="Field">Employee Owned</span>, or <span class="Field">Change of Ownership</span>).</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Length</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The length of the tenant's RV.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>License</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The license plate number of the tenant's RV.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Make</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The make of the tenant's RV.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Model</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The model of the tenant's RV.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Slide Outs</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The type(s) of slide outs or room extenders on the tenant's RV.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Type</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The tenant's RV type (<span class="Field">Fifth Wheel</span>, <span class="Field">Hybrid Trailer</span>, <span class="Field">Pop-Up Camper</span>, and so on).</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Width</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The width of the tenant's RV.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Year</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>The year the tenant's RV was manufactured.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Unit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The unit at the property which the tenant is leasing. If unknown, you can leave this blank for now and add it later. A unit <span class="Section">must</span> be selected in order to add recurring charges to this tenant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move In Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the tenant officially moves into the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Move Out Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the tenant officially vacates the unit.</p>
+                                                                        <p>It is recommended to leave this field blank during the tenant creation process because this field can affect important processes such as the posting of recurring charges if the tenant renews their lease and the field is not updated. Instead, it is best practice to use the <span class="Field">Expected Move Out Date</span> field for the estimated move out date, and then enter the official date into the <span class="Field">Move Out Date</span> field at a later time when the tenant has officially moved out.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Notice Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the tenant informs the owner or landlord that they plan to move out of the unit.</p>
+                                                                        <p>It is recommended to leave this field blank during the tenant creation process and enter it at a later date when the tenant has officially given their notice to vacate.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Expected Move Out Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The estimated date on which the tenant plans to move out of the unit based on the lease agreement. If the expected move out date is unknown, leave this field blank.</p>
+                                                                        <p>This field allows you to track when a tenant is likely to move out of the unit without officially marking them as a past tenant in <span class="mc-variable Products.RM variable">Rent Manager</span> when that date passes. It provides accurate reporting without changing the tenant status or stopping their recurring charges if the tenant stays longer than originally anticipated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Start Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the tenant's lease legally begins, regardless of when they physically move into the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease End Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the tenant's lease legally ends, regardless of whether or not they renew the lease or physically vacate the unit.</p>
+                                                                        <p>Alternatively, you can select the <span class="Field">Lease Term</span> for the tenant's lease, and the <span class="Field">Lease End Date</span> automatically populates with the appropriate date based on the selected term and the <span class="Field">Lease Start Date</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Lease Sign Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The date on which the tenant signed the lease agreement.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Lease Term</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The duration of the tenant's lease, such as twelve months or month-to-month.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>If the selected property has a <span class="Field">Property Type</span> of <span class="Field">Manufactured Housing</span>, one of the following tiles displays:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Tile</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Home</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This tile displays only if a home-type asset is located on that unit (lot) as of the date in the <span class="Field">Move In</span> field. The available options are described below.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Add a lease for this home</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>If checked, automatically create a lease for the home-type asset associated with the unit upon completing the transfer wizard. This option is available only if the asset is rentable.</p>
+                                                                                        <div class="prefs">
+                                                                                            <p class="label1">Related Preferences</p>
+                                                                                            <p>This option is checked by default if the <span class="Field">Automatically create a lease for linked 'home' assets or units</span> option is enabled in system preferences. For more information, refer to <a href="System-Preferences/General-Options-General.html" class="MCXref xref">General Options (System Preferences)</a>.</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Home</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>This field is read-only and displays the asset currently located on the unit, as specified on the asset's details page.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Homeowner Status</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>The ownership status of the home-type asset associated with the unit, such as <span class="Field">Community Owned - Employee</span> or <span class="Field">Resident Owned</span>. This field can be edited only under certain conditions. For more information, refer to <a href="../KB/Homeowner-Status-New.html" class="MCXref xref">Homeowner Statuses Available on Move In</a>.</p>
+                                                                                        <div class="info">
+                                                                                            <p class="label1">More Information</p>
+                                                                                            <p>If this status is set to <span class="Field">Dealer Owned</span> or <span class="Field">Lender Owned</span>, the <span class="Section">Rent Free Period</span> section displays. In the <span class="Field">Start Date</span> and <span class="Field">End Date</span> fields, enter the time period during which the unit does not generate income due to a rent-free promotion. To add additional time periods, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" alt="" class="inline" style="width: 19;height: 19;" /><span class="ActionItems">Add Rent Free Period</span>.</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Home/RV Information</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This tile displays only if a home-type asset is not associated with that unit (lot) on or after the date in the <span class="Field">Move In</span> field. The available options are described below.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Create a lease for the unit only</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The tenant does <span class="Stress">not</span> have a resident-owned RV nor a home-type asset on the unit (lot). A lease is created <span class="Stress">only</span> for the unit when the transfer wizard is completed.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Enter resident owned RV details</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>The tenant has a resident-owned RV they intend to place on the lot. If selected, enter information about the RV into the available fields to be included on the tenant's lease. For more information, refer to <a href="../CSH/Lease-Details.html" class="MCXref xref">Lease Details (Page)</a>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Link an existing home</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>Associate the tenant's unit with a home-type asset.</p>
+                                                                                        <p>In the <span class="Field">Home</span>, field, select the home-asset to place on the lot.</p>
+                                                                                        <p>In the <span class="Field">Home Location Start Date</span> field, enter the date on which this home's location history at the unit begins. </p>
+                                                                                        <p>The <span class="Field">Homeowner Status</span> field displays the ownership status of the home-type asset, such as <span class="Field">Community Owned - Employee</span> or <span class="Field">Resident Owned</span>.  This field can be edited only under certain conditions. For more information, refer to <a href="../KB/Homeowner-Status-Move-Out.html" class="MCXref xref">Homeowner Statuses Available on Move Out</a>.</p>
+                                                                                        <p>To create a lease for the home-type asset upon completing the transfer wizard, check <span class="Field">Add a lease for this home</span>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you do not know your tenant's lease information at this time, skip this step and proceed to <span class="Section">Step 4</span>. You can go back to the tenant account at a later time to add the lease information. For more information on adding a lease to an existing tenant, refer to <a href="../Action/Leases-Residential-Add.html" class="MCXref xref">Add a Lease</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step3AddTenantContacts" data-magellan-target="Step3AddTenantContacts"><a name="H2_3"></a>Step 3: Add Tenant Contacts</h2>
+                                                        <p>In the <span class="Section">Contacts</span> tile, enter the following information. You can also add other contacts, such as additional occupants or emergency contacts.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Standard-Add-Tenant-Contacts.png" alt="The Contacts tile displays a tenant-type contact with a phone number and email address." class="lightbox" />
+                                                        </p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Contact Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The category of the contact, such as the primary tenant, a guarantor, or emergency contact.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Applicant Type</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The category of applicant represented by this contact, such as the primary lease holder or an additional co-occupant.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>First Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The contact's given or preferred name.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Middle Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The contact's middle or alternative name.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Last Name</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The contact's surname.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email Address</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The contact's email address.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Phone Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The contact's phone number. To enable the phone number for texting, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/mobile_off_19x19.png" alt="Texting Disabled" class="inline" style="width: 19;height: 19;" />. Alternatively, to disable texting, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/mobile_friendly_19x19.png" alt="Texting Enabled" class="inline" style="width: 19;height: 19;" />. The <span class="Field">Ext.</span> field for extensions is removed when texting is enabled.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Primary</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Indicates that the information in the contact is used as the primary point of contact when communicating with this tenant. This option is checked by default on the first contact you add.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Show On Statement/Labels</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Indicates that this contact's information displays on address labels and tenant statements.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>To add as many additional contacts as needed, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add New Contact</span>.</p>
+                                                        <h2 id="Step4EnterSecurityDepositandPaymentSettings" data-magellan-target="Step4EnterSecurityDepositandPaymentSettings"><a name="H2_4"></a>Step 4: Enter Security Deposit and Payment Settings</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Standard-Add-Tenant-Deposit-and-Settings.png" alt="The Deposit and Settings tiles display a security deposit and the rent period setup for the tenant." class="lightbox" />
+                                                        </p>
+                                                        <p>To enter information about the tenant's deposit charge and other payment information, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Deposit</span> tile, enter security deposit information in the following fields. Only <span class="Stress">one</span> security deposit can be added in this tile, but you can add additional deposits in the <span class="Section">One-Time Charges</span> tile later in the process.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Deposit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type to use for the tenant's security deposit.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>The deposit charge types that display in this list are established in system preferences. For more information, refer to <a href="System-Preferences/General-Options-Security-Deposit-General.html" class="MCXref xref">Security Deposit General Options (System Preferences)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Deposit Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount of the tenant's security deposit for the selected charge type.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Deposit Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The date on which the tenant's security deposit was charged. If the tenant already paid their security deposit, once the tenant is created, you can add the payment to their account. For more information, refer to <a href="../Action/Security-Deposit-Payment.html" class="MCXref xref">Record a Security Deposit Payment</a>.</p>
+                                                                                <p>If the tenant's security deposit payment was received prior to your company using <span class="mc-variable Products.RM variable">Rent Manager</span>, check <span class="Field">Deposit Prior to GL Start Date</span>. This informs <span class="mc-variable Products.RM variable">Rent Manager</span> that the tenant's security deposit is accounted for in the property's beginning balances when the database was set up and implemented. This allows you to track the security deposits for each tenant without duplicating the payments.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Settings</span> tile, enter or select additional account information or preferences into the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Rent Period</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>How often the tenant pays rent charges: on a <span class="Field">Monthly</span>, <span class="Field">Weekly</span>, or <span class="Field">Daily</span> basis.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Due Day</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If the <span class="Field">Rent Period</span> is set to <span class="Field">Monthly</span>, select the day of the month on which the rent is due. To set the due day as the last day of the month for every month, enter <span class="Input">31</span>.</p>
+                                                                                <p>If the <span class="Field">Rent Period</span> is set to <span class="Field">Weekly</span>, select the day of the week on which the rent is due.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Tax Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The type of tax applied to invoices created for this tenant. Tax types are used when products are sold in areas with different tax amounts. For more information, refer to <a href="../CSH/Tax-Types.html" class="MCXref xref">Tax Types (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Color</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>A color to help identify tenants of certain types, groups, or any other specifications you prefer, such as tenants with subsidized housing. The color displays as a bar to the left of the tenant in some areas of <span class="mc-variable Products.RM variable">Rent Manager</span>, such as the <span class="Input">Tenants</span> list page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Leasing Agent</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The <span class="mc-variable Products.RM variable">Rent Manager</span> user who acted as the tenant's leasing agent, if applicable. <span class="mc-variable Products.RM variable">Rent Manager</span> users with the option <span class="Field">Sales Rep/Leasing Agent</span> selected on the user's details page display in this list. For more information, refer to <a href="../CSH/User-Details.html" class="MCXref xref">User Details (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Subsidies</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If the tenant qualifies for subsidized rental housing (such as Section 8, FEMA, HUD, and so on), select the subsidy that applies to this tenant. Otherwise, leave this field blank. You can add subsidies later if you do not know what applies now. For more information, refer to <a href="Subsidy-Payment-Make.html" class="MCXref xref">Make a Subsidy Payment</a>.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>Subsidies must be set up in <span class="mc-variable Products.RM variable">Rent Manager</span> before you can apply them when creating a new tenant.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Charge Late Fees</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>If this tenant should be exempted from late fees, check this option to prevent <span class="mc-variable Products.RM variable">Rent Manager</span> from applying any late fees to this tenant account when late fees are posted for the tenant's property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Accept Payments</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Prevents all <span class="mc-variable Products.RM variable">Rent Manager</span> users from applying any form of payment to this tenant's account including making payments through <span class="mc-variable Products.TWA variable">Tenant Web Access</span> and <span class="mc-variable Products.App-Tenant variable">rmResident</span>.</p>
+                                                                                <p>When adding a payment to the tenant's open receivables, all options are disabled and a message stating <span class="Input">Payments have been stopped for this tenant</span> displays.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Don't Accept Checks</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Prevents all <span class="mc-variable Products.RM variable">Rent Manager</span> users from applying check payments to this tenant's account.</p>
+                                                                                <p>When adding a payment to the tenant's open receivables, a message stating <span class="Input">Do not accept checks from this tenant</span> displays. Additionally, the user cannot submit the payment if a check number is added to the<span class="Field"> Reference #</span> field; the user must select <span class="Field">Cash</span>, <span class="Field">MO</span>, or <span class="Field">CC</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Don't Send AR Automation Notifications</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Prevents any automated accounts receivable notifications for open or delinquent charges from being sent to this tenant. For more information, refer to <a href="../CSH/Automation-AR-Schedules.html" class="MCXref xref">Accounts Receivable Automation Schedules (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step5AddCharges" data-magellan-target="Step5AddCharges"><a name="H2_5"></a>Step 5: Add Charges</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Standard-Add-Tenant-Charges.png" alt="The Recurring Charges and One Time Charges tiles display inherited and new charges." class="lightbox" />
+                                                        </p>
+                                                        <p>In the <span class="Section">Recurring Charges</span> and <span class="Section">One-Time Charges</span> tiles, you can set up your tenant's recurring charges and also apply any one-time charges to their account immediately upon creation.</p>
+                                                        <p>Enter any needed recurring charges or one-time charges or credits to the tenant account. For more information on adding charges, refer to the sections below.</p>
+                                                        <h3><a name="H3_1"></a>Recurring Charges</h3>
+                                                        <p>Recurring charges are charge templates that can be posted regularly, such as rent, pet fees, static utility fees, or other repeating charges for a flat amount. Rather than adding charges directly to the tenant account, recurring charges determine what charge(s) to apply to each tenant account whenever recurring charges are posted.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If there are any recurring charges established for the tenant's property, unit, or unit type, those recurring charges display in the list by default and are applied to the tenant account. If the tenant should <span class="Stress">not</span> inherit these charges, uncheck the box to the left of the recurring charge to prevent it from being added to the tenant's recurring charges when the account is created.</p>
+                                                        </div>
+                                                        <p>To add a tenant-level flat recurring charge to the account, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Recurring Charges</span> tile, click <span class="ActionItems">Add Recurring Charge</span>.<br />The <span class="Window">Add Recurring Charge</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Enter or select the information for the recurring charge in the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type to use when this recurring charge is posted. The posted charge impacts the GL account linked to the charge type.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount charged to the tenant for the selected charge type when this recurring charge is posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Calculation</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Optionally, instead of entering an <span class="Field">Amount</span>, you can enter a custom calculation that use scripts to calculate the amount for the tenant's charge. For more information, refer to <a href="../KB/Script-Scripting.html" class="MCXref xref">Scripting</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Frequency</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The number value for how often this recurring charge posts to the tenant account. The frequency is calculated as the number of months, weeks, or days that should elapse between each posting of the recurring charge. The duration of month, week, or day is determined by the <span class="Field">Rent Period</span>.</p>
+                                                                                <p>For example, if the tenant has a <span class="Field">Rent Period</span> of <span class="Field">Monthly</span> and you enter a <span class="Field">Frequency</span> of <span class="Input">1</span>, then this recurring charge posts once every month. If the tenant is <span class="Field">Weekly</span> and you enter <span class="Input">2</span>, it posts once every two weeks. If no value is specified, the <span class="Field">Frequency</span> defaults to <span class="Input">1</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>From</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which this recurring charge begins posting for this tenant. If recurring charges are posted for a date prior to the <span class="Field">From</span> date, no charge is posted for the tenant.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>To</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The final date for which the recurring charge can be posted before it expires. If recurring charges are posted for a date after the <span class="Field">To</span> date, no charge is posted for the tenant. If there is no end date or it is not known, leave this field blank.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A note to display for this recurring charge and on the associated charges on the tenant's <span class="Window">View Transactions</span> page when posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The recurring charge is added to the tenant. Repeat these steps for any additional recurring charges needed for the account.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>CRE Recurring Charges</h3>
+                                                        <p>Commercial recoverable expenses (CRE) fees are primarily used in commercial rentals to distribute the expenses related to owning and maintaining the facility, including maintenance, taxes, and insurance. CRE Recurring charges are charge templates that can be posted regularly rather than manually adding charges directly to the tenant account. The amount charged each month may vary based on your setup. CRE recurring charges are most commonly used for commercial rent, but can also be used for situations where the owner has covered an expense upfront, but wants to bill back the tenant to cover a portion of that cost.</p>
+                                                        <p>To add a commercial recoverable expenses (CRE) recurring charge to the account, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Recurring Charges</span> tile, click <span class="ActionItems">Add CRE</span>.<br />The <span class="Window">Add CRE Recurring Charge</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Commercial Recoverable Charge</span> section, enter or select the information for the CRE recurring charge in the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit to which this CRE recurring charge is applied.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type to use when this recurring charge is posted. The posted charge impacts the GL account linked to the charge type.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Frequency</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The number value for how often this recurring charge posts to the tenant account. The frequency is calculated as the number of months, weeks, or days that should elapse between each posting of the recurring charge. The duration of month, week, or day is determined by the <span class="Field">Rent Period</span>.</p>
+                                                                                <p>For example, if the tenant has a <span class="Field">Rent Period</span> of <span class="Field">Monthly</span> and you enter a <span class="Field">Frequency</span> of <span class="Input">1</span>, then this recurring charge posts once every month. If the tenant is <span class="Field">Weekly</span> and you enter <span class="Input">2</span>, it posts once every two weeks. If no value is specified, the <span class="Field">Frequency</span> defaults to <span class="Input">1</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>From</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which this recurring charge begins posting for this tenant. If recurring charges are posted for a date prior to the <span class="Field">From</span> date, no charge is posted for the tenant.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>To</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The final date for which the recurring charge can be posted before it expires. If recurring charges are posted for a date after the <span class="Field">To</span> date, no charge is posted for the tenant. If there is no end date or it is not known, leave this field blank.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A note to display for this recurring charge and on the associated charges on the tenant's <span class="Window">View Transactions</span> page when posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the <span class="Section">Amount Distribution</span> section, select one of the following options:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Tenant's percentage of the total square footage of the property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Charge an amount based on the percentage of each tenant's occupied square footage of the property's overall square footage.</p>
+                                                                                <p>For example, if the CRE charge is for $3,000 and tenant rents 50% of the total square footage of the property, the tenant is charged $1,500.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>For this option to work, the following fields <span class="Stress">must</span> be accurately filled out:</p>
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                            <p>The <span class="Field">Square Footage</span> field on the tenant's unit.</p>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <p>The <span class="Field">Total Sq Ft</span> field on the selected property.</p>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Tenant's percentage of the total <span class="Stress">rented</span> square footage of the property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Charge an amount based on the percentage of each tenant's occupied square footage of the property's overall square footage <span class="Stress">minus</span> the square footage of any vacant units.</p>
+                                                                                <p>For example, if the property's total square footage is 10,000 sq. ft. but 3,000 sq. ft. of the property consists of vacant units, each tenant's rented space is compared against the property's remaining 7,000 sq. ft. of total rented space. This means each tenant is charged a larger portion of the total CRE amount.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>For this option to work, the following fields <span class="Stress">must</span> be accurately filled out:</p>
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                            <p>The <span class="Field">Square Footage</span> field on the tenant's unit.</p>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <p>The <span class="Field">Total Sq Ft</span> field on the selected property.</p>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <p>In addition, all units at the property must have an accurate <span class="Field">Square Footage</span> entered.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Occupied percentage of the total occupancy of the property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Charge an amount based on the number of tenants at the property, charging each tenant an equal percentage of the total CRE based on the property's overall occupancy.</p>
+                                                                                <p>For example, if a property consists of ten occupants that each have their own unit, each tenant is charged 10% of the total CRE charge. If there are ten total occupants at the property and one unit has four occupants, they are responsible for 40% of the CRE charge.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>For this option to work, every occupant at the property <span class="Stress">must</span> be added to <span class="mc-variable Products.RM variable">Rent Manager</span> as either a tenant or a tenant contact.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Divide evenly among current tenants</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Charge an amount evenly among all your current tenants.</p>
+                                                                                <p>For example, if the property has ten units and eight are rented by tenants, each tenant is assigned 1/8 of the total CRE charge.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Divide evenly by number of units in the property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Charge an amount evenly by the total number of units in the property.</p>
+                                                                                <p>For example, if your property has ten units and eight are rented by tenants, each tenant is assigned 1/10 of the total CRE charge. This means part of the total CRE charge is <span class="Stress">not</span> assigned to a tenant if there are any vacant units at the property.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use CRE setup of the selected lease</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>Charge an amount to each tenant based on the percentage of expenses you defined on the <span class="Tab">CRE Setup</span> tab of the tenant's commercial lease.</p>
+                                                                                                <div class="warning">
+                                                                                                    <p class="label1">Warning</p>
+                                                                                                    <p>For this option to work, the <span class="Column">Pro Rata Share %</span> and <span class="Column">Administrative Fee %</span> fields must be established on the commercial lease's <span class="Tab">CRE Setup</span> tab.</p>
+                                                                                                </div>
+                                                                                                <p>Additionally, enable one or both of the following fields to determine which CRE settings are included when calculating the charge amount:</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;">
+                                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                                    <tbody>
+                                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                                <p>Pro rata share</p>
+                                                                                                            </td>
+                                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                                <p>The percentage of the expenses for the selected CRE account defined on the commercial lease's <span class="Tab">CRE Setup</span> tab.</p>
+                                                                                                                <p class="Formula">Amount = Expense Account * Pro Rata Share %</p>
+                                                                                                                <p>For example, if an expense account has expenses of $500 and the pro rata share percentage entered is <span class="Input">15</span>, the pro rata share amount is $75 ( that is 15% of $500 calculated as <span class="Formula">500 * 0.15</span>).</p>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                                <p>Administrative fees</p>
+                                                                                                            </td>
+                                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                                <p>The pro rata share value multiplied by the administrative fee percentage defined on the commercial lease's <span class="Tab">CRE Setup</span> tab.</p>
+                                                                                                                <p class="Formula">Amount = Pro Rata Share * Administrative Fee %</p>
+                                                                                                                <p>For example, if the pro rata share is $75 and the administrative fee is 10%, the fee is $7.50 (that is 10% of $75 calculated as <span class="Formula">75 * 0.1</span>).</p>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>User percentage in tenant's user defined field</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Charge an amount based on the percentage specified in a tenant-type user defined field (UDF). The values in the selected field may range from <span class="Input">0</span> to <span class="Input">100</span>.)</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>For this option to work, you must create a numeric tenant-type UDF used specifically for tracking percentages, then enter a value for <span class="Stress">each</span> tenant who receives a CRE charge. For more information, refer to <a href="../Action/UDFs-Add-Numeric.html" class="MCXref xref">Add a Numeric User Defined Field</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Amount</span> section, in the <span class="Field">Divide</span> field, select an option below to determine how to split the CRE charges.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use an amount from property user defined field</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total CRE charge is determined by a specified <span class="Stress">property</span>-type user defined field (UDF). In the <span class="Field">User Defined Fields</span> field, select the desired UDF where the amount value is stored for the property.</p>
+                                                                                <p>This option is not available if the <span class="Section">Amount Distribution</span> option to <span class="Field">Use CRE setup of the selected lease</span> is selected.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>For this option to work, you must create a numeric property-type UDF used specifically for tracking percentages, then enter a value for that UDF on the property account. For more information, refer to <a href="../Action/UDFs-Add-Numeric.html" class="MCXref xref">Add a Numeric User Defined Field</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use an amount from tenant user defined field</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total CRE charge is determined by a specified <span class="Stress">tenant</span>-type user defined field (UDF). In the <span class="Field">User Defined Fields</span> field, select the desired UDF where the amount value is stored for the tenant.</p>
+                                                                                <p>This option is not available if the <span class="Section">Amount Distribution</span> option to <span class="Field">Use CRE setup of the selected lease</span> is selected.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>For this option to work, you must create a numeric tenant-type UDF used specifically for tracking percentages, then enter a value for that UDF on the tenant account. For more information, refer to <a href="../Action/UDFs-Add-Numeric.html" class="MCXref xref">Add a Numeric User Defined Field</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use expenses from</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1" colspan="2">
+                                                                                                <p>The total CRE charge is determined by the previous expenses of the CRE accounts you select in the <span class="Field">GL Account</span> field over a selected period of time.</p>
+                                                                                                <div class="warning">
+                                                                                                    <p class="label1">Warning</p>
+                                                                                                    <p>For this option to work, you <span class="Stress">must</span> have expenses in the selected general ledger (GL) account(s) for the specified time frame.</p>
+                                                                                                </div>
+                                                                                                <p>If selected, the following fields display and must be filled out. Each field is described below. </p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>GL Account</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The CRE expense account(s) for which to include expenses in the amount calculation.</p>
+                                                                                                <div class="info">
+                                                                                                    <p class="label1">More Information</p>
+                                                                                                    <p>This field displays only expense accounts that have the option <span class="Field">Commercial recoverable expense (CRE) account</span> checked.</p>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Method</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The time frame for which to examine the expenses in the specified GL accounts when calculating the CRE amount.</p>
+                                                                                                <p>Select <span class="Field">Last year's expenses</span> to examine the overall expenses accrued for the last twelve months prior to the date you selected when posting the charges.</p>
+                                                                                                <p>Select <span class="Field">Month(s) ago</span> to examine the overall expenses accrued for a specified number of months prior to the date you selected. In the <span class="Field">Months</span> field, enter the desired number of months.</p>
+                                                                                                <p>Select <span class="Field">Annualized monthly average</span> to examine the average monthly expenses accrued over the previous year.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                                <p>Basis</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                                <p>The accounting basis by which the CRE totals are calculated: <span class="Field">Cash</span> or <span class="Field">Accrual</span>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Increase by (Percentage)</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>The percent amount by which to increase the total CRE amount based on the selected <span class="Field">Method</span>.</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Use budget expenses from</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The total CRE charge is determined by the <span class="Stress">budgeted</span> expenses for the specified CRE general ledger (GL) accounts. In the <span class="Field">GL Account</span> field, select the GL account(s) to examine budgeted information.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>For this option to work, you must have budgets established in your database for the selected accounts. For more information, refer to <a href="../CSH/Budgets.html" class="MCXref xref">Budget (Page)</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Use a specific amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The total CRE charge is determined by a set dollar amount. In the <span class="Field">Amount</span> field, enter the desired amount for the CRE charge.</p>
+                                                                                <div class="warning">
+                                                                                    <p class="label1">Warning</p>
+                                                                                    <p>This option is not available if the <span class="Section">Amount Distribution</span> option to <span class="Field">Use CRE setup of the selected lease</span> is selected.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The recurring charge is added to the tenant. Repeat these steps for any additional recurring charges needed for the account.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_3"></a>One-Time Charges</h3>
+                                                        <p>One-time charges are single charges or credits you can add to the tenant account. When creating a new tenant, they are useful for situations such as pet deposits, promotional move-in credits, or prorating the first month of the tenant's rent if they moved in after the first day of the month.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If security deposit charges are established on the tenant charge setup or included in an active rent quote, they are added to this tile by default. However, if the tenant is being added to a property that is using Rentable for security deposits, charges associated with security deposit charge types are <span class="Stress">not</span> included. For more information, refer to <a href="Security-Deposit-Set-Up-Rentable.html" class="MCXref xref">Set Up Security Deposits with Rentable</a>.</p>
+                                                        </div>
+                                                        <p>To add a one-time charge to the new tenant account, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">One-Time Charges</span> tile, click <span class="ActionItems">Add Charge</span>.<br />The <span class="Window">Add Charge</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Enter or select the information for the one-time charge or credit in the available fields described below.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Charge Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The charge type to use for this transaction. The posted charge impacts the GL account linked to the charge type.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the transaction is applied to the tenant account regardless of when the tenant account is created.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The dollar amount charged to the tenant for this transaction. To credit the tenant, enter a negative amount.</p>
+                                                                                <p>If charging the tenant for a partial month, enter the full amount for the month and then click <span class="ActionItems">Prorate</span>. Click the drop-down below to learn more. Once you have the <span class="Field">Prorated Amount</span>, click <span class="BigButtons">Save</span>.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>On the <span class="Window">Prorate Transaction</span> pop-up, the current charge information displays. In the <span class="Field">Days Prorated</span> field, enter how many days for which to prorate the transaction.</p>
+                                                                                    <p>If <span class="Field">Always prorate based on 30 days in a month</span> is active in system preferences, the calculation always uses 30 days to determine the prorated amount. Otherwise, the calculation uses the actual number of days in the selected month.</p>
+                                                                                    <p>If needed, you can edit the total amount to prorate in the <span class="Field">Full Charge Amount</span> field. The <span class="Field">Prorated Amount</span> field displays the calculated amount for the remaining days in the month.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Comment</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>A note to display for this recurring charge and on the associated charges on the tenant's <span class="Window">View Transactions</span> page when posted.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>If you are adding a credit with a negative <span class="Field">Amount</span>, the <span class="Section">Preallocations</span> section displays. Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/plus_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Add Item</span> to preallocate this credit to a specific <span class="Column">Charge Type</span> for a specified <span class="Column">Amount</span>. When other charges are added to this tenant, this credit is applied to those charges only if it has the selected charge type, up to the entered dollar amount.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Section">Other Information</span> section, enter a <span class="Field">Reference #</span> to further identify the transaction.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The one-time charge or credit is added to the tenant. Repeat these steps for any additional one-time transactions needed for the account.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step6EnterTenantUDFValues" data-magellan-target="Step6EnterTenantUDFValues"><a name="H2_6"></a>Step 6: Enter Tenant UDF Values</h2>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Standard-Add-Tenant-User-Defined-Fields.png" alt="The User Defined Fields section displays one UDF to confirm if pets are contained." class="lightbox" />
+                                                        </p>
+                                                        <p>After entering the tenant's charges, select the <span class="Tab">User Defined Fields</span> tab on the left. In the <span class="Section">User Defined Fields</span> tile, only required UDFs display in the <span class="Column">Name</span> column. Required UDFs are marked with an asterisk (*) and <span class="Stress">must</span> have a <span class="Column">Value</span> entered to create the tenant.</p>
+                                                        <p>To view all the tenant-type UDFs in the database, click <span class="ActionItems">View All UDFs</span>. For each UDF applicable to the tenant you are adding, enter or select the information in the <span class="Field">Value</span> column for the associated UDF.</p>
+                                                        <h2 id="Step7CreatetheTenantAccount" data-magellan-target="Step7CreatetheTenantAccount"><a name="H2_7"></a>Step 7: Create the Tenant Account</h2>
+                                                        <p>Once all information is added, click <span class="BigButtons">Save and Finish</span> to complete the tenant creation process and close the pop-up. Alternatively, click <span class="BigButtons">Save and New</span> to finish adding the tenant and refresh the pop-up to add another tenant account.</p>
+                                                    
+</main>
+</body>
+</html>

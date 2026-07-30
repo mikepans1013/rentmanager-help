@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-output-analytics-server="https://lcs202202281700482.api.madcapcentral.com/" data-mc-output-analytics-topic-id="1xBCeJNnhjAPyXZp0OqabpHvWdZB8I86vlAtwWUMkh0C31xc1Ixy+Uv90OuQetJV0vTDrc4d3gZiR668T5rz0tkXbGMhHn5yHnviJxK1otuW5hBkjwkNQhR4s/zowzi9z+e4i2QzMDGflowXEombVa5V6vp2M792EZ/xru3sC4e/FECjAvP47w==" data-mc-has-content-body="True" data-mc-conditions="Status.Published,Content.Important" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="Dependencies" content="RMUC Handouts" />
+        <meta name="Include Video" content="rmVoIP-Enable,rmVoIP-Make Call,rmVoIP-Users-Set-Up" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Set Up rmVoIP for Rent Manager</title>
+        <label class="mode-switcher" id="theme-toggle">
+            <input type="checkbox" name="checkbox" /><span class="slider round"></span>
+        </label>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" data-mc-proxy="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" data-mc-proxy="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" data-mc-proxy="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" data-mc-proxy="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/RMX-Branding.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/lity.css" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/MainStylesDark.css" rel="stylesheet" type="text/css" data-theme="dark-main" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Tablestyles/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Tablestyles/Privileges.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script>/* <![CDATA[ */
+			(function () {
+			var theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.dataset.theme = theme;
+
+			// Prevent white flash on first paint when in dark mode
+			if (theme === 'dark') {
+			var s = document.createElement('style');
+			s.id = 'early-dark-paint';
+			s.textContent =
+			"html,body{background:#0e1319;color:#e8e8e8}" +           // minimal dark bg + readable text
+			"html[data-theme='dark']{color-scheme:dark}";              // hints UA (form controls, scrollbars)
+			document.head.appendChild(s);
+			}
+			})();
+		/* ]]> */</script>
+        <script src="../../../Resources/Scripts/custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/bootstrap.js">
+        </script>
+        <script src="../../../Resources/Scripts/lightbox.js">
+        </script>
+        <script src="../../../Resources/Scripts/lity.js">
+        </script>
+        <script src="../../../Resources/Scripts/addLityAttribute.js">
+        </script>
+        <script src="../../../Resources/Scripts/Dark-Mode.js">
+        </script>
+        <script src="../../../Resources/Scripts/glanceCobrowse.js">
+        </script>
+        <script src="../../../Resources/Scripts/microContentTopics.js">
+        </script>
+        <script src="../../../Resources/Scripts/mobileResponseTableDisplay.js">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic-ToolBar.js">
+        </script>
+    </head><a name="top"></a>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Home.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="2" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="topic-background">
+                                        <div class="search">
+                                            <form class="search" action="#">
+                                                <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                    <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search..." />
+                                                    <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                        </div>
+                                                        <div class="search-filter-content" id="sf-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-submit-wrapper" dir="ltr">
+                                                        <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="row collapse">
+                                            <div class="topic-layout">
+                                                <div>
+                                                    <div data-sticky-container="" id="s_Ho-IVZhUKBCo5HCn9--Q">
+                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="s_Ho-IVZhUKBCo5HCn9--Q:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
+                                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container-on="small" class="nocontent menu _Skins_Topic_Headers_Menu mc-component">
+                                                                <li class="tree-node"><a href="#SetUprmVoIPforRentManager">Set Up rmVoIP for Rent Manager</a>
+                                                                    <ul>
+                                                                        <li class="tree-node"><a href="#Step1SetUprmVoIPUsers">Step 1: Set Up rmVoIP Users</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#Step2EnablermVoIP">Step 2: Enable rmVoIP</a>
+                                                                        </li>
+                                                                        <li class="tree-node"><a href="#NextSteps">Next Steps</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_ToolBar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                        <div class="button-group-container-left">
+                                                            <button class="button needs-pie remove-highlight-button" title="Remove Search Highlights">
+                                                                <div>
+                                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                                        <div class="button-icon"> </div>
+                                                                    </div><span class="button-text">Remove Highlights</span>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div role="main" id="mc-main-content">
+                                                        <h1 id="SetUprmVoIPforRentManager" data-magellan-target="SetUprmVoIPforRentManager"><a name="kanchor1108"></a><a name="H1"></a>Set Up rmVoIP for Rent Manager</h1>
+                                                        <p><span class="mc-variable Products.NDT variable">rmVoIP</span> is a business class phone system that fully integrates with <span class="mc-variable Products.RM variable">Rent Manager</span>, allowing you to make and receive Net Dial Tone (NDT) calls directly through the <span class="mc-variable Products.RM variable">Rent Manager</span>. Once the integration is set up, it provides you with relevant caller information to support your calls in real time, and <span class="mc-variable Products.RM variable">Rent Manager</span> maintains those details in call records.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This feature is licensed and must be purchased separately. For more information, contact your sales representative at <span class="mc-variable LCS.Sales-Email variable">sales@rentmanager.com</span>.</p>
+                                                        </div>
+                                                        <p>To make use of the <span class="mc-variable Products.NDT variable">rmVoIP</span> integration, it first needs to be enabled in <span class="mc-variable Products.RM variable">Rent Manager</span> and then users need to be provided access and set up with their <span class="mc-variable Products.NDT variable">rmVoIP</span> extension.</p>
+                                                        <h2 id="Step1SetUprmVoIPUsers" data-magellan-target="Step1SetUprmVoIPUsers"><a name="H2_1"></a>Step 1: Set Up <span class="mc-variable Products.NDT variable">rmVoIP</span> Users</h2>
+                                                        <p>Each company representative that needs <span class="mc-variable Products.NDT variable">rmVoIP</span> access must have a <span class="mc-variable Products.RM variable">Rent Manager</span> user account, extension, and applicable privileges enabled.</p>
+                                                        <h3><a name="H3_1"></a>Add an <span class="mc-variable Products.NDT variable">rmVoIP</span> Extension</h3>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="Snippet Conditions.3">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage all users and privileges</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.htm" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To set up <span class="mc-variable Products.NDT variable">rmVoIP</span> for individual users, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span>&#160;<img src="../../../Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Users <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Users</span> and select a user account.<br />The user's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Section">Contact Information</span> tile in the <span class="Field"><span class="mc-variable Products.NDT variable">rmVoIP</span> Extension</span> field, add the user's extension number.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>The <span class="Field">Phone</span> field is for personal numbers and is <span class="Stress">not</span> tied to the <span class="mc-variable Products.NDT variable">rmVoIP</span> system.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The user's <span class="mc-variable Products.NDT variable">rmVoIP</span> extension is saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Set User Privileges</h3>
+                                                        <p>After establishing the user's extension, you can give the user the ability to place phone calls, view other user's missed calls, and access other tools related to <span class="mc-variable Products.NDT variable">rmVoIP</span>. To set up user privileges, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>From the user's details page, select the <span class="Tab">Privileges</span> tab.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Expand the <span class="Section">Phone System</span> privilege group.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Select any privileges you need for the user.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Allow user to edit their own <span class="mc-variable Products.NDT variable">rmVoIP</span> settings</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to control their <span class="mc-variable Products.NDT variable">rmVoIP</span> personal preferences. The user may choose whether to show incoming calls, hunt group calls, and users' extensions in the <span class="Section">Presence</span> list in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Listen to recorded calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to access phone conversations and voicemail messages through the <span class="Tab">History/Notes</span> tab of the associated accounts.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>All saved audio recordings are stored as WAV files on the <span class="mc-variable LCS.LCS variable">LCS</span> servers. At any time, you may retrieve recorded calls and voicemails through <span class="mc-variable Products.RM variable">Rent Manager</span> by having <span class="mc-variable Products.RM variable">Rent Manager</span> send you an email that includes an attached copy of the recorded call.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Place Calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to place calls to other <span class="mc-variable Products.NDT variable">rmVoIP</span> phone extensions or to phone numbers entered into <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>View <span class="mc-variable Products.NDT variable">rmVoIP</span>&#160;Dashboard Tiles</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>Allows a user to view the <span class="Section"><span class="mc-variable Products.NDT variable">rmVoIP</span> Current Caller List</span> and <span class="Section"><span class="mc-variable Products.NDT variable">rmVoIP</span> Extension Statistics</span> tiles on their dashboard.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>View/Link other users' missed calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Allows a user to view, link, or delete calls in the <span class="Window"><span class="mc-variable Products.NDT variable">rmVoIP</span> Missed/Unlinked Calls</span> page associated with other user accounts/extensions. Without this permission, users may only view, link, or delete calls associated with their personal <span class="mc-variable Products.NDT variable">rmVoIP</span> extension.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The user's privileges are saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_3"></a>Provide Access to <span class="mc-variable Products.NDT variable">rmVoIP</span> Reports</h3>
+                                                        <p>After you set up user privileges, you can give the user access to <span class="mc-variable Products.NDT variable">rmVoIP</span> reports.</p>
+                                                        <p>To provide access to <span class="mc-variable Products.NDT variable">rmVoIP</span> reports, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Select the <span class="Tab">Reports</span> tab.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Expand the <span class="Section"><span class="mc-variable Products.NDT variable">rmVoIP</span> Reports</span> group.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Select the reports you want the user to have access to.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The user's report access is saved.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <p>In addition to the specific report access, users still require the privilege to run reports.</p>
+                                                            <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Letter/Email Templates/Reports/Packets</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Run reports</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.htm" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Step2EnablermVoIP" data-magellan-target="Step2EnablermVoIP"><a name="H2_2"></a>Step 2: Enable <span class="mc-variable Products.NDT variable">rmVoIP</span></h2>
+                                                        <p>Before users can use <span class="mc-variable Products.NDT variable">rmVoIP</span> in <span class="mc-variable Products.RM variable">Rent Manager</span>, it first needs to be enabled in system preferences.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.2">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.htm" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>To enable the <span class="mc-variable Products.NDT variable">rmVoIP</span> integration, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> Administration</span>, then go to <span class="Navigation">Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="mc-variable Products.NDT variable">rmVoIP</span></span>.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">rmVoIP Connection Setup</span> section, enter the <span class="Field">Username</span> and <span class="Field">Password</span> for your <span class="mc-variable Products.NDT variable">rmVoIP</span> account.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Test Settings</span> to test the connection to your <span class="mc-variable Products.NDT variable">rmVoIP</span> account.<br />The <span class="Window"><span class="mc-variable Products.NDT variable">rmVoIP</span> Connection Test</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">OK</span> to close the pop-up.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Check <span class="Field">Enabled</span>.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>If you have purchased additional locations that use their own set of credentials to access <span class="mc-variable Products.NDT variable">rmVoIP</span>, check <span class="Field">Use different credentials in other locations</span>.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>In the <span class="Section">Default User Settings</span> section, select the options you want to enable for your users.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Show incoming Calls</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>An <span class="mc-variable Products.NDT variable">rmVoIP</span> incoming call notification displays when receiving calls in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Show extensions in presence listing</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Includes each user's extension number when viewing phone presence in <span class="mc-variable Products.RM12 variable">Rent Manager 12</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The <span class="Field">Connection Status</span> is updated to <span class="Input">Connected</span> and <span class="mc-variable Products.NDT variable">rmVoIP</span> is enabled.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="NextSteps" data-magellan-target="NextSteps"><a name="H2_3"></a>Next Steps</h2>
+                                                        <p>At this point you can start calls from <span class="mc-variable Products.RM variable">Rent Manager</span> and can run reports to help track calls. Users can also change their <span class="mc-variable Products.NDT variable">rmVoIP</span> default settings through personal preferences. For more information, refer to the steps in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Step</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Set Up Personal <span class="mc-variable Products.NDT variable">rmVoIP</span> Settings</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Your personal <span class="mc-variable Products.NDT variable">rmVoIP</span> settings allow you to customize how calls are handled while you're logged in to <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information, refer to <a href="../Other/Personal-Preferences/rmVoIP-Preferences.htm" class="MCXref xref">rmVoIP Preferences (Personal Preferences)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Set Up <span class="mc-variable Products.NDT variable">rmVoIP</span> for rmAppSuite Pro</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p><span class="mc-variable Products.NDT variable">rmVoIP</span> integrates seamlessly into <span class="mc-variable Products.AppPro variable">rmAppSuite Pro</span>, the mobile app that allows you to take <span class="mc-variable Products.RM variable">Rent Manager</span> in the field. For more information, refer to <a href="rmVoIP-rmAppSuite-Pro-Set-Up.htm" class="MCXref xref">Set Up rmVoIP for rmAppSuite Pro</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Start a Call from <span class="mc-variable Products.RM variable">Rent Manager</span></p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Users can quickly make calls in <span class="mc-variable Products.RM variable">Rent Manager</span> from many places, including directly from an entity's details page. You can start a call by navigating to the entity you wish to contact, then click <img src="../../../Resources/Images/ICONS/Express-App/Material/call_19x19.png" alt="Place Call" class="inline" style="width: 19;height: 19;" />. Depending on your phone configuration, the hard or soft phone prompts you to pick up, at which point the call dials out.</p>
+                                                                        <p>
+                                                                            <img src="../../../Resources/Images/PNGs/rmvoIP-call-from-scoreboard-JL-25.png" alt="The call button and phone number display at the top of a the tenant's details page." />
+                                                                        </p>
+                                                                        <p>When the call ends, <span class="mc-variable Products.RM variable">Rent Manager</span> automatically creates a history/note item on that entity with the type <span class="Field"><span class="mc-variable Products.NDT variable">rmVoIP</span></span>. If you have purchased the call recording feature, a recorded audio file is attached to the history/note item. If you send the item as an email, the audio file is included as an attachment on the email.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="faq-proxy-container micro-content-proxy _Skins_Topic_Videos mc-component" data-mc-micro-content-view-mode="PlainText">
+                                                        <div class="proxy-title">Related Videos</div>
+                                                        <div class="micro-content">
+                                                            <div class="micro-content-phrase">
+                                                                <button class="micro-content-drop-down-button">&#160;</button><span>Enable rmVoIP</span>
+                                                            </div>
+                                                            <div class="micro-response">
+                                                                <p><a href="https://player.vimeo.com/video/957803319?h=7a31408c2a">Enable rmVoIP</a>
+                                                                </p>
+                                                            </div>
+                                                            <div class="micro-content-expand-transition-wrapper">
+                                                                <div class="micro-content-expand-transition">
+                                                                </div>
+                                                            </div>
+                                                            <button class="micro-content-expand">
+                                                            </button>
+                                                        </div>
+                                                        <div class="micro-content">
+                                                            <div class="micro-content-phrase">
+                                                                <button class="micro-content-drop-down-button">&#160;</button><span>Make rmVoIP Call in Rent Manager</span>
+                                                            </div>
+                                                            <div class="micro-response">
+                                                                <p><a href="https://player.vimeo.com/video/964743205?h=f44562e77a">Make an rmVoIP Call in Rent Manager</a>
+                                                                </p>
+                                                            </div>
+                                                            <div class="micro-content-expand-transition-wrapper">
+                                                                <div class="micro-content-expand-transition">
+                                                                </div>
+                                                            </div>
+                                                            <button class="micro-content-expand">
+                                                            </button>
+                                                        </div>
+                                                        <div class="micro-content">
+                                                            <div class="micro-content-phrase">
+                                                                <button class="micro-content-drop-down-button">&#160;</button><span>Set Up rmVoIP Users</span>
+                                                            </div>
+                                                            <div class="micro-response">
+                                                                <p><a href="https://player.vimeo.com/video/957803339?h=ccbc2e8791">Set Up rmVoIP Users</a>
+                                                                </p>
+                                                            </div>
+                                                            <div class="micro-content-expand-transition-wrapper">
+                                                                <div class="micro-content-expand-transition">
+                                                                </div>
+                                                            </div>
+                                                            <button class="micro-content-expand">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="links">
+                                                        <div class="MCRelationshipsProxy_0">
+                                                            <p class="pageHeading_page_0">Related Information</p>
+                                                            <p class="pageItem_page_0"><a href="../Other/System-Preferences/rmVoIP.htm">rmVoIP (System Preferences)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="../CSH/rmVoIP-Incoming-Call-History.htm">rmVoIP Incoming Call History (Page)</a>
+                                                            </p>
+                                                            <p class="pageItem_page_0"><a href="LP-rmVoIP.htm">rmVoIP Phone System</a>
+                                                            </p>
+                                                            <p class="taskHeading_task_0">Related Tasks</p>
+                                                            <p class="taskItem_task_0"><a href="rmVoIP-rmAppSuite-Pro-Set-Up.htm">Set Up rmVoIP for rmAppSuite Pro</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="topic-background">
+                                        <script type="text/javascript" src="../../../Resources/Scripts/Back-to-Top-Button.js">
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <div class="footer center">
+        <div class="master-page-footer">
+            <div>
+                <p class="footer-header">Product Support</p>
+                <p>Monday-Friday</p>
+                <p>8:00 a.m.-7:00 p.m. (EST)</p>
+                <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
+                </p>
+                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                </p>
+            </div>
+            <div>
+                <p class="footer-header">Resources</p>
+                <p><a href="https://www.rentmanager.com/training/#Training_Calendar" target="_blank">Training Calendar</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/virtual-classroom-enrollment-form/">Virtual Classroom Enrollment</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/podcast/">Beyond Rent Podcast</a>
+                </p>
+                <p><a href="https://www.rentmanager.com/submit-a-feature-request/">Submit a Feature Request</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+    </div>
+</html>

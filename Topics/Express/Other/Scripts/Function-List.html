@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-List.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-List.htm</a></p>
+
+                                                        <h1 id="ListFunctionScript" data-magellan-target="ListFunctionScript"><a name="aanchor180"></a>
+                                                            <a name="kanchor305"></a><a name="H1"></a>List Function (Script)</h1>
+                                                        <p>This function displays a list of service issues linked to the selected property, tenant, prospect, or unit within a specified date range. This function creates a separate line for each issue and displays, by default, the <span class="Field">Open Date</span>, <span class="Column">Issue&#160;ID</span>, and <span class="Field">Title</span> separated by tabs. Additional variables are available to display in each line.</p>
+                                                        <p>The default output of the function displays below. The Format parameter can be used to customize this output, as shown in the last example in this topic.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/list%20function%20default%20format%20-%20BG%20-%202.5.2021.png" alt="" />
+                                                        </p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>ServiceManager().List()]</p>
+                                                                        <p>Displays information found on the <span class="Window">Issue</span> details page or <span class="Window">Issues</span> list page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[List(<span class="Optional">"FromDate"</span>,<span class="Optional">"ToDate"</span>,<span class="Optional">"IsClosed"</span>,<span class="Optional">"Format"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>FromDate</h3>
+                                                        <p colspan="2">Specify the date on or after which to examine service issues opened. If no date is specified, the function uses the beginning of time.</p>
+                                                        <p class="Example">[List("1/1/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays service issues of the selected entity opened on or after January 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_2"></a>ToDate</h3>
+                                                        <p colspan="2">Specify the date on or before which to examine service issues opened. If no date is specified, the function uses the end of time.</p>
+                                                        <p class="Example">[List("","12/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays service issues of the selected entity from the beginning of time to December 31, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_3"></a>IsClosed</h3>
+                                                        <p>Specify <span class="Input">True</span> to examine only closed service issues. Specify <span class="Input">False</span> to examine only open service issues. Leave this parameter blank to examine both closed and open service issues.</p>
+                                                        <p class="Example">[List("9/1/<span class="mc-variable Dates.Year4 variable">2026</span>","","True")]</p>
+                                                        <p>Displays service issues of the selected entity closed on or after September 1, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Subheading">Format</p>
+                                                        <p>List details of each issue using a special format sequence.</p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <p class="Subheading">Default Format</p>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays a list of the  dates, ID numbers, and issue titles, separated by tabs: </p>
+                                                        <p class="Formula">"\t$_Date\t$_IssueID\t$_Title\n"</p>
+                                                        <p class="Formula">Variables</p>
+                                                        <p>The following variables may be used in the  Format parameter. Their values are pulled from the details page for service issues, or the <span class="Window">Service Manager Issues</span> page.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_AssignedClosedDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date currently in the <span class="Field">Close Date</span> field of the selected service issue. This can be the close date most recently entered by the user or the original close date (if the user has not changed the date).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_AssignedTo</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the active <span class="mc-variable Products.RM variable">Rent Manager</span> user assigned to the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Category</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Category</span> created to help you sort and track service issues.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_ClosedDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date on which the <span class="Field">Close Date</span> box was initially checked on the selected service issue and the issue was saved.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_CreateDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the date on which the selected service issue was created and first saved.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Date</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Open Date</span> of the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the text in the <span class="Field">Description</span> field on the  <span class="Window">Service Manager Issue</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_DueDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Due Date</span> of the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Hours</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the number of <span class="Field">Hours</span> spent on the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_IsClosed</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays <span class="Field">True</span> if the issue is closed or <span class="Field">False</span> if the issue is still open.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_IsRead</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays <span class="Field">True</span> if the issue has been read or <span class="Field">False</span> if the issue has not been read.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_IssueID</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Column">Issue&#160;ID</span> of the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Priority</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays <span class="Field">Priority</span> assigned to the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Resolution</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the text in the <span class="Field">Resolution</span> field on the <span class="Window">Service Manager Issue</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Status</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the condition that describes the current progress of the service issue.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Title</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the brief summary in the <span class="Field">Title</span> field on the <span class="Window">Service Manager Issue</span> details page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_UpdateDate</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the date the selected service issue was most recently updated (saved).</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Example">List("","","","\t$_Title\t$_Date\t$_Status\n")]</p>
+                                                        <p>Displays a customized list of the issue title, date, and status of the service issues.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Tenant().ServiceManager().List()]</p>
+                                                        <p>Displays a list of the date, issue ID, and title of all open and closed service issues linked to the selected tenant.</p>
+                                                        <p class="Example">[Unit().ServiceManager().List("01/01/<span class="mc-variable Dates.Year4 variable">2026</span>","12/31/<span class="mc-variable Dates.Year4 variable">2026</span>","True")]</p>
+                                                        <p>Displays a list of the date, issue ID, and title of closed service issues that were opened on or after 1/1/<span class="mc-variable Dates.Year4 variable">2026</span> and closed on or before 12/31/<span class="mc-variable Dates.Year4 variable">2026</span> that are linked to the selected unit.</p>
+                                                        <p class="Example">[Prospect().ServiceManager().List("", "", "True", "\t$_IssueID\t$_Date\t$_Status\t$_Category\n")]</p>
+                                                        <p>Displays a customized list of the issue ID, date, status, and category of all closed service issues linked to the selected prospect.</p>
+                                                        <p>The output displays as shown below:</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/list%20function%20custom%20format%20-%20BG%20-%202.5.2021.png" alt="" />
+                                                        </p>
+                                                    
+</main>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convert Advanced Management Fee Setup to Standard</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Management-Fee-Convert-Advanced-to-Standard.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Management-Fee-Convert-Advanced-to-Standard.htm</a></p>
+
+                                                        <h1 id="ConvertAdvancedManagementFeeSetuptoStandard" data-magellan-target="ConvertAdvancedManagementFeeSetuptoStandard"><a name="kanchor1499"></a><a name="H1"></a>Convert Advanced Management Fee Setup to Standard</h1>
+                                                        <p>The <span class="Window">Management Fee Conversion</span> wizard is an integrated series of pages designed to help you easily convert an existing advanced management fee structure into a standard management fee structure in <span class="mc-variable Products.RM variable">Rent Manager</span>. For more information on the different management fee setup options, refer to <a href="../KB/Management-Fee-Setup-Comparison.html" class="MCXref xref">Management Fee Setup Comparison</a>.</p>
+                                                        <p>Standard management fee setups examine all tenant and prospect payments allocated to specified charge types since your last management fee posting, which allows you to post fees as often as you like. Additionally, this method allows for more transparency for the transaction details of a management fee posting, and that transparency helps you and your owners understand the charge calculations in greater detail.</p>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="2">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Properties</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Management Fee Setup</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Add, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Management-Fees-Convert-to-Standard-SG-2024.png" alt="The conversion wizard displays an advanced fee setup being converted to standard." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="Step1PostFeesPriortoConversion" data-magellan-target="Step1PostFeesPriortoConversion"><a name="H2_1"></a>Step 1: Post Fees Prior to Conversion</h2>
+                                                        <p>Before you convert your management fees, it is recommended that you post fees for that property. In the case of converting a management fee template, you must post fees for all properties that use the fee template you are about to convert.</p>
+                                                        <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Management Fees <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Post Management Fees</span> and post fees for the associated property or properties. For more information, refer to <a href="Post-Management-Fees.html" class="MCXref xref">Post Management Fees</a>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Since standard management fees look at payments that are allocated on the active start date or after, it is important to post management fees for the <span class="Stress">day before</span> the new setup begins. This ensures you have collected all management fees due to you before the active start date of the new standard setup.</p>
+                                                        </div>
+                                                        <h2 id="Step2NavigatetotheFeeSetup" data-magellan-target="Step2NavigatetotheFeeSetup"><a name="H2_2"></a>Step 2: Navigate to the Fee Setup</h2>
+                                                        <p>You can convert the fee setup for a management fee template or for a property's custom management fee setup.</p>
+                                                        <h3><a name="H3_1"></a>Management Fee Template</h3>
+                                                        <p>To convert a fee template setup, go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Owners <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Management Fees <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Management Fee Templates</span>. Then in the <span class="Section">Advanced</span> section for the template you wish to convert, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" alt="Options" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Convert</span>.</p>
+                                                        <h3><a name="H3_2"></a>Custom Property Fee Setup</h3>
+                                                        <p>To convert a custom property fee setup, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" alt="Menu" class="inline" style="width: 19;height: 19;" /><span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span> and select the property with an advanced fee setup.<br />The property's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the action bar to the right, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Fees Setup</span>.<br />The <span class="Window">Fees Setup</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>At the top of the pop-up, click <span class="BigButtons">Convert to Standard</span>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step3ReviewFeeInformation" data-magellan-target="Step3ReviewFeeInformation"><a name="H2_3"></a>Step 3: Review Fee Information</h2>
+                                                        <p>On the left, there are four tabs of information with corresponding tiles to review for the management fee setup. This information cannot be edited, but is displayed to give you a transparent view of how the fees are converted.</p>
+                                                        <h3><a name="H3_3"></a>Conversion Information</h3>
+                                                        <p>This tile displays a general overview of how your fees are calculated with the current setup versus how the are calculated after the conversion, such as the accounting basis and where fees are collected from.</p>
+                                                        <h3><a name="H3_4"></a>Monthly and Per Posting Fees</h3>
+                                                        <p>On this tile, the <span class="Column">Fee</span> column displays each field in the current advanced fee setup. The <span class="Column">Advanced Method (Current)</span> column displays the amounts or percentages of the fees from the original setup, while the <span class="Column">Standard Method (New)</span> column displays how those amounts or percentages will be converted for the new setup. The fee conversions are described in the table below.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The options for <span class="Field">Prorate Per Occupied Fee</span> and <span class="Field">Post Per Unit</span> do not display in the conversion wizard, but are transferred to the new setup upon completing the conversion. For example, if both are checked on the advanced setup, then they are both checked on the standard setup after conversion.</p>
+                                                        </div>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Fee</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Conversion</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Minimum Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The minimum amount of management fees to collect from this property. When management fees are posted, if your calculated fees are below the minimum fee, this amount is charged instead.</p>
+                                                                        <p>The previous setup's <span class="Field">Per Posting</span> minimum fees are changed to <span class="Field">Per Month</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Maximum Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The maximum amount of management fees to collect from this property. When management fees are posted, if your calculated fees are above the maximum fee, this amount is charged instead. With standard fee setups, if multiple postings are made in the same month, the sum of those postings will not exceed this maximum fee amount.</p>
+                                                                        <p>The previous setup's <span class="Field">Per Posting</span> maximum fees are changed to <span class="Field">Per Month</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Flat Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>A flat-rate fee that is collected on a per month basis when you post management fees. With standard fee setups, this fee applies each time your management fee posting period includes the first day of a month.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Per Unit Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The monthly flat-rate fee that you collect for each unit at the managed property. With standard fee setups, this fee applies each time your management fee posting period includes the first day of a month.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>% of Net Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This information does not convert because this option is not available with standard fee setups.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>% of Total Income</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>This information does not convert because this option is not available with standard fee setups.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Per Occupied Fee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>A flat-rate fee that you collect for each occupied unit in the property at the time of the management fee posting. This fee posts <span class="Stress">every</span> time you post management fees.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_5"></a>Fees Conversion</h3>
+                                                        <p>This tile displays the general ledger (GL) accounts from the original advanced setup and the charge types associated with each GL account, as well as the percentage that will be collected from each. The conversion details are described in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Chart Account Fees (Current)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>All GL&#160;accounts used in the original advanced setup (except for those identified as pass through).</p>
+                                                                        <div class="warning">
+                                                                            <p class="label1">Warning</p>
+                                                                            <p>Standard fees can be collected only on a cash accounting basis because they are calculated based on allocated payments. If the <span class="Column">Method</span> of a GL account in the <span class="Section">Chart Account Percentages</span> is set to <span class="Field">Accrual</span>, the GL&#160;account is not converted.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Charge Type (New)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The charge types used in the new standard setup. All charge types linked to the specified GL&#160;account are included. If a GL account is not linked to any charge types, the fees associated with that GL account are <span class="Stress">not</span> converted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Percentage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The percentages collected for the payments allocated to each charge type. These match the percentages from the original advanced setup for the associated GL account.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3><a name="H3_6"></a>Pass Through Conversion</h3>
+                                                        <p>For each GL account marked as <span class="Column">Pass Through</span>, those fees are pulled in as pass throughs for the associated charge types. The conversions details are described in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Chart Account Fees (Current)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>All GL accounts in the original advanced setup that are collected at 100% or are marked as pass through.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Charge Type (New)</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The charge types used in the new standard setup. All charge types linked to the specified GL&#160;account are included. If a GL account is not linked to any charge types, the fees associated with that GL account are <span class="Stress">not</span> converted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Percentage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The percentage from the original setup remains the same for the new setup.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Step4SetActiveDatesforProperties" data-magellan-target="Step4SetActiveDatesforProperties"><a name="H2_4"></a>Step 4: Set&#160;Active Dates for Properties</h2>
+                                                        <p>Once you have reviewed the information, click <span class="BigButtons">Convert</span>.</p>
+                                                        <p>After the fee setup is converted, you must then set when the new fee setup begins. Fee templates must be also assigned to their properties with a start date. Refer to the headings below for next steps depending on the fee setup you converted.</p>
+                                                        <h3><a name="H3_7"></a>Management Fee Template</h3>
+                                                        <p>If you converted a management fee template, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Next to template, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/more_vert_19x19.png" alt="Options" class="inline" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Assign</span>.<br />The <span class="Window">Assign Fee Setup</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Enter or select the needed information in the available fields.</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Active Start</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which this new fee setup begins for the selected properties. This should be set for the day <span class="Stress">after</span> the fees were posted for in step 1.</p>
+                                                                                <p>The previous fee setup for the properties will automatically have an end date set one day before the <span class="Field">Active Date</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Properties</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>Each property or property group that should be assigned this new fee setup for the selected date.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">OK</span>.<br />The fee setup is assigned to the selected properties and takes effect on the selected date.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_8"></a>Custom Property Fee Setup</h3>
+                                                        <p>By default, when you click <span class="BigButtons">Convert</span>, the <span class="Field">Active Start Date</span> for the new standard setup is automatically set to today's date and the <span class="Field">Active End Date</span> for the previous advanced setup is automatically set to yesterday's date.</p>
+                                                        <p>If these dates need to be changed (for example, today's date is 8/1 but you need the new fee setup to be in place on 7/25 and you posted fees for 7/24), do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>On the right, click the <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/keyboard_arrow_right_19x19.png" alt="Previous Fee Setup" class="inline" style="width: 19;height: 19;"></img> icon to view the previous fee setup.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Active End Date</span> field, enter the date on which management fees were last posted.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br></br>The date is updated and the page refreshes to display the current management fee setup.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>In the <span class="Field">Active End Date</span> field, enter the date for the day after management fees were last posted.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />The management fee start and end dates are updated.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

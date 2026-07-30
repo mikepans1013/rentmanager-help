@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Update Date Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Update-Date.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Update-Date.htm</a></p>
+
+                                                        <h1 id="UpdateDateFunctionScript" data-magellan-target="UpdateDateFunctionScript"><a name="aanchor122"></a>
+                                                            <a name="kanchor204"></a><a name="H1"></a>Update Date Function (Script)</h1>
+                                                        <p>This function displays the date and time that the selected service issue was most recently updated (saved).</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Adding, editing, or deleting history/note items does not change the update date. Only actions that require the corresponding service issue, violation, or account to be updated and saved impact this function.</p>
+                                                        </div>
+                                                        <p>Classes that utilize this function and the location from where the scripting information is pulled in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().UpdateDate()]</p>
+                                                                        <p>Displays the date and time that the service issue was most recently updated and saved.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().UpdateDate]</p>
+                                                                        <p>Displays the date and time the tenant's account was last updated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Vendor.html">Vendor</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Vendor().UpdateDate]</p>
+                                                                        <p>Displays the date and time the vendor's account was last updated.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Violation.html">Violation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Violation().UpdateDate]</p>
+                                                                        <p>Displays the date and time the violation was most recently updated and saved.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[UpdateDate(<span class="Optional">"ServiceIssueID"</span>)]</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The ServiceIssue ID parameter listed below only applies to the function when it is used with the ServiceManager class. If using this function with the Tenant, Vendor, or Violation classes, there is no ServiceIssueID parameter.</p>
+                                                        </div>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ServiceIssueID</h3>
+                                                        <p>Select the service issue with this <span class="Column">Issue ID</span>. If this parameter is not specified, it defaults to the oldest/first issue on the linked account.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If ServiceManager is the only class, its parameter is ServiceIssueID. If another class precedes the ServiceManager class, the ServiceManager class instead uses the Index parameter, and the entity of the preceding class must be associated with a service issue in order for the script to return results.</p>
+                                                        </div>
+                                                        <p colspan="2" class="Example">[UpdateDate("53")]</p>
+                                                        <p colspan="2">Displays the date and time that service issue number 53 was most recently updated.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[ServiceManager().UpdateDate("53")]</p>
+                                                        <p>Displays the date and time that service issue number 53 was most recently saved.</p>
+                                                        <p class="Example">[Tenant().UpdateDate]</p>
+                                                        <p>Displays the date and time the current tenant account was most recently updated and saved.</p>
+                                                        <p class="Example">[Vendor(15).UpdateDate]</p>
+                                                        <p>Displays the date and time the vendor with the system-generated account ID was most recently updated and saved.</p>
+                                                        <p class="Example">[Violation().UpdateDate]</p>
+                                                        <p>Displays the date and time the current violation was most recently updated and saved.</p>
+                                                    
+</main>
+</body>
+</html>

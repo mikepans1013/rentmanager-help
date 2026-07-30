@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set History Filter Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Set-History-Filter.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Set-History-Filter.htm</a></p>
+
+                                                        <h1 id="SetHistoryFilterFunctionScript" data-magellan-target="SetHistoryFilterFunctionScript"><a name="aanchor473"></a>
+                                                            <a name="kanchor799"></a><a name="H1"></a>Set History Filter Function (Script)</h1>
+                                                        <p>This function filters history items associated with the selected entity based on the assigned parameter values. This result is reused until the function is run again with different parameters. If the function is run again with no parameters, all filters are removed for examining history items.</p>
+                                                        <p>For most entities (such as tenants, units, and so on), this information can be found by going to the entity's details page, then in the <span class="Section">History/Notes</span> tile header, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" />.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>This function is used in conjunction with the <a href="Function-Note.html" class="MCXref xref">Note Function (Script)</a> and <a href="Function-History-Count.html" class="MCXref xref">History Count Function (Script)</a> functions. This function must be run first in your scripting to compile the data set as defined by your parameters, but does not display this data in output. Then, the Note and HistoryCount scripts are used to retrieve selected values from that data and determines what output to display.</p>
+                                                        </div>
+                                                        <p>Classes that  utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.html">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Asset().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the asset's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Evictions.html">Eviction</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().Eviction().SetHistoryFilter()]</p>
+                                                                        <p>On a tenant's <span class="Section">Evictions</span> tile, click <img src="../../../../assets/Resources/Images/ICONS/Express-App/Material/launch_19x19.png" alt="View More" class="inline" style="width: 19;height: 19;" /> to view the <span class="Window">Eviction</span> pop-up. This script examines information found on the <span class="Section">Eviction Notes</span> tile.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Home.html">Home</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Home().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the home-type asset's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Job.html">Job</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Job().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the job's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner.html">Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Owner().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the owner's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Owner-Prospect.html">Owner Prospect</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[OwnerProspect().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the owner prospect's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Primary-Owner.html">Primary Owner</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().PrimaryOwner.SetHistoryFilter()]</p>
+                                                                        <p>For the owner set as the property's primary owner, this script examines information found on the owner's <span class="Window">History/Notes</span> pop-up.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the property's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Service-Manager.html">Service Manager</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[ServiceManager().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the issue's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Tenant.html">Tenant</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Tenant().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the tenant's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Unit().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the unit's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Vendor.html">Vendor</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Vendor().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the vendor's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Violation.html">Violation</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Violation().SetHistoryFilter()]</p>
+                                                                        <p>Examines information found on the violation's <span class="Window">History/Notes</span> page.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[SetHistoryFilter(<span class="Optional">"Category"</span>, <span class="Optional">"Type"</span>, <span class="Optional">"FromDate"</span>, <span class="Optional">"ToDate"</span>, <span class="Optional">"Level"</span>, <span class="Optional">"ExcludedCategories"</span>, <span class="Optional">"ExcludedTypes"</span>)]</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>The Level parameter listed below  applies to the function only when it is used with the Tenant, Asset, Home, Owner Prospect, Service Manager, Unit, Job, or Violation classes. If using this function with the Owner, Primary Owner, or Vendor classes, there is no Level parameter.</p>
+                                                        </div>
+                                                        <h3 class="Optional">Category</h3>
+                                                        <p colspan="2">Display the number of history items with this category assigned.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.3">[SetHistoryFilter("Complaints")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.3">Selects the history items with the category <span class="Field">Complaints</span> assigned.</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Type</h3>
+                                                        <p>Select the history items with this type.</p>
+                                                        <p>The following values may be used in the Type parameter:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">History Type</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Appointments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","Appointment")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Appointment</span>.</p>
+                                                                        <p>Only appointments for the user generating the script are counted.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Call</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","Call")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Call</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email - Note</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","Email")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Email - Note</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Email - Sent/Received</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","SentEmail")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Email - Sent/Received</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Eviction Stage</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","EvictionStage")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Eviction Stage</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Note</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","Note")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Note</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>OWA&#160;Files</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","OWAFile")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">OWA&#160;File</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Phone Broadcast</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","PhoneBroadcast")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Phone Broadcast</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>rmVoIP</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","NDT")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field"><span class="mc-variable Products.NDT variable">rmVoIP</span></span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>System</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","System")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">System</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Task</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","Task")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Task</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Text Messages</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","TextMessages")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Text Messages</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Visit</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","Visit")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Visit</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Web Conversation</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[SetHistoryFilter("","CompletedWebConversations")]</p>
+                                                                        <p>Selects the history items with the type <span class="Field">Web Conversation</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h3 class="Optional"><a name="H3_2"></a>FromDate</h3>
+                                                        <p>Select only history items dated on or after this date. If no date is specified, the function uses the beginning of time.</p>
+                                                        <p colspan="2" class="Example">[SetHistoryFilter("","","5/4/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p colspan="2">Select the history items posted on or after May 4, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 colspan="2" class="Optional"><a name="H3_3"></a>ToDate</h3>
+                                                        <p>Select only history items dated on or before this date. If no date is specified, the function uses the end of time.</p>
+                                                        <p class="Example">[SetHistoryFilter("","","","12/6/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Select the history items posted on or before December 6, <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <h3 class="Optional"><a name="H3_4"></a>Level</h3>
+                                                        <p>Specify the entity type(s) of the history item to examine. Each level should be separated by a comma.</p>
+                                                        <p class="Example">[SetHistoryFilter("","","","","Unit,Prop")]</p>
+                                                        <p>Selects only the unit and property history items.</p>
+                                                        <h3 class="Optional">ExcludedCategories</h3>
+                                                        <p colspan="2">Exclude the history items with this category assigned. Each excluded category should be separated with a comma.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.3">[SetHistoryFilter("","","","","","Complaints,Legal")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.3">Selects history items excluding those with the categories of <span class="Field">Complaints</span> or <span class="Field">Legal</span>.</p>
+                                                        <h3 class="Optional">ExcludedTypes</h3>
+                                                        <p colspan="2">Exclude the history items with this type assigned. Each excluded type should be separated with a comma.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.3">[SetHistoryFilter("","","","","","","System,Email")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.3">Selects history items excluding those with the types of <span class="Field">System</span> or <span class="Field">Email - Note</span>.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The history/note types that you can enter for exclusion are the same as the types listed in the table for the <span class="Optional">Type</span> parameter above.</p>
+                                                        </div>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used. These examples do not generate output, but collect data for the Note and HistoryCount functions.</p>
+                                                        <p class="Example">[Violation().SetHistoryFilter()]</p>
+                                                        <p>Removes any filters to the history items associated with the selected violation.</p>
+                                                        <p class="Example">[Tenant().Lease().Unit().SetHistoryFilter("Complaints")]</p>
+                                                        <p>Filters history items associated with the unit of the tenant's first listed lease to include only items with the category <span class="Field">Complaints</span>.</p>
+                                                        <p class="Example">[Tenant().SetHistoryFilter("","Call","01/01/<span class="mc-variable Dates.Year4 variable">2026</span>","12/31/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Filters history items associated with the selected tenant to include only items of the <span class="Field">Call</span> type created during the year <span class="mc-variable Dates.Year4 variable">2026</span>.</p>
+                                                        <p class="Example">[Property().SetHistoryFilter("","","01/01/<span class="mc-variable Dates.Year4 variable">2026</span>","12/31/<span class="mc-variable Dates.Year4 variable">2026</span>,"","Social")]</p>
+                                                        <p>Filters history items associated with the selected property for the year <span class="mc-variable Dates.Year4 variable">2026</span>, excluding the category <span class="Field">Social</span>.</p>
+                                                        <p class="Example">[Owner().SetHistoryFilter("","","1/1/<span class="mc-variable Dates.Year4 variable">2026</span>","","Social")]</p>
+                                                        <p>Filters history items associated with the selected owner posted on or after January 1, <span class="mc-variable Dates.Year4 variable">2026</span>, excluding the category <span class="Field">Social</span>.</p>
+                                                        <p class="Example">[Tenant().Eviction().SetHistoryFilter()]</p>
+                                                        <p>Removes any filters to the history/note items associated with the selected eviction.</p>
+                                                    
+</main>
+</body>
+</html>

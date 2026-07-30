@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Link to Tenant Web Access (TWA)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/TWA-Send-Link.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/TWA-Send-Link.htm</a></p>
+
+                                                        <h1 id="LinktoTenantWebAccessTWA" data-magellan-target="LinktoTenantWebAccessTWA"><a name="kanchor948"></a><a name="H1"></a>Link to Tenant Web Access (TWA)</h1>
+                                                        <p>If you use <span class="mc-variable Products.TWA2 variable">Tenant Web Access (TWA)</span>, you provide your tenants and prospects with a website URL to access the TWA portal. You can use the system-default URL or create a customized URL to meet your business's unique needs.</p>
+                                                        <h2 id="CreateDefaultTWALink" data-magellan-target="CreateDefaultTWALink"><a name="H2_1"></a>Create Default TWA Link</h2>
+                                                        <p>The default link to TWA allows tenants and prospects to access their portal, make payments, submit service requests, and more. If you have multiple locations, the tenant must select the correct location from a drop-down list. To send a default link, use the following formula:
+</p>
+                                                        <p>
+https://<span class="Required">YourCompanyCode</span>.twa.rentmanager.com</p>
+                                                        <p>Replace the red text in the link with your company's <span class="Field">Company Code</span>. This is the unique identifier used to distinguish your database from other companies that use <span class="mc-variable Products.RM variable">Rent Manager</span>. You can find your <span class="Field">Company Code</span> at the top right of <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Company-Code-JL-2025.png" alt="The Company Code is highlighted at the top of the Rent Manager page." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="CreateCustomTWALink" data-magellan-target="CreateCustomTWALink"><a name="H2_2"></a>Create Custom TWA Link</h2>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>If you have enabled the system web preference <span class="Field">Require Locations to be passed in website address (URL)</span>, refer instead to <a href="TWA-Location-URL-Create.html" class="MCXref xref">Create Custom TWA URLs for Rent Manager Locations</a>.</p>
+                                                        </div>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> allows you to add parameters to the URL to further determine how the TWA portal displays. If your company uses locations, you can add the name of the selected location to your TWA link. This enables you to direct tenants and prospects to the login page with the appropriate location selected.</p>
+                                                        <p class="lightbox">
+                                                            <img src="../../../assets/Resources/Images/PNGs/TWA-Locations-Options-JL-25.png" alt="The TWA login page with the Location drop-down highlighted." />
+                                                        </p>
+                                                        <p>To specify a location in the URL, use the following formula:</p>
+                                                        <p>https://<span class="Required">YourCompanyCode</span>.twa.rentmanager.com/?LocationID=<span class="Required">LocationName</span></p>
+                                                        <p>Replace the red text with your data as described below:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Text</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>LocationName</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>The name of the database location that you want selected automatically on the TWA login page when using this URL. For more information, refer to <a href="../CSH/Locations-Manage.html" class="MCXref xref">Manage Locations (Pop-Up)</a>.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If your location name includes spaces, you must replace the spaces with <span class="Input">%20</span> in the<span class="Required"> LocationName</span> portion of the URL. For example, a company code of <span class="Input">RPM-123</span> and a location name of <span class="Input">Riverview Management Residential</span> would be entered in the URL&#160;as follows:</p>
+                                                                            <p><span class="Input">https://RPM-123.twa.rentmanager.com?Locations=Riverview%20Management%20Residential</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>YourCompanyCode</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>The database-specific code assigned to your company, located at the top of <span class="mc-variable Products.RMX variable">Rent Manager Express</span> in the <span class="Field">Company&#160;Code</span> field.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    
+</main>
+</body>
+</html>

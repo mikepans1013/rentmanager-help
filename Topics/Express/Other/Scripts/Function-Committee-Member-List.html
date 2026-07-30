@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Committee Member List Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Committee-Member-List.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Committee-Member-List.htm</a></p>
+
+                                                        <h1 id="CommitteeMemberListFunctionScript" data-magellan-target="CommitteeMemberListFunctionScript"><a name="aanchor991"></a>
+                                                            <a name="kanchor1631"></a><a name="H1"></a>Committee Member List Function (Script)</h1>
+                                                        <p>This function displays the list of members on a committee at a property with the <span class="Field">Property Type</span> of <span class="Field">Association</span> selected on the property's details page.</p>
+                                                        <p>The default output of the function displays below. The Format parameter can be used to customize this output, as shown in the last example in this topic.</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20-%20Function%20-%20Committee%20Member%20List%20-%20Default%20-%20SG%20-%206-15-21.png" alt="" />
+                                                        </p>
+                                                        <p>The class that utilizes this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" style="width: ;" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Property().CommitteeMemberList()]</p>
+                                                                        <p>Displays information on the association-type property's <span class="Window">Committee Members</span> pop-up</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Example">[CommitteeMemberList(<span class="Optional">"CommitteeName"</span>,<span class="Optional">"Format"</span>)]</p>
+                                                        <h3 class="Optional">CommitteeName</h3>
+                                                        <p>Specify the association committee you wish to examine. If no committee is specified, all members of all committees display.</p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.1">[CommitteeMemberList("Architectural Requests")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.1">Displays the list of committee members on the <span class="Input">Architectural Requests</span> committee.</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Format</h3>
+                                                        <p>List details of each committee member using a special format sequence. </p>
+                                                        <p>Use \t to insert a tab.</p>
+                                                        <p>Use \n to insert a new line.</p>
+                                                        <p class="Subheading">Default Format</p>
+                                                        <p>If no custom format is specified, <span class="mc-variable Products.RM variable">Rent Manager</span>'s default formatting displays a list of the  members' first and last names:</p>
+                                                        <p class="Formula">"\t$_FirstName\t$_LastName\n"</p>
+                                                        <p class="Subheading">Variables</p>
+                                                        <p>The following variables may be used in the Format parameter. These return data from the <span class="Tab">Committee Members</span> tab of the selected association-type property's <span class="Window">Committee Members</span> pop-up.</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Variable</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Comments</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Comments</span> entered for the committee member.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Committee</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the name of the <span class="Field">Committee</span>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_Email</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the <span class="Field">Email</span> address entered for the committee member.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>$_FirstName</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Displays the first name of the committee member.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>$_LastName</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Displays the last name of the committee member.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="Example">[CommitteeMemberList("","","\t$_LastName\t$_Committee\t$_Comments\n")]</p>
+                                                        <p>Displays a new line with a customized list of the last name, committee name, and comments for all committee members.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Property().CommitteeMemberList()]</p>
+                                                        <p>Displays a new line with the default formatted text string for each member on the <span class="Tab">Committee Members</span> tab on the association-type property's <span class="Window">Committee Members</span> pop-up.</p>
+                                                        <p class="Example">[Property().CommitteeMemberList("Events and Planning")]</p>
+                                                        <p>Displays a new line with the default formatted text string for each member of the <span class="Input">Events and Planning</span> committee.</p>
+                                                        <p class="Example">[Property().CommitteeMemberList("","","\t$_LastName\t$_Committee\t$_Email\n")]</p>
+                                                        <p>Displays a new line with a customized list of last name, committee, and email address for each member on the <span class="Tab">Committee Members</span> tab on the association-type property's <span class="Window">Committee Members</span> pop-up</p>
+                                                        <p>The output displays as shown below:</p>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/Script%20-%20Function%20-%20Committee%20Member%20List%20-%20Format%20SG%20-%206-15-21.png" alt="" />
+                                                        </p>
+                                                    
+</main>
+</body>
+</html>

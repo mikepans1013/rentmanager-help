@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vendor Credits in Accrual Basis Accounting</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Vendor-Credits-Accrual-Basis.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Vendor-Credits-Accrual-Basis.htm</a></p>
+
+                                                        <h1 id="VendorCreditsinAccrualBasisAccounting" data-magellan-target="VendorCreditsinAccrualBasisAccounting"><a name="kanchor931"></a><a name="H1"></a>Vendor Credits in Accrual Basis Accounting</h1>
+                                                        <p>Vendors can give you credits for various reasons, such as when you overpay a bill, when services are not performed, or when goods are not available. Vendor credits are handled differently in <span class="mc-variable Products.RM variable">Rent Manager</span> when using accrual based accounting depending on your system preferences and how they are applied. <span class="mc-variable Products.RM variable">Rent Manager</span> allows you to choose whether or not credits can be applied to bills at different properties. This option can be selected on an individual credit basis or it can be enforced at the system level.</p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>To enforce vendor credits to  apply only to bills for the same property at the system level, check <span class="Field">Prevent vendor credits from being applied across properties</span> in system preferences. For more information, refer to <a href="../Other/System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="Snippet Conditions.1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Payables</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Vendor credits</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <h2 id="Option1AccrualAccountingforCreditAllocations" data-magellan-target="Option1AccrualAccountingforCreditAllocations"><a name="H2_1"></a>Option 1:&#160;Accrual Accounting for Credit Allocations</h2>
+                                                        <p>When handling the allocation of vendor credits, you have the option to allocate credits to the property listed on the credit or to a different property. For example, if you do not restrict the credits by property, then a vendor credit created and allocated to Property A can be applied to a bill from that vendor for Property B. If you <span class="Stress">do</span> restrict credits by property, then a vendor credit created and allocated to Property A can only be applied to a bill from that vendor for Property A.</p>
+                                                        <p>The headings below explain the process of how a vendor credit applied to a bill affects your GL accounts when you are using an accrual accounting basis.</p>
+                                                        <h3><a name="H3_1"></a>Part 1: The Vendor Credit</h3>
+                                                        <p>In the example below, the vendor Carpentry by Eric issued a credit of <span class="Field">$375</span> for a canceled maintenance appointment at 1127 Blackwell to be used on any future bill. The credit was created for 1127 Blackwell in July.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Add-Vendor-Credit-Example-Popup-25.png" alt="The Add Vendor Credit pop-up displays with the Property field highlighted in orange." />
+                                                        </p>
+                                                        <p>The resulting credit decreases the 5105 Maintenance expense account and 2000 Accounts Payable GL account for 1127 Blackwell. The credit displays as an entry on the <span class="Report">General Ledger</span> report for 1127 Blackwell, as shown below.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/General-Ledger-1127-Blackwell-2025.png" alt="The General Ledger report displays the 2000 Accounts Payable and 5105 Expense accounts for 1127 Blackwell." />
+                                                        </p>
+                                                        <h3><a name="H3_2"></a>Part 2: The Vendor Bill</h3>
+                                                        <p>In August, Carpentry by Eric billed for services at a different property, Riverview Apartments.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/Bill-Details-Riverview-Apartments-2025.png" alt="The Bill page displays a bill from vendor Capentry by Eric for Riverview Apartments." />
+                                                        </p>
+                                                        <p>The bill created an entry in the <span class="Report">General Ledger</span> report to increase the 5105 Maintenance expense account and 2000 Accounts Payable GL account for Riverview Apartments, as shown below.</p>
+                                                        <p>
+                                                            <img src="../../../assets/Resources/Images/PNGs/General-Ledger-Riverview-Apartments-2025.png" alt="The General Ledger report displays the 2000 Accounts Payable and 5105 Expense accounts for Riverview Apartments." />
+                                                        </p>
+                                                        <h3><a name="H3_3"></a>Part 3: The Credit is Allocated to the Bill</h3>
+                                                        <p>The <span class="Field">$375</span> credit issued to 1127 Blackwell was then allocated to the bill created for Riverview Apartments. This allocation was recorded in <span class="mc-variable Products.RM variable">Rent Manager</span> as entries in the general ledger report for both 1127 Blackwell and Riverview Apartments.</p>
+                                                        <p>For 1127 Blackwell, the impact of the original credit was reversed with an entry to increase the 2000 Accounts Payable GL account and increase the 5105 Maintenance expense account. The net effect of the entry of the credit and its allocation to another property is $0.00 to 1127 Blackwell.</p>
+                                                        <p>For Riverview Apartments, the credit allocation creates an entry to reduce the 2000 Accounts Payable GL account and reduce the 5105 Maintenance expense account for the property.</p>
+                                                        <h2 id="Option2AccrualAccountingforExpenseAllocations" data-magellan-target="Option2AccrualAccountingforExpenseAllocations"><a name="H2_2"></a>Option 2: Accrual Accounting for Expense Allocations</h2>
+                                                        <p>When working with expense allocations in <span class="mc-variable Products.RM variable">Rent Manager</span>, you have the option to create vendor credits using one account and apply that same credit to a open bill that has a different expense allocation. As a result, the general ledger impact of the credit stays in the expense account allocated on the credit. The following example continues with vendor Carpentry by Eric.</p>
+                                                        <p>After completing the work at Riverview Apartments, Carpentry by Eric issues a credit for materials purchased for the property that were not used. A credit for <span class="Field">$200</span> was entered into <span class="mc-variable Products.RM variable">Rent Manager</span> using the 6402 Materials expense account. </p>
+                                                        <p>Prior to the credit being issued, a bill for that vendor was already open and pending payment under the  5105 Maintenance GL expense account. To pay for this bill, the vendor credit issued for Riverview Apartments under the 6402 Materials expense account is applied to the open bill that was created using the 5105 Maintenance GL expense account. The result of these transactions is a $200 increase in 5105 Maintenance expense from the bill and a $200 reduction in 6402 Materials expense GL account as a result of the credit.</p>
+                                                    
+</main>
+</body>
+</html>

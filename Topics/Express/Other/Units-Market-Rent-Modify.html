@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modify Market Rent</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Units-Market-Rent-Modify.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Units-Market-Rent-Modify.htm</a></p>
+
+                                                        <h1 id="ModifyMarketRent" data-magellan-target="ModifyMarketRent"><a name="kanchor3"></a><a name="H1"></a>Modify Market Rent</h1>
+                                                        <p>Periodically, you should adjust market rent amounts to reflect current values. Instead of updating each unit and/or rentable asset individually, you can use this tool to modify the market rent for a batch of units or rentable assets within a selected property at the same time. From this page, you can apply a new market rent for selected units or assets via a manual entry or calculated formula.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>Assets display on this page only if, on the asset's details page, the <span class="Field">Track Financials</span> and <span class="Field">Allow asset to be rented</span> options are enabled, a property is selected in the <span class="Field">Property</span> field, and a dollar amount is entered in the <span class="Field">Market Rent</span> field.</p>
+                                                        </div>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Recurring Charges/Market Rent</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Modify market rent</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p class="lightbox">
+                                                            <img src="../../../assets/Resources/Images/PNGs/Units-Market-Rent-Modify.png" alt="The Modift Market Rent page displays options and settings used to update market rent for multiple units." class="lightbox" />
+                                                        </p>
+                                                        <h2 id="Step1EstablishFilters" data-magellan-target="Step1EstablishFilters"><a name="H2_1"></a>Step 1: Establish Filters</h2>
+                                                        <p>To update market rent amounts, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Receivables <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Recurring Charges <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Modify Market Rent</span>.<br />The <span class="Window">Modify Market Rent</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Section">Select Types</span> tile, select from the following criteria to determine which units display on the page:</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" style="width: 92px;" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Filters</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Descriptions</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Properties</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The property for which to modify market rent for its associated units and rentable assets.</p>
+                                                                                <div class="info">
+                                                                                    <p class="label1">More Information</p>
+                                                                                    <p>
+                                                                                        This field populates only with the properties to which you have access. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to <a href="../KB/Users-Limit-Property-Access.html" class="MCXref xref">Limit Access to a Property</a>.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit Type</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The unit and asset type(s) to include units and rentable assets of that type in the list for market rent updates. Alternatively, select <span class="Field">&lt;All Unit Types&gt;</span> to include all units and assets at the property in the list.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Current Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The market rent of units and rentable assets with a market rent <span class="Field">Current Amount</span> greater than or equal to ( &gt;= ), less than or equal to ( &lt;= ), or equal to ( = ) a certain amount. Click the current operator (<span class="ActionItems">&gt;=</span>, <span class="ActionItems">&lt;=</span>, or <span class="ActionItems">=</span>) at the top right of the field and select the desired operator from the list, then enter a value in the box.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Apply</span>.<br />All units that match the filter criteria display in the list.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="Step2UpdateMarketRentAmount" data-magellan-target="Step2UpdateMarketRentAmount"><a name="H2_2"></a>Step 2: Update Market Rent Amount</h2>
+                                                        <p>Once the market rents you wish to update are displayed on the page, you have multiple options to chose from to modify the rent amounts. Based on your selection, in the <span class="Section">Select Units</span> section, the <span class="Column">New Amount</span> column immediately previews the new calculated rent amount. In the <span class="Section">Set Up Calculation</span> tile, choose one of the following methods to modify the charge:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Method</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1" rowspan="2">
+                                                                        <p>Enter Calculation</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;padding-left: 6px;padding-right: 6px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #cedbe7;">
+                                                                        <p>User either a flat rate or one of the following calculations for the new amount. The system variable <span class="Input">C</span> always represents the <span class="Column">Current Amount</span> of the market rent.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1" style="padding: 0px;">
+                                                                        <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                                            <tbody>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Flat Rate</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>To change all selected recurring charges to a new flat rate, enter the dollar amount of the new charge.</p>
+                                                                                        <p>For example, to update all selected recurring charges to a <span class="Column">New Amount</span> of $650, enter <span class="Input">650</span>.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                        <p>Add to Current Amount</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                        <p>To add an amount to the selected recurring charges, enter a plus (<span class="Input">+</span>) followed by the dollar amount of the increase.</p>
+                                                                                        <p>For example, to add $150 to the <span class="Column">Current Amount</span> of all selected recurring charges, enter <span class="Input">C+150</span>. Each recurring charge now displays a new amount that is $150 more than its current amount.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                        <p>Multiply Current Amount</p>
+                                                                                    </td>
+                                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>To multiply an amount by a number, enter an asterisk (<span class="Input">*</span>) followed by the number to multiply by. This is commonly used to calculate percentage increases.</p>
+                                                                                        <p>For example, to increase the <span class="Column">Current Amount</span> of all selected recurring charges by 20 percent, enter <span class="Input">C*1.20</span>. Each recurring charge now displays a new amount that is 20 percent more than its current amount.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>Use CPI</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1" style="padding: 0px;padding-left: 6px;padding-right: 6px;padding-top: 0px;padding-bottom: 0px;">
+                                                                        <p>The rent is modified using information from your consumer price index (CPI) page in <span class="mc-variable Products.RM variable">Rent Manager</span>. The CPI of the month and year entered in the <span class="Field">Begin using new charges on</span> field is divided by the CPI for the month and year in which the rent charge was first created for the tenant. Then, the current amount is multiplied by the resulting number to calculate the new rent amount. For more information, refer to <a href="../CSH/CPI.html" class="MCXref xref">Consumer Price Index (CPI) (Page)</a>.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>Alternatively, you can choose to manually update the market rent amounts. In the <span class="Column">New Amount</span> column, manually enter the market rent value for each selected unit. Repeat for each unit's market rent you wish to modify.</p>
+                                                        <h2 id="Step3ModifyMarketRentValues" data-magellan-target="Step3ModifyMarketRentValues"><a name="H2_3"></a>Step 3: Modify Market Rent Values</h2>
+                                                        <p>To select the rents to update and apply the changes, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the <span class="Section">Additional Information</span> tile's <span class="Field">New market rent takes effect on</span> field, enter the date on which the new market rents begin. Alternatively, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/calendar_today-outline_19x19.png" class="inline" alt="Date Selection" style="width: 19;height: 19;" /> to select a date from the calendar on which the new market rents begin.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If the date entered in this field is on or before the <span class="Column">From Date</span> for a unit's market rent, <img src="../../../assets/Resources/Images/ICONS/Non-Icons/info_outline_red_19x19.png" alt="Warning" class="inline" style="width: 19;height: 19;" /> displays next to the <span class="Column">From Date</span> column's value, and the unit's market rent information cannot be modified with this tool.</p>
+                                                                    <p>
+                                                                        <img src="../../../assets/Resources/Images/PNGs/Units-Market-Rent-Modify-Exception.png" alt="The Modify Market Rent page shows three units that will not update with the From Date value marked by an error symbol." class="lightbox" />
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>In the <span class="Field">Comment</span> field, enter an optional message regarding the changes to the market rent.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>In the list of units, review the information to ensure it meets your needs. The following columns are available:</p>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" style="width: 92px;" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Descriptions</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Property</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The full name of the property where the market rent is being modified.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Unit</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The name of the unit where the market rent is being modified.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>From Date</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which the new market rent takes effect.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Current Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The current dollar amount of the market rent as listed on the unit or rentable asset's details page.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>New Amount</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The new dollar amount based on the manual or calculated made to the current market rent amount.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Modify</span>.<br />The updated market rents are saved and can be viewed on the unit's <span class="Window">View Market Rent</span> pop-up or the asset's details page.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

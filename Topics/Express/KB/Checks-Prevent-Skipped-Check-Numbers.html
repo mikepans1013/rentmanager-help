@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prevent Skipped Check Numbers</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Checks-Prevent-Skipped-Check-Numbers.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Checks-Prevent-Skipped-Check-Numbers.htm</a></p>
+
+                                                        <h1 id="PreventSkippedCheckNumbers" data-magellan-target="PreventSkippedCheckNumbers"><a name="kanchor1469"></a><a name="H1"></a>Prevent Skipped Check Numbers</h1>
+                                                        <p><span class="mc-variable Products.RM variable">Rent Manager</span> includes several settings that control how check numbers are assigned. In some cases, having both the system preference to <span class="Field">Enforce Sequential Check Numbers</span> and the <span class="Window">Print Checks</span> page's <span class="Field">Renumber checks</span> field enabled can cause numbers to be skipped. This happens when the system avoids creating duplicate check numbers. To keep your numbering consistent, review how your business processes checks and disable either <span class="Field">Enforce Sequential Check Numbers</span> or <span class="Field">Renumber checks</span>, depending on which option best fits your workflow.</p>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>It is recommended that you disable the <span class="Window">Print Checks</span> page option to <span class="Field">Renumber checks</span> in favor of the system preference option to <span class="Field">Enforce Sequential Check Numbers</span>. However, speak with your accountant to determine which option best suits your business needs. For more information, refer to<a href="../Other/System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a> and <a href="../Other/System-Preferences/Checks-Bills-Check-Numbers.html" class="MCXref xref">Check Numbers (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <h2 id="TurnOffRenumberChecks" data-magellan-target="TurnOffRenumberChecks"><a name="H2_1"></a>Turn Off Renumber Checks</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1" rowspan="3">Banks/Checks</td>
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Checks</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyE-Column1-Body1">Print checks</td>
+                                                                        <td class="TableStyle-Privileges-BodyD-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Override sequential check number enforcement</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>The <span class="Window">Print Checks</span> page option to <span class="Field">Renumber checks</span> allows you to edit the check numbers of the checks you are printing. This option is useful when you need to change check numbers for multiple bank accounts quickly. However, this option is ineffective if you also have <span class="Field">Enforce Sequential Check Numbers</span> enabled because check numbers might be skipped.</p>
+                                                        <p>To turn off renumbered checks, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Payables <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Checks <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Print Checks</span>.</p>
+                                                                <p>
+                                                                    <img src="../../../assets/Resources/Images/PNGs/Renumber-Checks-JP-2025.png" alt="The Print Checks page displays with available checks to print and the Renumber Checks field checked." class="lightbox" />
+                                                                </p>
+                                                                <p>The <span class="Window">Print Checks</span> page remembers the selected values from the last time checks were printed. For example, if <span class="Field">Renumber checks</span> was enabled the last time a check was printed, it is still enabled the next time the page is opened.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Uncheck <span class="Field">Renumber checks</span>.<br />Checks now follow in sequential order.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Continue the necessary steps to print your checks. For more information, refer to <a href="../Other/Checks-Print.html" class="MCXref xref">Print Checks</a>.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="TurnOnEnforceSequentialCheckNumbers" data-magellan-target="TurnOnEnforceSequentialCheckNumbers"><a name="H2_2"></a>Turn On Enforce Sequential Check Numbers</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" data-mc-conditions="">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">System Preferences</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>Users with the following privilege can temporarily bypass the system preference for <span class="Field">Enforce sequential check numbers</span>, allowing them to write or print checks out of sequence when necessary:</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Banks/Checks</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Override sequential check number enforcement</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="../Other/Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>The system preference option to <span class="Field">Enforce sequential check numbers</span> ensures that <span class="mc-variable Products.RM variable">Rent Manager</span> warns users when checks are being written out of sequence. This is the best practice when you wish to maintain sequential check numbering and prevent skipped or duplicate check numbers.</p>
+                                                        <p>To turn on enforcing sequential check numbers, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/admin_panel_settings_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> Administration <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Preferences <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> System Preferences  <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Checks/Bills <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General</span>.</p>
+                                                            </li>
+                                                            <p>
+                                                                <img src="../../../assets/Resources/Images/PNGs/Enforce-Sequential-Check-Numbers-JP-2025.png" alt="The System Preferences: Checks/Bills - General page displays." class="lightbox" />
+                                                            </p>
+                                                            <li value="2">
+                                                                <p>Check <span class="Field">Enforce sequential check numbers</span>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />Users are now warned if checks are written out of sequence.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

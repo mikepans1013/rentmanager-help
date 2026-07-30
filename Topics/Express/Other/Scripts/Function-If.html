@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>If Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-If.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-If.htm</a></p>
+
+                                                        <h1 id="IfFunctionScript" data-magellan-target="IfFunctionScript"><a name="aanchor515"></a>
+                                                            <a name="kanchor866"></a><a name="H1"></a>If Function (Script)</h1>
+                                                        <p>This function tests a condition parameter and then executes one of two specified statements. If the condition is true, the code defined for the TruePart parameter displays. Otherwise, the code defined for the FalsePart parameter displays. Various operators can be used in this function's parameters.</p>
+                                                        <p>This function can be utilized by the following class:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-System.html">System</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[System.If()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[If(<span class="Required">"Condition","TruePart","FalsePart"</span>)]</p>
+                                                        <h3 class="Required"><a name="H3_1"></a>Condition</h3>
+                                                        <p>This is the condition to be evaluated by the If function.</p>
+                                                        <p>If a script is used as the Condition parameter, the script output value determines whether the If function executes its TruePart or FalsePart parameter. Scripts that output a value of 0 or "false"&#160;execute the FalsePart parameter. Scripts that output any value greater than 0 or "true"&#160;execute the TruePart parameter.</p>
+                                                        <p class="Example">[If(1&gt;0,"Yes","No")]</p>
+                                                        <p>Displays <span class="Input">Yes</span> because the condition is true;&#160;1 is greater than 0.</p>
+                                                        <p class="Example">[If(IndexOf("Commercial","e"), echo("True"), echo("False"))]</p>
+                                                        <p>Displays <span class="Input">True</span> because the IndexOf function returns a value of 5, which is greater than 0.</p>
+                                                        <p class="Example">[If(Lease.IsCurrent(), echo("True"), echo("False"))]</p>
+                                                        <p>If a tenant's lease end date is after today's date, this script displays <span class="Input">True</span> because the IsCurrent function returns a value of "true."</p>
+                                                        <h3 class="Required"><a name="H3_2"></a>TruePart</h3>
+                                                        <p>This text or function is executed only if the condition is evaluated as true.</p>
+                                                        <p class="Example">[If(2&gt;1,"Yes","No")]</p>
+                                                        <p>Displays <span class="Input">Yes</span> because the condition is true; 2 is greater than 1.</p>
+                                                        <h3 class="Required"><a name="H3_3"></a>FalsePart</h3>
+                                                        <p>This text or function is executed only if the condition is evaluated as false.</p>
+                                                        <p class="Example">[If(1&gt;2,"Yes","No")]</p>
+                                                        <p>Displays <span class="Input">No</span> because the condition is false; 1 is not greater than 2.</p>
+                                                        <h3><a name="H3_4"></a>Operators</h3>
+                                                        <p>Operators are symbols used in scripts to perform specific actions while determining what to display. Comparison operators are used in condition parameters, such as the parameters in If and While, to establish how <span class="mc-variable Products.RM variable">Rent Manager</span> evaluates the parameter values and if TruePart or FalsePart should be returned.</p>
+                                                        <p>Comparison operators are listed below:</p>
+                                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Operator</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&lt;</p>
+                                                                        <p>Less than</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Determines if the first value is less than the second.</p>
+                                                                        <p class="Formula">[System.If(1&lt;2,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">Yes</span> because one is less than two.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&lt;=</p>
+                                                                        <p>Less than or equal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Determines if the first value is less than or equal to the second.</p>
+                                                                        <p class="Formula">[System.If(2&lt;=2,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">Yes</span> because two is equal to two.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&gt;</p>
+                                                                        <p>Greater than</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Determines if the first value is greater than the second.</p>
+                                                                        <p class="Formula">[System.If(1&gt;2,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">No</span> because one is not greater than two.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&gt;=</p>
+                                                                        <p>Greater than or equal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Determines if the first value is greater than or equal to the second.</p>
+                                                                        <p class="Formula">[System.If(2&gt;=2,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">Yes</span> because two is equal to two.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>==</p>
+                                                                        <p>Equal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Determines if the first value is equal to the second.</p>
+                                                                        <p class="Formula">[System.If(1==0,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">No</span> because one does not equal zero.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>!=</p>
+                                                                        <p>Not equal</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Determines if the first value is not equal to the second.</p>
+                                                                        <p class="Formula">[System.If(1!=2,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">Yes</span> because one does not equal two.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>&amp;&amp;</p>
+                                                                        <p>And</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Instructs <span class="mc-variable Products.RM variable">Rent Manager</span> to consider an additional comparison. All comparisons must be true to return the TruePart. Otherwise, the function returns the FalsePart.</p>
+                                                                        <p class="Formula">[System.If(1&lt;2 &amp;&amp; 2&lt;3,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">Yes</span> because one is less than two and two is less than three.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>||</p>
+                                                                        <p>Or</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Instructs <span class="mc-variable Products.RM variable">Rent Manager</span> to consider an alternate comparison. At least one comparison must be true to return the TruePart. Otherwise, the function returns the FalsePart.</p>
+                                                                        <p class="Formula">[System.If(1&lt;2 || 0&gt;4,"Yes","No")]</p>
+                                                                        <p>Displays <span class="Input">Yes</span> because one is less than two despite zero not being greater than four.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>++</p>
+                                                                        <p>Increment</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Adds one to the current value of a variable.</p>
+                                                                        <p class="Formula">[$i=0 ; ""]</p>
+                                                                        <p class="Formula">[System.If($i&lt;3,echo($i++) ,"")]</p>
+                                                                        <p>Displays the number <span class="Input">1</span>, which is one greater than the current variable value of zero.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you are using the <span class="Formula">++</span> operator to iteratively increment a variable in nested If and While functions, you must write the script as <span class="Input">$i=$i++</span> to rewrite the variable ($i) with the incremented value.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1" data-mc-conditions="">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p>--</p>
+                                                                        <p>Decrement</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p>Subtracts one from the current value of a variable.</p>
+                                                                        <p class="Formula">[$i=1 ; ""]</p>
+                                                                        <p class="Formula">[System.If($i&lt;3,echo($i--) ,"")]</p>
+                                                                        <p>Displays the number <span class="Input">0</span>, which is one less than the current variable value of one.</p>
+                                                                        <div class="info">
+                                                                            <p class="label1">More Information</p>
+                                                                            <p>If you are using the <span class="Formula">--</span> operator to iteratively decrement a variable in nested If and While functions, you must write the script as <span class="Input">$i=$i--</span> to rewrite the variable ($i) with the decremented value.</p>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[System.If(1&lt;2,"True","False")]</p>
+                                                        <p>Displays <span class="Input">True</span>.</p>
+                                                        <p class="Example">[System.If(Balance&gt;0,Balance,"No balance")]</p>
+                                                        <p>Displays the outstanding balance if it is greater than zero.</p>
+                                                        <p>Displays <span class="Input">No balance</span> for accounts without an outstanding balance.</p>
+                                                        <p class="Example">[System.If(Balance&gt;0,"Please pay immediately!","Thank you for your recent payment!")]</p>
+                                                        <p>Displays <span class="Input">Please pay immediately!</span> for accounts with an outstanding balance.</p>
+                                                        <p>Displays <span class="Input">Thank you for your recent payment!</span> for accounts without an outstanding balance.</p>
+                                                        <p class="Example">[$RETURN = "";<br />$DATE = Ask("What day do you want to check?");<br />$LOW = Ask("What is the earliest date?");<br />$HIGH = Ask("What is the latest date?");<br />If(DateCompare($DATE, $LOW)&gt;=0 &amp;&amp; DateCompare($DATE,$HIGH)&lt;=0, $RETURN = "True", $RETURN = "False");<br />echo($RETURN)]</p>
+                                                        <p>Returns true if a given date is between two other dates. You can use this as a filter in <span class="mc-variable Products.RW variable">Report Writer</span>.</p>
+                                                    
+</main>
+</body>
+</html>

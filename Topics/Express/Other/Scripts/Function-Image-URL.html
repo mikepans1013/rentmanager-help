@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image URL Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Image-URL.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-Image-URL.htm</a></p>
+
+                                                        <h1 id="ImageURLFunctionScript" data-magellan-target="ImageURLFunctionScript"><a name="aanchor205"></a>
+                                                            <a name="kanchor343"></a><a name="H1"></a>Image URL Function (Script)</h1>
+                                                        <p>This function displays the web address of the selected image of the entity, as shown on the details page.</p>
+                                                        <p>Classes that utilize this function and the location where the scripting information is pulled from in <span class="mc-variable Products.RM variable">Rent Manager</span> can be found in the table below.</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Asset.html">Asset</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Asset().ImageURL()]</p>
+                                                                        <p>Displays information from the details page of the asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Financial-Property.html">Financial Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>FinancialProperty.ImageURL()]</p>
+                                                                        <p>Displays information from the details page of the asset's financial property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Home.html">Home</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.ImageURL()]</p>
+                                                                        <p>Displays information from the details page of the home-type asset.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Marketing.html">Marketing</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[<span class="Required">Class().</span>Marketing.ImageURL()]</p>
+                                                                        <p>Displays information from the details page of the property or unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p><a href="Class-Property.html">Property</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p class="Formula">[Property().ImageURL()]</p>
+                                                                        <p>Displays information from the details page of the property.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-Unit.html">Unit</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[Unit().ImageURL()]</p>
+                                                                        <p>Displays information from the details page of the unit.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[ImageURL(<span class="Optional">"ImageType"</span>,<span class="Optional">"ImageIndex"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>ImageType</h3>
+                                                        <p colspan="2">Enter the name of the image type as it appears on the image header on the entity's details page.</p>
+                                                        <p colspan="2" class="Example">[ImageURL("Street View")]</p>
+                                                        <p colspan="2">Displays the URL&#160;of the first image with the <span class="Input">Street View</span> image type.</p>
+                                                        <h3 class="Optional">ImageIndex</h3>
+                                                        <p colspan="2">Enter the index value of the image type to display. The first image of a particular image type has an index value of <span class="Input">0</span>, the second has an index value of <span class="Input">1</span>, and so on. </p>
+                                                        <p colspan="2" class="Example" data-mc-conditions="Snippet Conditions.2">[ImageURL("Floor Plan","1")]</p>
+                                                        <p colspan="2" data-mc-conditions="Snippet Conditions.2">Displays the URL of the first additional image with the <span class="Input">Floor Plan</span> image type.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[Property().ImageURL()]</p>
+                                                        <p>Displays the URL to the first image file assigned to the first image type alphabetically on the property's details page.</p>
+                                                        <p class="Example">[Unit().ImageURL("Floor Plan","1")]</p>
+                                                        <p>Displays the URL of the first additional image of the <span class="Section">Floor Plan</span> image type on the unit's details page.</p>
+                                                        <p class="Example">[Tenant().Home().ImageURL("Lot","2")]</p>
+                                                        <p>Displays the URL of the second additional image of the <span class="Section">Lot</span> image type on the home-type asset's details page.</p>
+                                                        <p class="Example">[Property().Marketing.ImageURL("Street View")]</p>
+                                                        <p>Displays the URL of the first image file assigned to the <span class="Section">Street View</span> image type on the property's details page, only if <span class="Section">Street View</span> is selected on the property <span class="Window">Marketing Setup</span> pop-up. Otherwise, it displays blank.</p>
+                                                    
+</main>
+</body>
+</html>

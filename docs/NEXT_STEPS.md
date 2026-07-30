@@ -6,14 +6,12 @@ Before full mirroring, confirm that MHP Pros is allowed to archive the Rent Mana
 
 ## 2. Improve HTML Mirroring
 
-The current script can save raw topic HTML and Markdown. The next pass should rewrite article HTML into portable files:
+The current script saves raw topic HTML, extracted Markdown, readable portable HTML, and local image assets. Future improvements should focus on fidelity and incremental operation:
 
-- Keep the article body from `#mc-main-content`.
-- Preserve tables, ordered lists, headings, callouts, and links.
-- Copy referenced local image assets such as JPEG, PNG, GIF, SVG, and WebP.
-- Rewrite copied image references to local `assets/**` paths.
-- Keep online training/video links as outbound links.
-- Do not download hosted training videos.
+- Preserve more of the original stylesheet behavior without depending on remote CSS.
+- Add validation for local article links, not only local image links.
+- Add a generated index page for browsing the archive by section.
+- Add title/search metadata for another bot to consume.
 
 ## 3. Add Incremental State
 

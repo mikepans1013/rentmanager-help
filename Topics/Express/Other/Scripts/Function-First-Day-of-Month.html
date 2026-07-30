@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First Day of Month Function (Script)</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-First-Day-of-Month.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Scripts/Function-First-Day-of-Month.htm</a></p>
+
+                                                        <h1 id="FirstDayofMonthFunctionScript" data-magellan-target="FirstDayofMonthFunctionScript"><a name="aanchor1041"></a>
+                                                            <a name="kanchor1732"></a><a name="H1"></a>First Day of Month Function (Script)</h1>
+                                                        <p>This function displays the first date in the month of the specified date. If no date parameter is specified, it returns the date of the first day in the current month.</p>
+                                                        <p>This function can be utilized by the following classes:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <col class="TableStyle-Standard-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                                    <th class="TableStyle-Standard-HeadE-Column1-Header1">Class</th>
+                                                                    <th class="TableStyle-Standard-HeadD-Column1-Header1">Syntax</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                        <p><a href="Class-System.html">System</a>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                        <p class="Formula">[System.FirstDayOfMonth()]</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <h2 id="Parameters" data-magellan-target="Parameters"><a name="H2_1"></a>Parameters</h2>
+                                                        <p>Parameters change what the function examines and/or how it displays results. The parameters available to this function are indicated below and must be specified in the order listed in the following syntax. <span class="Required">Required</span> parameters must be assigned values for the function to work. For <span class="Optional">Optional</span> parameters, if no value is provided in the script, <span class="mc-variable Products.RM variable">Rent Manager</span> uses default values.</p>
+                                                        <p class="Formula">[FirstDayOfMonth(<span class="Optional">"Date"</span>)]</p>
+                                                        <h3 class="Optional"><a name="H3_1"></a>Date</h3>
+                                                        <p>Specify the date to return the first date in that month.</p>
+                                                        <p class="Example">[FirstDayOfMonth("9/18/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the value <span class="Input">9/1/<span class="mc-variable Dates.Year4 variable">2026</span></span>, as it is the first day in the month of the specified date.</p>
+                                                        <h2 id="ScriptExamples" data-magellan-target="ScriptExamples"><a name="H2_2"></a>Script Examples</h2>
+                                                        <p>The following scripts show various ways the function can be used:</p>
+                                                        <p class="Example">[System.FirstDayOfMonth()]</p>
+                                                        <p>Displays the date of the first day of the current month and year.</p>
+                                                        <p class="Example">[System.FirstDayOfMonth("2/10/<span class="mc-variable Dates.Year4 variable">2026</span>")]</p>
+                                                        <p>Displays the value <span class="Input">2/1/<span class="mc-variable Dates.Year4 variable">2026</span></span>, as it is the first day in the month and year of the specified date.</p>
+                                                        <p class="Example">[System.FirstDayOfMonth(Lease.MoveInDate)]</p>
+                                                        <p>Displays the date of the first day in the month and year of the tenant's <span class="Field">Move In</span> date.</p>
+                                                        <p class="Example">[System.FirstDayOfMonth(System.DateAdd("m",1))]</p>
+                                                        <p>Displays the date as the first day of the month after the current month.</p>
+                                                    
+</main>
+</body>
+</html>
