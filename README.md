@@ -1,4 +1,4 @@
-# MHP Pros Rent Manager Help Archive
+# Rent Manager Help Archive
 
 This repo inventories the public Rent Manager Help site at:
 
@@ -14,7 +14,7 @@ The archive mirrors topic HTML and local article assets, including JPEG/PNG/GIF/
 - Article-only URL list: `sitemap/articles.json`
 - Article-only Markdown sitemap: `sitemap/articles.md`
 
-Snapshot counts from the initial run:
+Current archive contents:
 
 - Total sitemap URLs: 8,632
 - Normal topic articles: 2,274
@@ -56,9 +56,9 @@ Full article extraction, after permission/rate-limit approach is approved:
 node scripts/rmx_help_archive.js --permission-confirmed --include-microcontent --delay-ms 1000 --mirror-html --raw-html --out .
 ```
 
-## Planned Archive Layout
+## Archive Layout
 
-When mirroring is enabled, the intended layout is:
+The mirrored archive is organized as:
 
 - `Topics/**/*.html` - readable portable topic HTML
 - `MicroContent/**/*.html` - readable portable MicroContent HTML
@@ -69,13 +69,24 @@ When mirroring is enabled, the intended layout is:
 - `sitemap/**` - current URL inventory
 - `state/**` - raw source sitemap, manifests, and future crawl state
 
-## Cron Direction
+## Monthly Refresh
 
-The future cron should:
+This archive is refreshed by the OpenClaw cron
+`rentmanager-help-monthly-archive-refresh`
+(`6452d93a-82b8-4f72-be72-ef252df95d8f`) on the first day of each month at
+06:20 UTC.
 
-1. Fetch `Sitemap.xml`.
-2. Compare it with `sitemap/all-urls.json`.
-3. Commit sitemap changes.
-4. Fetch only newly added or changed article URLs.
-5. Commit mirrored article and asset changes.
-6. Notify only on failures or meaningful content changes.
+The cron runs the installed `rentmanager-help-archive` skill helper from:
+
+```bash
+/home/openclaw/.openclaw/workspace/skills/rentmanager-help-archive/scripts/run_rentmanager_help_refresh.sh
+```
+
+The helper pulls the latest archive repo, runs the approved full mirror scrape,
+updates the AI export files when archive content changes, commits meaningful
+changes, and pushes back to `mikepans1013/rentmanager-help`.
+
+The CLI repo `mikepans1013/RentManagerCLI` should read this repo as its Help
+corpus source via `RENTMANAGER_HELP_ROOT` or a sibling checkout named
+`rentmanager-help-archive`; it should not maintain a separate embedded copy of
+the article archive.
