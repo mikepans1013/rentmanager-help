@@ -8,6 +8,7 @@
 - Local path: `/home/openclaw/.openclaw/workspace/rentmanager-help-archive`
 - Updated by: `rentmanager-help-archive-skill`, `rentmanager-help-monthly-archive-refresh`
 - Consumed by: `rentmanager-cli`
+- Refresh state: `state/article-index.json` tracks per-URL validators and hashes; `state/change-summary.json` records added, changed, removed, fetched, skipped, and unchanged page counts.
 
 ## Registry
 
@@ -25,4 +26,5 @@ or ownership materially changes.
 This repo is the single source of truth for mirrored Rent Manager Help
 articles. Do not create or maintain a second article archive in the CLI or
 scraper repos. Full crawling is allowed only when Michael approves the run or
-the existing approved monthly cron is executing.
+the existing approved monthly cron is executing. Incremental refreshes should
+still reconcile the full sitemap before skipping known unchanged pages.
