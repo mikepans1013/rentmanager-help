@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const crypto = require('crypto');
 const fs = require('fs/promises');
 const path = require('path');
 const { setTimeout: sleep } = require('timers/promises');
@@ -17,6 +18,7 @@ const args = {
     includeMicroContent: false,
     mirrorHtml: false,
     rawHtml: false,
+    incremental: true,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -29,6 +31,8 @@ const args = {
     else if (arg === '--include-microcontent') args.includeMicroContent = true;
     else if (arg === '--mirror-html') args.mirrorHtml = true;
     else if (arg === '--raw-html') args.rawHtml = true;
+    else if (arg === '--incremental') args.incremental = true;
+    else if (arg === '--full-refresh' || arg === '--no-incremental') args.incremental = false;
     else if (arg === '--help' || arg === '-h') {
       printHelp();
       process.exit(0);
@@ -59,9 +63,42 @@ Options:
   --include-microcontent    Include MicroContent URLs in addition to Topics URLs
   --mirror-html             Save portable article HTML and local image assets
   --raw-html                Save raw HTML beside extracted Markdown
+  --incremental             Skip unchanged known pages using HTTP validators (default)
+  --full-refresh            Fetch every selected page and rebuild the article index
   --permission-confirmed    Proceed even though robots.txt disallows crawling
   --force                   Alias for --permission-confirmed
 `);
+}
+
+function sha256(value) {
+  return crypto.createHash('sha256').update(value).digest('hex');
+}
+
+async function fileExists(file) {
+  try {
+    await fs.access(file);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function readTextIfExists(file) {
+  try {
+    return await fs.readFile(file, 'utf8');
+  } catch (error) {
+    if (error.code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
+async function readJsonIfExists(file, fallback) {
+  try {
+    return JSON.parse(await fs.readFile(file, 'utf8'));
+  } catch (error) {
+    if (error.code === 'ENOENT') return fallback;
+    throw error;
+  }
 }
 
 async function fetchText(url) {
@@ -75,6 +112,59 @@ async function fetchText(url) {
     throw new Error(`${res.status} ${res.statusText} for ${url}`);
   }
   return res.text();
+}
+
+async function fetchPageMetadata(url) {
+  const res = await fetch(url, {
+    method: 'HEAD',
+    headers: {
+      'user-agent': 'OpenClaw RMX help archiver (+local operator controlled)',
+      accept: 'text/html,application/xhtml+xml,application/xml,text/xml,text/plain,*/*',
+    },
+  });
+  if (!res.ok) return null;
+  return {
+    etag: res.headers.get('etag') || null,
+    lastModified: res.headers.get('last-modified') || null,
+    contentLength: res.headers.get('content-length') || null,
+    contentType: res.headers.get('content-type') || null,
+  };
+}
+
+function validatorsMatch(previous, current) {
+  if (!previous || !current) return false;
+  const validators = previous.validators || [previous];
+  for (const validator of validators) {
+    if (validator.etag && current.etag && validator.etag === current.etag) return true;
+    if (validator.lastModified && current.lastModified && validator.contentLength && current.contentLength) {
+      if (validator.lastModified === current.lastModified && validator.contentLength === current.contentLength) return true;
+    }
+  }
+  return false;
+}
+
+function validatorKey(value) {
+  return [value?.etag || '', value?.lastModified || '', value?.contentLength || ''].join('\t');
+}
+
+function mergeValidators(previous, current) {
+  const validators = [];
+  const seen = new Set();
+  for (const validator of [...(previous?.validators || []), previous, current]) {
+    if (!validator) continue;
+    const entry = {
+      etag: validator.etag || null,
+      lastModified: validator.lastModified || null,
+      contentLength: validator.contentLength || null,
+      contentType: validator.contentType || null,
+    };
+    const key = validatorKey(entry);
+    if (key.trim() && !seen.has(key)) {
+      seen.add(key);
+      validators.push(entry);
+    }
+  }
+  return validators.slice(-5);
 }
 
 async function fetchBytes(url) {
@@ -278,6 +368,22 @@ function rawOutputPathForUrl(outRoot, url) {
   return path.join(outRoot, 'raw', pathname);
 }
 
+function articlePathSet(outRoot, url, args) {
+  return {
+    markdown: outputPathForUrl(outRoot, url, '.md'),
+    portableHtml: args.mirrorHtml ? localArticleOutputPath(outRoot, url) : null,
+    rawHtml: args.rawHtml ? rawOutputPathForUrl(outRoot, url) : null,
+  };
+}
+
+async function articleExists(paths) {
+  const checks = [paths.markdown, paths.portableHtml, paths.rawHtml].filter(Boolean);
+  for (const file of checks) {
+    if (await fileExists(file)) return true;
+  }
+  return false;
+}
+
 function isSkippableUrl(value) {
   return (
     !value ||
@@ -459,6 +565,13 @@ function escapeHtml(value) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   await fs.mkdir(args.out, { recursive: true });
+  const stateDir = path.join(args.out, 'state');
+  const articleIndexPath = path.join(stateDir, 'article-index.json');
+  const changeSummaryPath = path.join(stateDir, 'change-summary.json');
+  const previousIndex = await readJsonIfExists(articleIndexPath, { schemaVersion: 1, articles: {} });
+  const previousArticles = previousIndex.articles || {};
+  const previousManifest = await readJsonIfExists(path.join(stateDir, 'manifest.json'), null);
+  const previousSummary = await readJsonIfExists(changeSummaryPath, null);
 
   const robotsUrl = new URL('robots.txt', BASE_URL).href;
   const robots = await fetchText(robotsUrl);
@@ -474,7 +587,7 @@ async function main() {
   const urls = extractUrlsFromSitemap(sitemap, args.includeMicroContent);
   const selected = args.limit > 0 ? urls.slice(0, args.limit) : urls;
 
-  const manifest = {
+  let manifest = {
     source: BASE_URL,
     sitemapUrl,
     robotsUrl,
@@ -484,7 +597,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     urls: selected,
   };
-  await fs.mkdir(path.join(args.out, 'state'), { recursive: true });
+  await fs.mkdir(stateDir, { recursive: true });
   await fs.writeFile(path.join(args.out, 'state', 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
   const inventory = await writeSitemapInventory(args.out, sitemap, manifest);
 
@@ -496,38 +609,154 @@ async function main() {
     return;
   }
 
-  let saved = 0;
+  const runSummary = {
+    schemaVersion: 1,
+    generatedAt: manifest.generatedAt,
+    mode: args.incremental ? 'incremental' : 'full-refresh',
+    selected: selected.length,
+    fetched: 0,
+    skipped: 0,
+    added: 0,
+    changed: 0,
+    unchanged: 0,
+    removed: 0,
+    failed: 0,
+    addedUrls: [],
+    changedUrls: [],
+    removedUrls: [],
+    failedUrls: [],
+  };
+  const nextArticles = {};
+  const selectedSet = new Set(selected);
+  for (const url of Object.keys(previousArticles)) {
+    if (!selectedSet.has(url)) {
+      runSummary.removed += 1;
+      runSummary.removedUrls.push(url);
+    }
+  }
+
+  let processed = 0;
   for (const url of selected) {
+    processed += 1;
+    const previous = previousArticles[url] || null;
+    const paths = articlePathSet(args.out, url, args);
+    const existed = Boolean(previous) || (await articleExists(paths));
+    const metadata = args.incremental ? await fetchPageMetadata(url) : null;
+    if (args.incremental && previous && validatorsMatch(previous, metadata)) {
+      nextArticles[url] = {
+        ...previous,
+        ...metadata,
+        url,
+        status: 'unchanged',
+        checkedAt: previous.checkedAt || previous.fetchedAt || manifest.generatedAt,
+        validators: mergeValidators(previous, metadata),
+      };
+      runSummary.skipped += 1;
+      runSummary.unchanged += 1;
+      console.log(`skipped ${processed}/${selected.length}: ${url}`);
+      continue;
+    }
+
     const html = await fetchText(url);
     const mainHtml = extractMainHtml(html);
     const title = extractTitle(html, url);
     const mainWithoutTitle = mainHtml.replace(/^\s*<h1\b[^>]*>[\s\S]*?<\/h1>/i, '');
     const text = htmlToText(mainWithoutTitle);
     const markdown = `# ${title}\n\nSource: ${url}\n\n${text}\n`;
-    const mdPath = outputPathForUrl(args.out, url, '.md');
+    const mdPath = paths.markdown;
+    const previousMarkdown = await readTextIfExists(mdPath);
     await fs.mkdir(path.dirname(mdPath), { recursive: true });
     await fs.writeFile(mdPath, markdown);
+    let portableHtml = null;
     if (args.mirrorHtml) {
-      const articlePath = localArticleOutputPath(args.out, url);
+      const articlePath = paths.portableHtml;
       const mirroredAssets = await mirrorImageAssets(mainHtml, url, args.out);
       const rewrittenHtml = rewriteArticleHtml(mainHtml, url, articlePath, args.out, mirroredAssets);
-      const portableHtml = buildPortableHtml({ title, sourceUrl: url, articleHtml: rewrittenHtml });
+      portableHtml = buildPortableHtml({ title, sourceUrl: url, articleHtml: rewrittenHtml });
       await fs.mkdir(path.dirname(articlePath), { recursive: true });
       await fs.writeFile(articlePath, portableHtml);
     }
     if (args.rawHtml) {
-      const rawPath = rawOutputPathForUrl(args.out, url);
+      const rawPath = paths.rawHtml;
       await fs.mkdir(path.dirname(rawPath), { recursive: true });
       await fs.writeFile(rawPath, html);
     }
-    saved += 1;
-    console.log(`saved ${saved}/${selected.length}: ${url}`);
-    if (args.delayMs > 0 && saved < selected.length) {
+    const hashes = {
+      rawHtml: sha256(html),
+      markdown: sha256(markdown),
+      portableHtml: portableHtml ? sha256(portableHtml) : null,
+    };
+    const contentChanged = previous
+      ? previous.hashes?.rawHtml !== hashes.rawHtml || previous.hashes?.markdown !== hashes.markdown
+      : previousMarkdown !== null && previousMarkdown !== markdown;
+    const status = existed ? (contentChanged ? 'changed' : 'unchanged') : 'added';
+    if (status === 'added') {
+      runSummary.added += 1;
+      runSummary.addedUrls.push(url);
+    } else if (status === 'changed') {
+      runSummary.changed += 1;
+      runSummary.changedUrls.push(url);
+    } else {
+      runSummary.unchanged += 1;
+    }
+    runSummary.fetched += 1;
+    nextArticles[url] = {
+      url,
+      title,
+      status,
+      checkedAt: manifest.generatedAt,
+      fetchedAt: manifest.generatedAt,
+      ...(metadata || {}),
+      validators: mergeValidators(previous, metadata),
+      paths: {
+        markdown: path.relative(args.out, paths.markdown).split(path.sep).join('/'),
+        portableHtml: paths.portableHtml ? path.relative(args.out, paths.portableHtml).split(path.sep).join('/') : null,
+        rawHtml: paths.rawHtml ? path.relative(args.out, paths.rawHtml).split(path.sep).join('/') : null,
+      },
+      hashes,
+    };
+    console.log(`${status} ${processed}/${selected.length}: ${url}`);
+    if (args.delayMs > 0 && processed < selected.length) {
       await sleep(args.delayMs);
     }
   }
 
-  console.log(`Done. Discovered ${urls.length} topic URLs; saved ${saved} articles under ${args.out}`);
+  const nextIndex = {
+    schemaVersion: 1,
+    generatedAt: manifest.generatedAt,
+    source: BASE_URL,
+    sitemapUrl,
+    includeMicroContent: args.includeMicroContent,
+    articles: nextArticles,
+  };
+  runSummary.contentChanged = runSummary.added + runSummary.changed + runSummary.removed + runSummary.failed > 0;
+  if (!runSummary.contentChanged && previousManifest) {
+    manifest = previousManifest;
+    nextIndex.generatedAt = previousIndex.generatedAt || previousManifest.generatedAt || nextIndex.generatedAt;
+    if (previousSummary && previousSummary.contentChanged === false) {
+      runSummary.generatedAt = previousSummary.generatedAt;
+    }
+    await writeSitemapInventory(args.out, sitemap, manifest);
+  }
+  await fs.writeFile(articleIndexPath, `${JSON.stringify(nextIndex, null, 2)}\n`);
+  manifest.changeSummary = {
+    selected: runSummary.selected,
+    fetched: runSummary.fetched,
+    skipped: runSummary.skipped,
+    added: runSummary.added,
+    changed: runSummary.changed,
+    unchanged: runSummary.unchanged,
+    removed: runSummary.removed,
+    failed: runSummary.failed,
+  };
+  await fs.writeFile(path.join(args.out, 'state', 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
+  await fs.writeFile(changeSummaryPath, `${JSON.stringify(runSummary, null, 2)}\n`);
+
+  console.log(
+    `Done. Discovered ${urls.length} topic URLs; ` +
+      `fetched ${runSummary.fetched}, skipped ${runSummary.skipped}, ` +
+      `added ${runSummary.added}, changed ${runSummary.changed}, removed ${runSummary.removed}.`,
+  );
 }
 
 main().catch((error) => {

@@ -56,6 +56,11 @@ Full article extraction, after permission/rate-limit approach is approved:
 node scripts/rmx_help_archive.js --permission-confirmed --include-microcontent --delay-ms 1000 --mirror-html --raw-html --out .
 ```
 
+By default, article extraction runs incrementally. It still reconciles the full
+sitemap, but known pages are skipped when their saved HTTP validators match the
+current `ETag` or `Last-Modified`/`Content-Length` response. Use
+`--full-refresh` to force every selected page to be fetched again.
+
 ## Archive Layout
 
 The mirrored archive is organized as:
@@ -67,7 +72,9 @@ The mirrored archive is organized as:
 - `raw/**` - original source `*.htm` captures
 - `assets/**` - local copies of article images and other static assets
 - `sitemap/**` - current URL inventory
-- `state/**` - raw source sitemap, manifests, and future crawl state
+- `state/article-index.json` - per-URL validators, output paths, and content hashes
+- `state/change-summary.json` - latest refresh counts for fetched, skipped, added, changed, removed, and unchanged pages
+- `state/**` - raw source sitemap, manifests, and crawl state
 
 ## Monthly Refresh
 
@@ -82,9 +89,9 @@ The cron runs the installed `rentmanager-help-archive` skill helper from:
 /home/openclaw/.openclaw/workspace/skills/rentmanager-help-archive/scripts/run_rentmanager_help_refresh.sh
 ```
 
-The helper pulls the latest archive repo, runs the approved full mirror scrape,
-updates the AI export files when archive content changes, commits meaningful
-changes, and pushes back to `mikepans1013/rentmanager-help`.
+The helper pulls the latest archive repo, runs the approved incremental mirror
+scrape, updates the AI export files when archive content changes, commits
+meaningful changes, and pushes back to `mikepans1013/rentmanager-help`.
 
 The CLI repo `mikepans1013/RentManagerCLI` should read this repo as its Help
 corpus source via `RENTMANAGER_HELP_ROOT` or a sibling checkout named
