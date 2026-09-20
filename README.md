@@ -97,3 +97,7 @@ The CLI repo `mikepans1013/RentManagerCLI` should read this repo as its Help
 corpus source via `RENTMANAGER_HELP_ROOT` or a sibling checkout named
 `rentmanager-help-archive`; it should not maintain a separate embedded copy of
 the article archive.
+
+## Canonical Rent Manager field mapping
+
+The current [Rent Manager Field & UDF Mapping](https://docs.google.com/spreadsheets/d/15e5o1ZRqggL7FV7wWWjtxcmJwCbyZ5IgfWu2udbcosQ/edit) is the authoritative working workbook for lease inputs, merge-code mappings, UDF scopes, defaults, and implementation status (designated by Michael on September 20, 2026). It supersedes workbook `1U9537LHx_P3Gf3xRaM54x9N-6WtMrG7FMfgarL8vfhI`. Read the live workbook for future mapping/UDF work instead of relying on old exports. Public help documentation remains the syntax reference, not the property-specific field map.
