@@ -47,7 +47,21 @@ The Write Check pop-up displays.
 
  Related Privileges
 
- To write checks that are not drawn from the Default Bank specified on the Property details page, the Write checks from banks that are not default privilege must be enabled. For more information, refer to Banks/Checks Privilege Group .
+ To have Rent Manager display a pop-up warning when a check or bill uses a bank account that is not the selected property's default bank, check Warn if bank account used on checks/bills is not the property default in system preferences.
+
+ In order to write checks that are not drawn from the Default Bank specified on the property's details page, the following privilege is required:
+
+ Group
+ Privilege
+ Column
+
+ Banks/Checks
+
+ Write checks from banks that are not default
+
+ Enabled
+
+ For more information, refer to Banks/Checks Privilege Group and Checks/Bills General (System Preferences) .
 
  Date
 
@@ -61,7 +75,7 @@ The Write Check pop-up displays.
 
  In the check numbers system preferences, enable Next Check Number so each new check from the selected bank account defaults to the next number.
 
- In the General section of checks/bills system preferences, you can also enable the option Enforce sequential check numbers .If Enforce sequential check numbers is enabled but the user does not have the Override sequential check number enforcement option enabled, the No. field is unavailable. For more information, refer to Check Numbers (System Preferences) and Checks/Bills General (System Preferences) .
+ In the General section of checks/bills system preferences, you can also enable the option Enforce sequential check numbers . If Enforce sequential check numbers is enabled but the user does not have the Override sequential check number enforcement option enabled, the No. field is unavailable. For more information, refer to Check Numbers (System Preferences) and Checks/Bills General (System Preferences) .
 
  Tenant/Prospect
 

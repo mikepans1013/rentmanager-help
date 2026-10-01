@@ -73,14 +73,14 @@ This function displays an account's balance as of a specified date.
 
  Displays the balance of the vendor.
 
- [Tenant().Balance(" 7/21/2026 ")]
+ [Tenant().Balance(" 8/27/2026 ")]
 
- Displays the balance of the tenant as of 7/21/2026 .
+ Displays the balance of the tenant as of 8/27/2026 .
 
  [Tenant().Lease().Balance()]
 
  Displays the balance of the tenant's first lease.
 
- [Owner().Balance(" 7/21/2026 ")]
+ [Owner().Balance(" 8/27/2026 ")]
 
- Displays the balance of the owner as of 7/21/2026 .
+ Displays the balance of the owner as of 8/27/2026 .

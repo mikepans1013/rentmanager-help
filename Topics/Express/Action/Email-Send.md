@@ -24,26 +24,38 @@ Rent Manager allows you to compose and send emails directly to contacts selected
  -
  In the email header, enter the following information:
 
+ More Information
+
+ Some fields display only for specific types of email accounts. For example, the From Name field displays for Google email accounts, but not for Microsoft email accounts. For more information, refer to Set Up Email and Email Reply Tracking .
+
  Field
  Description
+
+ From
+
+ The email account from which to send the email. This field always includes the email set as your system default as an option.
+
+ Related Preferences
+
+ If the option Allow users to add an email account in Personal Preferences is enabled in system preferences, any additional accounts you've connected in your personal preferences display in a drop-down. For more information, refer to Email Settings (Personal Preferences) .
 
  From Name
 
  The name entered in this field allows the recipient to identify the sender.
 
- From Address
+ From Email
 
  The email address entered here displays as the sender’s address.
 
  To
 
- The email addresses for each recipient email. If you deselect the default Send Individually , each recipient's address displays in the email for other recipients to see.
+ The email addresses for each recipient. If you deselect the default Send Individually option, each recipient's email address displays in the email for other recipients to see.
 
  To select recipients from your Address Book , click To... . The address book contains all the contacts in your database that have an email address and allows you to create additional email contacts.
 
  More Information
 
- If you access the Compose Email pop-up from a tenant or prospect account, you can click next to the To... field to select the contact type(s) to receive the email. In the Contact Types pop-up, check each contact type to which to send the email, then click OK . To send the email to all contact types, select <All Types> . For more information, refer to Contact Types (Page) .
+ If you access the Send Email pop-up from a tenant or prospect account, you can click next to the To... field to select the contact type(s) to receive the email. In the Contact Types pop-up, check each contact type to which to send the email, then click OK . To send the email to all contact types, select <All Types> . For more information, refer to Contact Types (Page) .
 
  Subject
 
@@ -55,7 +67,7 @@ Rent Manager allows you to compose and send emails directly to contacts selected
 
  More Information
 
- After entering the email recipients email in the To field, click Insert Email Template to use the contents of an already created email template as the body of the email.
+ After entering the recipients' email(s) in the To field, click Insert Email Template to use the contents of a user-created email template as the body of the email.
 
  -
  In the word processor below, enter the body text of the email.

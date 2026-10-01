@@ -22,7 +22,8 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Functions.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Functions.htm</a></p>
 
-                                                    <h1><a name="kanchor1320"></a><a name="H1"></a>Script Functions</h1>
+                                                    <h1><a name="aanchor1366"></a>
+                                                        <a name="kanchor1316"></a><a name="H1"></a>Script Functions</h1>
                                                     <p>Functions determine what the script examines in the database and, typically, what is displayed.</p>
                                                     <p>The table below lists all of the scripting functions available in <span class="mc-variable Products.RM variable">Rent Manager</span> in alphabetical order. Functions with parameters include links to topics that explain those parameters and how to use them within the script. Some functions, when used with certain classes, do not include additional parameters.</p>
                                                     <p><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
@@ -1572,7 +1573,7 @@
                                                                 <td class="TableStyle-Standard-BodyD-Column1-Body1">
                                                                     <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).CheckedInDate]</p>
                                                                     <p>Displays the date and time when <span class="BigButtons">Save</span> was clicked upon completing the <span class="Window">Check In Registration</span> wizard on the most recent reservation. The output is formatted as displayed below:</p>
-                                                                    <p><span style="font-style: italic;" class="mc-variable System.ShortDate variable">7/21/2026</span><i>11:48:26 AM</i>
+                                                                    <p><span style="font-style: italic;" class="mc-variable System.ShortDate variable">8/27/2026</span><i>11:48:26 AM</i>
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -1585,7 +1586,7 @@
                                                                     <p class="Formula">[ServiceManager().Checklist()]</p>
                                                                     <p>Displays the <span class="Section">Check List Items</span> tile of the service issue. The output is formatted as displayed below:</p>
                                                                     <p>
-                                                                        <img src="../../../assets/Resources/Images/PNGs/ServiceManagerChecklist.png" alt="" />
+                                                                        <img src="../../../assets/Resources/Images/PNGs/script-function-checklist-output-format.png" alt="" />
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -4630,7 +4631,7 @@
                                                                     <p class="Formula">[ServiceManager().IndividualHours()]</p>
                                                                     <p>Displays information regarding service tech hours entered on the issue's <span class="Window">History/Notes</span> pop-up, including the user who performed the work and the number of hours entered, per line item. The output is formatted as displayed below:</p>
                                                                     <p>
-                                                                        <img src="../../../assets/Resources/Images/PNGs/Service%20Manager%20Class%20Individual%20Hours%20Example%20SS%209-22-20.png" alt="" />
+                                                                        <img src="../../../assets/Resources/Images/PNGs/script-function-individual-hours-output.png" alt="" />
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -5975,7 +5976,7 @@
                                                                     <p class="Formula">[ServiceManager().List()]</p>
                                                                     <p>Displays a list of service issues linked to the property, tenant, prospect, or unit within a specified date range. The output is formatted as displayed below:</p>
                                                                     <p>
-                                                                        <img src="../../../assets/Resources/Images/PNGs/Service%20Manager%20Class%20List%20Script%20Example%20SS%209-22-20.png" alt="" />
+                                                                        <img src="../../../assets/Resources/Images/PNGs/script-function-list-output.png" alt="" />
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -6038,7 +6039,7 @@
                                                                                     <p class="Formula">[Asset().LocationHistory()]</p>
                                                                                     <p>Displays the current and past properties and units to which the asset is linked in the <span class="Section">Asset Location</span> tile. The output is formatted as displayed below:</p>
                                                                                     <p>
-                                                                                        <img src="../../../assets/Resources/Images/PNGs/Scripting%20-%20Asset%20Location%20History%20-%20SG%20-%208-27-20.png" alt="" />
+                                                                                        <img src="../../../assets/Resources/Images/PNGs/script-function-asset-location-history-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -6047,7 +6048,7 @@
                                                                                     <p class="Formula">[<span class="Required">Class().</span>Home().LocationHistory()]</p>
                                                                                     <p>Displays the current and past properties and units to which the home-type asset is linked in the <span class="Section">Asset Location</span> tile. The output is formatted as displayed below:</p>
                                                                                     <p>
-                                                                                        <img src="../../../assets/Resources/Images/PNGs/Scripting%20-%20Asset%20Location%20History%20-%20SG%20-%208-27-20.png" alt="" />
+                                                                                        <img src="../../../assets/Resources/Images/PNGs/script-function-asset-location-history-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -10824,7 +10825,7 @@
                                                                                     <p>Displays each transaction associated with the owner within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current owner displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../assets/Resources/Images/PNGs/Owner%20Transaction%20Script.png" alt="" />
+                                                                                        <img src="../../../assets/Resources/Images/PNGs/transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -10834,7 +10835,7 @@
                                                                                     <p>Displays each transaction associated with the owner within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the primary owner displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../assets/Resources/Images/PNGs/Owner%20Transaction%20Script.png" alt="" />
+                                                                                        <img src="../../../assets/Resources/Images/PNGs/transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -10844,7 +10845,7 @@
                                                                                     <p>Displays each transaction linked to the selected lease of the selected tenant within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results display by default the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the first lease listed for the current tenant displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../assets/Resources/Images/PNGs/Lease%20Transactions%20Function%20CS%209-16-20.png" alt="" />
+                                                                                        <img src="../../../assets/Resources/Images/PNGs/lease-transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -10854,7 +10855,7 @@
                                                                                     <p>Displays each transaction associated with the tenant within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current tenant displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../assets/Resources/Images/PNGs/Tenant%20Transaction%20Function%20-%20CW%20-%209-28-2020.png" alt="" />
+                                                                                        <img src="../../../assets/Resources/Images/PNGs/script-function-tenant-transactions-list-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -10863,7 +10864,7 @@
                                                                                     <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Transactions]</p>
                                                                                     <p>Displays a list of charges, credits, and payments for the most recent reservation. A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current owner displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../assets/Resources/Images/PNGs/Owner%20Transaction%20Script.png" alt="" />
+                                                                                        <img src="../../../assets/Resources/Images/PNGs/transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>

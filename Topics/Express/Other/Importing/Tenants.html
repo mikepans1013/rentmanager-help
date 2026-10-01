@@ -22,8 +22,8 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Importing/Tenants.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Importing/Tenants.htm</a></p>
 
-                                                        <h1 id="ImportTenants" data-magellan-target="ImportTenants"><a name="aanchor388"></a>
-                                                            <a name="kanchor643"></a><a name="H1"></a>Import Tenants</h1>
+                                                        <h1 id="ImportTenants" data-magellan-target="ImportTenants"><a name="aanchor663"></a>
+                                                            <a name="kanchor642"></a><a name="H1"></a>Import Tenants</h1>
                                                         <p>The importing tool allows you to pull large amounts of data into <span class="mc-variable Products.RM variable">Rent Manager</span> at one time via a comma-separated values (CSV) file or other file type that uses supported delimiters. The file is first prepared outside <span class="mc-variable Products.RM variable">Rent Manager</span>, using a program such as Microsoft Excel or Notepad, which contains rows of data representing the information that matches to designated <span class="mc-variable Products.RM variable">Rent Manager</span> fields. This greatly reduces the amount of time spent on data entry, especially when first setting up your <span class="mc-variable Products.RM variable">Rent Manager</span> database, or during routine additions that require a lot of new data, such as acquiring a new property.</p>
                                                         <p>When importing tenants, you can choose whether you are adding new tenant data, or updating tenant data that already exists in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
                                                         <div class="privs">
@@ -72,7 +72,7 @@
                                                         </ul>
                                                         <p>Data in your import file should be organized with each row as a separate entity and each column containing information relevant to that entity. For example, an import of tenant data is displayed with each row representing a different tenant and each column representing information about that tenant.</p>
                                                         <p>
-                                                            <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-Tenants-File.png" alt="An example import file displays columns of tenant information." class="lightbox" />
+                                                            <img src="../../../../assets/Resources/Images/PNGs/import-tenants-file.png" alt="An example import file displays columns of tenant information." class="lightbox" />
                                                         </p>
                                                         <h3><a name="H3_1"></a>Required Fields</h3>
                                                         <p>In order to import tenants, some fields are required to have a value entered in the data file. The fields that are required depend on whether you are adding new tenants, or updating the information for tenants already in <span class="mc-variable Products.RM variable">Rent Manager</span>.</p>
@@ -1114,11 +1114,11 @@
                                                                                 <p>If your import file uses a delimiter that can be found within the actual text data, you may need to surround that data in quotation marks or apostrophes to indicate that it is all part of one data column. This is not commonly needed for CSV files, but may be necessary for simpler formats such as TXT files.</p>
                                                                                 <p>For example, while importing properties, if you use spaces as the delimiter in a TXT file and a property name is two words, you would need to use a text qualifier to indicate that both words apply to the property <span class="Field">Name</span> column.</p>
                                                                                 <p>
-                                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-TXTFile-SG-2024.png" alt="The .txt file displays property information delimited by spaces, with one property missing quotation marks around the name." />
+                                                                                    <img src="../../../../assets/Resources/Images/PNGs/import-text-file.png" alt="The .txt file displays property information delimited by spaces, with one property missing quotation marks around the name." />
                                                                                 </p>
                                                                                 <p>In the image above, the property name <span class="Input">Willow Bridge</span> was not entered in quotation marks. Because the delimiter used for the TXT file is spaces, the property name was split into two separate columns. As a result, all data after is shifted one column over and the imported data cannot be matched accurately.</p>
                                                                                 <p>
-                                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-NoQuotes-SG-2024.png" alt="The Import Properties page displays Willow and Bridge in two separate columns because it was not entered in quotes." />
+                                                                                    <img src="../../../../assets/Resources/Images/PNGs/import-no-quotes.png" alt="The Import Properties page displays Willow and Bridge in two separate columns because it was not entered in quotes." />
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -1173,7 +1173,7 @@
                                                             <li value="1">
                                                                 <p>In the <span class="Section">Details</span> section, click an orange column labeled <span class="Input">Not Matched</span>.</p>
                                                                 <p>
-                                                                    <img src="../../../../assets/Resources/Images/PNGs/RMX-Import-NotMatched-Flyout-SG-2024.png" alt="A fly-out window displays options to match the column to a Rent Manager field." />
+                                                                    <img src="../../../../assets/Resources/Images/PNGs/import-not-matched.png" alt="A fly-out window displays options to match the column to a Rent Manager field." />
                                                                 </p>
                                                             </li>
                                                             <li value="2">
@@ -1221,7 +1221,7 @@
                                                                 </div>
                                                             </li>
                                                             <li value="5">
-                                                                <p>In the <span class="Section">Details</span> section's <span class="Field">Required Columns</span> field, verify that all <span class="mc-variable Products.RM variable">Rent Manager</span> fields in the list have been matched to their associated column. Required fields that have been matched display a display a <img src="../../../../assets/Resources/Images/ICONS/Non-Icons/Check_Green_20x19.png" class="inline-image" alt="Green Checkmark" style="width: 20;height: 19;" />, while unmatched fields are followed by an asterisk (*). All <span class="Field">Required Columns</span> must be matched in order to proceed.</p>
+                                                                <p>In the <span class="Section">Details</span> section's <span class="Field">Required Columns</span> field, verify that all <span class="mc-variable Products.RM variable">Rent Manager</span> fields in the list have been matched to their associated column. Required fields that have been matched display a display a <img src="../../../../assets/Resources/Images/ICONS/Non-Icons/check-green_19x19.png" class="inline-image" alt="Green Checkmark" style="width: 19;height: 19;" />, while unmatched fields are followed by an asterisk (*). All <span class="Field">Required Columns</span> must be matched in order to proceed.</p>
                                                             </li>
                                                             <li value="6">
                                                                 <p>Click <span class="BigButtons">Next</span>.<br />The <span class="Section">Import Review</span> page displays.</p>
@@ -1230,7 +1230,7 @@
                                                         <h2 id="Step5ReviewandCompleteImport" data-magellan-target="Step5ReviewandCompleteImport"><a name="H2_5"></a>Step 5: Review and Complete Import</h2>
                                                         <p>On this page, you can review the information before you import it into <span class="mc-variable Products.RM variable">Rent Manager</span> and, if needed, make any edits or corrections. Once you have verified the information is correct, click <span class="BigButtons">Import</span>.</p>
                                                         <p data-mc-conditions="Snippet Conditions.17">
-                                                            <img src="../../../../assets/Resources/Images/PNGs/Import-Tenants-Review.png" alt="The Import Review page displays information about six imported tenants." class="lightbox" />
+                                                            <img src="../../../../assets/Resources/Images/PNGs/import-tenants-review.png" alt="The Import Review page displays information about six imported tenants." class="lightbox" />
                                                         </p>
                                                         <p>Your data is imported, and a summary of the import displays in the <span class="Column">Import Result</span> column. Rows listed as <span class="Input">Success</span> in green were successfully imported. Any rows that failed to import are listed in red with an error that displays why that row could not be imported.</p>
                                                         <p>For any rows that failed to import, correct the data in your import file, restart the import process, and select only the rows that failed to import in the previous attempt.</p>

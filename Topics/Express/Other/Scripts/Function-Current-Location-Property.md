@@ -31,9 +31,9 @@ This function displays the property at which the asset is located.
 
  Specify the date for which to retrieve the property information. If no date is specified, today's date is used by default.
 
- [CurrentLocationProperty(" 7/21/2026 ")]
+ [CurrentLocationProperty(" 8/27/2026 ")]
 
- Displays the associated property as of 7/21/2026 .
+ Displays the associated property as of 8/27/2026 .
 
  Script Examples
 

@@ -206,7 +206,7 @@ Tenants/Prospects privileges provide access to features such as adding or updati
 
  Override workflow solution from screening
 
- Provides the ability to override the Declined recommendation of an AmRent workflow solution Screening report on the Prospect Details (Page) .
+ Provides the ability to override the Declined , Warning , or Conditional recommendations of an AmRent workflow solution screening report on the prospect or tenant's details page.
 
  Related Preferences
 

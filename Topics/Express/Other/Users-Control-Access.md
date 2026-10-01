@@ -13,9 +13,7 @@ Managing what each user can view and do in Rent Manager is critical in maintaini
  Column
 
  System
-
  Manage all users and privileges
-
  Add, View, Edit
 
  Privileges Tab

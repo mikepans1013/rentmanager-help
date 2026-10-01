@@ -91,10 +91,6 @@ The owner prospect's details page displays.
 
  If checked, the history/note item displays first in the History/Notes pop-up as pinned .
 
- Show on payments tab
-
- Adds the Note to the Add Payment page under the Summary section in the Payment Notes field. For more information, refer to .
-
  Start Date and Time
 
  The date and time the email was sent or received. When you open the Email Details pop-up, the current date and time populate by default.

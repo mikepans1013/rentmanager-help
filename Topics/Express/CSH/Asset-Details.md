@@ -191,7 +191,7 @@ The Asset details page allows you to view asset information and optionally updat
 
  For more information, refer to Control User Access .
 
- The current legal ownership status of the asset. If you have the privilege to add homeowner statuses, you can use the dropdown to change the status. You can also see the homeowner status history by clicking History . For more information, refer to Homeowner Statuses (Pop-Up) .
+ The current legal ownership status of the asset. If you have the privilege to add homeowner statuses, you can use the drop-down to change the status. You can also see the homeowner status history by clicking History . For more information, refer to Homeowner Statuses (Pop-Up) .
 
  Name
 
@@ -199,19 +199,15 @@ The Asset details page allows you to view asset information and optionally updat
 
  This asset is rentable
 
- Allow tenants to lease the asset as they would a unit. The Market Rent is the amount to charge renters of this asset. You can report on the rent amount for assets using reports like Asset Availability . The amount set here is used by system level recurring charges for tenants that have the Asset Rent selected as the charge's source. For more information, refer to Tenant Charge Setup (System Preferences) .
+ Indicates that tenants can lease the asset as they would a unit. Then, in the Market Rent field, enter the amount to charge renters of this asset.
 
- This option is available only if Track financials for this asset is enabled and the asset has a Community Owned homeowner status.
-
- To view the View Market Rent pop-up, click next to the Market Rent field. For more information, refer to Asset Market Rent (Pop-Up) .
+ This option is available if Track Financials is enabled and the Homeowner Status is set to Community Owned or Change of Ownership . If there is a current or future lease or reservation associated with this asset, this option is enabled and cannot be disabled.
 
  Track financials for this asset
 
- If checked, financial reporting is enabled for the asset. The Financial Property is where the asset's financial activity is associated. To update an asset's financial property, you can use the Financial Property Migration wizard. For more information, refer to Financial Property Migration Wizard .
+ Check to enable financial reporting for the asset, then select the Financial Property with which the asset's financial activity is associated.
 
- More Information
-
- This option can be unchecked only if the asset has no current or future leases associated with it.
+ If there are any unpaid tenant or prospect transactions linked to this asset, or if there is a current or future lease or reservation associated with this asset, this option is enabled and cannot be disabled.
 
  History/Notes
 

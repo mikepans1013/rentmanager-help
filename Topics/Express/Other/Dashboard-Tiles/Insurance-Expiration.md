@@ -30,7 +30,7 @@ If you have the paid insurance integration with LeaseTrack , the Insurance Expir
  The tenant or homeowner has a lease with the Don't require insurance option selected.
 
  -
- The tenant or homeowner has a lease with a Move Out date on, or Expected MO date before the insurance expiration date.
+ The tenant or homeowner has a lease with a Move Out date on the insurance expiration date.
 
  -
  The tenant or homeowner's lease is for a unit type marked as Other Rentable Items (ORI) .

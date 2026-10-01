@@ -84,6 +84,10 @@ If you select <Default> , this field populates with the Default Terms specified 
 
  The name to use when writing checks to this vendor (if the name differs from the Name field).
 
+ Related Preferences
+
+ To have the Vendor Name populate this field, check Use vendor name instead of payee on check stubs in system preferences. For more information, refer to Checks/Bills General (System Preferences) .
+
  Email
 
  The contact email address for this vendor. The email subscription status displays as (active), (partially unsubscribed), or (unsubscribed).
@@ -203,8 +207,6 @@ If you select <Default> , this field populates with the Default Terms specified 
  The social security number (SSN) or tax ID number (TIN) of the vendor. Click to display the complete SSN or TIN.
 
  Related Privileges
-
- To view the full social security number, the following privilege is required:
 
  Group
  Privilege

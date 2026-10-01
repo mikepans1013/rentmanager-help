@@ -234,7 +234,7 @@ The Blue Moon lease is created and sent to the designated resident(s) for electr
 
  You can view a PDF copy of the Blue Moon lease, whether or not it was sent for electronic signature. For tenants and prospects, these documents can be viewed on the History/Notes pop-up by clicking for that history/note item. For more information, refer to Prospect History/Notes (Pop-Up) and Tenant History/Notes (Pop-Up) .
 
- For tenants, you can also view these document's from the lease's details pop-up by clicking View Documents . For more information, refer to Lease Details (Page) .
+ For tenants, you can also view these document's from the lease's details pop-up by clicking View Documents . For more information, refer to Lease Details (Pop-Up) .
 
  Track eSignature
 

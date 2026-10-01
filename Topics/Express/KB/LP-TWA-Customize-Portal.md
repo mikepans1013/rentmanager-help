@@ -2,7 +2,7 @@
 
 Source: https://rmxhelp.rentmanager.com/Topics/Express/KB/LP-TWA-Customize-Portal.htm
 
-You can customize the Tenant Web Access (TWA) web portal to determine the tools and pages are visible and accessible to your tenants. in order to best match your business or industry practices. Customization of TWA is done in system web preferences.
+You can customize the Tenant Web Access (TWA) web portal to determine which tools are available to your tenants in order to best match your business or industry practices. Customization of TWA is done in system web preferences.
 
  Customize Your Tenant Web Access Portal Appearance
 

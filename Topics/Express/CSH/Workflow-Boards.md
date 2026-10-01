@@ -22,6 +22,8 @@ The Workflow Boards page provides a panoramic view of your open workflow project
 
  For more information, refer to Control User Access .
 
+ To access the Workflow Boards page, go to arrow_forward Rental Info arrow_forward Workflows arrow_forward Workflow Boards .
+
  The name of the currently selected board displays at the top left of the page. Use the drop-down next to it to toggle between available workflow boards. Workflow projects generated from the corresponding workflow template display on the board. In the drop-down, you can also select Manage Workflow Boards to specify Favorites with the icon, or rearrange the list order using .
 
  Filter Options
@@ -81,9 +83,9 @@ The Workflow Boards page provides a panoramic view of your open workflow project
 
  Click to arrange cards in each stage according to either their Workflow Project Name or Due Date .
 
- Stages
+ Column Descriptions
 
- Each stage in the workflow board corresponds to a step in the associated workflow template. For example, if a workflow template has six stages, the board view displays six columns with names matching the stage names.
+ Each column in the workflow board corresponds to a step in the associated workflow template. For example, if a workflow template has six steps, the board view displays six columns with names matching the column names.
 
  Card Information
 
@@ -164,7 +166,6 @@ The Workflow Boards page provides a panoramic view of your open workflow project
  Column
 
  Service Manager
-
  Issues
  Add
 

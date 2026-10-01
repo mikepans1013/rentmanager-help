@@ -46,7 +46,7 @@ The User details page displays.
 
  Manage Assets
 
- Add, view, edit, and/or delete assets, including changing the financial property of an asset. For more information, refer to Assets (Page) and Financial Property Migration Wizard .
+ Add, view, edit, and/or delete assets, including changing the financial property of an asset. For more information, refer to Assets (Page) and Migrate Financial Property .
 
  Asset Manufacturers
 

@@ -20,7 +20,6 @@ If your property is an association-type, such as a homeowners association (HOA),
 
  Tenants/Prospects
  Tenants
-
  View
 
  Properties/Units

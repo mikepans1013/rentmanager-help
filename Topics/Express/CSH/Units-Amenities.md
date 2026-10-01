@@ -25,10 +25,6 @@ The Amenities pop-up lets you manage the amenities associated with the currently
  Column
  Description
 
- Name
-
- The name of the amenity (e.g., Patio , Gym/Workout Facility , Fireplace , Balcony ). A signifies the amenity is linked to the unit.
-
  Comment
 
  An optional comment that provides additional details about the amenity.
@@ -36,3 +32,11 @@ The Amenities pop-up lets you manage the amenities associated with the currently
  Price
 
  If applicable, the price that tenants pay for access to the amenity.
+
+ More Information
+
+ This field is used by the Rainmaker LRO integration. If you are not using this integration, the amenity price is purely informational and is not included in charges for tenants occupying the unit.
+
+ Name
+
+ The name of the amenity (e.g., Patio , Gym/Workout Facility , Fireplace , Balcony ). A signifies the amenity is linked to the unit.

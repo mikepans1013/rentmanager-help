@@ -35,7 +35,7 @@ The HomeImage function displays the specified image associated with the selected
 
  [HomeImage("Exterior","1")]
 
- Displays the second image of the Exterior image type, based on the order established in the home-type asset's Images tile..
+ Displays the second image of the Exterior image type, based on the order established in the home-type asset's Images tile.
 
  Width
 

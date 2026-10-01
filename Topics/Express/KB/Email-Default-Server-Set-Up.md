@@ -28,12 +28,13 @@ Rent Manager offers powerful tools for managing email correspondence that you co
 
  -
  Go to arrow_forward Administration , then go to Preferences arrow_forward System Preferences arrow_forward Email Settings .
+The System Preferences: Email Settings page displays.
 
  -
- If you are connected to an external email provider, click Disconnect .
+ In the System Email Account section, if you are connected to an external email provider, click Disconnect .
 
  -
- Optionally, select Send emails as .html by default to format emails as HTML instead of basic text. HTML adds the ability to include images, styles, and colors in emails, whereas plain text emails contain no media or formatting.
+ Click Connect to Rent Manager Default Server .
 
  -
  Optionally, in the Default From Email field, enter the email address you want to display on all emails sent from Rent Manager .
@@ -54,6 +55,22 @@ Rent Manager offers powerful tools for managing email correspondence that you co
  Email
 
  Each email contains its own From Address field at the top to enter or change the email address as necessary. For more information, refer to Send an Email .
+
+ -
+ Optionally, in the Other Email Options section, check or uncheck the options below. For more information, refer to Email Settings (System Preferences) .
+
+ Option
+ Description
+
+ Allow users to add an email account in Personal Preferences
+
+ Check to allow users to set up their own from name and email address, username, and password.
+
+ Enable email reply tracking
+
+ Check to allow tracking of email replies sent by Rent Manager entities such as prospects, tenants, and owners. These emails and replies are stored in Rent Manager .
+
+ Reply tracking does not apply when emails are sent from mail.rentmanager.com.
 
  -
  Click Save .

@@ -16,6 +16,10 @@ You can use this Task Automation to reduce the time needed to manage the generat
 
  For more information, refer to Control User Access .
 
+ Related Preferences
+
+ To set up automation schedules, you must have the appropriate automation enabled in system preferences. For more information, refer to Task Automation (System Preferences) .
+
  More Information
 
  Only information related to the properties to which you have access displays. Your access to properties can be managed from your user account or on the property's details page. For more information, refer to Limit Access to a Property .

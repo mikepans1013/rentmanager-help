@@ -205,8 +205,8 @@
                                         <div class="row collapse">
                                             <div class="topic-layout">
                                                 <div>
-                                                    <div data-sticky-container="" id="tpG230R6MUC7B1RI4HPSYQ">
-                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="tpG230R6MUC7B1RI4HPSYQ:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
+                                                    <div data-sticky-container="" id="oGSOvq7ynU-Q7IeIL8teNw">
+                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="oGSOvq7ynU-Q7IeIL8teNw:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
                                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container-on="small" class="nocontent menu _Skins_Topic_Headers_Menu mc-component">
                                                                 <li class="tree-node"><a href="#TenantIndexing">Tenant Indexing</a>
                                                                     <ul>
@@ -231,8 +231,8 @@
                                                         </div>
                                                     </div>
                                                     <div role="main" id="mc-main-content">
-                                                        <h1 id="TenantIndexing" data-magellan-target="TenantIndexing"><a name="aanchor448"></a>
-                                                            <MadCap:concept term="Ref-Script Indexing" /><a name="kanchor748"></a><a name="H1"></a>Tenant Indexing</h1>
+                                                        <h1 id="TenantIndexing" data-magellan-target="TenantIndexing"><a name="aanchor771"></a>
+                                                            <MadCap:concept term="Ref-Script Indexing" /><a name="kanchor747"></a><a name="H1"></a>Tenant Indexing</h1>
                                                         <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
                                                         <p>When the Tenant class is used as a child class in a script (e.g., <span class="Formula">Unit().Tenant().<span class="Required">Function</span></span>), an index can be specified to uniquely identify tenants that are associated with the preceding class. For example, units can be associated with multiple past, current, or future tenants, and indexing can be used to identify each of those tenants.</p>
                                                         <h2 id="TenantIndexRelationships" data-magellan-target="TenantIndexRelationships"><a name="H2_1"></a>Tenant Index Relationships</h2>
@@ -256,7 +256,7 @@
                                                         </ol>
                                                         <p>Once you filter and sort the tenants, you are able to see the tenants for a specific property ordered by when they were created.</p>
                                                         <p>
-                                                            <img src="../../../Resources/Images/PNGs/Script-Index-Tenant-Property-2024.png" alt="The Tenants page displays with five tenants at the same property." class="lightbox" />
+                                                            <img src="../../../Resources/Images/PNGs/script-indexing-tenant-property.png" alt="The Tenants page displays with five tenants at the same property." class="lightbox" />
                                                         </p>
                                                         <div class="info">
                                                             <p class="label1">More Information</p>
@@ -270,7 +270,7 @@
                                                         <h3><a name="H3_2"></a>ServiceManager.Tenant Indexing</h3>
                                                         <p>You can view a tenant's index on an issue by viewing the order in which the tenants display on the <span class="Section">Issue Links</span> tile in the <span class="Section">Tenants</span> section.</p>
                                                         <p>
-                                                            <img src="../../../Resources/Images/PNGs/Script-Index-Tenant-Service-Manager-2024.png" alt="The Issue Links tile for a service issue displays two tenants." />
+                                                            <img src="../../../Resources/Images/PNGs/script-indexing-issues-tenant.png" alt="The Issue Links tile for a service issue displays two tenants." />
                                                         </p>
                                                         <p class="Example">[ServiceManager.Tenant(1).DefaultPhoneNumber]</p>
                                                         <p> Using the information in the above image, this script returns the phone number of <span class="Stress">Amy Webb</span>, the second tenant linked to the service issue.</p>
@@ -278,7 +278,7 @@
                                                         <p>Tenants associated with a unit are indexed based on their occupancy. The most recent (or current) tenant to occupy the unit has an index of <span class="Input">0</span>, the tenant who lived there immediately before the current tenant has an index of <span class="Input">1</span>, and the tenant before that has an index of <span class="Input">2</span>.</p>
                                                         <p>You can determine a tenant's index at a unit from the unit's <span class="Tab">Occupancy</span> tab.</p>
                                                         <p>
-                                                            <img src="../../../Resources/Images/PNGs/Script-Index-Tenant-Unit-2024.png" alt="The Occupancy tile for a unit displays six tenants." />
+                                                            <img src="../../../Resources/Images/PNGs/script-indexing-tenant-unit.png" alt="The Occupancy tile for a unit displays six tenants." />
                                                         </p>
                                                         <p class="Example">[Unit.Tenant(2).AccountNumber]</p>
                                                         <p>Using the information in the above image, this script returns the account number of <span class="Stress">Walela Sullicooie</span>, the third oldest tenant lease at the unit.</p>
@@ -324,7 +324,7 @@
                 <p>8:00 a.m.-7:00 p.m. (EST)</p>
                 <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
                 </p>
-                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                <p><span class="mc-variable LCS.Support-Email variable">support@rentmanager.com</span>
                 </p>
             </div>
             <div>
@@ -339,6 +339,6 @@
                 </p>
             </div>
         </div>
-        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260750</span>.<span class="mc-variable Build.Build-Number variable">2.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">August 27, 2026</span>.</p>
     </div>
 </html>

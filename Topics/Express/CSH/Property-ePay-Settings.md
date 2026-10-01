@@ -44,7 +44,7 @@ Zego ePay automatically transfers money either from ePay payments you make to ot
 
  Related Preferences
 
- If the Have Zego manage platform fees option is enabled in system preferences, only the Bank Account and ePay Warning Limit fields display. For more information, refer to General ePay (System Preferences) .
+ If the Have Zego manage platform fees option is enabled in system preferences, only the Bank Account and ePay Warning Limit fields display. In system preferences, you can determine how platform fees are charged on tenant and prospect ePay transactions in Rent Manager . For more information, refer to General ePay (System Preferences) and Tenant ePay (System Preferences) .
 
  Field
  Description
@@ -55,13 +55,15 @@ Zego ePay automatically transfers money either from ePay payments you make to ot
 
  Related Privileges
 
- This field populates with only banks to which you have access. Your access to banks can be managed on the user's details page. For more information, refer to User Details (Page) .
-
- Additionally, this field populates with only banks that have been set up as ePay banks with an associated ePay ID. These IDs are generated and provided by Zego and must be associated with the desired bank account in system preferences.
+ This field populates with only banks to which you have access. Your access to banks can be managed on the user's details page. Additionally, this field populates with only participating banks with associated ePay IDs. These ePay IDs and the tenant and prospect ePay Default Bank Account are established in system preferences. For more information, refer to User Details (Page) and Tenant ePay (System Preferences) .
 
  ePay Warning Limit
 
  If a dollar amount is entered in this field, a warning message displays when processing an ePay payment equal to or more than this amount.
+
+ Related Preferences
+
+ Specify the dollar amount threshold that would trigger a warning message in the Warning Limit field in system preferences. For more information, refer to Tenant ePay (System Preferences) .
 
  Fee Type
 

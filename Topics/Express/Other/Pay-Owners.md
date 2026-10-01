@@ -80,7 +80,7 @@ The date on which to post the owner payment.
 
  The amount of funds available in the property's Default Bank prior to this equity distribution.
 
-Undeposited Funds
+ Undeposited Funds
 
  Amount of money collected from properties owned by this owner that are not yet deposited into the appropriate bank account(s).
 
@@ -140,7 +140,7 @@ Undeposited Funds
 
  Related Preferences
 
- This option displays only if Enable ePay is checked in the ePay section of system preferences. For more information, refer to General ePay (System Preferences) .
+ This option displays only if Enable ePay and Enable ePay for Owners are checked and participating banks are assigned an ePay ID in system preferences. For more information, refer to General ePay (System Preferences) and Owner ePay (System Preferences) .
 
  NACHA
 

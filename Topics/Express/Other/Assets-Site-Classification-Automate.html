@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automate Site Classifications</title>
+  <style>
+    body { color: #202428; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 0; background: #f7f8fa; }
+    main { box-sizing: border-box; max-width: 980px; margin: 0 auto; padding: 32px 24px 56px; background: #fff; min-height: 100vh; }
+    .source { color: #5d6873; font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+    h1, h2, h3, h4 { color: #13314c; line-height: 1.2; }
+    img { max-width: 100%; height: auto; }
+    table { border-collapse: collapse; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid #d7dde3; padding: 6px 8px; vertical-align: top; }
+    th { background: #eef3f7; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    pre { overflow-x: auto; padding: 12px; }
+    a { color: #006da8; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Assets-Site-Classification-Automate.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Assets-Site-Classification-Automate.htm</a></p>
+
+                                                        <h1 id="AutomateSiteClassifications" data-magellan-target="AutomateSiteClassifications"><a name="aanchor1142"></a>
+                                                            <a name="H1"></a>Automate Site Classifications</h1>
+                                                        <p>For manufactured housing-type properties, units are assigned a site classification that defines the relationship between the unit (or site) and the manufactured home (typically a home-type asset) that occupies it. This helps property managers understand which units are income-producing, which are resident-owned, and how occupancy is distributed across a community.</p>
+                                                        <p>By default, <span class="mc-variable Products.RM variable">Rent Manager</span> automatically updates a unit's site classification based on a number of factors, such as the linked asset's homeowner status, the asset's location, the unit's status, and more. Keeping this automation enabled ensures that your assets and units are seamlessly synced as the status of your home assets changes.</p>
+                                                        <p>If you are not using home-type assets to track your manufactured homes in <span class="mc-variable Products.RM variable">Rent Manager</span>, or simply wish to have more manual control over how site classifications are assigned, you can disable this automation and update your units manually. The automation can be enabled and disabled at both the system-level and property-level, allowing you to configure site classification settings to meet the unique needs of your portfolio.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p><span class="mc-variable Products.RM variable">Rent Manager</span> has pre-defined factors that determine which site classification the automation assigns to a unit. For more information, refer to <a href="../KB/Site-Classification.html" class="MCXref xref">Site Classification</a>.</p>
+                                                        </div>
+                                                        <h2 id="AutomateSiteClassificationsSystemWide" data-magellan-target="AutomateSiteClassificationsSystemWide"><a name="H2_1"></a>Automate Site Classifications System-Wide</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Asset Management</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Manage Homeowner Statuses &amp; Site Classifications</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">Enabled</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>You can enable and disable the automation at the system level to determine whether <span class="mc-variable Products.RM variable">Rent Manager</span> automatically updates each unit's site classification at all manufactured housing-type properties. By default, site classification automation is enabled system-wide.</p>
+                                                        <h3><a name="H3_1"></a>Enable Site Classification Automation</h3>
+                                                        <p>To enable site classification at the system-level, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> Rental Info Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Assets <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Homeowner Statuses &amp; Site Classifications</span>.<br />The <span class="Window">Homeowner Statuses &amp; Site Classifications</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Tab">Site Classifications</span> tab, click <span class="BigButtons">Automation Settings</span>.<br />The <span class="Window">Site Classification Automation Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Check <span class="Field">Set site classification automatically across the system</span>, then select options for the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Site Classification Automation Start</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which <span class="mc-variable Products.RM variable">Rent Manager</span> begins automatically updating your units' site classifications. This option displays only if site classification automation was disabled previously.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>System Default Site Classification</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The default site classification to assign to units if the automation is <span class="Stress">disabled</span>. This option does <span class="Stress">not</span> affect units when automation is <span class="Stress">enabled</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />Site classification automation is enabled system-wide. The site classification for each unit is automatically updated based on the variety of factors used in <span class="mc-variable Products.RM variable">Rent Manager</span>'s calculation.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_2"></a>Disable Site Classification Automation</h3>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Disabling site classification automation removes all site classification history added by the automation for the units at all properties with a <span class="Field">Property Type</span> of <span class="Field">Manufactured Housing</span>.</p>
+                                                        </div>
+                                                        <p>To disable site classification at the system-level, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/settings_19x19.png" class="inline-image" alt="" style="width: 19;height: 19;" /> Rental Info Setup <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Assets <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Homeowner Statuses &amp;  Site Classifications</span>.<br />The <span class="Window">Homeowner Statuses &amp; Site Classifications</span> page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the <span class="Tab">Site Classifications</span> tab, click <span class="BigButtons">Automation Settings</span>.<br />The <span class="Window">Site Classification Automation Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Uncheck <span class="Field">Set site classification automatically across the system</span> and click <span class="BigButtons">Save</span>.<br />The <span class="Window">Set Site Classification</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select a <span class="Field">System Default Site Classification</span> that is set as the site classification for all units at properties with a <span class="Field">Property Type</span> of <span class="Field">Manufactured Housing</span> when the automation is disabled.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you have previously disabled site classification automation, you must select which units to apply the <span class="Field">System Default Site Classification</span> to. Choose one of the following options:</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Standard-Head-Header1">
+                                                                                <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                                <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                    <p>Update only new units (without site classification)</p>
+                                                                                </td>
+                                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                    <p>Units that do not already have a default site classification are assigned the <span class="Field">System Default Site Classification</span>. Units assigned a default site classification when the automation was disabled previously retain their previous classification.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                                <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                    <p>Update all units</p>
+                                                                                </td>
+                                                                                <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                    <p>All units are assigned the <span class="Field">System Default Site Classification</span>. Units assigned a default site classification when the automation was disabled previously have their previous classification overwritten with the new selection.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the table below, leave <span class="Field">&lt;Use Default&gt;</span> selected to apply the <span class="Field">System Default Site Classification</span> to units of the corresponding unit type. Optionally, select an alternative <span class="Column">Site Classification</span> for each <span class="Column">Unit Type</span> listed. The new selection overrides the <span class="Field">System Default Site Classification</span> for units of those unit types. </p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>Only unit types associated with units at properties with a <span class="Field">Property Type</span> of <span class="Field">Manufactured Housing</span> display. For more information, refer to <a href="../CSH/Property-Details.html" class="MCXref xref">Property Details (Page)</a>.</p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">Set Classifications</span>.<br />Site classification automation is disabled system-wide and each unit's site classification is updated according to the options selected.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h2 id="AutomateSiteClassificationsforaSingleProperty" data-magellan-target="AutomateSiteClassificationsforaSingleProperty"><a name="H2_2"></a>Automate Site Classifications for a Single Property</h2>
+                                                        <div class="privs">
+                                                            <p class="label1">Related Privileges</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Privileges.css');margin-left: auto;margin-right: auto;" class="TableStyle-Privileges" cellspacing="0">
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <col class="TableStyle-Privileges-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Privileges-Head-Header1">
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Group</th>
+                                                                        <th class="TableStyle-Privileges-HeadE-Column1-Header1">Privilege</th>
+                                                                        <th class="TableStyle-Privileges-HeadD-Column1-Header1">Column</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Privileges-Body-Body1" style="height: -399px;" data-mc-conditions="Snippet Conditions.3">
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Properties/Units</td>
+                                                                        <td class="TableStyle-Privileges-BodyB-Column1-Body1">Properties</td>
+                                                                        <td class="TableStyle-Privileges-BodyA-Column1-Body1">View, Edit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
+                                                        </div>
+                                                        <p>You can enable and disable the automation at the property-level to determine whether <span class="mc-variable Products.RM variable">Rent Manager</span> automatically updates the site classification for units at the specified properties.</p>
+                                                        <h3><a name="H3_3"></a>Enable Site Classification Automation</h3>
+                                                        <p>To enable site classification automation at a single property, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span> and select a property from the list.<br />The property's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" class="inline" alt="View More" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Automation Settings</span>.<br />The <span class="Window">Site Classification Automation Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Check <span class="Field">Set site classification automatically</span>, then select options for the following fields:</p>
+                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                    <thead>
+                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Field</th>
+                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                <p>Site Classification Automation Start</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                <p>The date on which <span class="mc-variable Products.RM variable">Rent Manager</span> begins automatically updating site classifications for the property's units. This option displays only if site classification automation was disabled previously.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>System Default Site Classification</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The default site classification to assign to units at the property if the automation is <span class="Stress">disabled</span>. This option does <span class="Stress">not</span> affect units when automation is <span class="Stress">enabled</span>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Click <span class="BigButtons">Save</span>.<br />Site classification automation is enabled for the property. The site classification for each unit is automatically updated based on the variety of factors used in <span class="mc-variable Products.RM variable">Rent Manager</span>'s calculation.</p>
+                                                            </li>
+                                                        </ol>
+                                                        <h3><a name="H3_4"></a>Disable Site Classification Automation</h3>
+                                                        <div class="warning">
+                                                            <p class="label1">Warning</p>
+                                                            <p>Disabling site classification automation removes all site classification history added by the automation for the units at the selected property.</p>
+                                                        </div>
+                                                        <p>To disable site classification automation at a single property, do the following:</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Go to <span class="Navigation"><img src="../../../assets/Resources/Images/ICONS/Express-App/Material/menu_19x19.png" class="inline" alt="Menu" style="width: 19;height: 19;" />&#160;<span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Rental Info <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> General <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> Properties</span> and select a property from the list.<br></br>The property's details page displays.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/filter_none_19x19.png" class="inline" alt="View More" style="width: 19;height: 19;" /> <span class="material-symbols-outlined" style="font-size: large;">arrow_forward</span> <span class="ActionItems">Automation Settings</span>.<br />The <span class="Window">Site Classification Automation Settings</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Uncheck <span class="Field">Set site classification automatically</span> and click <span class="BigButtons">Save</span>.<br />The <span class="Window">Set Site Classification</span> pop-up displays.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Select a <span class="Field">System Default Site Classification</span> that is set as the site classification for all units at the property when the automation is disabled.</p>
+                                                                <div class="info">
+                                                                    <p class="label1">More Information</p>
+                                                                    <p>If you have previously disabled site classification automation, you must select which units to apply the <span class="Field">System Default Site Classification</span> to. Choose one of the following options:</p>
+                                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                                        <col class="TableStyle-Standard-Column-Column1" />
+                                                                        <thead>
+                                                                            <tr class="TableStyle-Standard-Head-Header1">
+                                                                                <th class="TableStyle-Standard-HeadE-Column1-Header1">Option</th>
+                                                                                <th class="TableStyle-Standard-HeadD-Column1-Header1">Description</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                                <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                                    <p>Update only new units (without site classification)</p>
+                                                                                </td>
+                                                                                <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                                    <p>Units that do not already have a default site classification are assigned the <span class="Field">System Default Site Classification</span>. Units assigned a default site classification when the automation was disabled previously retain their previous classification.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="TableStyle-Standard-Body-Body1">
+                                                                                <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                    <p>Update all units</p>
+                                                                                </td>
+                                                                                <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                    <p>All units are assigned the <span class="Field">System Default Site Classification</span>. Units assigned a default site classification when the automation was disabled previously have their previous classification overwritten with the new selection.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In the table below, leave <span class="Field">&lt;Use Default&gt;</span> selected to apply the <span class="Field">System Default Site Classification</span> to units of the corresponding unit type. Optionally, select an alternative <span class="Column">Site Classification</span> for each <span class="Column">Unit Type</span> listed. The new selection overrides the <span class="Field">System Default Site Classification</span> for units of those unit types.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Click <span class="BigButtons">Set Classifications</span>.<br />Site classification automation is disabled for the property and the site classifications for units at the property are updated according to the options selected.</p>
+                                                            </li>
+                                                        </ol>
+                                                    
+</main>
+</body>
+</html>

@@ -56,29 +56,33 @@ This pop-up allows you to view and manage the transactions linked to the current
  Option
  Description
 
- Date
+ Amount
 
- The date the charge, credit, or payment posted to the account.
+ The total value of the transaction. Payments and credits display with a negative value while charges display with a positive value.
 
- Reference #
+ More Information
 
- If applicable, the note entered by a user describing the type ( CASH , MO , the check number, and so on) of transaction.
+ If the transaction is a Rentable security deposit, Pending displays until Rentable has completed the transaction. For more information, refer to Request a Rentable Security Deposit .
 
- Description
+ Balance
 
- The system generated details to provide context for the transaction.
+ The total amount due on the account after the transaction is applied.
 
  Comment
 
  If applicable, the note entered by a user providing more information about the transaction.
 
- Amount
+ Date
 
- The total value of the transaction. Payments and credits display with a negative value while charges display with a positive value.
+ The date the charge, credit, or payment posted to the account.
 
- Balance
+ Description
 
- The total amount due on the account after the transaction is applied.
+ The system generated details to provide context for the transaction.
+
+ Reference #
+
+ If applicable, the note entered by a user describing the type ( CASH , MO , the check number, and so on) of transaction.
 
  Row Actions
 

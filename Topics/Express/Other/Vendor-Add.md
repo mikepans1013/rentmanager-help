@@ -51,6 +51,10 @@ The Vendors page displays.
 
  The name to use when writing checks to this vendor.
 
+ Related Preferences
+
+ To have the Vendor Name populate this field, check Use vendor name instead of payee on check stubs in system preferences. For more information, refer to Checks/Bills General (System Preferences) .
+
  Email
 
  The primary email address for sending correspondence to this vendor, such as emailing 1099 tax forms.

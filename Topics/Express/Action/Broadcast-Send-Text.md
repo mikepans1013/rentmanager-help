@@ -14,6 +14,10 @@ Using the text messaging feature, you can communicate with tenants, prospects, o
 
  In order to send a text message to an entity, a phone number must be designated as text-enabled on the account. To mark a phone number as text-enabled, go to the View Contacts page of the account and, in the Phone Numbers section, check the box in the T column next to the appropriate phone number.
 
+ Related Preferences
+
+ You can determine the text numbers that are available to use for text broadcasts sent from Rent Manager in system preferences. For more information, refer to Texting (System Preferences) .
+
  Related Privileges
 
  Group
@@ -60,7 +64,11 @@ The Send Text pop-up displays.
 
  Message
 
- The message to be sent to the recipient. Text messages that exceed a character count of 160 are converted into multiple message segments of 160 characters, with a maximum of 1600 characters. Each message segment counts toward your text limit. The number of segments are indicated in the bottom left of the pop-up. You can use Insert Text Template to fill the message box with a saved template.
+ The message to be sent to the recipient. Text messages that exceed a character count of 160 are converted into multiple message segments of 160 characters, with a maximum of 1,500 characters. Each message segment counts toward your text limit. The number of segments are indicated in the bottom left of the pop-up. You can use Insert Text Template to fill the message box with a saved template.
+
+ More Information
+
+ If you use certain special characters in messages, such as em dashes (—) or emojis, the message is converted into multiple message segments of 70 characters.
 
  Add Image
 

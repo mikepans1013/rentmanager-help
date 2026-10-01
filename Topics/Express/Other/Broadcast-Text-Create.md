@@ -24,7 +24,7 @@ Send a single mass text to multiple owners, tenants, prospects, or vendors at on
 
  Related Preferences
 
- To perform a text broadcast, ensure you enter the setup information in system preferences. This information includes a username and password that are initially provided to you by LCS . For more information, refer to Phone Broadcast (System Preferences) .
+ To perform a text broadcast, ensure you enter the setup information for texting and broadcasting in system preferences. This information includes a username and password that are initially provided to you by LCS . For more information, refer to Set up Broadcast Service .
 
  To start a new text broadcast, do the following:
 
@@ -62,6 +62,10 @@ Send a single mass text to multiple owners, tenants, prospects, or vendors at on
  Message Text
 
  The outgoing message to be sent to the recipients of the text broadcast. Text messages that exceed a character count of 160 are converted into multiple message segments of 160 characters, with a maximum of 1,500 characters.
+
+ More Information
+
+ Texts that exceed a 160 SMS character count are converted into multiple message segments of 160 characters up to a maximum of 1,600 characters. For example, if an SMS message of 400 characters is sent that requires three segments, the SMS Sent column increases by 3. If you use certain characters in messages, such as em dashes (—) or emojis, the segment character limit is lowered to 70.
 
  Step 2: Add Numbers to the Broadcast
 

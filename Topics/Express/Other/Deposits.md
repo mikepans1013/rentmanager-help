@@ -156,7 +156,7 @@ The deposit is submitted in Rent Manager .
 
  Reference
 
- Sort payments alphanumerically by the payment method or check number entered in the Reference # field.
+ Sort payments alphanumerically by the payment method or check number entered in the Reference field.
 
  Transaction Date
 
@@ -223,7 +223,7 @@ The deposit is submitted in Rent Manager .
 
  Reference
 
- Sort payments alphanumerically by the payment method or check number entered in the Reference # field.
+ Sort payments alphanumerically by the payment method or check number entered in the Reference field.
 
  Transaction Date
 

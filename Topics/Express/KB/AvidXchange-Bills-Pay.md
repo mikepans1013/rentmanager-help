@@ -175,7 +175,6 @@ The bill is paid with a payment method of AvidPay and automatically posted to Av
 
  Payables
  Submit user's own AvidPay check batches
-
  Enabled
 
  Submit other users' AvidPay check batches

@@ -98,7 +98,7 @@ Both the Summary Rent Roll and Aged Receivables reports provide tenant balances.
 
  The Aged Receivables report includes all charges and credits, whether or not they are associated with a unit. For the Summary Rent Roll report, if the charge or credit is not tied to a unit, that transaction is not included in the report results. Additionally, if the tenant's lease does not have a unit assigned to it, that tenant is not included in the Summary Rent Roll report at all.
 
- If the tenant should have a unit associated with their lease, you must edit their lease and select their assigned unit. For more information, refer to Lease Details (Page) . In order to tie transactions to a unit, the tenant must have that unit assigned to a lease.
+ If the tenant should have a unit associated with their lease, you must edit their lease and select their assigned unit. For more information, refer to Lease Details (Pop-Up) . In order to tie transactions to a unit, the tenant must have that unit assigned to a lease.
 
  To tie a transaction to a unit, you must edit the charge or credit's details. Go to the tenant's details page and on the Transactions tile click . For the transaction that needs to be tied to a unit, click arrow_forward Details and in the Unit field, select a unit. Then click Save .
 

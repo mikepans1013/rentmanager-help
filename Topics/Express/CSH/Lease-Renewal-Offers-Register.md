@@ -170,7 +170,7 @@ The Lease Renewal Register page shows the current status of the lease renewal of
 
  The username of the Rent Manager user who completed the offer.
 
- Completed Date
+ Completed Date
 
  The date on which the offer was marked complete.
 
@@ -234,8 +234,6 @@ The Lease Renewal Register page shows the current status of the lease renewal of
 
  Add Call, Email, Visit, or Note
 
-  
-
  Related Privileges
 
  Group
@@ -288,8 +286,6 @@ The Lease Renewal Register page shows the current status of the lease renewal of
 
  Compose Email
 
-  
-
  Related Privileges
 
  Group
@@ -305,8 +301,6 @@ The Lease Renewal Register page shows the current status of the lease renewal of
  Write an email to the tenant associated with the lease renewal.
 
  Create Renewal Offer
-
-  
 
  Related Privileges
 
@@ -360,13 +354,9 @@ The Lease Renewal Register page shows the current status of the lease renewal of
 
  Details
 
-  
-
  Open and manage the details of the lease renewal offer that was sent to the tenant.
 
  Edit Publish Details
-
-  
 
  Related Privileges
 
@@ -387,8 +377,6 @@ The Lease Renewal Register page shows the current status of the lease renewal of
  If the recipient currently has the document open in Tenant Web Access , you are not be able to save your changes.
 
  Resend Offer
-
-  
 
  Related Privileges
 
@@ -416,15 +404,13 @@ The Lease Renewal Register page shows the current status of the lease renewal of
 
  Tenants/Prospects
  Lease Renewal Offers
- View, Edit
+ Add, View, Edit
 
  For more information, refer to Control User Access .
 
  Change the tenant's lease to month-to-month and set up new one-time and recurring charges.
 
  Set Notice Date
-
-  
 
  Related Privileges
 
@@ -441,8 +427,6 @@ The Lease Renewal Register page shows the current status of the lease renewal of
  If the tenant has given notice that they are moving out of the unit and ending the lease, enter the date on which they gave notice to vacate. This option displays only if the renewal has a Declined status.
 
  Sign Document
-
-  
 
  Related Privileges
 
@@ -480,8 +464,6 @@ The Lease Renewal Register page shows the current status of the lease renewal of
 
  Write Letters
 
-  
-
  Related Privileges
 
  Group
@@ -492,9 +474,10 @@ The Lease Renewal Register page shows the current status of the lease renewal of
  Letter/Email templates/packets
  View
 
- History
  Tenant templates/packets
  Add
+
+ Additionally, on the Communication tab, you must have access to the letter template(s) you wish to send.
 
  For more information, refer to Control User Access .
 

@@ -33,9 +33,9 @@ This function displays the asset status assigned to the entity. Asset statuses a
 
  If no date is specified, today's date is used by default.
 
- [CurrentStatus(" 7/21/2026 ")]
+ [CurrentStatus(" 8/27/2026 ")]
 
- Displays the associated status as of 7/21/2026 .
+ Displays the associated status as of 8/27/2026 .
 
  Script Examples
 

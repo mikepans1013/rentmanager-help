@@ -43,7 +43,7 @@ The Smart Voicemails feature—powered by Orion AI —automatically transcribes,
 
  Links
 
- If applicable, the issue(s) and/or task(s) created from this voicemail to address an issue or follow-up with an action. For more information, refer to Link Tasks and Issues to a Voicemail .
+ If applicable, the issue(s) and/or task(s) created from this voicemail to address an issue or follow-up with an action. For more information, refer to Link Tasks and Issues to a Call or Voicemail .
 
  Orion Summary
 

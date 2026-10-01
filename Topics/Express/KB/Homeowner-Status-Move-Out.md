@@ -215,3 +215,45 @@ Depending on the active current homeowner status for a home-type asset, the abil
 
  -
  Abandoned - Resident Owned
+
+ Resident Owned - Contingent Liability
+
+ Enabled
+
+ Set to Change of Ownership by default, with the following options available from the drop-down list:
+
+ -
+ Change of Ownership
+
+ -
+ Abandoned - Resident Owned
+
+ -
+ Abandoned - Community Owned
+
+ -
+ Abandoned - Lender Owned
+
+ -
+ Abandoned - Dealer Owned
+
+ Resident Owned - Promissory Notes
+
+ Enabled
+
+ Set to Change of Ownership by default, with the following options available from the drop-down list:
+
+ -
+ Change of Ownership
+
+ -
+ Abandoned - Resident Owned
+
+ -
+ Abandoned - Community Owned
+
+ -
+ Abandoned - Lender Owned
+
+ -
+ Abandoned - Dealer Owned

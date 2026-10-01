@@ -13,19 +13,14 @@ A workflow project is used to organize and coordinate your team to accomplish a 
  Column
 
  Setup
-
  Tasks
-
  Add
 
  Service Manager
-
  Issues
-
  Add, View
 
  Workflow Projects
-
  Add, View, Edit
 
  For more information, refer to Control User Access .

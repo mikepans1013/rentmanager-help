@@ -10,6 +10,10 @@ Rent Manager 's text messaging center allows you to view the text messages that 
 
  Any texts you send via the text messaging center are recorded on the entity's account. When texting contacts of prospect and tenant accounts, those text messages are recorded in the history/notes of the primary tenant or prospect associated with the account.
 
+ Related Preferences
+
+ You can determine the text numbers that are available to use for text broadcasts sent from Rent Manager in system preferences. For more information, refer to Texting (System Preferences) .
+
  Related Privileges
 
  Group

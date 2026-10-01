@@ -8,6 +8,10 @@ When you reject an application, change a lease agreement, or decide not to renew
 
  Your company should review local, state, and federal law to understand your precise obligations related to sending adverse action letters.
 
+ Related Preferences
+
+ Before you can utilize AmRent 's screening and income verification features in Rent Manager , you need to establish your settings in system preferences. For more information, refer to Screening Settings (System Preferences) and Screening Products Income Verification (System Preferences) .
+
  Related Privileges
 
  Group

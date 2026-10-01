@@ -165,7 +165,7 @@ You can now track which tenants and homeowners have insurance and their policy's
 
  More Information
 
- Leases where the option Don't require insurance is checked are excluded from the Master policy. For more information, refer to Lease Details (Page) .
+ Leases where the option Don't require insurance is checked are excluded from the Master policy. For more information, refer to Lease Details (Pop-Up) .
 
  Enable Tenants and Homeowners to Purchase Insurance
 

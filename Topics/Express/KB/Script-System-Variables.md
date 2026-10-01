@@ -1076,3 +1076,40 @@ Displays the date the transaction was posted.
  Displays True if the PO option is checked on the work order line item. Displays False if it is not checked.
 
  For more information, refer to Work Order Function (Script) .
+
+ Lost Reason
+
+ The following system variables can be used in the LostReason function's Format parameter:
+
+ Variable
+ Description
+
+ $_CreateDate
+
+ Displays the date and time that the prospect's status was first assigned.
+
+ $_CreateUser
+
+ Displays the username of the Rent Manager user who first assigned the prospect's status.
+
+ $_Description
+
+ Displays text entered on the Change Prospect Status pop-up's Description field.
+
+ If no description was entered, this displays as blank.
+
+ $_Name
+
+ Displays the name of the lost reason (e.g. Price , Unit Unavailable , Eviction , Insufficient Income ).
+
+ $_Status
+
+ Displays one of two system-generated outcomes ( Lost or Lost-Rejected ) of the prospect's account.
+
+ $_UpdateDate
+
+ Displays the date and time that the prospect's status was last updated.
+
+ $_UpdateUser
+
+ Displays the username of the Rent Manager user who last updated the prospect's status.

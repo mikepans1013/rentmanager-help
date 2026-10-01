@@ -257,7 +257,7 @@ The Ownership Transfer Wizard allows you to move property ownership from one pro
 
  Warning
 
- It is recommended that you do not use the Financial Property Migration Wizard to change the financial property of the existing assets to the new property, as this will transfer all past financial data to the new owner and make the historical financial data inaccurate. For more information, refer to Financial Property Migration Wizard .
+ It is recommended that you do not use the Financial Property Migration Wizard to change the financial property of the existing assets to the new property, as this will transfer all past financial data to the new owner and make the historical financial data inaccurate. For more information, refer to Migrate Financial Property .
 
  Budget
 

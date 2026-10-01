@@ -92,7 +92,7 @@ This function displays date information for the system or selected violation in 
 
  [Date("mmmm d, yyyy")]
 
- This displays the date as July 21, 2026 .
+ This displays the date as August 27, 2026 .
 
  Script Examples
 
@@ -104,27 +104,27 @@ This function displays date information for the system or selected violation in 
 
  [System.Date()]
 
- Displays the date in system default m/d/yyyy format: 7/21/2026 .
+ Displays the date in system default m/d/yyyy format: 8/27/2026 .
 
  [System.Date("mm-dd-yy")]
 
- Displays the date as 07-21-26 .
+ Displays the date as 08-27-26 .
 
  [System.Date("mmmm d, yyyy")]
 
- Displays the date as July 21, 2026 .
+ Displays the date as August 27, 2026 .
 
  [System.Date("mmm. d, yyyy")]
 
- Displays the date as Jul. 21, 2026 .
+ Displays the date as Aug. 27, 2026 .
 
  [System.Date("ddd., m/d/yyyy")]
 
- Displays the date as Tue., 7/21/2026 .
+ Displays the date as Thu., 8/27/2026 .
 
  [System.Date("dddd, mmmm d, yyyy")]
 
- Displays the date as Tuesday, July 21, 2026 .
+ Displays the date as Thursday, August 27, 2026 .
 
  [$Day=System.Date("d");
 $Suf=System.NumberSuffix($Day);

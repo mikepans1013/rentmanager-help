@@ -14,7 +14,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
  Privilege
  Column
 
- Tenant/Prospect
+ Tenants/Prospects
  Lease Renewal Offers
  View
 
@@ -99,7 +99,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
 
  Renewal Status
 
- Tenant cards are sorted by their renewal status. For more information, refer to Renewal Status .
+ Tenant cards are sorted by their renewal status. For more information, refer to Card Actions .
 
  Name - First, Last
 
@@ -117,7 +117,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
 
  Tenant cards are sorted alphanumerically by property Name , then the property's units.
 
- Renewal Status
+ Column Descriptions
 
  The table below describes the renewal statuses include in each workflow column, the order in which they are sorted, as well as the trigger that advances an offer to the corresponding status.
 
@@ -183,7 +183,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
 
  Offer Expired
 
- The Offer Expiration has passed.
+ The Offer Expiration date has passed.
 
  Signable Document Expired
 
@@ -208,7 +208,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
  Privilege
  Column
 
- Tenant/Prospect
+ Tenants/Prospects
  Lease Renewal Offers
  View, Edit
 
@@ -240,13 +240,29 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
  Privilege
  Column
 
- Tenant/Prospect
+ Tenants/Prospects
+ Lease Renewal Offers
+ View, Delete
+
+ For more information, refer to Control User Access .
+
+ Permanently delete the renewal offers from Rent Manager . This action cannot be undone.
+
+ Resend Offer
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Tenants/Prospects
  Lease Renewal Offers
  View, Edit
 
  For more information, refer to Control User Access .
 
- Permanently delete the renewal offers from Rent Manager . This action cannot be undone.
+ Resend renewal offers to the tenant accounts with pending offers.
 
  Void
 
@@ -256,7 +272,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
  Privilege
  Column
 
- Tenant/Prospect
+ Tenants/Prospects
  Lease Renewal Offers
  View, Edit
 
@@ -276,9 +292,10 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
  Letter/Email templates/packets
  View
 
- History
  Tenant templates/packets
  Add
+
+ Additionally, on the Communication tab, you must have access to the letter template(s) you wish to send.
 
  For more information, refer to Control User Access .
 
@@ -295,11 +312,11 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
 
  Current Lease End
 
- The date on which the tenant's lease officially ends, as displayed on the lease details pop-up Lease End field. If the action is behind schedule, a icon displays to the right of the date.
+ The date on which the tenant's lease officially ends, as displayed on the lease details pop-up Lease End field. If the action is behind schedule, displays to the right of the date.
 
  Current Lease Term
 
- The tenant's current lease term (e.g., MTM , 12 Months , 24 Months , etc.), as displayed on the lease details pop-up Lease Term field.
+ The tenant's current lease term (e.g., MTM , 12 Months , 24 Months ), as displayed on the lease details pop-up Lease Term field.
 
  Delivery Method
 
@@ -323,7 +340,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
 
  Offer Expiration
 
- The date the tenant's lease renewal offer expires, as displayed on the Renewal Offer Details pop-up. If the action is behind schedule, a icon displays to the right of the date.
+ The date the tenant's lease renewal offer expires, as displayed on the Renewal Offer Details pop-up. If the action is behind schedule, displays to the right of the date.
 
  Renewal Start Date
 
@@ -335,11 +352,11 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
 
  Terms Offered
 
- The lease term (e.g., MTM , 12 Months , 24 Months , etc.) for the tenant's lease renewal offer.
+ The lease term (e.g., MTM , 12 Months , 24 Months ) for the tenant's lease renewal offer.
 
  Terms Selected
 
- The lease term (e.g., MTM , 12 Months , 24 Months , etc.) selected by the tenant.
+ The lease term (e.g., MTM , 12 Months , 24 Months ) selected by the tenant.
 
  Updated By
 
@@ -584,7 +601,7 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
 
  Tenants/Prospects
  Lease Renewal Offers
- View, Edit
+ Add, View, Edit
 
  For more information, refer to Control User Access .
 
@@ -650,9 +667,10 @@ The Lease Renewal Board provides a panoramic view of your lease renewal landscap
  Letter/Email templates/packets
  View
 
- History
  Tenant templates/packets
  Add
+
+ Additionally, on the Communication tab, you must have access to the letter template(s) you wish to send.
 
  For more information, refer to Control User Access .
 

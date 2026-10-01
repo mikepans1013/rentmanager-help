@@ -30,7 +30,7 @@ When a tenant or prospect is moving out, you can use the security deposit refund
  View, Edit
 
  Receivables
- Tenant Transactions
+ Tenant transactions
  Add
 
  Refund security deposits with a bill
@@ -59,11 +59,11 @@ When a tenant or prospect is moving out, you can use the security deposit refund
 
  Tenant
 
-   arrow_forward Rental Info  arrow_forward General  arrow_forward Tenants and select a tenant account.
+ arrow_forward Rental Info arrow_forward General arrow_forward Tenants and select a tenant account.
 
  Prospect
 
-   arrow_forward Rental Info arrow_forward General arrow_forward Prospects and select a prospect account.
+ arrow_forward Rental Info arrow_forward General arrow_forward Prospects and select a prospect account.
 
  The details page for tenant or prospect displays.
 
@@ -139,7 +139,7 @@ When a tenant or prospect is moving out, you can use the security deposit refund
  The unit associated with the security deposit.
 
  -
- If the tenant also accrues security deposit interest to be refunded, check the Include Interest option. The interest accrued for the tenant automatically calculates and displays in the Charge Type section. If a Rentable security deposit is refunded, the interest does not display and is handled by Rentable.
+ If the tenant also accrues security deposit interest to be refunded, check the Include Interest option. The interest accrued for the tenant automatically calculates and displays in the Charge Type section. If a Rentable security deposit is refunded, the interest does not display and is handled by Rentable.
 
  Related Preferences
 
@@ -152,7 +152,7 @@ When a tenant or prospect is moving out, you can use the security deposit refund
  In the Apply To Current Charges section's Allocation column, you can enter the amount of the refund to apply to each open charge posted to the tenant or prospect's account. To automatically apply the full amount to all open charges, click Auto Allocate .
 
  -
- In the Apply to New Charges section, you can add new charges to apply the refund amount to by clicking Add Item , such as charges for damages found during a move-out inspection. Then, enter the following information:
+ In the Apply To New Charges section, you can add new charges to apply the refund amount to by clicking Add Item , such as charges for damages found during a move-out inspection. Then, enter the following information:
 
  Column
  Description
@@ -197,9 +197,10 @@ When a tenant or prospect is moving out, you can use the security deposit refund
  The total dollar amount to process as a refund, before any of the refund is allocated to charges.
 
  -
- Click Save to apply the refund.
-The security deposit is allocated to any specified charges and the rest is refunded to the tenant or prospect.
+ Click Save to apply the refund. Alternatively, if you have a Refund Via method of Check selected, click Save and Print Check to immediately print the tenant or prospect's refund check. For more information, refer to Print Checks .
 
  More Information
 
- Alternatively, if you have a Refund Via method of Check selected, click Save and Print Check to immediately print the tenant or prospect's refund check. For more information, refer to Print Checks .
+ If the security deposit refund is processed via Zego Resident Payout, click Submit to apply the refund. Alternatively, click Submit and Print Check to immediately print the tenant or prospect's refund check. If the refund is processed via Rentable, only the Submit option is available.
+
+ The security deposit is allocated to any specified charges and the rest is refunded to the tenant or prospect.

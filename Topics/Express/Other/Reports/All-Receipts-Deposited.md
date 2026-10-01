@@ -94,21 +94,25 @@ The Reports: All Receipts Deposited page displays.
  Option
  Description
 
- Date
-
- Payments under each deposit are sorted chronologically by Date in ascending order (oldest to most recent).
-
- Unit
-
- Payments under each deposit are sorted alphanumerically by Unit name.
-
  Account Number
 
  Payments under each deposit are sorted numerically by the tenant's system-generated Account Number in ascending order (lowest to highest).
 
+ Date
+
+ Payments under each deposit are sorted chronologically by Date in ascending order (oldest to most recent).
+
  Last Name
 
  Payments under each deposit are sorted alphabetically by the tenant's Last Name .
+
+ Reference
+
+ Payments under each deposit are sorted alphanumerically by Reference value.
+
+ Unit
+
+ Payments under each deposit are sorted alphanumerically by Unit name.
 
  Report Results
 
@@ -200,3 +204,13 @@ The Reports: All Receipts Deposited page displays.
  Amount
 
  The total dollar amount of all payments included in the deposit.
+
+ Report Totals Subreport
+
+ The Report Totals subreport provides a breakdown of the payments included in the deposit(s).
+
+ The subreport lists the number of payments that were made through Cash , Checks , Money Orders , Credit Card , Other Items or any user-added payment methods, and the total amount included in the deposit(s) for each payment method. The final row provides the total number of payments included in the deposit, and the sum total of all the payments.
+
+ Related Preferences
+
+ You can add new payment methods and/or determine which are available for selection during payment entry in system preferences. For more information, refer to Payment Options (System Preferences) .

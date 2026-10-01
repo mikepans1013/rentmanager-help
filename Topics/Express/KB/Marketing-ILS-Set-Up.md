@@ -10,6 +10,10 @@ The internet listing service (ILS) marketing integration allows you to create on
 
  If you have not converted your unit configuration to a property configuration, the Marketing Setup pop-up displays a message prompting you to use the Property Marketing Configuration Wizard . Once you convert to a property configuration, it cannot be reversed. For more information, refer to Marketing Configuration Wizard (Pop-Up) .
 
+ Related Preferences
+
+ You can map default values to the fields on the marketing setups of your units or properties in system preferences. For more information, refer to Online Listing Standard Fields (System Preferences) .
+
  Step 1: Establish Property Marketing Advanced Settings
 
  Related Privileges

@@ -2,11 +2,11 @@
 
 Source: https://rmxhelp.rentmanager.com/Topics/Express/Other/System-Preferences/General-Options-Security-Deposit-Interest-Options.htm
 
-These system preferences provide default options for handling the interest earned by tenants on their security deposits.
+These system preferences allow you to control the default options for handling the interest earned by tenants on their security deposits.
 
  More Information
 
- These options can be overridden for individual properties on the property's details page.
+ These options can be overridden for individual properties on the property's details page. For more information, refer to Interest Options for Security Deposits (Pop-Up) .
 
  Related Privileges
 
@@ -24,68 +24,71 @@ These system preferences provide default options for handling the interest earne
 
  -
  Go to arrow_forward Administration , then go to Preferences arrow_forward System Preferences arrow_forward General Options arrow_forward Security Deposit arrow_forward Interest Options .
+The System Preferences: Security Deposit - Interest Options page displays.
 
  -
- Edit the settings as desired. Each setting is described below.
+ Edit the settings as desired. Each setting is described in the headings below.
 
  -
- Click Save to apply your changes.
+ Click Save .
+The system preference configuration is updated.
 
- Preference Descriptions
+ Interest Calculation
 
- Each setting is described below:
+ In this section, determine how Rent Manager calculates earned security deposit interest. Select one of the following options:
 
  Option
  Description
 
- Interest Calculation
+ Annual Compounding
 
- Choose how Rent Manager calculates earned security deposit interest.
+ Tenants earn interest on both their security deposits and the interest already earned on those deposits. When calculating interest across more than one year, the interest is compounded on an annual basis using the Rates schedule defined either on this page or for that specific property.
 
  Simple
 
- Tenants earn interest only on their security deposits. They do not earn interest on their interest.
-
- Annual Compounding
-
- Tenants earn interest on both their security deposits and the interest already earned on those deposits. When calculating interest across more than one year, the interest is compounded on an annual basis using the Rates schedule defined either on this window or for that specific property.
+ Tenants earn interest only on their security deposits. Interest is not compounded.
 
  Disbursement Method
 
- Choose how Rent Manager applies the interest tenants earn on their security deposits.
+ In this section, determine how Rent Manager applies the interest tenants earn on their security deposits when posting the accrued interest when posting security deposit interest. Select one of the following options:
 
- Credit
-
- The interest earned is allocated as a credit towards the charge type that you select in the Credit Charge Type drop-down list.
+ Option
+ Description
 
  Apply to Security Deposit
 
- The earned interest is applied as additional held security deposits for the tenant. If a tenant has more than one type of security deposit charge on their account, the interest is applied proportionally amongst those charges.
+ Two line items are posted to the tenant's account: a charge with the security deposit charge type and a credit for the earned interest allocated to the charge. This increases the security deposit held amount displayed on the scoreboard of the tenant's details page. If a tenant has more than one security deposit charge type on their account, the interest is applied proportionally amongst those charges.
 
- Rates
+ Credit
 
- Define the annualized rates in which interest is earned on security deposits.
-
- -
- Click Add Item .
-
- -
- If necessary, click inside the Year field and change the year.
-
- -
- Click inside the Rate (%) field and enter the annualized interest rate percentage.
-
- -
- Repeat these steps for each year and rate you wish to add.
+ The interest earned is posted as a credit for the tenant. In the Credit Charge Type  field, select the charge type to preallocate this credit transaction, such as a rent charge.
 
  More Information
 
- Use the Rates table to determine the first year to start calculating interest on held tenant security deposits and to track the rate change in subsequent years.
+ When refunding a tenant's security deposit, checking Include Interest adds interest accrued since the last security deposit interest posting. For example, if that posting occurred one year before the refund, the refund includes one year of accrued interest. For more information, refer to Refund a Security Deposit .
 
- Every year prior to the earliest year entered into the Rates table will be calculated at 0%, meaning that interest is not earned on deposits held during those years.
+ Rates
 
- If a year is skipped in the Rates table, Rent Manager will automatically use the rate of the most recent year in which a rate was entered.
+ In this section, define the annualized rates in which interest is earned on security deposits. To add annual interest rates, do the following:
+
+ -
+ Click   Add Item .
+
+ -
+ In the Year column, enter the year to which the annualized interest rate is applied.
+
+ -
+ In the Rate (%) column, enter the annualized interest rate percentage for that year.
+
+ -
+ Repeat these steps for each year and interest rate you wish to add.
+
+ To delete a created interest rate for a year, on the year you wish to delete, click arrow_forward Delete .
+
+ More Information
+
+ Use the Rates table to determine the first year to start calculating interest on held tenant security deposits and to track the rate change in subsequent years. Every year prior to the earliest year entered into the Rates table is calculated at 0%, meaning that interest is not earned on deposits held during those years. If a year is skipped in the Rates table, Rent Manager automatically uses the rate of the most recent year in which a rate was entered.
 
  Charge Type
 
- Select the charge type that will be used to post security deposit interest credits on the transaction ledger.
+ In this section's drop-down list, select the charge type to use for posting security deposit interest credits for the tenant. The credits posted for both the Apply to Security Deposit and Credit disbursement methods use the selected charge type.

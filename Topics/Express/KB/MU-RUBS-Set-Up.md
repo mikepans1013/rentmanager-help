@@ -15,9 +15,7 @@ Ratio utility billing systems (RUBS) is the method of splitting utility bills am
  Column
 
  Utilities
-
  Manage RUBS Templates
-
  View, Add
 
  For more information, refer to Control User Access .
@@ -162,13 +160,10 @@ The RUBS template is created.
  Column
 
  Utilities
-
  Metered utilities
-
  Enabled
 
  Utility information
-
  View, Add
 
  For more information, refer to Control User Access .
@@ -239,7 +234,7 @@ The Add Utility wizard displays.
  Enter the remaining information for the master meter as necessary. To add a new master meter, select Add Master Meter . For more information, refer to Add Master Meters .
 
  -
- Enter the remaining information for the utility as necessary. For more information, refer to Add a Utility
+ Enter the remaining information for the utility as necessary. For more information, refer to Add a Utility .
 
  -
  To create the utility and exit the pop-up, click Save & Close . To create the utility and leave the pop-up open to create more utilities, click Save & New .

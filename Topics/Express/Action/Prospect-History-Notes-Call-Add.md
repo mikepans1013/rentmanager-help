@@ -98,7 +98,7 @@ Information about the call you want to record for future reference.
 
  Show on payments tab
 
- Adds the Note to the Add Payment page under the Summary section in the Payment Notes field. For more information, refer to Prospect Payments (Pop-Up) .
+ Adds the Note to the Add Payment page on the Payment Summary tile in the Payment Notes field. For more information, refer to Prospect Payments (Pop-Up) .
 
  Spoke with prospect
 

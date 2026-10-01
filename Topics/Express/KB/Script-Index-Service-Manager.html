@@ -22,8 +22,8 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Service-Manager.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Service-Manager.htm</a></p>
 
-                                                        <h1 id="ServiceManagerIndexing" data-magellan-target="ServiceManagerIndexing"><a name="aanchor1199"></a>
-                                                            <a name="kanchor1997"></a><a name="H1"></a>Service Manager Indexing</h1>
+                                                        <h1 id="ServiceManagerIndexing" data-magellan-target="ServiceManagerIndexing"><a name="aanchor2068"></a>
+                                                            <a name="kanchor1992"></a><a name="H1"></a>Service Manager Indexing</h1>
                                                         <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
                                                         <p>When the Service Manager class is used as a child class in a script (e.g., <span class="Formula">Tenant().ServiceManager().<span class="Required">Function</span></span>), an index can be specified to uniquely identify service issues that are associated with the preceding class. For example, tenants may have multiple issues associated with their account, and indexing can be used to identify each of those issues.</p>
                                                         <p>Issues are tied to tenants, units, or properties in the <span class="Section">Issue Links</span> section of the issue.</p>
@@ -32,21 +32,21 @@
                                                         <h3><a name="H3_1"></a>Tenant.ServiceManager Indexing</h3>
                                                         <p>All issues linked to a tenant display on the <span class="Window">History/Notes</span> pop-up, with the prefix <span class="Stress">Tenant added to Ticket</span>.</p>
                                                         <p class="lightbox">
-                                                            <img src="../../../assets/Resources/Images/PNGs/Scripting-Indexing-SM-Tenant-SG2024.png" alt="The History/Notes pop-up displays with three service issues and one highlighted." class="lightbox" />
+                                                            <img src="../../../assets/Resources/Images/PNGs/script-indexing-tenant-issues.png" alt="The History/Notes pop-up displays with three service issues and one highlighted." class="lightbox" />
                                                         </p>
                                                         <p class="Example">[Tenant.ServiceManager(1).Title]</p>
                                                         <p>Referencing the image above, this would return <span class="Input">Lights in kitchen went out</span>, the second oldest issue linked to the tenant.</p>
                                                         <h3><a name="H3_2"></a>Property.ServiceManager Indexing</h3>
                                                         <p>All issues linked to a property display on the <span class="Window">History/Notes</span> pop-up, with the prefix <span class="Stress">Property added to Ticket</span>.</p>
                                                         <p>
-                                                            <img src="../../../assets/Resources/Images/PNGs/Scripting-Indexing-SM-Property-SG-2024.png" alt="The History/Notes pop-up displays with four service issues and one highlighted." class="lightbox" />
+                                                            <img src="../../../assets/Resources/Images/PNGs/script-indexing-property-issues.png" alt="The History/Notes pop-up displays with four service issues and one highlighted." class="lightbox" />
                                                         </p>
                                                         <p class="Example">[Property.ServiceManager(0).Number]</p>
                                                         <p>Referencing the image above, this returns <span class="Input">494</span>, the ID number of the oldest issue linked to the property.</p>
                                                         <h3><a name="H3_3"></a>Unit.ServiceManager Indexing</h3>
                                                         <p> All issues linked to a unit display on the <span class="Window">History/Notes</span> tab, with the prefix <span class="Stress">Unit added to Ticket</span>.</p>
                                                         <p>
-                                                            <img src="../../../assets/Resources/Images/PNGs/Scripting-Indexing-SM-Unit-SG-2024.png" alt="The History/Notes pop-up displays with four service issues and one highlighted." class="lightbox" />
+                                                            <img src="../../../assets/Resources/Images/PNGs/script-indexing-unit-issues.png" alt="The History/Notes pop-up displays with four service issues and one highlighted." class="lightbox" />
                                                         </p>
                                                         <p class="Example">[Unit.ServiceManager(2).AssignedOpenDate]</p>
                                                         <p>Referencing the image above, this returns <span class="Input">1/25/<span class="mc-variable Dates.Year4 variable">2026</span> 10:41 AM</span>, the date and time the third oldest issue linked to the unit was opened.</p>

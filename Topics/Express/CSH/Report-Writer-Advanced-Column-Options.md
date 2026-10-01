@@ -141,7 +141,7 @@ When you create a custom report in Report Writer , each column can be further cu
 
  Date
 
- The data in this column displays in a date format. You can select from a list of date formats, such as Tuesday, July 21, 2026 or 7/21/2026 .
+ The data in this column displays in a date format. You can select from a list of date formats, such as Thursday, August 27, 2026 or 8/27/2026 .
 
  Data Type
 

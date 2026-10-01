@@ -45,11 +45,13 @@ The Assets page displays.
 
  Indicates that tenants can lease the asset as they would a unit. Then, in the Market Rent field, enter the amount to charge renters of this asset.
 
- This option is available only if Track Financials is enabled and the Homeowner Status is set to Community Owned or Change of Ownership .
+ This option is available if Track Financials is enabled and the Homeowner Status is set to Community Owned or Change of Ownership . If there is a current or future lease or reservation associated with this asset, this option is enabled and cannot be disabled.
 
  Track financials for this asset
 
  Check to enable financial reporting for the asset, then select the Property with which the asset's financial activity is associated.
+
+ If there are any unpaid tenant or prospect transactions linked to this asset, or if there is a current or future lease or reservation associated with this asset, this option is enabled and cannot be disabled.
 
  -
  In the Asset Details , enter or select additional asset information into the available fields described below. If the selected Asset Type for this asset is set up as a home, this tile displays as Home Details .

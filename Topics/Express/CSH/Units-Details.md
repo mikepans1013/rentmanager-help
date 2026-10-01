@@ -76,7 +76,7 @@ In Rent Manager , units are the individual spaces you rent to tenants. You can c
  Field
  Description
 
- Display Color
+ Color
 
  A color to help identify units of certain types, groups, or any other specifications you prefer. The color displays as a bar to the left of the unit in some areas of Rent Manager , such as the Units page.
 
@@ -90,7 +90,23 @@ In Rent Manager , units are the individual spaces you rent to tenants. You can c
 
  Site Classification
 
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Properties/Units
+ Manual Entry Site Classifications
+ Enabled
+
+ For more information, refer to Control User Access .
+
  The current site classification for a unit. To view a history of site classifications for the unit, click History . This field displays only if the unit is associated with a property that has a Property Type of Manufactured Housing .
+
+ More Information
+
+ If Rent Manager sets the site classification automatically for the unit's property, this field cannot be edited. For more information, refer to Automate Site Classifications .
 
  Unit Type
 

@@ -67,6 +67,12 @@ Rent Manager allows you to manage a variety of assets, like kitchen appliances, 
  -
  Resident Owned
 
+ -
+ Resident Owned - Contingent Liability
+
+ -
+ Resident Owned - Promissory Note
+
  Column Descriptions
 
  The following columns are available on this page. By default, some columns display only if added via .
@@ -350,6 +356,24 @@ Rent Manager allows you to manage a variety of assets, like kitchen appliances, 
 
  Update multiple assets simultaneously without leaving the Assets page. To edit multiple assets' Name , Asset Type , Manufacturer , Model , etc., click Bulk Actions arrow_forward Mass Edit Mode . Then, click on the applicable fields to make the desired edits. When finished, click Exit .
 
+ Migrate Financial Property
+
+  
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Asset Management
+ Manage Assets
+ View, Edit
+
+ For more information, refer to Control User Access .
+
+ Move the asset to another financial property in Rent Manager . This process mass moves all previous and future financial transactions linked to the selected asset(s) to the destination property.
+
  Run Reports
 
  Check
@@ -367,6 +391,24 @@ Rent Manager allows you to manage a variety of assets, like kitchen appliances, 
  For more information, refer to Control User Access .
 
  Select an asset-level report from the list to generate a report for the selected account(s).
+
+ Send Email
+
+  
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ System
+ Compose Email
+ Enabled
+
+ For more information, refer to Control User Access .
+
+ Send an email to the user(s) or parties associated with the selected asset, such as the linked unit's tenant or the manager of the linked property. To generate a asset-type email from a template, on the Send Email pop-up, select Insert Email Template . For more information, refer to Letter and Message Templates .
 
  Write Letters
 

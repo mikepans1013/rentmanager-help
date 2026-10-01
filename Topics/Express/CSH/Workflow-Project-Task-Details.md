@@ -84,7 +84,7 @@ Tasks are one-time actions that you create to help you maintain and keep track y
 
  Related Preferences
 
- This option displays only if the Integrate Appointments and Tasks with external calendar applications option is enabled in system preferences. For more information, refer to Calendar Integration (System Preferences)
+ This option displays only if the Integrate Appointments and Tasks with external calendar applications option is enabled in system preferences. For more information, refer to Calendar Integration (System Preferences) .
 
  Additionally, to receive email alerts regarding these tasks to your email address, you must have an Alternate Email entered in your personal preferences. For more information, refer to Calendar Integration (Personal Preferences) .
 

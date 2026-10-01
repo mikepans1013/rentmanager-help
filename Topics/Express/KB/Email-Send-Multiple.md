@@ -83,16 +83,28 @@ The Filter Detail pop-up closes and the filter criteria is applied to the Tenant
  -
  At the top of the page, enter the following information:
 
+ More Information
+
+ Some fields display only for specific types of email accounts. For example, the From Name field displays for Google email accounts, but not for Microsoft email accounts.
+
  Field
  Description
 
- From Address
+ From
+
+ The email account from which to send the email. This field always includes the email set as your system default as an option.
+
+ Related Preferences
+
+ If the option Allow users to add an email account in Personal Preferences is enabled in system preferences, any additional accounts you've connected in your personal preferences display in a drop-down. For more information, refer to Email Settings (Personal Preferences) .
+
+ From Email
 
  The email address from which the message is sent that displays for the recipient. A default value can be set for all users in system preferences or on an individual basis in personal preferences.
 
  Related Preferences
 
- In system preferences, if the Default (mail.rentmanager.com) mail server is selected, all emails send from email@rentmanager.com . When the email is sent, it displays the entered From Address to recipient(s) and reroutes replies to that email address.
+ In system preferences, if the Default (mail.rentmanager.com) mail server is selected, all emails send from email@rentmanager.com . When the email is sent, it displays the entered From Email to recipient(s) and reroutes replies to that email address.
 
  If you have established settings for an External Server in system preferences, emails send from the address entered in this field. For more information, refer to Email Settings (System Preferences) .
 

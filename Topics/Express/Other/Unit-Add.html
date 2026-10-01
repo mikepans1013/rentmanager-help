@@ -22,13 +22,14 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Unit-Add.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Unit-Add.htm</a></p>
 
-                                                        <h1 id="AddaUnit" data-magellan-target="AddaUnit"><a name="kanchor1778"></a><a name="H1"></a>Add a Unit</h1>
+                                                        <h1 id="AddaUnit" data-magellan-target="AddaUnit"><a name="aanchor1839"></a>
+                                                            <a name="kanchor1773"></a><a name="H1"></a>Add a Unit</h1>
                                                         <p>Properties in <span class="mc-variable Products.RM variable">Rent Manager</span> are defined as financial entities, but much of your data (such as tenant payments, service issues, and so on) is linked to specific units at those properties. Even if you have a property that is a single-family home and only has one unit, you should still create a single unit for that property to ensure all the information in your database is recorded accurately and you can perform any needed actions for that home. The <span class="Window">Add Unit</span> wizard allows you to create the unit(s) at your properties, either one at a time, or you can create a group of similar units in a single batch to save time.</p>
                                                         <div class="prefs">
                                                             <p class="label1">Related Preferences</p>
                                                             <p>By default, these rental spaces in your <span class="mc-variable Products.RM variable">Rent Manager</span> database are called <span class="Input">Units</span>. You can customize the entity name in system preferences to meet your business needs. For example, if you primarily own properties that are university housing, you can change <span class="Input">Unit</span> to <span class="Input">Dormitory</span>. This updates the entity name for your entire <span class="mc-variable Products.RM variable">Rent Manager</span> database, so be sure to choose an entity name that works best for all your business purposes. For more information, refer to <a href="System-Preferences/Entity-Type.html" class="MCXref xref">Entity Types (System Preferences)</a>.</p>
                                                         </div>
-                                                        <p>Adding a single unit is best for properties that only have one unit. It can also be used for properties with multiple units if you have a few units that are very different from the majority. If a property has multiple similar units, it is most efficient to add those units in a batch. The fields available and how they apply to the unit(s) vary depending on the selected method.</p>
+                                                        <p>Adding a single unit is best for properties that only have one unit. It can also be used for properties with multiple units if you have a few units that are very different from the majority. If a property has multiple similar units, it is most efficient to add those units in a batch. The fields available and how they apply to the unit(s) varies depending on the selected method.</p>
                                                         <div class="warning">
                                                             <p class="label1">Warning</p>
                                                             <p>Before adding units, you must first create the property where the unit is located and the unit type(s) used to categorize the units. For more information, refer to <a href="Property-Add.html" class="MCXref xref">Add a Property</a> and <a href="../Action/Unit-Type-Add.html" class="MCXref xref">Add a Unit Type</a>.</p>
@@ -69,7 +70,7 @@
                                                             <li value="2">
                                                                 <p>At the top, click <img src="../../../assets/Resources/Images/ICONS/Express-App/Material/add_circle_outline_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="BigButtons">Add Units</span>.<br /></p>
                                                                 <p>
-                                                                    <img src="../../../assets/Resources/Images/PNGs/RMX-Unit-Add-pop-up-SG-2023.png" alt="The Add Unit pop-up displays options to add single or multiple units." />
+                                                                    <img src="../../../assets/Resources/Images/PNGs/add-unit-single.png" alt="The Add Unit pop-up displays options to add single or multiple units." />
                                                                     <br />
                                                                 </p>
                                                             </li>
@@ -219,11 +220,19 @@
                                                                             </td>
                                                                         </tr>
                                                                         <tr class="TableStyle-Standard-Body-Body1">
-                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                            <td class="TableStyle-Standard-BodyE-Column1-Body1">
                                                                                 <p>Inspection Template</p>
                                                                             </td>
-                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                            <td class="TableStyle-Standard-BodyD-Column1-Body1">
                                                                                 <p>The default inspection form template to use when performing an inspection on this unit(s). For more information, refer to <a href="../CSH/Inspection-Templates.html" class="MCXref xref">Inspection Templates (Page)</a>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                <p>Site Classification</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                <p>The name of the unit's site classification used to monitor its status. The field displays only if the selected <span class="Field">Property</span> is a manufactured housing type and the unit's site classification is not set automatically. For more information, refer to <a href="Assets-Site-Classification-Automate.html" class="MCXref xref">Automate Site Classifications</a>.</p>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
@@ -326,7 +335,7 @@
                                                                     <p class="label1">More Information</p>
                                                                     <p>If you selected to add <span class="Field">Multiple Units</span>, you can automatically populate each unit's name to the associated unit. To add the unit name to the address, place your cursor in the address field where the unit name should display and click <img src="../../../assets/Resources/Images/ICONS/Express-App/RM/units_19x19.png" class="inline" alt="" style="width: 19;height: 19;" /> <span class="ActionItems">Unit Name</span>. The variable <span class="Input">[U]</span> is added and a preview of these addresses for each unit displays below with the first unit's address as an example.</p>
                                                                     <p>
-                                                                        <img src="../../../assets/Resources/Images/PNGs/RMX-Unit-Add-Address-SG-2023.png" alt="The Addresses section displays an example of the unit name variable pulling in the name of the unit." />
+                                                                        <img src="../../../assets/Resources/Images/PNGs/address-tile-unit-variable.png" alt="The Addresses section displays an example of the unit name variable pulling in the name of the unit." />
                                                                     </p>
                                                                 </div>
                                                             </li>

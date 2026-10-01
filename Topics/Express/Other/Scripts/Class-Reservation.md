@@ -99,7 +99,7 @@ This class examines information related short-term rental (STR) reservations for
 
  Displays the date and time when Save was clicked upon completing the Check In Registration wizard on the most recent reservation. The output is formatted as displayed below:
 
- 7/21/2026 11:48:26 AM
+ 8/27/2026 11:48:26 AM
 
  Children
 

@@ -215,6 +215,8 @@ The Wizard Settings pop-up displays.
 
  Check Add a payment after wizard is complete to open a pop-up for entering payment information when the wizard is completed.
 
+ This option is available only for Tenant , Prospect , and Move In type wizards.
+
  Account Address Transfer
 
  For custom Move In type wizards, this option determines how address information is transferred from the prospect account to the tenant account.
@@ -238,6 +240,40 @@ The Wizard Settings pop-up displays.
  Tenant Contact Address Type For Copied Address
 
  The tenant address type you wish to copy the selected prospect contact address(s) into for the tenant contact(s).
+
+ Make Ready
+
+ For custom Move Out type wizards, these settings determine the default values for the fields in the Kick Off Make Ready tile. These values populate automatically when the wizard is initiated, and can be changed as needed.
+
+ Set Make Ready Start Date to Today
+
+ If checked, the Start Date field populates with today's date.
+
+ Start the make ready process X day(s) after move out
+
+ The number of days after the tenant's Move Out date to calculate the make ready process's Start Date . For example, if the tenant moves out on 3/3/ 26 and you enter 2 , the Start Date populates as 3/5/ 26 .
+
+ This setting is unavailable if Set Make Ready Start Date to Today is selected.
+
+ Make Ready Default Template
+
+ The make-ready template that automatically populates in the Template field. For more information, refer to Make Ready Templates (Page) .
+
+ Unit Status
+
+ For custom Move Out type wizards, these settings determine the default values for the fields in the Set Unit Status tile. These values populate automatically when the wizard is initiated, and can be changed as needed.
+
+ Unit Status Default
+
+ The unit status to apply to the unit after completing the wizard.
+
+ End unit status X day(s) after status start date
+
+ The number of days after the unit status' Start Date to set the unit status' End Date . For example, if the Start Date is 1/1/ 26 and you enter 25 , the End Date populates as 1/26/ 26 .
+
+ Start unit status X day(s) after move out.
+
+ The number of days after the tenant's Move Out date to set the unit status's Start Date . For example, if today is 1/1/ 26 and you enter 1 , the date populates as 1/2/ 26 .
 
  -
  Click OK .

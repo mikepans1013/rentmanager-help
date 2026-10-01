@@ -80,23 +80,11 @@ When accepting payments in real life, it is just as important to record these pa
 
  Reference
 
- The following forms of payment to describe the transaction are available to select:
+ The payment method of this batch payment. Select a payment method, such as Cash , MO (money order), or CC (credit card), or enter another method such as a check number or ACH .
 
- Cash
+ Related Preferences
 
- Record a cash payment.
-
- MO
-
- Record a money order payment.
-
- CC
-
- Record a credit card payment.
-
- Check
-
- Manually type the check number into the Reference field to record a check payment.
+ You can customize the list of available payment methods in system preferences. For more information, refer to Payment Options (System Preferences) .
 
  Tenant
 

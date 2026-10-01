@@ -141,6 +141,16 @@ The importing tool allows you to pull in large amounts of data into Rent Manager
 
  The amount that tenants at this unit pay in rent. This information is imported as a unit-level recurring charge using the property's associated Rent Charge Type defined on the property's details page. If multiple rent charge types are defined, the information is imported as the first unit-level recurring charge established for the property.
 
+ Site Classification
+
+ If the unit is linked to a property with the Manufactured Housing property type, the unit's site classification Custom Name , as displayed on the Homeowner Statuses & Site Classifications page. For more information, refer to Homeowner Statuses & Site Classifications .
+
+ If the import method is Add New Unit and the unit's associated property has the Set site classification automatically field unchecked, this field is required. Conversely, if the unit's associated property has Set site classification automatically field checked, this field cannot be imported. For more information, refer to Automate Site Classifications .
+
+ Site Classification Start Date
+
+ If the unit is linked to a property with the Manufactured Housing property type, the date on which the unit's site classification takes effect. If no value is entered, the date of the import is used.
+
  Square Feet
 
  The total square footage of the unit.

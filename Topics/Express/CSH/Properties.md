@@ -31,13 +31,9 @@ Most people think of properties in terms of real estate. You may own or manage a
  Default Column
  Description
 
- Name
+ Billing Address
 
- The full name of the property.
-
- Short Name
-
- The abbreviated name of the property.
+ The address marked Billing for the property.
 
  Email
 
@@ -47,13 +43,17 @@ Most people think of properties in terms of real estate. You may own or manage a
 
  The name of the person responsible for managing the property.
 
+ Name
+
+ The full name of the property.
+
  Primary Address
 
  The address marked Default for the property.
 
- Billing Address
+ Short Name
 
- The address marked Billing for the property.
+ The abbreviated name of the property.
 
  Available Column
 
@@ -62,6 +62,10 @@ Most people think of properties in terms of real estate. You may own or manage a
  Active
 
  A green indicates that Active is checked on the General tile.
+
+ Address: (Type)
+
+ Each Address Type is listed on the Columns pop-up. The property's associated address of the selected type displays.
 
  Billing Name1
 
@@ -99,6 +103,10 @@ Most people think of properties in terms of real estate. You may own or manage a
 
  The property phone number marked as Default .
 
+ Phone Number: (Type)
+
+ Each phone number type is listed on the Columns pop-up. The property's associated phone number of the selected type displays.
+
  Postal Code
 
  The postal code marked Default on the Primary Address tile.
@@ -131,6 +139,11 @@ Most people think of properties in terms of real estate. You may own or manage a
 
  The combined total of square footage for all units at this property.
 
+ UDF:
+(Property Type)
+
+ Each property-type user-defined field is listed on the Columns pop-up. The value entered on the property's account for the selected user-defined field displays.
+
  Row/Bulk Actions
 
  Row actions are available from the menu and affect only the selected account. To perform the same action on multiple accounts, the Bulk Actions menu allows you to select an action and then check all the accounts on which to apply the action.
@@ -140,24 +153,6 @@ Most people think of properties in terms of real estate. You may own or manage a
  Action
  Bulk Action
  Description
-
- Compose Email
-
-  
-
- Related Privileges
-
- Group
- Privilege
- Column
-
- System
- Compose Email
- Enabled
-
- For more information, refer to Control User Access .
-
- Send an email to the property manager.
 
  Add Inspection
 
@@ -176,48 +171,6 @@ Most people think of properties in terms of real estate. You may own or manage a
  For more information, refer to Control User Access .
 
  Add a new inspection to the selected property.
-
- Create Service Issue/Add Issue
-
- Check
-
- Related Privileges
-
- Group
- Privilege
- Column
-
- Service Manager
- Issues
- Add, View
-
- For more information, refer to Control User Access .
-
- Create a service ticket linked to the selected property.
-
- Write Letters
-
- Check
-
- Related Privileges
-
- Group
- Privilege
- Column
-
- Letter/Email Templates/Reports/Packets
- Letter/Email templates/packets
- View
-
- Additionally, on the Communication tab, you must have access to at least one property-type letter.
-
- For more information, refer to Control User Access .
-
- Select a property-level letter template from the list to generate a letter for the selected account.
-
- More Information
-
- Letters can be added or removed from this shortcut menu in the letter/email templates register. For more information, refer to Letter/Email Template Settings (Pop-Up) .
 
  Add Note
 
@@ -272,3 +225,81 @@ Most people think of properties in terms of real estate. You may own or manage a
  For more information, refer to Control User Access .
 
  Select to add the property's text-enabled phone number to the list of phone numbers to receive the message.
+
+ Compose Email
+
+  
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ System
+ Compose Email
+ Enabled
+
+ For more information, refer to Control User Access .
+
+ Send an email to the property manager.
+
+ Create Service Issue/Add Issue
+
+ Check
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Service Manager
+ Issues
+ Add, View
+
+ For more information, refer to Control User Access .
+
+ Create a service ticket linked to the selected property.
+
+ Mass Edit Mode
+
+ Check
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Properties/Units
+ Properties
+ View, Edit
+
+ For more information, refer to Control User Access .
+
+ Update multiple properties simultaneously without leaving the Properties page. To edit multiple properties' Short Name , Manager Name , Email , Billing Address , etc., click Bulk Actions arrow_forward Mass Edit Mode . Then, click on the applicable fields to make the desired edits. When finished, click Exit .
+
+ Write Letters
+
+ Check
+
+ Related Privileges
+
+ Group
+ Privilege
+ Column
+
+ Letter/Email Templates/Reports/Packets
+ Letter/Email templates/packets
+ View
+
+ Additionally, on the Communication tab, you must have access to at least one property-type letter.
+
+ For more information, refer to Control User Access .
+
+ Select a property-level letter template from the list to generate a letter for the selected account.
+
+ More Information
+
+ Letters can be added or removed from this shortcut menu in the letter/email templates register. For more information, refer to Letter/Email Template Settings (Pop-Up) .

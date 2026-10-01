@@ -91,7 +91,7 @@ The tenant's details page displays.
 
  Show on payments tab
 
- Adds the Note to the Add Payment page under the Summary section in the Payment Notes field. For more information, refer to Tenant Payments (Pop-Up) .
+ Adds the Note to the Add Payment page on the Payment Summary tile in the Payment Notes field. For more information, refer to Tenant Payments (Pop-Up) .
 
  Start Date and Time
 

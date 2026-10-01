@@ -32,6 +32,5 @@ Accounting periods are the lengths of time for which financial statements are ty
  Next to the series you wish to delete, click .
 
  -
-
  Click Yes to confirm the action.
 The series and any period years and periods defined for that series are deleted.

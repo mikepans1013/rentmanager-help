@@ -1,4 +1,4 @@
-# Lease Details (Page)
+# Lease Details (Pop-Up)
 
 Source: https://rmxhelp.rentmanager.com/Topics/Express/CSH/Lease-Details.htm
 

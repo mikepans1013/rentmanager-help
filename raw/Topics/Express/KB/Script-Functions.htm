@@ -218,7 +218,8 @@
                                                     </div>
                                                 </div>
                                                 <div role="main" id="mc-main-content">
-                                                    <h1><a name="kanchor1320"></a><a name="H1"></a>Script Functions</h1>
+                                                    <h1><a name="aanchor1366"></a>
+                                                        <MadCap:concept term="Informational" /><a name="kanchor1316"></a><a name="H1"></a>Script Functions</h1>
                                                     <p>Functions determine what the script examines in the database and, typically, what is displayed.</p>
                                                     <p>The table below lists all of the scripting functions available in <span class="mc-variable Products.RM variable">Rent Manager</span> in alphabetical order. Functions with parameters include links to topics that explain those parameters and how to use them within the script. Some functions, when used with certain classes, do not include additional parameters.</p>
                                                     <p><span class="Required"><span class="Formula">Class().</span></span> represents a required parent class. If the parent class is not defined at the beginning of your script, <span class="mc-variable Products.RM variable">Rent Manager</span> defaults to the most appropriate class based on the location of the script.</p>
@@ -1768,7 +1769,7 @@
                                                                 <td class="TableStyle-Standard-BodyD-Column1-Body1">
                                                                     <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).CheckedInDate]</p>
                                                                     <p>Displays the date and time when <span class="BigButtons">Save</span> was clicked upon completing the <span class="Window">Check In Registration</span> wizard on the most recent reservation. The output is formatted as displayed below:</p>
-                                                                    <p><span style="font-style: italic;" class="mc-variable System.ShortDate variable">7/21/2026</span><i>11:48:26 AM</i>
+                                                                    <p><span style="font-style: italic;" class="mc-variable System.ShortDate variable">8/27/2026</span><i>11:48:26 AM</i>
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -1781,7 +1782,7 @@
                                                                     <p class="Formula">[ServiceManager().Checklist()]</p>
                                                                     <p>Displays the <span class="Section">Check List Items</span> tile of the service issue. The output is formatted as displayed below:</p>
                                                                     <p>
-                                                                        <img src="../../../Resources/Images/PNGs/ServiceManagerChecklist.png" alt="" />
+                                                                        <img src="../../../Resources/Images/PNGs/script-function-checklist-output-format.png" alt="" />
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -4826,7 +4827,7 @@
                                                                     <p class="Formula">[ServiceManager().IndividualHours()]</p>
                                                                     <p>Displays information regarding service tech hours entered on the issue's <span class="Window">History/Notes</span> pop-up, including the user who performed the work and the number of hours entered, per line item. The output is formatted as displayed below:</p>
                                                                     <p>
-                                                                        <img src="../../../Resources/Images/PNGs/Service Manager Class Individual Hours Example SS 9-22-20.png" alt="" />
+                                                                        <img src="../../../Resources/Images/PNGs/script-function-individual-hours-output.png" alt="" />
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -6171,7 +6172,7 @@
                                                                     <p class="Formula">[ServiceManager().List()]</p>
                                                                     <p>Displays a list of service issues linked to the property, tenant, prospect, or unit within a specified date range. The output is formatted as displayed below:</p>
                                                                     <p>
-                                                                        <img src="../../../Resources/Images/PNGs/Service Manager Class List Script Example SS 9-22-20.png" alt="" />
+                                                                        <img src="../../../Resources/Images/PNGs/script-function-list-output.png" alt="" />
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -6234,7 +6235,7 @@
                                                                                     <p class="Formula">[Asset().LocationHistory()]</p>
                                                                                     <p>Displays the current and past properties and units to which the asset is linked in the <span class="Section">Asset Location</span> tile. The output is formatted as displayed below:</p>
                                                                                     <p>
-                                                                                        <img src="../../../Resources/Images/PNGs/Scripting - Asset Location History - SG - 8-27-20.png" alt="" />
+                                                                                        <img src="../../../Resources/Images/PNGs/script-function-asset-location-history-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -6243,7 +6244,7 @@
                                                                                     <p class="Formula">[<span class="Required">Class().</span>Home().LocationHistory()]</p>
                                                                                     <p>Displays the current and past properties and units to which the home-type asset is linked in the <span class="Section">Asset Location</span> tile. The output is formatted as displayed below:</p>
                                                                                     <p>
-                                                                                        <img src="../../../Resources/Images/PNGs/Scripting - Asset Location History - SG - 8-27-20.png" alt="" />
+                                                                                        <img src="../../../Resources/Images/PNGs/script-function-asset-location-history-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -11020,7 +11021,7 @@
                                                                                     <p>Displays each transaction associated with the owner within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current owner displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../Resources/Images/PNGs/Owner Transaction Script.png" alt="" />
+                                                                                        <img src="../../../Resources/Images/PNGs/transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -11030,7 +11031,7 @@
                                                                                     <p>Displays each transaction associated with the owner within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the primary owner displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../Resources/Images/PNGs/Owner Transaction Script.png" alt="" />
+                                                                                        <img src="../../../Resources/Images/PNGs/transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -11040,7 +11041,7 @@
                                                                                     <p>Displays each transaction linked to the selected lease of the selected tenant within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results display by default the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the first lease listed for the current tenant displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../Resources/Images/PNGs/Lease Transactions Function CS 9-16-20.png" alt="" />
+                                                                                        <img src="../../../Resources/Images/PNGs/lease-transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -11050,7 +11051,7 @@
                                                                                     <p>Displays each transaction associated with the tenant within a specified date range. Each transaction can be displayed on a separate line and shown as a string of one or more specified transaction data fields. If no fields are specified in the Format parameter, the results default to the transaction date, description, and amount separated by tabs.</p>
                                                                                     <p>A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current tenant displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../Resources/Images/PNGs/Tenant Transaction Function - CW - 9-28-2020.png" alt="" />
+                                                                                        <img src="../../../Resources/Images/PNGs/script-function-tenant-transactions-list-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -11059,7 +11060,7 @@
                                                                                     <p class="Formula">[<span class="Required">Class().</span>Reservation(ReservationCount - 1).Transactions]</p>
                                                                                     <p>Displays a list of charges, credits, and payments for the most recent reservation. A new line with the default formatted text string (date, description, and amount separated by tabs) for each transaction linked to the current owner displays, as shown below.</p>
                                                                                     <p>
-                                                                                        <img src="../../../Resources/Images/PNGs/Owner Transaction Script.png" alt="" />
+                                                                                        <img src="../../../Resources/Images/PNGs/transactions-function-output.png" alt="" />
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -12150,7 +12151,7 @@
                 <p>8:00 a.m.-7:00 p.m. (EST)</p>
                 <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
                 </p>
-                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                <p><span class="mc-variable LCS.Support-Email variable">support@rentmanager.com</span>
                 </p>
             </div>
             <div>
@@ -12165,6 +12166,6 @@
                 </p>
             </div>
         </div>
-        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260750</span>.<span class="mc-variable Build.Build-Number variable">2.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">August 27, 2026</span>.</p>
     </div>
 </html>

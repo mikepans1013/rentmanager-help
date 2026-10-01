@@ -55,29 +55,13 @@ The Management Company pop-up displays.
 
  A comment describing or explaining the purpose of the payment.
 
- Reference #
+ Reference
 
- The following forms of payment to describe the transaction are available to select:
+ The payment method of this owner payment. Select a payment method, such as Cash , MO (money order), or CC (credit card), or enter another method such as a check number or ACH .
 
- Cash
+ Related Preferences
 
- Record a cash payment.
-
- CC
-
- Record a credit card payment.
-
- Check
-
- Manually type the check number into the Reference # field to record a check payment.
-
- ePay
-
- This displays automatically if, in the Payment Summary tile, Process via ePay is selected.
-
- MO
-
- Record a money order payment.
+ You can customize the list of available payment methods in system preferences. For more information, refer to Payment Options (System Preferences) .
 
  -
  In the Open Charges section, select Pay? for any charges you are applying the payment to.
@@ -86,22 +70,11 @@ The Management Company pop-up displays.
  Update the Current Payment amount to reflect how much of the payment is to be applied to each charge.
 
  -
- In the Payment Summary tile, enter the following information:
-
- Field
- Description
-
- Process via ePay
-
- Process the payment through ePay .
-
- View Receipt
-
- Print a receipt for this payment.
+ In the Payment Summary tile, select View Receipt to generate a printable receipt for the payment.
 
  -
  Click Add Payment .
 
  More Information
 
- Alternatively, select Apply Credits to display any existing unallocated payments. Check the Pay? box and adjust the Current Payment amount for any charge to which you wish to allocate payment, and click Allocate when finished.
+ Alternatively, select Apply Credits to display any existing unallocated payments. Check the Pay? box and adjust the Current Payment amount for any charge to which you wish to allocate payment, then click Allocate when finished.

@@ -8,6 +8,10 @@ When Text Broadcasting is enabled in Rent Manager , LCS assigns you a set of up 
 
  This feature is licensed and must be purchased separately. For more information, contact your sales representative at sales@rentmanager.com .
 
+ Related Preferences
+
+ You can determine the text numbers that are available to use for text broadcasts sent from Rent Manager in system preferences. For more information, refer to Texting (System Preferences) .
+
  Related Privileges
 
  Group

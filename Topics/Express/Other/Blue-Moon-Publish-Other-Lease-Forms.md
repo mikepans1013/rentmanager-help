@@ -30,7 +30,6 @@ Blue Moon is a software from the National Apartment Association (NAA) that provi
  Blue Moon
 
  Create lease
-
  Enabled
 
  Edit fields during lease creation

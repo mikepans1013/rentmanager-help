@@ -46,10 +46,6 @@ The Reports: Audit Trail page displays.
 
  These fields automatically populate with today’s date. Enter a different date or select a date from the calendar. Alternatively, adjust the dates using the available preset buttons or click to open more options for setting a date range.
 
- Users to Include
-
- Select each user for which tracked actions display in the report. Select <Unassigned> to include tracked actions associated with system-generated audits. Optionally, check Include Inactive Users to include user accounts no longer marked as active.
-
  Audit Types
 
  Select from the following audit types to determine the information that display in the report:
@@ -80,7 +76,7 @@ The Reports: Audit Trail page displays.
  A unit converted to an asset is moved via the Unit Migration Wizard .
 
  -
- An asset's financial property is changed via the Financial Property Migration Wizard .
+ An asset's financial property is changed via the Financial Property Migration Wizard .
 
  Avid Invoice
 
@@ -108,7 +104,7 @@ The Reports: Audit Trail page displays.
 
  Charge Modify
 
- Displays recurring charges edited using the Modify Recurring Charges tool.
+ Displays recurring charges edited using the Modify Recurring Charges tool, or recurring charges updated when adjusting the square footage of a commercial unit whose recurring charges are calculated using $/Sq. Ft.
 
  Check Payee Change
 
@@ -540,6 +536,10 @@ The Reports: Audit Trail page displays.
  Search Description
 
  Enter criteria to further filter the report results for the selected users and audit types. For example, entering 31 filters results to the actions of the selected audit types that have an account number, date, address, and so on. that includes 31 .
+
+ Users to Include
+
+ Select each user for which tracked actions display in the report. Select <Unassigned> to include tracked actions associated with system-generated audits. Optionally, check Include Inactive Users to include user accounts no longer marked as active.
 
  Report Results
 

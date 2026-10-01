@@ -136,7 +136,7 @@ The prospect's details page displays.
 
  Enter resident owned RV details
 
- The tenant has a resident-owned RV they intend to place on the lot. If selected, enter information about the RV into the available fields to be included on the tenant's lease. For more information, refer to Lease Details (Page) .
+ The tenant has a resident-owned RV they intend to place on the lot. If selected, enter information about the RV into the available fields to be included on the tenant's lease. For more information, refer to Lease Details (Pop-Up) .
 
  Link an existing home
 
@@ -342,6 +342,10 @@ The prospect's details page displays.
  Enabled
 
  For more information, refer to Control User Access .
+
+ More Information
+
+ If you have the Rentable feature set up in Rent Manager , the Rentable Deposit tile displays instead, prompting you to enter information to process the security deposit through Rentable. For more information, refer to Request a Rentable Security Deposit .
 
  After entering any required user defined fields, select the Charges tab on the left.
 

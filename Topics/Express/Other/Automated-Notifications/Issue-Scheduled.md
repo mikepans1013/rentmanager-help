@@ -127,8 +127,6 @@ If you are adding a new setup, the Notification Type pop-up displays.
 
  Add External Recipient
 
-  
-
  Include a person who does not have a user account in Rent Manager . Enter their information into the available fields described below.
 
  Display Name
@@ -166,7 +164,7 @@ If you are adding a new setup, the Notification Type pop-up displays.
 
  Notify all tenants within account group
 
- The notification is sent to the contact(s) marked as Primary for each tenant in the account group.
+ If the tenant is part of an account group, the notification is sent to the contact marked as Primary for each tenant in the account group in addition to the contact type(s) selected in the Select contacts to include section.
 
  Notify Owner
 

@@ -37,7 +37,7 @@ The Purchase Orders page displays.
 
  Related Preferences
 
- To edit this field, Allow changing PO# must be enabled, and user privilege below must be enabled.
+ To edit this field, both the Allow changing PO# option in system preferences and the user privilege below must be enabled. Fill in the Purchase order prefix field in system preferences to add any alphanumeric characters that precede the PO number on a purchase order.
 
  Group
  Privilege
@@ -134,6 +134,10 @@ Once an item is selected, the Cost and Memo fields populate with the item’s in
  Quantity
 
  The quantity of the Item to purchase. The Total updates when the quantity is entered or changed.
+
+ Related Preferences
+
+ If the quantity of an inventory item drops below zero due to an action, the Action when using an item would cause negative inventory field in system preferences determines whether Rent Manager automatically warns the user of the negative inventory with a pop-up window or prevents the user from proceeding. For more information, refer to P.O./Inventory (System Preferences) .
 
  Cost
 

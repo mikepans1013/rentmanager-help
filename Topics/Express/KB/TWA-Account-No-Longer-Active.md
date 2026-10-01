@@ -48,7 +48,7 @@ The tenant's details page displays.
  The tenant's Move Out date is on or before the present date.
 
  -
- On the Leases tile, review the Move In and Move Out dates of the most recent lease for accuracy. If one of the dates is incorrect, update the lease details with correct information. For example, if a tenant's Move Out is supposed to be 10/31/2025 , but was erroneously entered as 10/31/2024 , update the field to accurately reflect the lease. For more information, refer to Lease Details (Page) .
+ On the Leases tile, review the Move In and Move Out dates of the most recent lease for accuracy. If one of the dates is incorrect, update the lease details with correct information. For example, if a tenant's Move Out is supposed to be 10/31/2025 , but was erroneously entered as 10/31/2024 , update the field to accurately reflect the lease. For more information, refer to Lease Details (Pop-Up) .
 
  After updating a tenant's lease with accurate information, invite them to attempt to log in again. If the issue was caused by inaccurate Status , the tenant should now be able to log in without error. However, if the tenant is still unable to log in, or if you determine that the tenant's Move In date, Move Out date, and Status are correct, proceed to the next troubleshooting step.
 

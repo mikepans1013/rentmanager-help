@@ -119,7 +119,11 @@ The Prospect Leasing Board provides a panoramic view of your prospect landscape,
 
  Prospect cards are sorted alphanumerically by unit Name .
 
- Stage Actions
+ Column Descriptions
+
+ Each column in the leasing board corresponds to a step in the selected board's workflow. For example, if the selected leasing board has five steps, the board view displays five columns, each named corresponding to that specific step.
+
+ Column Actions
 
  Various actions can be taken on a prospect stage by clicking on the right side of the column's header. The available actions are described below.
 
@@ -760,11 +764,11 @@ The Prospect Leasing Board provides a panoramic view of your prospect landscape,
  Column
 
  Letter/Email Templates/Reports/Packets
- Sign document packets
- Enabled
-
  Letter/Email templates/packets
  View
+
+ Sign document packets
+ Enabled
 
  View other users' published document packets
  Enabled

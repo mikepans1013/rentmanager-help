@@ -22,7 +22,8 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Bill-Add-Vendor-Owner.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Bill-Add-Vendor-Owner.htm</a></p>
 
-                                                        <h1 id="AddaOneTimeVendorOwnerBill" data-magellan-target="AddaOneTimeVendorOwnerBill"><a name="kanchor1392"></a><a name="H1"></a>Add a One-Time Vendor/Owner Bill</h1>
+                                                        <h1 id="AddaOneTimeVendorOwnerBill" data-magellan-target="AddaOneTimeVendorOwnerBill"><a name="aanchor1443"></a>
+                                                            <a name="kanchor1388"></a><a name="H1"></a>Add a One-Time Vendor/Owner Bill</h1>
                                                         <p><span class="mc-variable Products.RM variable">Rent Manager</span> allows you to track and pay bills received from vendors who have invoiced you for services. Alternatively, if an owner paid expenses that are normally covered by their contract with the fee-based management company, you can add that bill from the owner to <span class="mc-variable Products.RM variable">Rent Manager</span> to track the financials and to pay the bill to reimburse the owner.</p>
                                                         <div class="info">
                                                             <p class="label1">More Information</p>
@@ -52,7 +53,7 @@
                                                             <p>For more information, refer to <a href="Users-Control-Access.html" class="MCXref xref">Control User Access</a>.</p>
                                                         </div>
                                                         <p>
-                                                            <img src="../../../assets/Resources/Images/PNGs/Bill-Add-2024.png" class="lightbox" alt="The Bill page displays example information when creating a vendor bill." />
+                                                            <img src="../../../assets/Resources/Images/PNGs/add-bill-vendor.png" class="lightbox" alt="The Bill page displays example information when creating a vendor bill." />
                                                         </p>
                                                         <div class="info">
                                                             <p class="label1">More Information</p>
@@ -113,6 +114,10 @@
                                                                             <td class="TableStyle-Standard-BodyD-Column1-Body1">
                                                                                 <p>The amount of time given before the bill is considered due. The bill term determines the bill's <span class="Field">Due Date</span> based on the entered <span class="Field">Bill Date</span>.</p>
                                                                                 <p>For example, a bill term of <span class="Input">Immediately</span> would set both fields to the same date, while <span class="Input">NET 15</span> would set the due date for fifteen days after the bill date. The options available depend on the bill terms that are created in your <span class="mc-variable Products.RM variable">Rent Manager</span> database. For more information, refer to <a href="../CSH/Bills-Terms.html" class="MCXref xref">Bill Terms (Page)</a>.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>In the <span class="Field">Default Terms</span> field in system preferences, define a default bill term (e.g., <span class="Field">1st of month</span>, <span class="Field">Immediately</span>, <span class="Field">NET 15</span>, etc.) that automatically populates in this field once the vendor has been selected. For more information, refer to <a href="System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                                </div>
                                                                             </td>
                                                                         </tr>
                                                                         <tr class="TableStyle-Standard-Body-Body1">
@@ -129,6 +134,10 @@
                                                                             </td>
                                                                             <td class="TableStyle-Standard-BodyD-Column1-Body1">
                                                                                 <p>If applicable, the bill's reference number or invoice number.</p>
+                                                                                <div class="prefs">
+                                                                                    <p class="label1">Related Preferences</p>
+                                                                                    <p>To have <span class="mc-variable Products.RM variable">Rent Manager</span> check for any existing bills with duplicate invoice numbers and, if found, either warn or prevent the user from creating the bill, select <span class="Field">Check for duplicate reference number on bills</span> in system preferences. For more information, refer to <a href="System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                                </div>
                                                                             </td>
                                                                         </tr>
                                                                         <tr class="TableStyle-Standard-Body-Body1">
@@ -310,11 +319,11 @@
                                                                                         </p>
                                                                                     </td>
                                                                                     <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                        <p>A digital check that is delivered to the payee via email, at which point the payee can retrieve and print the check.</p>
                                                                                         <div class="prefs">
                                                                                             <p class="label1">Related Preferences</p>
                                                                                             <p>This option displays only if <span class="Field">Enable <span class="mc-variable Integrations.Product-eChecks variable">eChecks</span></span> is checked in the <span class="Section"><span class="mc-variable Integrations.Product-eChecks variable">eChecks</span></span> section of system preferences <span class="Stress">and</span> you have an <span class="mc-variable Integrations.Product-eChecks variable">eChecks</span> account set up. For more information, refer to <a href="System-Preferences/eChecks.html" class="MCXref xref">eChecks (System Preferences)</a>.</p>
                                                                                         </div>
-                                                                                        <p>A digital check that is delivered to the payee via email, at which point the payee can retrieve and print the check.</p>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
@@ -462,6 +471,10 @@
                                                         </table>
                                                         <h2 id="Step4SavetheBill" data-magellan-target="Step4SavetheBill"><a name="H2_4"></a>Step 4: Save the Bill</h2>
                                                         <p>Once you have established your line items, click <span class="BigButtons">Save and Close</span> to complete the bill creation process and close the pop-up. Alternatively, click <span class="BigButtons">Save and New</span> to finish adding the bill and refresh the pop-up to add another bill.<br /></p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>Bills can be created for vendor(s) with expired insurance if <span class="Field">Ignore expired vendor insurance when adding bills</span> is checked, and for vendor(s) with expired workers' compensation if <span class="Field">Ignore expired vendor workers comp when adding bills</span> is checked in system preferences. For more information, refer to <a href="System-Preferences/Checks-Bills-General.html" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                        </div>
                                                     
 </main>
 </body>

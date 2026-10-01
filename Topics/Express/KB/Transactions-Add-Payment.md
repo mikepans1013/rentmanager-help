@@ -55,29 +55,17 @@ To account for the many reasons you need to handle payments in your business, Re
 
  The date the tenant or prospect is making the payment.
 
- Reference #
+ Reference
 
- The following forms of payment to describe the transaction are available to select.
+ The payment method of this payment. Select a payment method, such as Cash , MO (money order), or CC (credit card), or enter another method such as a check number or ACH .
+
+ Related Preferences
+
+ You can customize the list of available payment methods in system preferences. For more information, refer to Payment Options (System Preferences) .
 
  More Information
 
  If, in the Payment Summary section, the Process via ePay option is selected, this field displays ePay and cannot be edited.
-
- Cash
-
- Record a CashPay payment.
-
- MO
-
- Record a money order payment.
-
- CC
-
- Record a credit card payment.
-
- Check
-
- Manually type the check number into the Reference # field to record a check payment.
 
  Amount
 
@@ -107,7 +95,11 @@ To account for the many reasons you need to handle payments in your business, Re
 
  Check to process the payment as an ePay payment. This option is available only if the account's associated property is set up for ePay . For more information, refer to Set Up ePay for Tenants and Prospects .
 
- When this option is checked, the Reference # field is automatically updated to ePay and cannot be edited.
+ When this option is checked, the Reference field is automatically updated to ePay and cannot be edited.
+
+ Related Preferences
+
+ You can edit the ePay settings for tenants, such as specifying default ePay bank accounts, set warning limits for ePay transactions, and establish platform fees for tenant and prospect ePay transactions, in system preferences. For more information, refer to Tenant ePay (System Preferences) .
 
  Payment Notes
 
@@ -133,7 +125,7 @@ To account for the many reasons you need to handle payments in your business, Re
 
  If the amount of the payment exceeds the total Amount Due , the exceeded amount displays. This field displays only when making a payment for a positive amount. The overpaid amount can then be applied as prepay allocations in the Prepay Allocations pop-up or left to be applied as a credit at a later time.
 
- Overpayment = Amount - Amount Due
+ Overpayment = Amount – Amount Due
 
  -
  Click Add Payment .
@@ -175,29 +167,17 @@ The payment is recorded for the prospect or tenant.
 
  The date the tenant or prospect is making the payment.
 
- Reference #
+ Reference
 
- The following forms of payment to describe the transaction are available to select.
+ The payment method of this payment. Select a payment method, such as Cash , MO (money order), or CC (credit card), or enter another method such as a check number or ACH .
+
+ Related Preferences
+
+ You can customize the list of available payment methods in system preferences. For more information, refer to Payment Options (System Preferences) .
 
  More Information
 
  If, in the Payment Summary section, the Process via ePay option is selected, this field displays ePay and cannot be edited.
-
- Cash
-
- Record a CashPay payment.
-
- MO
-
- Record a money order payment.
-
- CC
-
- Record a credit card payment.
-
- Check
-
- Manually type the check number into the Reference # field to record a check payment.
 
  Amount
 
@@ -208,7 +188,7 @@ The payment is recorded for the prospect or tenant.
  A brief comment about this payment, such as how it was applied. Payment memos display in the Comment column of the prospect or tenant's View Transactions pop-up.
 
  -
- In the Open Charges tile, check the box in the Pay?  column header to automatically apply the payment toward each charge that can be covered by the entered Amount , starting with the oldest.
+ In the Open Charges tile, check the box in the Pay? column header to automatically apply the payment toward each charge that can be covered by the entered Amount , starting with the oldest.
 
  -
  Adjust the Current Payment amount for each charge so that the payment is applied as desired.
@@ -227,7 +207,11 @@ The payment is recorded for the prospect or tenant.
 
  Check to process the payment as an ePay payment. This option is available only if the account's associated property is set up for ePay . For more information, refer to Tenant ePay Settings (Pop-Up) .
 
- When this option is checked, the Reference # field is automatically updated to ePay and cannot be edited.
+ When this option is checked, the Reference field is automatically updated to ePay and cannot be edited.
+
+ Related Preferences
+
+ You can edit the ePay settings for tenants, such as specifying default ePay bank accounts, set warning limits for ePay transactions, and establish platform fees for tenant and prospect ePay transactions, in system preferences. For more information, refer to Tenant ePay (System Preferences) .
 
  Payment Notes
 

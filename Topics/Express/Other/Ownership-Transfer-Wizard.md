@@ -123,9 +123,7 @@ If the new property has more than one owner, click   Add Ownership to add addit
  Column
 
  Properties/Units
-
  Management fee setup
-
  Add
 
  Recurring Charges/Market Rent

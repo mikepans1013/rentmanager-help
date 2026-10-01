@@ -28,6 +28,10 @@ Purchase orders (POs) are used to request permission to purchase items, prevent 
 
  For more information, refer to Control User Access .
 
+ Related Preferences
+
+ To create a bill linked to the PO without needing approval, check Allow to create a linked Bill without an approved P.O. in system preferences. For more information, refer to P.O./Inventory (System Preferences) .
+
  To link a PO and a bill, do the following:
 
  -

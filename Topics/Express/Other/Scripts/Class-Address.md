@@ -82,7 +82,7 @@ This class examines address information. The class can be preceded by the Owner,
 
  Warning
 
- The following address functions display only if they are entered on the Address Details pop-up (which is accessed from all accounts by clicking Details in the Address section):
+ The following address functions display only if they are entered on the Address Details pop-up (which is accessed from all accounts by clicking Details in the Address tile):
 
  - City
 

@@ -38,9 +38,53 @@ Rent Manager has partnered with Rentable to streamline the entire security depo
 
  Transfer Deposits
 
- Existing security deposits held for the property at the time of enabling Rentable remain standard deposits until the security deposit transfer process is completed. This process transfers the existing standard security deposits into Rentable via a guided experience through the Transfer Security Deposits wizard and contact with Rentable. To initiate the security deposit transfer, click Transfer Deposits and select the properties to transfer the associated security deposits to Rentable. After completing the steps in the wizard, Rentable will provide you with instructions on sending the security deposit funds in the real world. If you need assistance, contact Rentable by clicking Contact Rentable at the bottom left of the wizard.
+ Existing security deposits held for the property when Rentable is enabled remain standard deposits until they are transferred to Rentable. The Transfer Security Deposits wizard guides you through the required steps and provides instructions for coordinating the transfer with Rentable.
 
- After clicking Finish , the pop-up closes, and the Transfer Status column is updated to Needs Journal for properties included in the transfer. The Create Transfer Journal option displays in the Transfer Deposits drop-down list. After confirming with Rentable that they received the funds, you can create transfer journals to record the deposit transfers to Rentable in Rent Manager .
+ To initiate the security deposit transfer, do the following:
+
+ -
+ At the top right of the page, click Transfer Deposits . If any property listed has a Transfer Status of Create Journal , click the drop-down arrow next to Create Transfer Journal and select Transfer Deposits .
+
+ -
+ Select the properties to transfer the associated security deposits to Rentable. Then, at the bottom of the page, select Transfer Deposits .
+The Transfer Security Deposits wizard displays.
+
+ -
+ Complete the steps in the Transfer Security Deposits wizard.
+
+ More Information
+
+ After completing the steps in the wizard, Rentable provides you with instructions on sending the security deposit funds to your bank. If you need assistance, contact Rentable by clicking Contact Rentable at the bottom left of the wizard.
+
+ -
+ Click Submit Transfer to close the wizard and create the journal entries at a later time. Alternatively, to immediately create journal entries, click Submit Transfer & Create Journals to open the Create Transfer Journals pop-up.
+
+ -
+ Choose one of the following options depending on the status of your security deposit transfers with Rentable:
+
+ Option
+ Description
+
+ Submit Transfer
+
+ If you have not yet confirmed that Rentable has received the security deposit funds, select this option to complete the transfer and close the wizard. You can then create the journal entries at a later time.
+
+ When Rentable confirms it is time to initiate the transfer journal creation, at the top of the Rentable Security Deposit Management page, click Create Transfer Journal and proceed to the steps below.
+
+ Submit Transfer & Create Journals
+
+ If you have confirmed that Rentable has received the security deposit funds, select this option to proceed with creating the transfer journal entries.
+
+ -
+ Select the properties for which to create a transfer journal entry. Then, click Create Transfer Journal at the bottom of the page.
+The Create Transfer Journals pop-up displays.
+
+ -
+ To create line items in the journal for each unit's transferred security deposit balance, check Post Per Unit .
+
+ -
+ Click Create Journals .
+The security deposit transfer journals are recorded in Rent Manager .
 
  Column Descriptions
 
@@ -93,9 +137,9 @@ Rent Manager has partnered with Rentable to streamline the entire security depo
 
  The following statuses may display:
 
- Needs Journal
+ Create Journal
 
- The security deposit transfer to Rentable has been completed and its corresponding journal entry must be recorded in Rent Manager .
+ The security deposit transfer to Rentable has been completed and its corresponding journal entry must be recorded in Rent Manager . You can click this option to initiate the journal creation process for the property once Rentable has confirmed they received the funds.
 
  Transfer completed on MM/DD/YYYY
 

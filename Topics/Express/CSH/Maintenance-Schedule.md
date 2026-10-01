@@ -47,7 +47,7 @@ The Maintenance Scheduling feature gives you the ability to turn your Rent Manag
 
  Use the arrows to change the date of the schedule, or click to select a date from the calendar.
 
- Issue Card Row Actions
+ Card Actions
 
  Each scheduled issue displays with its own card. You can drag and drop these cards to move them to a different time block or assign them to a new user. Additional actions are available from an issue card's menu. Each action is described below.
 
@@ -56,7 +56,7 @@ The Maintenance Scheduling feature gives you the ability to turn your Rent Manag
 
  Confirm
 
- Verify the Scheduled Date and time block for the issue and send a confirmation email to the tenant. This option displays only for issues that have not yet been confirmed.
+ Verify the Scheduled Date and time block for the issue. This option displays only for issues that have not yet been confirmed.
 
  Assign To
 

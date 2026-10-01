@@ -22,8 +22,8 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/Other/Reports/All-Receipts-Deposited.htm">https://rmxhelp.rentmanager.com/Topics/Express/Other/Reports/All-Receipts-Deposited.htm</a></p>
 
-                                                        <h1 id="AllReceiptsDepositedReport" data-magellan-target="AllReceiptsDepositedReport"><a name="aanchor294"></a>
-                                                            <a name="kanchor492"></a><a name="H1"></a>All Receipts Deposited (Report)</h1>
+                                                        <h1 id="AllReceiptsDepositedReport" data-magellan-target="AllReceiptsDepositedReport"><a name="aanchor506"></a>
+                                                            <a name="kanchor490"></a><a name="H1"></a>All Receipts Deposited (Report)</h1>
                                                         <p>The <span class="Report">All Receipts Deposited</span> report examines all deposits and their included payments for multiple banks and properties entered in <span class="mc-variable Products.RM variable">Rent Manager</span> within a specified date range. This report is helpful in auditing all receipts that have been deposited in <span class="mc-variable Products.RM variable">Rent Manager</span> to ensure none are missing compared to real world bank statements. Additionally, it can be useful for having a summarized overview of your deposits prior to posting management fees.</p>
                                                         <div class="info">
                                                             <p class="label1">More Information</p>
@@ -70,12 +70,12 @@
                                                             <p>Reports may look different depending on whether or not the <span class="Field">Use modernized report style</span> system preference is enabled. For more information, refer to <a href="../System-Preferences/Report-Options-General.html" class="MCXref xref">General Report Options (System Preferences)</a>.</p>
                                                         </div>
                                                         <p>
-                                                            <img src="../../../../assets/Resources/Images/PNGs/Report-All-Receipts-Deposited-SG-2024.png" class="lightbox" alt="The All Receipts Deposited report displays a detailed breakdown of all deposits made during the date range." />
+                                                            <img src="../../../../assets/Resources/Images/PNGs/reports-all-receipts-deposited-output.png" class="lightbox" alt="The All Receipts Deposited report displays a detailed breakdown of all deposits made during the date range." />
                                                         </p>
                                                         <h2 id="ReportOptions" data-magellan-target="ReportOptions"><a name="H2_1"></a>Report Options</h2>
                                                         <p>The report options described below determine what data displays in the report.</p>
                                                         <p>
-                                                            <img src="../../../../assets/Resources/Images/PNGs/Report-All-Receipts-Deposited-ROs-SG-2024.png" alt="The report options allow you to select properties, bank accounts, date range, and sorting method." class="lightbox" />
+                                                            <img src="../../../../assets/Resources/Images/PNGs/reports-all-receipts-deposited-options.png" alt="The report options allow you to select properties, bank accounts, date range, and sorting method." class="lightbox" />
                                                         </p>
                                                         <h3>Properties to Include</h3>
                                                         <p>Select each property or a property <span class="Field">Group</span> to be included in the report. </p>
@@ -141,6 +141,14 @@
                                                             <tbody>
                                                                 <tr class="TableStyle-Standard-Body-Body1">
                                                                     <td class="TableStyle-Standard-BodyE-Column1-Body1">
+                                                                        <p>Account Number</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Standard-BodyD-Column1-Body1">
+                                                                        <p>Payments under each deposit are sorted numerically by the tenant's system-generated <span class="Column">Account Number</span> in ascending order (lowest to highest).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Standard-Body-Body1">
+                                                                    <td class="TableStyle-Standard-BodyE-Column1-Body1">
                                                                         <p>Date</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
@@ -149,26 +157,26 @@
                                                                 </tr>
                                                                 <tr class="TableStyle-Standard-Body-Body1">
                                                                     <td class="TableStyle-Standard-BodyE-Column1-Body1">
-                                                                        <p>Unit</p>
+                                                                        <p>Last Name</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p>Payments under each deposit are sorted alphanumerically by <span class="Column">Unit</span> name.</p>
+                                                                        <p>Payments under each deposit are sorted alphabetically by the tenant's <span class="Column">Last Name</span>.</p>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="TableStyle-Standard-Body-Body1">
                                                                     <td class="TableStyle-Standard-BodyE-Column1-Body1">
-                                                                        <p>Account Number</p>
+                                                                        <p>Reference</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p>Payments under each deposit are sorted numerically by the tenant's system-generated <span class="Column">Account Number</span> in ascending order (lowest to highest).</p>
+                                                                        <p>Payments under each deposit are sorted alphanumerically by <span class="Field">Reference</span> value.</p>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="TableStyle-Standard-Body-Body1">
                                                                     <td class="TableStyle-Standard-BodyB-Column1-Body1">
-                                                                        <p>Last Name</p>
+                                                                        <p>Unit</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyA-Column1-Body1">
-                                                                        <p>Payments under each deposit are sorted alphabetically by the tenant's <span class="Column">Last Name</span>.</p>
+                                                                        <p>Payments under each deposit are sorted alphanumerically by <span class="Column">Unit</span> name.</p>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -342,6 +350,16 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
+                                                        <h3><a name="H3_6"></a>Report Totals Subreport</h3>
+                                                        <p>The <span class="Section">Report Totals</span> subreport provides a breakdown of the payments included in the deposit(s).</p>
+                                                        <p>The subreport lists the number of payments that were made through <span class="Column">Cash</span>, <span class="Column">Checks</span>, <span class="Column">Money Orders</span>, <span class="Field">Credit Card</span>, <span class="Column">Other Items</span> or any user-added payment methods, and the total amount included in the deposit(s) for each payment method. The final row provides the total number of payments included in the deposit, and the sum total of all the payments.</p>
+                                                        <div class="prefs">
+                                                            <p class="label1">Related Preferences</p>
+                                                            <p>You can add new payment methods and/or determine which are available for selection during payment entry in system preferences. For more information, refer to <a href="../System-Preferences/General-Options-Payment-Options.html" class="MCXref xref">Payment Options (System Preferences)</a>.</p>
+                                                        </div>
+                                                        <p>
+                                                            <img src="../../../../assets/Resources/Images/PNGs/all-receipts-deposited-report-totals-subreport.png" alt="The Report Totals subreport displays a breakdown of the payments included in the deposits." class="lightbox" />
+                                                        </p>
                                                     
 </main>
 </body>

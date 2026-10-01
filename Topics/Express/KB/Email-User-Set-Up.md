@@ -2,100 +2,157 @@
 
 Source: https://rmxhelp.rentmanager.com/Topics/Express/KB/Email-User-Set-Up.htm
 
-If you send emails from Rent Manager using the email setup in system preferences, you can override those settings to display your own email address in personal preferences. You can either set your email address as a mask that displays ahead of the system email address (email@rentmanager.com) or, when using an external server, connect to your email account to use it in place of the system email account. Both options display your correspondence as coming from you and forward replies to your email address.
+If you send emails from Rent Manager using the email setup in system preferences, you can override those settings to display your own email address in personal preferences. You can either set your email address as a mask that displays ahead of the system email address (email@rentmanager.com) or, when using an external server, connect to your email account to use it in place of the system email account. Both options display your correspondence as coming from you and forward replies to your email address. In addition, system preferences determine whether features like email reply tracking are used with your emails. Email reply tracking affects if replies to your emails pull into Rent Manager .
 
- The email setup in system preferences determines the email server users must use when adding an email account to personal preferences. For example, if your business's email account uses Gmail, the email account you add in personal preferences must also be through Gmail. In addition, system preferences determine whether features like email reply tracking are used with your emails. Email reply tracking affects if replies to your emails go back to your email account or pull into Rent Manager .
+ Step 1: Customize System Email Account
 
- If your email provider is connected in system preferences using Modern Authentication, you can connect to your individual email account using that provider's connection method and entering your normal username and password for the account. Email providers that are connected through SMTP settings require more information and an app password to connect your individual email account.
+ In your personal preferences, you can determine the name and email address you want to display on emails sent from your Rent Manager account that is set up in system preferences.
 
- More Information
+ To customize your system email account and set up additional email account, go to   arrow_forward   Administration , then go to Preferences arrow_forward Personal Preferences arrow_forward Email Settings .
+The Personal Preferences: Email Settings page displays.
 
- The Override system default credentials option that allows users to set up their individual email accounts is available only if, in system preferences, Allow users to enter their credentials in Personal Preferences is checked.
+ System Email Connected with Rent Manager Default Server
 
- Likewise, system account details that display are entered in system preferences under Email Settings and can be edited only in system preferences. For more information, refer to Set Up Email and Email Reply Tracking .
+ If your system email account is connected to the Rent Manager default server in system preferences, in the Email Settings section, enter the information in the following fields. Then, click Save .
 
- Email Providers Connected Using Modern Authentication
+ Field
+ Description
 
- If you are connected to your email provider using Modern Authentication, you can go to your personal preferences, and, in the email settings, click the provider to follow their steps for connecting your account in Rent Manager .
+ From Email
 
- -
- Go to arrow_forward Administration , then go to Preferences arrow_forward Personal Preferences arrow_forward Email Settings .
-
- -
- In the Connect to an Email Account section, click on the provider to open a pop-up window that walks you through their authentication process.
-
- -
- Once you are done with the email provider's authentication process, click Save .
-You can now send emails from Rent Manager using your email account.
-
- Email Providers Connected Using SMTP
-
- To set up your email account in your personal preferences through SMTP, you must generate an app password in your email client for Rent Manager . Then, enter your email account login using the app password in your personal preferences. The steps below explain the process for obtaining an app password and where to enter your email account information.
-
- Warning
-
- To make changes in Rent Manager under system preferences, obtain an app password for your email account, or to troubleshoot issues related to your email account, you may need assistance from your IT representative or administrator.
-
- Step 1: Generate an App Password from Your Email Client
-
- To allow Rent Manager to communicate with your email client, you must generate an app password for Rent Manager . An app password is a unique account password that provides a secure way to give outbound email access without requiring a personal password.
-
- The steps to generate an app password vary depending on your email provider and, in some cases, your account type. Below are popular email clients with links to provider-created articles for generating app passwords.
-
- Email Client
- Resource
-
- Gmail
-
- https://support.google.com/accounts/answer/185833
-
- GoDaddy
-
- https://pk.godaddy.com/help/create-app-passwords-40980
-
- Outlook 365
-
- https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944
-
- Yahoo Mail
-
- https://help.yahoo.com/kb/new-mail-for-desktop/generate-manage-third-party-passwords-sln15241.html
-
- Step 2: Update Personal Email Settings in Rent Manager
-
- In your personal preferences, you can enter your email account information to use your email address when you send emails. An app password and your email account credentials are required to complete this step. These settings also determine what information you want to display on your emails.
-
- To set up or update your personal email settings, do the following:
-
- -
- Go to arrow_forward Administration , then go to Preferences arrow_forward Personal Preferences arrow_forward Email Settings .
-
- -
- In the Email Credentials section, and in the Connected to system account field, confirm the correct provider SMTP server displays.
-
- -
- Check Override system default credentials .
-
- -
- In the Username field, enter the username for the email account. This is typically the email address.
-
- -
- In the Password field, enter the app password generated by your email client. The app password must be for the same email account as the Username field.
-
- -
- In the Email Options section, enter the Default From Name you want displayed on your emails.
-
- -
- In the Default From Email field, enter the email address you want displayed on your emails.
+ The email address that displays on all emails sent from your Rent Manager account. If you are connected to Microsoft or Google with Modern Authentication, this option is read-only.
 
  More Information
 
- The Default From Name and Default From Email fields display on your emails, like in the example below. The email address displayed may differ based on your setup in system preferences for email settings, but it still directs replies to your email address.
+ Changing the displayed email address is referred to as masking the email. Masked emails still send from the email account established in system preferences or in the user-specific settings described below, but display the email address entered in this field to recipients and reroutes replies to that email. On opened emails, the actual email address is visible after the masking address.
 
- -
- Click Save .
-You can now send emails from Rent Manager using your email account.
+ You can override the masked from address on individual emails you send by adjusting the From Address field at the top to enter or change the email address as necessary. For more information, refer to Send an Email .
+
+ From Name
+
+ The name that populates in the From Name field on emails sent from your Rent Manager system account.
+
+ System Email Connected with Modern Authentication
+
+ If your system email account is connected to a Google email, in the From Name field, enter the name you want displayed on emails sent from your Rent Manager system account. Then, click Save . This field is not available if your system email account is connected to a Microsoft email.
+
+ System Email Connected with SMTP
+
+ If your system email account is connected to an external email provider using Simple Mail Transfer Protocol (SMTP), customize your system email account by entering information in the following fields. Then, click Save .
+
+ Field
+ Description
+
+ From Email
+
+ The email address that displays on all emails sent from your Rent Manager account.
+
+ More Information
+
+ Changing the displayed email address is referred to as masking the email. Masked emails still send from the email account established in system preferences or in the user-specific settings described below, but display the email address entered in this field to recipients and reroutes replies to that email. On opened emails, the actual email address is visible after the masking address.
+
+ You can override the masked from address on individual emails you send by adjusting the From Address field at the top to enter or change the email address as necessary. For more information, refer to Send an Email .
+
+ From Name
+
+ The name that populates in the From Name field on emails sent from your Rent Manager system account.
+
+ Override system default credentials
+
+ Select to use enable the Username and Password fields, allowing you to enter your user-specific email credentials for your company's SMTP email provider, then enter your credentials in the available fields below.
+
+ Related Preferences
+
+ This setting is available only if, in system preferences, you have established a connection using Connect to SMTP Provider and the setting Allow users to override system default credentials in Personal Preferences is enabled. For more information, refer to Email Settings (System Preferences) .
+
+ Username
+
+ The username for your user-specific email account associated with your company's SMTP email provider. This is typically the email address.
+
+ Password
+
+ The app password generated by your email client for the email account entered in the Username field. An app password is a unique account password that provides a secure way to give outbound email access without requiring a personal password.
+
+ More Information
+
+ Depending on your email client and its settings, you may need assistance from your IT representative or administrator to generate an app password.
+
+ Test Connection Email
+
+ The email address to use as the recipient when testing your SMTP connection. Click Test Connection to test your SMTP connection. If successful, the test email can be seen in the inbox of the email address entered in this field.
+
+ Step 2: Set Up an Additional Email Connection
+
+ You can set up an additional email account in Rent Manager in your personal preferences in the Other Email Account section. The additional email can be set up with a provider that uses Modern Authentication (e.g., Google or Microsoft), or with an external provider through SMTP.
+
+ Related Preferences
+
+ The option to add an additional email account is available only if, in system preferences, Allow users to add an email account in Personal Preferences is checked. For more information, refer to Email Settings (System Preferences) .
+
+ Set Up Email with Modern Authentication
+
+ To add email account in your personal preferences with a provider that uses Modern Authentication, in the Other Email Account section, click either the Microsoft or Google provider. Then, complete the email provider's authentication process in the pop-up window that displays. After completing the authentication, click Save .
+
+ Set Up Email with SMTP Provider
+
+ To add an email account in your personal preferences through SMTP, in the Other Email Account section, click Connect to SMTP Provider . Enter information in the following fields that display in the SMTP Information pop-up. Then, click Save .
+
+ Field
+
+ Description
+
+ Mail Server (SMTP)
+
+ The server used by your email provider to send and receive email correspondence.
+
+ More Information
+
+ Your email provider may be different from your email client. For example, you may use GoDaddy as your email provider, but use Outlook for your email client.
+
+ Mail Port (SMTP)
+
+ The port number for the external server entered in the Mail Server (SMTP) field. The standard mail port for SMTP is 587 . The port defines a direction for the data being transferred.
+
+ More Information
+
+ In the rare occurrence that port 587 does not work, try using mail port 2525 . You may need assistance from your IT representative or administrator to test your port connection using the telnet command in the Windows or Mac operating systems.
+
+ Enable Encryption (via STARTTLS)
+
+ A command that tells the receiving end that the email data needs to be encrypted and checks for encryption support. If supported, the email is sent and the receiving end handles the encryption.
+
+ Enable SMTP Authentication
+
+ The system default email account used for emails from Rent Manager when using an external provider.
+
+ Username
+
+ The username for the email account to use as the system default email account. This is typically the email address.
+
+ Password
+
+ The app password generated by your email client for the email account entered in the Username field. An app password is a unique account password that provides a secure way to give outbound email access without requiring a personal password.
+
+ More Information
+
+ Depending on your email client and its settings, you may need assistance from your IT representative or administrator to generate an app password.
+
+ Test Connection Email
+
+ The email address used as the recipient when testing your SMTP connection. Click Test Connection to test your SMTP connection. If successful, a test email is sent to the inbox of the email address entered in this field.
+
+ Use Proxy from internet access in Rent Manager
+
+ This is available for email accounts or servers that require third-party connections to be passed through a proxy server instead of connecting to them directly.
+
+ Proxy Server
+
+ The name or IP address used to connect to the proxy server provided by your IT representative or administrator.
+
+ Proxy Port
+
+ The port number for the server entered in the Proxy Server field.
 
  Next Steps
 
- At this point, you can start sending emails using your email account in Rent Manager . Go to arrow_forward Communication arrow_forward Email arrow_forward Email Center to view received emails or send additional correspondence.
+ At this point, you can start sending emails using your email account in Rent Manager . Go to   arrow_forward Communication arrow_forward Email arrow_forward Email Center to view received emails or send additional correspondence.

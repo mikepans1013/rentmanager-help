@@ -217,7 +217,7 @@
                                                     </div>
                                                 </div>
                                                 <div role="main" id="mc-main-content">
-                                                    <h1><a name="aanchor201"></a>
+                                                    <h1><a name="aanchor346"></a>
                                                         <MadCap:concept term="Action" /><a name="kanchor336"></a><a name="H1"></a>Write a Tenant/Prospect Check</h1>
                                                     <p>Entering checks into <span class="mc-variable Products.RM variable">Rent Manager</span> lets you track when they were written, which properties were expensed, and for how much. Tenant checks could potentially be written to refund a tenant's security deposit or overpayment. Prospect checks could be written to refund a fee or other upfront expense.</p>
                                                     <p>Checks can only be written if the tenant/prospect account has open credits. If nothing populates on the bill during creation, you can go back to the tenant or prospect account to clear allocations from the credit if needed. For more information, refer to <a href="Transactions-Clear-Allocations.htm" class="MCXref xref">Clear Transaction Allocations</a>.</p>
@@ -258,7 +258,7 @@
                                                         <p>For more information, refer to <a href="../Other/Users-Control-Access.htm" class="MCXref xref">Control User Access</a>.</p>
                                                     </div>
                                                     <p>
-                                                        <img src="../../../Resources/Images/PNGs/Write-Tenant-Prospect-Check-JP-2025.png" alt="The Write Check pop-up displays a check for a tenant." class="lightbox" />
+                                                        <img src="../../../Resources/Images/PNGs/write-check-tenant-prospect.png" alt="The Write Check pop-up displays a check for a tenant." class="lightbox" />
                                                     </p>
                                                     <p>To write a new check for a tenant or prospect in <span class="mc-variable Products.RM variable">Rent Manager</span>, do the following:</p>
                                                     <ol>
@@ -268,7 +268,7 @@
                                                         <li value="2">
                                                             <p>In the tile for the check's general information, enter the information into the available fields described below.</p>
                                                             <p>
-                                                                <img src="../../../Resources/Images/PNGs/Check-General-Section-Tenant-Prospect-JP-25.png" alt="The first tile of the Write Check pop-up for general check information." class="lightbox" />
+                                                                <img src="../../../Resources/Images/PNGs/write-check-general-section-tenant-prospect.png" alt="The first tile of the Write Check pop-up for general check information." class="lightbox" />
                                                             </p>
                                                             <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                                                 <col class="TableStyle-Standard-Column-Column1" />
@@ -288,7 +288,34 @@
                                                                             <p>The bank account from which funds are drawn. After a bank is selected, its current <span class="Field">Balance</span> displays.</p>
                                                                             <div class="privs">
                                                                                 <p class="label1">Related Privileges</p>
-                                                                                <p>To write checks that are not drawn from the <span class="Field">Default Bank</span> specified on the <span class="Window">Property</span> details page, the <span class="Field">Write checks from banks that are not default</span> privilege must be enabled. For more information, refer to <a href="../Other/Privileges/Banks-Checks.htm" class="MCXref xref">Banks/Checks Privilege Group</a>.</p>
+                                                                                <p>To have <span class="mc-variable Products.RM variable">Rent Manager</span> display a pop-up warning when a check or bill uses a bank account that is not the selected property's default bank, check <span class="Field">Warn if bank account used on checks/bills is not the property default</span> in system preferences.</p>
+                                                                                <p>In order to write checks that are not drawn from the <span class="Field">Default Bank</span> specified on the property's details page, the following privilege is required:</p>
+                                                                                <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <col class="TableStyle-Standard-Column-Column1" />
+                                                                                    <thead>
+                                                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Group</th>
+                                                                                            <th class="TableStyle-Standard-HeadE-Column1-Header1">Privilege</th>
+                                                                                            <th class="TableStyle-Standard-HeadD-Column1-Header1">Column</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr class="TableStyle-Standard-Body-Body1">
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Banks/Checks</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyB-Column1-Body1">
+                                                                                                <p>Write checks from banks that are not default</p>
+                                                                                            </td>
+                                                                                            <td class="TableStyle-Standard-BodyA-Column1-Body1">
+                                                                                                <p>Enabled</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <p>For more information, refer to <a href="../Other/Privileges/Banks-Checks.htm" class="MCXref xref">Banks/Checks Privilege Group</a> and <a href="../Other/System-Preferences/Checks-Bills-General.htm" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
                                                                             </div>
                                                                         </td>
                                                                     </tr>
@@ -309,7 +336,7 @@
                                                                             <div class="prefs">
                                                                                 <p class="label1">Related Preferences</p>
                                                                                 <p>In the check numbers system preferences, enable <span class="Field">Next Check Number</span>  so each new check from the selected bank account defaults to the next number.</p>
-                                                                                <p>In the <span class="Section">General</span> section of checks/bills system preferences, you can also enable the option <span class="Field">Enforce sequential check numbers</span>.If <span class="Field">Enforce sequential check numbers</span> is enabled but the user <span class="Stress">does not</span> have the <span class="Field">Override sequential check number enforcement</span> option enabled, the <span class="Field">No.</span> field is unavailable. For more information, refer to <a href="../Other/System-Preferences/Checks-Bills-Check-Numbers.htm" class="MCXref xref">Check Numbers (System Preferences)</a> and <a href="../Other/System-Preferences/Checks-Bills-General.htm" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
+                                                                                <p>In the <span class="Section">General</span> section of checks/bills system preferences, you can also enable the option <span class="Field">Enforce sequential check numbers</span>. If <span class="Field">Enforce sequential check numbers</span> is enabled but the user <span class="Stress">does not</span> have the <span class="Field">Override sequential check number enforcement</span> option enabled, the <span class="Field">No.</span> field is unavailable. For more information, refer to <a href="../Other/System-Preferences/Checks-Bills-Check-Numbers.htm" class="MCXref xref">Check Numbers (System Preferences)</a> and <a href="../Other/System-Preferences/Checks-Bills-General.htm" class="MCXref xref">Checks/Bills General (System Preferences)</a>.</p>
                                                                             </div>
                                                                         </td>
                                                                     </tr>
@@ -355,7 +382,7 @@
                                                         <li value="3">
                                                             <p>In the check's summary tile, enter or select the information in the available fields described below.</p>
                                                             <p>
-                                                                <img src="../../../Resources/Images/PNGs/Check-Attachment-Tenant-Prospect-JP-25.png" alt="The second tile of the Write Check pop-up for summary information." />
+                                                                <img src="../../../Resources/Images/PNGs/check-details-attachments.png" alt="The second tile of the Write Check pop-up for summary information." />
                                                             </p>
                                                             <table style="width: 100%;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                                                 <col class="TableStyle-Standard-Column-Column1" />
@@ -505,7 +532,7 @@
                 <p>8:00 a.m.-7:00 p.m. (EST)</p>
                 <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
                 </p>
-                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                <p><span class="mc-variable LCS.Support-Email variable">support@rentmanager.com</span>
                 </p>
             </div>
             <div>
@@ -520,6 +547,6 @@
                 </p>
             </div>
         </div>
-        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260750</span>.<span class="mc-variable Build.Build-Number variable">2.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">August 27, 2026</span>.</p>
     </div>
 </html>

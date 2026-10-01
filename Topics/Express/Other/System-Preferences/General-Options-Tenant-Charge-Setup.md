@@ -38,7 +38,7 @@ These system preferences allow you to automatically generate both recurring and 
  To add a default recurring charge to the list, do the following:
 
  -
- Click Ton Add Recurring Charge to add a new row.
+ Click Add Recurring Charge to add a new row.
 The Recurring Charge Setup pop-up displays.
 
  -

@@ -19,15 +19,11 @@ A ratio utility billing system (RUBS)-enabled master meter bill can be created, 
  Enabled
 
  Payables
-
  Bills
-
  View
 
  Utilities
-
  Post RUBS Charges
-
  Enabled
 
  For more information, refer to Control User Access .

@@ -155,9 +155,13 @@ Once checked, the amount in the tenant's Balance column populates in the Payment
 
  The name of the person, organization, or program providing the subsidy payment.
 
- Reference #
+ Reference
 
- The payment method of this subsidy payment. Select Cash , MO (money order), CC (credit card), or enter another method such as a check number ACH .
+ The payment method of this subsidy payment. Select a payment method, such as Cash , MO (money order), or CC (credit card), or enter another method such as a check number or ACH.
+
+ Related Preferences
+
+ You can customize the list of available payment methods in in system preferences. For more information, refer to Payment Options (System Preferences) .
 
  -
  Click Save .

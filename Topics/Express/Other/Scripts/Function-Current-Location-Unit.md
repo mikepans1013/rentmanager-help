@@ -31,9 +31,9 @@ This function displays the unit to which the entity is currently linked.
 
  Specify the date for which to retrieve the unit information. If no date is specified, today's date is used by default.
 
- CurrentLocationUnit(" 7/21/2026 ")
+ CurrentLocationUnit(" 8/27/2026 ")
 
- Displays the associated unit as of 7/21/2026 .
+ Displays the associated unit as of 8/27/2026 .
 
  Script Examples
 

@@ -104,6 +104,10 @@ Future ePay batch payments are processed using the selected options.
 
  To use ePay batches or recurring ePay in Rent Manager , you need to acquire bank account or card information from tenants and prospects to use with ePay . Once you have that information, establish ePay settings for their accounts by doing the following:
 
+ Related Preferences
+
+ Determine the default bank account for processing tenant and prospect ePay transactions and set a warning limit to display when receiving a tenant ePay payment equal to or beyond the specified threshold in the System Defaults section in system preferences. For more information, refer to Tenant ePay (System Preferences) .
+
  -
  Navigate to the desired entity whose ePay information you need to enter.
 
@@ -380,7 +384,7 @@ Tenants (and prospects if Exclude from prospects is not selected) can make ePay 
 
  Related Preferences
 
- This option is available only if the system preference option to Have Zego manage platform fees is enabled. For more information, refer to General ePay (System Preferences) .
+ This option is available only if the system preference option to Have Zego manage platform fees is enabled. In system preferences, you can determine how platform fees are charged on tenant and prospect ePay transactions in Rent Manager . For more information, refer to General ePay (System Preferences) and Tenant ePay (System Preferences) .
 
  ACH platform fee amount
 

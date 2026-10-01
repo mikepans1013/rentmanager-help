@@ -127,9 +127,7 @@ The prospect account becomes a tenant account, and the lease information is adde
  Column
 
  Tenants/Prospects
-
  Change account status to prospect
-
  Enabled
 
  For more information, refer to Control User Access .

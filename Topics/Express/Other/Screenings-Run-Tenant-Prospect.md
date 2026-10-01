@@ -94,6 +94,10 @@ The prospect or tenant's details page displays.
  -
  In the Address section, select one of the available prospect, tenant, or contact address types from the Fill From Address drop-down list or manually enter an address.
 
+ Related Preferences
+
+ You can determine whether the screening pulls the default or primary address associated with each contact in system preferences. For more information, refer to Screening Settings (System Preferences) .
+
  -
  In the Rental Information section's Monthly Rent field, the unit's active Market Rent amount populates automatically. Alternatively, enter the estimated rent charge for the unit they are being screened for.
 

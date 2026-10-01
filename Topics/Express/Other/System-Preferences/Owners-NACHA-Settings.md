@@ -26,10 +26,11 @@ Adjust this preference group to map a NACHA ODFI-enabled bank to a bank account 
  Go to arrow_forward Administration , then go to Preferences arrow_forward System Preferences arrow_forward Owners arrow_forward NACHA Settings .
 
  -
- Edit the settings as desired. Each setting is described below.
+ Edit the settings as desired. Each setting is described in the headings below.
 
  -
- Click Save to apply your changes.
+ Click Save .
+The system preference configuration is updated.
 
  Manage ODFI Banks
 
@@ -80,7 +81,7 @@ The Add NACHA ODFI Bank pop-up displays.
 
  Individual Identification #
 
- Enter the number that is used by the receiving bank to identify the sender (up to fifteen characters).
+ The account number assigned by the ODFI bank that the originator, such as the company using the NACHA file to make a payment, uses to identify the payment recipient, such as an owner. This number can be up to fifteen alphanumeric characters.
 
  Banks
 

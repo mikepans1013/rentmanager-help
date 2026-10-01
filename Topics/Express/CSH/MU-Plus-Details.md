@@ -16,7 +16,7 @@ Metered Utilities Plus (MU-Plus) meter types provide a customizable method for d
 
  For more information, refer to Control User Access .
 
- To view a Metered Utilities Plus meter type, go to   arrow_forward Services arrow_forward Metered Utilities arrow_forward Meter Types and select a meter with the MU Plus type from the list.
+ To view a Metered Utilities Plus meter type, go to arrow_forward Services arrow_forward Metered Utilities arrow_forward Meter Types and select a meter with the MU Plus type from the list.
 
  Meter Type Information
 
@@ -70,17 +70,9 @@ Metered Utilities Plus (MU-Plus) meter types provide a customizable method for d
  Field
  Description
 
- Per Day
-
- A indicates that the Minimum Charge amount is multiplied by the number of days in the meter billing period.
-
  Base Line (BL)
 
  The allotted amount the tenant can use for the specified utility.
-
- Minimum Charge
-
- The amount that is billed if the utility charge is zero or less than this amount.
 
  Base Rate (BR)
 
@@ -91,6 +83,14 @@ Metered Utilities Plus (MU-Plus) meter types provide a customizable method for d
  Excess Rate (XR)
 
  The value to be billed if the tenant uses more than the allotted amount established in Base Line (BL) .
+
+ Minimum Charge
+
+ The amount that is billed if the utility charge is zero or less than this amount.
+
+ Per Day
+
+ A indicates that the Minimum Charge amount is multiplied by the number of days in the meter billing period.
 
  More Information
 
@@ -126,7 +126,7 @@ Metered Utilities Plus (MU-Plus) meter types provide a customizable method for d
 
  An optional column that explains what the variable tracks.
 
- Low Income
+ Low Income
 
  The value of the variable for a Low Income type tenant.
 
@@ -167,17 +167,33 @@ For example, rounding to 0 rounds to the nearest whole number, and 2 rounds the 
 
  Always round the value down to the specified decimal place.
 
- Up
-
- Always round the value up to the specified decimal place.
-
  Nearest
 
  Round the value to the nearest specified decimal place. Values between 5-9 round up, and 1-4 round down.
 
+ Up
+
+ Always round the value up to the specified decimal place.
+
  Variable
 
  The result of the Calculation field is stored in this variable name. Once a variable is declared, it can be used in subsequent rows.
+
+ More Information
+
+ The following scripting rules are unique to the Calculations tile of Metered Utilities Plus (MU-Plus) .
+
+ -
+ Variables do not have dollar signs ( $ ) in front of them.
+
+ -
+ Variables are not case-sensitive.
+
+ -
+ Variables are contained between either single (') or double (") quotes, with the exception of Rate and RateBlend functions which are always contained between single quotes.
+
+ -
+ Scripting functions are entered without square brackets.
 
  Statements
 
@@ -185,20 +201,20 @@ For example, rounding to 0 rounds to the nearest whole number, and 2 rounds the 
 
  More Information
 
- Some states require this itemized breakdown including California, Nevada, Texas and Michigan.
+ Some states require this itemized breakdown, including California, Nevada, Texas, and Michigan.
 
- To add a statement, click   Add Item .
+ To add a statement, click Add Item .
 
  Field
  Description
 
+ Centered (Title)
+
+ The title for your tenant statement.
+
  Left Justified (Description)
 
  Descriptions of charge breakdowns included in the statement.
-
- Centered (Title)
-
- The title for your tenant statement here.
 
  Right Justified (Value)
 

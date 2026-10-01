@@ -89,6 +89,10 @@ If the tenant has multiple leases, the Select Lease(s) pop-displays. Check each 
 
  If the General Options system preference of Automatically move out 'home' assets is enabled, assets which are considered homes do not display in this pop-up, and are moved out with the unit automatically. If the system preference is not enabled, the home asset displays in this pop-up for manual move-out. For more information, refer to General Options (System Preferences) .
 
+ More Information
+
+ If your system has multiple add wizards set up using custom wizards, you will first be prompted to select the property . Your selection determines which wizard to display. If you change the selection during the add process, you will be prompted to switch wizards if applicable. For more information, refer to Design a Wizard .
+
  -
  In the Account tile, verify the First Name and Last Name .
 If the tenant is a commercial tenant, Is Company is checked by default.

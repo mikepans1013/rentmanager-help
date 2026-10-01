@@ -44,6 +44,10 @@ The tenant or prospect's details page displays.
  -
  In the Address tile, select one of the available prospect, tenant, or contact address types from the Fill From Address drop-down list or manually enter an address.
 
+ Related Preferences
+
+ You can determine whether the income verification pulls the default or primary address associated with each contact in system preferences. For more information, refer to Screening Products Income Verification (System Preferences) .
+
  -
  In the Delivery Method tile, check Text Message and/or Email to choose where the invitation link should be sent. Depending on which method is selected, a corresponding Phone Number and/or Email Address must be entered in the Personal Information tile to send an income and ID verification invitation link.
 

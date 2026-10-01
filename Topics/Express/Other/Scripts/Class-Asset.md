@@ -14,7 +14,7 @@ This class examines asset information and can be preceded by a parent class and 
 
  Example
 
- Tenant().Asset().ModelNumber]
+ [Tenant().Asset().ModelNumber]
 
  Result
 
@@ -89,6 +89,12 @@ This class examines asset information and can be preceded by a parent class and 
  [Asset().AssetID]
 
  Displays the system-generated identification number for the asset. This number does not otherwise display in Rent Manager .
+
+ Asset Image
+
+ [Asset().AssetImage()]
+
+ Displays an image uploaded to the asset's Images tile.
 
  Bathrooms
 

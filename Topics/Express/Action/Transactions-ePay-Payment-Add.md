@@ -18,10 +18,10 @@ Handling tenant or prospect payments via ePay is an important part of your daily
  View
 
  ePay
- Set up and perform ePay operations
+ Set up and perform ePay  operations
  Enabled
 
- Manually process individual ePay payments
+ Manually process individual ePay  payments
  Enabled
 
  Receivables
@@ -50,29 +50,13 @@ The Add Payment pop-up displays.
 
  The date the tenant or prospect is making the payment.
 
- Reference #
+ Reference
 
- The following forms of payment to describe the transaction are available to select.
+ The payment method of this ePay payment. When in the Payment Summary section, the Process via ePay option is selected, this field displays ePay and cannot be edited.
 
- More Information
+ Related Preferences
 
- If, in the Payment Summary section, the Process via ePay option is selected, this field displays ePay and cannot be edited.
-
- Cash
-
- Record a cash payment.
-
- MO
-
- Record a money order payment.
-
- CC
-
- Record a credit card payment.
-
- Check
-
- Manually type the check number into the Reference # field to record a check payment.
+ You can customize the list of available payment methods in system preferences. For more information, refer to Payment Options (System Preferences) .
 
  Amount
 
@@ -102,7 +86,7 @@ The ePay Payment Information pop-up displays.
 
  If the tenant or prospect has one or no payment methods on file, apply the account's saved payment method.
 
- Make Default
+ Make Default Account
 
  If the tenant or prospect has one or no payment methods on file, save payment information as the new default ePay account on file for this tenant. This option cannot be selected when Use Account on File is checked.
 
@@ -111,7 +95,7 @@ The ePay Payment Information pop-up displays.
  If the tenant or prospect has multiple ePay payment methods on file, the Account field contains a drop-down. Depending on how the tenant wishes to pay, select to Use Default Account or Use Secondary Account . Alternately, to use a different payment method, select Enter New Account Information .
 
  -
- In the Account Information and Billing Information sections, verify the payment information is correct. If adding a new payment method, ensure the information is entered correctly.
+ In the Account Information and Billing Address sections, verify the payment information is correct. If adding a new payment method, ensure the information is entered correctly.
 
  -
  In the Summary section, enter the following information:
@@ -130,6 +114,10 @@ The ePay Payment Information pop-up displays.
  Payment by Phone
 
  The user who entered this payment spoke with the tenant or prospect over the phone to approve the payment.
+
+ Related Preferences
+
+ You can disable this option by checking Disable "Payment by Phone" in system preferences. For more information, refer to General ePay (System Preferences) .
 
  -
  Once the Total Payment amount is verified as correct, click Make Payment .

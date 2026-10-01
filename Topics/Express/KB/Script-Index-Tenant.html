@@ -22,8 +22,8 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Tenant.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Index-Tenant.htm</a></p>
 
-                                                        <h1 id="TenantIndexing" data-magellan-target="TenantIndexing"><a name="aanchor448"></a>
-                                                            <a name="kanchor748"></a><a name="H1"></a>Tenant Indexing</h1>
+                                                        <h1 id="TenantIndexing" data-magellan-target="TenantIndexing"><a name="aanchor771"></a>
+                                                            <a name="kanchor747"></a><a name="H1"></a>Tenant Indexing</h1>
                                                         <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
                                                         <p>When the Tenant class is used as a child class in a script (e.g., <span class="Formula">Unit().Tenant().<span class="Required">Function</span></span>), an index can be specified to uniquely identify tenants that are associated with the preceding class. For example, units can be associated with multiple past, current, or future tenants, and indexing can be used to identify each of those tenants.</p>
                                                         <h2 id="TenantIndexRelationships" data-magellan-target="TenantIndexRelationships"><a name="H2_1"></a>Tenant Index Relationships</h2>
@@ -47,7 +47,7 @@
                                                         </ol>
                                                         <p>Once you filter and sort the tenants, you are able to see the tenants for a specific property ordered by when they were created.</p>
                                                         <p>
-                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Tenant-Property-2024.png" alt="The Tenants page displays with five tenants at the same property." class="lightbox" />
+                                                            <img src="../../../assets/Resources/Images/PNGs/script-indexing-tenant-property.png" alt="The Tenants page displays with five tenants at the same property." class="lightbox" />
                                                         </p>
                                                         <div class="info">
                                                             <p class="label1">More Information</p>
@@ -61,7 +61,7 @@
                                                         <h3><a name="H3_2"></a>ServiceManager.Tenant Indexing</h3>
                                                         <p>You can view a tenant's index on an issue by viewing the order in which the tenants display on the <span class="Section">Issue Links</span> tile in the <span class="Section">Tenants</span> section.</p>
                                                         <p>
-                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Tenant-Service-Manager-2024.png" alt="The Issue Links tile for a service issue displays two tenants." />
+                                                            <img src="../../../assets/Resources/Images/PNGs/script-indexing-issues-tenant.png" alt="The Issue Links tile for a service issue displays two tenants." />
                                                         </p>
                                                         <p class="Example">[ServiceManager.Tenant(1).DefaultPhoneNumber]</p>
                                                         <p> Using the information in the above image, this script returns the phone number of <span class="Stress">Amy Webb</span>, the second tenant linked to the service issue.</p>
@@ -69,7 +69,7 @@
                                                         <p>Tenants associated with a unit are indexed based on their occupancy. The most recent (or current) tenant to occupy the unit has an index of <span class="Input">0</span>, the tenant who lived there immediately before the current tenant has an index of <span class="Input">1</span>, and the tenant before that has an index of <span class="Input">2</span>.</p>
                                                         <p>You can determine a tenant's index at a unit from the unit's <span class="Tab">Occupancy</span> tab.</p>
                                                         <p>
-                                                            <img src="../../../assets/Resources/Images/PNGs/Script-Index-Tenant-Unit-2024.png" alt="The Occupancy tile for a unit displays six tenants." />
+                                                            <img src="../../../assets/Resources/Images/PNGs/script-indexing-tenant-unit.png" alt="The Occupancy tile for a unit displays six tenants." />
                                                         </p>
                                                         <p class="Example">[Unit.Tenant(2).AccountNumber]</p>
                                                         <p>Using the information in the above image, this script returns the account number of <span class="Stress">Walela Sullicooie</span>, the third oldest tenant lease at the unit.</p>

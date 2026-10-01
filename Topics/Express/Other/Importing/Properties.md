@@ -254,9 +254,27 @@ The importing tool allows you to pull large amounts of data into Rent Manager at
 
  The name of the charge type—such as RC —that is used to charge rent to tenants or prospects at this property.
 
+ Set Site Classification Automatically
+
+ If the Manufactured Housing -type property uses site classification automation, enter Yes or True in this field. Otherwise, enter No or False . This field is available only when updating existing properties.
+
+ If you enter Yes or True , the Site Classification Automation Start Date field is required and must have a value entered in the import file.
+
  Short Name
 
  The abbreviated name of the property, such as RIVER for a property named Riverview Apartments.
+
+ Site Classification
+
+ The Manufactured Housing -type property's site classification Custom Name , as displayed on the Homeowner Statuses & Site Classifications page, for all units at the property when the Set Site Classification Automatically field is set to No or False . This field is available only when updating existing properties.
+
+ When importing, you need to update the field's Handling with any of the available unit types with a specific default site classification. Updating the Handling for the <Default> option determines the property default site classification for unit types not otherwise specified. If the <Default> handling is not set during the import, unit types without a specified classification will use the system default.
+
+ Site Classification Automation Start Date
+
+ The date when the Manufactured Housing -type property site classification automation begins automatically assigning classifications to units at the property. This field is available only when updating existing properties.
+
+ This field is required if you entered Yes or True in the Set Site Classification Automatically field.
 
  State
 

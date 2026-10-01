@@ -99,6 +99,10 @@ Prospect
 
  Step 2: Select Bills and Payment Methods
 
+ Related Preferences
+
+ To have all bills automatically selected for payment by default, check Automatically select all bills to be paid in system preferences. For more information, refer to Checks/Bills General (System Preferences) .
+
  To select which bills to pay and how to pay them, do the following:
 
  -
@@ -330,3 +334,7 @@ Prospect
  -
  Click Pay to create payment transactions in Rent Manager . Or, if Mark check(s) to be printed is selected, click Pay & Print Checks to pay bills and open the Print Checks pop-up to print the checks immediately.
 The bills are marked as paid and can be located on the Bills page when Show unpaid bills only is unchecked.
+
+ Related Preferences
+
+ To prevent users from making bill payments that exceed linked purchase order amounts by a specified percentage, check Prevent bill payments that exceed linked purchase order amount by more than X % in system preferences. Then, enter the specified percentage in the field to the right of this option. For more information, refer to Checks/Bills General (System Preferences) .

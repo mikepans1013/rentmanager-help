@@ -15,7 +15,6 @@ Master meters are utilities that record usage for an entire property (e.g. the w
  Column
 
  Utilities
-
  Metered utilities
  Enabled
 

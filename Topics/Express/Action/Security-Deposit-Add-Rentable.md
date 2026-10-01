@@ -106,3 +106,7 @@ Rentable has teamed up with Rent Manager to streamline the security deposit life
  -
  Click Send Deposit Invite .
 An invitation is sent to the tenant or prospect's Email Address to set up an account with Rentable. Once the tenant or prospect has set up an account, they can connect their bank account and pay the security deposit seamlessly online.
+
+ More Information
+
+ You can update or cancel an invite at any time from the tenant's or prospect's details page. For more information, refer to Tenant Details (Page) and Prospect Details (Page) .

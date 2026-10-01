@@ -66,6 +66,12 @@ Depending on the active current homeowner status for a home-type asset, the abil
  -
  Resident Owned
 
+ -
+ Resident Owned - Contingent Liability
+
+ -
+ Resident Owned - Promissory Notes
+
  Community Owned
 
  Enabled
@@ -204,6 +210,12 @@ Depending on the active current homeowner status for a home-type asset, the abil
  Resident Owned
 
  -
+ Resident Owned - Contingent Liability
+
+ -
+ Resident Owned - Promissory Notes
+
+ -
  Change of Ownership
 
  Resident Owned
@@ -214,6 +226,36 @@ Depending on the active current homeowner status for a home-type asset, the abil
 
  -
  Resident Owned
+
+ -
+ Change of Ownership
+
+ Resident Owned - Contingent Liability
+
+ Enabled
+
+ Set to Resident Owned - Contingent Liability by default, with the following options available from the drop-down list:
+
+ -
+ Resident Owned
+
+ -
+ Resident Owned - Contingent Liability
+
+ -
+ Change of Ownership
+
+ Resident Owned - Promissory Notes
+
+ Enabled
+
+ Set to Resident Owned - Promissory Notes by default, with the following options available from the drop-down list:
+
+ -
+ Resident Owned
+
+ -
+ Resident Owned - Promissory Notes
 
  -
  Change of Ownership

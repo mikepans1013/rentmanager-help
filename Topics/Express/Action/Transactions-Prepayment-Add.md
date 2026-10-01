@@ -63,25 +63,13 @@ If a tenant or prospect makes a payment before a corresponding charge is posted 
 
  The date on which the payment posts to the account.
 
- Reference #
+ Reference
 
- The following forms of payment to describe the transaction are available to select:
+ The payment method of this batch payment. Select a payment method, such as Cash , MO (money order), or CC (credit card), or enter another method such as a check number or ACH .
 
- Cash
+ Related Preferences
 
- Record a CashPay payment.
-
- MO
-
- Record a money order payment.
-
- CC
-
- Record a credit card payment.
-
- Check
-
- Manually type the check number into the Reference # field to record a check payment.
+ You can customize the list of available payment methods in system preferences. For more information, refer to Payment Options (System Preferences) .
 
  More Information
 

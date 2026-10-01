@@ -276,33 +276,23 @@ The posting rollback tool can reverse or undo charges and account reconciliation
  Column
 
  Accounting
-
  Journal Entries
-
  Delete
 
  Receivables
-
  Owner Transactions
-
  Delete
 
  Sales/Invoicing
-
  Invoices
-
  Delete
 
  Payables
-
  Bills
-
  Delete
 
  Banks/Checks
-
  Checks
-
  Delete
 
  For more information, refer to Control User Access .

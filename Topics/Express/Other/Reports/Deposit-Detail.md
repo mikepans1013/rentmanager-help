@@ -173,6 +173,10 @@ The Reports: Deposit Detail page displays.
 
  Report Totals Subreport
 
- Located at the bottom of the Deposit Detail report, the Report Totals subreport provides a breakdown of the payments included in the deposit.
+ The Report Totals subreport provides a breakdown of the payments included in the deposit.
 
- The subreport lists the number of payments that were made through Cash , Checks , Money Orders , or Other Items , and the total amount included in the deposit for each payment method. The final column provides the total number of payments included in the deposit, and the sum total of all the payments.
+ The subreport lists the number of payments that were made through Cash , Checks , Money Orders , Credit Card , Other Items or any user-added payment methods, and the total amount included in the deposit for each payment method. The final row provides the total number of payments included in the deposit, and the sum total of all the payments.
+
+ Related Preferences
+
+ You can add new payment methods and/or determine which are available for selection during payment entry in system preferences. For more information, refer to Payment Options (System Preferences) .

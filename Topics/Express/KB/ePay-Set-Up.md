@@ -177,13 +177,6 @@ The ePay password is set.
  -
  If you use more than one Rent Manager database location and want to use the same ePay password, click Push Password and select the desired location(s) to receive these password settings, then click Save .
 
- -
- To set up of a threshold of days before purging the token used to securely relay ePay account information, select Enable Data Retention Policy and enter a value in the Number of days to retain ePay data before it is purged field.
-
- Warning
-
- It is not recommended that you enable or alter this setting without speaking to your Zego representative.
-
  Step 4: Enable ePay for Properties
 
  Finally, to utilize ePay , each property needs to have the option enabled and settings established to control how those payments are processed.

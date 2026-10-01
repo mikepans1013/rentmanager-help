@@ -33,7 +33,7 @@ When an owner wants to put money into their portfolio, such as to cover the cost
 
  Related Preferences
 
- The Enable ePay for Owners option must be enabled in system preferences to perform this task. For more information, refer to Owner ePay (System Preferences) .
+ To use ePay for transactions involving owners, the Enable ePay for Owners option must be enabled and participating banks must be assigned an ePay ID in system preferences. For more information, refer to Owner ePay (System Preferences) .
 
  Step 1: Filter Owners
 

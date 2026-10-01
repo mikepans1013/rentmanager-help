@@ -279,3 +279,11 @@ The code is added to the code group. Repeat these steps until all needed codes i
  Dashboard Tiles
 
  You can monitor your violations at a glance from the Rent Manager dashboard. The Open Violations tile allows you to see unresolved violations, and the Violations - Communication Needed tile displays escalated violations that still needs to be communicated to the tenant. For more information, refer to Open Violations (Dashboard Tile) and Violations - Communication Needed (Dashboard Tile) .
+
+ rmAppSuite Pro
+
+ You can view and manage violations from rmAppSuite Pro for any properties that have a violation code group assigned. Before you can utilize rmAppSuite Pro , you need to enable the feature in system preferences. For more information, refer to Set Up rmAppSuite Pro .
+
+ Related Preferences
+
+ You can assign colors to the unit pins that display in rmAppSuite Pro by their violation stage number in system preferences. For more information, refer to rmAppSuite Violations (System Preferences) .

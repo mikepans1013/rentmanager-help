@@ -97,7 +97,7 @@ The eviction packet generates all selected documents in a printable format.
 
  Lease Documents
 
- The lease documents attached to the tenants lease in the Lease Documents section are included in the eviction packet. For more information, refer to Lease Details (Page) .
+ The lease documents attached to the tenants lease in the Lease Documents section are included in the eviction packet. For more information, refer to Lease Details (Pop-Up) .
 
  Transaction Ledger
 

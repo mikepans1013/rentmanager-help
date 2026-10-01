@@ -56,7 +56,11 @@ The Add Text Template pop-up displays.
 
  Step 2: Write the Message Template
 
- After naming your template, you can craft the message delivered to recipients when this template is used. In the Message Text section, type out the content of the message. The message field can accommodate a maximum of 1500 characters. If you wish to utilize Rent Manager 's dynamic scripting in your message, click Open Script Builder at the top right of the section. For more information, refer to Scripting .
+ After naming your template, you can craft the message delivered to recipients when this template is used. In the Message Text section, type out the content of the message. The message field can accommodate a maximum of 1,500 characters. If you wish to utilize Rent Manager 's dynamic scripting in your message, click Open Script Builder at the top right of the section. For more information, refer to Scripting .
+
+ More Information
+
+ Texts that exceed a 160 SMS character count are converted into multiple message segments of 160 characters up to a maximum of 1,500 characters. For example, if you create a message template with 400 characters, the message is sent in three segments. If you use certain special characters in messages, such as em dashes (—) or emojis, the message is converted into multiple message segments of 70 characters.
 
  Step 3: Configure Additional Settings and Save
 

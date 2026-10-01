@@ -22,9 +22,28 @@
 <main>
   <p class="source">Source: <a href="https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Metered-Utilities-Plus.htm">https://rmxhelp.rentmanager.com/Topics/Express/KB/Script-Metered-Utilities-Plus.htm</a></p>
 
-                                                        <h1 id="MeteredUtilitiesPlusScripts" data-magellan-target="MeteredUtilitiesPlusScripts"><a name="kanchor1730"></a><a name="H1"></a>Metered Utilities Plus Scripts</h1>
+                                                        <h1 id="MeteredUtilitiesPlusScripts" data-magellan-target="MeteredUtilitiesPlusScripts"><a name="aanchor1792"></a>
+                                                            <a name="kanchor1726"></a><a name="H1"></a>Metered Utilities Plus Scripts</h1>
                                                         <p><span class="mc-variable Products.RM variable">Rent Manager</span> <span class="mc-variable Products.MU+2 variable">Metered Utilities Plus (MU-Plus)</span> allows you to bill tenants for usage of utilities such as gas, electric, water, and sewer. <span class="mc-variable Products.MU+ variable">Metered Utilities Plus</span> is a meter type which has its own scripting functions.</p>
                                                         <p>From a meter type with the <span class="Column">Type</span> of <span class="Field">MU-Plus</span>, use the <span class="Section">Statements</span> tile and <span class="Section">Calculations</span> tile in the <span class="Field">Calculation</span> field to add script functions.</p>
+                                                        <div class="info">
+                                                            <p class="label1">More Information</p>
+                                                            <p>The following scripting rules are unique to the <span class="Input">Calculations</span> tile of <span class="mc-variable Products.MU+2 variable">Metered Utilities Plus (MU-Plus)</span>.</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Variables do not have dollar signs (<span class="Input">$</span>) in front of them.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Variables are not case-sensitive.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Variables are contained between either single (') or double (") quotes, with the exception of Rate and RateBlend functions which are <span class="Stress">always</span> contained between single quotes.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Scripting functions are entered without square brackets.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                         <h2 id="AvailableFunctions" data-magellan-target="AvailableFunctions"><a name="H2_1"></a>Available Functions</h2>
                                                         <p>The table below lists all the functions available for <span class="mc-variable Products.MU+ variable">Metered Utilities Plus</span>. These functions can be used only in the <span class="Section">Statements</span> and <span class="Section">Calculations</span> sections of an <span class="mc-variable Products.MU+ variable">Metered Utilities Plus</span> meter type. Each variable should be contained between either single (') or double (") quotes.</p>
                                                         <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Tablestyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
@@ -42,8 +61,7 @@
                                                                         <p>Alt Rate Blend</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Navigation">
-[AltRateBlend(<span class="Required">"RateVariable"</span>)]</p>
+                                                                        <p class="Navigation">AltRateBlend(<span class="Required">"RateVariable"</span>)</p>
                                                                         <p>This function allows the blending of multiple rates over different periods. If a reading took place during multiple periods and each period used a different rate, a balanced rate of the relevant days for the consumption period are calculated as the 'blended' rate.</p>
                                                                         <div class="info">
                                                                             <p class="label1">More Information</p>
@@ -59,8 +77,7 @@
                                                                         <p>Cur</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Cur(<span class="Required">"Value"</span>)]</p>
+                                                                        <p class="Formula">Cur(<span class="Required">"Value"</span>)</p>
                                                                         <p>This function formats the specified numeric value as currency.</p>
                                                                         <p data-mc-condition-tag-expression="include[&quot;Snippet Conditions.1&quot;]">The following reserved variables can be used as values:</p>
                                                                         <ul>
@@ -82,7 +99,7 @@
                                                                             </li>
                                                                         </ul>
                                                                         <p>For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[Currency(POST)]</p>
+                                                                        <p class="Example">Currency(POST)</p>
                                                                         <p>Displays the numeric value of the final amount after all other calculations as currency. If the final post amount is calculated at 122, the value <span class="Input">$122.00</span> displays.</p>
                                                                     </td>
                                                                 </tr>
@@ -91,7 +108,7 @@
                                                                         <p>Day</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">[Day(<span class="Required">"Value"</span>)]</p>
+                                                                        <p class="Formula">Day(<span class="Required">"Value"</span>)</p>
                                                                         <p>This function displays the numeric day from a specified date.</p>
                                                                         <p data-mc-condition-tag-expression="include[&quot;Snippet Conditions.1&quot;]">The following reserved variables can be used as values:</p>
                                                                         <ul>
@@ -104,7 +121,7 @@
                                                                             </li>
                                                                         </ul>
                                                                         <p>For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[Day(CRD)]</p>
+                                                                        <p class="Example">Day(CRD)</p>
                                                                         <p>Displays the value of the day for the date of the current reading. If the date of the current reading is 6/1/<span class="mc-variable Dates.Year4 variable">2026</span>, the value <span class="Input">1</span> displays.</p>
                                                                     </td>
                                                                 </tr>
@@ -113,8 +130,7 @@
                                                                         <p>Excess</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Excess(<span class="Required">"Value1","Value2"</span>)]</p>
+                                                                        <p class="Formula">Excess(<span class="Required">"Value1","Value2"</span>)</p>
                                                                         <p>This function displays the difference in the specified numeric values by subtracting Value2 from Value1.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
                                                                     </td>
@@ -125,8 +141,7 @@
 Format</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Format(<span class="Required">"Value","Format"</span>)]</p>
+                                                                        <p class="Formula">Format(<span class="Required">"Value","Format"</span>)</p>
                                                                         <p>This function adjusts the formatting of a date, time, or numeric value. For more information, refer to <a href="../Other/Scripts/Function-Format.html" class="MCXref xref">Format Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
                                                                     </td>
@@ -137,11 +152,10 @@ Format</p>
 If</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[If(<span class="Required">"Condition","TruePart","FalsePart"</span>)]</p>
+                                                                        <p class="Formula">If(<span class="Required">"Condition","TruePart","FalsePart"</span>)</p>
                                                                         <p>This function tests a condition parameter and then executes one of two specified statements. If the condition is true, the TruePart parameter displays. Otherwise, the FalsePart parameter displays. Various operators can be used in this function's parameters. For more information, refer to <a href="../Other/Scripts/Function-If.html" class="MCXref xref">If Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">Discount Rate = [If(RC == "Standard","","-5")]</p>
+                                                                        <p class="Example">Discount Rate = If(RC == "Standard","","-5")</p>
                                                                         <p>If the tenant uses the <span class="Field">Standard (S)</span> rate class, no discount rate displays.</p>
                                                                         <p>If the tenant does not use the <span class="Field">Standard (S)</span> rate class, the discount rate of <span class="Input">-5</span> displays.</p>
                                                                     </td>
@@ -152,9 +166,7 @@ If</p>
 Index Of</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[IndexOf(<span class="Required">"Value1","Value2"</span>)]
-</p>
+                                                                        <p class="Formula">IndexOf(<span class="Required">"Value1","Value2"</span>)</p>
                                                                         <p>This function finds the first occurrence of the Value2 parameter within the Value1 parameter and returns the index value of Value2's place in the string. If Value2 is not found, the function displays a value of  <span class="Input">0</span>. This can be used with Left, Right, or Mid as a parameter in those functions, allowing you to find the correct place to separate text.</p>
                                                                         <p>This function is generally used in addition to other scripts. For more information, refer to <a href="../Other/Scripts/Function-Index-Of.html" class="MCXref xref">Index Of Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
@@ -165,9 +177,8 @@ Index Of</p>
                                                                         <p>Int</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Int(<span class="Required">"Value"</span>)]</p>
-                                                                        <p> Enter the value that should be examined. It can be a literal value or the value returned by another function.</p>
+                                                                        <p class="Formula">Int(<span class="Required">"Value"</span>)</p>
+                                                                        <p>Enter the value that should be examined. It can be a literal value or the value returned by another function.</p>
                                                                         <p>This function verifies that the value entered is an integer (number) and displays the value. If the value entered is not an integer, you will receive an error message when attempting to save the meter type.</p>
                                                                         <p data-mc-condition-tag-expression="include[&quot;Snippet Conditions.1&quot;]">The following reserved variables can be used as values:</p>
                                                                         <table style="width: 100%;">
@@ -221,13 +232,13 @@ CR
                                                                             </tbody>
                                                                         </table>
                                                                         <p>For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[Int("4")]</p>
+                                                                        <p class="Example">Int("4")</p>
                                                                         <p>Displays the value of <span class="Input">4</span>, as this is a valid integer.</p>
-                                                                        <p class="Example">[Int("Four")]</p>
+                                                                        <p class="Example">Int("Four")</p>
                                                                         <p>Displays an error message when attempting to save the meter type as the word <span class="Input">Four</span> is not an integer.</p>
-                                                                        <p class="Example">[Int("4.1")]</p>
+                                                                        <p class="Example">Int("4.1")</p>
                                                                         <p>Displays an error message when attempting to save the meter type as <span class="Input">4.1</span> is not an integer.</p>
-                                                                        <p class="Example">[Int(C)]</p>
+                                                                        <p class="Example">Int(C)</p>
                                                                         <p>Displays the total <span class="Field">Consumption</span> of the meter reading (e.g., <span class="Input">1000</span>), if it is an integer.</p>
                                                                     </td>
                                                                 </tr>
@@ -236,7 +247,7 @@ CR
                                                                         <p>Left</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">[Left(<span class="Required">"Value","Length"</span>)]
+                                                                        <p class="Formula">Left(<span class="Required">"Value","Length"</span>)
 </p>
                                                                         <p>This function displays a specified number of characters (including white spaces) from the left side of a string. For more information, refer to <a href="../Other/Scripts/Function-Left.html" class="MCXref xref">Left Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
@@ -247,10 +258,10 @@ CR
                                                                         <p>Lower Case</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">[LowerCase(<span class="Required">"Value"</span>)]</p>
+                                                                        <p class="Formula">LowerCase(<span class="Required">"Value"</span>)</p>
                                                                         <p>This function displays a text string in lowercase. For more information, refer to <a href="../Other/Scripts/Function-Lower-Case.html" class="MCXref xref">Lower Case Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[LowerCase(RC)]</p>
+                                                                        <p class="Example">LowerCase(RC)</p>
                                                                         <p>Displays the value in lowercase. If the <span class="Field">Rate Class</span> is <span class="Field">Standard</span>, the value <span class="Input">standard</span> displays.</p>
                                                                     </td>
                                                                 </tr>
@@ -259,12 +270,11 @@ CR
                                                                         <p>Maximum</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">[Maximum(<span class="Required">"Value1","Value2"</span>)]
-</p>
+                                                                        <p class="Formula">Maximum(<span class="Required">"Value1","Value2"</span>)</p>
                                                                         <p>This function compares two numeric values and displays the larger value. If neither of the values are numeric, it displays <span class="Input">0</span>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p>This variable can also be shortened to <span class="Formula">[Max(<span class="Required">"Value1","Value2"</span>)]</span>.</p>
-                                                                        <p class="Example">[Maximum("100",BR)]</p>
+                                                                        <p>This variable can also be shortened to <span class="Formula">Max(<span class="Required">"Value1","Value2"</span>)</span>.</p>
+                                                                        <p class="Example">Maximum("100",BR)</p>
                                                                         <p>Displays the larger value after comparing  the value <span class="Input">100</span> and the current <span class="Field">Base Rate</span> amount.</p>
                                                                     </td>
                                                                 </tr>
@@ -273,7 +283,7 @@ CR
                                                                         <p>Mid</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">[Mid(<span class="Required">"Value"</span>,<span class="Optional">"Start"</span>,<span class="Optional">"Length"</span>)]</p>
+                                                                        <p class="Formula">Mid(<span class="Required">"Value"</span>,<span class="Optional">"Start"</span>,<span class="Optional">"Length"</span>)</p>
                                                                         <p>This function displays a portion of a given value starting at a specified character and continuing for a specified number of characters. For more information, refer to <a href="../Other/Scripts/Function-Mid.html" class="MCXref xref">Mid Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
                                                                     </td>
@@ -283,12 +293,11 @@ CR
                                                                         <p>Minimum</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Minimum(<span class="Required">"Value1","Value2"</span>)]</p>
+                                                                        <p class="Formula">Minimum(<span class="Required">"Value1","Value2"</span>)</p>
                                                                         <p>This function compares two numeric values and displays the smaller value. If neither of the values are numeric, it displays <span class="Input">0</span>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p>This variable can also be shortened to <span class="Formula">[Min(<span class="Required">"Value1","Value2"</span>)]</span>.</p>
-                                                                        <p class="Example">[Minimum("100",BL)]</p>
+                                                                        <p>This variable can also be shortened to <span class="Formula">Min(<span class="Required">"Value1","Value2"</span>)</span>.</p>
+                                                                        <p class="Example">Minimum("100",BL)</p>
                                                                         <p>Displays the smaller value after comparing the value <span class="Input">100</span> and the current <span class="Field">Base Line</span> amount.</p>
                                                                     </td>
                                                                 </tr>
@@ -297,8 +306,7 @@ CR
                                                                         <p>Month</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Month(<span class="Required">"Value"</span>)]</p>
+                                                                        <p class="Formula">Month(<span class="Required">"Value"</span>)</p>
                                                                         <p>This function displays the month component of a date value. A non-date returns a value of <span class="Input">1</span>. For more information, refer to <a href="../Other/Scripts/Function-Month.html" class="MCXref xref">Month Function (Script)</a>.</p>
                                                                         <p data-mc-condition-tag-expression="include[&quot;Snippet Conditions.1&quot;]">The following reserved variables can be used as values:</p>
                                                                         <ul>
@@ -311,7 +319,7 @@ CR
                                                                             </li>
                                                                         </ul>
                                                                         <p>For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[Month(CRD)]</p>
+                                                                        <p class="Example">Month(CRD)</p>
                                                                         <p>Displays the month component of the current reading date. If the current reading date is December 1, <span class="mc-variable Dates.Year4 variable">2026</span>, the value <span class="Input">12</span> displays.</p>
                                                                     </td>
                                                                 </tr>
@@ -320,10 +328,9 @@ CR
                                                                         <p>Rate</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Rate(<span class="Required">"RateVariable"</span>)]</p>
+                                                                        <p class="Formula">Rate(<span class="Required">"RateVariable"</span>)</p>
                                                                         <p>This function uses the most current value for the specified variable regardless of recent changes to the rate.</p>
-                                                                        <p class="Example">[Rate("Tier1")]</p>
+                                                                        <p class="Example">Rate("Tier1")</p>
                                                                         <p>For example, use the script: <span class="Input">Rate("Tier1")</span>. There were thirty days between the last reading date and the current reading date. In the first ten days of this period, Tier1 was defined at a value of 1.5. For the next 20 days in the period, Tier1 changed to 1.6.</p>
                                                                         <p>With this function, <span class="mc-variable Products.RM variable">Rent Manager</span> ignores the change and uses 1.6 in any subsequent formulas that use the Tier1 variable.</p>
                                                                     </td>
@@ -333,11 +340,9 @@ CR
                                                                         <p>Rate Blend</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[RateBlend(<span class="Required">"RateVariable"</span>)]
-</p>
+                                                                        <p class="Formula">RateBlend(<span class="Required">"RateVariable"</span>)</p>
                                                                         <p>This function allows the blending of multiple rates over different periods. For example, if a reading took place during multiple periods and each period used a different rate, an balanced rate of the relevant days for the consumption period are calculated as the 'blended' rate.</p>
-                                                                        <p class="Example">[RateBlend("Tier1")]</p>
+                                                                        <p class="Example">RateBlend("Tier1")</p>
                                                                         <p>For example, use the script: <span class="Input">RateBlend("Tier1")</span>. There were thirty days between the last reading date and the current reading date. In the first ten days of this period, Tier1 was defined at a value of 1.5. For the next twenty days in the period, Tier1 changed to 1.6.</p>
                                                                         <p><span class="mc-variable Products.RM variable">Rent Manager</span> takes 1.5 and multiples it by ten days, then takes 1.6 and multiplies it by twenty days, adds up those two totals and divides the result by the full thirty days in the period to come up with a new average (blended) rate.</p>
                                                                         <p class="Formula">(1.5 * 10 + 1.6 * 20) / 30 = 1.5667</p>
@@ -348,10 +353,9 @@ CR
                                                                         <p>Rate Date</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[RateDate(<span class="Required">"RateVariable"</span>)]</p>
+                                                                        <p class="Formula">RateDate(<span class="Required">"RateVariable"</span>)</p>
                                                                         <p>This function displays the date on which the current rate became active.</p>
-                                                                        <p class="Example">[RateDate("Tier1")]</p>
+                                                                        <p class="Example">RateDate("Tier1")</p>
                                                                         <p>Displays the date on which the current rate for Tier1 became active.</p>
                                                                     </td>
                                                                 </tr>
@@ -360,8 +364,7 @@ CR
                                                                         <p>Right</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Right(<span class="Required">"Value","Length"</span>)]</p>
+                                                                        <p class="Formula">Right(<span class="Required">"Value","Length"</span>)</p>
                                                                         <p>This function displays a specified number of characters (including spaces) from the right side of a string. Fore more information, refer to <a href="../Other/Scripts/Function-Right.html" class="MCXref xref">Right Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
                                                                     </td>
@@ -371,8 +374,7 @@ CR
                                                                         <p>Round</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Round(<span class="Required">"Value"</span>,<span class="Optional">"Decimals"</span>)]</p>
+                                                                        <p class="Formula">Round(<span class="Required">"Value"</span>,<span class="Optional">"Decimals"</span>)</p>
                                                                         <p>This function evaluates a number and rounds it to the specified decimal place. Non-numeric values return a value of <span class="Input">0</span>. For more information, refer to <a href="../Other/Scripts/Function-Round.html" class="MCXref xref">Round Function (Script)</a>.</p>
                                                                         <p data-mc-condition-tag-expression="include[&quot;Snippet Conditions.1&quot;]">The following reserved variables can be used as values:</p>
                                                                         <table style="width: 100%;">
@@ -433,7 +435,7 @@ CR
                                                                             </tbody>
                                                                         </table>
                                                                         <p>For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[Round(BR,0)]</p>
+                                                                        <p class="Example">Round(BR,0)</p>
                                                                         <p>Displays the amount of the fixed base rate, rounded to the nearest whole number. If the fixed <span class="Field">Base Rate</span> is 7.12, the function displays a value of <span class="Input">7</span>.</p>
                                                                     </td>
                                                                 </tr>
@@ -442,11 +444,10 @@ CR
                                                                         <p>Upper Case</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Uppercase(<span class="Required">"Value"</span>)]</p>
+                                                                        <p class="Formula">Uppercase(<span class="Required">"Value"</span>)</p>
                                                                         <p>This function returns a text string converted to upper case text. For more information, refer to <a href="../Other/Scripts/Function-Upper-Case.html" class="MCXref xref">Upper Case Function (Script)</a>.</p>
                                                                         <p>You can use reserved variables for the values in this function. For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[UpperCase(RC)]</p>
+                                                                        <p class="Example">UpperCase(RC)</p>
                                                                         <p>Displays the value in uppercase. If the <span class="Field">Rate Class</span> is <span class="Field">Standard</span>, the value <span class="Input">STANDARD</span> displays.</p>
                                                                     </td>
                                                                 </tr>
@@ -455,8 +456,7 @@ CR
                                                                         <p>Val</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
-                                                                        <p class="Formula">
-[Val(<span class="Required">"Value"</span>)]</p>
+                                                                        <p class="Formula">Val(<span class="Required">"Value"</span>)</p>
                                                                         <p>This function returns the numbers in a string, up until the first character that is <span class="Stress">not</span> one of the following:</p>
                                                                         <ul>
                                                                             <li>
@@ -525,10 +525,10 @@ CR
                                                                         </table>
                                                                         <p>For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
                                                                         <p class="Example">
-[Val("405 2nd Street")]</p>
+Val("405 2nd Street")</p>
                                                                         <p>Displays the value <span class="Input">4052</span>.</p>
                                                                         <p class="Example">
-[Val(CRD)]</p>
+Val(CRD)</p>
                                                                         <p>If the <span class="Field">Current Reading Date</span> is 4/12/<span class="mc-variable Dates.Year4 variable">2026</span>, displays the value <span class="Input">4</span>.</p>
                                                                     </td>
                                                                 </tr>
@@ -537,8 +537,7 @@ CR
                                                                         <p>Year</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyA-Column1-Body1">
-                                                                        <p class="Navigation">
-[Year(<span class="Required">"Value"</span>)]</p>
+                                                                        <p class="Navigation">Year(<span class="Required">"Value"</span>)</p>
                                                                         <p>This function returns the year component of a date value. A non-date value returns a value of <span class="Input">1</span>. For more information, refer to <a href="../Other/Scripts/Function-Year.html" class="MCXref xref">Year Function (Script)</a>.</p>
                                                                         <p data-mc-condition-tag-expression="include[&quot;Snippet Conditions.1&quot;]">The following reserved variables can be used as values:</p>
                                                                         <ul>
@@ -551,7 +550,7 @@ CR
                                                                             </li>
                                                                         </ul>
                                                                         <p>For detailed descriptions of each, refer to <a href="#H2_3" class="MCXref xref">Reserved Variables</a>.</p>
-                                                                        <p class="Example">[Year(CRD)]</p>
+                                                                        <p class="Example">Year(CRD)</p>
                                                                         <p>Displays the year component of the current reading date. If the current reading date is December 1, <span class="mc-variable Dates.Year4 variable">2026</span>, the value <span class="Input"><span class="mc-variable Dates.Year4 variable">2026</span></span> displays.</p>
                                                                     </td>
                                                                 </tr>
@@ -611,7 +610,7 @@ CR
                                                                 </tr>
                                                                 <tr class="TableStyle-Standard-Body-Body1">
                                                                     <td class="TableStyle-Standard-BodyE-Column1-Body1">
-                                                                        <p>CRD (Current Reading&#160;Date)</p>
+                                                                        <p>CRD (Current Reading Date)</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
                                                                         <p>The date of the current meter reading.</p>
@@ -674,7 +673,7 @@ PR
                                                                 <tr class="TableStyle-Standard-Body-Body1">
                                                                     <td class="TableStyle-Standard-BodyE-Column1-Body1">
                                                                         <p>PRD
-(Previous Reading&#160;Date)</p>
+(Previous Reading Date)</p>
                                                                     </td>
                                                                     <td class="TableStyle-Standard-BodyD-Column1-Body1">
                                                                         <p>The date of the previous meter reading.</p>

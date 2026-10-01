@@ -2,11 +2,11 @@
 
 Source: https://rmxhelp.rentmanager.com/Topics/Express/Other/System-Preferences/Email-Settings.htm
 
-Rent Manager provides the ability to send email correspondence directly from the program. Depending on your needs, there are two ways to set up your email in Rent Manager : using the default email server or using the external server.
+Rent Manager provides the ability to send email correspondence directly from the program. Depending on your needs, there are two ways to set up your email in Rent Manager : using the default email server or using the external provider.
 
  If you use Rent Manager as the default email provider, all emails are sent from email@rentmanager.com . This option works well for sending correspondence like localized maintenance notices or community newsletters that do not require a response. If you want emails from Rent Manager to display your email address or receive replies, you can mask email@rentmanager.com so replies are rerouted to your email address.
 
- Alternatively, you can use an external email server to send and receive emails in Rent Manager . This allows you to leverage other powerful tools, such as sending correspondence using your business email and email reply tracking, to import replies to those emails automatically.
+ Alternatively, you can use an external email provider to send and receive emails in Rent Manager . This allows you to leverage other powerful tools, such as sending correspondence using your business email and email reply tracking, to import replies to those emails automatically.
 
  You can use these system preferences to determine how emails in Rent Manager are sent. For detailed set-up instructions on email reply tracking, refer to Set Up Email and Email Reply Tracking .
 
@@ -28,41 +28,77 @@ Rent Manager provides the ability to send email correspondence directly from the
  Go to arrow_forward Administration , then go to Preferences arrow_forward System Preferences arrow_forward Email Settings .
 
  -
- In the Connect to an Email Account section, click a specific provider, like Microsoft, to connect through Modern Authentication or click Connect to SMTP Provider to connect to an external provider through SMTP.
+ In the System Email Account section, select one of the options below.
+
+ Method
+ Description
+
+ Modern Authentication
+
+ Click a specific provider ( Microsoft or Google ) to connect to an external provider through Modern Authentication.
+
+ SMTP
+
+ Click Connect to SMTP Provider to connect to an external provider through Simple Mail Transfer Protocol (SMTP).
+
+ Rent Manager Default Server
+
+ Click Connect to Rent Manager Default Server to use Rent Manager as the default email provider.
 
  More Information
 
- If you want to remove an existing connection and use Rent Manager as the default email provider, click Disconnect .
+ If you want to remove an existing connection and use a different a method , click Disconnect . Then select the method you wish to use.
 
  -
- Edit the settings as desired. Each setting is described below.
+ Edit the settings as desired. Each setting is described in the headings below.
 
  -
- Click Save to accept your changes.
+ Click Save .
+The system preference configuration is updated.
 
- Preference Descriptions
+ System Email Account
 
- Each setting is described below:
+ This section displays the currently connected email provider and allows you to connect or disconnect an email provider. You can click Connect to SMTP Provider to connect to an external provider through the SMTP, or click Connect to Rent Manager Default Server to use Rent Manager as the default email provider.
 
- Connect to An Email Account
+ To connect to an email provider using Modern Authentication, you can click the button that represents the email provider, such as Google or Microsoft. Clicking this button opens a pop-up window that walks you through that provider's authentication process.
 
- This section displays the currently connected email provider and allows you to connect or disconnect an email provider. You can click on a specific provider, like Microsoft, to connect your account through Modern Authentication or click Connect to SMTP Provider to connect to an external provider through SMTP. Disconnecting from an existing connection sets Rent Manager as the default email provider.
+ The options below are available. Some options may not be available depending on the method you have selected.
 
- Setting
-
+ Option
  Description
 
- Connect to SMTP Provider
+ Default From Email
 
- Enables the SMTP Provider Information section, allowing you to set up SMTP communication between Rent Manager and your business email account.
+ The email address you want to display on all emails sent from Rent Manager .
+
+ More Information
+
+ Changing the displayed email address is referred to as masking the email. Masked emails still send from the email account email@rentmanager.com but display the email address entered in this field to recipients and reroutes replies to that email. On opened emails, the email@rentmanager.com email address is visible after the masking address.
+
+ Alternatively, you can mask emails per user through personal preferences or on each individual email. If you use either of the alternatives, the masking email you enter is used instead of what is entered in the Default From Email field.
+
+ Mask email per
+ Description
+
+ User
+
+ In personal preferences, under Email Settings , locate the field labeled From Name . For more information, refer to Email Settings (Personal Preferences) .
+
+ Email
+
+ Each email contains its own From Address field at the top to enter or change the email address as necessary. For more information, refer to Send an Email .
+
+ Allow users to override system default credentials in Personal Preferences
+
+ Allows users to set up their own usernames and passwords for emails sent from their accounts in Rent Manager . For more information, refer to Set Up User Email .
 
  Disconnect
 
- Disables the SMTP Provider Information section and sets Rent Manager as the default email provider.
+ Disconnects from the current email account and allows you to set up a new SMTP provider or set Rent Manager as the default email provider.
 
  SMTP Provider Information
 
- You can use the settings in this section to set up SMTP communication between Rent Manager and your business email account. This section is only available if Connect to SMTP Provider is selected in the Connect to An Email Account section.
+ You can use the settings in this section to set up SMTP communication between Rent Manager and your business email account. This section is available only if Connect to SMTP Provider is selected in the System Email Account section. Click to display the following fields.
 
  Setting
 
@@ -90,7 +126,7 @@ Rent Manager provides the ability to send email correspondence directly from the
 
  Enable SMTP Authentication
 
- The system default email account used for emails from Rent Manager when using an external server.
+ The system default email account used for emails from Rent Manager when using an external provider.
 
  Username
 
@@ -120,43 +156,20 @@ Rent Manager provides the ability to send email correspondence directly from the
 
  The port number for the server entered in the Proxy Server field.
 
- Email Options
+ Other Email Options
 
- You can use the settings in this section to set a default address to display on all of your emails, enable email reply tracking, and allow users to set up their own individual email settings. Additionally, you can add the ability to include images, styles, and colors.
+ You can use the settings in this section to enable email reply tracking and allow users to set up their own individual email settings.
 
  Setting
 
  Description
 
- Allow users to enter their credentials in Personal Preferences
+ Allow users to add an email account in Personal Preferences
 
- Check to allow users to set up their own From name and email address, username, and password. This option is available only when using any email provider other than the Rent Manager default email provider.
+ Check to allow users to set up their own From name and email address, username, and password.
 
  Enable email reply tracking
 
- Check to allow tracking of email replies sent by Rent Manager entities such as prospects, tenants, and owners. These emails and replies are stored in Rent Manager . This option is available only when using any email provider other than the Rent Manager default email provider.
+ Check to allow tracking of email replies sent by Rent Manager entities such as prospects, tenants, and owners. These emails and replies are stored in Rent Manager .
 
- Send emails as .html by default
-
- Formats emails as HTML instead of basic text. HTML adds the ability to include images, styles, and colors in emails, whereas plain text emails contain no media or formatting.
-
- Default From Email
-
- The email address you want to display on all emails sent from Rent Manager .
-
- More Information
-
- Changing the displayed email address is referred to as masking the email. Masked emails still send from the email account email@rentmanager.com but display the email address entered in this field to recipients and reroutes replies to that email. On opened emails, the email@rentmanager.com email address is visible after the masking address.
-
- Alternatively, you can mask emails per user through personal preferences or on each individual email. If you use either of the alternatives, the masking email you enter is used instead of what is entered in the Default From Email field.
-
- Mask emails per
- Description
-
- User
-
- In Personal Preferences , under Email Settings , locate the field labeled Default From Email . For more information, refer to Set Up User Email .
-
- Email
-
- Each email contains its own From Address field at the top to enter or change the email address as necessary. For more information, refer to Send an Email .
+ Reply tracking does not apply when emails are sent from mail.rentmanager.com.

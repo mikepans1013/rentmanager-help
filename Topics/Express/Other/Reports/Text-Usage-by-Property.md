@@ -6,6 +6,10 @@ The Text Usage by Property report displays the amount of outgoing and incoming t
 
  Texts that exceed a 160 SMS character count are converted into multiple message segments of 160 characters up to a maximum of 1600 characters. For example, if an SMS message of 400 characters is sent that requires three segments, the property's SMS Sent column increases by 3.
 
+ More Information
+
+ If you use certain special characters in messages, such as em dashes (—) or emojis, the message is converted into multiple message segments of 70 characters.
+
  Related Privileges
 
  Group

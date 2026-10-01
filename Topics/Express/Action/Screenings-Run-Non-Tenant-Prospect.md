@@ -58,6 +58,10 @@ The Screenings page displays.
  -
  In the Address section, enter the full street address of the person being screened.
 
+ Related Preferences
+
+ You can determine whether the screening pulls the default or primary address associated with each contact in system preferences. For more information, refer to Screening Settings (System Preferences) .
+
  -
  In the Rental Information section, enter information in the following fields:
 
@@ -72,7 +76,7 @@ The Screenings page displays.
 
  The property associated with the unit this person is being screened for.
 
- More Information
+ Related Preferences
 
  For screenings linked to tenant or prospect accounts, screenings can be set up to retrieve additional information from Rent Manager fields or user-defined fields (UDFs) that correspond with AmRent fields. The Additional Mapped Fields section displays mapped fields only when running screenings for tenants and prospects. For more information, refer to Screening Settings (System Preferences) .
 

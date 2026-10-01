@@ -47,6 +47,10 @@ The Inventory Items page displays.
 
  If the item is part of a purchase order workflow, such as buying and installing new carpet between tenants, select the workflow from the drop-down. For more information, refer to Purchase Order Workflows (Page) .
 
+ Related Preferences
+
+ If this field is set to <Use System Preference Default> , this item uses the PO workflow set as the default in system preferences. For more information, refer to P.O./Inventory (System Preferences) .
+
  -
  In the Charges section, enter the following information:
 

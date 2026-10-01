@@ -15,13 +15,10 @@ When adding an issue step to a workflow project, the Edit Issue pop-up allows yo
  Column
 
  Service Manager
-
  Issues
-
  Add
 
  Workflow Projects
-
  Add, View, Edit
 
  For more information, refer to Control User Access .

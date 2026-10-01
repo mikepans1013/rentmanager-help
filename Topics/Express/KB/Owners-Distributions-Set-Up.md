@@ -26,6 +26,10 @@ Fee-based management companies manage properties on behalf of owners in exchange
 
  By setting up owner-related system preferences, you can set the default account for drawing funds and determine how owner distributions are handled.
 
+ Related Preferences
+
+ To use ePay for transactions involving owners, the Enable ePay for Owners option must be enabled and participating banks must be assigned an ePay ID in system preferences. For more information, refer to Owner ePay (System Preferences) .
+
  Owner Settings
 
  To set up the default draw account for owner distribution, do the following:

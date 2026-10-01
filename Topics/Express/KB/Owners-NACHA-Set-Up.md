@@ -58,7 +58,7 @@ When you pay owners using Rent Manager , you can make these payments via the ACH
 
  Individual Identification #
 
- An internal account number used to link all parts of the NACHA process for this transaction. This number can be up to fifteen characters.
+ The account number assigned by the ODFI bank that the originator, such as the company using the NACHA file to make a payment, uses to identify the payment recipient, such as an owner. This number can be up to fifteen alphanumeric characters.
 
  Banks
 

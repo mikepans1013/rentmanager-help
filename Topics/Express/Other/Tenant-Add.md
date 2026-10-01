@@ -214,7 +214,7 @@ The add tenant wizard set as default displays.
 
  Enter resident owned RV details
 
- The tenant has a resident-owned RV they intend to place on the lot. If selected, enter information about the RV into the available fields to be included on the tenant's lease. For more information, refer to Lease Details (Page) .
+ The tenant has a resident-owned RV they intend to place on the lot. If selected, enter information about the RV into the available fields to be included on the tenant's lease. For more information, refer to Lease Details (Pop-Up) .
 
  Link an existing home
 
@@ -278,6 +278,10 @@ The add tenant wizard set as default displays.
  To add as many additional contacts as needed, click Add New Contact .
 
  Step 4: Enter Security Deposit and Payment Settings
+
+ More Information
+
+ If you have the Rentable feature set up in Rent Manager , the Rentable Deposit tile displays instead, prompting you to enter information to process the tenant's security deposit through Rentable. For more information, refer to Request a Rentable Security Deposit .
 
  To enter information about the tenant's deposit charge and other payment information, do the following:
 

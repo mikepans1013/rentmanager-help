@@ -42,7 +42,19 @@ The Write Check pop-up displays.
 
  Related Privileges
 
- To write checks that are not drawn from the Default Bank specified on the Property details page, the Write checks from banks that are not default privilege must be enabled. For more information, refer to Banks/Checks Privilege Group .
+ To have Rent Manager display a pop-up warning when a check or bill uses a bank account that is not the selected property's default bank, check Warn if bank account used on checks/bills is not the property default in system preferences.
+
+ In order to write checks that are not drawn from the Default Bank specified on the property's details page, the following privilege is required:
+
+ Group
+ Privilege
+ Column
+
+ Banks/Checks
+ Write checks from banks that are not default
+ Enabled
+
+ For more information, refer to Banks/Checks Privilege Group and Checks/Bills General (System Preferences) .
 
  Date
 
@@ -79,6 +91,10 @@ The Write Check pop-up displays.
  Memo
 
  An optional note for this check. Check memos display in the Comment column on Vendor Transactions page.
+
+ Related Preferences
+
+ In system preferences, check Default memo field to vendor account number to display the vendor's Account Number as the default memo on checks. In the Account Prefix field, enter any additional text you want to display in front of the vendor account number. For more information, refer to Checks/Bills General (System Preferences) .
 
  -
  In the check's summary section, enter or select the information in the available fields described below.

@@ -27,10 +27,6 @@ These options affect payment collection, such as displaying warning in certain c
  -
  Click Save to apply your changes.
 
- Preference Descriptions
-
- This preference group is divided into multiple sections. Each setting is described within the corresponding section below.
-
  General
 
  This section determines general settings for accepting payments in Rent Manager .
@@ -50,9 +46,9 @@ These options affect payment collection, such as displaying warning in certain c
 
  Check to allow the ability to tab from field to field on the Payments tab with the Enter key as well as the Tab key in Rent Manager 12 . This option is convenient for users who want to use the number pad on the keyboard. If this option is unchecked, only the Tab key can be used to tab.
 
- Show reference # on payment screen
+ Show reference on payment screen
 
- Check to create a Reference # column for open charges on the Receive Payments pop-up and display the transaction Reference # the user entered on the Transaction Detail pop-up. If this option is unchecked, no Reference # column displays.
+ Check to create a Reference column for open charges on the Receive Payments pop-up and display the transaction Reference the user entered on the Transaction Detail pop-up. If this option is unchecked, no Reference column displays.
 
  Default payment to full amount owed
 
@@ -61,6 +57,26 @@ These options affect payment collection, such as displaying warning in certain c
  Automatically apply account group credits
 
  Check to create a prepayment for an account group member when that member is making an overpayment. While this option is enabled, if a new charge is subsequently applied to another member of the account group, Rent Manager will allocate the credit from the original group member to the other group member.
+
+ Payment Methods
+
+ This section allows you to add and manage the payment methods that display in the Reference field when recording tenant payments. To add a new payment method, do the following:
+
+ -
+ Click Add Payment Method to add a new row.
+
+ -
+ In the Payment Method column, enter a unique name to identify the payment option, such as Zelle or EFT .
+
+ -
+ In the Active column, check or uncheck to determine if the payment method can be selected when recording tenant payments. This column is checked by default.
+
+ -
+ Click Save .
+The payment method is added to the list and, if Active , is available in the Reference field when recording tenant payments.
+
+ -
+ Continue adding payment methods as desired.
 
  Payment Receipts
 

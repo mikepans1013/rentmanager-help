@@ -18,7 +18,7 @@ For manufactured housing-type properties, the site classification tool allows yo
 
  For more information, refer to Control User Access .
 
- To manage your homeowner statuses and site classifications, go to   arrow_forward Rental Info arrow_forward   Rental Info Setup arrow_forward Assets arrow_forward Homeowner Statuses & Site Classifications .
+ To manage your homeowner statuses and site classifications, go to arrow_forward Rental Info arrow_forward Rental Info Setup arrow_forward Assets arrow_forward Homeowner Statuses & Site Classifications .
 
  Homeowner Statuses Tab
 
@@ -35,15 +35,17 @@ For manufactured housing-type properties, the site classification tool allows yo
 
  Custom Name
 
- The customized ownership status that displays for the corresponding site classification Rent Manager  automatically applies to the associated unit.
+ The customized ownership status that displays for the corresponding site classification Rent Manager automatically applies to the associated unit.
 
  System Name
 
- The system-derived legal ownership status (i.e., Community Owned , Employee Owned , etc.) that corresponds with the site classification Rent Manager  automatically applies to the associated unit.
+ The system-derived legal ownership status (i.e., Community Owned , Employee Owned , etc.) that corresponds with the site classification Rent Manager automatically applies to the associated unit.
 
  Site Classifications Tab
 
- The Site Classifications tab displays the classifications used to monitor your manufactured housing units (or sites). From this tab, you can modify the classifications' Custom Name and Custom Short Name , which display in applicable filters and reports throughout Rent Manager . Once you are satisfied with your edits, click Save . If a homeowner status is made inactive, the corresponding classification's row is disabled and cannot be edited.
+ The Site Classifications tab displays the classifications used to monitor your manufactured housing units (or sites). From this tab, you can modify the classifications' Custom Name and Custom Short Name , which display in applicable filters and reports throughout Rent Manager . Additionally, you can set up site classification automation, which allows Rent Manager to automatically assign site classifications to units based on certain criteria. For more information, refer to Automate Site Classifications .
+
+ Once you are satisfied with your edits, click Save . If a homeowner status is made inactive, the corresponding classification's row is disabled and cannot be edited.
 
  The following columns display on this tab:
 

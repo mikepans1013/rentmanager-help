@@ -8,7 +8,7 @@ In Rent Manager , the system preference to print checks on QuickBooks check stoc
 
  This feature is licensed and must be purchased separately. For more information, contact your sales representative at sales@rentmanager.com .
 
- Enable Printing Checks in QuickBbooks Format
+ Enable Printing Checks in QuickBooks Format
 
  Related Privileges
 
@@ -22,7 +22,7 @@ In Rent Manager , the system preference to print checks on QuickBooks check stoc
 
  For more information, refer to Control User Access .
 
- Once you have received confirmation that the feature has been enabled in your database, a system preference is added for you to enable the feature in Rent Manager . To enable the Print checks in QuickBbooks format feature, do the following:
+ Once you have received confirmation that the feature has been enabled in your database, a system preference is added for you to enable the feature in Rent Manager . To enable the Print checks in QuickBooks format feature, do the following:
 
  -
  Go to   arrow_forward   Administration arrow_forward System Preferences arrow_forward Report Options arrow_forward Check Printing .
@@ -36,4 +36,4 @@ The setting is saved and you can print on QuickBooks stock when printing checks 
 
  Next Steps
 
- Once you've enable the Print checks in QuickBooks format system preference, you can print on QuickBooks stock when using the Print Checks page. For more information, refer to Print Checks .
+ Once you've enabled the Print checks in QuickBooks format system preference, you can print on QuickBooks stock when using the Print Checks page. For more information, refer to Print Checks .

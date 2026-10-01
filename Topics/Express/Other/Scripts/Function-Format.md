@@ -157,17 +157,17 @@ This can be a literal value, a script variable with a stored value, or another f
 
  The following scripts show various ways the function can be used:
 
- [System.Format(" 7/21/2026 ","General Date")]
+ [System.Format(" 8/27/2026 ","General Date")]
 
- Displays the specified date along with the current time stamp (which may r may not include seconds): 7/21/2026 12:00:00 AM.
+ Displays the specified date along with the current time stamp (which may r may not include seconds): 8/27/2026 12:00:00 AM.
 
- [System.Format(" 7/21/2026 ","Long Date")]
+ [System.Format(" 8/27/2026 ","Long Date")]
 
- Displays Tuesday, July 21, 2026 .
+ Displays Thursday, August 27, 2026 .
 
- [System.Format(" 7/21/2026 ","Short Date")]
+ [System.Format(" 8/27/2026 ","Short Date")]
 
- Displays 7/21/2026 .
+ Displays 8/27/2026 .
 
  [System.Format(Date,"Long Time")]
 

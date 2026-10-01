@@ -4,6 +4,8 @@ Source: https://rmxhelp.rentmanager.com/Topics/Express/CSH/Asset-Homeowner-Statu
 
 For manufactured housing-type properties, units (or sites) are assigned a classification based on who owns the site, the type of asset(s) present at that site, occupancy status, and other considerations. To ensure that these classifications are correct for home-type assets, such as manufactured homes and lots, the current legal ownership status needs to be tracked and updated for those assets.
 
+ To more closely match your home management workflow, you can rename homeowner statuses and their associated site classifications for a more tailored classification system. Additionally, you can deactivate homeowner statuses that may not be relevant to your home management workflow. For more information, refer to Homeowner Statuses & Site Classifications .
+
  More Information
 
  This option is available only for assets associated with an Asset Type that is marked as Is Home . For more information, refer to Asset Types (Page) .

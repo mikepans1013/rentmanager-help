@@ -8,7 +8,7 @@ If you use ePay but need to deposit different charges to separate bank accounts,
 
  More Information
 
- Before utilizing charge type banks for ePay payments, you must acquire ePay bank IDs from Zego for any of your bank accounts that are involved in ePay transactions. Only banks assigned an ePay ID can be used to receive tenant ePay payments.
+ Before utilizing charge type banks for ePay payments, you must acquire ePay bank IDs from Zego for any of your bank accounts that are involved in ePay transactions. Only banks assigned an ePay ID can be used to receive tenant ePay payments. To acquire ePay bank IDs from Zego , contact them at rentmanager@gozego.com .
 
  Step 1: Add ePay IDs to Charge Type Banks
 

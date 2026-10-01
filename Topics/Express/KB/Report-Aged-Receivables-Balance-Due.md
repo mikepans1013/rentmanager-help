@@ -96,4 +96,4 @@ The Aged Receivables and Balance Due reports both provide information on custome
 
  Leases Not Tied to a Unit
 
- The Aged Receivables report examines all open charges, regardless of the status of a tenant's lease. However, when a tenant's lease does not have a specified unit in the Unit field, their account is omitted from the Balance Due report. If you find that a tenant is not in either report, verify that their lease is assigned a unit. If there is no unit assigned, enter the appropriate unit, save your changes, then refresh your reports. For more information, refer to Lease Details (Page) .
+ The Aged Receivables report examines all open charges, regardless of the status of a tenant's lease. However, when a tenant's lease does not have a specified unit in the Unit field, their account is omitted from the Balance Due report. If you find that a tenant is not in either report, verify that their lease is assigned a unit. If there is no unit assigned, enter the appropriate unit, save your changes, then refresh your reports. For more information, refer to Lease Details (Pop-Up) .

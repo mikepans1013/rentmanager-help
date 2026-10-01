@@ -41,6 +41,10 @@ The Pay Bills page displays.
  -
  Check Limit by credit's property to filter the list to display only the bills associated with the property listed on the credit's details page.
 
+ Related Preferences
+
+ To prevent all vendor credits from being applied to bills allocated to other properties, check Prevent vendor credits from being applied across properties in system preferences. For more information, refer to Checks/Bills General (System Preferences) .
+
  -
  In the Bill Allocation , section, enter the following information:
 

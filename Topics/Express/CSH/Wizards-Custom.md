@@ -20,6 +20,8 @@ The Custom Wizards page displays all wizards available in Rent Manager , includi
 
  To access the Custom Wizards page, go to arrow_forward Administration , then go to Customization arrow_forward Custom Add Wizards .
 
+ To create a new wizard, either by creating a copy of a system default wizard template for each entity type or from scratch, click Add . To import and edit a custom wizard from Rent Manager 12 , select arrow_forward Import RM12 Wizard . For more information, refer to Design a Wizard .
+
  Filter Options
 
  The following filter options are available on this page.
@@ -37,7 +39,7 @@ The Custom Wizards page displays all wizards available in Rent Manager , includi
 
  Wizard Type
 
- On the left panel, select which entity type (e.g., Tenant , Unit , Move In , etc.) for which to view custom wizards.
+ On the left panel, select which entity type (e.g., Tenant , Unit , Move In , Move Out , etc.) for which to view custom wizards.
 
  Column Descriptions
 
@@ -48,7 +50,7 @@ The Custom Wizards page displays all wizards available in Rent Manager , includi
 
  Active
 
- A displaysif this wizard is active and available to be used in Rent Manager .
+ A displays if this wizard is active and available to be used in Rent Manager .
 
  Assignment Type
 

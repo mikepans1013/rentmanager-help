@@ -222,7 +222,7 @@ The global search tool allows you to search your entire Rent Manager database fo
 
  Noncommercial Lease
 
- Includes the UDF names and values entered for any non-commercial leases, and displays columns associated with fields from the lease's details page in the User Defined Fields tile. For more information, refer to Lease Details (Page) .
+ Includes the UDF names and values entered for any non-commercial leases, and displays columns associated with fields from the lease's details page in the User Defined Fields tile. For more information, refer to Lease Details (Pop-Up) .
 
  Owner
 

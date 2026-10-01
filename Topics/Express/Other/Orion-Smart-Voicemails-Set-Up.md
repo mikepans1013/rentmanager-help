@@ -133,7 +133,7 @@ A table for your existing rmVoIP voicemail boxes displays and Rent Manager pulls
 
  Smart Voicemails
 
- The listing page that houses all the voicemails that come into any Smart Voicemail boxes the user has access to. For more information, refer to Orion Smart Voicemails .
+ The listing page that houses all the voicemails that come into any Smart Voicemail boxes the user has access to. For more information, refer to Orion Smart Voicemails (Page) .
 
  Voicemail Details
 

@@ -138,7 +138,7 @@ After you collect receivables and pay expenses (including management fees) for m
 
  Related Preferences
 
- This option displays only if Enable ePay and Enable ePay for Owners is checked in system preferences. For more information, refer to General ePay (System Preferences) .
+ This option displays only if Enable ePay and Enable ePay for Owners are checked and participating banks are assigned an ePay ID in system preferences. For more information, refer to General ePay (System Preferences) and Owner ePay (System Preferences) .
 
  NACHA
 

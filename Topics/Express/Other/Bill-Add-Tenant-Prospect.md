@@ -60,6 +60,10 @@ Prospect
 
  If applicable, the bill's reference number or invoice number.
 
+ Related Preferences
+
+ To have Rent Manager check for any existing bills with duplicate invoice numbers and, if found, either warn or prevent the user from creating the bill, select Check for duplicate reference number on bills in system preferences. For more information, refer to Checks/Bills General (System Preferences) .
+
  Post Date
 
  The date on which this bill expenses the general ledger (GL) account on an accrual accounting basis. The field defaults to the same date as the Bill Date .
@@ -175,3 +179,7 @@ Prospect
  Step 4: Save the Bill
 
  Once you have established your line items, click Save & Close to complete the bill creation process and close the pop-up. Alternatively, click Save & New to finish adding the bill and refresh the pop-up to add another bill.
+
+ Related Preferences
+
+ Bills can be created for vendor(s) with expired insurance if Ignore expired vendor insurance when adding bills is checked, and for vendor(s) with expired workers' compensation if Ignore expired vendor workers comp when adding bills is checked in system preferences. For more information, refer to Checks/Bills General (System Preferences) .

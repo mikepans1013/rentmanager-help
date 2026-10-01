@@ -69,7 +69,7 @@ The check is permanently deleted and the associated bill is now marked as unpaid
  From the Bank drop-down menu, select the bank account associated with the check that paid the bill.
 
  -
- Select the check you wish to delete.
+ Select the check you wish to void.
 The check's details page displays.
 
  -

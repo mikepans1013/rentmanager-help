@@ -41,7 +41,7 @@ Rent Manager 's Orion AI powers a variety of features to help streamline and exp
 
  The Orion Smart Voicemails feature can automatically transcribe and categorize voicemails. This feature creates a Smart Voicemails register in Rent Manager that displays all voicemails that need to be addressed and categorizes them by subject and/or urgency, allowing for immediate follow-up action. This feature also creates concise summaries of the voicemail transcript so the user can quickly glean an general idea of the content of the message.
 
- For more information, refer to Smart Voicemails Powered by Orion .
+ For more information, refer to Smart Voicemails Powered by Orion AI .
 
  Writing Assistant
 

@@ -64,7 +64,7 @@ These privileges provide access to the rmVoIP Phone Service features in Rent Man
 
  Smart Voicemails
 
- Allows a user to view, edit, or delete Smart Voicemails. For more information, refer to Orion Smart Voicemails .
+ Allows a user to view, edit, or delete Smart Voicemails. For more information, refer to Orion Smart Voicemails (Page) .
 
  Smart Voicemail Boxes
 

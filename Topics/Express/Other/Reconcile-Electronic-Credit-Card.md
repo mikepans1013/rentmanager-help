@@ -24,7 +24,7 @@ A credit card reconciliation is an essential business process that involves comp
 
  Related Preferences
 
- If this is your first time importing a .CSV credit card statement for electronic reconciliation, you must first enter the format specifications for your credit card statements in system preferences so that Rent Manager can accurately read and import the information. For more information, refer to Credit Card Reconciliation (System Preferences) .
+ If this is your first time importing a .CSV credit card statement or you are reconciling multiple credit cards that use different statement formats, make sure the formatting specifications in your system preferences match the specific credit card statement you are reconciling so that Rent Manager can accurately read and import the information. For more information, refer to Credit Card Reconciliation (System Preferences) .
 
  Step 2 : Import and Match Transactions
 

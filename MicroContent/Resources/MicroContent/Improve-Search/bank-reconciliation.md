@@ -24,7 +24,7 @@ A bank reconciliation is an essential business process that involves comparing y
 
  Related Preferences
 
- If this is your first time importing a .CSV bank statement for electronic reconciliation, you must first enter the format specifications for your bank statements in system preferences so that Rent Manager can accurately read and import the information. For more information, refer to Bank Reconciliation (System Preferences) .
+ If this is your first time importing a .CSV bank statement or you are reconciling multiple banks that use different statement formats, make sure the formatting specifications in your system preferences match the specific bank statement you are reconciling so that Rent Manager can accurately read and import the information. For more information, refer to Bank Reconciliation (System Preferences) .
 
  Step 2 : Import and Match Transactions
 

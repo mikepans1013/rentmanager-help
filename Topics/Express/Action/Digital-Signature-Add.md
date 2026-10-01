@@ -4,6 +4,10 @@ Source: https://rmxhelp.rentmanager.com/Topics/Express/Action/Digital-Signature-
 
 Upload an image of a handwritten signature to create a digital signature that you can apply to checks printed from Rent Manager . Digital signatures are recognized by banks, making them a valid, secure, and efficient alternative to handwritten signatures for large batches of checks.
 
+ Related Preferences
+
+ In system preferences, check Prevent digital signatures on checks over to prevent any checks over the specified dollar amount from being signed with digital signatures. Additionally, to require two signatures for checks over the specified dollar amount, check Require two signatures on checks over . For more information, refer to Checks/Bills General (System Preferences) .
+
  Related Privileges
 
  Group

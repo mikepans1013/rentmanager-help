@@ -12,11 +12,13 @@ For manufactured housing-type properties, the site classification tool allows yo
 
  More Information
 
- A site classification Name and Short Name can be customized. For more information, refer to Homeowner Statuses & Site Classifications .
+ This topic outlines the criteria that determines the site classifications assigned by Rent Manager when site classification automation is enabled. For more information, refer to Automate Site Classifications .
+
+ Additionally, site classifications and homeowner statuses are referred to by their system names, but these names can be replaced with custom names and may display differently in your system. For more information, refer to Homeowner Statuses & Site Classifications .
 
  Community-Owned Site Classifications
 
- The following classification statuses are assigned to sites owned by the manufactured housing community based on the described criteria:
+ The following classification statuses are automatically assigned to sites owned by the manufactured housing community based on the described criteria:
 
  Classification
  Description
@@ -43,7 +45,7 @@ For manufactured housing-type properties, the site classification tool allows yo
 
  Other Owned Site Classifications
 
- The following classification statuses are assigned to sites that are not community-owned based on the described criteria:
+ The following classification statuses are automatically assigned to sites that are not community-owned based on the described criteria:
 
  Classification
  Description
@@ -88,9 +90,17 @@ For manufactured housing-type properties, the site classification tool allows yo
 
  Assigned to sites with home-type assets or resident-owned RVs whose current homeowner status is set to Resident Owned and is associated with an active tenant lease.
 
+ Resident Owned - Contingent Liability
+
+ Assigned to sites with home-type assets or resident-owned RVs whose current homeowner status is set to Resident Owned - Contingent Liability and is associated with an active tenant lease.
+
+ Resident Owned - Promissory Notes
+
+ Assigned to sites with home-type assets or resident-owned RVs whose current homeowner status is set to Resident Owned - Promissory Notes and is associated with an active tenant lease.
+
  Transitional and Unavailable Classifications
 
- The following classification statuses are assigned to sites that are not available for rent or are in the process of changing ownership:
+ The following classification statuses are automatically assigned to sites that are not available for rent or are in the process of changing ownership:
 
  Classification
  Description

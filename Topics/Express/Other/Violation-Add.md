@@ -106,6 +106,10 @@ The Violations page displays.
 
  After entering the violation's general information, select the Stages and Actions tab on the left.
 
+ Related Preferences
+
+ You can assign colors to the unit pins that display in rmAppSuite Pro by their violation stage number in system preferences. For more information, refer to rmAppSuite Violations (System Preferences) .
+
  To add violation processes, do the following:
 
  -

@@ -6,6 +6,10 @@ The Text Usage report displays the daily, weekly, or monthly amount of outgoing 
 
  Texts that exceed a 160 SMS character count are converted into multiple message segments of 160 characters up to a maximum of 1600 characters. For example, if an SMS message of 400 characters is sent that requires three segments, the SMS Sent column increases by 3.
 
+ More Information
+
+ If you use certain special characters in messages, such as em dashes (—) or emojis, the message is converted into multiple message segments of 70 characters.
+
  Related Privileges
 
  Group

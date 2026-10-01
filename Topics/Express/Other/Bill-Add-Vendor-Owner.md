@@ -67,6 +67,10 @@ Prospect
 
  For example, a bill term of Immediately would set both fields to the same date, while NET 15 would set the due date for fifteen days after the bill date. The options available depend on the bill terms that are created in your Rent Manager database. For more information, refer to Bill Terms (Page) .
 
+ Related Preferences
+
+ In the Default Terms field in system preferences, define a default bill term (e.g., 1st of month , Immediately , NET 15 , etc.) that automatically populates in this field once the vendor has been selected. For more information, refer to Checks/Bills General (System Preferences) .
+
  Bill Date
 
  The date on which the bill was issued. If this bill reflects a physical bill you received, select the date stated on the real-world bill itself.
@@ -74,6 +78,10 @@ Prospect
  Invoice #
 
  If applicable, the bill's reference number or invoice number.
+
+ Related Preferences
+
+ To have Rent Manager check for any existing bills with duplicate invoice numbers and, if found, either warn or prevent the user from creating the bill, select Check for duplicate reference number on bills in system preferences. For more information, refer to Checks/Bills General (System Preferences) .
 
  Post Date
 
@@ -173,11 +181,11 @@ Prospect
 
  eChecks
 
+ A digital check that is delivered to the payee via email, at which point the payee can retrieve and print the check.
+
  Related Preferences
 
  This option displays only if Enable eChecks is checked in the eChecks section of system preferences and you have an eChecks account set up. For more information, refer to eChecks (System Preferences) .
-
- A digital check that is delivered to the payee via email, at which point the payee can retrieve and print the check.
 
  Attachments
 
@@ -260,3 +268,7 @@ The available columns are described in the table below.
  Step 4: Save the Bill
 
  Once you have established your line items, click Save and Close to complete the bill creation process and close the pop-up. Alternatively, click Save and New to finish adding the bill and refresh the pop-up to add another bill.
+
+ Related Preferences
+
+ Bills can be created for vendor(s) with expired insurance if Ignore expired vendor insurance when adding bills is checked, and for vendor(s) with expired workers' compensation if Ignore expired vendor workers comp when adding bills is checked in system preferences. For more information, refer to Checks/Bills General (System Preferences) .

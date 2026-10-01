@@ -204,8 +204,8 @@
                                         <div class="row collapse">
                                             <div class="topic-layout">
                                                 <div>
-                                                    <div data-sticky-container="" id="-mlEiJwBR0ubYe0BDKQ1hQ">
-                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="-mlEiJwBR0ubYe0BDKQ1hQ:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
+                                                    <div data-sticky-container="" id="AstVeHikX0CT4LdqTXMtQw">
+                                                        <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="AstVeHikX0CT4LdqTXMtQw:top" data-bottom-anchor="contentBody:bottom" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="small">
                                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container-on="small" class="nocontent menu _Skins_Topic_Headers_Menu mc-component">
                                                                 <li class="tree-node"><a href="#CAMExpenseAdjustmentIndexing">CAM Expense Adjustment Indexing</a>
                                                                     <ul>
@@ -230,8 +230,8 @@
                                                         </div>
                                                     </div>
                                                     <div role="main" id="mc-main-content">
-                                                        <h1 id="CAMExpenseAdjustmentIndexing" data-magellan-target="CAMExpenseAdjustmentIndexing"><a name="aanchor899"></a>
-                                                            <MadCap:concept term="Ref-Script Indexing" /><a name="kanchor1478"></a><a name="H1"></a>CAM Expense Adjustment Indexing</h1>
+                                                        <h1 id="CAMExpenseAdjustmentIndexing" data-magellan-target="CAMExpenseAdjustmentIndexing"><a name="aanchor1531"></a>
+                                                            <MadCap:concept term="Ref-Script Indexing" /><a name="kanchor1474"></a><a name="H1"></a>CAM Expense Adjustment Indexing</h1>
                                                         <p>In scripting, an index is how instances of an entity or other record are counted in a script. Indexing manages the one-to-many relationship that occurs between two classes.</p>
                                                         <p>The CAMExpenseAdjustment class is used as a child class in a script (e.g., <span class="Formula">[Tenant().Lease().CAMExpenseAdjustment()<span class="Required">.Function</span>]</span>), and an index can be specified to uniquely identify the common area maintenance (CAM) expense adjustments that are associated with the preceding class. For example, tenants may have multiple adjustments associated with their lease, and indexing can be used to identify each of those adjustments.</p>
                                                         <h2 id="CAMExpenseAdjustmentIndexRelationships" data-magellan-target="CAMExpenseAdjustmentIndexRelationships"><a name="H2_1"></a>CAM Expense Adjustment Index Relationships</h2>
@@ -239,7 +239,7 @@
                                                         <h3><a name="H3_1"></a>Single-Lease Adjustment Indexing</h3>
                                                         <p>CAM expense adjustments are attached to specific leases for a tenant, starting with the individual adjustment with the earliest date.</p>
                                                         <p>
-                                                            <img src="../../../Resources/Images/PNGs/RMX-Scripting-Indexing-CAMExpenseAdjustment-SingleLease-SG-2023.png" alt="The CAM Expense Adjustments page displays a lease's adjustments ordered oldest to newest." class="lightbox" />
+                                                            <img src="../../../Resources/Images/PNGs/scripting-index-cam-expense-adjustment-single-lease.png" alt="The CAM Expense Adjustments page displays a lease's adjustments ordered oldest to newest." class="lightbox" />
                                                         </p>
                                                         <p class="Example">[Tenant().Lease().CAMExpenseAdjustment(2).GLAccount()]</p>
                                                         <p>Using the information in the above image, this returns <span class="Input">5108 Plumbing</span> because adjustment number 17 is the CAM expense adjustment with the second-earliest date for tenant <span class="Input">Marco's Bistro</span>'s lease at White Oak Shopping Center (<span class="Input">OAK</span>).</p>
@@ -250,7 +250,7 @@
                                                             <p>Lease indexes are determined by the order in which the tenant's leases are listed on their account's details page on the <span class="Section">Leases</span> tile. For example, the first lease in the list is index <span class="Input">0</span>, the second lease listed is index <span class="Input">1</span>, and so on. For more information, refer to <a href="Script-Index-Lease.htm" class="MCXref xref">Lease Indexing</a>.</p>
                                                         </div>
                                                         <p>
-                                                            <img src="../../../Resources/Images/PNGs/RMX-Scripting-Indexing-CAMExpenseAdjustment-MultiLease-SG-2023.png" alt="The CAM Expense Adjustments page displays the adjustments for two leases ordered oldest to newest." class="lightbox" />
+                                                            <img src="../../../Resources/Images/PNGs/scripting-index-cam-expense-adjustment-multi-lease.png" alt="The CAM Expense Adjustments page displays the adjustments for two leases ordered oldest to newest." class="lightbox" />
                                                         </p>
                                                         <p class="Example">[Tenant().Lease(1).CAMExpenseAdjustment(2).AdjustmentAmount()]</p>
                                                         <p>Using the information in the above image, this returns <span class="Input">1666.66</span> because the third period of adjustment number <span class="Input">20</span> is the CAM expense adjustment with the third-earliest date for tenant <span class="Input">Marco's Bistro</span>'s third-listed lease, which is associated with property Tri County Mall (<span class="Input">TCM</span>).</p>
@@ -290,7 +290,7 @@
                 <p>8:00 a.m.-7:00 p.m. (EST)</p>
                 <p><span class="mc-variable LCS.Phone variable">513-583-1482</span>
                 </p>
-                <p><span class="mc-variable LCS.Support variable">support@rentmanager.com</span>
+                <p><span class="mc-variable LCS.Support-Email variable">support@rentmanager.com</span>
                 </p>
             </div>
             <div>
@@ -305,6 +305,6 @@
                 </p>
             </div>
         </div>
-        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260700</span>.<span class="mc-variable Build.Build-Number variable">1.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">July 21, 2026</span>.</p>
+        <p style="margin-left: 25px;text-align: center;">Build <span class="mc-variable Build.RMX-Version variable">12.260750</span>.<span class="mc-variable Build.Build-Number variable">2.0</span> generated on <span class="mc-variable Dates.mmmm_d,_yyyy variable">August 27, 2026</span>.</p>
     </div>
 </html>

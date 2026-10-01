@@ -2,7 +2,7 @@
 
 Source: https://rmxhelp.rentmanager.com/Topics/Express/KB/MU-Plus-Rate-Calculations-Set-Up.htm
 
-The Calculations section, located in the Meter Type Details page for Metered Utilities Plus (MU-Plus) meter-types, is where you combine rates with tenant consumption along with other fees and/or discounts to determine the final utility charge for a tenant. Since these calculations are exclusively established through scripting, you can create formulas that match the billing strategies of virtually any utility provider.
+The Calculations section, located on the Meter Type Details page for Metered Utilities Plus (MU-Plus) meter-types, is where you combine rates with tenant consumption along with other fees and/or discounts to determine the final utility charge for a tenant. Since these calculations are exclusively established through scripting, you can create formulas that match the billing strategies of virtually any utility provider.
 
  The calculation's purpose is to re-create the billing algorithm of your utility provider so that Rent Manager can post accurate utility charges to tenants based on their consumption of that utility.
 
@@ -26,7 +26,7 @@ The Calculations section, located in the Meter Type Details page for Metered Uti
  To add a new rate calculation, do the following:
 
  -
- Go to   arrow_forward Services arrow_forward Metered Utilities arrow_forward Meter Types .
+ Go to arrow_forward Services arrow_forward Metered Utilities arrow_forward Meter Types .
  The Meter Types page displays.
 
  -
@@ -34,11 +34,11 @@ The Calculations section, located in the Meter Type Details page for Metered Uti
  The Meter Type Details page displays.
 
  -
- In the Calculations section, click   Add Calculation .
+ In the Calculations section, click Add Calculation .
 
  Step 2: Declare Consumptions
 
- First, introduce the tenant's consumption into the formula by creating a variable and setting it equal to C which stands for the system variable for the tenant's utility consumption. Rent Manager calculates C by taking a tenant's current reading and then subtracts the previous reading.
+ First, introduce the tenant's consumption into the formula by creating a variable and setting it equal to C which stands for the system variable for the tenant's utility consumption. Rent Manager calculates C by taking a tenant's current reading and then subtracts the previous reading.
 
  More Information
 
@@ -50,7 +50,7 @@ The Calculations section, located in the Meter Type Details page for Metered Uti
 
  With consumption defined in the formula, introduce the rates. Defined Metered Utilities Plus (MU-Plus) rate variables represent the various costs, discounts, and consumption rates associated with this utility. However, none of those variables have any impact on the formula until they are formally introduced into the Calculations section. For more information about rate variables, refer to Set Up MU-Plus Rate Variables .
 
- The following sections breakdown each type of rates and fees you can use in the Calculation field.
+ The following sections break down each type of rates and fees you can use in the Calculation field.
 
  Establish Blended or Unblended Rates
 
@@ -74,7 +74,7 @@ The Calculations section, located in the Meter Type Details page for Metered Uti
 
  As an example, use Rate('Tier1') . There have been 30 days between the last reading date and the current reading date. In the first 10 days of this period, Tier1 was defined at a value of 1.5. For the next 20 days in the period, Tier1 changed to 1.6.
 
- In this case, Rent Manager doesn't care about the recent change. 1.6 is used in any subsequent formulas that use the Tier1 variable.
+ In this case, Rent Manager does not care about the recent change. 1.6 is used in any subsequent formulas that use the Tier1 variable.
 
  More Information
 
@@ -106,6 +106,9 @@ The Calculations section, located in the Meter Type Details page for Metered Uti
 
  -
  Variables are contained between either single (') or double (") quotes, with the exception of Rate and RateBlend functions which are always contained between single quotes.
+
+ -
+ Scripting functions are entered without square brackets.
 
  Step 4: Enter Calculation Details
 

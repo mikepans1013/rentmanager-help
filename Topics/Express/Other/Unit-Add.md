@@ -8,7 +8,7 @@ Properties in Rent Manager are defined as financial entities, but much of your d
 
  By default, these rental spaces in your Rent Manager database are called Units . You can customize the entity name in system preferences to meet your business needs. For example, if you primarily own properties that are university housing, you can change Unit to Dormitory . This updates the entity name for your entire Rent Manager database, so be sure to choose an entity name that works best for all your business purposes. For more information, refer to Entity Types (System Preferences) .
 
- Adding a single unit is best for properties that only have one unit. It can also be used for properties with multiple units if you have a few units that are very different from the majority. If a property has multiple similar units, it is most efficient to add those units in a batch. The fields available and how they apply to the unit(s) vary depending on the selected method.
+ Adding a single unit is best for properties that only have one unit. It can also be used for properties with multiple units if you have a few units that are very different from the majority. If a property has multiple similar units, it is most efficient to add those units in a batch. The fields available and how they apply to the unit(s) varies depending on the selected method.
 
  Warning
 
@@ -126,6 +126,10 @@ The Units page displays.
  Inspection Template
 
  The default inspection form template to use when performing an inspection on this unit(s). For more information, refer to Inspection Templates (Page) .
+
+ Site Classification
+
+ The name of the unit's site classification used to monitor its status. The field displays only if the selected Property is a manufactured housing type and the unit's site classification is not set automatically. For more information, refer to Automate Site Classifications .
 
  Step 2: Create Naming Convention for Batch of Units
 

@@ -135,23 +135,17 @@ This pop-up allows you to view and manage the transactions linked to the current
  Column
 
  Payables
-
  Bills
-
  Delete
 
  Credit card transaction
-
  Delete
 
  Vendor credits
-
  Delete
 
  Banks/Checks
-
  Checks
-
  Delete
 
  Bank deposits

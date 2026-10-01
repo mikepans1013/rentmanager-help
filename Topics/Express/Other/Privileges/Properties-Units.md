@@ -72,6 +72,10 @@ Properties/Units privileges provide access to property and unit features such as
 
  Add, edit, or delete a unit status for an individual unit on Unit Details . To Manage a Unit Status in the Unit Status tile, add or delete a unit status or edit a status by changing the start or end date, applying a different status type, or adding a comment.
 
+ Manual Entry Site Classifications
+
+ Enable to allow a user to add, edit, and delete manual site classification entries. For more information, refer to Site Classification .
+
  Property groups
 
  Add, view, edit, or delete Property Groups or more properties, such as an owner's entire portfolio.
